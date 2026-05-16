@@ -1,5 +1,5 @@
 
-# SURGE — Cyber Engineering, Risk & Governance
+# SURGE: Cyber Engineering, Risk & Governance
 
 ## UNIFIED CONTROL BASELINE
 ### Organizational Baseline · Overlay Matrix · Implementation, Evidence, and Inheritance Model
@@ -11,14 +11,14 @@
 | **Document ID** | CERG-GOV-CB-001 |
 | **Version** | 1.0 |
 | **Status** | For Review |
-| **Classification** | Internal — Confidential |
+| **Classification** | Internal - Confidential |
 | **Owner** | Cyber Governance Manager (Control Baseline) |
-| **Parent Policy** | CERG-POL-001 — Cybersecurity Policy |
+| **Parent Policy** | CERG-POL-001 - Cybersecurity Policy |
 | **Supporting Standards** | CERG-STD-IT-001 · CERG-STD-OT-001 · CERG-STD-CUI-001 · CERG-STD-AC-001 · CERG-STD-CFG-001 · CERG-STD-LM-001 · CERG-STD-RES-001 · CERG-STD-CR-001 |
-| **Review Cycle** | Annual — and on framework version change (NIST 800-53 rev, CMMC rev, NERC-CIP version) |
-| **Frameworks** | NIST 800-53r5 · NIST 800-171r3 · NIST CSF 2.0 · CIS Controls v8 · ISO/IEC 27001 A.5–A.8 · CSA CCM v4 |
-| **Regulations** | NERC-CIP v7 (and CIP-015 draft) · CMMC L2 · SOX ITGC |
-| **Environments** | All in-scope assets — owned, hybrid, cloud, SaaS, OT, CUI |
+| **Review Cycle** | Annual - and on framework version change ([NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) rev, [CMMC](https://dodcio.defense.gov/CMMC/) rev, NERC-CIP version) |
+| **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · CIS Controls v8 · ISO/IEC 27001 A.5–A.8 · CSA CCM v4 |
+| **Regulations** | NERC-CIP v7 (and CIP-015 draft) · [CMMC L2](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC |
+| **Environments** | All in-scope assets - owned, hybrid, cloud, SaaS, OT, CUI |
 
 ---
 
@@ -40,13 +40,13 @@
 
 ## 1. Purpose and Scope
 
-The Unified Control Baseline turns the principles in CERG-POL-001, the requirements in subordinate standards, and the philosophy in the CERG Risk Management Framework into an implementation-ready control set. It is the document a control owner, an internal auditor, a CMMC C3PAO, a NERC-CIP auditor, or a SOX auditor opens first.
+The Unified Control Baseline turns the principles in CERG-POL-001, the requirements in subordinate standards, and the philosophy in the CERG Risk Management Framework into an implementation-ready control set. It is the document a control owner, an internal auditor, a [CMMC](https://dodcio.defense.gov/CMMC/) C3PAO, a NERC-CIP auditor, or a [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) auditor opens first.
 
 It applies to every in-scope asset and every CERG-owned control. Where a subordinate standard imposes a more specific requirement, the standard controls and is referenced from the relevant entry here.
 
 > **One Baseline, Many Audiences**
 >
-> Most programs maintain a separate control library per regulator — one for NIST, one for CMMC, one for NERC-CIP, one for SOX — and then spend a quarter of every audit reconciling them. CERG inverts that: one baseline is implemented once and evidenced once. The crosswalks in Section 9 translate the same evidence into the language each regulator expects.
+> Most programs maintain a separate control library per regulator, one for NIST, one for [CMMC](https://dodcio.defense.gov/CMMC/), one for NERC-CIP, one for [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204), and then spend a quarter of every audit reconciling them. CERG inverts that: one baseline is implemented once and evidenced once. The crosswalks in Section 9 translate the same evidence into the language each regulator expects.
 
 ---
 
@@ -54,17 +54,17 @@ It applies to every in-scope asset and every CERG-owned control. Where a subordi
 
 The baseline is built on five non-negotiable principles. Anything that violates them is not in the baseline.
 
-1. **NIST is the spine.** NIST 800-53r5 control families are the organizing structure. CERG-native controls are layered onto that spine, never the reverse. When a NIST family fully covers an intent, CERG inherits the NIST language and identifier rather than coining a new one.
-2. **Each control has one accountable CERG pillar.** Engineering, Risk, or Governance — never "shared." Supporting roles are listed separately. Accountability without ambiguity is the prerequisite to evidence.
+1. **NIST is the spine.** [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) control families are the organizing structure. CERG-native controls are layered onto that spine, never the reverse. When a NIST family fully covers an intent, CERG inherits the NIST language and identifier rather than coining a new one.
+2. **Each control has one accountable CERG pillar.** Engineering, Risk, or Governance, never "shared." Supporting roles are listed separately. Accountability without ambiguity is the prerequisite to evidence.
 3. **Each control has named evidence.** A control without a named evidence artifact is a control without proof; it does not enter the baseline.
-4. **Overlays add, they do not redefine.** CUI, BES, SOX, and Safety overlays add controls or tighten parameters of base controls. They never silently relax the base.
+4. **Overlays add, they do not redefine.** CUI, BES, [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204), and Safety overlays add controls or tighten parameters of base controls. They never silently relax the base.
 5. **Inheritance is documented or it does not exist.** Inheritance from cloud/SaaS providers requires the artifact named in Section 5. "We assume the provider handles it" is not inheritance.
 
 ---
 
 ## 3. The CERG Control Family Spine
 
-CERG uses NIST 800-53r5 control families as the top-level grouping. Each family has a one-line CERG intent and a primary owning pillar.
+CERG uses [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) control families as the top-level grouping. Each family has a one-line CERG intent and a primary owning pillar.
 
 | **Family** | **NIST Code** | **CERG Intent (one line)** | **Primary Owner** |
 |---|---|---|---|
@@ -86,19 +86,19 @@ CERG uses NIST 800-53r5 control families as the top-level grouping. Each family 
 | System and Communications Protection | SC | Network segmentation, cryptography, OT boundary protection. | Engineering |
 | System and Information Integrity | SI | Vulnerability, malware, monitoring, advisories, integrity. | Risk |
 | Supply Chain Risk Management | SR | Software, hardware, and service supply chain integrity. | Risk (TPRM) |
-| Program Management | PM | The CERG program itself — policy, metrics, board reporting. | Governance |
+| Program Management | PM | The CERG program itself - policy, metrics, board reporting. | Governance |
 
 ---
 
 ## 4. Implementation Statuses
 
-Every control entry in the baseline carries one of the following statuses. The set is intentionally small — it survives audits in every framework CERG must support.
+Every control entry in the baseline carries one of the following statuses. The set is intentionally small, it survives audits in every framework CERG must support.
 
 | **Status** | **When to Use** | **Evidence Expected** |
 |---|---|---|
 | `Implemented` | Control is in place, tested, and operating as designed. | Named evidence artifact for the current cycle. |
 | `Partially Implemented` | Control is in place for some scope or is operating at reduced effectiveness. | Evidence of what is in place plus a POA&M entry. |
-| `Inherited` | Implementation is provided by another party — cloud provider, SaaS provider, parent enterprise control, IAM team. | Inheritance Evidence Package (Section 5). |
+| `Inherited` | Implementation is provided by another party - cloud provider, SaaS provider, parent enterprise control, IAM team. | Inheritance Evidence Package (Section 5). |
 | `Planned` | Control is in the roadmap with an owner and target date. | POA&M entry with date and owner. |
 | `Risk Accepted` | Deviation is approved and tracked via CERG-PRC-RM-001 Section 7. | Risk register entry, exception ID, approver. |
 | `Not Applicable` | Control does not apply to this scope. | Documented N/A rationale (system type, no in-scope data, etc.). |
@@ -115,20 +115,20 @@ Every control entry in the baseline carries one of the following statuses. The s
 
 The package has six elements:
 
-1. **Provider attestation** — current SOC 2 Type II / ISO 27001 / FedRAMP / PCI report containing the inherited control.
-2. **Shared responsibility mapping** — the section of the provider's shared responsibility matrix that names this control as the provider's.
-3. **Customer-side evidence of configuration** — proof the customer-side prerequisites are configured (e.g., logging enabled, region selected, IAM lockdown applied) that allow the inherited control to actually protect the customer's tenancy.
-4. **Sub-service organization carve-outs** — explicit notation if the inherited control depends on a sub-service organization (e.g., AWS underlying Snowflake) and how that dependency is covered.
-5. **Currency check** — attestation expiry date and the calendar entry that re-runs this check.
-6. **Re-papering trigger** — what would cause CERG to re-evaluate inheritance (provider control failure, attestation lapse, scope change, customer-side prerequisite drift).
+1. **Provider attestation**, current SOC 2 Type II / ISO 27001 / FedRAMP / PCI report containing the inherited control.
+2. **Shared responsibility mapping**, the section of the provider's shared responsibility matrix that names this control as the provider's.
+3. **Customer-side evidence of configuration**, proof the customer-side prerequisites are configured (e.g., logging enabled, region selected, IAM lockdown applied) that allow the inherited control to actually protect the customer's tenancy.
+4. **Sub-service organization carve-outs**, explicit notation if the inherited control depends on a sub-service organization (e.g., AWS underlying Snowflake) and how that dependency is covered.
+5. **Currency check**, attestation expiry date and the calendar entry that re-runs this check.
+6. **Re-papering trigger**, what would cause CERG to re-evaluate inheritance (provider control failure, attestation lapse, scope change, customer-side prerequisite drift).
 
-This package is the basis of every "we inherit it from AWS / Azure / GCP / M365 / Salesforce / ServiceNow / our CMMC enclave provider" claim CERG makes.
+This package is the basis of every "we inherit it from AWS / Azure / GCP / M365 / Salesforce / ServiceNow / our [CMMC](https://dodcio.defense.gov/CMMC/) enclave provider" claim CERG makes.
 
 ---
 
 ## 6. Organizational Baseline (Core)
 
-The organizational baseline applies to every in-scope asset. Overlays in Section 7 add or tighten controls for High-Impact, CUI, BES, SOX, and OT Safety scopes.
+The organizational baseline applies to every in-scope asset. Overlays in Section 7 add or tighten controls for High-Impact, CUI, BES, [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204), and OT Safety scopes.
 
 The full implementation-ready control set is captured by family in the sections that follow. Each entry has: Control ID · Action Statement · System Applicability · Owning Pillar · Named Evidence · Frequency · Subordinate Standard.
 
@@ -201,9 +201,9 @@ Overlays add to the organizational baseline. They never silently relax it.
 | **Overlay** | **Applies To** | **Adds / Tightens** | **Source Standard** |
 |---|---|---|---|
 | **High-Impact** | Systems whose loss would materially impact the business or safety | Tighter remediation SLAs, CIS L2 baseline, expanded monitoring, MFA for all non-human identities. | STD-CFG-001 + STD-LM-001 |
-| **CUI** | Any system that stores/processes/transmits CUI | NIST 800-171r3 controls; SSP + POA&M + SPRS; FIPS-validated cryptography; DFARS flow-down; CMMC L2 assessment readiness. | STD-CUI-001 + PLN-CUI-001 |
+| **CUI** | Any system that stores/processes/transmits CUI | [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) controls; SSP + POA&M + SPRS; FIPS-validated cryptography; DFARS flow-down; [CMMC L2](https://dodcio.defense.gov/CMMC/) assessment readiness. | STD-CUI-001 + PLN-CUI-001 |
 | **BES** | Medium/High Impact BES Cyber Systems | NERC-CIP v7 controls including CIP-007, CIP-010, CIP-013; ESP/EAP topology; 90-day searchable / 12-month total log retention; annual recovery exercise; CIP-015 INSM where applicable. | STD-OT-001 + PLN-CIP-001 |
-| **SOX ITGC** | Systems supporting financial reporting | Access, change, operations, backup, interface, and report ITGC controls; quarterly SoD review; SOC 1 reuse for hosted financial systems. | PLN-SOX-001 |
+| **[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC** | Systems supporting financial reporting | Access, change, operations, backup, interface, and report ITGC controls; quarterly SoD review; SOC 1 reuse for hosted financial systems. | PLN-[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-001 |
 | **OT Safety** | OT systems whose disruption can cause safety impact | Stricter change/maintenance windows, no active scanning, mandatory engineering review for any policy/standard parameter relaxation. | STD-OT-001 |
 
 > **Multiple Overlays at Once**

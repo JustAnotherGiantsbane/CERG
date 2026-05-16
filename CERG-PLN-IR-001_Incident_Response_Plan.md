@@ -1,5 +1,5 @@
 
-# SURGE — Cyber Engineering, Risk & Governance
+# SURGE: Cyber Engineering, Risk & Governance
 
 ## INCIDENT RESPONSE PLAN
 ### Detection · Containment · Investigation · Notification · Recovery · Lessons Learned
@@ -11,14 +11,14 @@
 | **Document ID** | CERG-PLN-IR-001 |
 | **Version** | 1.0 DRAFT |
 | **Status** | For Review |
-| **Classification** | Internal — Confidential |
+| **Classification** | Internal - Confidential |
 | **Owner** | CISO (Incident Commander Authority) · Cyber Governance (Plan Maintenance) |
-| **Parent Policy** | CERG-POL-001 — Cybersecurity Policy |
+| **Parent Policy** | CERG-POL-001 - Cybersecurity Policy |
 | **Supporting Standards** | CERG-STD-IT-001 · CERG-STD-OT-001 · CERG-STD-CUI-001 · CERG-STD-AC-001 |
 | **Review Cycle** | Annual / After Any Significant Incident / Regulatory Change |
-| **Frameworks** | NIST CSF 2.0 (RS, RC) · NIST 800-61r2 · NIST 800-53r5 · NIST 800-171r2 · NIST RMF |
-| **Regulations** | NERC-CIP CIP-008 · CMMC IR.L2 · DFARS 252.204-7012 · SEC 8-K Item 1.05 (where applicable) · State breach laws · GDPR (where applicable) |
-| **Environments** | All in-scope assets — owned, hybrid, cloud, SaaS, OT |
+| **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (RS, RC) · [NIST 800-61r2](https://csrc.nist.gov/pubs/sp/800/61/r2/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r2](https://csrc.nist.gov/pubs/sp/800/171/r2/final) · NIST RMF |
+| **Regulations** | NERC-CIP CIP-008 · [CMMC](https://dodcio.defense.gov/CMMC/) IR.L2 · DFARS 252.204-7012 · SEC 8-K Item 1.05 (where applicable) · State breach laws · GDPR (where applicable) |
+| **Environments** | All in-scope assets - owned, hybrid, cloud, SaaS, OT |
 
 ---
 
@@ -44,14 +44,14 @@
 
 This plan operationalizes the incident response principle established in **CERG-POL-001 Principle 10**. It defines how the organization detects, contains, investigates, notifies, recovers from, and learns from cybersecurity events across all in-scope environments.
 
-The plan is intentionally cross-environment. A single incident may span enterprise IT, cloud, SaaS, OT, and CUI environments simultaneously. The plan provides one structure of authority, classification, and notification — with environment-specific overlays that reflect the operational and regulatory reality of each domain.
+The plan is intentionally cross-environment. A single incident may span enterprise IT, cloud, SaaS, OT, and CUI environments simultaneously. The plan provides one structure of authority, classification, and notification, with environment-specific overlays that reflect the operational and regulatory reality of each domain.
 
 ### 1.1 Scope
 
 This plan applies to:
 
 - All confirmed and suspected cybersecurity events affecting organizational assets, data, or personnel
-- All in-scope environments — owned data center, hybrid, cloud, SaaS, OT, BES Cyber Systems, CUI environments
+- All in-scope environments, owned data center, hybrid, cloud, SaaS, OT, BES Cyber Systems, CUI environments
 - All third-party incidents that materially affect the organization (vendor compromises, software supply-chain compromises, shared-tenant impacts)
 - All personnel involved in detection, response, decision-making, communication, and recovery
 
@@ -62,9 +62,9 @@ This plan applies to:
 | **Event** | Any observable occurrence in a system or network. Not all events are incidents. |
 | **Incident** | An event that violates security policy, threatens confidentiality, integrity, or availability, or has the realistic potential to do so. |
 | **Significant Cyber Incident** | An incident classified Sev 1 or Sev 2 under Section 5, or any incident triggering an external notification obligation. |
-| **Reportable Cyber Incident (DFARS)** | A cyber incident that affects covered defense information or the contractor's ability to perform operationally critical support — triggers 72-hour DC3 reporting. |
+| **Reportable Cyber Incident (DFARS)** | A cyber incident that affects covered defense information or the contractor's ability to perform operationally critical support - triggers 72-hour DC3 reporting. |
 | **Reportable Cyber Security Incident (NERC-CIP)** | An incident as defined in NERC Glossary that compromises or attempts to compromise an ESP, PSP, or BES Cyber System, or disrupts BES operations. |
-| **Material Cybersecurity Incident (SEC)** | An incident determined material under SEC Item 1.05 (Form 8-K), based on reasonable-investor materiality — triggers a 4-business-day disclosure clock. |
+| **Material Cybersecurity Incident (SEC)** | An incident determined material under SEC Item 1.05 (Form 8-K), based on reasonable-investor materiality - triggers a 4-business-day disclosure clock. |
 | **Incident Commander (IC)** | The CISO or designated deputy with single-decision authority for an active incident. |
 | **Lead Investigator** | Risk-side technical lead for the investigation. Reports to the IC. |
 
@@ -93,7 +93,7 @@ Activate this plan upon any of the following:
 - Confirmed presence of ransomware, destructive malware, or unauthorized cryptographic activity on organizational systems
 - Confirmed exfiltration or unauthorized disclosure of Confidential or Restricted-tier data
 - Significant denial of service, integrity, or availability event affecting Tier 1 systems
-- Any cyber event affecting BES Cyber Systems, CUI environments, SOX-relevant systems, or other regulated assets, where regulatory notification timelines may apply
+- Any cyber event affecting BES Cyber Systems, CUI environments, [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant systems, or other regulated assets, where regulatory notification timelines may apply
 - Vendor or supply-chain notification indicating the organization may be affected
 - External notification (law enforcement, regulator, partner, customer) of a credible threat or breach
 
@@ -126,7 +126,7 @@ Activate this plan upon any of the following:
 
 | **Severity** | **Engaged at Activation** | **Engaged on Escalation** |
 |---|---|---|
-| Sev 4 | SOC / Lead Investigator | — |
+| Sev 4 | SOC / Lead Investigator | - |
 | Sev 3 | Lead Investigator + Engineering Lead | IC (notified) |
 | Sev 2 | IC + Lead Investigator + Engineering Lead + Governance | Legal + Communications + Executive Sponsor |
 | Sev 1 | Full IRT incl. Legal + Communications + Executive Sponsor + Board notification | External support (forensics retainer, law enforcement liaison, breach coach) |
@@ -135,10 +135,10 @@ Activate this plan upon any of the following:
 
 The CISO maintains the following pre-arranged external retainers, activated by the IC as needed:
 
-- **External forensics / digital investigation retainer** — for surge capacity, specialized expertise, or independent investigation
-- **Breach coach / outside counsel** — for privilege, multi-jurisdictional notification, and external communication
-- **Public relations / crisis communications partner** — engaged at IC direction for material incidents
-- **Law enforcement / federal liaison contacts** — FBI, CISA, sector ISAC, and DC3 (for CUI incidents)
+- **External forensics / digital investigation retainer**: for surge capacity, specialized expertise, or independent investigation
+- **Breach coach / outside counsel**: for privilege, multi-jurisdictional notification, and external communication
+- **Public relations / crisis communications partner**: engaged at IC direction for material incidents
+- **Law enforcement / federal liaison contacts**: FBI, CISA, sector ISAC, and DC3 (for CUI incidents)
 
 Retainer contacts and activation procedures are maintained in the IRT contact roster, reviewed quarterly and distributed only to the standing IRT.
 
@@ -146,7 +146,7 @@ Retainer contacts and activation procedures are maintained in the IRT contact ro
 
 ## 4. Incident Lifecycle
 
-The lifecycle follows NIST 800-61r2 phases adapted for cross-environment operations.
+The lifecycle follows [NIST 800-61r2](https://csrc.nist.gov/pubs/sp/800/61/r2/final) phases adapted for cross-environment operations.
 
 ### 4.1 Preparation (Continuous)
 
@@ -174,7 +174,7 @@ Containment objectives: stop ongoing harm, prevent lateral movement, preserve ev
 
 > **The "Don't Tip Your Hand" Reminder**
 >
-> Premature containment can warn an adversary and accelerate destructive action — particularly in ransomware or supply-chain scenarios where the attacker may be actively monitoring response. Pace containment to scope, prefer reversible isolation, and coordinate with the Lead Investigator on telemetry implications before each major action.
+> Premature containment can warn an adversary and accelerate destructive action, particularly in ransomware or supply-chain scenarios where the attacker may be actively monitoring response. Pace containment to scope, prefer reversible isolation, and coordinate with the Lead Investigator on telemetry implications before each major action.
 
 ### 4.4 Eradication
 
@@ -219,10 +219,10 @@ Severity drives engagement, communication cadence, and notification scrutiny. Se
 
 | **Severity** | **Indicative Criteria (any of)** | **Engagement** | **Reporting** |
 |---|---|---|---|
-| **Sev 1 — Critical** | Confirmed material data loss or destruction; ransomware encrypting Tier 1 or regulated systems; confirmed compromise affecting BES Cyber System operations; broad customer / partner impact; meets reasonable-investor materiality threshold for SEC disclosure. | Full IRT, executive sponsor, board notification, external partners as needed. | Hourly IC briefing to executive leadership during active response. |
-| **Sev 2 — Significant** | Confirmed unauthorized access to Tier 1 systems or Confidential/Restricted data; ransomware contained to non-critical scope; confirmed cyber incident triggering DFARS / NERC-CIP / breach-law notification. | IC + full IRT + Legal + Communications. | At least twice-daily IC briefing during active response. |
-| **Sev 3 — Moderate** | Localized compromise (single endpoint, scoped credential), with no confirmed sensitive-data impact; significant phishing wave with successful but contained credential theft. | IC notified; Lead Investigator + Engineering active. | Daily IC update until closure. |
-| **Sev 4 — Minor** | Failed attack with no impact; isolated malware blocked by EDR; SOC-triaged anomaly with no escalation criteria met. | SOC / Risk only. | Routine SOC reporting. |
+| **Sev 1 - Critical** | Confirmed material data loss or destruction; ransomware encrypting Tier 1 or regulated systems; confirmed compromise affecting BES Cyber System operations; broad customer / partner impact; meets reasonable-investor materiality threshold for SEC disclosure. | Full IRT, executive sponsor, board notification, external partners as needed. | Hourly IC briefing to executive leadership during active response. |
+| **Sev 2 - Significant** | Confirmed unauthorized access to Tier 1 systems or Confidential/Restricted data; ransomware contained to non-critical scope; confirmed cyber incident triggering DFARS / NERC-CIP / breach-law notification. | IC + full IRT + Legal + Communications. | At least twice-daily IC briefing during active response. |
+| **Sev 3 - Moderate** | Localized compromise (single endpoint, scoped credential), with no confirmed sensitive-data impact; significant phishing wave with successful but contained credential theft. | IC notified; Lead Investigator + Engineering active. | Daily IC update until closure. |
+| **Sev 4 - Minor** | Failed attack with no impact; isolated malware blocked by EDR; SOC-triaged anomaly with no escalation criteria met. | SOC / Risk only. | Routine SOC reporting. |
 
 The IC may up- or down-grade severity at any time based on emerging information. Severity changes are logged on the incident timeline.
 
@@ -240,7 +240,7 @@ Notification is one of the highest-risk areas of incident response. Many obligat
 | Executive leadership (CEO/CIO/CFO/COO) | Sev 1 / Sev 2 activation | IC | Within 1 hour of activation |
 | Board (Audit / Risk Committee) | Sev 1; or Sev 2 with regulatory / financial implications | CISO via CEO | Within 24 hours of confirmation per board protocol |
 | Workforce communications | Sev 1; or any incident requiring workforce action | Communications + IC | As approved by IC |
-| Internal Audit | Sev 1; SOX-relevant incidents | Governance | Per SOX protocol |
+| Internal Audit | Sev 1; [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant incidents | Governance | Per [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) protocol |
 
 ### 6.2 External Notification (Regulator and Statutory)
 
@@ -249,7 +249,7 @@ Notification is one of the highest-risk areas of incident response. Many obligat
 | **DoD DC3 / DIBNet** | Reportable cyber incident affecting CUI or operationally critical support | **72 hours** from discovery | Governance + Legal | DFARS 252.204-7012(c) |
 | **NERC E-ISAC and Regional Entity** | Reportable Cyber Security Incident or attempt against BES Cyber Systems | Per CIP-008 timelines (1 hour for compromise of BCS; 24 hours for attempts) | Governance | NERC-CIP CIP-008-6 R1.4 |
 | **SEC (Form 8-K Item 1.05)** | Material cybersecurity incident at a public-company registrant | **4 business days** from materiality determination | CISO + Legal + CFO | SEC Reg S-K Item 106(b); Form 8-K Item 1.05 |
-| **State breach notification laws** | Unauthorized acquisition of state-defined personal information | Per state — often "without unreasonable delay"; specific deadlines vary (e.g., 30/45/60 days) | Legal + Governance | State statutes |
+| **State breach notification laws** | Unauthorized acquisition of state-defined personal information | Per state - often "without unreasonable delay"; specific deadlines vary (e.g., 30/45/60 days) | Legal + Governance | State statutes |
 | **GDPR Supervisory Authority** (where applicable) | Personal data breach with risk to data subjects | **72 hours** from awareness | Legal / DPO | GDPR Art 33 |
 | **HIPAA Breach Notification** (where applicable) | Breach of unsecured PHI | Per HIPAA timelines | Legal / Privacy | HIPAA 164.400 series |
 | **Sector / customer contractual notification** | Per contract terms (often 24–72 hours) | Per contract | Governance + Account Management | Contractual |
@@ -260,7 +260,7 @@ Notification is one of the highest-risk areas of incident response. Many obligat
 
 > **Two Failure Modes**
 >
-> The two notification failure modes are: notifying too early on incomplete information, or notifying too late after the regulatory clock has run. Both are damaging. The discipline is: (a) start the regulatory clock log at the moment of discovery — not at the moment of confirmation; (b) make notification decisions through the IC + Legal + Governance triad, not unilaterally; (c) document the rationale at each decision point. If you would not be willing to defend the rationale to a regulator after the fact, do not adopt it during the incident.
+> The two notification failure modes are: notifying too early on incomplete information, or notifying too late after the regulatory clock has run. Both are damaging. The discipline is: (a) start the regulatory clock log at the moment of discovery, not at the moment of confirmation; (b) make notification decisions through the IC + Legal + Governance triad, not unilaterally; (c) document the rationale at each decision point. If you would not be willing to defend the rationale to a regulator after the fact, do not adopt it during the incident.
 
 ---
 
@@ -276,15 +276,15 @@ Containment leverages cloud-native isolation (quarantine IAM, account suspension
 >
 > Response in OT environments evaluates every containment action for operational impact before execution. Isolation that would be routine in IT can produce a grid disturbance in OT. OT response actions require operations-team participation in the decision, not just notification.
 
-OT incidents engage the operations liaison as a peer decision-maker on containment options. Containment defaults to least-disruptive options first (passive monitoring intensification, network-edge controls) before in-band actions. NERC-CIP CIP-008 reporting timelines run regardless of operational readiness — Governance owns those clocks.
+OT incidents engage the operations liaison as a peer decision-maker on containment options. Containment defaults to least-disruptive options first (passive monitoring intensification, network-edge controls) before in-band actions. NERC-CIP CIP-008 reporting timelines run regardless of operational readiness, Governance owns those clocks.
 
 ### 7.3 CUI Environments
 
 CUI incidents trigger DFARS 252.204-7012 reporting via DC3 / DIBNet within 72 hours of discovery (Section 6.2). Evidence preservation requirements (90-day retention of images and malware) apply per **CERG-STD-CUI-001 §7**. The Governance Lead coordinates with the contracting officer when required by contract.
 
-### 7.4 SOX-Relevant Systems
+### 7.4 [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-Relevant Systems
 
-Incidents affecting SOX-relevant systems require Internal Audit and CFO designee engagement to assess ITGC control implications. Material control gaps may require disclosure considerations under SEC Item 1.05.
+Incidents affecting [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant systems require Internal Audit and CFO designee engagement to assess ITGC control implications. Material control gaps may require disclosure considerations under SEC Item 1.05.
 
 ### 7.5 Third-Party / Supply-Chain Incidents
 
@@ -310,10 +310,10 @@ Currently maintained playbooks:
 | PB-08 | Data Exfiltration Confirmed or Suspected |
 | PB-09 | Supply Chain / Vendor Compromise |
 | PB-10 | Phishing Wave with Successful Credential Theft |
-| PB-11 | Insider Threat — Authorized User Misuse |
+| PB-11 | Insider Threat - Authorized User Misuse |
 | PB-12 | DDoS / Availability Attack |
 | PB-13 | BES Cyber System Compromise (CIP-008) |
-| PB-14 | OT — Loss of SCADA Visibility / Control |
+| PB-14 | OT - Loss of SCADA Visibility / Control |
 | PB-15 | CUI Cyber Incident (DFARS 7012 reporting) |
 | PB-16 | Lost / Stolen Endpoint with Sensitive Data |
 | PB-17 | Business Email Compromise (BEC) |
@@ -357,7 +357,7 @@ External communications during an active incident are owned by the IC, with cont
 | Preserve before you contain | Where feasible, capture volatile state (memory, network captures, ephemeral cloud telemetry) before destructive containment. |
 | Chain of custody | Every evidence artifact is logged: source system, time captured, method, custodian, hash. |
 | Original integrity | Work from images and copies. Do not modify original artifacts. |
-| Provider-side evidence | For cloud and SaaS, identify which artifacts are obtainable from the provider and what the retention window is — request promptly. |
+| Provider-side evidence | For cloud and SaaS, identify which artifacts are obtainable from the provider and what the retention window is - request promptly. |
 | Retention | Evidence is retained per the most stringent applicable obligation. DFARS requires 90-day minimum for CUI incidents. |
 
 ### 10.2 Privilege
@@ -374,9 +374,9 @@ Engagement with law enforcement is at the IC's discretion in consultation with L
 
 | **Activity** | **Cadence** | **Owner** |
 |---|---|---|
-| Tabletop exercise — Sev 1 scenario (cross-environment) | Annual | Governance + Risk |
-| Tabletop exercise — OT (CIP-008) | Annual | Governance + Risk + OT Ops |
-| Tabletop exercise — CUI (DFARS 7012 reporting) | Annual | Governance |
+| Tabletop exercise - Sev 1 scenario (cross-environment) | Annual | Governance + Risk |
+| Tabletop exercise - OT (CIP-008) | Annual | Governance + Risk + OT Ops |
+| Tabletop exercise - CUI (DFARS 7012 reporting) | Annual | Governance |
 | Functional exercise / detection validation (purple-team) | Quarterly | Risk |
 | IRT contact roster validation | Quarterly | Governance |
 | External retainer activation test | Annual | Governance |
@@ -389,16 +389,16 @@ Exercise results, including identified gaps and corrective actions, are recorded
 
 ## 12. Regulatory and Framework Alignment Summary
 
-| **Process Area** | **NIST CSF 2.0** | **NIST 800-53r5** | **NIST 800-171** | **NERC-CIP** | **CMMC L2** | **Other** |
+| **Process Area** | **[NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final)** | **[NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)** | **[NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final)** | **NERC-CIP** | **[CMMC L2](https://dodcio.defense.gov/CMMC/)** | **Other** |
 |---|---|---|---|---|---|---|
 | IR Capability / Plan | RS / RC | IR-2, IR-4, IR-8 | 3.6.1 | CIP-008 R1 | IR.L2-3.6.1 | DFARS 252.204-7012 |
-| Detection & Analysis | DE.AE, RS.AN | IR-4, AU-6, SI-4 | 3.6.1 | CIP-007 R4 | IR.L2-3.6.1 | — |
-| Containment / Eradication | RS.MI | IR-4, IR-4(1)(2) | 3.6.2 | CIP-008 | IR.L2-3.6.2 | — |
+| Detection & Analysis | DE.AE, RS.AN | IR-4, AU-6, SI-4 | 3.6.1 | CIP-007 R4 | IR.L2-3.6.1 | - |
+| Containment / Eradication | RS.MI | IR-4, IR-4(1)(2) | 3.6.2 | CIP-008 | IR.L2-3.6.2 | - |
 | Notification (regulator / law enforce.) | RS.CO | IR-6 | 3.6.2 | CIP-008 R1.4 | IR.L2-3.6.2 | DFARS · GDPR · State |
-| Recovery | RC.RP | CP-2, CP-10, IR-4 | 3.6.3 | CIP-009 | RE.L2-3.6.3 | — |
-| Lessons Learned | ID.IM, RC.IM | IR-4(4), CA-7 | 3.6.3 | CIP-008 R3 | IR.L2-3.6.3 | — |
-| Exercises & Testing | ID.IM | IR-3, IR-3(2) | 3.6.3 | CIP-008 R3 | IR.L2-3.6.3 | — |
-| Disclosure (public registrant) | GV.RR | — | — | — | — | SEC 8-K Item 1.05 |
+| Recovery | RC.RP | CP-2, CP-10, IR-4 | 3.6.3 | CIP-009 | RE.L2-3.6.3 | - |
+| Lessons Learned | ID.IM, RC.IM | IR-4(4), CA-7 | 3.6.3 | CIP-008 R3 | IR.L2-3.6.3 | - |
+| Exercises & Testing | ID.IM | IR-3, IR-3(2) | 3.6.3 | CIP-008 R3 | IR.L2-3.6.3 | - |
+| Disclosure (public registrant) | GV.RR | - | - | - | - | SEC 8-K Item 1.05 |
 
 ---
 
@@ -426,7 +426,7 @@ Cyber Governance owns the plan as a document. The CISO owns the operational capa
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | CERG-POL-001 | Parent policy — Principle 10 |
+| Cybersecurity Policy | CERG-POL-001 | Parent policy - Principle 10 |
 | Grid and Control System Standard | CERG-STD-OT-001 | OT IR overlay, CIP-008 obligations |
 | IT (Hosted/Cloud/SaaS) Security Standard | CERG-STD-IT-001 | Cloud / SaaS IR overlay |
 | CUI Handling Standard | CERG-STD-CUI-001 | DFARS reporting workflow |
@@ -437,7 +437,7 @@ Cyber Governance owns the plan as a document. The CISO owns the operational capa
 
 ---
 
-> **SURGE — Cyber Engineering, Risk & Governance**
+> **SURGE, Cyber Engineering, Risk & Governance**
 >
 > _Prepared response is the only kind that holds together at 2 a.m._
 

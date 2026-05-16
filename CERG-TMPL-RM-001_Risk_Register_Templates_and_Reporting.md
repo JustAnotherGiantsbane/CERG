@@ -1,5 +1,5 @@
 
-# SURGE — Cyber Engineering, Risk & Governance
+# SURGE: Cyber Engineering, Risk & Governance
 
 ## RISK REGISTER TEMPLATES AND REPORTING
 ### Register Schema · Exception Request · Scoring Examples · CISO Slice-and-Dice Reporting
@@ -11,13 +11,13 @@
 | **Document ID** | CERG-TMPL-RM-001 |
 | **Version** | 1.0 |
 | **Status** | For Review |
-| **Classification** | Internal — Confidential |
+| **Classification** | Internal - Confidential |
 | **Owner** | Cyber Governance Manager (Risk Register) |
-| **Parent Procedure** | CERG-PRC-RM-001 — Risk Register and Exception Process |
+| **Parent Procedure** | CERG-PRC-RM-001 - Risk Register and Exception Process |
 | **Supporting Documents** | CERG-GOV-CB-001 · CERG-GOV-MTR-001 |
 | **Review Cycle** | Annual / On register tooling change |
-| **Frameworks** | NIST 800-30r1 · NIST 800-39 · ISO 31000 |
-| **Regulations** | NERC-CIP · CMMC L2 · SOX ITGC |
+| **Frameworks** | [NIST 800-30r1](https://csrc.nist.gov/pubs/sp/800/30/r1/final) · [NIST 800-39](https://csrc.nist.gov/pubs/sp/800/39/final) · ISO 31000 |
+| **Regulations** | NERC-CIP · [CMMC L2](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC |
 | **Environments** | All in-scope assets |
 
 ---
@@ -48,7 +48,7 @@
 
 ## 2. Risk Statement Standard
 
-Every risk register entry has a single sentence — the **Risk Statement** — in this form:
+Every risk register entry has a single sentence, the **Risk Statement**, in this form:
 
 > Because of [**threat / weakness**], affecting [**asset / scope**], there is a possibility that [**adverse event**] occurs, resulting in [**business impact**].
 
@@ -73,34 +73,34 @@ The schema below is the system-of-record contract regardless of tool (Excel, Ser
 | **Field** | **Type** | **Required** | **Description** |
 |---|---|---|---|
 | Risk ID | `R-YYYY-NNNN` | Yes | Sequential per calendar year. |
-| Risk Statement | Free text — Section 2 form | Yes | One sentence. |
+| Risk Statement | Free text - Section 2 form | Yes | One sentence. |
 | Source | Enum: VM · Pen Test · Vendor · Architecture Review · Audit · Threat Intel · Self-Identified · Incident | Yes | What surfaced the risk. |
 | Linked Control(s) | List of CERG-GOV-CB-001 IDs | Yes | At least one. |
 | Affected Asset(s) | Asset inventory ID(s) | Yes | From the authoritative asset inventory. |
 | Operating Unit | Enum (OU list) | Yes | Drives CISO slice-and-dice. |
-| Regulatory Scope | Multi-select: CUI · BES · SOX · None | Yes | Drives overlay scoring. |
+| Regulatory Scope | Multi-select: CUI · BES · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · None | Yes | Drives overlay scoring. |
 | Inherent Likelihood | 1–5 | Yes | Before controls. |
 | Inherent Impact | 1–5 | Yes | Before controls. |
-| Inherent Score | Likelihood × Impact | Auto | — |
+| Inherent Score | Likelihood × Impact | Auto | - |
 | Control Effectiveness | Enum: Strong · Adequate · Weak · None | Yes | Reduces residual score per Section 6. |
 | Residual Likelihood | 1–5 | Yes | After controls. |
 | Residual Impact | 1–5 | Yes | After controls. |
 | Residual Score | Likelihood × Impact | Auto | Drives approval authority per PRC-RM-001 §8. |
-| Treatment | Enum: Mitigate · Transfer · Avoid · Accept | Yes | — |
+| Treatment | Enum: Mitigate · Transfer · Avoid · Accept | Yes | - |
 | Treatment Plan | Free text | Yes | Specific actions, owners, dates. |
-| Risk Owner | Named role | Yes | Asset/process owner — accountable. |
-| CERG Coordinator | Named role | Yes | Pillar contact — keeps it moving. |
+| Risk Owner | Named role | Yes | Asset/process owner - accountable. |
+| CERG Coordinator | Named role | Yes | Pillar contact - keeps it moving. |
 | Approver | Named role | Yes | Per PRC-RM-001 §8 matrix. |
-| Approval Date | Date | If accepted | — |
+| Approval Date | Date | If accepted | - |
 | Review Cadence | Quarterly · Semi-Annual · Annual | Yes | Driven by residual score. |
-| Next Review | Date | Yes | — |
-| Status | Open · In Treatment · Accepted · Closed · Retired | Yes | — |
-| Linked Exceptions | Exception ID(s) | If exception in force | — |
-| Linked Findings | VM finding ID · Pen test finding ID · Audit finding ID | Optional | — |
-| Linked POA&M | POA&M ID | If CUI scope | — |
+| Next Review | Date | Yes | - |
+| Status | Open · In Treatment · Accepted · Closed · Retired | Yes | - |
+| Linked Exceptions | Exception ID(s) | If exception in force | - |
+| Linked Findings | VM finding ID · Pen test finding ID · Audit finding ID | Optional | - |
+| Linked POA&M | POA&M ID | If CUI scope | - |
 | Evidence Pointer | URI / artifact reference | Yes | Where the proof lives. |
 | Trend Indicator | Improving · Steady · Worsening | Yes (at review) | Set at each review. |
-| Free-Form Notes | Free text | Optional | — |
+| Free-Form Notes | Free text | Optional | - |
 
 ### 3.1 Computed Fields and Workflow States
 
@@ -112,7 +112,7 @@ The schema below is the system-of-record contract regardless of tool (Excel, Ser
 
 ## 4. Worked Examples
 
-### 4.1 Example A — Risk Derived From a Partially Implemented Control
+### 4.1 Example A: Risk Derived From a Partially Implemented Control
 
 | Field | Value |
 |---|---|
@@ -121,7 +121,7 @@ The schema below is the system-of-record contract regardless of tool (Excel, Ser
 | Source | Self-Identified |
 | Linked Control(s) | IA-2 |
 | Operating Unit | Generation Operations IT |
-| Regulatory Scope | SOX |
+| Regulatory Scope | [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) |
 | Inherent Likelihood / Impact | 4 / 4 → 16 |
 | Control Effectiveness | Weak (legacy auth permitted) |
 | Residual Likelihood / Impact | 4 / 3 → 12 (High) |
@@ -131,7 +131,7 @@ The schema below is the system-of-record contract regardless of tool (Excel, Ser
 | Approver | CISO |
 | Review Cadence | Quarterly |
 
-### 4.2 Example B — Risk Derived From a Risk-Accepted Exception
+### 4.2 Example B: Risk Derived From a Risk-Accepted Exception
 
 | Field | Value |
 |---|---|
@@ -147,12 +147,12 @@ The schema below is the system-of-record contract regardless of tool (Excel, Ser
 | Linked Exceptions | EX-2026-0017 |
 | Review Cadence | Quarterly |
 
-### 4.3 Example C — Risk Derived From an Inheritance Failure Mode
+### 4.3 Example C: Risk Derived From an Inheritance Failure Mode
 
 | Field | Value |
 |---|---|
 | Risk ID | R-2026-0153 |
-| Risk Statement | If the M365 inherited tenancy isolation control is misconfigured on the customer side (conditional access policy gap), affecting all M365-resident CUI workspaces, there is a possibility that unauthorized cross-tenant access leads to CUI exposure, resulting in CMMC L2 finding and DC3 notification. |
+| Risk Statement | If the M365 inherited tenancy isolation control is misconfigured on the customer side (conditional access policy gap), affecting all M365-resident CUI workspaces, there is a possibility that unauthorized cross-tenant access leads to CUI exposure, resulting in [CMMC L2](https://dodcio.defense.gov/CMMC/) finding and DC3 notification. |
 | Source | Architecture Review |
 | Linked Control(s) | AC-3 / IA-2 / 800-171 3.1.1 |
 | Regulatory Scope | CUI |
@@ -167,7 +167,7 @@ The schema below is the system-of-record contract regardless of tool (Excel, Ser
 The exception is a request to deviate from a baseline control. It is a risk register entry once approved.
 
 ```
-EXCEPTION REQUEST — EX-YYYY-NNNN
+EXCEPTION REQUEST - EX-YYYY-NNNN
 
 Requestor              :
 Business Sponsor       :
@@ -185,16 +185,16 @@ Standard Language      :   (quoted parameter that is being relaxed)
 Proposed Deviation     :   (precise; not "we won't do X" but "we will do Y in place of X")
 
 Business Driver        :   (why this is needed)
-Compensating Controls  :   (specific, named, in place — not future tense)
+Compensating Controls  :   (specific, named, in place - not future tense)
 Residual Risk Score    :   (per Section 6)
 Risk Statement         :   (per Section 2)
 
 Treatment Plan to      :
-Close the Exception    :   (what makes this expire — usually a planned control)
+Close the Exception    :   (what makes this expire - usually a planned control)
 
 Risk Owner             :
 CERG Coordinator       :
-Approver Required      :   (per PRC-RM-001 §8 — Engineering Mgr / CISO / Exec Sponsor)
+Approver Required      :   (per PRC-RM-001 §8 - Engineering Mgr / CISO / Exec Sponsor)
 ```
 
 Exception register fields mirror the risk register schema and add: **Exception ID**, **Standard Reference**, **Deviation Text**, **Compensating Controls**, **Expiration Date**, **Renewal Allowed (Y/N)**, **Renewal History**.
@@ -213,11 +213,11 @@ CERG scores risk on a 5×5 matrix, with **control effectiveness** as a step-down
 
 | **Rating** | **Meaning** | **Indicators** |
 |---|---|---|
-| 1 — Rare | Unlikely in any 5-year window. | No known precedent; requires sophisticated, targeted attack. |
-| 2 — Unlikely | Possible in 5 years. | Known but rare; requires specific conditions. |
-| 3 — Possible | Plausible within 1 year. | Industry has examples; ordinary skill required. |
-| 4 — Likely | Expected within 1 year. | Observed in peer organizations or commodity attack. |
-| 5 — Almost Certain | Expected within 90 days or actively observed. | Active campaign, exposed surface, telemetry indicates attempts. |
+| 1 - Rare | Unlikely in any 5-year window. | No known precedent; requires sophisticated, targeted attack. |
+| 2 - Unlikely | Possible in 5 years. | Known but rare; requires specific conditions. |
+| 3 - Possible | Plausible within 1 year. | Industry has examples; ordinary skill required. |
+| 4 - Likely | Expected within 1 year. | Observed in peer organizations or commodity attack. |
+| 5 - Almost Certain | Expected within 90 days or actively observed. | Active campaign, exposed surface, telemetry indicates attempts. |
 
 ### 6.2 Impact (1–5)
 
@@ -255,7 +255,7 @@ Residual cannot fall below 1. Step-downs are applied to inherent, never to resid
 
 ## 7. CISO Slice-and-Dice Reporting Views
 
-The CISO will not consume the operational view. The CISO will consume views that compare and trend. The package below is what gets published — heat-maps, trend lines, and scorecards first; narrative memos in reserve for specific questions.
+The CISO will not consume the operational view. The CISO will consume views that compare and trend. The package below is what gets published, heat-maps, trend lines, and scorecards first; narrative memos in reserve for specific questions.
 
 ### 7.1 The Five Standing CISO Views
 
@@ -265,7 +265,7 @@ The CISO will not consume the operational view. The CISO will consume views that
 | OU Heat Map | Show where risk concentrates by OU × Family. | Matrix: OU rows × Control Family columns (AC, AU, CM, CP, IA, RA, SC, SI, SR). Cell = count of High/Critical. |
 | Trend Lines | Are we getting better or worse? | Monthly: total residual score (sum), Critical+High count, mean time to close, open exception count. 13-month rolling. |
 | Top 10 Risks | The set the board cares about. | The ten highest residual-score open risks with risk statement, owner, treatment, next milestone. |
-| Regulatory Posture | Per-overlay summary. | CUI / BES / SOX rows; columns: Practices Implemented %, Open POA&M items, Open Exceptions, Next Assessment Date. |
+| Regulatory Posture | Per-overlay summary. | CUI / BES / [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) rows; columns: Practices Implemented %, Open POA&M items, Open Exceptions, Next Assessment Date. |
 
 ### 7.2 Anti-Shallow-Metrics Guardrails
 
@@ -276,9 +276,9 @@ The CISO will not consume the operational view. The CISO will consume views that
 Additional guardrails baked into the views:
 
 - **OU Scorecard "Trend Arrow"** is computed on residual-score weighted sum, never on count.
-- **Top 10 Risks** rows must include the *age of the highest-impact unmitigated finding inside that risk* — so a 6-month-old Critical does not hide behind a freshly closed Low.
+- **Top 10 Risks** rows must include the *age of the highest-impact unmitigated finding inside that risk*, so a 6-month-old Critical does not hide behind a freshly closed Low.
 - **OU Heat Map** colors on Critical+High concentration, not on total count.
-- **Regulatory Posture** "Practices Implemented %" is computed on the in-scope practice set with **Partially Implemented** counted as 0.5 — not as 1.
+- **Regulatory Posture** "Practices Implemented %" is computed on the in-scope practice set with **Partially Implemented** counted as 0.5, not as 1.
 
 ### 7.3 Cadence
 
@@ -301,7 +301,7 @@ Additional guardrails baked into the views:
 | Medium risk reviews | Semi-Annual | Risk Owner + CERG Coordinator |
 | Low risk reviews | Annual | Risk Register Owner (batch) |
 | Exception expiration sweep | Monthly | Risk Register Owner |
-| OU Scorecard publication | Monthly | Cyber Governance — Reporting |
+| OU Scorecard publication | Monthly | Cyber Governance - Reporting |
 | Top 10 Risks publication | Monthly | Risk Register Owner + CISO |
 | Regulatory Posture publication | Quarterly | Governance Domain Owners |
 | Risk register data quality audit | Quarterly | Risk Register Owner |
@@ -316,5 +316,5 @@ Additional guardrails baked into the views:
 | **Version** | 1.0 |
 | **Approved By** | Cyber Governance Manager |
 | **Next Review** | Annual / on tooling change |
-| **Change Log** | 1.0 — Initial publication. Schema, examples, exception template, scoring guide, CISO reporting views. |
+| **Change Log** | 1.0 - Initial publication. Schema, examples, exception template, scoring guide, CISO reporting views. |
 

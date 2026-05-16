@@ -1,5 +1,5 @@
 
-# SURGE — Cyber Engineering, Risk & Governance
+# SURGE: Cyber Engineering, Risk & Governance
 
 ## METRICS, DASHBOARD, AND CISO / BOARD REPORTING
 ### Metrics Dictionary · KRI/KPI Data Source Map · CISO Dashboard · Brief and Report Templates
@@ -11,13 +11,13 @@
 | **Document ID** | CERG-GOV-MTR-001 |
 | **Version** | 1.0 |
 | **Status** | For Review |
-| **Classification** | Internal — Confidential |
+| **Classification** | Internal - Confidential |
 | **Owner** | Cyber Governance Manager (Reporting) |
-| **Parent Policy** | CERG-POL-001 — Cybersecurity Policy |
+| **Parent Policy** | CERG-POL-001 - Cybersecurity Policy |
 | **Supporting Documents** | CERG-GOV-CB-001 · CERG-TMPL-RM-001 · CERG-PRC-VM-001 · CERG-PRC-RM-001 · CERG-GOV-OM-001 · CERG_Risk_Management_Framework_v1.0 |
 | **Review Cycle** | Annual / On metrics-platform change |
-| **Frameworks** | NIST CSF 2.0 (GOVERN) · NIST 800-55 · ISO/IEC 27004 |
-| **Regulations** | All — board reporting |
+| **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · NIST 800-55 · ISO/IEC 27004 |
+| **Regulations** | All - board reporting |
 | **Environments** | Program-wide |
 
 ---
@@ -41,7 +41,7 @@
 
 CERG-POL-001 commits the CISO to reporting compliance posture and material risk to executive leadership and the board. The Operating Model defines maturity indicators; the RMF defines KRIs and escalation triggers; the VM and Risk procedures define standing metrics. This document closes the gap between those conceptual metrics and the operational reporting the CISO actually publishes.
 
-It applies to every CERG-produced metric and every CERG-produced report consumed by the Cyber Oversight Group (CISO's reporting line — operating unit leadership, executives, or board depending on org structure), executive leadership, and the board.
+It applies to every CERG-produced metric and every CERG-produced report consumed by the Cyber Oversight Group (CISO's reporting line, operating unit leadership, executives, or board depending on org structure), executive leadership, and the board.
 
 ---
 
@@ -98,7 +98,7 @@ The dictionary is the source-of-truth definition for every CERG metric. Each ent
 | CM-004 | Backup Success Rate (Critical Systems) | % of Critical-tier backups completed successfully | Backup tool | Daily | ≥ 99% / 95–99% / < 95% | CISO Dashboard |
 | CM-005 | Restoration Test Currency | % of Tier-1 systems with current restoration test evidence | Resilience register | Quarterly | ≥ 95% / 80–95% / < 80% | CISO Dashboard |
 
-### 3.4 Identity Metrics (Owner: Cyber Engineering — Identity)
+### 3.4 Identity Metrics (Owner: Cyber Engineering: Identity)
 
 | **ID** | **Name** | **Formula** | **Source** | **Refresh** | **G / A / R** | **Reported In** |
 |---|---|---|---|---|---|---|
@@ -107,12 +107,12 @@ The dictionary is the source-of-truth definition for every CERG metric. Each ent
 | ID-003 | Dormant Privileged Accounts | Count of privileged accounts with no use in 60 days | PAM | Weekly | 0 / 1–10 / > 10 | CISO Dashboard |
 | ID-004 | Break-Glass Account Hygiene | % of break-glass accounts within rotation policy | PAM | Monthly | 100% / 90–100% / < 90% | CISO Dashboard |
 
-### 3.5 Third-Party / Supply Chain Metrics (Owner: Cyber Risk — TPRM)
+### 3.5 Third-Party / Supply Chain Metrics (Owner: Cyber Risk: TPRM)
 
 | **ID** | **Name** | **Formula** | **Source** | **Refresh** | **G / A / R** | **Reported In** |
 |---|---|---|---|---|---|---|
 | TP-001 | Tier 1 Vendors with Current Attestation | % | TPRM tool | Monthly | ≥ 95% / 85–95% / < 85% | CISO Dashboard |
-| TP-002 | SCCT Activations (Trailing 12m) | Count of SCCT activations | TPRM tool | Monthly | n/a — informational | COG Brief |
+| TP-002 | SCCT Activations (Trailing 12m) | Count of SCCT activations | TPRM tool | Monthly | n/a - informational | COG Brief |
 | TP-003 | International Access Exceptions | Open international-access exceptions | Exception register | Monthly | ≤ baseline / ±20% / > baseline+20% | CISO Dashboard |
 | TP-004 | SBOM Coverage (Tier 1 Software) | % of Tier 1 software products with SBOM on file | TPRM tool | Quarterly | ≥ 90% / 75–90% / < 75% | COG Brief |
 
@@ -120,11 +120,11 @@ The dictionary is the source-of-truth definition for every CERG metric. Each ent
 
 | **ID** | **Name** | **Formula** | **Source** | **Refresh** | **G / A / R** | **Reported In** |
 |---|---|---|---|---|---|---|
-| GV-001 | CUI Practices Implemented (CMMC L2) | % of in-scope 800-171 practices `Implemented` (Partial = 0.5) | CUI register | Monthly | 100% / 95–100% / < 95% | CISO Dashboard, Reg Posture |
-| GV-002 | Open POA&M Items (CUI) | Count + age of open POA&M | POA&M | Monthly | n/a — age-weighted | Reg Posture |
+| GV-001 | CUI Practices Implemented ([CMMC L2](https://dodcio.defense.gov/CMMC/)) | % of in-scope 800-171 practices `Implemented` (Partial = 0.5) | CUI register | Monthly | 100% / 95–100% / < 95% | CISO Dashboard, Reg Posture |
+| GV-002 | Open POA&M Items (CUI) | Count + age of open POA&M | POA&M | Monthly | n/a - age-weighted | Reg Posture |
 | GV-003 | NERC-CIP Evidence Library Currency | % of CIP requirements with current evidence ≤ cycle | OT GRC | Monthly | ≥ 98% / 90–98% / < 90% | Reg Posture |
 | GV-004 | CIP Deviations Open | Count of approved deviations + average days open | OT GRC | Monthly | n/a | Reg Posture |
-| GV-005 | SOX ITGC Control Pass Rate | % of in-scope SOX ITGC tests passed in cycle | SOX program | Quarterly | 100% / 95–100% / < 95% | Reg Posture |
+| GV-005 | [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC Control Pass Rate | % of in-scope [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC tests passed in cycle | [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) program | Quarterly | 100% / 95–100% / < 95% | Reg Posture |
 | GV-006 | Policy/Standard Currency | % of CERG-managed artifacts within review cycle | Document Catalog | Monthly | ≥ 95% / 85–95% / < 85% | CISO Dashboard |
 
 ---
@@ -136,12 +136,12 @@ The data source map tells the reporting team where each metric's underlying data
 | **Metric IDs** | **Primary System of Record** | **Owning Role** | **Refresh Path** | **Failure Mode** |
 |---|---|---|---|---|
 | RM-001 – RM-006 | Risk register tool | Risk Register Owner | Nightly extract → metrics platform | Stale ETL: hold the day's CISO Dashboard, raise an Amber data-quality flag. |
-| VM-001 – VM-004 | VM tool (e.g., Tenable) | Cyber Risk — VM | Hourly API → metrics platform | Tool outage: fall back to last-known-good snapshot with timestamp banner. |
-| DT-001 – DT-003 | SIEM + detection coverage tool | Cyber Risk — Detection | Nightly source inventory + detection registry export | Missing source: detection coverage shown as Red. |
-| CM-001 – CM-005 | Configuration / VM / Backup tools | Cyber Engineering — Platforms / Resilience | Nightly aggregation | Backup tool outage: pull from job log; flag as Amber. |
-| ID-001 – ID-004 | IdP / IGA / PAM | Cyber Engineering — Identity | Nightly export | Source change: re-baseline before publishing. |
-| TP-001 – TP-004 | TPRM tool | Cyber Risk — TPRM | Daily/weekly export | — |
-| GV-001 – GV-006 | CUI register / OT GRC / SOX program / Document Catalog | Cyber Governance — domain owners | Monthly publish | — |
+| VM-001 – VM-004 | VM tool (e.g., Tenable) | Cyber Risk - VM | Hourly API → metrics platform | Tool outage: fall back to last-known-good snapshot with timestamp banner. |
+| DT-001 – DT-003 | SIEM + detection coverage tool | Cyber Risk - Detection | Nightly source inventory + detection registry export | Missing source: detection coverage shown as Red. |
+| CM-001 – CM-005 | Configuration / VM / Backup tools | Cyber Engineering - Platforms / Resilience | Nightly aggregation | Backup tool outage: pull from job log; flag as Amber. |
+| ID-001 – ID-004 | IdP / IGA / PAM | Cyber Engineering - Identity | Nightly export | Source change: re-baseline before publishing. |
+| TP-001 – TP-004 | TPRM tool | Cyber Risk - TPRM | Daily/weekly export | - |
+| GV-001 – GV-006 | CUI register / OT GRC / [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) program / Document Catalog | Cyber Governance - domain owners | Monthly publish | - |
 
 > **One Source per Metric**
 >
@@ -155,7 +155,7 @@ The CISO dashboard is the single page that opens every monthly review. It is lai
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│  CISO RISK & POSTURE — <Month> <YYYY>                                  │
+│  CISO RISK & POSTURE - <Month> <YYYY>                                  │
 ├────────────────────────────────────────────────────────────────────────┤
 │  TREND LINES (13-mo rolling)                                           │
 │  · Residual Score Sum (RM-002)        ▁▂▃▄▄▅▆▇▆▅▄▄▃    ↓             │
@@ -178,7 +178,7 @@ The CISO dashboard is the single page that opens every monthly review. It is lai
 ├────────────────────────────────────────────────────────────────────────┤
 │  TOP 10 RISKS                                                          │
 │  ID         │ OU       │ Score │ Age │ Owner       │ Next Milestone   │
-│  R-2026-0048│ Gen Ops  │  12   │ 91d │ Gen Ops Dir │ MFA wave 1 — Q3  │
+│  R-2026-0048│ Gen Ops  │  12   │ 91d │ Gen Ops Dir │ MFA wave 1 - Q3  │
 │  ...                                                                   │
 ├────────────────────────────────────────────────────────────────────────┤
 │  REGULATORY POSTURE                                                    │
@@ -194,10 +194,10 @@ The dashboard is published from the metrics platform; the ASCII above is the lay
 
 ## 6. Quarterly Cyber Oversight Group Brief Template
 
-The Cyber Oversight Group is whoever the CISO reports to — depending on org structure, it is IT and OU leadership, executive leadership, or the board itself. The brief is identical in structure regardless of audience; depth is calibrated by audience.
+The Cyber Oversight Group is whoever the CISO reports to, depending on org structure, it is IT and OU leadership, executive leadership, or the board itself. The brief is identical in structure regardless of audience; depth is calibrated by audience.
 
 ```
-QUARTERLY CYBER OVERSIGHT GROUP BRIEF — Q<n> <YYYY>
+QUARTERLY CYBER OVERSIGHT GROUP BRIEF - Q<n> <YYYY>
 
 1. EXECUTIVE TAKEAWAY (1 page max)
    · Are we more or less exposed than last quarter? Why?
@@ -237,7 +237,7 @@ The brief is published five business days before the meeting. Slides are read-ah
 The internal CERG leadership report is consumed by Engineering / Risk / Governance pillar owners and the CISO. It is operational where the CISO Dashboard is comparative.
 
 ```
-MONTHLY CERG LEADERSHIP REPORT — <Month> <YYYY>
+MONTHLY CERG LEADERSHIP REPORT - <Month> <YYYY>
 
 A. SCORECARD vs. METRIC TARGETS
    · Full Section 3 dictionary, this month, with G/A/R indicator and 3-month spark
@@ -248,9 +248,9 @@ B. THIS MONTH'S DELTAS
    · Net new risks ≥ High and exceptions opened
 
 C. PILLAR HIGHLIGHTS (one paragraph each)
-   · Engineering — projects intaken, ARs completed, baselines deployed
-   · Risk — VM trends, vendor activity, adversarial validation results
-   · Governance — policy/standard changes, regulatory milestones, audit interactions
+   · Engineering - projects intaken, ARs completed, baselines deployed
+   · Risk - VM trends, vendor activity, adversarial validation results
+   · Governance - policy/standard changes, regulatory milestones, audit interactions
 
 D. CROSS-PILLAR ITEMS
    · Items where ownership is unclear or work is blocked across pillars
@@ -284,9 +284,9 @@ The guardrails baked into the metric definitions and reporting views above:
 
 | **Artifact** | **Cadence** | **Owner** | **Audience** |
 |---|---|---|---|
-| CISO Dashboard | Monthly | Cyber Governance — Reporting | CISO |
-| Monthly CERG Leadership Report | Monthly | Cyber Governance — Reporting | CERG Leadership |
-| Quarterly COG Brief | Quarterly | CISO + Cyber Governance — Reporting | Cyber Oversight Group (per org structure) |
+| CISO Dashboard | Monthly | Cyber Governance - Reporting | CISO |
+| Monthly CERG Leadership Report | Monthly | Cyber Governance - Reporting | CERG Leadership |
+| Quarterly COG Brief | Quarterly | CISO + Cyber Governance - Reporting | Cyber Oversight Group (per org structure) |
 | Board read-out slice | Quarterly | CISO | Board (subset of COG Brief) |
 | Regulatory Posture | Quarterly | Governance domain owners | CISO · Audit · COG |
 | Metrics dictionary review | Annual | Cyber Governance Manager | CERG |
@@ -302,5 +302,5 @@ The guardrails baked into the metric definitions and reporting views above:
 | **Version** | 1.0 |
 | **Approved By** | Cyber Governance Manager · CISO endorsement |
 | **Next Review** | Annual / metrics-platform change |
-| **Change Log** | 1.0 — Initial publication. Establishes dictionary, source map, CISO dashboard, briefs, and anti-shallow guardrails. |
+| **Change Log** | 1.0 - Initial publication. Establishes dictionary, source map, CISO dashboard, briefs, and anti-shallow guardrails. |
 

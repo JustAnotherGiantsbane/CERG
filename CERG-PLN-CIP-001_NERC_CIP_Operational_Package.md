@@ -1,5 +1,5 @@
 
-# SURGE — Cyber Engineering, Risk & Governance
+# SURGE: Cyber Engineering, Risk & Governance
 
 ## NERC-CIP OPERATIONAL PACKAGE
 ### Evidence Library · OT VM · BES Access · Deviations · IT/OT Convergence · BES Categorization · ESP/EAP · CIP-013 · CIP-009 · CIP-015 (Forward-Looking)
@@ -11,12 +11,12 @@
 | **Document ID** | CERG-PLN-CIP-001 |
 | **Version** | 1.0 |
 | **Status** | For Review |
-| **Classification** | Internal — Confidential |
+| **Classification** | Internal - Confidential |
 | **Owner** | Cyber Governance Manager (OT / NERC-CIP) |
-| **Parent Standard** | CERG-STD-OT-001 — Grid Control Systems Security Standard |
+| **Parent Standard** | CERG-STD-OT-001 - Grid Control Systems Security Standard |
 | **Supporting Documents** | CERG-POL-001 · CERG-GOV-CB-001 · CERG-STD-AC-001 · CERG-STD-CFG-001 · CERG-STD-LM-001 · CERG-STD-RES-001 · CERG-STD-CR-001 · CERG-PRC-AR-001 · CERG-PRC-VM-001 · CERG-PRC-RM-001 · CERG-PRC-TPRM-001 · CERG-PRC-AV-001 · CERG-PLN-IR-001 |
-| **Review Cycle** | Annual / Continuous tracking — evidence currency monthly |
-| **Frameworks** | NIST 800-82r3 · IEC 62443-3-3 / 4-2 |
+| **Review Cycle** | Annual / Continuous tracking - evidence currency monthly |
+| **Frameworks** | [NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/final) · IEC 62443-3-3 / 4-2 |
 | **Regulations** | NERC-CIP v7 (CIP-002 through CIP-014) · CIP-015 (draft, forward-looking) · CIP-013-2 |
 | **Environments** | BES Cyber Systems (Low / Medium / High Impact) + associated EACMS / PACS / PCAs |
 
@@ -36,7 +36,7 @@
 10. [IT/OT Convergence Security Architecture Guideline (`CERG-GL-OT-001`)](#10-itot-convergence-security-architecture-guideline-cerg-gl-ot-001)
 11. [CIP-013 Supply Chain Risk Management Plan](#11-cip-013-supply-chain-risk-management-plan)
 12. [CIP-009 Recovery Plan Package](#12-cip-009-recovery-plan-package)
-13. [CIP-015 INSM — Forward-Looking Integration](#13-cip-015-insm--forward-looking-integration)
+13. [CIP-015 INSM, Forward-Looking Integration](#13-cip-015-insm--forward-looking-integration)
 14. [Operating Cadence and Reporting](#14-operating-cadence-and-reporting)
 15. [Regulatory and Framework Alignment Summary](#15-regulatory-and-framework-alignment-summary)
 16. [Document Control](#16-document-control)
@@ -51,7 +51,7 @@ It applies to every BES Cyber System (Low / Medium / High Impact) and the associ
 
 > **Operate the Compliance, Don't Just Document It**
 >
-> A binder of CIP requirements is not compliance. Compliance is the continuous evidence that the controls are operating — RTO measured, configurations baselined, access reviewed, deviations tracked, lessons learned actioned. This package is the operating manual for producing that evidence on a schedule the regulator can audit.
+> A binder of CIP requirements is not compliance. Compliance is the continuous evidence that the controls are operating, RTO measured, configurations baselined, access reviewed, deviations tracked, lessons learned actioned. This package is the operating manual for producing that evidence on a schedule the regulator can audit.
 
 ---
 
@@ -62,7 +62,7 @@ CERG operates as the **second line of defense** for CIP controls.
 | **Line** | **Role** | **Who** |
 |---|---|---|
 | **First** | Implementation of controls in the field. | OT Operators (substation engineering, control center operations, OT IT support). |
-| **Second** | Review, track implementation, evidence, and deviation; coordinate with Operators on control design and remediation. | CERG (Governance — OT, Risk — OT, Engineering — OT). |
+| **Second** | Review, track implementation, evidence, and deviation; coordinate with Operators on control design and remediation. | CERG (Governance - OT, Risk - OT, Engineering - OT). |
 | **Third** | Dispassionate assurance independent of both. | Internal Audit and/or external firms. |
 
 The model is intentionally explicit so audit trails are clean: Operators do; CERG reviews and tracks; Audit independently assures. CERG never grades its own homework on first-line activities, and Operators are not asked to be their own auditors.
@@ -84,10 +84,10 @@ CERG operates against the **latest approved** version of each CIP Standard, with
 CIP-002 requires identification and categorization of BES Cyber Systems. CERG categorizes following Attachment 1 criteria; the procedure:
 
 1. **Inventory all BES Cyber Assets** in the enterprise inventory with required metadata (function, location, criticality input from Operations).
-2. **Apply Attachment 1 criteria** (Section 1 — High Impact criteria; Section 2 — Medium Impact; everything else Low).
+2. **Apply Attachment 1 criteria** (Section 1, High Impact criteria; Section 2, Medium Impact; everything else Low).
 3. **Group BCAs into BES Cyber Systems** along functional / physical lines per operator input.
 4. **Identify associated systems**: EACMS, PACS, PCAs, BCSI repositories.
-5. **Document the rationale** for each categorization — the assessor will want to see it.
+5. **Document the rationale** for each categorization, the assessor will want to see it.
 6. **Review annually** and on material grid configuration / asset changes.
 
 The categorization is reflected in the asset inventory and drives every subsequent CIP obligation.
@@ -107,7 +107,7 @@ CIP-005 requires Electronic Security Perimeters (ESPs) and Electronic Access Poi
 
 ## 6. NERC-CIP Evidence Library Procedure (`CERG-GOV-CIP-001`)
 
-The Evidence Library is the single, authoritative repository of CIP compliance evidence — what the auditor opens first.
+The Evidence Library is the single, authoritative repository of CIP compliance evidence, what the auditor opens first.
 
 ### 6.1 Library Structure
 
@@ -125,12 +125,12 @@ The library is organized by CIP Standard, then by Requirement, then by Sub-requi
 | Next Refresh | Date |
 | Status | Current · Approaching Expiry · Expired |
 | Deviation in Place? | Per Section 9 |
-| Notes | — |
+| Notes | - |
 
 ### 6.2 Evidence Discipline
 
 - Every CIP Requirement applicable to in-scope assets has at least one Evidence Artifact named in the library.
-- Evidence is gathered through normal operations (CERG-managed scans, configuration capture, access reviews) — not assembled at audit time.
+- Evidence is gathered through normal operations (CERG-managed scans, configuration capture, access reviews), not assembled at audit time.
 - Refresh cadences are driven from this library to the operating cadence (Section 14).
 
 ### 6.3 Reused Evidence
@@ -159,7 +159,7 @@ The enterprise vulnerability procedure (`CERG-PRC-VM-001`) governs IT scopes; th
 ### 7.3 Patching
 
 - Patch evaluation cadence per CIP-007 R2.
-- Patch deployment per CIP-010 R1 — configuration changes require baseline update, security impact analysis, and authorization.
+- Patch deployment per CIP-010 R1, configuration changes require baseline update, security impact analysis, and authorization.
 - Patch evidence retained in the Evidence Library per CIP-007 R2.4.
 
 ### 7.4 Documentation
@@ -181,7 +181,7 @@ CIP-004 R4 / R5 obligations operationalized as an overlay on `CERG-PRC-AC-002`.
 ### 8.2 Provisioning and Revocation
 
 - Provisioning of unescorted physical access to ESPs and electronic access to BCS goes through PAM-mediated workflows where supported.
-- Revocation within 24 hours of termination (CIP-004 R5.1) — CERG operates against 1 hour for involuntary terminations.
+- Revocation within 24 hours of termination (CIP-004 R5.1), CERG operates against 1 hour for involuntary terminations.
 - BCSI access is governed under CIP-011 (information protection).
 
 ### 8.3 Vendor Remote Access
@@ -197,7 +197,7 @@ CIP-004 R4 / R5 obligations operationalized as an overlay on `CERG-PRC-AC-002`.
 When a CIP requirement cannot be met as written (or cannot be met for a defined window), CERG documents a deviation and mitigation plan. This is in addition to the risk register entry in `CERG-PRC-RM-001`.
 
 ```
-CIP DEVIATION AND MITIGATION PLAN — DEV-CIP-YYYY-NNNN
+CIP DEVIATION AND MITIGATION PLAN - DEV-CIP-YYYY-NNNN
 
 A. DEVIATION IDENTIFICATION
    Standard / Requirement   :  (e.g., CIP-007-6 R2.2)
@@ -216,7 +216,7 @@ C. RISK
    Operator Sign-Off
 
 D. MITIGATION
-   Compensating control(s) — specific, in-place, named, evidenced
+   Compensating control(s) - specific, in-place, named, evidenced
    Detection coverage uplift (if applicable)
 
 E. PLAN TO ELIMINATE THE DEVIATION
@@ -225,7 +225,7 @@ E. PLAN TO ELIMINATE THE DEVIATION
    Target Closure           :
 
 F. APPROVAL
-   CERG Governance — OT     :
+   CERG Governance - OT     :
    CERG CISO                :
    Operations               :
 
@@ -292,7 +292,7 @@ Vendor relationships involving Medium or High Impact BCS planning, design, insta
 | Notification of vendor personnel changes affecting access | Contract clause + CIP-004 access revocation per Section 8 |
 | Disclosure of known vulnerabilities | Subscription to vendor advisories + Section 7 OT VM |
 | Software / firmware integrity verification | `CERG-STD-OT-001` + `CERG-PRC-TPRM-001` Section 11 |
-| Vendor remote access — coordination of session controls | Section 8 + `CERG-STD-AC-001` |
+| Vendor remote access - coordination of session controls | Section 8 + `CERG-STD-AC-001` |
 
 ### 11.3 Evidence
 
@@ -311,17 +311,17 @@ Operationalized in coordination with `CERG-STD-RES-001`. The CIP-009 obligations
 | R1.3 Process for backup management | `CERG-STD-RES-001` Section 4 |
 | R1.4 Method for preserving recovery data | `CERG-STD-RES-001` Section 7.1 |
 | R1.5 Operator-led recovery | Plan names operator with substation engineering authority |
-| R2.1 Testing | `CERG-STD-RES-001` Section 5 — at least every 15 months |
-| R2.2 Operational exercise | Every 36 months — full operational exercise |
+| R2.1 Testing | `CERG-STD-RES-001` Section 5 - at least every 15 months |
+| R2.2 Operational exercise | Every 36 months - full operational exercise |
 | R3 Lessons learned and plan update within 90 days | `CERG-STD-RES-001` Section 5.2 step 8 |
 
 ---
 
-## 13. CIP-015 INSM — Forward-Looking Integration
+## 13. CIP-015 INSM: Forward-Looking Integration
 
 CIP-015 (Internal Network Security Monitoring) is in draft / approval at the time of V1 publication. CERG's posture:
 
-- The detection foundation in `CERG-STD-LM-001` Sections 6.2 and 9 is designed to support CIP-015 obligations once finalized — passive OT monitoring with detection set anchored to ATT&CK for ICS.
+- The detection foundation in `CERG-STD-LM-001` Sections 6.2 and 9 is designed to support CIP-015 obligations once finalized, passive OT monitoring with detection set anchored to ATT&CK for ICS.
 - ESP/EAP topology documentation in Section 5 provides the basis for INSM scoping.
 - Detection coverage metrics (DT-001 / DT-002) include OT sub-matrix; coverage on the BES INSM-relevant subset is tracked separately.
 - When CIP-015 is approved, CERG executes an implementation plan within the standard's enforcement window: incrementally onboarding INSM coverage to High Impact ESPs first, then Medium Impact; updating the Evidence Library; updating the Convergence Guideline if architectures shift.
@@ -366,7 +366,7 @@ A risk register entry tracks the CIP-015 readiness gap until INSM coverage match
 | CIP-013 | Section 11 + `CERG-PRC-TPRM-001` |
 | CIP-014 | Interface to Facilities |
 | CIP-015 (draft) | Section 13 + `CERG-STD-LM-001` |
-| NIST 800-82r3 | Sections 7, 10 + `CERG-STD-OT-001` / `CERG-STD-CFG-001` |
+| [NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/final) | Sections 7, 10 + `CERG-STD-OT-001` / `CERG-STD-CFG-001` |
 | IEC 62443-3-3 / 4-2 | Sections 7, 10 |
 
 ---
@@ -379,5 +379,5 @@ A risk register entry tracks the CIP-015 readiness gap until INSM coverage match
 | **Version** | 1.0 |
 | **Approved By** | Cyber Governance Manager (OT / NERC-CIP) · CISO endorsement |
 | **Next Review** | Annual / on CIP version or filing change |
-| **Change Log** | 1.0 — Initial publication. Evidence library, OT VM, BES access, deviation template, IT/OT convergence guideline, categorization, ESP/EAP, CIP-013, CIP-009, CIP-015 forward-looking. |
+| **Change Log** | 1.0 - Initial publication. Evidence library, OT VM, BES access, deviation template, IT/OT convergence guideline, categorization, ESP/EAP, CIP-013, CIP-009, CIP-015 forward-looking. |
 

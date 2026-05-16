@@ -1,5 +1,5 @@
 
-# SURGE — Cyber Engineering, Risk & Governance
+# SURGE: Cyber Engineering, Risk & Governance
 
 ## CYBER RESILIENCE AND BACKUP STANDARD
 ### Recovery Tiers · Backup Protection · Restoration Testing · Regulated Overlays · BCP Interface
@@ -11,13 +11,13 @@
 | **Document ID** | CERG-STD-RES-001 |
 | **Version** | 1.0 |
 | **Status** | For Review |
-| **Classification** | Internal — Confidential |
+| **Classification** | Internal - Confidential |
 | **Owner** | Cyber Engineering Manager (Resilience) |
-| **Parent Policy** | CERG-POL-001 — Cybersecurity Policy |
+| **Parent Policy** | CERG-POL-001 - Cybersecurity Policy |
 | **Supporting Standards** | CERG-STD-IT-001 · CERG-STD-OT-001 · CERG-STD-CUI-001 · CERG-STD-CFG-001 · CERG-STD-CR-001 · CERG-STD-LM-001 |
 | **Review Cycle** | Annual / On major platform change |
-| **Frameworks** | NIST 800-53r5 (CP) · NIST CSF 2.0 (RECOVER) · NIST 800-184 · ISO/IEC 27031 |
-| **Regulations** | NERC-CIP CIP-009 · CMMC L2 (3.8 / 3.6) · SOX ITGC (Backups / Operations) |
+| **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (CP) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (RECOVER) · NIST 800-184 · ISO/IEC 27031 |
+| **Regulations** | NERC-CIP CIP-009 · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.8 / 3.6) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC (Backups / Operations) |
 | **Environments** | Owned data center · IaaS / PaaS · SaaS Tier 1 · OT (BES and non-BES) · CUI scopes |
 
 ---
@@ -42,7 +42,7 @@
 
 ## 1. Purpose and Scope
 
-The policy, IT standard, OT standard, CUI standard, compliance matrix, and RMF all require documented and tested recovery plans, backup protection, and restoration evidence. Until this standard, those obligations had no shared executable definition — RTO/RPO tiers, immutability requirements, restoration evidence formats, and the boundary with enterprise BCP were left for each subordinate document to imply.
+The policy, IT standard, OT standard, CUI standard, compliance matrix, and RMF all require documented and tested recovery plans, backup protection, and restoration evidence. Until this standard, those obligations had no shared executable definition, RTO/RPO tiers, immutability requirements, restoration evidence formats, and the boundary with enterprise BCP were left for each subordinate document to imply.
 
 This standard closes that gap. It applies to every in-scope asset that has data, configuration, or workload state worth recovering.
 
@@ -69,15 +69,15 @@ CERG produces inputs to Enterprise BCP: tested cyber recovery plans, RTO/RPO act
 
 ## 3. Recovery Tiers and RTO/RPO Model
 
-Every in-scope asset has a CERG recovery tier. The tier drives RTO/RPO targets, backup frequency, immutability requirements, and restoration test cadence. Tiering is owned by Engineering in partnership with the business and Enterprise BCP — the business sets criticality, CERG sets the cyber tier consistent with criticality.
+Every in-scope asset has a CERG recovery tier. The tier drives RTO/RPO targets, backup frequency, immutability requirements, and restoration test cadence. Tiering is owned by Engineering in partnership with the business and Enterprise BCP, the business sets criticality, CERG sets the cyber tier consistent with criticality.
 
 | **Tier** | **Description** | **RTO (Cyber)** | **RPO** | **Backup Frequency** | **Restoration Test** |
 |---|---|---|---|---|---|
-| **T1 — Mission-Critical** | Outage causes safety, regulatory, or material financial loss within hours. | ≤ 4 hours | ≤ 15 minutes | Continuous / near-continuous | Quarterly full restore; annual full DR exercise |
-| **T2 — Business-Critical** | Outage materially impairs operations within one business day. | ≤ 24 hours | ≤ 4 hours | Hourly to every 4 hours | Semi-annual restore; annual exercise |
-| **T3 — Important** | Outage degrades operations but is tolerable for a few days. | ≤ 72 hours | ≤ 24 hours | Daily | Annual restore |
-| **T4 — Standard** | Outage is inconvenient; standard business hours recovery acceptable. | ≤ 1 week | ≤ 24 hours | Daily | Annual restore |
-| **T5 — Non-Production** | Dev/test/sandbox. Recovery is rebuild from code/IaC. | Best effort | n/a | n/a (rebuild from IaC) | n/a |
+| **T1 - Mission-Critical** | Outage causes safety, regulatory, or material financial loss within hours. | ≤ 4 hours | ≤ 15 minutes | Continuous / near-continuous | Quarterly full restore; annual full DR exercise |
+| **T2 - Business-Critical** | Outage materially impairs operations within one business day. | ≤ 24 hours | ≤ 4 hours | Hourly to every 4 hours | Semi-annual restore; annual exercise |
+| **T3 - Important** | Outage degrades operations but is tolerable for a few days. | ≤ 72 hours | ≤ 24 hours | Daily | Annual restore |
+| **T4 - Standard** | Outage is inconvenient; standard business hours recovery acceptable. | ≤ 1 week | ≤ 24 hours | Daily | Annual restore |
+| **T5 - Non-Production** | Dev/test/sandbox. Recovery is rebuild from code/IaC. | Best effort | n/a | n/a (rebuild from IaC) | n/a |
 
 > **The RTO Number Is Honest or It Is Useless**
 >
@@ -98,11 +98,11 @@ Every backup of an in-scope asset meets the following requirements at minimum. T
 | At least one copy stored on immutable storage (object-lock / WORM / air-gap) | ✓ | ✓ |
 | Backups stored in a separately-credentialled tenancy / account / domain | ✓ | ✓ |
 | Backup admin role separate from production admin role; MFA enforced | ✓ | ✓ |
-| Backup deletion / shortening requires two-person approval | — | ✓ |
+| Backup deletion / shortening requires two-person approval | - | ✓ |
 | Backup retention period meets the longer of: business need · regulatory minimum · 13 months default | ✓ | ✓ |
 | Backups validated for integrity at write and on a sample cadence | ✓ | ✓ |
 | Backup of configurations / firmware / logic / historian (OT scope) per Section 7 | n/a | ✓ (BES) |
-| One offline / "cold" copy of critical baselines and recovery preconditions | — | ✓ |
+| One offline / "cold" copy of critical baselines and recovery preconditions | - | ✓ |
 
 ### 4.2 The Air-Gap and Immutability Rationale
 
@@ -133,7 +133,7 @@ A backup that has never been restored is a hope, not a control. Restoration test
 
 Each full restoration test follows the procedure below and produces the evidence artifact in Section 5.3.
 
-1. **Pre-test brief** — scope, success criteria, RTO/RPO targets, dependencies, business / OT owner notified.
+1. **Pre-test brief**, scope, success criteria, RTO/RPO targets, dependencies, business / OT owner notified.
 2. **Isolate** the recovery environment from production where applicable (no risk of overwriting production).
 3. **Restore** from immutable copy onto a clean baseline (DISH profile per `CERG-STD-CFG-001`).
 4. **Bring up identity, logging, detection, and monitoring** before declaring the system available.
@@ -148,15 +148,15 @@ Each full restoration test follows the procedure below and produces the evidence
 |---|---|---|
 | Asset / System ID | ✓ | From asset inventory |
 | Tier | ✓ | Per Section 3 |
-| Backup Source (system, location, immutability evidence) | ✓ | — |
-| Date / Duration | ✓ | — |
-| Participants and roles | ✓ | — |
-| RTO Target / Actual | ✓ | — |
-| RPO Target / Actual | ✓ | — |
+| Backup Source (system, location, immutability evidence) | ✓ | - |
+| Date / Duration | ✓ | - |
+| Participants and roles | ✓ | - |
+| RTO Target / Actual | ✓ | - |
+| RPO Target / Actual | ✓ | - |
 | Baseline applied during recovery | ✓ | DISH tier reference |
 | Identity / logging / detection re-enabled | ✓ | Named systems |
-| Integrity check method and result | ✓ | — |
-| Issues encountered | ✓ | — |
+| Integrity check method and result | ✓ | - |
+| Issues encountered | ✓ | - |
 | Lessons learned and follow-up actions | ✓ | Risk register IDs if any |
 | Approver sign-off | ✓ | Engineering Manager + Asset Owner |
 
@@ -168,10 +168,10 @@ Cloud and SaaS recovery is shaped by the shared-responsibility model. CERG does 
 
 ### 6.1 Cloud-Native Workloads (IaaS / PaaS)
 
-- **IaC reconstruction** — production environments rebuildable from version-controlled IaC plus data backups.
-- **Account / subscription / project failure modes** — tested at the in-scope cadence, including region failure, account compromise, and IAM root account loss.
-- **Provider-side recovery contacts and escalation paths** — documented in the Recovery Plan; verified annually.
-- **Cross-region or cross-cloud failover** — where required by Tier, tested and evidenced.
+- **IaC reconstruction**: production environments rebuildable from version-controlled IaC plus data backups.
+- **Account / subscription / project failure modes**: tested at the in-scope cadence, including region failure, account compromise, and IAM root account loss.
+- **Provider-side recovery contacts and escalation paths**: documented in the Recovery Plan; verified annually.
+- **Cross-region or cross-cloud failover**: where required by Tier, tested and evidenced.
 
 ### 6.2 Tier 1 SaaS
 
@@ -179,8 +179,8 @@ Provider native restore is the first line; CERG-managed SaaS backup is added whe
 
 | **Tier 1 SaaS** | **Provider Native Restore Sufficient?** | **CERG-Managed SaaS Backup?** |
 |---|---|---|
-| M365 (Exchange / SharePoint / OneDrive / Teams) | Limited (retention / point-in-time) | Yes — for CUI workspaces and SOX-relevant mailboxes/sites |
-| Salesforce | Limited | Yes — daily export for SOX in-scope orgs |
+| M365 (Exchange / SharePoint / OneDrive / Teams) | Limited (retention / point-in-time) | Yes - for CUI workspaces and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant mailboxes/sites |
+| Salesforce | Limited | Yes - daily export for [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) in-scope orgs |
 | ServiceNow | Yes (provider managed) | Audit-only export quarterly |
 | Other Tier 1 | Decision per onboarding review | Documented in shared responsibility matrix |
 
@@ -206,9 +206,9 @@ CIP-009 R1 specifies recovery plans; CERG requires that the following OT artifac
 
 ### 7.2 CIP-009 R1 / R2 / R3 Implementation
 
-- **R1 — Recovery Plan Specifications:** documented per asset class; reviewed annually; includes roles, processes for backup management, and methods to preserve data essential for restoration.
-- **R2 — Recovery Plan Implementation and Testing:** tested at least once every 15 months; one full operational exercise every 36 months (per CIP-009 R2.2).
-- **R3 — Lessons Learned and Plan Updates:** documented within 90 days of any plan implementation or test.
+- **R1, Recovery Plan Specifications:** documented per asset class; reviewed annually; includes roles, processes for backup management, and methods to preserve data essential for restoration.
+- **R2, Recovery Plan Implementation and Testing:** tested at least once every 15 months; one full operational exercise every 36 months (per CIP-009 R2.2).
+- **R3, Lessons Learned and Plan Updates:** documented within 90 days of any plan implementation or test.
 
 ### 7.3 OT Restoration Cautions
 
@@ -220,21 +220,21 @@ CIP-009 R1 specifies recovery plans; CERG requires that the following OT artifac
 
 ## 8. CUI Recovery
 
-CUI recovery aligns with NIST 800-171r3 3.8 (Media Protection — backups) and 3.6 (Incident Response — recovery from incident affecting CUI).
+CUI recovery aligns with [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) 3.8 (Media Protection, backups) and 3.6 (Incident Response, recovery from incident affecting CUI).
 
 - **Backup encryption** uses FIPS-validated cryptography per `CERG-STD-CR-001`.
 - **Backup storage** stays within the CUI enclave or its provider-equivalent boundary; no cross-spillage to non-CUI environments.
 - **Restoration test** validates that CUI labeling, access control, and logging are intact after recovery.
 - **Post-incident updates** to SSP and POA&M per `CERG-PLN-CUI-001`.
-- **Incident-driven recovery** — if a CUI system is recovered following an incident, the recovery itself is documented as POA&M follow-up.
+- **Incident-driven recovery**: if a CUI system is recovered following an incident, the recovery itself is documented as POA&M follow-up.
 
 ---
 
-## 9. SOX Availability Evidence
+## 9. [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) Availability Evidence
 
-SOX-relevant systems (per `CERG-PLN-SOX-001` SOX-Relevant System Register) require evidence of backup, restoration, and availability controls reusable in the SOX cycle.
+[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant systems (per `CERG-PLN-SOX-001` [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-Relevant System Register) require evidence of backup, restoration, and availability controls reusable in the [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) cycle.
 
-| **SOX ITGC — Backup / Operations** | **Reused CERG Evidence** |
+| **[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC - Backup / Operations** | **Reused CERG Evidence** |
 |---|---|
 | Backups are taken | Backup tool report; failure logs |
 | Backups can be restored | Restoration test evidence (this standard, Section 5.3) |
@@ -242,7 +242,7 @@ SOX-relevant systems (per `CERG-PLN-SOX-001` SOX-Relevant System Register) requi
 | Failed jobs are remediated | Backup job ticket history |
 | Availability incidents are tracked | Incident records (per `CERG-PLN-IR-001`) with cyber annotation |
 
-SOX evidence reuses these artifacts; no duplicate "SOX-only" restoration test is performed.
+[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) evidence reuses these artifacts; no duplicate "[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-only" restoration test is performed.
 
 ---
 
@@ -250,9 +250,9 @@ SOX evidence reuses these artifacts; no duplicate "SOX-only" restoration test is
 
 | **Role** | **Resilience Responsibilities** |
 |---|---|
-| **CERG — Engineering (Resilience)** | Owns this standard. Maintains the resilience register (tier per asset, last test result, next test date). Coordinates restoration tests. Maintains Recovery Plans (Section 11) for in-scope assets. Provides clean-restore preconditions to BCP. |
-| **CERG — Risk** | Tracks resilience-related risks (untested plans, expired tests, T1 gaps). Adversarial validation may include backup/recovery as an attack target. |
-| **CERG — Governance** | Tracks evidence currency (control CP-2, CP-4, CP-9, CP-10 in `CERG-GOV-CB-001`). Liaises with auditors. |
+| **CERG - Engineering (Resilience)** | Owns this standard. Maintains the resilience register (tier per asset, last test result, next test date). Coordinates restoration tests. Maintains Recovery Plans (Section 11) for in-scope assets. Provides clean-restore preconditions to BCP. |
+| **CERG - Risk** | Tracks resilience-related risks (untested plans, expired tests, T1 gaps). Adversarial validation may include backup/recovery as an attack target. |
+| **CERG - Governance** | Tracks evidence currency (control CP-2, CP-4, CP-9, CP-10 in `CERG-GOV-CB-001`). Liaises with auditors. |
 | **Asset / Business Owners** | Define business criticality. Participate in restoration tests. Approve Recovery Plan changes. |
 | **OT Operations** | Lead OT restoration; consume Recovery Plan; supervise restorations with operational safety authority. |
 | **Enterprise BCP** | Owns business recovery. Consumes CERG cyber readiness signals; provides recovery priority decisions during an event. |
@@ -265,7 +265,7 @@ SOX evidence reuses these artifacts; no duplicate "SOX-only" restoration test is
 Every in-scope asset (or asset cluster) has a Recovery Plan in the format below.
 
 ```
-RECOVERY PLAN — <System / Cluster Name>           PLAN-RES-YYYY-NNNN
+RECOVERY PLAN - <System / Cluster Name>           PLAN-RES-YYYY-NNNN
 
 1. ASSET CONTEXT
    System ID(s)              :
@@ -324,13 +324,13 @@ A populated example is maintained in the resilience program library; the templat
 
 | **Regulation / Framework** | **Section** | **Where in This Standard** |
 |---|---|---|
-| NIST 800-53r5 CP family | CP-2, CP-4, CP-9, CP-10 | All sections |
-| NIST CSF 2.0 RECOVER | RC.RP, RC.IM, RC.CO | All sections |
+| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) CP family | CP-2, CP-4, CP-9, CP-10 | All sections |
+| [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) RECOVER | RC.RP, RC.IM, RC.CO | All sections |
 | NIST 800-184 | All | Sections 5, 6, 7 |
 | ISO/IEC 27031 | All | Sections 2, 10 |
 | NERC-CIP CIP-009 | R1, R2, R3 | Section 7 |
-| CMMC L2 / 800-171r3 | 3.8.x, 3.6.x | Section 8 |
-| SOX ITGC | Operations / Backup | Section 9 |
+| [CMMC L2](https://dodcio.defense.gov/CMMC/) / 800-171r3 | 3.8.x, 3.6.x | Section 8 |
+| [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC | Operations / Backup | Section 9 |
 
 ---
 
@@ -342,5 +342,5 @@ A populated example is maintained in the resilience program library; the templat
 | **Version** | 1.0 |
 | **Approved By** | Cyber Engineering Manager (Resilience) · CISO endorsement |
 | **Next Review** | Annual / major platform change |
-| **Change Log** | 1.0 — Initial publication. Establishes recovery tiers, backup protection, restoration testing, regulated overlays, and BCP interface. |
+| **Change Log** | 1.0 - Initial publication. Establishes recovery tiers, backup protection, restoration testing, regulated overlays, and BCP interface. |
 

@@ -1,8 +1,8 @@
 
-# SURGE — Cyber Engineering, Risk & Governance
+# SURGE: Cyber Engineering, Risk & Governance
 
-## CUI / CMMC OPERATIONAL PACKAGE
-### SSP · POA&M · SPRS · Boundary · 800-171 Practice Evidence · CMMC L2 Readiness · Subcontractor Register
+## CUI / [CMMC](https://dodcio.defense.gov/CMMC/) OPERATIONAL PACKAGE
+### SSP · POA&M · SPRS · Boundary · 800-171 Practice Evidence · [CMMC L2](https://dodcio.defense.gov/CMMC/) Readiness · Subcontractor Register
 
 ---
 
@@ -11,13 +11,13 @@
 | **Document ID** | CERG-PLN-CUI-001 |
 | **Version** | 1.0 |
 | **Status** | For Review |
-| **Classification** | Internal — Confidential |
-| **Owner** | Cyber Governance Manager (CUI / CMMC) |
-| **Parent Standard** | CERG-STD-CUI-001 — CUI Handling Standard |
+| **Classification** | Internal - Confidential |
+| **Owner** | Cyber Governance Manager (CUI / [CMMC](https://dodcio.defense.gov/CMMC/)) |
+| **Parent Standard** | CERG-STD-CUI-001 - CUI Handling Standard |
 | **Supporting Documents** | CERG-POL-001 · CERG-GOV-CB-001 · CERG-STD-AC-001 · CERG-STD-CFG-001 · CERG-STD-LM-001 · CERG-STD-RES-001 · CERG-STD-CR-001 · CERG-PRC-AR-001 · CERG-PRC-RM-001 · CERG-PRC-TPRM-001 · CERG-PRC-AV-001 |
-| **Review Cycle** | Annual / Continuous — POA&M monthly, SSP on material change |
-| **Frameworks** | NIST 800-171r3 · NIST 800-172 (selected) · NIST 800-53r5 mappings · CMMC L2 |
-| **Regulations** | DFARS 252.204-7012 · DFARS 252.204-7019/7020/7021 · CMMC L2 |
+| **Review Cycle** | Annual / Continuous - POA&M monthly, SSP on material change |
+| **Frameworks** | [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) · [NIST 800-172](https://csrc.nist.gov/pubs/sp/800/172/final) (selected) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) mappings · [CMMC L2](https://dodcio.defense.gov/CMMC/) |
+| **Regulations** | DFARS 252.204-7012 · DFARS 252.204-7019/7020/7021 · [CMMC L2](https://dodcio.defense.gov/CMMC/) |
 | **Environments** | All systems within the CUI boundary |
 
 ---
@@ -25,8 +25,8 @@
 ## Table of Contents
 
 1. [Purpose and Scope](#1-purpose-and-scope)
-2. [Assumed Scrutiny Level — CMMC L2 Third-Party Assessment](#2-assumed-scrutiny-level--cmmc-l2-third-party-assessment)
-3. [CUI Boundary — Finding It and Drawing It](#3-cui-boundary--finding-it-and-drawing-it)
+2. [Assumed Scrutiny Level, CMMC L2 Third-Party Assessment](#2-assumed-scrutiny-level--cmmc-l2-third-party-assessment)
+3. [CUI Boundary, Finding It and Drawing It](#3-cui-boundary--finding-it-and-drawing-it)
 4. [SSP Template](#4-ssp-template)
 5. [POA&M Template](#5-poam-template)
 6. [SPRS Score Worksheet](#6-sprs-score-worksheet)
@@ -46,23 +46,23 @@
 
 ## 1. Purpose and Scope
 
-The CUI Handling Standard names what is required; this package makes the standard executable. It assembles the SSP, POA&M, SPRS worksheet, boundary diagrams, data flow maps, category register, 800-171 evidence matrix, CMMC L2 readiness checklist, C3PAO logistics, subcontractor register, and FedRAMP equivalency evidence into a single operational binder.
+The CUI Handling Standard names what is required; this package makes the standard executable. It assembles the SSP, POA&M, SPRS worksheet, boundary diagrams, data flow maps, category register, 800-171 evidence matrix, [CMMC L2](https://dodcio.defense.gov/CMMC/) readiness checklist, C3PAO logistics, subcontractor register, and FedRAMP equivalency evidence into a single operational binder.
 
 It applies to every system, person, and process within the CUI boundary, and to every CUI subcontractor receiving CUI from the organization.
 
 ---
 
-## 2. Assumed Scrutiny Level — CMMC L2 Third-Party Assessment
+## 2. Assumed Scrutiny Level: [CMMC L2](https://dodcio.defense.gov/CMMC/) Third-Party Assessment
 
-CERG operates the CUI program at the level required to pass a **CMMC Level 2 third-party assessment** by an authorized C3PAO. CMMC L1 is treated as a strict subset that is automatically met when L2 is met.
+CERG operates the CUI program at the level required to pass a **[CMMC](https://dodcio.defense.gov/CMMC/) Level 2 third-party assessment** by an authorized C3PAO. [CMMC L1](https://dodcio.defense.gov/CMMC/) is treated as a strict subset that is automatically met when L2 is met.
 
 > **Why Plan for L2 Third-Party as the Baseline**
 >
-> CMMC L2 with C3PAO assessment is the highest practical scrutiny most CUI primes face on a routine cadence. If the program is ready for that scrutiny, it is ready for the lesser ones. Designing to a lower level and hoping to "lift later" produces a program that drifts under audit pressure.
+> [CMMC L2](https://dodcio.defense.gov/CMMC/) with C3PAO assessment is the highest practical scrutiny most CUI primes face on a routine cadence. If the program is ready for that scrutiny, it is ready for the lesser ones. Designing to a lower level and hoping to "lift later" produces a program that drifts under audit pressure.
 
 ---
 
-## 3. CUI Boundary — Finding It and Drawing It
+## 3. CUI Boundary: Finding It and Drawing It
 
 The CUI boundary is the set of systems, people, processes, and physical spaces that store, process, or transmit CUI. Defining it is the first executable step; it drives everything else.
 
@@ -99,7 +99,7 @@ Excludes:
 The System Security Plan is the assessor-facing description of the CUI environment and how each 800-171 practice is implemented.
 
 ```
-SYSTEM SECURITY PLAN — <CUI System / Enclave Name>     SSP-CUI-NNN
+SYSTEM SECURITY PLAN - <CUI System / Enclave Name>     SSP-CUI-NNN
 
 1. SYSTEM IDENTIFICATION
    System Name(s) / Aliases
@@ -170,7 +170,7 @@ The Plan of Action and Milestones tracks Partially Implemented and Planned items
 | Severity | Per `CERG-PRC-RM-001` scoring |
 | Owner | Named role |
 | Resources Required | People / budget / vendor |
-| Original Identification Date | — |
+| Original Identification Date | - |
 | Target Milestones | Step-level with dates |
 | Completion Date | Target |
 | Status | Open · In Progress · Completed · Risk Accepted |
@@ -183,20 +183,20 @@ POA&M is updated **monthly** at minimum; closures must include evidence acceptab
 
 ## 6. SPRS Score Worksheet
 
-The Supplier Performance Risk System score is the self-reported NIST 800-171 maturity number reported under DFARS 252.204-7019. The worksheet:
+The Supplier Performance Risk System score is the self-reported [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) maturity number reported under DFARS 252.204-7019. The worksheet:
 
 | **Field** | **Description** |
 |---|---|
-| Assessment Date | — |
+| Assessment Date | - |
 | Assessment Scope | SSP-CUI-NNN reference |
-| Methodology | NIST 800-171 DoD Assessment Methodology v1.2.1 |
+| Methodology | [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) DoD Assessment Methodology v1.2.1 |
 | Starting Score | 110 |
-| Weighted Deductions Applied | Per DoD scoring template — list each practice missed and its deduction |
+| Weighted Deductions Applied | Per DoD scoring template - list each practice missed and its deduction |
 | Final Score | Calculated |
 | POA&M Items at Time of Score | Count + IDs |
 | Expected Closure Schedule | Per POA&M |
 | Reporter | Named role |
-| Submitted to SPRS Date | — |
+| Submitted to SPRS Date | - |
 
 The worksheet is reproduced from the public DoD methodology; CERG does not invent its own scoring weights.
 
@@ -253,7 +253,7 @@ The matrix is the row-per-practice spine. It is the principal artifact a C3PAO u
 | **Field** | **Description** |
 |---|---|
 | Practice ID | e.g., 3.13.11 |
-| Practice Statement | NIST 800-171r3 language |
+| Practice Statement | [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) language |
 | Implementation Status | Per `CERG-GOV-CB-001` Section 4 |
 | CERG Control(s) | From `CERG-GOV-CB-001` |
 | Subordinate Standard / Procedure | E.g., `CERG-STD-CR-001` §9 |
@@ -269,7 +269,7 @@ The matrix is the artifact CERG ships with the SSP. It is updated whenever an ev
 
 ---
 
-## 11. CMMC L2 Readiness Checklist
+## 11. [CMMC L2](https://dodcio.defense.gov/CMMC/) Readiness Checklist
 
 A pre-assessment self-check, repeated quarterly and aggressively in the 90 days before an assessment.
 
@@ -301,15 +301,15 @@ Logistics that consistently surprise organizations on assessment day; CERG handl
 
 | **Item** | **Owner** | **Pre-Assessment Action** |
 |---|---|---|
-| Authorized C3PAO selected and scheduled | Governance — CUI | 90+ days out |
-| Assessment scope confirmed in writing | C3PAO + Governance — CUI | 60 days out |
-| Pre-assessment evidence package shipped | Governance — CUI | 30 days out |
-| On-site / remote logistics arranged | Governance — CUI | 30 days out |
-| Named interviewees prepared (system owners, ISSO, leadership) | Governance — CUI | 30 days out |
-| Workspace / shared evidence repo configured for assessor access | Governance — CUI | 30 days out |
-| Daily out-brief cadence agreed | C3PAO + Governance — CUI | At kickoff |
-| Finding response process agreed | C3PAO + Governance — CUI | At kickoff |
-| Final report receipt and POA&M response window | Governance — CUI | At report |
+| Authorized C3PAO selected and scheduled | Governance - CUI | 90+ days out |
+| Assessment scope confirmed in writing | C3PAO + Governance - CUI | 60 days out |
+| Pre-assessment evidence package shipped | Governance - CUI | 30 days out |
+| On-site / remote logistics arranged | Governance - CUI | 30 days out |
+| Named interviewees prepared (system owners, ISSO, leadership) | Governance - CUI | 30 days out |
+| Workspace / shared evidence repo configured for assessor access | Governance - CUI | 30 days out |
+| Daily out-brief cadence agreed | C3PAO + Governance - CUI | At kickoff |
+| Finding response process agreed | C3PAO + Governance - CUI | At kickoff |
+| Final report receipt and POA&M response window | Governance - CUI | At report |
 | CISO and executive comms prepared | CISO + Governance | Pre-final |
 
 ---
@@ -318,11 +318,11 @@ Logistics that consistently surprise organizations on assessment day; CERG handl
 
 | **Field** | **Description** |
 |---|---|
-| Subcontractor Name | — |
-| Contract ID(s) | — |
+| Subcontractor Name | - |
+| Contract ID(s) | - |
 | CUI Category Received | Per Section 9 |
 | Flow-Down Verified | Y/N + verification date |
-| CMMC L2 Status | Status + assessment expiry |
+| [CMMC L2](https://dodcio.defense.gov/CMMC/) Status | Status + assessment expiry |
 | FedRAMP Equivalency | If subcontractor hosts in cloud |
 | Cyber POC | Named contact |
 | Incident Notification Path | Reference; tested? |
@@ -330,7 +330,7 @@ Logistics that consistently surprise organizations on assessment day; CERG handl
 | Next Review | Date |
 | Status | Active · Inactive · Suspended |
 
-The register is maintained jointly by Governance — CUI and TPRM; the TPRM record is canonical for vendor data with this register adding CUI-specific fields.
+The register is maintained jointly by Governance, CUI and TPRM; the TPRM record is canonical for vendor data with this register adding CUI-specific fields.
 
 ---
 
@@ -340,7 +340,7 @@ For cloud / SaaS providers handling CUI that are not FedRAMP-authorized, the equ
 
 | **Element** | **Required** |
 |---|---|
-| SOC 2 Type II with NIST 800-53r5 Moderate baseline mapping | ✓ |
+| SOC 2 Type II with [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) Moderate baseline mapping | ✓ |
 | 3PAO-equivalent assessment letter / independent assessor attestation | ✓ |
 | Customer-side configuration commitments (CUI label, region, key control) | ✓ |
 | Sub-service organization carve-outs reconciled | ✓ |
@@ -358,8 +358,8 @@ For cloud / SaaS providers handling CUI that are not FedRAMP-authorized, the equ
 | SSP review | Annual + on material change |
 | SPRS score recalculation and submission | Annual + on material change |
 | Subcontractor register review | Quarterly |
-| CMMC Readiness Checklist | Quarterly + intensified 90 days pre-assessment |
-| C3PAO assessment (third-party) | Per CMMC certification cycle |
+| [CMMC](https://dodcio.defense.gov/CMMC/) Readiness Checklist | Quarterly + intensified 90 days pre-assessment |
+| C3PAO assessment (third-party) | Per [CMMC](https://dodcio.defense.gov/CMMC/) certification cycle |
 | Internal CUI walkthrough | Quarterly (sampling) |
 | CUI handler training | Annual + role change |
 
@@ -369,10 +369,10 @@ For cloud / SaaS providers handling CUI that are not FedRAMP-authorized, the equ
 
 | **Regulation / Framework** | **Where in This Package** |
 |---|---|
-| NIST 800-171r3 | All sections; Section 10 is the principal evidence artifact |
-| NIST 800-172 (selected enhancements) | Where contract requires |
-| NIST 800-53r5 (Moderate baseline mapping) | Sections 4, 14 |
-| CMMC L2 | All sections; Section 11 is the readiness check |
+| [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) | All sections; Section 10 is the principal evidence artifact |
+| [NIST 800-172](https://csrc.nist.gov/pubs/sp/800/172/final) (selected enhancements) | Where contract requires |
+| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (Moderate baseline mapping) | Sections 4, 14 |
+| [CMMC L2](https://dodcio.defense.gov/CMMC/) | All sections; Section 11 is the readiness check |
 | DFARS 252.204-7012 | Sections 4, 13 (flow-down) |
 | DFARS 252.204-7019 / 7020 / 7021 | Section 6 (SPRS) |
 
@@ -384,7 +384,7 @@ For cloud / SaaS providers handling CUI that are not FedRAMP-authorized, the equ
 |---|---|
 | **Document ID** | CERG-PLN-CUI-001 |
 | **Version** | 1.0 |
-| **Approved By** | Cyber Governance Manager (CUI / CMMC) · CISO endorsement |
+| **Approved By** | Cyber Governance Manager (CUI / [CMMC](https://dodcio.defense.gov/CMMC/)) · CISO endorsement |
 | **Next Review** | Annual / on regulatory change |
-| **Change Log** | 1.0 — Initial publication. SSP, POA&M, SPRS, boundary, flow map, category register, evidence matrix, readiness, C3PAO logistics, subcontractor register, FedRAMP equivalency. |
+| **Change Log** | 1.0 - Initial publication. SSP, POA&M, SPRS, boundary, flow map, category register, evidence matrix, readiness, C3PAO logistics, subcontractor register, FedRAMP equivalency. |
 

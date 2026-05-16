@@ -1,5 +1,5 @@
 
-# SURGE — Cyber Engineering, Risk & Governance
+# SURGE: Cyber Engineering, Risk & Governance
 
 ## LOGGING, MONITORING, AND DETECTION STANDARD
 ### Mandatory Log Sources · SIEM Onboarding · Day-One Detection Set · OT and CUI Overlays · Triage and Tuning
@@ -11,15 +11,15 @@
 | **Document ID** | CERG-STD-LM-001 |
 | **Version** | 1.0 |
 | **Status** | For Review |
-| **Classification** | Internal — Confidential |
+| **Classification** | Internal - Confidential |
 | **Owner** | Cyber Risk Manager (Detection Engineering) |
-| **Parent Policy** | CERG-POL-001 — Cybersecurity Policy |
+| **Parent Policy** | CERG-POL-001 - Cybersecurity Policy |
 | **Supporting Standards** | CERG-STD-IT-001 · CERG-STD-OT-001 · CERG-STD-CUI-001 · CERG-STD-AC-001 · CERG-STD-CFG-001 · CERG-STD-CR-001 |
 | **Supporting Procedures** | CERG-PRC-VM-001 · CERG-PRC-AV-001 · CERG-PRC-RM-001 |
 | **Review Cycle** | Annual / On SIEM platform change / On MITRE ATT&CK matrix update |
-| **Frameworks** | NIST CSF 2.0 (DETECT) · NIST 800-53r5 (AU, SI) · NIST 800-92 · MITRE ATT&CK Enterprise / Cloud / ICS · MITRE D3FEND |
-| **Regulations** | NERC-CIP CIP-007 R4 · CMMC L2 (3.3.x) · SOX ITGC (Operations) · CIP-015 (forward-looking) |
-| **Environments** | All in-scope assets — IT · cloud · SaaS · OT · CUI · identity · network |
+| **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (DETECT) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (AU, SI) · [NIST 800-92](https://csrc.nist.gov/pubs/sp/800/92/final) · MITRE ATT&CK Enterprise / Cloud / ICS · MITRE D3FEND |
+| **Regulations** | NERC-CIP CIP-007 R4 · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.3.x) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC (Operations) · CIP-015 (forward-looking) |
+| **Environments** | All in-scope assets - IT · cloud · SaaS · OT · CUI · identity · network |
 
 ---
 
@@ -44,13 +44,13 @@
 
 ## 1. Purpose and Scope
 
-The policy requires privileged-access logging, log protection, retention, SIEM (or equivalent) monitoring, OT-safe collection methods, and threat-intelligence integration. The IT, OT, CUI, and Access standards each impose more specific log and detection requirements. Until this standard, those requirements existed in fragments — no consolidated list of mandatory log sources, no day-one detection set, no triage procedure.
+The policy requires privileged-access logging, log protection, retention, SIEM (or equivalent) monitoring, OT-safe collection methods, and threat-intelligence integration. The IT, OT, CUI, and Access standards each impose more specific log and detection requirements. Until this standard, those requirements existed in fragments, no consolidated list of mandatory log sources, no day-one detection set, no triage procedure.
 
 This standard consolidates those requirements. It defines the log sources every in-scope environment must onboard, how those logs are routed and retained, the detection set the SIEM must implement on day one, and how detections are validated and tuned over time. It applies to every in-scope asset and every CERG-managed detection platform.
 
 > **Detection Coverage Is a Product, Not a Project**
 >
-> Onboarding a SIEM is a project. Detection coverage is the ongoing measurement of whether the detections that should be firing actually do — for the threats that matter to *this* environment. CERG instruments coverage as a metric (`DT-001` in `CERG-GOV-MTR-001`) and treats anything below the target as an incident-readiness gap.
+> Onboarding a SIEM is a project. Detection coverage is the ongoing measurement of whether the detections that should be firing actually do, for the threats that matter to *this* environment. CERG instruments coverage as a metric (`DT-001` in `CERG-GOV-MTR-001`) and treats anything below the target as an incident-readiness gap.
 
 ---
 
@@ -147,8 +147,8 @@ The list below is the minimum every CERG-managed environment must onboard. Anyth
 |---|---|---|
 | Default | 13 months | 7 years (or per regulatory requirement, whichever longer) |
 | BES Cyber Systems | 90 days searchable minimum | 12 months total minimum (CIP-007 R4.3); CERG default exceeds |
-| CUI | 13 months hot | 7 years per CMMC L2 / DFARS |
-| SOX-relevant | 13 months hot | 7 years per SOX requirement |
+| CUI | 13 months hot | 7 years per [CMMC L2](https://dodcio.defense.gov/CMMC/) / DFARS |
+| [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant | 13 months hot | 7 years per [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) requirement |
 
 ---
 
@@ -188,7 +188,7 @@ These alerts are treated as high-priority operational items, not as detections i
 
 The Day-One Detection Set is the minimum coverage required in any in-scope environment within 30 days of onboarding. The set is curated against MITRE ATT&CK with ATT&CK Enterprise as the IT spine, ATT&CK for Cloud sub-techniques for cloud/SaaS scopes, and ATT&CK for ICS for OT scopes.
 
-### 6.1 Day-One — IT / Cloud / SaaS / Identity
+### 6.1 Day-One: IT / Cloud / SaaS / Identity
 
 | **Category** | **Detection Intent** | **ATT&CK Mapping (examples)** |
 |---|---|---|
@@ -204,7 +204,7 @@ The Day-One Detection Set is the minimum coverage required in any in-scope envir
 | Exfiltration | Anomalous outbound volume; new exfil destinations | T1041, T1567 |
 | Impact | Mass file modification (ransomware indicators); resource deletion in cloud | T1485, T1486 |
 
-### 6.2 Day-One — OT
+### 6.2 Day-One: OT
 
 | **Category** | **Detection Intent** | **ATT&CK for ICS Mapping** |
 |---|---|---|
@@ -215,7 +215,7 @@ The Day-One Detection Set is the minimum coverage required in any in-scope envir
 | Inhibit Response Function | Alarm suppression; logging disabled | T0878, T0837 |
 | Impair Process Control | Setpoint changes off normal range; relay setting group change | T0855 |
 
-### 6.3 Day-One — CUI
+### 6.3 Day-One: CUI
 
 CUI overlay (see Section 10) adds CUI-specific detections (export, share, label changes, classified-data movement to non-CUI destinations).
 
@@ -264,10 +264,10 @@ Each production detection has:
 
 ### 8.1 Triage Queue Model
 
-- **P1 — Critical:** business impact suspected; SOC engages immediately and pages IR per `CERG-PLN-IR-001`.
-- **P2 — High:** likely true positive worth examining within hours.
-- **P3 — Medium:** worth examining within the shift.
-- **P4 — Low:** examined for trends; bulk-tuned where appropriate.
+- **P1, Critical:** business impact suspected; SOC engages immediately and pages IR per `CERG-PLN-IR-001`.
+- **P2, High:** likely true positive worth examining within hours.
+- **P3, Medium:** worth examining within the shift.
+- **P4, Low:** examined for trends; bulk-tuned where appropriate.
 
 ### 8.2 Triage SLA
 
@@ -286,7 +286,7 @@ Each production detection has:
 
 > **The Bar for Suppressing an Alert**
 >
-> If a tuning suppresses a condition that has ever yielded a real finding in this environment, peer organization, or current threat intelligence, the tuning needs a different shape — a different field condition, a different threshold — not a blanket suppression.
+> If a tuning suppresses a condition that has ever yielded a real finding in this environment, peer organization, or current threat intelligence, the tuning needs a different shape, a different field condition, a different threshold, not a blanket suppression.
 
 ---
 
@@ -346,14 +346,14 @@ Identity is the most common attack surface; CERG names a use case pack explicitl
 
 | **Regulation / Framework** | **Section** | **Where in This Standard** |
 |---|---|---|
-| NIST 800-53r5 AU / SI | AU-2, AU-6, AU-9, AU-11, SI-4 | All sections |
-| NIST CSF 2.0 DETECT | DE.CM, DE.AE | All sections |
-| NIST 800-92 | All | Sections 3–4 |
+| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) AU / SI | AU-2, AU-6, AU-9, AU-11, SI-4 | All sections |
+| [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) DETECT | DE.CM, DE.AE | All sections |
+| [NIST 800-92](https://csrc.nist.gov/pubs/sp/800/92/final) | All | Sections 3–4 |
 | MITRE ATT&CK Enterprise / Cloud / ICS | All | Sections 6, 7 |
 | NERC-CIP CIP-007 R4 | Security Event Monitoring | Sections 3.4, 4.3, 9 |
 | NERC-CIP CIP-015 (draft) | INSM | Section 9 |
-| CMMC L2 / 800-171r3 | 3.3.x | Section 10 |
-| SOX ITGC | Operations / Monitoring | Sections 3, 4 |
+| [CMMC L2](https://dodcio.defense.gov/CMMC/) / 800-171r3 | 3.3.x | Section 10 |
+| [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC | Operations / Monitoring | Sections 3, 4 |
 
 ---
 
@@ -365,5 +365,5 @@ Identity is the most common attack surface; CERG names a use case pack explicitl
 | **Version** | 1.0 |
 | **Approved By** | Cyber Risk Manager (Detection Engineering) · CISO endorsement |
 | **Next Review** | Annual / SIEM platform change / ATT&CK matrix update |
-| **Change Log** | 1.0 — Initial publication. Mandatory log sources, retention, SIEM onboarding, day-one detection set anchored to MITRE ATT&CK, OT/CUI/identity overlays, triage and tuning. |
+| **Change Log** | 1.0 - Initial publication. Mandatory log sources, retention, SIEM onboarding, day-one detection set anchored to MITRE ATT&CK, OT/CUI/identity overlays, triage and tuning. |
 

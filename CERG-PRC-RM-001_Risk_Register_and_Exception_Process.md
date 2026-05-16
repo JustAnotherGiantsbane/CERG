@@ -1,5 +1,5 @@
 
-# SURGE — Cyber Engineering, Risk & Governance
+# SURGE: Cyber Engineering, Risk & Governance
 
 ## RISK REGISTER AND EXCEPTION PROCESS
 ### Identification · Treatment · Acceptance · Review
@@ -11,14 +11,14 @@
 | **Document ID** | CERG-PRC-RM-001 |
 | **Version** | 1.0 DRAFT |
 | **Status** | For Review |
-| **Classification** | Internal — Confidential |
+| **Classification** | Internal - Confidential |
 | **Owner** | Cyber Governance Manager (Risk Register) |
-| **Parent Policy** | CERG-POL-001 — Cybersecurity Policy |
+| **Parent Policy** | CERG-POL-001 - Cybersecurity Policy |
 | **Supporting Standards** | CERG-STD-IT-001 · CERG-STD-OT-001 · CERG-STD-CUI-001 · CERG-STD-AC-001 |
 | **Review Cycle** | Annual / Upon Significant Change / Major Tooling Change |
-| **Frameworks** | NIST CSF 2.0 (GOVERN) · NIST 800-53r5 · NIST 800-171r2 · NIST 800-30r1 · NIST 800-39 · NIST RMF · ISO 31000 |
-| **Regulations** | NERC-CIP · CMMC L2 · SOX ITGC · |
-| **Environments** | All in-scope assets — owned, hybrid, cloud, SaaS, OT |
+| **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r2](https://csrc.nist.gov/pubs/sp/800/171/r2/final) · [NIST 800-30r1](https://csrc.nist.gov/pubs/sp/800/30/r1/final) · [NIST 800-39](https://csrc.nist.gov/pubs/sp/800/39/final) · NIST RMF · ISO 31000 |
+| **Regulations** | NERC-CIP · [CMMC L2](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC · |
+| **Environments** | All in-scope assets - owned, hybrid, cloud, SaaS, OT |
 
 ---
 
@@ -52,13 +52,13 @@ This procedure applies to:
 - All cybersecurity risks affecting in-scope assets, data, or operations
 - All deviations from controls established in CERG-POL-001 and its subordinate standards and procedures
 - All risk-related decisions requiring documentation: acceptance, transfer, avoidance, and reduction
-- All organizational personnel — every CERG team member, every asset owner, every business sponsor of a system or process that holds cybersecurity risk
+- All organizational personnel, every CERG team member, every asset owner, every business sponsor of a system or process that holds cybersecurity risk
 
 ### 1.2 The Operating Premise
 
 > **Undocumented Risk Is Accepted Risk Without an Owner**
 >
-> Every organization has more risk than it has time to remediate. The question is not whether risk exists — it is whether the organization has a documented, owned, and reviewed posture toward each one. An undocumented risk that materializes into an incident leaves no audit trail of what was known, who knew it, or why nothing was done. CERG treats the risk register as evidence of program maturity, not as a chore.
+> Every organization has more risk than it has time to remediate. The question is not whether risk exists, it is whether the organization has a documented, owned, and reviewed posture toward each one. An undocumented risk that materializes into an incident leaves no audit trail of what was known, who knew it, or why nothing was done. CERG treats the risk register as evidence of program maturity, not as a chore.
 
 ---
 
@@ -66,7 +66,7 @@ This procedure applies to:
 
 | **Role** | **Risk Management Responsibility** |
 |---|---|
-| **Cyber Governance — Risk Register Owner** | Owns this procedure and the risk register tool. Maintains the data model, taxonomy, dashboards, and reporting. Coordinates the risk review cadence. Curates the register for quality and completeness. |
+| **Cyber Governance - Risk Register Owner** | Owns this procedure and the risk register tool. Maintains the data model, taxonomy, dashboards, and reporting. Coordinates the risk review cadence. Curates the register for quality and completeness. |
 | **Cyber Risk** | Identifies risks through vulnerability management, threat intelligence, vendor assessment, adversarial testing, and continuous monitoring. Records risks in the register and recommends scoring and treatment. |
 | **Cyber Engineering** | Identifies risks through architecture review and pre-production assessment. Recommends compensating controls. Implements risk-reduction treatments on assets it supports. |
 | **Business / Asset Owners (Risk Owners)** | Accountable for the risks associated with the systems and processes they own. Authorize treatment decisions for their scope. Sign on risk acceptances. |
@@ -151,7 +151,7 @@ Risks are scored using a 5×5 matrix of **Likelihood** and **Impact**. The matri
 
 > **The 5×5 Trap**
 >
-> The 5×5 matrix is a coordination tool, not an oracle. Two analysts will reach different scores for the same risk; the value of the matrix is consistency of conversation, not precision of measurement. The Governance Lead enforces consistency within the register and reconciles outliers — but does not fight every score. The goal is comparable risks ranked comparably, not perfect calibration.
+> The 5×5 matrix is a coordination tool, not an oracle. Two analysts will reach different scores for the same risk; the value of the matrix is consistency of conversation, not precision of measurement. The Governance Lead enforces consistency within the register and reconciles outliers, but does not fight every score. The goal is comparable risks ranked comparably, not perfect calibration.
 
 Re-score upon: material change in observed threat activity, completion of treatment work, new compensating controls, new exploitation indicators, or regulator / customer engagement that materially changes impact.
 
@@ -173,11 +173,11 @@ Each risk has one of four treatment decisions. Treatment is decided by the risk 
 Every treatment decision records:
 
 - The selected treatment.
-- The plan — for Reduce: target end-state controls and the steps to get there; for Transfer: the instrument and counter-party; for Avoid: the cessation steps; for Accept: the rationale and conditions of acceptance.
-- Owner — accountable for the plan's execution.
-- Target dates — milestone and final.
-- Compensating controls — in place now and required for the duration of the plan.
-- Trigger conditions for re-evaluation — what would invalidate the current decision.
+- The plan, for Reduce: target end-state controls and the steps to get there; for Transfer: the instrument and counter-party; for Avoid: the cessation steps; for Accept: the rationale and conditions of acceptance.
+- Owner, accountable for the plan's execution.
+- Target dates, milestone and final.
+- Compensating controls, in place now and required for the duration of the plan.
+- Trigger conditions for re-evaluation, what would invalidate the current decision.
 
 ### 5.2 Risk Acceptance Has Two Forms
 
@@ -207,12 +207,12 @@ Every treatment decision records:
 | Treatment Plan | Plan summary. |
 | Target Dates | Milestone and final. |
 | Approver | Approver name and approval date per Section 8. |
-| Compliance Linkage | Associated regulation, framework, or contract (e.g., 800-171 control reference, CIP standard, SOX ITGC). |
+| Compliance Linkage | Associated regulation, framework, or contract (e.g., 800-171 control reference, CIP standard, [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC). |
 | Linked Exceptions | Exception IDs created under this risk, if any. |
 | Linked Incidents | Incident IDs that derived from or contributed to the risk, if any. |
 | Status | Open / In Treatment / Accepted / Closed. |
 | Review Date | Next scheduled review. |
-| Audit Trail | History of changes — every score change, treatment change, approver change, status change. |
+| Audit Trail | History of changes - every score change, treatment change, approver change, status change. |
 
 ### 6.2 Quality and Integrity
 
@@ -265,8 +265,8 @@ An exception is required whenever a system, person, or process intentionally dev
 For exceptions affecting regulated assets:
 
 - **NERC-CIP (BES Cyber Systems):** A CIP deviation and mitigation plan is initiated in addition to this exception. Governance coordinates per CERG-STD-OT-001 §11.
-- **CMMC / 800-171 (CUI environments):** A POA&M entry is opened in addition to this exception, per CERG-STD-CUI-001 §11.
-- **SOX-relevant systems:** Internal Audit and CFO designee are notified for ITGC control gaps. Compensating ITGC controls are documented for audit.
+- **[CMMC](https://dodcio.defense.gov/CMMC/) / 800-171 (CUI environments):** A POA&M entry is opened in addition to this exception, per CERG-STD-CUI-001 §11.
+- **[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant systems:** Internal Audit and CFO designee are notified for ITGC control gaps. Compensating ITGC controls are documented for audit.
 - **Customer / contractual:** Where the affected control supports a customer contractual commitment, Account Management and Legal are notified for customer-notification decisions.
 
 ---
@@ -275,16 +275,16 @@ For exceptions affecting regulated assets:
 
 | **Risk Rating / Treatment** | **Approval Authority** |
 |---|---|
-| Low risk — Reduce / Transfer / Avoid | Risk Owner + Governance |
-| Low risk — Accept | Risk Owner + Governance |
-| Medium risk — Reduce / Transfer / Avoid | Risk Owner + Engineering / Risk Manager |
-| Medium risk — Accept | Risk Owner + CISO designee |
-| High risk — any treatment | Risk Owner + CISO |
-| Critical risk — any treatment | Risk Owner + CISO + Executive Sponsor |
-| Severe risk — any treatment | Risk Owner + CISO + Executive Sponsor + Board awareness |
+| Low risk - Reduce / Transfer / Avoid | Risk Owner + Governance |
+| Low risk - Accept | Risk Owner + Governance |
+| Medium risk - Reduce / Transfer / Avoid | Risk Owner + Engineering / Risk Manager |
+| Medium risk - Accept | Risk Owner + CISO designee |
+| High risk - any treatment | Risk Owner + CISO |
+| Critical risk - any treatment | Risk Owner + CISO + Executive Sponsor |
+| Severe risk - any treatment | Risk Owner + CISO + Executive Sponsor + Board awareness |
 | Any exception affecting BES Cyber Systems | CISO + NERC-CIP deviation process |
 | Any exception affecting CUI environment posture | CISO + POA&M entry |
-| Any exception affecting SOX ITGC | CISO + CFO designee |
+| Any exception affecting [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC | CISO + CFO designee |
 | Emergency exception (operational necessity) | CISO post-hoc within 24 hours |
 
 Approvers may delegate within their authority but shall document the delegation. The CISO retains final authority for any risk-related decision.
@@ -327,7 +327,7 @@ Standing reports (consumed by Governance dashboards):
 | Overdue treatments / expired exceptions | Governance | Weekly |
 | Risks by category trend (Identity, Cloud, OT, CUI, Third-Party, etc.) | CISO + executive | Quarterly |
 | Risks linked to active incidents | IC + CISO | Continuous during active response |
-| Regulatory-specific posture (CIP, CMMC, SOX) | Governance + Regulatory partners | Per regulator cycle |
+| Regulatory-specific posture (CIP, [CMMC](https://dodcio.defense.gov/CMMC/), [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)) | Governance + Regulatory partners | Per regulator cycle |
 
 ### 9.4 Quality Indicators
 
@@ -350,7 +350,7 @@ The risk register is the integration point for several other programs. Risk-regi
 | Vulnerability Management (CERG-PRC-VM-001) | Out-of-SLA findings and aggregate exposure feed risk entries; large remediation campaigns are tracked as treatments. |
 | Incident Response (CERG-PLN-IR-001) | Post-incident corrective actions are recorded as risks or risk-acceptance closures. |
 | Vendor / Third-Party Risk | Vendor assessment findings open risks; vendor reassessment cadence reviews them. |
-| Compliance — NERC-CIP, CMMC, SOX | Open compliance gaps map to risk entries; POA&M and CIP deviations link to register entries. |
+| Compliance - NERC-CIP, [CMMC](https://dodcio.defense.gov/CMMC/), [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) | Open compliance gaps map to risk entries; POA&M and CIP deviations link to register entries. |
 | Architecture / Engineering Review | Pre-production review findings open risks where acceptance is sought to deploy. |
 | Awareness & Insider Programs | Concentrated insider-risk indicators are recorded (with appropriate restricted visibility). |
 | Audit | Internal Audit and external audit observations open or update risk entries. |
@@ -361,13 +361,13 @@ The register is not a parallel system to these programs. It is the connective ti
 
 ## 11. Regulatory and Framework Alignment Summary
 
-| **Process Area** | **NIST CSF 2.0** | **NIST 800-53r5** | **NIST 800-171** | **NIST RMF** | **NERC-CIP** | **CMMC L2** | **SOX ITGC** |
+| **Process Area** | **[NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final)** | **[NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)** | **[NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final)** | **NIST RMF** | **NERC-CIP** | **[CMMC L2](https://dodcio.defense.gov/CMMC/)** | **[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC** |
 |---|---|---|---|---|---|---|---|
 | Risk Strategy & Governance | GV.RM | PM-9 | 3.11.1 | Steps 1–2 | CIP-003 | RM.L2-3.11.1 | ERM interface |
-| Risk Assessment / Scoring | ID.RA | RA-3 | 3.11.1 | Step 3 | CIP-002 / 007 | RM.L2-3.11.1 | — |
-| Risk Treatment | GV.RM | PM-4, CA-5 | 3.11.3 | Steps 3–5 | CIP-003 | RM.L2-3.11.3 | — |
-| Risk Acceptance | GV.RM | CA-6 | 3.12.2 | Step 5 | CIP-003 | CA.L2-3.12.2 | — |
-| Exception / POA&M | GV.RR | CA-5 | 3.12.2 | Step 5 | CIP Mitigation Plans | CA.L2-3.12.2 | — |
+| Risk Assessment / Scoring | ID.RA | RA-3 | 3.11.1 | Step 3 | CIP-002 / 007 | RM.L2-3.11.1 | - |
+| Risk Treatment | GV.RM | PM-4, CA-5 | 3.11.3 | Steps 3–5 | CIP-003 | RM.L2-3.11.3 | - |
+| Risk Acceptance | GV.RM | CA-6 | 3.12.2 | Step 5 | CIP-003 | CA.L2-3.12.2 | - |
+| Exception / POA&M | GV.RR | CA-5 | 3.12.2 | Step 5 | CIP Mitigation Plans | CA.L2-3.12.2 | - |
 | Continuous Monitoring of Risk | DE.CM, ID.IM | CA-7 | 3.12.3 | Step 6 | CIP-007 | CA.L2-3.12.3 | Monitoring |
 | Reporting & Communication | GV.RR | PM-9, PM-31 | 3.12.3 | Step 6 | CIP-003 | CA.L2-3.12.3 | Reporting |
 
@@ -397,7 +397,7 @@ Governance owns this procedure. The Cyber Governance Manager (Risk Register) is 
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | CERG-POL-001 | Parent policy — Principle 9 |
+| Cybersecurity Policy | CERG-POL-001 | Parent policy - Principle 9 |
 | Grid and Control System Standard | CERG-STD-OT-001 | OT risk and CIP deviation overlay |
 | IT (Hosted/Cloud/SaaS) Security Standard | CERG-STD-IT-001 | IT / Cloud / SaaS risks |
 | CUI Handling Standard | CERG-STD-CUI-001 | CUI POA&M integration |
@@ -408,7 +408,7 @@ Governance owns this procedure. The Cyber Governance Manager (Risk Register) is 
 
 ---
 
-> **SURGE — Cyber Engineering, Risk & Governance**
+> **SURGE, Cyber Engineering, Risk & Governance**
 >
 > _Document the risks. Own the risks. Review the risks. Repeat._
 

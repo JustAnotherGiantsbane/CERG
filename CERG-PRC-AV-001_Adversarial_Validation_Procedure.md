@@ -1,5 +1,5 @@
 
-# SURGE — Cyber Engineering, Risk & Governance
+# SURGE: Cyber Engineering, Risk & Governance
 
 ## ADVERSARIAL VALIDATION PROCEDURE
 ### Pen Test · Red Team · Purple Team · Cloud Attack Sim · App Test · OT Safety · Finding-to-Closure
@@ -11,14 +11,14 @@
 | **Document ID** | CERG-PRC-AV-001 |
 | **Version** | 1.0 |
 | **Status** | For Review |
-| **Classification** | Internal — Confidential |
+| **Classification** | Internal - Confidential |
 | **Owner** | Cyber Risk Manager (Offensive Security) |
-| **Parent Policy** | CERG-POL-001 — Cybersecurity Policy |
+| **Parent Policy** | CERG-POL-001 - Cybersecurity Policy |
 | **Supporting Documents** | CERG-GOV-CB-001 · CERG-STD-LM-001 · CERG-STD-OT-001 · CERG-STD-CUI-001 · CERG-PRC-VM-001 · CERG-PRC-RM-001 · CERG-PRC-AR-001 · CERG-PRC-TPRM-001 · CERG-PLN-IR-001 |
 | **Review Cycle** | Annual / On material program change |
-| **Frameworks** | NIST 800-53r5 (CA-8) · NIST 800-115 · PTES · MITRE ATT&CK · MITRE D3FEND · OWASP WSTG / MASTG |
-| **Regulations** | NERC-CIP CIP-007 (vulnerability assessment) · CMMC L2 (3.11.2) · SOX (indirect via control testing) |
-| **Environments** | All — IT · cloud · SaaS · OT (with safety constraints) · application · identity |
+| **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (CA-8) · NIST 800-115 · PTES · MITRE ATT&CK · MITRE D3FEND · OWASP WSTG / MASTG |
+| **Regulations** | NERC-CIP CIP-007 (vulnerability assessment) · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.11.2) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) (indirect via control testing) |
+| **Environments** | All - IT · cloud · SaaS · OT (with safety constraints) · application · identity |
 
 ---
 
@@ -32,7 +32,7 @@
 6. [Purple-Team Detection Validation](#6-purple-team-detection-validation)
 7. [Cloud Attack Simulation](#7-cloud-attack-simulation)
 8. [Application Penetration Test Checklist](#8-application-penetration-test-checklist)
-9. [OT Adversarial Assessment — Safety Protocol](#9-ot-adversarial-assessment--safety-protocol)
+9. [OT Adversarial Assessment, Safety Protocol](#9-ot-adversarial-assessment--safety-protocol)
 10. [Finding Rating, Routing, and Retest](#10-finding-rating-routing-and-retest)
 11. [Evidence Retention](#11-evidence-retention)
 12. [Roles and Responsibilities](#12-roles-and-responsibilities)
@@ -43,13 +43,13 @@
 
 ## 1. Purpose and Scope
 
-The Cybersecurity Policy requires periodic adversarial testing. The vulnerability procedure names the adversarial activities CERG performs. The risk taxonomy distinguishes adversarial testing from vulnerability scanning. Until this procedure, the operating model — scope, rules, safety, finding routing, evidence — for adversarial validation was implicit.
+The Cybersecurity Policy requires periodic adversarial testing. The vulnerability procedure names the adversarial activities CERG performs. The risk taxonomy distinguishes adversarial testing from vulnerability scanning. Until this procedure, the operating model, scope, rules, safety, finding routing, evidence, for adversarial validation was implicit.
 
 This procedure makes it explicit. It applies to every CERG-led or CERG-overseen adversarial engagement: external pen test, internal pen test, cloud red-team / attack simulation, web/mobile/API pen test, OT adversarial assessment, purple-team detection validation, and social-engineering work conducted with the adjacent Awareness function.
 
 > **Adversarial Validation Is the Antidote to Drift**
 >
-> A control library that exists on paper but has never been tested is a hope. Adversarial validation tests the assumption that the control library implements actual defense. CERG runs it on a cadence; documents the rules; routes findings into vulnerability management or the risk register; and uses purple-team work to upgrade detection — not just to score the team.
+> A control library that exists on paper but has never been tested is a hope. Adversarial validation tests the assumption that the control library implements actual defense. CERG runs it on a cadence; documents the rules; routes findings into vulnerability management or the risk register; and uses purple-team work to upgrade detection, not just to score the team.
 
 ---
 
@@ -57,7 +57,7 @@ This procedure makes it explicit. It applies to every CERG-led or CERG-overseen 
 
 | **Type** | **Goal** | **Default Frequency** | **Adversary Model** |
 |---|---|---|---|
-| External Pen Test | Validate the perimeter — internet-facing surface, edge identity, public services. | Annual | Unauthenticated external attacker. |
+| External Pen Test | Validate the perimeter - internet-facing surface, edge identity, public services. | Annual | Unauthenticated external attacker. |
 | Internal Pen Test | Validate post-foothold lateral movement, privilege escalation, segmentation. | Annual | Authenticated low-privilege user / compromised workstation. |
 | Cloud Red Team / Attack Sim | Validate cloud control plane, identity, KMS, logging detection. | Annual + on material cloud change | Compromised cloud identity / supply-chain attack on cloud workloads. |
 | Application Pen Test | Validate web / mobile / API surface of in-scope applications. | Annual for T1/T2 apps; risk-based for others; pre-launch for new apps. | Authenticated and unauthenticated. |
@@ -76,7 +76,7 @@ Scoping inputs:
 
 - Highest-residual-score risks in the register.
 - Recently introduced systems and architectures (`CERG-PRC-AR-001` Phase 5 records).
-- Regulatory cadence requirements (CIP, CMMC).
+- Regulatory cadence requirements (CIP, [CMMC](https://dodcio.defense.gov/CMMC/)).
 - ATT&CK coverage gaps identified by detection engineering.
 - Threat intelligence pointing at adversary activity relevant to the organization.
 
@@ -87,7 +87,7 @@ Scoping inputs:
 Every engagement has a signed RoE before any activity begins. The template:
 
 ```
-RULES OF ENGAGEMENT — <Engagement Name>      AV-YYYY-NNNN
+RULES OF ENGAGEMENT - <Engagement Name>      AV-YYYY-NNNN
 
 1. ENGAGEMENT IDENTITY
    Type                  : (External / Internal / Cloud / App / OT / Purple / SE / TT)
@@ -101,10 +101,10 @@ RULES OF ENGAGEMENT — <Engagement Name>      AV-YYYY-NNNN
    Success criteria      :
    Risk-register / control gaps this engagement is intended to validate
 
-3. SCOPE — IN
+3. SCOPE - IN
    IPs / URLs / Apps / Cloud accounts / OT segments / Identity tenants explicitly in scope
 
-4. SCOPE — OUT
+4. SCOPE - OUT
    Explicit out-of-scope: e.g., production-impacting denial-of-service, mass account lockouts, third-party-hosted out-of-scope assets
 
 5. PROHIBITED ACTIONS
@@ -119,7 +119,7 @@ RULES OF ENGAGEMENT — <Engagement Name>      AV-YYYY-NNNN
 
 6. SAFETY AND ABORT
    Stop conditions       : (defined; e.g., OT process alarms, anomalous business impact)
-   Abort signal          : (named individual + backup; mechanism — phone / Signal channel)
+   Abort signal          : (named individual + backup; mechanism - phone / Signal channel)
    Operator on-call (OT) : (if OT)
    Incident handoff path : if findings cross the "test" → "real incident" threshold
 
@@ -129,7 +129,7 @@ RULES OF ENGAGEMENT — <Engagement Name>      AV-YYYY-NNNN
    Authority to act in our environment
 
 8. COMMUNICATIONS
-   SOC informed?         : Yes — passive (no detection assistance) / Yes — active (purple)
+   SOC informed?         : Yes - passive (no detection assistance) / Yes - active (purple)
    Liaison on Tester side:
    Liaison on CERG side  :
    Reporting cadence     : (daily standups / weekly status / final report)
@@ -157,14 +157,14 @@ RULES OF ENGAGEMENT — <Engagement Name>      AV-YYYY-NNNN
 Red-team engagements are scope-broader, time-longer, goal-driven simulations of a realistic adversary. Each red team has a Charter in addition to its RoE.
 
 ```
-RED-TEAM CHARTER — <Engagement Name>     AV-YYYY-NNNN
+RED-TEAM CHARTER - <Engagement Name>     AV-YYYY-NNNN
 
 A. ADVERSARY MODEL
    Threat actor profile        :
    Capability                  : (commodity / advanced / nation-state-equivalent)
    Resourcing (time, tools, ops infrastructure)
 
-B. OBJECTIVES — IN PRIORITY ORDER
+B. OBJECTIVES - IN PRIORITY ORDER
    Crown Jewel(s) to attempt to reach
    Detection escape required?  :
    Persistence required?       :
@@ -196,24 +196,24 @@ Purple work is the collaboration between offensive and detection engineering. It
 
 ### 6.2 Validation Workflow
 
-1. **Plan** — choose techniques (ATT&CK IDs); map to expected detections in the SIEM; document expected alert.
-2. **Execute** — emulate technique in non-production where possible; in production with controlled, documented action where required.
-3. **Observe** — did the expected detection fire? With expected priority? In expected time?
-4. **Classify** — Pass · Pass-with-Latency · Pass-with-Tuning-Needed · Fail (no detection) · Fail-Suppressed (existed but suppressed).
-5. **Action** — Pass: no change. Pass-with-Tuning: tune. Fail / Fail-Suppressed: open detection backlog item + risk register entry until restored.
-6. **Reflect** — feed result into detection inventory; update DT-002 metric in `CERG-GOV-MTR-001`.
+1. **Plan**, choose techniques (ATT&CK IDs); map to expected detections in the SIEM; document expected alert.
+2. **Execute**, emulate technique in non-production where possible; in production with controlled, documented action where required.
+3. **Observe**, did the expected detection fire? With expected priority? In expected time?
+4. **Classify**, Pass · Pass-with-Latency · Pass-with-Tuning-Needed · Fail (no detection) · Fail-Suppressed (existed but suppressed).
+5. **Action**, Pass: no change. Pass-with-Tuning: tune. Fail / Fail-Suppressed: open detection backlog item + risk register entry until restored.
+6. **Reflect**, feed result into detection inventory; update DT-002 metric in `CERG-GOV-MTR-001`.
 
 ### 6.3 Purple-Team Outcome to Baseline
 
-> **The Purple Cycle Updates Detection — Not Just the Scorecard**
+> **The Purple Cycle Updates Detection, Not Just the Scorecard**
 >
-> If a technique fires nine times out of ten because logs were missing for one source, the fix is to fix the source — not to re-grade the test. If a technique fires reliably but the alert routes to the wrong queue, the fix is the queue. Purple cycles end with a list of concrete changes to the detection set; if they don't, the cycle is incomplete.
+> If a technique fires nine times out of ten because logs were missing for one source, the fix is to fix the source, not to re-grade the test. If a technique fires reliably but the alert routes to the wrong queue, the fix is the queue. Purple cycles end with a list of concrete changes to the detection set; if they don't, the cycle is incomplete.
 
 ---
 
 ## 7. Cloud Attack Simulation
 
-Cloud engagements emulate adversary activity at the cloud control plane and identity layer — historically the most-attacked surface in modern enterprises.
+Cloud engagements emulate adversary activity at the cloud control plane and identity layer, historically the most-attacked surface in modern enterprises.
 
 | **Focus** | **Examples** |
 |---|---|
@@ -221,7 +221,7 @@ Cloud engagements emulate adversary activity at the cloud control plane and iden
 | Cloud control plane | IAM privilege enumeration and escalation; CloudTrail / Activity Log disable attempts; key policy changes; cross-account assumption. |
 | KMS / Secrets | Unauthorized key access; envelope-encryption bypass attempts. |
 | Workloads | Container escape; metadata service abuse; misconfigured serverless. |
-| Logging / monitoring | Visibility evasion — disable, alter, route around. |
+| Logging / monitoring | Visibility evasion - disable, alter, route around. |
 
 Cloud engagements explicitly include detection validation; CSPM/SSPM signals and cloud-native detection (GuardDuty, Defender for Cloud, Security Command Center) are exercised.
 
@@ -244,7 +244,7 @@ Application tests use OWASP WSTG (web), MASTG (mobile), and API Security Top 10 
 
 ---
 
-## 9. OT Adversarial Assessment — Safety Protocol
+## 9. OT Adversarial Assessment: Safety Protocol
 
 OT testing is uniquely constrained. Safety overrides any test objective.
 
@@ -257,7 +257,7 @@ The following are prohibited absent a documented exception with engineering and 
 - **Denial-of-service against any OT segment, including saturation testing.**
 - **Disabling of OT monitoring or logging.**
 - **Persistence on OT systems.**
-- **Engagement during operational events** — storms, demand peaks, planned outages, regulatory windows.
+- **Engagement during operational events**: storms, demand peaks, planned outages, regulatory windows.
 
 ### 9.2 Permitted Approaches
 
@@ -273,7 +273,7 @@ Every OT engagement has a named OT Safety Officer (an operator with substation /
 
 > **The Cost of Getting OT Testing Wrong**
 >
-> A pen-test misstep on an enterprise web app produces a ticket. A misstep on a relay setting group can shed load or trip a substation. CERG conducts OT adversarial work with the same care a power engineer applies in the field — and structures the engagement so the engineer's call always wins.
+> A pen-test misstep on an enterprise web app produces a ticket. A misstep on a relay setting group can shed load or trip a substation. CERG conducts OT adversarial work with the same care a power engineer applies in the field, and structures the engagement so the engineer's call always wins.
 
 ---
 
@@ -323,8 +323,8 @@ Findings are rated using a uniform schema regardless of engagement type, alignin
 | Final report (sanitized) | Engagement + 7 years | Distribution per RoE |
 | Final report (full / unsanitized) | Engagement + 5 years | Named distribution only |
 | Detection validation results (purple) | Engagement + 3 years | Detection eng + audit |
-| Finding records | Per VM tool retention; closed findings retained per audit retention | — |
-| Retest evidence | Per finding record retention | — |
+| Finding records | Per VM tool retention; closed findings retained per audit retention | - |
+| Retest evidence | Per finding record retention | - |
 
 Final reports are distributed under the confidentiality terms in the RoE. Full reports are not emailed; access is via a controlled location with audit logging.
 
@@ -338,11 +338,11 @@ Final reports are distributed under the confidentiality terms in the RoE. Full r
 
 | **Role** | **Responsibility** |
 |---|---|
-| Risk — Offensive Security | Owns this procedure. Maintains the annual Adversarial Validation Plan. Conducts or oversees engagements. Authors RoEs and Charters. |
-| Risk — Detection Engineering | Partners on purple-team cycles; turns findings into detection upgrades. |
-| Engineering — Platforms | Remediates identified misconfigurations and control gaps. |
-| Engineering — Identity | Remediates identity-related findings; tunes identity detections. |
-| Governance — Compliance | Tracks regulator-required cadence (CIP, CMMC); audit interface. |
+| Risk - Offensive Security | Owns this procedure. Maintains the annual Adversarial Validation Plan. Conducts or oversees engagements. Authors RoEs and Charters. |
+| Risk - Detection Engineering | Partners on purple-team cycles; turns findings into detection upgrades. |
+| Engineering - Platforms | Remediates identified misconfigurations and control gaps. |
+| Engineering - Identity | Remediates identity-related findings; tunes identity detections. |
+| Governance - Compliance | Tracks regulator-required cadence (CIP, [CMMC](https://dodcio.defense.gov/CMMC/)); audit interface. |
 | CISO | Approves Red-Team Charters and high-impact / cloud / OT engagements. |
 | Incident Response | Receives crossover events where test crosses the threshold into real incident. |
 | System / Business Owners | Authorize testing within their scope; participate in retest. |
@@ -353,13 +353,13 @@ Final reports are distributed under the confidentiality terms in the RoE. Full r
 
 | **Regulation / Framework** | **Where in This Procedure** |
 |---|---|
-| NIST 800-53r5 CA-8 | All sections |
+| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) CA-8 | All sections |
 | NIST 800-115 | All sections |
 | PTES | Sections 3–4 |
 | MITRE ATT&CK | Sections 6, 7 |
 | OWASP WSTG / MASTG / API Top 10 | Section 8 |
 | NERC-CIP CIP-007 R3.2 (vulnerability assessment) | Sections 9, 10 |
-| CMMC L2 (3.11.2) | Sections 3, 8 |
+| [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.11.2) | Sections 3, 8 |
 
 ---
 
@@ -371,5 +371,5 @@ Final reports are distributed under the confidentiality terms in the RoE. Full r
 | **Version** | 1.0 |
 | **Approved By** | Cyber Risk Manager (Offensive Security) · CISO endorsement |
 | **Next Review** | Annual / on material program change |
-| **Change Log** | 1.0 — Initial publication. Engagement types, RoE, charter, purple, cloud, app, OT safety, rating/routing, evidence retention. |
+| **Change Log** | 1.0 - Initial publication. Engagement types, RoE, charter, purple, cloud, app, OT safety, rating/routing, evidence retention. |
 

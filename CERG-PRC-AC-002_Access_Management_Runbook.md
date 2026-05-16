@@ -1,5 +1,5 @@
 
-# SURGE — Cyber Engineering, Risk & Governance
+# SURGE: Cyber Engineering, Risk & Governance
 
 ## ACCESS MANAGEMENT RUNBOOK
 ### JML · Access Requests · Recertification · PAM · Break-Glass · Service Accounts · Secrets · Vendor Access · MFA
@@ -11,21 +11,21 @@
 | **Document ID** | CERG-PRC-AC-002 |
 | **Version** | 1.0 |
 | **Status** | For Review |
-| **Classification** | Internal — Confidential |
-| **Owner** | Cyber Engineering Manager (Identity) — or IAM team lead when IAM is owned outside CERG, with CERG as cyber contributor |
-| **Parent Standard** | CERG-STD-AC-001 — Access Management Standard |
+| **Classification** | Internal - Confidential |
+| **Owner** | Cyber Engineering Manager (Identity) - or IAM team lead when IAM is owned outside CERG, with CERG as cyber contributor |
+| **Parent Standard** | CERG-STD-AC-001 - Access Management Standard |
 | **Supporting Documents** | CERG-GOV-CB-001 · CERG-STD-CR-001 · CERG-STD-LM-001 · CERG-PRC-RM-001 · CERG-PRC-AR-001 · CERG-PRC-TPRM-001 |
 | **Review Cycle** | Annual / On IAM tooling change |
-| **Frameworks** | NIST 800-53r5 (AC, IA, AU) · NIST 800-63B · NIST CSF 2.0 (PROTECT) |
-| **Regulations** | NERC-CIP CIP-004 / CIP-005 · CMMC L2 (3.1, 3.5) · SOX ITGC (Access) |
-| **Environments** | All in-scope identities — human, machine, service, vendor |
+| **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (AC, IA, AU) · [NIST 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (PROTECT) |
+| **Regulations** | NERC-CIP CIP-004 / CIP-005 · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.1, 3.5) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC (Access) |
+| **Environments** | All in-scope identities - human, machine, service, vendor |
 
 ---
 
 ## Table of Contents
 
 1. [Purpose and Scope](#1-purpose-and-scope)
-2. [The Two Operating Models — CERG-Owned vs. Cyber-Contributing](#2-the-two-operating-models--cerg-owned-vs-cyber-contributing)
+2. [The Two Operating Models, CERG-Owned vs. Cyber-Contributing](#2-the-two-operating-models--cerg-owned-vs-cyber-contributing)
 3. [Joiner / Mover / Leaver](#3-joiner--mover--leaver)
 4. [Access Request and Approval](#4-access-request-and-approval)
 5. [Access Review and Recertification](#5-access-review-and-recertification)
@@ -43,7 +43,7 @@
 
 ## 1. Purpose and Scope
 
-The Access Management Standard explicitly says implementation details — IdP baselines, MFA enrollment, PAM workflows, recertification runbooks — are maintained separately. This runbook is that "separately." It defines the executable workflows behind every identity decision CERG-STD-AC-001 requires.
+The Access Management Standard explicitly says implementation details, IdP baselines, MFA enrollment, PAM workflows, recertification runbooks, are maintained separately. This runbook is that "separately." It defines the executable workflows behind every identity decision CERG-STD-AC-001 requires.
 
 The runbook covers every identity in the environment: human (employee, contractor), machine (system, service, agent), and vendor / third-party.
 
@@ -53,7 +53,7 @@ The runbook covers every identity in the environment: human (employee, contracto
 
 ---
 
-## 2. The Two Operating Models — CERG-Owned vs. Cyber-Contributing
+## 2. The Two Operating Models: CERG-Owned vs. Cyber-Contributing
 
 | **Aspect** | **CERG-Owned IAM** | **CERG-Contributing IAM** |
 |---|---|---|
@@ -74,13 +74,13 @@ Where IAM is outside CERG, every requirement below is either implemented by the 
 
 | **Step** | **Trigger / Owner / SLA** |
 |---|---|
-| HR record created in HRIS | HR — at offer signed |
-| Account provisioned by IGA from HRIS | IGA system — within 1 business day of start date |
+| HR record created in HRIS | HR - at offer signed |
+| Account provisioned by IGA from HRIS | IGA system - within 1 business day of start date |
 | Baseline entitlements assigned by role | IGA via role / SoD model |
-| MFA enrollment notification | IdP — at first sign-in |
+| MFA enrollment notification | IdP - at first sign-in |
 | Required training assignment | Awareness function |
-| Phishing-resistant MFA enrolled before privileged use | User + Engineering — Identity |
-| Hardware token issued (where required by role) | Engineering — Identity |
+| Phishing-resistant MFA enrolled before privileged use | User + Engineering - Identity |
+| Hardware token issued (where required by role) | Engineering - Identity |
 | Privileged role(s) requested separately | Manager + named approver per role |
 
 ### 3.2 Mover
@@ -88,22 +88,22 @@ Where IAM is outside CERG, every requirement below is either implemented by the 
 | **Step** | **Trigger / Owner / SLA** |
 |---|---|
 | Role / department change in HRIS | HR |
-| IGA recalculates entitlements; out-of-role accesses flagged | IGA — within 1 business day |
-| Out-of-role accesses removed by default; retained only by exception with new manager approval | Manager — within 5 business days |
-| Privileged roles re-justified | Manager + role owner — within 5 business days |
-| Recertification triggered for new role | IGA — within 30 days of move |
+| IGA recalculates entitlements; out-of-role accesses flagged | IGA - within 1 business day |
+| Out-of-role accesses removed by default; retained only by exception with new manager approval | Manager - within 5 business days |
+| Privileged roles re-justified | Manager + role owner - within 5 business days |
+| Recertification triggered for new role | IGA - within 30 days of move |
 
 ### 3.3 Leaver
 
 | **Step** | **Trigger / Owner / SLA** |
 |---|---|
-| HR termination event in HRIS | HR — same day |
-| Active sessions terminated | IdP — within 1 hour |
-| Account disabled | IGA — within 1 business day (within 1 hour for involuntary) |
-| Privileged credentials and secrets attributed to user rotated | PAM + Engineering — within 1 business day |
-| MFA tokens / hardware deauthorized | Engineering — Identity — within 1 business day |
-| Mailbox and data retention applied per Legal | Engineering — IT |
-| Account permanently deleted | IGA — after retention period |
+| HR termination event in HRIS | HR - same day |
+| Active sessions terminated | IdP - within 1 hour |
+| Account disabled | IGA - within 1 business day (within 1 hour for involuntary) |
+| Privileged credentials and secrets attributed to user rotated | PAM + Engineering - within 1 business day |
+| MFA tokens / hardware deauthorized | Engineering - Identity - within 1 business day |
+| Mailbox and data retention applied per Legal | Engineering - IT |
+| Account permanently deleted | IGA - after retention period |
 
 ### 3.4 Involuntary or High-Sensitivity Leavers
 
@@ -130,8 +130,8 @@ Same as 3.3 with all SLAs collapsed to "immediately" and the SOC alerted to moni
 |---|---|
 | Standard role | Direct manager |
 | Sensitive role | Direct manager + system owner |
-| Privileged role | Direct manager + role owner + Engineering — Identity |
-| Vendor / external | Sponsor + Engineering — Identity + TPRM record |
+| Privileged role | Direct manager + role owner + Engineering - Identity |
+| Vendor / external | Sponsor + Engineering - Identity + TPRM record |
 | Break-glass | Per Section 7 |
 
 ### 4.3 Approval Discipline
@@ -149,7 +149,7 @@ Same as 3.3 with all SLAs collapsed to "immediately" and the SOC alerted to moni
 | **Scope** | **Cadence** |
 |---|---|
 | All standard accounts | Annual (full base) |
-| SOX-relevant access | Quarterly |
+| [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant access | Quarterly |
 | CUI scope access | Quarterly |
 | BES Cyber System access | Quarterly (CIP-004 alignment, 15-month cap) |
 | Privileged access (any) | Quarterly |
@@ -164,7 +164,7 @@ Same as 3.3 with all SLAs collapsed to "immediately" and the SOC alerted to moni
 3. **Decision** per entitlement: Certify · Modify · Remove. "Bulk Certify" is permitted only where reviewer has reviewed actual access patterns.
 4. **Auto-removal** of Removed entitlements within 5 business days.
 5. **Audit log** captured per IGA for the cycle.
-6. **Exceptions** flagged to Engineering — Identity for follow-up.
+6. **Exceptions** flagged to Engineering, Identity for follow-up.
 
 ### 5.3 Anti-Rubber-Stamp Controls
 
@@ -209,7 +209,7 @@ Every privileged action across the in-scope estate is mediated by PAM. Specifica
 
 ### 7.1 Definition
 
-Break-glass accounts are the credentials of last resort — used only when normal identity systems are unavailable or compromised. Misuse is a P1 detection per `CERG-STD-LM-001` Section 11.
+Break-glass accounts are the credentials of last resort, used only when normal identity systems are unavailable or compromised. Misuse is a P1 detection per `CERG-STD-LM-001` Section 11.
 
 ### 7.2 Operating Rules
 
@@ -231,20 +231,20 @@ Break-glass accounts are the credentials of last resort — used only when norma
 
 1. **Workload identity** (cloud-native): managed identities, IRSA, workload identity federation. Preferred.
 2. **Short-lived issued credentials** via STS / IdP-integrated token service.
-3. **Long-lived static credentials in secrets manager** — only when 1–2 are infeasible.
+3. **Long-lived static credentials in secrets manager**, only when 1–2 are infeasible.
 
 ### 8.2 Lifecycle
 
 | **Step** | **Owner** |
 |---|---|
-| Request via service-account intake | Owner team + Engineering — Identity |
+| Request via service-account intake | Owner team + Engineering - Identity |
 | Named human owner required | Owner team |
-| Scope and entitlements minimized | Engineering — Identity |
-| Stored in PAM / secrets manager per `CERG-STD-CR-001` | Engineering — Identity |
-| Detection on anomalous use | Risk — Detection |
-| Recertification semi-annual | Engineering — Identity |
-| Rotation per `CERG-STD-CR-001` Section 8 | Engineering — Identity / Workload owner |
-| Decommission on system retirement | Engineering — Identity |
+| Scope and entitlements minimized | Engineering - Identity |
+| Stored in PAM / secrets manager per `CERG-STD-CR-001` | Engineering - Identity |
+| Detection on anomalous use | Risk - Detection |
+| Recertification semi-annual | Engineering - Identity |
+| Rotation per `CERG-STD-CR-001` Section 8 | Engineering - Identity / Workload owner |
+| Decommission on system retirement | Engineering - Identity |
 
 ### 8.3 Service Account Disciplines
 
@@ -261,7 +261,7 @@ This section operationalizes `CERG-STD-CR-001` Section 7. See that standard for 
 
 | **Action** | **Path** |
 |---|---|
-| Request a new secret | Through secrets manager / IdP token service — never via ticket. |
+| Request a new secret | Through secrets manager / IdP token service - never via ticket. |
 | Retrieve at runtime | Workload pulls; never stored in repo or container image. |
 | Rotate | Schedule + event triggers (compromise indicator, vendor incident, workforce change). |
 | Revoke | On detection of compromise, on user departure, on service retirement. |
@@ -275,13 +275,13 @@ This section operationalizes `CERG-STD-CR-001` Section 7. See that standard for 
 
 | **Step** | **Owner** |
 |---|---|
-| Vendor record created in TPRM with tier and country-of-access | CERG — TPRM |
+| Vendor record created in TPRM with tier and country-of-access | CERG - TPRM |
 | Sponsor identified (named human in our org) | Business / Sponsor |
-| Access scope defined — minimum required entitlements, time-bounded | Engineering — Identity |
-| MFA enrolled — phishing-resistant required for privileged | Engineering — Identity |
-| Sessions brokered through PAM where privileged | Engineering — Identity |
-| Country-of-access validated against Country Risk Register (`CERG-PRC-TPRM-001` Section 10) | CERG — TPRM |
-| Time-boxed: explicit expiration; renewal requires re-justification | Engineering — Identity |
+| Access scope defined - minimum required entitlements, time-bounded | Engineering - Identity |
+| MFA enrolled - phishing-resistant required for privileged | Engineering - Identity |
+| Sessions brokered through PAM where privileged | Engineering - Identity |
+| Country-of-access validated against Country Risk Register (`CERG-PRC-TPRM-001` Section 10) | CERG - TPRM |
+| Time-boxed: explicit expiration; renewal requires re-justification | Engineering - Identity |
 
 ### 10.2 Monitoring
 
@@ -323,9 +323,9 @@ Phishing-resistant MFA coverage is reported as `ID-001` in `CERG-GOV-MTR-001`.
 
 | **Role** | **Responsibility** |
 |---|---|
-| Engineering — Identity | Owns the operational workflows in this runbook (or contributes them to the external IAM team). |
-| Risk — Detection | Identity detection use cases per `CERG-STD-LM-001` Section 11. |
-| Governance — Compliance | Recertification evidence, SoD evidence, regulator interface. |
+| Engineering - Identity | Owns the operational workflows in this runbook (or contributes them to the external IAM team). |
+| Risk - Detection | Identity detection use cases per `CERG-STD-LM-001` Section 11. |
+| Governance - Compliance | Recertification evidence, SoD evidence, regulator interface. |
 | Managers / Sponsors | Approval and recertification decisions. |
 | System / Role Owners | Approve sensitive and privileged access; participate in recert. |
 | HR | JML triggers; data quality in HRIS. |
@@ -337,12 +337,12 @@ Phishing-resistant MFA coverage is reported as `ID-001` in `CERG-GOV-MTR-001`.
 
 | **Regulation / Framework** | **Where in This Runbook** |
 |---|---|
-| NIST 800-53r5 AC / IA | All sections |
-| NIST 800-63B | Section 11 |
-| NIST CSF 2.0 PROTECT | All sections |
+| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) AC / IA | All sections |
+| [NIST 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html) | Section 11 |
+| [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) PROTECT | All sections |
 | NERC-CIP CIP-004 R4/R5, CIP-005 R2 | Sections 3, 5, 6, 10 |
-| CMMC L2 / 800-171r3 (3.1, 3.5) | All sections |
-| SOX ITGC (Access) | Sections 3, 4, 5, 6 |
+| [CMMC L2](https://dodcio.defense.gov/CMMC/) / 800-171r3 (3.1, 3.5) | All sections |
+| [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC (Access) | Sections 3, 4, 5, 6 |
 
 ---
 
@@ -354,5 +354,5 @@ Phishing-resistant MFA coverage is reported as `ID-001` in `CERG-GOV-MTR-001`.
 | **Version** | 1.0 |
 | **Approved By** | Cyber Engineering Manager (Identity) · CISO endorsement |
 | **Next Review** | Annual / IAM tooling change |
-| **Change Log** | 1.0 — Initial publication. JML, access request, recertification, PAM, break-glass, service accounts, secrets, vendor access, MFA. Dual operating model preserved. |
+| **Change Log** | 1.0 - Initial publication. JML, access request, recertification, PAM, break-glass, service accounts, secrets, vendor access, MFA. Dual operating model preserved. |
 

@@ -1,5 +1,5 @@
 
-### Foundational Security Principles — All Systems · All Environments · All Trust Levels
+### Foundational Security Principles: All Systems · All Environments · All Trust Levels
 
 ---
 
@@ -7,11 +7,11 @@
 | ------------------ | -------------------------------------------------------- |
 | **Version**        | 1.0 DRAFT                                                |
 | **Status**         | For Review                                               |
-| **Classification** | Internal — Confidential                                  |
+| **Classification** | Internal - Confidential                                  |
 | **Owner**          | Chief Information Security Officer                       |
 | **Review Cycle**   | Annual / Upon Significant Change                         |
-| **Frameworks**     | NIST CSF 2.0 · NIST 800-53r5 · NIST 800-171r2 · NIST RMF |
-| **Regulations**    | NERC-CIP · CMMC Level 2 · · SOX ITGC                     |
+| **Frameworks**     | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r2](https://csrc.nist.gov/pubs/sp/800/171/r2/final) · NIST RMF |
+| **Regulations**    | NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) Level 2 · · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC                     |
 
 ---
 
@@ -43,7 +43,7 @@ This policy applies to:
 - All information systems and operational technology owned, operated, leased, or contracted by the organization
 - All personnel with access to organizational systems, including employees, contractors, consultants, and third-party vendors
 - All environments, including owned data centers, leased facilities, cloud service providers, SaaS platforms, and remote access connections
-- All system classifications, including BES Cyber Systems under NERC-CIP, systems handling Controlled Unclassified Information (CUI) under CMMC, SOX-relevant systems, and general enterprise IT
+- All system classifications, including BES Cyber Systems under NERC-CIP, systems handling Controlled Unclassified Information (CUI) under [CMMC](https://dodcio.defense.gov/CMMC/), [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant systems, and general enterprise IT
 - All trust levels, from fully managed corporate devices to third-party contractor equipment accessing organizational resources
 
 ### 1.2 Policy Hierarchy
@@ -52,7 +52,7 @@ This policy sits at the top of the cybersecurity governance hierarchy. Subordina
 
 | Level | Document Type | Purpose |
 | --------------------- | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| **1 — This document** | **Policy (CERG-POL-001)** | Enduring principles. What is always true. Authority for all below. |
+| **1 - This document** | **Policy (CERG-POL-001)** | Enduring principles. What is always true. Authority for all below. |
 | 2 | Standards | Specific, measurable requirements per system type, data class, or regulatory regime (e.g., BES Cyber System Standard, Cloud Security Standard). |
 | 3 | Procedures | Step-by-step implementation guidance for specific activities (e.g., vulnerability scanning procedure, access review procedure). |
 | 4 | Guidelines | Non-mandatory best practice and implementation advice. Supports engineering and operational teams. |
@@ -100,26 +100,26 @@ The following terms are used throughout this policy and all subordinate document
 
 ## 4. Foundational Security Principles
 
-The following ten principles constitute the enduring security requirements of this organization. They apply universally — to every asset, every environment, every trust level, and every regulatory context. Subordinate standards define how these principles are implemented in specific contexts.
+The following ten principles constitute the enduring security requirements of this organization. They apply universally, to every asset, every environment, every trust level, and every regulatory context. Subordinate standards define how these principles are implemented in specific contexts.
 
 > **How to Read These Principles**
 > 
-> Each principle states a universal mandate — what must always be true. The rationale explains why. The references identify the NIST controls and regulatory requirements the mandate satisfies. Implementation specifics (thresholds, timelines, approved tools, exceptions) are defined in subordinate standards.
+> Each principle states a universal mandate, what must always be true. The rationale explains why. The references identify the NIST controls and regulatory requirements the mandate satisfies. Implementation specifics (thresholds, timelines, approved tools, exceptions) are defined in subordinate standards.
 
 ---
 
-### Principle 1 — Maintain an Authoritative, Current Inventory of All Assets
+### Principle 1: Maintain an Authoritative, Current Inventory of All Assets
 
 **Mandate**
 
 - The organization shall maintain a complete and current inventory of all assets within scope of this policy.
-- Each asset record shall include, at minimum: asset identifier, system type (IT or OT), data classification, regulatory designation (BES Cyber System, CUI environment, SOX-relevant system, or general IT), asset owner, and hosting environment.
+- Each asset record shall include, at minimum: asset identifier, system type (IT or OT), data classification, regulatory designation (BES Cyber System, CUI environment, [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant system, or general IT), asset owner, and hosting environment.
 - Asset inventory shall be updated upon any addition, modification, or decommission of an in-scope asset.
 - Cyber Engineering is responsible for producing asset documentation at project handoff. Cyber Risk is responsible for validating inventory coverage through scan and assessment activities.
 
 **Rationale**
 
-You cannot protect what you do not know you own. An incomplete inventory is not a documentation gap — it is an unmanaged attack surface and, for regulated systems, a compliance gap that may constitute a reportable finding independent of any security event.
+You cannot protect what you do not know you own. An incomplete inventory is not a documentation gap, it is an unmanaged attack surface and, for regulated systems, a compliance gap that may constitute a reportable finding independent of any security event.
 
 **References**
 
@@ -127,11 +127,11 @@ You cannot protect what you do not know you own. An incomplete inventory is not 
 
 ---
 
-### Principle 2 — Enforce Least Privilege and Verify Identity for All Access
+### Principle 2: Enforce Least Privilege and Verify Identity for All Access
 
 **Mandate**
 
-- Access to all organizational assets shall be granted on the basis of least privilege — the minimum access required to perform an authorized function.
+- Access to all organizational assets shall be granted on the basis of least privilege, the minimum access required to perform an authorized function.
 - Identity shall be verified before access is granted. Multi-factor authentication (MFA) is required for all remote access and all access to privileged functions, regardless of network segment or system type.
 - Default, shared, and generic credentials shall be eliminated. Each user, system, and service shall be uniquely identified.
 - Accounts shall be provisioned, modified, and deprovisioned through a documented lifecycle process tied to authoritative sources (e.g., HR system, approved request workflow). Access reviews shall be conducted on a frequency defined in subordinate standards.
@@ -139,7 +139,7 @@ You cannot protect what you do not know you own. An incomplete inventory is not 
 
 **Rationale**
 
-Credential-based attacks are the leading initial access vector. Excessive privilege is the primary lateral movement enabler. Together, weak authentication and over-provisioned accounts convert every phishing attempt or credential theft into a potential enterprise-wide breach. In OT environments, over-privileged access to control systems may have no detective controls to catch misuse — prevention is the only effective control layer.
+Credential-based attacks are the leading initial access vector. Excessive privilege is the primary lateral movement enabler. Together, weak authentication and over-provisioned accounts convert every phishing attempt or credential theft into a potential enterprise-wide breach. In OT environments, over-privileged access to control systems may have no detective controls to catch misuse, prevention is the only effective control layer.
 
 **References**
 
@@ -147,7 +147,7 @@ Credential-based attacks are the leading initial access vector. Excessive privil
 
 ---
 
-### Principle 3 — Harden All Systems to a Documented Baseline
+### Principle 3: Harden All Systems to a Documented Baseline
 
 **Mandate**
 
@@ -158,7 +158,7 @@ Credential-based attacks are the leading initial access vector. Excessive privil
 
 **Rationale**
 
-Default and unrestricted configurations are the attack surface that was never needed. Hardening eliminates exposure that cannot be exploited because it does not exist. In OT environments, unnecessary ports and services are a compliance finding under NERC-CIP CIP-007 R1 independent of whether a vulnerability exists in them — the control obligation is categorical.
+Default and unrestricted configurations are the attack surface that was never needed. Hardening eliminates exposure that cannot be exploited because it does not exist. In OT environments, unnecessary ports and services are a compliance finding under NERC-CIP CIP-007 R1 independent of whether a vulnerability exists in them, the control obligation is categorical.
 
 **References**
 
@@ -166,18 +166,18 @@ Default and unrestricted configurations are the attack surface that was never ne
 
 ---
 
-### Principle 4 — Segment Networks and Protect Sensitive Data
+### Principle 4: Segment Networks and Protect Sensitive Data
 
 **Mandate**
 
 - Networks shall be divided into defined security zones. Access between zones shall be explicitly permitted, documented, and enforced by technical controls.
-- Environments containing regulated or sensitive data — including BES Cyber Systems, CUI-handling systems, and SOX-relevant systems — shall be isolated from general-purpose networks through documented, validated controls.
+- Environments containing regulated or sensitive data, including BES Cyber Systems, CUI-handling systems, and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant systems, shall be isolated from general-purpose networks through documented, validated controls.
 - Data shall be protected in transit using approved encryption standards. Data at rest that is classified as sensitive, regulated, or subject to contractual protection requirements shall be encrypted using organization-approved methods.
 - IT and OT network interconnections shall receive heightened architectural scrutiny. All data flows crossing an IT/OT boundary require documented authorization, shall be minimized to operational necessity, and shall be validated through regular assessment.
 
 **Rationale**
 
-Flat networks convert a single compromised endpoint into an enterprise-wide breach. In IT environments, segmentation limits data theft and ransomware propagation. In OT environments, the consequence of inadequate segmentation is not data loss — it is potential manipulation or disruption of physical processes affecting operational reliability. The blast radius is not a technical metric; it is a reliability and safety metric.
+Flat networks convert a single compromised endpoint into an enterprise-wide breach. In IT environments, segmentation limits data theft and ransomware propagation. In OT environments, the consequence of inadequate segmentation is not data loss, it is potential manipulation or disruption of physical processes affecting operational reliability. The blast radius is not a technical metric; it is a reliability and safety metric.
 
 **References**
 
@@ -185,7 +185,7 @@ Flat networks convert a single compromised endpoint into an enterprise-wide brea
 
 ---
 
-### Principle 5 — Identify and Remediate Vulnerabilities on a Defined Schedule
+### Principle 5: Identify and Remediate Vulnerabilities on a Defined Schedule
 
 **Mandate**
 
@@ -193,11 +193,11 @@ Flat networks convert a single compromised endpoint into an enterprise-wide brea
 - Vulnerabilities shall be assessed for severity, exploitability, and asset criticality. Findings shall be tracked to remediation or documented risk acceptance within timelines defined in subordinate standards.
 - OT and BES Cyber Systems shall be scanned using approved methods that do not introduce operational risk. Timelines for OT remediation shall account for vendor testing requirements and operational windows, with NERC-CIP deviation processes invoked as required.
 - Vulnerabilities identified during pre-production assessment shall be remediated or formally risk-accepted prior to production deployment. High and Critical severity findings require documented management authorization before go-live.
-- The organization shall conduct periodic adversarial testing — penetration testing and red team operations — to validate that controls function under active attack conditions, not only under passive assessment.
+- The organization shall conduct periodic adversarial testing, penetration testing and red team operations, to validate that controls function under active attack conditions, not only under passive assessment.
 
 **Rationale**
 
-The majority of successful breaches exploit known vulnerabilities for which patches exist. An unmanaged vulnerability is not a theoretical risk — it is a documented entry point. In OT environments, the risk calculus is more complex: patching too quickly without vendor validation can introduce reliability risk; patching too slowly creates security exposure and regulatory non-compliance. Both failure modes require management.
+The majority of successful breaches exploit known vulnerabilities for which patches exist. An unmanaged vulnerability is not a theoretical risk, it is a documented entry point. In OT environments, the risk calculus is more complex: patching too quickly without vendor validation can introduce reliability risk; patching too slowly creates security exposure and regulatory non-compliance. Both failure modes require management.
 
 **References**
 
@@ -205,14 +205,14 @@ The majority of successful breaches exploit known vulnerabilities for which patc
 
 ---
 
-### Principle 6 — Control, Log, and Monitor All Privileged and Remote Access
+### Principle 6: Control, Log, and Monitor All Privileged and Remote Access
 
 **Mandate**
 
 - All privileged access sessions and all remote access connections to organizational assets shall be logged. Log data shall include at minimum: identity, source, target system, session initiation and termination time, and actions performed where technically feasible.
 - Session recording shall be applied to high-risk access as defined in subordinate standards.
 - Log data shall be protected from modification and retained for periods defined per regulatory requirement. Log review shall occur on a defined cadence with findings escalated through the risk management process.
-- Continuous monitoring capabilities — including security information and event management (SIEM) or equivalent — shall be deployed to detect anomalous activity across in-scope systems. OT monitoring shall use passive or approved active methods that do not introduce operational risk.
+- Continuous monitoring capabilities, including security information and event management (SIEM) or equivalent, shall be deployed to detect anomalous activity across in-scope systems. OT monitoring shall use passive or approved active methods that do not introduce operational risk.
 - Threat intelligence shall be integrated into monitoring to enable detection of known adversary techniques relevant to the organization's industry and system profile.
 
 **Rationale**
@@ -225,18 +225,18 @@ Controls that cannot be observed cannot be verified. Privileged and remote acces
 
 ---
 
-### Principle 7 — Manage Configuration Changes Through a Controlled Process
+### Principle 7: Manage Configuration Changes Through a Controlled Process
 
 **Mandate**
 
-- All changes to in-scope assets — including software, firmware, configuration, and network changes — shall be authorized, documented, and reviewed prior to implementation.
+- All changes to in-scope assets, including software, firmware, configuration, and network changes, shall be authorized, documented, and reviewed prior to implementation.
 - Configuration baselines shall be compared before and after changes to verify that only intended modifications were made.
 - Unauthorized configuration changes shall be detected through technical controls and treated as security events subject to investigation.
 - Change records shall be retained as audit evidence in accordance with applicable regulatory requirements.
 
 **Rationale**
 
-A hardened system that drifts back to an insecure state provides the same exposure as a system that was never hardened. Configuration drift is the primary mechanism by which effective controls degrade. Unauthorized changes are a primary persistence technique for advanced attackers — an adversary who disables a logging agent or opens a firewall rule has bypassed your controls without exploiting a single CVE. SOX treats unauthorized changes to financial systems as a control failure independent of any security event.
+A hardened system that drifts back to an insecure state provides the same exposure as a system that was never hardened. Configuration drift is the primary mechanism by which effective controls degrade. Unauthorized changes are a primary persistence technique for advanced attackers, an adversary who disables a logging agent or opens a firewall rule has bypassed your controls without exploiting a single CVE. [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) treats unauthorized changes to financial systems as a control failure independent of any security event.
 
 **References**
 
@@ -244,7 +244,7 @@ A hardened system that drifts back to an insecure state provides the same exposu
 
 ---
 
-### Principle 8 — Extend Security Requirements to Third Parties and the Supply Chain
+### Principle 8: Extend Security Requirements to Third Parties and the Supply Chain
 
 **Mandate**
 
@@ -255,7 +255,7 @@ A hardened system that drifts back to an insecure state provides the same exposu
 
 **Rationale**
 
-The organization's security posture extends only as far as its weakest trusted third party. Third parties with legitimate access are a primary attack vector — not because they are adversaries, but because they represent a trusted pathway that may be compromised without the organization's knowledge. The SolarWinds supply chain compromise demonstrated that a trusted, certified vendor can become an unwitting attack delivery mechanism at scale. Vendor questionnaires do not catch compromised software build pipelines.
+The organization's security posture extends only as far as its weakest trusted third party. Third parties with legitimate access are a primary attack vector, not because they are adversaries, but because they represent a trusted pathway that may be compromised without the organization's knowledge. The SolarWinds supply chain compromise demonstrated that a trusted, certified vendor can become an unwitting attack delivery mechanism at scale. Vendor questionnaires do not catch compromised software build pipelines.
 
 **References**
 
@@ -263,18 +263,18 @@ The organization's security posture extends only as far as its weakest trusted t
 
 ---
 
-### Principle 9 — Formalize Risk Management and Maintain an Active Risk Register
+### Principle 9: Formalize Risk Management and Maintain an Active Risk Register
 
 **Mandate**
 
 - All identified risks to organizational assets and operations shall be documented in the organizational risk register with, at minimum: risk description, affected assets, risk owner, severity, treatment decision, compensating controls, and target closure date.
-- Risk treatment decisions — including risk acceptance — require documented approval from the authorized approval authority as defined in subordinate standards. High and Critical risks require CISO or executive sponsor sign-off.
+- Risk treatment decisions, including risk acceptance, require documented approval from the authorized approval authority as defined in subordinate standards. High and Critical risks require CISO or executive sponsor sign-off.
 - The risk register shall be reviewed by leadership on a quarterly basis at minimum. Overdue or deteriorating risk items shall be escalated to the CISO.
 - Risk management is an organizational function, not a security team function. Business unit owners bear accountability for the risks associated with their systems and processes. Cyber Governance facilitates and tracks; it does not absorb accountability on behalf of the business.
 
 **Rationale**
 
-Risks that are not formally documented are effectively accepted without acknowledgment, compensating controls, or accountability. When an undocumented risk materializes into an incident, there is no audit trail, no owner, and no record of what was understood at the time. Regulatory bodies treat the absence of documented risk decisions as evidence of a deficient risk management program — not as evidence that risk did not exist.
+Risks that are not formally documented are effectively accepted without acknowledgment, compensating controls, or accountability. When an undocumented risk materializes into an incident, there is no audit trail, no owner, and no record of what was understood at the time. Regulatory bodies treat the absence of documented risk decisions as evidence of a deficient risk management program, not as evidence that risk did not exist.
 
 **References**
 
@@ -282,7 +282,7 @@ Risks that are not formally documented are effectively accepted without acknowle
 
 ---
 
-### Principle 10 — Prepare for, Respond to, and Learn from Security Events
+### Principle 10: Prepare for, Respond to, and Learn from Security Events
 
 **Mandate**
 
@@ -324,30 +324,30 @@ This policy is designed to satisfy the foundational policy and governance requir
 
 |Framework / Regulation|Primary Control Families Addressed|Principles Satisfied|
 |---|---|---|
-|**NIST CSF 2.0**|All 6 functions: GOVERN, IDENTIFY, PROTECT, DETECT, RESPOND, RECOVER|All 10 principles|
-|**NIST 800-53 Rev 5**|PL, PM, RA, CA, AC, IA, SC, CM, SI, AU, IR, CP, PE, PS, SA, SR|All 10 principles|
-|**NIST 800-171 Rev 2**|All 14 domains (CUI environments)|Principles 1–7, 9–10|
+|**[NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final)**|All 6 functions: GOVERN, IDENTIFY, PROTECT, DETECT, RESPOND, RECOVER|All 10 principles|
+|**[NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) Rev 5**|PL, PM, RA, CA, AC, IA, SC, CM, SI, AU, IR, CP, PE, PS, SA, SR|All 10 principles|
+|**[NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) Rev 2**|All 14 domains (CUI environments)|Principles 1–7, 9–10|
 |**NIST RMF**|Steps 1–6 (Categorize through Monitor)|All 10 principles|
 |**NERC-CIP**|CIP-002 through CIP-014 (BES Cyber Systems)|Principles 1–7, 9–10|
-|**CMMC Level 2**|All 110 practices across 14 domains|Principles 1–7, 9–10|
-|**SOX ITGC**|Change management, access, and availability controls|Principles 3, 4, 5, 7, 8|
+|**[CMMC](https://dodcio.defense.gov/CMMC/) Level 2**|All 110 practices across 14 domains|Principles 1–7, 9–10|
+|**[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC**|Change management, access, and availability controls|Principles 3, 4, 5, 7, 8|
 
 > **The CERG Regulatory Advantage**
 > 
-> Organizations managing multiple regulatory obligations simultaneously — NERC-CIP, CMMC, and SOX — typically suffer from duplicated effort, conflicting timelines, and fragmented evidence. The CERG model centralizes policy and compliance management in Governance while Engineering and Risk produce compliance evidence as a byproduct of their daily work. One policy hierarchy. One evidence library. One compliance posture.
+> Organizations managing multiple regulatory obligations simultaneously, NERC-CIP, [CMMC](https://dodcio.defense.gov/CMMC/), and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204), typically suffer from duplicated effort, conflicting timelines, and fragmented evidence. The CERG model centralizes policy and compliance management in Governance while Engineering and Risk produce compliance evidence as a byproduct of their daily work. One policy hierarchy. One evidence library. One compliance posture.
 
 ---
 
 ## 7. Exceptions and Risk Acceptance
 
-Exceptions to this policy are recognized as operationally necessary in specific, documented circumstances. An exception does not suspend a principle — it documents that a principle cannot be fully satisfied and defines the compensating controls and management accountability that apply in its place.
+Exceptions to this policy are recognized as operationally necessary in specific, documented circumstances. An exception does not suspend a principle, it documents that a principle cannot be fully satisfied and defines the compensating controls and management accountability that apply in its place.
 
 ### 7.1 Exception Process
 
 - Any personnel may initiate an exception request through Cyber Governance using the organization's approved exception request process.
 - Exception requests shall document: the principle or requirement subject to exception, the business or operational justification, the affected systems, the proposed compensating controls, the risk owner, and the proposed exception duration.
 - Cyber Risk shall assess the risk associated with each exception and provide a written finding to support the approval decision.
-- Approval authority is defined by risk severity in subordinate standards. High and Critical risk exceptions require CISO approval at minimum. Exceptions affecting BES Cyber Systems, CUI environments, or SOX-relevant systems may require additional escalation as defined in applicable regulatory deviation procedures.
+- Approval authority is defined by risk severity in subordinate standards. High and Critical risk exceptions require CISO approval at minimum. Exceptions affecting BES Cyber Systems, CUI environments, or [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant systems may require additional escalation as defined in applicable regulatory deviation procedures.
 - Approved exceptions shall be entered into the risk register and tracked to expiration or remediation. Exceptions shall not be renewed without a new approval cycle.
 
 ### 7.2 Regulatory Deviations
@@ -355,7 +355,7 @@ Exceptions to this policy are recognized as operationally necessary in specific,
 For regulated environments, exceptions with regulatory implications shall follow the applicable deviation or mitigation plan process in addition to this exception process:
 
 - **NERC-CIP deviations:** Governance initiates the CIP deviation documentation process. Compensating measures are implemented immediately. Regulatory notification is completed per applicable CIP standard timelines.
-- **CMMC non-conformances:** Governance maintains the Plan of Action and Milestones (POA&M) in the System Security Plan (SSP). Open POA&M items are tracked to closure with leadership visibility.
+- **[CMMC](https://dodcio.defense.gov/CMMC/) non-conformances:** Governance maintains the Plan of Action and Milestones (POA&M) in the System Security Plan (SSP). Open POA&M items are tracked to closure with leadership visibility.
 
 ---
 
@@ -396,7 +396,7 @@ Proposed updates shall be reviewed by Cyber Engineering and Cyber Risk to ensure
 
 ## 10. Related Documents
 
-The authoritative inventory — IDs, owners, status, deferred / planned artifacts — is maintained in `CERG-GOV-CAT-001` Document Catalog and Naming Convention. The summary below reflects the V1 library.
+The authoritative inventory, IDs, owners, status, deferred / planned artifacts, is maintained in `CERG-GOV-CAT-001` Document Catalog and Naming Convention. The summary below reflects the V1 library.
 
 ### 10.1 Cross-Cutting Instruments
 

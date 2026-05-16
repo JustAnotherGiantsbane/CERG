@@ -1,7 +1,7 @@
 
-# SURGE — Cyber Engineering, Risk & Governance
+# SURGE: Cyber Engineering, Risk & Governance
 
-## SECURE CONFIGURATION BASELINE STANDARD — DISH
+## SECURE CONFIGURATION BASELINE STANDARD: DISH
 ### Defensive Infrastructure System Hardening · IT and OT Hardening Profile
 
 ---
@@ -11,13 +11,13 @@
 | **Document ID** | CERG-STD-CFG-001 |
 | **Version** | 1.0 |
 | **Status** | For Review |
-| **Classification** | Internal — Confidential |
+| **Classification** | Internal - Confidential |
 | **Owner** | Cyber Engineering Manager (Platforms) |
-| **Parent Policy** | CERG-POL-001 — Cybersecurity Policy |
+| **Parent Policy** | CERG-POL-001 - Cybersecurity Policy |
 | **Supporting Standards** | CERG-STD-IT-001 · CERG-STD-OT-001 · CERG-STD-CUI-001 · CERG-STD-AC-001 · CERG-STD-LM-001 · CERG-STD-CR-001 |
 | **Review Cycle** | Annual / Upon CIS Benchmark version change or new platform class |
-| **Frameworks** | CIS Benchmarks v8+ · CIS Controls v8 · NIST 800-53r5 (CM family) · NIST 800-82r3 (OT) · NIST 800-171r3 · IEC 62443-3-3 / 4-2 |
-| **Regulations** | NERC-CIP v7 CIP-007/CIP-010 · CMMC L2 (3.4.x) · SOX ITGC (Change/Operations) |
+| **Frameworks** | CIS Benchmarks v8+ · CIS Controls v8 · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (CM family) · [NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/final) (OT) · [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) · IEC 62443-3-3 / 4-2 |
+| **Regulations** | NERC-CIP v7 CIP-007/CIP-010 · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.4.x) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC (Change/Operations) |
 | **Environments** | Owned data center · IaaS / PaaS · SaaS (Tier 1) · OT (BES and non-BES) · Endpoint · Network · Cloud control plane · Container/K8s |
 
 ---
@@ -42,9 +42,9 @@
 
 ## 1. Purpose and Scope
 
-CERG-POL-001 requires approved baselines per asset class. The Operating Model names baselines, IaC, and policy-as-code as core Engineering activities. The IT, OT, and CUI standards each independently call for baselines. Until this standard, those requirements existed without a unified implementation set — which made hardening impossible to delegate or assess.
+CERG-POL-001 requires approved baselines per asset class. The Operating Model names baselines, IaC, and policy-as-code as core Engineering activities. The IT, OT, and CUI standards each independently call for baselines. Until this standard, those requirements existed without a unified implementation set, which made hardening impossible to delegate or assess.
 
-This standard establishes the **DISH** profile — Defensive Infrastructure System Hardening — applicable to every in-scope asset class, IT and OT, with a single hardening minimum, an elevated tier for High-Impact and BES systems, and explicit fallbacks where CIS does not apply.
+This standard establishes the **DISH** profile, Defensive Infrastructure System Hardening, applicable to every in-scope asset class, IT and OT, with a single hardening minimum, an elevated tier for High-Impact and BES systems, and explicit fallbacks where CIS does not apply.
 
 > **Hardening Is Not Optional**
 >
@@ -60,7 +60,7 @@ Applies to every in-scope asset class:
 - Container and Kubernetes (cluster + workload)
 - Tier 1 SaaS (M365, Salesforce, ServiceNow, etc.)
 - SCADA server, HMI, historian, RTU, relay, engineering workstation, OT jump server
-- Identity systems (IdP, IGA, PAM) — see also `CERG-STD-AC-001`
+- Identity systems (IdP, IGA, PAM), see also `CERG-STD-AC-001`
 
 ---
 
@@ -74,11 +74,11 @@ DISH is the CERG-native, IT-and-OT-spanning hardening scan profile. It is implem
 |---|---|
 | **CIS Benchmark Level 1** | Inescapable floor for every in-scope asset where a CIS Benchmark exists. |
 | **CIS Benchmark Level 2** | Required for High-Impact systems, BES Cyber Systems, CUI components. |
-| **NIST 800-82r3** | Authoritative for ICS/OT where CIS does not apply or contradicts safe OT operation. |
+| **[NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/final)** | Authoritative for ICS/OT where CIS does not apply or contradicts safe OT operation. |
 | **IEC 62443-3-3 (SR) and 62443-4-2 (CR)** | Authoritative for OT component-level requirements, including vendor-supplied systems. |
-| **NIST 800-171r3** | Authoritative for CUI-component-specific parameters. |
-| **NIST 800-53r5 CM family parameters** | Authoritative for any control where CERG-GOV-CB-001 names a parameter (timeouts, lockouts, retention). |
-| **CERG-specific overrides** | Documented in this standard. Overrides are an exception to CIS, not a relaxation — they are tighter than CIS, never looser. |
+| **[NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final)** | Authoritative for CUI-component-specific parameters. |
+| **[NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) CM family parameters** | Authoritative for any control where CERG-GOV-CB-001 names a parameter (timeouts, lockouts, retention). |
+| **CERG-specific overrides** | Documented in this standard. Overrides are an exception to CIS, not a relaxation - they are tighter than CIS, never looser. |
 
 > **Why a Named Profile**
 >
@@ -99,11 +99,11 @@ The DISH scan produces, per asset:
 
 | **Tier** | **DISH Profile** | **Applies To** |
 |---|---|---|
-| **Tier 0 — Standard** | CIS L1 (or NIST 800-82 / IEC 62443 fallback) | Every in-scope asset with no overlay. |
-| **Tier 1 — High-Impact** | CIS L2 (or NIST 800-82 / IEC 62443 strict) | Systems whose loss would materially impact operations or safety. |
-| **Tier 2 — BES** | CIS L2 (or NIST 800-82 / IEC 62443 strict) + CIP-007 R1–R5 + CIP-010 R1 parameters | Medium/High Impact BES Cyber Systems and their EACMS, PACS, and PCAs. |
-| **Tier 3 — CUI** | CIS L2 + 800-171r3 parameters + FIPS crypto profile (via `CERG-STD-CR-001`) | CUI in-scope assets. |
-| **Tier 4 — OT Safety** | NIST 800-82 / IEC 62443 strict + change-management lockdown | OT systems whose disruption can cause safety impact. |
+| **Tier 0 - Standard** | CIS L1 (or [NIST 800-82](https://csrc.nist.gov/pubs/sp/800/82/r3/final) / IEC 62443 fallback) | Every in-scope asset with no overlay. |
+| **Tier 1 - High-Impact** | CIS L2 (or [NIST 800-82](https://csrc.nist.gov/pubs/sp/800/82/r3/final) / IEC 62443 strict) | Systems whose loss would materially impact operations or safety. |
+| **Tier 2 - BES** | CIS L2 (or [NIST 800-82](https://csrc.nist.gov/pubs/sp/800/82/r3/final) / IEC 62443 strict) + CIP-007 R1–R5 + CIP-010 R1 parameters | Medium/High Impact BES Cyber Systems and their EACMS, PACS, and PCAs. |
+| **Tier 3 - CUI** | CIS L2 + 800-171r3 parameters + FIPS crypto profile (via `CERG-STD-CR-001`) | CUI in-scope assets. |
+| **Tier 4 - OT Safety** | [NIST 800-82](https://csrc.nist.gov/pubs/sp/800/82/r3/final) / IEC 62443 strict + change-management lockdown | OT systems whose disruption can cause safety impact. |
 
 Multiple tiers may apply (a BES Cyber System that processes CUI is Tier 2 + Tier 3); the tighter parameter wins per control.
 
@@ -115,28 +115,28 @@ The catalog below names each baseline, points at the authoritative source, and i
 
 | **Baseline** | **Authoritative Source** | **DISH Tier(s)** | **CERG Overrides?** |
 |---|---|---|---|
-| Windows Server 2019/2022 | CIS Microsoft Windows Server Benchmark | T0 / T1 / T3 | Yes — Section 5.1 |
-| Linux Server (Ubuntu LTS, RHEL 8/9) | CIS Distribution Benchmarks | T0 / T1 / T3 | Yes — Section 5.2 |
-| Windows 10/11 Workstation | CIS Windows 10/11 Benchmark | T0 | Yes — Section 5.3 |
-| macOS Endpoint | CIS macOS Benchmark | T0 | Limited — Section 5.3 |
-| Network Device — Switch/Router (Cisco IOS/NX-OS) | CIS Cisco Benchmark | T0 / T1 | Yes — Section 8.1 |
-| Firewall (Palo Alto, Fortinet, Cisco FTD) | CIS Vendor Benchmarks | T0 / T1 | Yes — Section 8.2 |
-| AWS Account / Landing Zone | CIS AWS Foundations Benchmark | T0 / T1 / T3 | Yes — Section 6.1 |
-| AWS Control Plane | CIS AWS Foundations + CERG | T0 / T1 / T3 | Yes — Section 6.1 |
-| Azure Subscription / Landing Zone | CIS Microsoft Azure Foundations Benchmark | T0 / T1 / T3 | Yes — Section 6.2 |
-| GCP Project / Landing Zone | CIS GCP Foundations Benchmark | T0 / T1 / T3 | Yes — Section 6.3 |
-| Kubernetes Cluster (CNCF) | CIS Kubernetes Benchmark | T0 / T1 / T3 | Yes — Section 7 |
-| Container Image | CIS Docker Benchmark + CERG | T0 / T1 / T3 | Yes — Section 7 |
-| M365 Tenant | CIS M365 Foundations Benchmark | T0 / T1 / T3 | Yes — Section 9.1 |
-| Salesforce Org | CIS or CERG-equivalent baseline | T0 / T1 | Yes — Section 9.2 |
-| ServiceNow Instance | CERG baseline (no CIS) | T0 / T1 | — Section 9.3 |
+| Windows Server 2019/2022 | CIS Microsoft Windows Server Benchmark | T0 / T1 / T3 | Yes - Section 5.1 |
+| Linux Server (Ubuntu LTS, RHEL 8/9) | CIS Distribution Benchmarks | T0 / T1 / T3 | Yes - Section 5.2 |
+| Windows 10/11 Workstation | CIS Windows 10/11 Benchmark | T0 | Yes - Section 5.3 |
+| macOS Endpoint | CIS macOS Benchmark | T0 | Limited - Section 5.3 |
+| Network Device - Switch/Router (Cisco IOS/NX-OS) | CIS Cisco Benchmark | T0 / T1 | Yes - Section 8.1 |
+| Firewall (Palo Alto, Fortinet, Cisco FTD) | CIS Vendor Benchmarks | T0 / T1 | Yes - Section 8.2 |
+| AWS Account / Landing Zone | CIS AWS Foundations Benchmark | T0 / T1 / T3 | Yes - Section 6.1 |
+| AWS Control Plane | CIS AWS Foundations + CERG | T0 / T1 / T3 | Yes - Section 6.1 |
+| Azure Subscription / Landing Zone | CIS Microsoft Azure Foundations Benchmark | T0 / T1 / T3 | Yes - Section 6.2 |
+| GCP Project / Landing Zone | CIS GCP Foundations Benchmark | T0 / T1 / T3 | Yes - Section 6.3 |
+| Kubernetes Cluster (CNCF) | CIS Kubernetes Benchmark | T0 / T1 / T3 | Yes - Section 7 |
+| Container Image | CIS Docker Benchmark + CERG | T0 / T1 / T3 | Yes - Section 7 |
+| M365 Tenant | CIS M365 Foundations Benchmark | T0 / T1 / T3 | Yes - Section 9.1 |
+| Salesforce Org | CIS or CERG-equivalent baseline | T0 / T1 | Yes - Section 9.2 |
+| ServiceNow Instance | CERG baseline (no CIS) | T0 / T1 | - Section 9.3 |
 | Other Tier 1 SaaS | CERG SaaS Baseline Pattern | T0 / T1 | Section 9 pattern |
-| SCADA Server | NIST 800-82r3 + IEC 62443-3-3 | T2 / T4 | Yes — Section 10.1 |
-| HMI | NIST 800-82r3 + IEC 62443-4-2 | T2 / T4 | Yes — Section 10.2 |
-| Historian | NIST 800-82r3 + CIS (where Win/Linux) | T2 / T4 | Yes — Section 10.3 |
-| RTU / Relay | NIST 800-82r3 + IEC 62443-4-2 + vendor hardening | T2 / T4 | Yes — Section 10.4 |
-| Engineering Workstation | CIS Windows + 800-82r3 add-ons | T2 / T4 | Yes — Section 10.5 |
-| OT Jump Server | CIS Windows L2 + CERG | T2 / T4 | Yes — Section 10.6 |
+| SCADA Server | [NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/final) + IEC 62443-3-3 | T2 / T4 | Yes - Section 10.1 |
+| HMI | [NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/final) + IEC 62443-4-2 | T2 / T4 | Yes - Section 10.2 |
+| Historian | [NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/final) + CIS (where Win/Linux) | T2 / T4 | Yes - Section 10.3 |
+| RTU / Relay | [NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/final) + IEC 62443-4-2 + vendor hardening | T2 / T4 | Yes - Section 10.4 |
+| Engineering Workstation | CIS Windows + 800-82r3 add-ons | T2 / T4 | Yes - Section 10.5 |
+| OT Jump Server | CIS Windows L2 + CERG | T2 / T4 | Yes - Section 10.6 |
 
 ---
 
@@ -149,7 +149,7 @@ The Windows Server baseline is CIS L1 (Tier 0) or L2 (Tier 1 / 3) with the follo
 - **Local administrator** disabled; named administrative accounts only, via PAM JIT per `CERG-STD-AC-001`.
 - **SMBv1 disabled** without exception (override is a hard fail; exceptions must be reviewed annually).
 - **LM/NTLMv1 disabled**; NTLMv2 only as transitional with documented sunset.
-- **Audit policy** matches the mandatory log source list in `CERG-STD-LM-001` — specifically Process Creation, Logon, Object Access (privileged file shares), and PowerShell ScriptBlock logging enabled and forwarded to SIEM.
+- **Audit policy** matches the mandatory log source list in `CERG-STD-LM-001`, specifically Process Creation, Logon, Object Access (privileged file shares), and PowerShell ScriptBlock logging enabled and forwarded to SIEM.
 - **PowerShell** Constrained Language Mode for non-admin sessions; signed script enforcement for admin sessions.
 - **Time** synchronized to authoritative time source; drift > 5 minutes is a finding.
 - **CMK / disk encryption** per `CERG-STD-CR-001` for any system holding Restricted or CUI.
@@ -188,9 +188,9 @@ CIS AWS Foundations Benchmark L1 (Tier 0) / L2 (Tier 1+) with CERG overrides:
 - **Org-level Service Control Policies (SCPs)** enforce: deny root access keys; deny region pinning except approved regions; deny disabling of CloudTrail / GuardDuty / Config / Security Hub; deny public S3 by default.
 - **CloudTrail** multi-region, organization trail, log-file integrity validation enabled, KMS-encrypted, immutable storage.
 - **GuardDuty / Security Hub / Config / Inspector** enabled in every account.
-- **IAM** — no root usage; IAM Identity Center as the only human-access path; permissions boundaries on workload roles; access keys disabled for human users.
-- **Networking** — no default VPC use in production; egress allowlist; VPC flow logs enabled and routed to SIEM.
-- **KMS** — CMK for any data classified Restricted or CUI; rotation per `CERG-STD-CR-001`.
+- **IAM**: no root usage; IAM Identity Center as the only human-access path; permissions boundaries on workload roles; access keys disabled for human users.
+- **Networking**: no default VPC use in production; egress allowlist; VPC flow logs enabled and routed to SIEM.
+- **KMS**: CMK for any data classified Restricted or CUI; rotation per `CERG-STD-CR-001`.
 
 ### 6.2 Azure
 
@@ -199,8 +199,8 @@ CIS Azure Foundations Benchmark L1 / L2 with CERG overrides:
 - **Management group hierarchy** enforces policy inheritance; Azure Policy initiatives are mandatory.
 - **Microsoft Defender for Cloud** enabled at Standard tier for in-scope subscriptions.
 - **Activity Logs / Diagnostic Settings** routed to immutable Log Analytics workspace and SIEM.
-- **Entra ID** — privileged access via PIM only; Conditional Access for all administrative roles; phishing-resistant MFA for all admins; legacy authentication blocked.
-- **Storage Accounts** — public access disabled by default; CMK for Restricted/CUI workloads.
+- **Entra ID**: privileged access via PIM only; Conditional Access for all administrative roles; phishing-resistant MFA for all admins; legacy authentication blocked.
+- **Storage Accounts**: public access disabled by default; CMK for Restricted/CUI workloads.
 
 ### 6.3 GCP
 
@@ -208,7 +208,7 @@ CIS GCP Foundations Benchmark L1 / L2 with CERG overrides:
 
 - **Organization Policies** enforce: domain-restricted sharing; uniform bucket-level access; require OS Login; disable service-account key creation by default.
 - **Security Command Center** Premium tier in-scope.
-- **Cloud Audit Logs** — admin activity + data access enabled and exported to immutable destination + SIEM.
+- **Cloud Audit Logs**: admin activity + data access enabled and exported to immutable destination + SIEM.
 - **CMEK** for Restricted/CUI workloads.
 
 ---
@@ -217,11 +217,11 @@ CIS GCP Foundations Benchmark L1 / L2 with CERG overrides:
 
 CIS Kubernetes Benchmark for control plane and worker node, plus CERG application-layer requirements:
 
-- **Pod Security Standards** — `restricted` for production namespaces.
-- **Network Policies** — default-deny ingress and egress; explicit allowlists per service.
+- **Pod Security Standards**: `restricted` for production namespaces.
+- **Network Policies**: default-deny ingress and egress; explicit allowlists per service.
 - **Admission controllers** enforce signed images (cosign / sigstore), no privileged pods, no host network/PID, no `:latest` tags.
-- **Image provenance** — images built only from approved base images; SBOM produced at build; scan results gate promotion.
-- **Secrets** — Kubernetes secrets disabled or encrypted via external secrets manager per `CERG-STD-CR-001`.
+- **Image provenance**: images built only from approved base images; SBOM produced at build; scan results gate promotion.
+- **Secrets**: Kubernetes secrets disabled or encrypted via external secrets manager per `CERG-STD-CR-001`.
 - **Cluster audit log** routed to SIEM.
 
 ---
@@ -232,7 +232,7 @@ CIS Kubernetes Benchmark for control plane and worker node, plus CERG applicatio
 
 CIS Cisco IOS/NX-OS L1 / L2 with CERG overrides:
 
-- **Management plane** — out-of-band management network; SSH only; TACACS+/RADIUS via central IdP; local accounts only as break-glass per `CERG-STD-AC-001`.
+- **Management plane**: out-of-band management network; SSH only; TACACS+/RADIUS via central IdP; local accounts only as break-glass per `CERG-STD-AC-001`.
 - **Control plane policing** enabled with documented thresholds.
 - **Logging** to syslog and SIEM; NTP authenticated.
 - **Unused services** disabled (CDP/LLDP scoped, HTTP server off, etc.).
@@ -243,7 +243,7 @@ CIS Cisco IOS/NX-OS L1 / L2 with CERG overrides:
 CIS vendor benchmark plus CERG overrides:
 
 - **Default deny** ingress and egress; explicit allowlists.
-- **Rule lifecycle** — every rule has owner, business justification, and review date; review cadence ≤ 12 months.
+- **Rule lifecycle**: every rule has owner, business justification, and review date; review cadence ≤ 12 months.
 - **TLS inspection** policy aligned with `CERG-STD-CR-001` and data classification.
 - **Log forwarding** to SIEM with session-level and threat-event-level detail.
 
@@ -256,7 +256,7 @@ CIS vendor benchmark plus CERG overrides:
 CIS M365 Foundations Benchmark L1 / L2 with CERG overrides:
 
 - **Phishing-resistant MFA** for all admin roles, enforced by Conditional Access.
-- **External sharing** — domain allowlist or full lockdown by default; SharePoint anonymous links disabled.
+- **External sharing**: domain allowlist or full lockdown by default; SharePoint anonymous links disabled.
 - **Defender for Office 365** Plan 2 features enabled (Safe Links, Safe Attachments, anti-phish).
 - **Audit log retention** ≥ 1 year (advanced audit license); routed to SIEM.
 - **CUI Enclave (if applicable)** uses GCC High or FedRAMP-equivalent tenant per `CERG-PLN-CUI-001`.
@@ -287,7 +287,7 @@ Where no published baseline exists, the CERG SaaS Baseline Pattern (Section 9 ge
 
 ## 10. OT Platform Baselines
 
-OT baselines lead with NIST 800-82r3 and IEC 62443; CIS is used where the underlying OS supports it (typically engineering workstations and historian servers).
+OT baselines lead with [NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/final) and IEC 62443; CIS is used where the underlying OS supports it (typically engineering workstations and historian servers).
 
 > **Active Scanning is Forbidden in OT Without Engineering Approval**
 >
@@ -305,14 +305,14 @@ OT baselines lead with NIST 800-82r3 and IEC 62443; CIS is used where the underl
 ### 10.2 HMI
 
 - Locked-down kiosk-style desktop; standard Windows hardening minus features that interfere with operator workflow (documented).
-- USB and removable media controlled — read-only or disabled outside maintenance windows.
+- USB and removable media controlled, read-only or disabled outside maintenance windows.
 - Screen-lock parameters appropriate to operator console operating context (per safety analysis).
 
 ### 10.3 Historian
 
 - Hardened to CIS L2 for Windows/Linux base.
 - Database engine hardening (SQL Server / time-series engine) per vendor + CERG.
-- Backups per `CERG-STD-RES-001` — including historian data sets.
+- Backups per `CERG-STD-RES-001`, including historian data sets.
 
 ### 10.4 RTU / Relay
 
@@ -347,7 +347,7 @@ OT baselines lead with NIST 800-82r3 and IEC 62443; CIS is used where the underl
 ### 11.2 Exceptions
 
 - Any deviation from a DISH-listed check requires an exception per `CERG-PRC-RM-001` Section 7 and `CERG-TMPL-RM-001` Section 5.
-- Exceptions cite the specific check (CIS L1 #X.Y / IEC 62443 SR X.Y / NIST 800-82r3 §X.Y) and the compensating control.
+- Exceptions cite the specific check (CIS L1 #X.Y / IEC 62443 SR X.Y / [NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/final) §X.Y) and the compensating control.
 - OT exceptions additionally require Engineering Manager sign-off and a safety review note.
 
 ---
@@ -356,15 +356,15 @@ OT baselines lead with NIST 800-82r3 and IEC 62443; CIS is used where the underl
 
 | **Regulation / Framework** | **Section(s)** | **Where in This Standard** |
 |---|---|---|
-| NIST 800-53r5 CM family | CM-2, CM-6, CM-7 | Sections 2 – 11 |
-| NIST 800-171r3 | 3.4.x | Tier 3 in Section 3, parameters in Sections 5, 6, 9 |
-| NIST 800-82r3 | All | Tier 4 in Section 3; Section 10 |
+| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) CM family | CM-2, CM-6, CM-7 | Sections 2 – 11 |
+| [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) | 3.4.x | Tier 3 in Section 3, parameters in Sections 5, 6, 9 |
+| [NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/final) | All | Tier 4 in Section 3; Section 10 |
 | IEC 62443-3-3 / 4-2 | SR / CR families | Section 10 |
 | CIS Controls v8 | Controls 4, 12 | Sections 5–9 |
 | NERC-CIP CIP-007 R1, R2, R5 | Ports, patching, accounts | Section 10 + `CERG-PLN-CIP-001` |
 | NERC-CIP CIP-010 R1 | Baseline configuration | All sections, especially Section 11 |
-| CMMC L2 (3.4.x) | Configuration management | Tier 3 in Section 3; Section 5–9 |
-| SOX ITGC | Change / Operations | Section 11 |
+| [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.4.x) | Configuration management | Tier 3 in Section 3; Section 5–9 |
+| [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC | Change / Operations | Section 11 |
 
 ---
 
@@ -375,6 +375,6 @@ OT baselines lead with NIST 800-82r3 and IEC 62443; CIS is used where the underl
 | **Document ID** | CERG-STD-CFG-001 |
 | **Version** | 1.0 |
 | **Approved By** | Cyber Engineering Manager (Platforms) · CISO endorsement |
-| **Next Review** | Annual / CIS Benchmark or NIST 800-82 revision |
-| **Change Log** | 1.0 — Initial publication. Establishes DISH profile, baseline catalog, and platform-specific baselines for IT, cloud, container, SaaS, and OT. |
+| **Next Review** | Annual / CIS Benchmark or [NIST 800-82](https://csrc.nist.gov/pubs/sp/800/82/r3/final) revision |
+| **Change Log** | 1.0 - Initial publication. Establishes DISH profile, baseline catalog, and platform-specific baselines for IT, cloud, container, SaaS, and OT. |
 

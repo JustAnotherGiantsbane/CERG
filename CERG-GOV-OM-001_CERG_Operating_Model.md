@@ -1,5 +1,5 @@
 
-# SURGE — Cyber Engineering, Risk & Governance
+# SURGE: Cyber Engineering, Risk & Governance
 
 ## CERG OPERATING MODEL
 ### Pillar Structure · Engagement Models · Staffing · Interaction Patterns
@@ -11,11 +11,11 @@
 | **Document ID** | CERG-GOV-OM-001 |
 | **Version** | 1.0 DRAFT |
 | **Status** | For Review |
-| **Classification** | Internal — Confidential |
+| **Classification** | Internal - Confidential |
 | **Owner** | Chief Information Security Officer |
-| **Parent Policy** | CERG-POL-001 — Cybersecurity Policy |
+| **Parent Policy** | CERG-POL-001 - Cybersecurity Policy |
 | **Review Cycle** | Annual / Upon Organizational Change |
-| **Frameworks** | NIST CSF 2.0 · NIST 800-53r5 · NIST RMF · ISO 27001 |
+| **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · NIST RMF · ISO 27001 |
 | **Audience** | All CERG personnel; business sponsors; IT and OT leadership; executive leadership |
 
 ---
@@ -46,7 +46,7 @@ This is not a policy. CERG-POL-001 is the policy. This document is the operating
 
 This document applies to:
 
-- The CERG function itself — Engineering, Risk, and Governance pillars under CISO authority
+- The CERG function itself, Engineering, Risk, and Governance pillars under CISO authority
 - The interfaces between CERG and adjacent security functions (Awareness, Incident Response), IT and OT delivery teams, business owners, and executive leadership
 - The engagement models by which CERG is consumed: project delivery, continuous service, advisory, and program oversight
 - The staffing roles within each pillar and the rules of engagement among them
@@ -61,19 +61,19 @@ This document is referenced by every CERG standard, procedure, and plan. Where a
 
 ### 2.1 Why CERG Exists
 
-The traditional separation of cybersecurity into siloed functions — operational security here, GRC over there, engineering security as a third team — produces a predictable failure pattern. Engineering is asked to deliver, then security reviews it after the fact and asks for changes that are now expensive. Risk identifies findings that have no clear path back into engineering planning. Governance writes policy that operators interpret variously, or not at all. Audits and incidents reveal the seams.
+The traditional separation of cybersecurity into siloed functions, operational security here, GRC over there, engineering security as a third team, produces a predictable failure pattern. Engineering is asked to deliver, then security reviews it after the fact and asks for changes that are now expensive. Risk identifies findings that have no clear path back into engineering planning. Governance writes policy that operators interpret variously, or not at all. Audits and incidents reveal the seams.
 
-CERG consolidates the three core security activities — building secure systems, managing exposure, and governing the program — into one function with one authority. The pillars are distinct in skill set and discipline, but they operate as one team with one CISO and one set of priorities.
+CERG consolidates the three core security activities, building secure systems, managing exposure, and governing the program, into one function with one authority. The pillars are distinct in skill set and discipline, but they operate as one team with one CISO and one set of priorities.
 
 ### 2.2 The Yes-And Default
 
 > **Governance Does Not Exist to Block the Business**
 >
-> CERG's default orientation is to enable the business with guardrails, not to close doors. When a risk cannot be eliminated, it is documented, owned, treated, and monitored — not refused on principle. Reflexive denial is not a risk management strategy. The hard work is making "yes" safe; "no" is the easy answer, and the wrong one.
+> CERG's default orientation is to enable the business with guardrails, not to close doors. When a risk cannot be eliminated, it is documented, owned, treated, and monitored, not refused on principle. Reflexive denial is not a risk management strategy. The hard work is making "yes" safe; "no" is the easy answer, and the wrong one.
 
 ### 2.3 Three Pillars, One Team
 
-CERG operates as one team. The pillars provide structure for skill development, work intake, and accountability — not boundaries to hide behind. Cross-pillar collaboration is the norm. Every Engineering review involves Risk perspective. Every Risk finding has a Governance disposition. Every Governance policy is validated for operational practicability by Engineering and Risk before publication.
+CERG operates as one team. The pillars provide structure for skill development, work intake, and accountability, not boundaries to hide behind. Cross-pillar collaboration is the norm. Every Engineering review involves Risk perspective. Every Risk finding has a Governance disposition. Every Governance policy is validated for operational practicability by Engineering and Risk before publication.
 
 ---
 
@@ -118,8 +118,8 @@ CERG operates as one team. The pillars provide structure for skill development, 
 
 **Core activities.**
 
-- Policy, standards, and procedures library — including CERG-POL-001 and all subordinate documents
-- Compliance program management: NERC-CIP, CMMC, SOX ITGC, and customer-contractual frameworks
+- Policy, standards, and procedures library, including CERG-POL-001 and all subordinate documents
+- Compliance program management: NERC-CIP, [CMMC](https://dodcio.defense.gov/CMMC/), [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC, and customer-contractual frameworks
 - Risk register operation per **CERG-PRC-RM-001**
 - Evidence library curation; production of audit and assessment evidence
 - Regulator and assessor liaison
@@ -154,8 +154,8 @@ The three pillars report to the CISO through pillar leaders (Manager / Director 
 |---|---|
 | Policy approval (CERG-POL-001 and subordinate standards) | CISO |
 | Standards / procedure approval | Pillar leader; CISO for material changes |
-| Risk acceptance — Low / Medium | Per CERG-PRC-RM-001 §8 |
-| Risk acceptance — High / Critical / Severe | CISO; Executive Sponsor / Board awareness for Critical+ |
+| Risk acceptance - Low / Medium | Per CERG-PRC-RM-001 §8 |
+| Risk acceptance - High / Critical / Severe | CISO; Executive Sponsor / Board awareness for Critical+ |
 | Exception approval | Per CERG-PRC-RM-001 §8 |
 | Incident classification & containment | Incident Commander (CISO or designee) |
 | External notification (regulator, public) | IC + CISO + Legal |
@@ -215,8 +215,8 @@ Advisory engagements are intentionally low-friction. They are tracked at the act
 Used for regulatory programs, audits, exam cycles, and board reporting.
 
 - NERC-CIP self-certification cycle and CIP-014 / CIP-013 program management
-- CMMC pre-assessment and assessment management
-- SOX ITGC evidence cycle (quarterly)
+- [CMMC](https://dodcio.defense.gov/CMMC/) pre-assessment and assessment management
+- [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC evidence cycle (quarterly)
 - Internal audit coordination
 - Customer / partner assessment response
 
@@ -230,7 +230,7 @@ CERG staffing is intentionally consistent across the pillars: a pillar leader, s
 
 The structure below is a pattern, not a fixed org chart. Smaller organizations consolidate roles; larger organizations expand them.
 
-### 6.1 Cyber Engineering — Typical Roles
+### 6.1 Cyber Engineering: Typical Roles
 
 | **Role** | **Focus** |
 |---|---|
@@ -243,7 +243,7 @@ The structure below is a pattern, not a fixed org chart. Smaller organizations c
 | Cryptography Engineer | Key management, CA, TLS posture, FIPS compliance. |
 | Pre-production Reviewer (often a rotated function) | Owns the pre-production checklist; signs off on go-live readiness. |
 
-### 6.2 Cyber Risk — Typical Roles
+### 6.2 Cyber Risk: Typical Roles
 
 | **Role** | **Focus** |
 |---|---|
@@ -256,14 +256,14 @@ The structure below is a pattern, not a fixed org chart. Smaller organizations c
 | OT Risk Analyst | OT-safe vulnerability assessment; ICS threat intelligence. |
 | Identity Risk Analyst | UEBA, identity-threat detection, OAuth / token risk. |
 
-### 6.3 Cyber Governance — Typical Roles
+### 6.3 Cyber Governance: Typical Roles
 
 | **Role** | **Focus** |
 |---|---|
 | Governance Pillar Leader | Pillar accountability; regulator and auditor liaison; CISO reporting. |
 | NERC-CIP Compliance Manager | OT/BES compliance posture (see CERG-STD-OT-001). |
-| CMMC / Federal Compliance Manager | CUI posture (see CERG-STD-CUI-001). |
-| SOX ITGC Lead | ITGC control evidence and audit coordination. |
+| [CMMC](https://dodcio.defense.gov/CMMC/) / Federal Compliance Manager | CUI posture (see CERG-STD-CUI-001). |
+| [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC Lead | ITGC control evidence and audit coordination. |
 | Policy & Standards Manager | Document library curation; review cycles. |
 | Risk Register Manager | Operates CERG-PRC-RM-001; curates the register. |
 | Evidence Librarian | Maintains the cross-framework evidence library. |
@@ -311,7 +311,7 @@ CERG operates inside a broader organizational ecosystem. The following interface
 | **Privacy / DPO** | Coordinates with Governance on Restricted-data handling and breach notification under GDPR / HIPAA / state laws. |
 | **Enterprise Risk Management** | Receives quarterly cyber risk feed; interface ensures cyber risks are visible in enterprise risk reporting. |
 | **Internal Communications / PR** | Engaged for material incident communications and major program announcements. |
-| **Procurement / Vendor Management** | Coordinates third-party assessments and DFARS / CMMC flow-down; Governance is the security signatory. |
+| **Procurement / Vendor Management** | Coordinates third-party assessments and DFARS / [CMMC](https://dodcio.defense.gov/CMMC/) flow-down; Governance is the security signatory. |
 | **Human Resources** | Coordinates joiner / mover / leaver, personnel risk assessments (NERC-CIP CIP-004), and disciplinary referrals for willful non-compliance. |
 | **IT Operations** | Executes Engineering-designed controls; jointly owns endpoint, server, network, and SaaS administration. |
 | **OT Operations** | Co-owns CIP-008 incident response, CIP-007 patching cycles, and ESP/EAP architecture. CERG defers to operations on grid-impact judgments. |
@@ -322,7 +322,7 @@ CERG operates inside a broader organizational ecosystem. The following interface
 
 ## 9. RACI Patterns
 
-The following patterns illustrate how the pillars typically distribute work. Specific RACI matrices are maintained per process. This is a sample — each standard and procedure cited in CERG-POL-001 §10 has its own.
+The following patterns illustrate how the pillars typically distribute work. Specific RACI matrices are maintained per process. This is a sample, each standard and procedure cited in CERG-POL-001 §10 has its own.
 
 ### 9.1 New Cloud Workload Goes Live
 
@@ -345,7 +345,7 @@ The following patterns illustrate how the pillars typically distribute work. Spe
 | Approve risk acceptance (if High) | I | C | C | C | **A** |
 | Record in risk register | I | C | **R / A** | I | I |
 
-### 9.3 CMMC Pre-Assessment Cycle
+### 9.3 [CMMC](https://dodcio.defense.gov/CMMC/) Pre-Assessment Cycle
 
 | **Activity** | **Engineering** | **Risk** | **Governance** | **Business Owner** | **CISO** |
 |---|---|---|---|---|---|
@@ -361,7 +361,7 @@ The following patterns illustrate how the pillars typically distribute work. Spe
 
 ### 10.1 The Adaptive Target
 
-CERG targets NIST Cybersecurity Framework **Tier 4 — Adaptive** posture for the organization. Adaptive does not mean "constantly changing." It means the organization understands its risk environment, continuously adjusts its program based on what it learns, integrates cybersecurity into enterprise risk and business decisions, and treats lessons learned as a first-class input to the program.
+CERG targets NIST Cybersecurity Framework **Tier 4, Adaptive** posture for the organization. Adaptive does not mean "constantly changing." It means the organization understands its risk environment, continuously adjusts its program based on what it learns, integrates cybersecurity into enterprise risk and business decisions, and treats lessons learned as a first-class input to the program.
 
 ### 10.2 Maturity Indicators
 
@@ -422,7 +422,7 @@ The authoritative inventory is `CERG-GOV-CAT-001`. The references below are the 
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | CERG-POL-001 | Parent policy — defines the CERG operating model at the principle level |
+| Cybersecurity Policy | CERG-POL-001 | Parent policy - defines the CERG operating model at the principle level |
 | Document Catalog and Naming Convention | CERG-GOV-CAT-001 | Authoritative inventory of every CERG artifact |
 | Unified Control Baseline | CERG-GOV-CB-001 | Control spine, overlays, evidence mapping |
 | Metrics, Dashboard, and CISO/Board Reporting | CERG-GOV-MTR-001 | KRIs, KPIs, CISO dashboard |
