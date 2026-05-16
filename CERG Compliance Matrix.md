@@ -1,0 +1,348 @@
+### Cyber Engineering, Risk & Governance — SURGE Framework
+
+> **How to read this matrix:** Each row represents a security _intent_ — the underlying goal that multiple frameworks are all trying to achieve. The regulatory and NIST columns show where each framework addresses that intent. Where multiple frameworks align to one row, a single control effort satisfies all of them. Items marked **⚠ Unique** have requirements that don't fully overlap with the other frameworks and warrant dedicated attention.
+
+---
+
+## 1. Know what you own — maintain an authoritative asset inventory
+
+**Primary Pillar:** Engineering **Regulations:** NERC-CIP · CMMC · · NIST
+
+|Framework|Requirement|
+|---|---|
+|NIST|CSF IDENTIFY · 800-53 CM-8 · 800-171 3.4.1 · RMF Step 1|
+|NERC-CIP|CIP-002 (BES asset categorization)|
+|CMMC|CM.2.061|
+
+**What "done" looks like:** Living asset register with classification, owner, and regulatory designation (BES/CUI). Engineering produces at project handoff; Risk validates via scan coverage.
+
+---
+
+## 2. Identify and remediate known vulnerabilities on a defined schedule
+
+**Primary Pillar:** Risk **Regulations:** NERC-CIP · CMMC · · SOX · NIST
+
+|Framework|Requirement|
+|---|---|
+|NIST|CSF IDENTIFY · 800-53 SI-2, RA-5 · 800-171 3.11.2 · RMF Step 6|
+|NERC-CIP|CIP-007-6 R2 (patch management), CIP-010 R3 (vuln assessment)|
+|CMMC|RM.2.141, SI.2.214|
+|SOX|ITGC patch/change risk|
+
+**What "done" looks like:** Continuous scan coverage across IT and OT; prioritized finding register with SLA tracking; deviation/exception process for OT-constrained systems.
+
+---
+
+## 3. Control who can access what — enforce least privilege
+
+**Primary Pillar:** Engineering **Regulations:** NERC-CIP · CMMC · · SOX · NIST
+
+|Framework|Requirement|
+|---|---|
+|NIST|CSF PROTECT · 800-53 AC-2, AC-6 · 800-171 3.1.1–3.1.3 · RMF Step 3|
+|NERC-CIP|CIP-004 R4 (access management), CIP-005 R2 (interactive remote access)|
+|CMMC|AC.1.001, AC.1.002, AC.2.006|
+|SOX|ITGC access control (segregation of duties)|
+
+**What "done" looks like:** Role-based access model implemented; privileged access managed separately; access reviews on defined cycle; MFA enforced for remote and privileged access.
+
+---
+
+## 4. Authenticate users and systems — verify identity before granting access
+
+**Primary Pillar:** Engineering **Regulations:** NERC-CIP · CMMC · · SOX · NIST
+
+|Framework|Requirement|
+|---|---|
+|NIST|CSF PROTECT · 800-53 IA-2, IA-5 · 800-171 3.5.1–3.5.3 · RMF Step 3|
+|NERC-CIP|CIP-005 R2 (EACMS authentication), CIP-007 R5 (account management)|
+|CMMC|IA.1.076, IA.3.083|
+|SOX|ITGC authentication controls|
+
+**What "done" looks like:** MFA deployed for all remote and privileged access; default/shared credentials eliminated; password policy enforced by technical control, not just policy.
+
+---
+
+## 5. Harden systems — remove what isn't needed, lock down what is
+
+**Primary Pillar:** Engineering **Regulations:** NERC-CIP · CMMC · · NIST
+
+|Framework|Requirement|
+|---|---|
+|NIST|CSF PROTECT · 800-53 CM-6, CM-7 · 800-171 3.4.6, 3.4.7 · RMF Step 3|
+|NERC-CIP|CIP-007 R1 (ports and services), CIP-010 R1 (config baseline)|
+|CMMC|CM.2.061, CM.2.064|
+
+**What "done" looks like:** Secure configuration baselines (CIS benchmarks or equivalent) documented and enforced for each platform class; deviation from baseline requires documented exception.
+
+---
+
+## 6. Protect data in transit and at rest — encryption as a baseline control
+
+**Primary Pillar:** Engineering **Regulations:** NERC-CIP · CMMC · · NIST
+
+|Framework|Requirement|
+|---|---|
+|NIST|CSF PROTECT · 800-53 SC-8, SC-28 · 800-171 3.13.8, 3.13.10 · RMF Step 3|
+|NERC-CIP|CIP-011 (BES Cyber System Information protection)|
+|CMMC|SC.3.177, SC.3.187|
+
+**What "done" looks like:** Encryption standards defined and applied to all CUI/BCSI environments; key management process documented; TLS enforced on all external-facing interfaces.
+
+---
+
+## 7. Segment networks — limit lateral movement and blast radius
+
+**Primary Pillar:** Engineering **Regulations:** NERC-CIP · CMMC · · NIST
+
+|Framework|Requirement|
+|---|---|
+|NIST|CSF PROTECT · 800-53 SC-7 · 800-171 3.13.1 · RMF Step 3|
+|NERC-CIP|CIP-005 (Electronic Security Perimeters and EAPs)|
+|CMMC|SC.1.175|
+
+**What "done" looks like:** Documented network zones with access control lists; OT/ICS and CUI environments isolated; ESP/EAP documented for all BES Cyber Systems.
+
+---
+
+## 8. Manage vendor and third-party risk — extend controls beyond the perimeter
+
+**Primary Pillar:** Risk **Regulations:** NERC-CIP · CMMC · · NIST
+
+|Framework|Requirement|
+|---|---|
+|NIST|CSF GOVERN · 800-53 SA-9, SR-3 · 800-171 3.1.20 · RMF Step 2|
+|NERC-CIP|CIP-013 (supply chain risk management)|
+|CMMC|SR.3.169|
+|SOX|ITGC third-party SOC 2 review|
+
+**What "done" looks like:** Vendor risk assessment program with tiered review depth; contract security requirements (right-to-audit, incident notification, data handling); supply chain risk management plan.
+
+---
+
+## 9. Control and log privileged/remote access — know who did what, when
+
+**Primary Pillar:** Engineering **Regulations:** NERC-CIP · CMMC · · SOX · NIST
+
+|Framework|Requirement|
+|---|---|
+|NIST|CSF PROTECT · 800-53 AU-2, AU-12, AC-17 · 800-171 3.3.1 · RMF Step 3|
+|NERC-CIP|CIP-005 R2 (interactive remote access), CIP-007 R4 (security event logging)|
+|CMMC|AU.2.041, AU.2.042|
+|SOX|ITGC access logging and review|
+
+**What "done" looks like:** All privileged and remote sessions logged; session recordings for high-risk access; log retention per regulatory requirement; log review process defined and tracked.
+
+---
+
+## 10. Conduct adversarial testing — find what scanners miss
+
+**Primary Pillar:** Risk **Regulations:** CMMC · · NIST **⚠ Unique:** No direct NERC-CIP analog
+
+|Framework|Requirement|
+|---|---|
+|NIST|CSF IDENTIFY · 800-53 CA-8 · 800-171 3.11.1 · RMF Step 4|
+|CMMC|CA.2.157 (pen test as part of assessment)|
+
+**What "done" looks like:** Annual minimum pen test schedule; scope includes internal, external, and (where applicable) OT/ICS targets; findings tracked to closure with Engineering review of architectural impacts.
+
+---
+
+## 11. Train and background-check personnel with access to sensitive systems
+
+**Primary Pillar:** Governance **Regulations:** NERC-CIP · CMMC · · NIST
+
+|Framework|Requirement|
+|---|---|
+|NIST|CSF GOVERN · 800-53 PS-2, AT-2 · 800-171 3.9.1 · RMF Step 1|
+|NERC-CIP|CIP-004 (personnel training and risk assessment)|
+|CMMC|PS.2.127, AT.2.056|
+
+**What "done" looks like:** Role-based training program with completion tracking; background check process for privileged users; CIP-004 training records maintained per regulatory retention requirement.
+
+---
+
+## 12. Write and maintain policies — define what good looks like
+
+**Primary Pillar:** Governance **Regulations:** NERC-CIP · CMMC · · SOX · NIST
+
+|Framework|Requirement|
+|---|---|
+|NIST|CSF GOVERN · 800-53 PL-1, PM-1 · 800-171 3.12.4 · RMF Step 1|
+|NERC-CIP|CIP-003 (security management controls, senior manager approval)|
+|CMMC|All 14 domains require policy documentation|
+|SOX|ITGC policy requirements|
+
+**What "done" looks like:** Policy library version-controlled and reviewed on defined cycle; each policy mapped to regulatory citation; senior leader approval documented; implementation guidance published for each policy.
+
+---
+
+## 13. Manage configuration changes — track drift, prevent unauthorized changes
+
+**Primary Pillar:** Engineering **Regulations:** NERC-CIP · CMMC · · SOX · NIST
+
+|Framework|Requirement|
+|---|---|
+|NIST|CSF PROTECT · 800-53 CM-3, CM-5 · 800-171 3.4.3 · RMF Step 3|
+|NERC-CIP|CIP-010 R1 (configuration change management)|
+|CMMC|CM.2.062|
+|SOX|ITGC change management (key SOX ITGC control)|
+
+**What "done" looks like:** All changes to in-scope systems go through documented change process; baseline comparison before/after; unauthorized change detection via config monitoring; SOX change tickets retained as audit evidence.
+
+---
+
+## 14. Collect, protect, and retain audit evidence — prove controls are working
+
+**Primary Pillar:** Governance **Regulations:** NERC-CIP · CMMC · · SOX · NIST
+
+|Framework|Requirement|
+|---|---|
+|NIST|CSF GOVERN · 800-53 AU-9, AU-11 · 800-171 3.3.2 · RMF Step 6|
+|NERC-CIP|CIP-007 R4 (log retention), all CIP standards require evidence retention|
+|CMMC|AU.2.042, all domain documentation|
+|SOX|Audit trail retention for ITGC and financial system access|
+
+**What "done" looks like:** Evidence library organized by control and regulatory citation; retention periods enforced per framework (NERC-CIP: per standard, CMMC: available for assessment, SOX: per audit retention requirements); pre-audit evidence review process.
+
+---
+
+## 15. Assess your own security posture — periodic internal evaluation
+
+**Primary Pillar:** Risk **Regulations:** NERC-CIP · CMMC · · SOX · NIST
+
+|Framework|Requirement|
+|---|---|
+|NIST|CSF IDENTIFY · 800-53 CA-2 · 800-171 3.12.1 · RMF Step 4|
+|NERC-CIP|CIP-010 R3 (annual vuln assessment)|
+|CMMC|CA.2.157 (assessment of security requirements)|
+|SOX|ITGC control self-assessment|
+
+**What "done" looks like:** Annual security assessment cycle with documented scope, findings, and remediation plan; self-assessment results feed risk register and POA&M; Governance tracks findings to closure.
+
+---
+
+## 16. Manage risk formally — document, accept, or treat identified risks
+
+**Primary Pillar:** Governance **Regulations:** NERC-CIP · CMMC · · SOX · NIST
+
+|Framework|Requirement|
+|---|---|
+|NIST|CSF GOVERN · 800-53 RA-3, PM-9 · 800-171 3.11.1 · RMF Step 4–5|
+|NERC-CIP|CIP-003 (risk management), deviation/mitigation plan process|
+|CMMC|RM.2.141, RM.3.144 (POA&M management)|
+|SOX|Enterprise risk management (ERM) interface|
+
+**What "done" looks like:** Risk register maintained with owner, severity, treatment status, and target closure date; POA&M current and leadership-reviewed quarterly; risk acceptance documented with CISO or VP sign-off per policy.
+
+---
+
+## 17. Protect physical access to critical systems — cyber starts at the door
+
+**Primary Pillar:** Governance **Regulations:** NERC-CIP · · NIST **⚠ Unique:** NERC-CIP most prescriptive — CIP-006/CIP-014 unique to BES environments
+
+|Framework|Requirement|
+|---|---|
+|NIST|CSF PROTECT · 800-53 PE-2, PE-3 · RMF Step 3|
+|NERC-CIP|CIP-006 (physical security of BES Cyber Systems), CIP-014 (transmission physical security)|
+
+**What "done" looks like:** Physical access controls documented for all in-scope locations; access lists maintained and reviewed; visitor logs retained; NERC-CIP deviation process invoked when physical security controls are temporarily impaired.
+
+---
+
+## 18. Monitor threats continuously — detect what vulnerability scans miss
+
+**Primary Pillar:** Risk **Regulations:** NERC-CIP · CMMC · · NIST
+
+|Framework|Requirement|
+|---|---|
+|NIST|CSF DETECT · 800-53 SI-4, IR-4 · 800-171 3.14.6 · RMF Step 6|
+|NERC-CIP|CIP-007 R4 (security event monitoring)|
+|CMMC|SI.2.216, IR.2.092|
+
+**What "done" looks like:** SIEM or equivalent collecting logs from in-scope systems; defined alert thresholds; analyst review cadence; threat intelligence feeds integrated; OT monitoring via passive methods where active scanning would introduce operational risk.
+
+---
+
+## 19. Plan and practice incident response — know what to do before it happens
+
+**Primary Pillar:** Governance **Regulations:** NERC-CIP · CMMC · · NIST
+
+|Framework|Requirement|
+|---|---|
+|NIST|CSF RESPOND · 800-53 IR-2, IR-4, IR-8 · 800-171 3.6.1–3.6.3 · RMF Step 6|
+|NERC-CIP|CIP-008 (incident reporting and response planning)|
+|CMMC|IR.2.092, IR.2.093|
+
+**What "done" looks like:** Documented IR plan with roles, escalation paths, and regulatory notification requirements; tabletop exercise at least annually; CIP-008 reporting timelines documented and practiced; lessons learned feed risk register.
+
+---
+
+## 20. Manage recovery — restore operations and capture lessons learned
+
+**Primary Pillar:** Governance **Regulations:** NERC-CIP · CMMC · · NIST **⚠ Unique:** CIP-009 unique to BES — highly prescriptive on testing cadence
+
+|Framework|Requirement|
+|---|---|
+|NIST|CSF RECOVER · 800-53 CP-2, CP-9 · 800-171 3.6.2 · RMF Step 6|
+|NERC-CIP|CIP-009 (recovery plans for BES Cyber Systems)|
+|CMMC|RE.2.137|
+
+**What "done" looks like:** Recovery plans documented, tested, and updated annually; backup and restoration tested; post-incident review drives updates to Engineering architecture, Risk assessments, and Governance playbooks.
+
+---
+
+## 21. Manage accounts throughout their lifecycle — provisioning through termination
+
+**Primary Pillar:** Engineering **Regulations:** NERC-CIP · CMMC · · SOX · NIST
+
+|Framework|Requirement|
+|---|---|
+|NIST|CSF PROTECT · 800-53 AC-2 · 800-171 3.1.1 · RMF Step 3|
+|NERC-CIP|CIP-004 R4 (access management), CIP-007 R5 (account management)|
+|CMMC|AC.2.005, AC.2.006|
+|SOX|ITGC joiner/mover/leaver process|
+
+**What "done" looks like:** Automated provisioning/deprovisioning tied to HR system; access reviews on defined cycle; privileged account inventory; shared/service account governance documented.
+
+---
+
+## 22. Define and enforce a compliance calendar — no surprises at audit time
+
+**Primary Pillar:** Governance **Regulations:** NERC-CIP · CMMC · · SOX · NIST **⚠ Unique:** Governance operational discipline — no direct technical control analog
+
+|Framework|Requirement|
+|---|---|
+|NIST|CSF GOVERN · 800-53 PM-14 · RMF Step 6|
+|NERC-CIP|All CIP standards have annual and periodic review requirements|
+|CMMC|Annual self-assessment or C3PAO assessment cycle|
+|SOX|Annual ITGC audit cycle|
+
+**What "done" looks like:** Master compliance calendar covering all frameworks; activities assigned to owners in CERG; upcoming deadlines visible to CISO; evidence collection treated as ongoing, not pre-audit scramble.
+
+---
+
+## Quick Reference — Pillar Summary
+
+|Pillar|Control Areas Owned|Key Frameworks Satisfied|
+|---|---|---|
+|**Engineering**|Asset inventory · Least privilege · Authentication · System hardening · Encryption · Network segmentation · Logging · Config change management · Account lifecycle|NERC-CIP CIP-005/007/010/011 · CMMC AC/IA/SC/CM domains · SOX ITGC|
+|**Risk**|Vulnerability management · Vendor risk · Adversarial testing · Self-assessment · Threat monitoring|NERC-CIP CIP-007/010/013 · CMMC RM/CA/SI domains · SOX third-party|
+|**Governance**|Policy & standards · Personnel training · Evidence management · Risk register · Physical security · IR planning · Recovery · Compliance calendar|NERC-CIP CIP-003/004/006/008/009/014 · CMMC all documentation · SOX ITGC · CMMC SSP/POA&M|
+
+---
+
+## Key Consolidation Opportunities
+
+These control areas produce evidence satisfying four or more frameworks simultaneously. One team effort, multiple checkboxes.
+
+1. **Asset inventory** — CIP-002 + CMMC CM + NIST CM-8
+2. **Access management** — CIP-004/005/007 + CMMC AC + SOX ITGC
+3. **Configuration change management** — CIP-010 + CMMC CM + SOX ITGC
+4. **Audit evidence and log retention** — all CIP standards + CMMC AU + SOX
+5. **Vulnerability management** — CIP-007/010 + CMMC RM/SI + SOX patch risk
+6. **Policy and standards** — CIP-003 + CMMC (all 14 domains) + SOX ITGC
+
+---
+
+_CERG Framework — SURGE | Draft v1.1 | Cyber Engineering, Risk & Governance_ _For internal use. Calibrated for NERC-CIP, CMMC Level 2, SOX ITGC, NIST CSF 2.0, 800-53 Rev 5, 800-171 Rev 2, and NIST RMF._

@@ -1,0 +1,17 @@
+# Obsidian workspace metadata
+.obsidian/
+.trash/
+
+# Static site / build artifacts (kept local; not tracked)
+website/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# Python caches (in case any scripts run from this dir)
+__pycache__/
+*.pyc
