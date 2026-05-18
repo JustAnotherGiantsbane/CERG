@@ -4,6 +4,13 @@
 
 ---
 
+| **Version**        | 1.21      |
+| ------------------ | --------- |
+| **Status**         | Published |
+| **Classification** | Public    |
+
+---
+
 ## 1. Know what you own: maintain an authoritative asset inventory
 
 **Primary Pillar:** Engineering **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · · NIST
@@ -344,5 +351,3 @@ These control areas produce evidence satisfying four or more frameworks simultan
 6. **Policy and standards**, CIP-003 + [CMMC](https://dodcio.defense.gov/CMMC/) (all 14 domains) + [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC
 
 ---
-
-_CERG Framework - SURGE | Draft v1.1 | Cyber Engineering, Risk & Governance_ _For internal use. Calibrated for NERC-CIP, [CMMC](https://dodcio.defense.gov/CMMC/) Level 2, [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC, [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final), 800-53 Rev 5, 800-171 Rev 2, and NIST RMF._
