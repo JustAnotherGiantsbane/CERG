@@ -9,9 +9,9 @@
 | | |
 |---|---|
 | **Document ID** | CERG-STD-CUI-001 |
-| **Version** | 1.0 DRAFT |
-| **Status** | For Review |
-| **Classification** | Internal - Confidential |
+| **Version** | 1.21 |
+| **Status** | Published |
+| **Classification** | Public |
 | **Owner** | Cyber Governance Manager ([CMMC](https://dodcio.defense.gov/CMMC/) / Federal Compliance) |
 | **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / Upon Significant Change / [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) Revision |
@@ -351,7 +351,7 @@ CUI control deficiencies do not follow the ordinary exception process. Open defi
 
 ### Revision History
 
-| **Version** | **Date** | **Author** | **Change Summary** |
+| **Version** | 1.21 | **Author** | **Change Summary** |
 |---|---|---|---|
 | 1.0 DRAFT | 2026 | CERG Governance | Initial release - [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final), DFARS 252.204-7012, [CMMC](https://dodcio.defense.gov/CMMC/) Level 2 |
 
