@@ -1,6 +1,6 @@
 # SURGE: Cyber Engineering, Risk & Governance
 ## CERG Risk Management Framework
-**Document ID:** CERG-RMF-001 · **Version:** 1.0 · **Classification:** Internal / Restricted
+**Document ID:** CERG-RMF-001 · **Version:** 1.21 · **Classification:** Public
 
 > *A NIST-grounded, operationally adaptive risk management framework designed for IT and OT environments across CMMC, NERC-CIP, and SOX.*
 
@@ -342,7 +342,7 @@ The FAIR Threat Community is the actor or natural force that initiates a loss ev
 | **Compensating Controls** | Controls in place that reduce exposure while the primary risk remains open. |
 | **Target Remediation Date** | Committed date for risk closure or next status review. |
 | **Approval** | Authority approving the treatment decision; date; reference to the canonical authority table at §9.7. |
-| **Status** | Published |
+| **Status** | Approved |
 | **Regulatory Implication** | Whether the risk has regulatory reporting, deviation, or mitigation plan implications (NERC-CIP, CMMC, SOX). |
 
 ### 9.5 Likelihood, Impact, and Severity Bands
@@ -512,10 +512,10 @@ The CERG-RMF satisfies the risk management requirements of all applicable framew
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-RMF-001 |
-| **Version** | 1.21 |
-| **Status** | Published |
+| **Version** | 1.0 |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-01 |
-| **Classification** | Public |
+| **Classification** | Internal / Restricted |
 | **Document Owner** | Cyber Governance (CERG Pillar) |
 | **Approved By** | Chief Information Security Officer |
 | **Review Cycle** | Annual; triggered by significant regulatory change or organizational change |
