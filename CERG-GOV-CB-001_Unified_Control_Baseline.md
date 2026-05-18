@@ -203,4 +203,209 @@ Overlays add to the organizational baseline. They never silently relax it.
 | **High-Impact** | Systems whose loss would materially impact the business or safety | Tighter remediation SLAs, CIS L2 baseline, expanded monitoring, MFA for all non-human identities. | STD-CFG-001 + STD-LM-001 |
 | **CUI** | Any system that stores/processes/transmits CUI | [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) controls; SSP + POA&M + SPRS; FIPS-validated cryptography; DFARS flow-down; [CMMC L2](https://dodcio.defense.gov/CMMC/) assessment readiness. | STD-CUI-001 + PLN-CUI-001 |
 | **BES** | Medium/High Impact BES Cyber Systems | NERC-CIP v7 controls including CIP-007, CIP-010, CIP-013; ESP/EAP topology; 90-day searchable / 12-month total log retention; annual recovery exercise; CIP-015 INSM where applicable. | STD-OT-001 + PLN-CIP-001 |
-| **[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC** | Systems supporting financial reporting | Access, change, operations, backup, interface, and report ITGC controls; quarterly SoD review; SOC 1 reuse for hosted financi
+| **SOX ITGC** | Systems supporting financial reporting | Access, change, operations, backup, interface, and report ITGC controls; quarterly SoD review; SOC 1 reuse for hosted financial systems. | STD-IT-001 + PLN-SOX-001 |
+| **OT Safety** | OT systems whose disruption can cause safety impact | Stricter change/maintenance windows, no active scanning, mandatory engineering review for any policy/standard parameter relaxation. | STD-OT-001 |
+
+> **Multiple Overlays at Once**
+>
+> A given system may sit under more than one overlay (a BES system that also processes CUI; a financial system in a CUI enclave). When overlays overlap, the most stringent parameter wins for each individual control. Overlays do not "average."
+
+---
+
+## 8. Control-to-Evidence Mapping
+
+Every control entry in §6 names an evidence artifact in its `Evidence` column. This section consolidates those artifacts into a single mapping with the repository where the evidence lives, the refresh cadence, and the owning pillar. It is the lookup an auditor opens first.
+
+The discipline rule is unchanged from §2: a control without a named evidence artifact does not enter the baseline; an evidence artifact without a named repository does not satisfy the control. "It's in someone's email" is not an evidence repository.
+
+### 8.1 Evidence Catalog
+
+| **Control** | **Evidence Artifact** | **Repository / Tool** | **Refresh Cadence** | **Owner** |
+|---|---|---|---|---|
+| AC-2 Account Management | JML log, quarterly recertification report | IGA / IdP audit log + Governance access-review portal | Continuous (JML); Quarterly (recert) | Engineering (Identity) |
+| AC-3 Access Enforcement | IdP / PAM policy export | IdP + PAM admin export | Annual | Engineering (Identity) |
+| AC-6 Least Privilege | PAM session logs; role inventory | PAM platform; IGA role catalog | Continuous (sessions); Quarterly (role inventory) | Engineering (Identity) |
+| AC-7 Unsuccessful Logon Attempts | IdP policy export; identity-attack detection rule | IdP admin export; SIEM detection inventory | Annual | Engineering (Identity) |
+| AC-17 Remote Access | Gateway logs; MFA policy export | Remote-access gateway logs in SIEM; IdP policy export | Continuous (logs); Annual (policy) | Engineering (Network + Identity) |
+| AC-19 Mobile / BYOD | MDM compliance report | MDM admin console export | Quarterly | Engineering (Endpoint) |
+| AU-2 Event Logging | SIEM source inventory; coverage gap report | SIEM / detection-eng inventory | Monthly | Risk (Detection) |
+| AU-6 Audit Review | Detection coverage report; triage queue metrics | MTR-001 DT-001 dashboard; SOC ticketing | Continuous | Risk (Detection) |
+| AU-9 Protection of Audit Information | Storage policy; admin-action review | SIEM admin audit log; storage configuration export | Quarterly | Risk (Detection) |
+| AU-11 Audit Record Retention | Retention policy; sample retrieval evidence | Storage configuration export; quarterly sample-retrieval ticket | Annual | Risk (Detection) |
+| CM-2 Baseline Configuration | DISH baseline catalog; DISH scan report | CERG-STD-CFG-001 baseline catalog; DISH scan results in CMDB | Continuous (scan); Annual (baseline review) | Engineering (Platforms) |
+| CM-3 Change Control | CAB minutes; change records | Change-management system export | Continuous | Engineering |
+| CM-6 Configuration Settings | Drift report; exception register | DISH drift detection; CERG-TMPL-RM-001 exception register | Continuous | Engineering (Platforms) |
+| CM-7 Least Functionality | Application allowlist; port-scan report | EDR / allowlist platform; vuln scanner port view | Quarterly | Engineering |
+| CM-8 System Component Inventory | Asset inventory export; reconciliation log | CMDB / authoritative inventory; reconciliation tickets | Monthly | Engineering / Risk |
+| CP-2 Contingency Plan | Plan document; BCP interface record | CERG-STD-RES-001 plan template; enterprise BCP register | Annual | Engineering (Resilience) |
+| CP-4 Contingency Plan Testing | Test report; lessons learned; register entry | Recovery-test ticket; CERG-PRC-RM-001 register | Annual; BES per CIP-009 R2.1 (15 months) | Engineering (Resilience) |
+| CP-9 System Backup | Backup report; immutability evidence | Backup platform admin export | Continuous (operations); Quarterly (immutability spot-check) | Engineering (Resilience) |
+| CP-10 Information System Recovery | Restoration test evidence | Recovery-test ticket package | Annual | Engineering (Resilience) |
+| IA-2 Identification and Authentication | IdP policy; exception register | IdP admin export; CERG-PRC-RM-001 exception register | Quarterly | Engineering (Identity) |
+| IA-3 Device Identification and Authentication | NAC / conditional-access policy | NAC admin export; IdP conditional-access export | Annual | Engineering (Identity) |
+| IA-5 Authenticator Management | Secrets manager export; cert inventory | KMS / secrets manager; certificate inventory | Continuous | Engineering (Cryptography) |
+| RA-3 Risk Assessment | Risk register | CERG-PRC-RM-001 risk register (per CERG-TMPL-RM-001 schema) | Continuous | Risk / Governance |
+| RA-5 Vulnerability Monitoring and Scanning | Scan reports; SLA dashboard | Vulnerability scanner; MTR-001 VM-001 / VM-002 dashboard | Continuous | Risk (Vulnerability Management) |
+| SI-2 Flaw Remediation | SLA report; exception register | MTR-001 dashboard; CERG-PRC-RM-001 exception register | Continuous | Risk / Engineering |
+| SI-4 System Monitoring | Coverage report | MTR-001 DT-001 ATT&CK coverage report | Continuous | Risk (Detection) |
+| SR-2 Supply Chain Risk Management Plan | TPRM register; SCCT roster | CERG-PRC-TPRM-001 register; SCCT membership roster | Continuous | Risk (TPRM) |
+| SR-3 Supply Chain Controls and Processes | Country-risk register; exception register | CERG-PRC-TPRM-001 §10 register; CERG-PRC-RM-001 exception register | Quarterly | Risk (TPRM) |
+
+### 8.2 Evidence Discipline
+
+Three rules apply to every entry above:
+
+1. **Currency.** Evidence captured in the prior refresh cycle is current. Evidence older than two refresh cycles is stale; staleness is a finding in its own right and routes to the owning pillar for action.
+2. **Attribution.** Every evidence artifact carries the named owning role from the canonical roster in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1. "Owned by the team" is not attribution.
+3. **Retrievability.** Evidence shall be retrievable within five business days of an auditor request. Anything that takes longer is a process finding regardless of whether the underlying control is operating.
+
+> **Inheritance Evidence**
+>
+> Controls marked `Inherited` in §6 use the Inheritance Evidence Package defined in §5 rather than the artifacts above. The Inheritance Evidence Package replaces - it does not supplement - the customer-side evidence artifact for the inherited portion of the control.
+
+---
+
+## 9. Regulatory Crosswalks
+
+This section translates each baseline control into the regulator-facing identifier or expectation. It is the read-once map for cross-framework audits: NERC-CIP auditors, CMMC C3PAOs, and SOX external auditors each look at the same controls under different names.
+
+The [`CERG-GOV-CMX-001`](CERG%20Compliance%20Matrix.md) Compliance Matrix is the broader cross-regulator map (intent-level); the table below is the implementation-level crosswalk, control-by-control. Where the two disagree, the Compliance Matrix governs intent and this baseline governs implementation.
+
+### 9.1 NIST 800-53 → 800-171 r3 / NERC-CIP / CMMC L2 / SOX ITGC
+
+| **Baseline Control** | **NIST 800-171 r3** | **NERC-CIP** | **CMMC L2** | **SOX ITGC** |
+|---|---|---|---|---|
+| AC-2 Account Management | 03.01.01, 03.01.02 | CIP-004 R4, CIP-007 R5 | AC.L1-3.1.1, AC.L2-3.1.5 | Access |
+| AC-3 Access Enforcement | 03.01.01, 03.01.05 | CIP-005 R1, CIP-007 R5 | AC.L1-3.1.1 | Access |
+| AC-6 Least Privilege | 03.01.05, 03.01.06 | CIP-004 R4, CIP-007 R5 | AC.L2-3.1.5 | Access |
+| AC-7 Unsuccessful Logon Attempts | 03.01.08 | CIP-007 R5.7 | AC.L2-3.1.8 | n/a |
+| AC-17 Remote Access | 03.01.12, 03.13.07 | CIP-005 R2 | AC.L2-3.1.12 | Access |
+| AC-19 Mobile / BYOD | 03.01.18, 03.01.19 | n/a | AC.L2-3.1.18 | n/a |
+| AU-2 Event Logging | 03.03.01, 03.03.02 | CIP-007 R4 | AU.L2-3.3.1, AU.L2-3.3.2 | Operations |
+| AU-6 Audit Review | 03.03.03 | CIP-007 R4 | AU.L2-3.3.5 | Operations |
+| AU-9 Protection of Audit Information | 03.03.05, 03.03.06 | CIP-007 R4 | AU.L2-3.3.8, AU.L2-3.3.9 | Operations |
+| AU-11 Audit Record Retention | 03.03.04 | CIP-007 R4.3 | AU.L2-3.3.4 | Operations |
+| CM-2 Baseline Configuration | 03.04.01, 03.04.02 | CIP-010 R1 | CM.L2-3.4.1, CM.L2-3.4.2 | Change |
+| CM-3 Change Control | 03.04.03 | CIP-010 R1, R2 | CM.L2-3.4.3 | Change |
+| CM-6 Configuration Settings | 03.04.06 | CIP-010 R1 | CM.L2-3.4.6 | Change |
+| CM-7 Least Functionality | 03.04.06, 03.04.07 | CIP-007 R1 | CM.L2-3.4.7 | n/a |
+| CM-8 System Component Inventory | 03.04.10 | CIP-002, CIP-010 R1 | CM.L2-3.4.10 | Operations |
+| CP-2 Contingency Plan | 03.06.01, 03.06.02 | CIP-008, CIP-009 R1 | IR.L2-3.6.1 | Operations |
+| CP-4 Contingency Plan Testing | 03.06.03 | CIP-009 R2 | IR.L2-3.6.3 | Operations |
+| CP-9 System Backup | 03.08.09 | CIP-009 R1 | MP.L2-3.8.9 | Operations |
+| CP-10 Information System Recovery | 03.06.02, 03.06.03 | CIP-009 R2, R3 | IR.L2-3.6.2 | Operations |
+| IA-2 Identification and Authentication | 03.05.03, 03.05.04 | CIP-005 R2.3, CIP-007 R5 | IA.L1-3.5.1, IA.L1-3.5.2, IA.L2-3.5.3 | Access |
+| IA-3 Device Identification and Authentication | 03.05.02 | CIP-005, CIP-007 | IA.L2-3.5.5 | n/a |
+| IA-5 Authenticator Management | 03.05.07-03.05.12 | CIP-007 R5 | IA.L2-3.5.7 through IA.L2-3.5.10 | Access |
+| RA-3 Risk Assessment | 03.11.01 | CIP-003, CIP-014 | RA.L2-3.11.1 | n/a |
+| RA-5 Vulnerability Monitoring and Scanning | 03.11.02, 03.11.03 | CIP-007 R2, CIP-010 R3 | RA.L2-3.11.2, RA.L2-3.11.3 | n/a |
+| SI-2 Flaw Remediation | 03.14.01 | CIP-007 R2 | SI.L1-3.14.1 | Change |
+| SI-4 System Monitoring | 03.14.06, 03.14.07 | CIP-007 R4 | SI.L2-3.14.6, SI.L2-3.14.7 | n/a |
+| SR-2 Supply Chain Risk Management Plan | 03.17.01 | CIP-013 R1 | SR.L2 family | n/a |
+| SR-3 Supply Chain Controls and Processes | 03.17.02, 03.17.03 | CIP-013 R2 | SR.L2 family | n/a |
+
+> **Reading the Crosswalk**
+>
+> A cell marked `n/a` means the regulator does not have an explicit identifier for the intent; it does **not** mean the regulator is uninterested. SOX auditors do not have a numbered identifier for unsuccessful-logon thresholds, but they will absolutely ask about brute-force protections on financial-system access. The crosswalk maps named controls, not audit scope.
+
+### 9.2 Overlay-to-Regulator Mapping
+
+The §7 overlays carry additional crosswalks. Subordinate operational packages own the detail; the table below is the entry point.
+
+| **Overlay** | **Primary Regulator Lens** | **Operational Package** |
+|---|---|---|
+| High-Impact | NIST 800-53 High baseline; tightened DISH | [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) + [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+| CUI | NIST 800-171 r3; DFARS 252.204-7012; CMMC L2 | [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md) + [`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) |
+| BES | NERC-CIP v7 (CIP-002 through CIP-014; CIP-015 INSM where applicable) | [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) + [`CERG-PLN-CIP-001`](CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) |
+| SOX ITGC | SOX §404 ITGC (Access, Change, Operations) | [`CERG-PLN-SOX-001`](CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) |
+| OT Safety | IEC 62443; NIST 800-82r3 | [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) |
+
+---
+
+## 10. Governance, Change, and Versioning
+
+### 10.1 Ownership
+
+The Cyber Governance Manager owns this baseline. Material changes (additions, removals, parameter changes that affect remediation SLAs or evidence requirements) require CISO approval; non-material changes (clarifications, typo fixes, additional implementation notes) require Governance Pillar Leader approval.
+
+Pillar leaders may propose changes at any time. The Governance Pillar Leader runs an open intake at the monthly Compliance Pulse forum (per [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §7).
+
+### 10.2 Change Triggers
+
+The baseline is reviewed and updated upon any of the following:
+
+- **Framework version change.** A new version of NIST 800-53, NIST 800-171, NIST CSF, NERC-CIP, CMMC, or any in-scope framework triggers a delta review and, where appropriate, an overlay or control update.
+- **Regulator action.** A new rule, advisory, or enforcement action that changes expectations.
+- **Material program change.** Adoption of a new platform class, retirement of an existing one, or significant change to the asset tiering scheme.
+- **Audit / assessment finding.** A finding from internal audit, external auditor, NERC-CIP audit, CMMC assessment, or C3PAO that points at a baseline gap.
+- **Sev 1 incident.** A confirmed incident whose root cause traces to a missing or weak baseline control.
+- **Annual review.** Even in the absence of triggers, Governance conducts a full annual review.
+
+### 10.3 Change Workflow
+
+1. **Proposal.** Submitted to the Governance Pillar Leader with: control(s) affected, change rationale, impact on overlays, evidence implications, and any regulator-facing implications.
+2. **Assessment.** Engineering and Risk review for operational practicability and exposure implications. Comments returned within 10 business days.
+3. **Decision.** Material changes go to CISO at the next Monthly Risk Register Review or sooner if time-sensitive. Non-material changes are approved by the Governance Pillar Leader.
+4. **Publication.** Approved changes are merged into the source markdown with a revision history entry. Subordinate documents that cite the changed control are flagged for refresh in their next review cycle.
+5. **Notification.** Pillar leaders communicate the change at the next CERG All-Hands and at the next Cyber Oversight Group meeting.
+
+### 10.4 Versioning Rules
+
+This baseline follows semantic-ish versioning:
+
+| Version Bump | When | Examples |
+|---|---|---|
+| **Major** (`x.0`) | Whole-baseline restructure, framework retirement (e.g., 800-53r5 → r6 migration), introduction of a new overlay class | Future r6 migration; addition of an AI overlay |
+| **Minor** (`1.x`) | New control, new overlay parameter, change to evidence catalog (§8), new crosswalk entry (§9) | Adding a new ATT&CK-derived detection control to AU family |
+| **Patch** (`1.0.x`) | Clarifying language, typo fix, cross-reference correction, no semantic change | Hyperlink fix, role-name normalization |
+
+A change log entry is written for every version bump; the change-log table lives in §11 Revision History.
+
+### 10.5 Subordinate-Document Synchronization
+
+When a control in §6 or an overlay in §7 changes, Governance issues a "ripple list" naming every subordinate document that references the changed control. The owning pillar leaders are responsible for refreshing those documents within 30 calendar days of the baseline change being approved. The Compliance Pulse forum tracks ripple-list closure each cycle.
+
+---
+
+## 11. Document Control
+
+| Field | Value |
+|---|---|
+| **Document ID** | CERG-GOV-CB-001 |
+| **Version** | 1.0 |
+| **Status** | Approved |
+| **Effective Date** | 2026-05-01 |
+| **Classification** | Internal - Confidential |
+| **Owner** | Cyber Governance Manager (Control Baseline) |
+| **Approved By** | Chief Information Security Officer |
+| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Review Cycle** | Annual; and on framework version change (NIST 800-53 rev, CMMC rev, NERC-CIP version) |
+| **Next Scheduled Review** | 2027-05-01 |
+| **Frameworks** | NIST 800-53r5; NIST 800-171r3; NIST CSF 2.0; CIS Controls v8; ISO/IEC 27001 A.5-A.8 |
+| **Regulations** | NERC-CIP v7 (and CIP-015 draft); CMMC L2; SOX ITGC |
+| **Environments** | All in-scope assets - owned, hybrid, cloud, SaaS, OT, CUI |
+
+### Revision History
+
+| **Version** | **Date** | **Author** | **Change Summary** |
+|---|---|---|---|
+| 1.0 | 2026-05-01 | Cyber Governance | Initial release. Establishes the design principles, control family spine, organizational baseline (§6 control set), overlay matrix (§7), control-to-evidence mapping (§8), regulatory crosswalks (§9), governance/change/versioning rules (§10), and document control (§11). Aligned to NIST 800-171 r3 and the canonical IDs in CERG-GOV-CAT-001 §5.2. |
+
+### Related Documents
+
+| **Document** | **ID** | **Relationship** |
+|---|---|---|
+| Cybersecurity Policy | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Authoritative artifact inventory |
+| CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Pillar / role definitions cited by §8 evidence owners |
+| Risk Management Framework | [`CERG-GOV-RMF-001`](CERG_Risk_Management_Framework_v1.0.md) | Risk treatment, approval authority, and FAIR risk format |
+| Metrics, Dashboard, and Reporting | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Hosts the dashboards cited in §8 evidence catalog |
+| Compliance Matrix | [`CERG-GOV-CMX-001`](CERG%20Compliance%20Matrix.md) | Intent-level cross-regulator map (this doc is implementation-level) |
+| Risk Taxonomy | [`CERG-GOV-TAX-001`](CERG%20Risk%20Taxonomy.md) | Risk categorization that feeds RA-3 register entries |
+| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Canonical SLAs cited by SI-2 |
+| Risk Register and Exception Process | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Exception register cited by §6 and §8 |
+| Secure Configuration Baseline Standard (DISH) | [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | Underlying baselines cited by CM-2 |
+| Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Underlying detection set cited by AU-* and SI-4 |
+| Cyber Resilience and Backup Standard | [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Underlying recovery posture cited by CP-* |
+| Cryptography and Key Management Standard | [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Underlying crypto posture cited by IA-5 |
+| Access Management Standard | [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) | Underlying access posture cited by AC-* and IA-2 |
