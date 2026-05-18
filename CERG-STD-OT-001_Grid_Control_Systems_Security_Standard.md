@@ -316,7 +316,7 @@ No control in this standard may be waived without a documented exception. Except
 
 ### Revision History
 
-| **Version** | 1.21 | **Author** | **Change Summary** |
+| **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
 | 1.0 DRAFT | 2025 | CERG Governance | Initial release - BES and non-BES OT environments |
 
