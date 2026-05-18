@@ -94,7 +94,7 @@ CERG uses [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) co
 
 Every control entry in the baseline carries one of the following statuses. The set is intentionally small, it survives audits in every framework CERG must support.
 
-| **Status** | **When to Use** | **Evidence Expected** |
+| **Status** | Published | **Evidence Expected** |
 |---|---|---|
 | `Implemented` | Control is in place, tested, and operating as designed. | Named evidence artifact for the current cycle. |
 | `Partially Implemented` | Control is in place for some scope or is operating at reduced effectiveness. | Evidence of what is in place plus a POA&M entry. |
@@ -427,10 +427,10 @@ When a control in §6 or an overlay in §7 changes, Governance issues a "ripple 
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CB-001 |
-| **Version** | 1.0 |
-| **Status** | Approved |
+| **Version** | 1.21 |
+| **Status** | Published |
 | **Effective Date** | 2026-05-01 |
-| **Classification** | Internal - Confidential |
+| **Classification** | Public |
 | **Owner** | Cyber Governance Manager (Control Baseline) |
 | **Approved By** | Chief Information Security Officer |
 | **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
@@ -442,7 +442,7 @@ When a control in §6 or an overlay in §7 changes, Governance issues a "ripple 
 
 ### Revision History
 
-| **Version** | **Date** | **Author** | **Change Summary** |
+| **Version** | 1.21 | **Author** | **Change Summary** |
 |---|---|---|---|
 | 1.0 | 2026-05-01 | Cyber Governance | Initial release. Establishes the design principles, control family spine, organizational baseline (§6 control set), overlay matrix (§7), control-to-evidence mapping (§8), regulatory crosswalks (§9), governance/change/versioning rules (§10), and document control (§11). Aligned to NIST 800-171 r3 and the canonical IDs in CERG-GOV-CAT-001 §5.2. |
 
