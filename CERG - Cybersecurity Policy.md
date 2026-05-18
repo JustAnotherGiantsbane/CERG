@@ -388,4 +388,60 @@ Non-compliance findings identified by external regulators or auditors shall be e
 
 This policy shall be reviewed annually by Cyber Governance and updated as needed to reflect changes in the threat environment, organizational structure, or applicable regulatory requirements.
 
-This policy shall also be reviewed and updated upon: material changes to applicable regulations, significant organizational changes affecting scope, a significant security incident that reveals a gap in foundational principles, or direction from the CISO or 
+This policy shall also be reviewed and updated upon: material changes to applicable regulations, significant organizational changes affecting scope, a significant security incident that reveals a gap in foundational principles, or direction from the CISO or executive leadership.
+
+Proposed updates shall be reviewed by Cyber Engineering and Cyber Risk to ensure operational practicability before submission for CISO approval. Approved revisions shall be version-controlled and distributed to all personnel with compliance obligations under this policy.
+
+### 9.1 Document History
+
+|Version|Date|Summary|Author / Approver|
+|---|---|---|---|
+|1.0|2026-05-01|Initial release. Establishes the ten foundational principles, the CERG operating model, the canonical definitions (including DISH, PPR, POA&M, SSP, Executive Sponsor), and the policy hierarchy. Subordinate standards, procedures, plans, and templates derive from this policy.|CISO|
+
+---
+
+## 10. Related Documents
+
+The authoritative inventory, IDs, owners, status, and deferred / planned artifacts is maintained in [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) Document Catalog and Naming Convention. The summary below reflects the V1 library.
+
+### 10.1 Cross-Cutting Instruments
+
+| Document | ID | Owner |
+| --- | --- | --- |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Cyber Governance |
+| Unified Control Baseline | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Cyber Governance |
+| Metrics, Dashboard, and CISO/Board Reporting | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Cyber Governance |
+| CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | CISO |
+| Risk Management Framework | [`CERG-GOV-RMF-001`](CERG_Risk_Management_Framework_v1.0.md) | Cyber Governance |
+| Compliance Matrix | [`CERG-GOV-CMX-001`](CERG%20Compliance%20Matrix.md) | Cyber Governance |
+| Risk Taxonomy | [`CERG-GOV-TAX-001`](CERG%20Risk%20Taxonomy.md) | Cyber Risk |
+| CERG Framework (narrative) | [`CERG-GOV-FRM-001`](CERG%20Framework%20-%20Cyber%20Engineering%20Risk%20and%20Governance.md) | CISO |
+
+### 10.2 Standards
+
+| Document | ID | Owner |
+| --- | --- | --- |
+| IT (Hosted, Cloud, and SaaS) Security Standard | [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | Cyber Governance |
+| Grid Control Systems Security Standard | [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | Cyber Governance |
+| CUI Handling Standard | [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md) | Cyber Governance |
+| Access Management Standard | [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) | Cyber Governance |
+| Secure Configuration Baseline Standard (DISH) | [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | Cyber Engineering |
+| Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Cyber Risk |
+| Cyber Resilience and Backup Standard | [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Cyber Engineering |
+| Cryptography and Key Management Standard | [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Cyber Engineering |
+
+### 10.3 Procedures, Plans, and Templates
+
+| Document | ID | Owner |
+| --- | --- | --- |
+| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Cyber Risk |
+| Risk Register and Exception Process | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Cyber Governance |
+| Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Cyber Engineering |
+| Access Management Runbook | [`CERG-PRC-AC-002`](CERG-PRC-AC-002_Access_Management_Runbook.md) | Cyber Engineering |
+| Third-Party and Supply Chain Risk Procedure | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Cyber Risk |
+| Adversarial Validation Procedure | [`CERG-PRC-AV-001`](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) | Cyber Risk |
+| Incident Response Plan | [`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md) | Standing IR team |
+| CUI / CMMC Operational Package | [`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) | Cyber Governance |
+| NERC-CIP Operational Package | [`CERG-PLN-CIP-001`](CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) | Cyber Governance |
+| SOX ITGC Operational Package | [`CERG-PLN-SOX-001`](CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) | Cyber Governance |
+| Risk Register Templates and Reporting | [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) | Cyber Governance |
