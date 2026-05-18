@@ -11,6 +11,13 @@
 
 ---
 
+| **Version**        | 1.21      |
+| ------------------ | --------- |
+| **Status**         | Published |
+| **Classification** | Public    |
+
+---
+
 ## Table of Contents
 
 1. [Executive Summary](#1-executive-summary)
@@ -515,5 +522,3 @@ An organization operating at Adaptive maturity will demonstrate these observable
 > **Engineering. Risk. Governance.** _Fast. Powerful. Directional._
 
 ---
-
-_CONFIDENTIAL, DRAFT v1.1_
