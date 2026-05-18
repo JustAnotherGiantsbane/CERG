@@ -5,6 +5,13 @@
 
 ---
 
+| **Version**        | 1.21      |
+| ------------------ | --------- |
+| **Status**         | Published |
+| **Classification** | Public    |
+
+---
+
 ## Theme 1 - Visibility: knowing what you own and what's happening
 
 ### 1.1 Know what you own: maintain an authoritative asset inventory
@@ -256,5 +263,3 @@
 |**Governance**|IR planning · Recovery · Physical security · Policy & standards · Personnel training · Risk management · Audit evidence · Compliance calendar|
 
 ---
-
-_CERG Framework - SURGE | Cyber Engineering, Risk & Governance_ _Draft v1.1 | For internal use._
