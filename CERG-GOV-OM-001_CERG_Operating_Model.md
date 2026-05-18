@@ -336,4 +336,174 @@ CERG operates as one team because it talks like one team. The standing cadence b
 | **Forum** | **Cadence** | **Participants** | **Purpose** |
 |---|---|---|---|
 | CERG Leadership Sync | Weekly | CISO + pillar leaders | Cross-pillar priorities, blockers, escalations. |
-| Risk Posture Review (High / Critical items) | Weekly | Risk + Engineering + Governance | Top-of-list High and Critical risks, treatment progress, SLA breaches. Aligns with [`CERG_RMF`](CERG_Risk_Management_Framework_v1.0.md) §8.2
+| Risk Posture Review (High / Critical items) | Weekly | Risk + Engineering + Governance | Top-of-list High and Critical risks, treatment progress, SLA breaches. Aligns with [`CERG_RMF`](CERG_Risk_Management_Framework_v1.0.md) §8.2 weekly cadence for High and Critical items. |
+| Monthly Risk Register Review (full register) | Monthly | Risk Register Owner + Risk + Engineering + Governance | Full register pass, POA&M status, treatment closures, exception renewals. Aligns with [`CERG_RMF`](CERG_Risk_Management_Framework_v1.0.md) §8.2 monthly full cadence. |
+| Pre-production Review Board | Twice weekly | Engineering + Risk + Governance | Pre-production go/no-go for in-scope projects. |
+| Vulnerability Triage | Daily / standing | Risk team + Engineering rep | PPR / Critical / Internet-exposed findings per [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5.2. |
+| Threat Intelligence Brief | Weekly | Risk + Engineering + Governance | Relevant intel, posture implications. |
+| Compliance Pulse | Bi-weekly | Governance + Engineering + Risk | Open compliance items, evidence gaps, regulator calendar. |
+| CERG All-Hands | Monthly | All CERG | Program updates, recognition, knowledge sharing. |
+| Cyber Oversight Group (COG) | Monthly | Per §4.4 | Cyber posture, cross-functional risk treatment alignment, pre-board review. |
+| CISO Risk & Posture Review | Quarterly | CISO + leadership | Material risks, posture trends, regulatory cycle, budget. |
+| Board Cyber Brief | Quarterly (per board protocol) | CISO → Audit / Risk / Tech Committee | Posture, material incidents, top risks, program initiatives. |
+
+> **Incident Response cadence** is owned by the standing IR team (see §3.4), not by CERG, and is documented in [`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md). CERG provides standing IR liaison roles per §6.5.
+
+---
+
+## 8. Interfaces With Other Functions
+
+CERG operates inside a broader organizational ecosystem. The following interfaces are explicit.
+
+| **Function** | **Interface** |
+|---|---|
+| **Incident Response (standing team)** | Owns [`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md). CERG feeds detection telemetry, vulnerability context, asset documentation, and post-incident risk-register entries. During an active incident, CERG provides Lead Investigator (Risk), Engineering Lead, and Governance Lead roles per the IR team's call. |
+| **Security Awareness** | Coordinated with Governance for content alignment; Risk provides phishing simulation operations and threat-actor context for targeted campaigns. |
+| **Internal Audit** | Receives evidence from Governance; engages SMEs from Engineering and Risk; findings tracked in the risk register. |
+| **Legal** | Engaged at activation for Sev 1/2 incidents; engaged for regulatory interpretation, breach notification, customer contractual obligations, and privilege judgments. |
+| **Privacy / DPO** | Coordinates with Governance on Restricted-data handling and breach notification under GDPR / HIPAA / state laws. |
+| **Enterprise Risk Management** | Receives quarterly cyber risk feed at the Cyber Oversight Group (§4.4); interface ensures cyber risks appear in enterprise risk reporting. |
+| **Internal Communications / PR** | Engaged for material incident communications and major program announcements. |
+| **Procurement / Vendor Management** | Coordinates third-party assessments and DFARS / CMMC flow-down; Governance is the security signatory. |
+| **Human Resources** | Coordinates joiner / mover / leaver, personnel risk assessments (NERC-CIP CIP-004), and disciplinary referrals for willful non-compliance. |
+| **IT Operations** | Executes Engineering-designed controls; jointly owns endpoint, server, network, and SaaS administration. |
+| **OT Operations** | Co-owns CIP-008 incident response, CIP-007 patching cycles, and ESP/EAP architecture. CERG defers to operations on grid-impact judgments. |
+| **Business Unit Owners** | Sponsor systems, approve treatments, own residual risk for systems in scope. Designated Executive Sponsors sit on the Cyber Oversight Group when systems in their scope are on the agenda. |
+| **Executive Leadership and the Board** | Receive standing CISO reporting via the COG; engaged on Sev 1 incidents and material risk decisions. |
+
+---
+
+## 9. RACI Patterns
+
+The following patterns illustrate how the pillars typically distribute work. Specific RACI matrices are maintained per process. This is a sample; each standard and procedure cited in [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) §10 has its own. Role names follow the canonical roster in §6.1.
+
+### 9.1 New Cloud Workload Goes Live
+
+| **Activity** | **Engineering** | **Risk** | **Governance** | **Business Owner** | **CISO** |
+|---|---|---|---|---|---|
+| Approve architecture and landing-zone selection | **R / A** | C | C | C | I |
+| Implement IAM, network, monitoring controls | **R** | C | I | C | I |
+| Pre-production vulnerability assessment | C | **R / A** | I | C | I |
+| Approve go-live | **R** | C | C | **A** | I |
+| Onboard to CSPM and vulnerability management | C | **R / A** | I | I | I |
+| Add to compliance evidence library | C | I | **R / A** | I | I |
+
+### 9.2 Open High Vulnerability Past SLA
+
+| **Activity** | **Engineering** | **Risk** | **Governance** | **Business Owner** | **CISO** |
+|---|---|---|---|---|---|
+| Identify SLA breach and escalate | I | **R / A** | I | I | I |
+| Recommend compensating controls | **R / A** | C | C | C | I |
+| Decide treatment (remediate / mitigate / accept) | C | C | C | **A** | I (review for High+) |
+| Approve risk acceptance (if High) | I | C | C | C | **A** |
+| Record in risk register | I | C | **R / A** | I | I |
+
+### 9.3 CMMC Pre-Assessment Cycle
+
+CMMC pre-assessment work involves two acronyms that appear without prior explanation elsewhere in the suite:
+
+- **SPRS** - Supplier Performance Risk System. The DoD-operated portal where contractors post their NIST 800-171 self-assessment score and basic assessment confirmation.
+- **C3PAO** - CMMC Third-Party Assessment Organization. An accredited assessor authorized by the Cyber AB to conduct CMMC Level 2 certification assessments.
+
+| **Activity** | **Engineering** | **Risk** | **Governance** | **Business Owner** | **CISO** |
+|---|---|---|---|---|---|
+| Maintain SSP and POA&M | C | C | **R / A** | I | I |
+| Conduct self-assessment | C | **R** | **A** | C | I |
+| Submit SPRS score | I | C | **R / A** | I | I |
+| C3PAO engagement | I | C | **R / A** | I | C |
+| Remediate POA&M items | **R** | C | **A** | C | I |
+
+---
+
+## 10. Maturity, Metrics, and the Adaptive Target
+
+### 10.1 The Adaptive Target
+
+CERG targets NIST Cybersecurity Framework **Tier 4, Adaptive** posture for the organization. Adaptive does not mean "constantly changing." It means the organization understands its risk environment, continuously adjusts its program based on what it learns, integrates cybersecurity into enterprise risk and business decisions, and treats lessons learned as a first-class input to the program.
+
+### 10.2 Maturity Indicators
+
+The following indicators are tracked by Governance and reported to the CISO and the Cyber Oversight Group. They are leading indicators of program maturity, not lagging measures of incident counts. Target values, green/amber/red thresholds, escalation triggers, and reporting cadence live in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) §3; this section names the indicators only.
+
+| **Indicator** | **What It Measures** | **Canonical Metric ID** |
+|---|---|---|
+| % of in-scope assets in real-time inventory | Visibility | MTR-001 ID-001 |
+| % of new projects passing pre-production review on first attempt | Engineering quality and "shift left" effectiveness | MTR-001 CM-002 |
+| Median time-to-remediate by severity | Risk responsiveness | MTR-001 RM-003 / VM-001 |
+| % of findings within SLA | Risk discipline | MTR-001 VM-001 / VM-002 |
+| Open exception count and median age | Governance discipline | MTR-001 RM-004 / RM-005 |
+| % of risks reviewed within scheduled review date | Risk register health | MTR-001 RM-002 |
+| % of identified High risks with active treatment plans | Treatment discipline | MTR-001 RM-001 |
+| Time from incident detection to containment (Sev 1/2) | Response capability (IR team owns) | (IR-owned; coordinated with MTR-001) |
+| % of IRT roles backstopped (no single point of failure) | Continuity | MTR-001 GV-003 |
+| Audit / assessor findings (count and severity) per cycle | External validation | MTR-001 GV-001 / GV-002 |
+| Phishing simulation susceptibility trend | Workforce posture (Awareness owns) | (Awareness-owned; coordinated with MTR-001) |
+| % of vendor reassessments current | Third-party risk discipline | MTR-001 TP-001 / TP-002 |
+
+### 10.3 Continuous Improvement
+
+Every CERG activity produces feedback into the program backlog:
+
+- Post-incident lessons → Engineering, Risk, Governance backlog items
+- Audit findings → POA&M / risk register entries with treatment plans
+- Exercise results → Plan and playbook updates
+- Adversarial validation findings → Detection rules, posture controls, architectural changes
+- Threat intelligence → Standing detection and control updates
+
+The backlog is reviewed monthly. Items that age beyond planned dates without justification are flagged to the CISO and surfaced to the Cyber Oversight Group.
+
+---
+
+## 11. Operating Model Control
+
+### Revision History
+
+| **Version** | **Date** | **Author** | **Change Summary** |
+|---|---|---|---|
+| 1.0 | 2026-05-01 | CISO + Cyber Governance | Initial release. Establishes the three pillars, decision rights, engagement models, the canonical role roster (§6.1), the Cyber Oversight Group (§4.4), the standing coordination cadence aligned with CERG-RMF §8.2, and the maturity indicator set cross-referenced to CERG-GOV-MTR-001. Clarifies that the Incident Response plan and capability are owned by a standing IR team outside CERG; CERG provides liaison roles and feeds data into the IR program. |
+
+### Review Triggers
+
+This operating model shall be reviewed annually and upon any of the following:
+
+- Material organizational change affecting CERG structure or reporting
+- Material change to scope (e.g., new regulated environment, major M&A)
+- A Sev 1 incident or significant audit finding that reveals a structural gap
+- CISO transition
+- Direction from executive leadership or the board
+
+The CISO owns this document. Cyber Governance maintains it on behalf of the CISO. Changes require CISO approval and broad CERG acknowledgment.
+
+### Related Documents
+
+The authoritative inventory is [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md). The references below are the V1 library at a glance, grouped by role within the operating model.
+
+| **Document** | **ID** | **Relationship** |
+|---|---|---|
+| Cybersecurity Policy | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy - defines the CERG operating model at the principle level |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Authoritative inventory of every CERG artifact |
+| Unified Control Baseline | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control spine, overlays, evidence mapping |
+| Metrics, Dashboard, and CISO/Board Reporting | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | KRIs, KPIs, CISO dashboard |
+| Risk Management Framework | [`CERG-GOV-RMF-001`](CERG_Risk_Management_Framework_v1.0.md) | Lifecycle, FAIR risk statement, canonical approval table, KRI definitions |
+| Compliance Matrix | [`CERG-GOV-CMX-001`](CERG%20Compliance%20Matrix.md) | Cross-regulator control intent alignment |
+| Risk Taxonomy | [`CERG-GOV-TAX-001`](CERG%20Risk%20Taxonomy.md) | Risk language and categorization |
+| CERG Framework | [`CERG-GOV-FRM-001`](CERG%20Framework%20-%20Cyber%20Engineering%20Risk%20and%20Governance.md) | Narrative framework document |
+| Grid Control Systems Security Standard | [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | OT pillar adaptations |
+| IT (Hosted/Cloud/SaaS) Security Standard | [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | IT, cloud, and SaaS pillar adaptations |
+| CUI Handling Standard | [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md) | CUI scope, SSP/POA&M, CMMC L2 |
+| Access Management Standard | [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) | Identity lifecycle, MFA, access reviews |
+| Secure Configuration Baseline Standard (DISH) | [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | DISH baselines |
+| Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Log sources, retention, detection coverage |
+| Cyber Resilience and Backup Standard | [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | RTO/RPO, backup, recovery |
+| Cryptography and Key Management Standard | [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Cipher, key, certificate lifecycle |
+| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Canonical vulnerability remediation SLAs |
+| Risk Register and Exception Process | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Risk register operating procedure |
+| Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Pre-production engagement |
+| Access Management Runbook | [`CERG-PRC-AC-002`](CERG-PRC-AC-002_Access_Management_Runbook.md) | Identity lifecycle operations |
+| Third-Party and Supply Chain Risk Procedure | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Vendor tiering, SCCT |
+| Adversarial Validation Procedure | [`CERG-PRC-AV-001`](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) | Pen test, red team, purple team |
+| Incident Response Plan | [`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md) | Owned by the standing IR team; CERG provides liaison roles |
+| CUI / CMMC Operational Package | [`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) | CUI/CMMC operational bundle |
+| NERC-CIP Operational Package | [`CERG-PLN-CIP-001`](CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) | NERC-CIP operational bundle |
+| SOX ITGC Operational Package | [`CERG-PLN-SOX-001`](CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) | SOX ITGC operational bundle |
+| Risk Register Templates and Reporting | [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) | Register schema, report templates |
