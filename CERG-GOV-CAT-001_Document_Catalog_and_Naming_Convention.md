@@ -9,9 +9,9 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.0 |
-| **Status** | Approved (V1) |
-| **Classification** | Internal - Confidential |
+| **Version** | 1.21 |
+| **Status** | Published |
+| **Classification** | Public |
 | **Owner** | Cyber Governance Manager (Document Control) |
 | **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Quarterly - or upon any artifact add/retire |
