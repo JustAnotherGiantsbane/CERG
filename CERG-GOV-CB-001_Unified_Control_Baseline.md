@@ -427,10 +427,10 @@ When a control in §6 or an overlay in §7 changes, Governance issues a "ripple 
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CB-001 |
-| **Version** | 1.21 |
-| **Status** | Published |
+| **Version** | 1.0 |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-01 |
-| **Classification** | Public |
+| **Classification** | Internal - Confidential |
 | **Owner** | Cyber Governance Manager (Control Baseline) |
 | **Approved By** | Chief Information Security Officer |
 | **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
@@ -442,7 +442,7 @@ When a control in §6 or an overlay in §7 changes, Governance issues a "ripple 
 
 ### Revision History
 
-| **Version** | 1.21 | **Author** | **Change Summary** |
+| **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
 | 1.0 | 2026-05-01 | Cyber Governance | Initial release. Establishes the design principles, control family spine, organizational baseline (§6 control set), overlay matrix (§7), control-to-evidence mapping (§8), regulatory crosswalks (§9), governance/change/versioning rules (§10), and document control (§11). Aligned to NIST 800-171 r3 and the canonical IDs in CERG-GOV-CAT-001 §5.2. |
 
