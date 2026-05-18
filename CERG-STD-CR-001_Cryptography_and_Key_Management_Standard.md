@@ -9,9 +9,9 @@
 | | |
 |---|---|
 | **Document ID** | CERG-STD-CR-001 |
-| **Version** | 1.0 |
-| **Status** | For Review |
-| **Classification** | Internal - Confidential |
+| **Version** | 1.21 |
+| **Status** | Published |
+| **Classification** | Public |
 | **Owner** | Cyber Engineering Manager (Platforms) |
 | **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Supporting Standards** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-CFG-001](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-RES-001](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) |
