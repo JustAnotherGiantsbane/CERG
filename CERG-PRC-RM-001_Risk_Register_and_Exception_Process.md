@@ -377,7 +377,7 @@ The register is not a parallel system to these programs. It is the connective ti
 
 ### Revision History
 
-| **Version** | 1.21 | **Author** | **Change Summary** |
+| **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
 | 1.0 DRAFT | 2026 | CERG Governance | Initial release |
 
