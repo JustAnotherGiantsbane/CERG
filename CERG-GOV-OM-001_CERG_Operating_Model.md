@@ -9,9 +9,9 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
-| **Version** | 1.0 DRAFT |
-| **Status** | For Review |
-| **Classification** | Internal - Confidential |
+| **Version** | 1.21 |
+| **Status** | Published |
+| **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
 | **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / Upon Organizational Change |
@@ -458,7 +458,7 @@ The backlog is reviewed monthly. Items that age beyond planned dates without jus
 
 ### Revision History
 
-| **Version** | **Date** | **Author** | **Change Summary** |
+| **Version** | 1.21 | **Author** | **Change Summary** |
 |---|---|---|---|
 | 1.0 | 2026-05-01 | CISO + Cyber Governance | Initial release. Establishes the three pillars, decision rights, engagement models, the canonical role roster (§6.1), the Cyber Oversight Group (§4.4), the standing coordination cadence aligned with CERG-RMF §8.2, and the maturity indicator set cross-referenced to CERG-GOV-MTR-001. Clarifies that the Incident Response plan and capability are owned by a standing IR team outside CERG; CERG provides liaison roles and feeds data into the IR program. |
 
