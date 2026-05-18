@@ -351,7 +351,7 @@ CUI control deficiencies do not follow the ordinary exception process. Open defi
 
 ### Revision History
 
-| **Version** | 1.21 | **Author** | **Change Summary** |
+| **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
 | 1.0 DRAFT | 2026 | CERG Governance | Initial release - [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final), DFARS 252.204-7012, [CMMC](https://dodcio.defense.gov/CMMC/) Level 2 |
 
