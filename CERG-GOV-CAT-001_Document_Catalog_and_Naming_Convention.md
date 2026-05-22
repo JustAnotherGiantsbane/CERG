@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.25 |
+| **Version** | 1.26 |
 | **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -244,8 +244,16 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | **ID** | **Title** | **Owner** | **Status** |
 |---|---|---|---|
 | [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) | Risk Register Templates and Reporting | Cyber Governance - Risk Register | Approved |
+| [`CERG-TMPL-CUI-001`](CERG-TMPL-CUI-001_System_Security_Plan_Template.md) | System Security Plan Template | CMMC / Federal Compliance Manager | Draft |
+| [`CERG-TMPL-CUI-002`](CERG-TMPL-CUI-002_POAM_Template.md) | Plan of Action and Milestones Template | CMMC / Federal Compliance Manager | Draft |
+| [`CERG-TMPL-RM-002`](CERG-TMPL-RM-002_Security_Exception_Request_Form.md) | Security Exception Request Form | Risk Register Owner | Draft |
+| [`CERG-TMPL-AR-001`](CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md) | Architecture and Project Intake Form | Engineering Pillar Leader | Draft |
+| [`CERG-TMPL-TPRM-001`](CERG-TMPL-TPRM-001_Vendor_Security_Questionnaire_and_Assessment_Template.md) | Vendor Security Questionnaire and TPRM Assessment Template | Vendor Risk Analyst | Draft |
+| [`CERG-TMPL-RM-003`](CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md) | Risk Acceptance Memo Template | Risk Pillar Leader | Draft |
+| [`CERG-TMPL-AUD-001`](CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md) | Control Evidence and Test Worksheet | Evidence Librarian | Draft |
+| [`CERG-TMPL-MTR-001`](CERG-TMPL-MTR-001_Board_and_CISO_Reporting_Deck_Template.md) | Board and CISO Reporting Deck Template | Governance Pillar Leader | Draft |
 
-Other templates are embedded as appendices of their parent procedure or plan unless they have independent reuse outside that artifact. The Document Catalog references the parent. V2 may promote heavy-use templates to standalone `TMPL` artifacts.
+Other templates remain embedded as appendices of their parent procedure or plan unless they have independent reuse outside that artifact. The Document Catalog references the parent.
 
 ---
 
@@ -273,7 +281,7 @@ An artifact moves from this section to Section 5 when it is authored and reaches
 
 ### 7.1 Status of the V1.x Build
 
-The V1.x build extends the original V1 library along five tracks: the adoption layer, the Engineering-pillar standards, the governance glue, the missing procedures, and the missing operational packages. As of this version of the catalog, the adoption layer (`IMP`, `VAR`, `MAT`), the seven Engineering and data standards (`SDL`, `AM`, `NET`, `EP`, `DG`, `AI`, `MSG`), the consolidated RACI instrument (`RAC`), the Group C in-scope procedures (`IR-002`, `TM`, `TI`, `AUD`, `CHG`), and the Group D operational packages (`BC`, `ISO`, `PRIV`) are authored and registered in Section 5. The artifacts below remain planned.
+The V1.x build extends the original V1 library along six tracks: the adoption layer, the Engineering-pillar standards, the governance glue, the missing procedures, the missing operational packages, and the standalone template library. As of this version of the catalog, the adoption layer (`IMP`, `VAR`, `MAT`), the seven Engineering and data standards (`SDL`, `AM`, `NET`, `EP`, `DG`, `AI`, `MSG`), the consolidated RACI instrument (`RAC`), the Group C in-scope procedures (`IR-002`, `TM`, `TI`, `AUD`, `CHG`), the Group D operational packages (`BC`, `ISO`, `PRIV`), and the Group E standalone templates are authored and registered in Section 5. The artifacts below remain planned.
 
 ### 7.2 Planned Procedures
 
@@ -285,7 +293,9 @@ No Group D operational packages remain planned. Business Continuity and Disaster
 
 ### 7.4 Planned Templates
 
-V1.x promotes high-reuse templates to standalone `TMPL` artifacts, consistent with the note in Section 5.6. The planned template set includes the System Security Plan, the POA&M, the security exception request, the architecture and project intake form, the vendor security questionnaire, the incident report and post-incident review, the risk acceptance memo, the control evidence worksheet, and the board and CISO reporting deck. Each is assigned a `CERG-TMPL-<DOMAIN>-NNN` ID when authored and registered in Section 5.6 at that time.
+No Group E standalone templates remain planned. The System Security Plan, POA&M, security exception request, architecture and project intake form, vendor security questionnaire, risk acceptance memo, control evidence worksheet, and Board / CISO reporting deck templates are authored and registered in Section 5.6.
+
+The incident report and post-incident review template remains embedded in the incident response plan and playbook set unless promoted by a future amendment.
 
 ### 7.5 Planned Governance Instruments
 
@@ -305,7 +315,7 @@ V1.x promotes high-reuse templates to standalone `TMPL` artifacts, consistent wi
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.25 |
+| **Version** | 1.26 |
 | **Status** | Published |
 | **Effective Date** | 2026-05-21 |
 | **Classification** | Public |
@@ -328,6 +338,7 @@ V1.x promotes high-reuse templates to standalone `TMPL` artifacts, consistent wi
 | 1.23 | 2026-05-21 | Cyber Governance | Registered domains `RAC`, `SDL`, `AM`, `NET`, `EP`, `DG`, `AI`, and `MSG`. Added `CERG-GOV-RAC-001` to Section 5.2 and seven standards to Section 5.3. Set `CERG-GOV-RAC-001` and the seven new standards to `Approved` on CISO sign-off. Restored the document to its full structure: completed the Section 6 Reference Discipline Test callout, and authored Section 7 (Artifact Roadmap) and Section 8 (Document Control), which had been absent. |
 | 1.24 | 2026-05-22 | Cyber Governance | Registered domains `TM`, `TI`, `AUD`, and `CHG`; added `CERG-PRC-IR-002`, `CERG-PRC-TM-001`, `CERG-PRC-TI-001`, `CERG-PRC-AUD-001`, and `CERG-PRC-CHG-001` to Section 5.4 as Draft; removed the now-authored Group C procedure reservations from Section 7.2; noted that Security Awareness and Training and SOC / Forensics operations are intentionally out of CERG scope. |
 | 1.25 | 2026-05-22 | Cyber Governance | Registered domains `BC`, `ISO`, and `PRIV`; added `CERG-PLN-BC-001`, `CERG-PLN-ISO-001`, and `CERG-PLN-PRIV-001` to Section 5.5 as Draft; removed the now-authored Group D operational package reservations from Section 7.3. |
+| 1.26 | 2026-05-22 | Cyber Governance | Added eight standalone Group E templates to Section 5.6 as Draft: `CERG-TMPL-CUI-001`, `CERG-TMPL-CUI-002`, `CERG-TMPL-RM-002`, `CERG-TMPL-AR-001`, `CERG-TMPL-TPRM-001`, `CERG-TMPL-RM-003`, `CERG-TMPL-AUD-001`, and `CERG-TMPL-MTR-001`; updated Section 7.4 to state that no Group E standalone templates remain planned. |
 
 ### Review Triggers
 
