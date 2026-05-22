@@ -1,0 +1,56 @@
+# CERG Organization Adaptation Profile
+#
+# This file is the single source of truth for every token value used to
+# adapt the CERG corpus to your organization. Fill it in once, then run:
+#
+#     python3 tools/cerg-render.py
+#
+# The token scheme and the authoritative token catalog are defined in
+# CERG-GOV-VAR-001 (Organization Adaptation Profile). New tokens are added
+# only by amendment to that document.
+#
+# The values below are the V1 REFERENCE VALUES: the deliberate upper-bound
+# illustration (a large electric utility with a 60-person security team).
+# Edit every value to match YOUR organization before rendering.
+
+# --- 4.1 Organization Identity ---------------------------------------------
+organization:
+  org_name: "the organization"
+  org_legal_name: "the organization"
+  org_short_name: "the org"
+  org_sector: "electric utility"
+  org_content_repo: "https://github.com/m0dernz/CERG"
+
+# --- 4.2 Program Identity --------------------------------------------------
+program:
+  program_name: "CERG"
+  program_acronym: "SURGE"
+
+# --- 4.3 Scale and Structure -----------------------------------------------
+# The figures below are the V1 upper-bound illustration. A small team sets
+# cerg_team_size to its real headcount and scale_tier to "small".
+scale:
+  total_employees: "14,000"
+  protected_population: "28,000"
+  cerg_team_size: "60"
+  eng_staff: "14"
+  risk_staff: "15"
+  gov_staff: "13"
+  scale_tier: "large"        # one of: small | mid | large
+
+# --- 4.4 Oversight and Standing Teams --------------------------------------
+oversight:
+  cog_name: "Cyber Oversight Group"
+  ir_team_name: "Incident Response team"
+  exec_body_name: "executive leadership"
+
+# --- 4.5 Regulatory Context ------------------------------------------------
+regulatory:
+  regulators: "NERC-CIP, CMMC L2, SOX ITGC"
+  primary_regulator: "NERC-CIP"
+
+# --- 4.6 Contact and Control -----------------------------------------------
+contact:
+  security_contact: "security@example.com"
+  doc_control_contact: "cerg-docs@example.com"
+  adoption_date: "2026-05-21"
