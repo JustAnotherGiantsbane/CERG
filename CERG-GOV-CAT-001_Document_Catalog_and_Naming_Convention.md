@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.23 |
+| **Version** | 1.24 |
 | **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -108,6 +108,10 @@ Files are named `<DocumentID>_<Short_Title>.md` using underscore-separated title
 | `DG` | Data governance and classification |
 | `AI` | Artificial intelligence security |
 | `MSG` | Email and messaging security |
+| `TM` | Threat modeling |
+| `TI` | Threat intelligence |
+| `AUD` | Audit and evidence management |
+| `CHG` | Security change management |
 
 New domains are added only by amendment to this catalog.
 
@@ -212,6 +216,11 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-PRC-AC-002`](CERG-PRC-AC-002_Access_Management_Runbook.md) | Access Management Runbook | Identity Engineer (or IAM team if external) | Approved |
 | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Third-Party and Supply Chain Risk Procedure | Cyber Risk - Vendor Risk | Approved |
 | [`CERG-PRC-AV-001`](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) | Adversarial Validation Procedure | Cyber Risk - Offensive Security | Approved |
+| [`CERG-PRC-IR-002`](CERG-PRC-IR-002_Incident_Response_Playbook_Set.md) | Incident Response Playbook Set | Cyber Governance / standing IR team liaison | Draft |
+| [`CERG-PRC-TM-001`](CERG-PRC-TM-001_Threat_Modeling_Procedure.md) | Threat Modeling Procedure | Cyber Risk | Draft |
+| [`CERG-PRC-TI-001`](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) | Threat Intelligence Procedure | Cyber Risk - Threat Intelligence | Draft |
+| [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) | Audit and Evidence Management Procedure | Cyber Governance | Draft |
+| [`CERG-PRC-CHG-001`](CERG-PRC-CHG-001_Security_Change_Management_Procedure.md) | Security Change Management Procedure | Cyber Engineering | Draft |
 
 > **Numbering note: CERG-PRC-AC-001.** The Access Management Runbook is identifier `CERG-PRC-AC-002` rather than `-001` because the original `-001` slot was reserved for a planned standalone Access Review Runbook that has not been authored; the work was folded into the parent standard [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) §9. The `-002` ID is preserved to avoid renumbering existing references. The `-001` slot is reserved for future use.
 
@@ -258,16 +267,11 @@ An artifact moves from this section to Section 5 when it is authored and reaches
 
 ### 7.1 Status of the V1.x Build
 
-The V1.x build extends the original V1 library along three tracks: the adoption layer, the Engineering-pillar standards, and the governance glue. As of this version of the catalog, the adoption layer (`IMP`, `VAR`, `MAT`), the seven Engineering and data standards (`SDL`, `AM`, `NET`, `EP`, `DG`, `AI`, `MSG`), and the consolidated RACI instrument (`RAC`) are authored and registered in Section 5. The artifacts below remain planned.
+The V1.x build extends the original V1 library along four tracks: the adoption layer, the Engineering-pillar standards, the governance glue, and the missing procedures. As of this version of the catalog, the adoption layer (`IMP`, `VAR`, `MAT`), the seven Engineering and data standards (`SDL`, `AM`, `NET`, `EP`, `DG`, `AI`, `MSG`), the consolidated RACI instrument (`RAC`), and the Group C in-scope procedures (`IR-002`, `TM`, `TI`, `AUD`, `CHG`) are authored and registered in Section 5. The artifacts below remain planned.
 
 ### 7.2 Planned Procedures
 
-| **ID** | **Title** | **Owner** | **Target** |
-|---|---|---|---|
-| `CERG-PRC-TM-001` | Threat Modeling Procedure | Cyber Engineering - Application Security | V1.x |
-| `CERG-PRC-TI-001` | Threat Intelligence Procedure | Cyber Risk - Threat Intelligence | V1.x |
-| `CERG-PRC-AUD-001` | Audit and Evidence Management Procedure | Cyber Governance | V1.x |
-| `CERG-PRC-CHG-001` | Security Change Management Procedure | Cyber Governance | V1.x |
+No in-scope Group C procedures remain planned in V1.x. Security Awareness and Training and SOC / Forensics operations are intentionally out of CERG scope and are not reserved here.
 
 ### 7.3 Planned Plans and Operational Packages
 
@@ -299,7 +303,7 @@ V1.x promotes high-reuse templates to standalone `TMPL` artifacts, consistent wi
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.23 |
+| **Version** | 1.24 |
 | **Status** | Published |
 | **Effective Date** | 2026-05-21 |
 | **Classification** | Public |
@@ -320,6 +324,7 @@ V1.x promotes high-reuse templates to standalone `TMPL` artifacts, consistent wi
 | 1.21 | 2026-05-01 | Cyber Governance | Catalog maintenance release aligning artifact versions across the V1 library. |
 | 1.22 | 2026-05-21 | Cyber Governance | Registered the adoption-layer domains `IMP`, `VAR`, and `MAT` in Section 2.1 and added `CERG-GOV-IMP-001`, `CERG-GOV-VAR-001`, and `CERG-GOV-MAT-001` to Section 5.2. |
 | 1.23 | 2026-05-21 | Cyber Governance | Registered domains `RAC`, `SDL`, `AM`, `NET`, `EP`, `DG`, `AI`, and `MSG`. Added `CERG-GOV-RAC-001` to Section 5.2 and seven standards to Section 5.3. Set `CERG-GOV-RAC-001` and the seven new standards to `Approved` on CISO sign-off. Restored the document to its full structure: completed the Section 6 Reference Discipline Test callout, and authored Section 7 (Artifact Roadmap) and Section 8 (Document Control), which had been absent. |
+| 1.24 | 2026-05-22 | Cyber Governance | Registered domains `TM`, `TI`, `AUD`, and `CHG`; added `CERG-PRC-IR-002`, `CERG-PRC-TM-001`, `CERG-PRC-TI-001`, `CERG-PRC-AUD-001`, and `CERG-PRC-CHG-001` to Section 5.4 as Draft; removed the now-authored Group C procedure reservations from Section 7.2; noted that Security Awareness and Training and SOC / Forensics operations are intentionally out of CERG scope. |
 
 ### Review Triggers
 
