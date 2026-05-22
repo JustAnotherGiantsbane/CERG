@@ -12,7 +12,7 @@
 | **Version** | 1.21 |
 | **Status** | Published |
 | **Classification** | Public |
-| **Owner** | Cyber Governance Manager (Reporting) |
+| **Owner** | Governance Pillar Leader (Reporting) |
 | **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-TMPL-RM-001](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) · [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-GOV-OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) · [CERG_Risk_Management_Framework_v1.0](CERG_Risk_Management_Framework_v1.0.md) |
 | **Review Cycle** | Annual / On metrics-platform change |
@@ -139,7 +139,7 @@ The data source map tells the reporting team where each metric's underlying data
 | VM-001 – VM-004 | VM tool (e.g., Tenable) | Cyber Risk - VM | Hourly API → metrics platform | Tool outage: fall back to last-known-good snapshot with timestamp banner. |
 | DT-001 – DT-003 | SIEM + detection coverage tool | Cyber Risk - Detection | Nightly source inventory + detection registry export | Missing source: detection coverage shown as Red. |
 | CM-001 – CM-005 | Configuration / VM / Backup tools | Cyber Engineering - Platforms / Resilience | Nightly aggregation | Backup tool outage: pull from job log; flag as Amber. |
-| ID-001 – ID-004 | IdP / IGA / PAM | Cyber Engineering - Identity | Nightly export | Source change: re-baseline before publishing. |
+| ID-001 – ID-004 | IdP / IGA / PAM | Identity Engineer | Nightly export | Source change: re-baseline before publishing. |
 | TP-001 – TP-004 | TPRM tool | Cyber Risk - TPRM | Daily/weekly export | - |
 | GV-001 – GV-006 | CUI register / OT GRC / [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) program / Document Catalog | Cyber Governance - domain owners | Monthly publish | - |
 
