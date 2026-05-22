@@ -12,7 +12,7 @@
 | **Version** | 1.21 |
 | **Status** | Published |
 | **Classification** | Public |
-| **Owner** | Cyber Governance Manager (Enterprise IT/Cloud) |
+| **Owner** | Governance Pillar Leader (Enterprise IT/Cloud) |
 | **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / Upon Significant Change / Material Cloud Service Adoption |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r2](https://csrc.nist.gov/pubs/sp/800/171/r2/final) · [NIST 800-144](https://csrc.nist.gov/pubs/sp/800/144/final) · NIST RMF · CSA CCM v4 |
@@ -323,7 +323,7 @@ This standard shall be reviewed annually and upon any of the following triggerin
 - Changes to [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final), 800-171, CSA CCM, or [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC guidance that materially affect requirements herein
 - Direction from the CISO, internal audit findings, or external regulatory examination
 
-Governance owns this document. The Cyber Governance Manager (Enterprise IT/Cloud) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO approval for all changes.
+Governance owns this document. The Governance Pillar Leader (Enterprise IT/Cloud) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO approval for all changes.
 
 ### Related Documents
 
