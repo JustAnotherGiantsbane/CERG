@@ -12,7 +12,7 @@
 | **Version** | 1.21 |
 | **Status** | Published |
 | **Classification** | Public |
-| **Owner** | Cyber Engineering Manager (Platforms) |
+| **Owner** | Engineering Pillar Leader (Platforms) |
 | **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Supporting Standards** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-CFG-001](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-RES-001](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) |
 | **Review Cycle** | Annual / On NIST FIPS publication change · On crypto algorithm deprecation |
@@ -317,7 +317,7 @@ The checklist below is the minimum for any system in CUI scope, FedRAMP Moderate
 | **Role** | **Cryptography Responsibility** |
 |---|---|
 | **Cyber Engineering - Platforms** | Owns this standard. Maintains the cryptographic inventory (algorithms in use, keys, certificates). Operates the KMS/HSM and secrets management platforms. Drives migrations off deprecated algorithms. |
-| **Cyber Engineering - Identity** | Implements credential-side controls per [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md); integrates IdP/PAM token issuance with this standard. |
+| **Identity Engineer** | Implements credential-side controls per [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md); integrates IdP/PAM token issuance with this standard. |
 | **Cyber Risk** | Detects use of prohibited algorithms via DISH and other tooling; tracks deprecation risk in the risk register. |
 | **Cyber Governance** | Maintains exceptions register for transitional algorithms; tracks audit-facing evidence; cross-references with control library. |
 | **Asset Owners** | Choose CMK vs. provider-managed key per Section 6 with Engineering guidance; budget for HSM/KMS cost where applicable. |
