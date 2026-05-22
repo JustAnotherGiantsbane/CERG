@@ -12,7 +12,7 @@
 | **Version** | 1.21 |
 | **Status** | Published |
 | **Classification** | Public |
-| **Owner** | Cyber Governance Manager (Risk Register) |
+| **Owner** | Governance Pillar Leader (Risk Register) |
 | **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Supporting Standards** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) |
 | **Review Cycle** | Annual / Upon Significant Change / Major Tooling Change |
@@ -391,7 +391,7 @@ This procedure shall be reviewed annually and upon any of the following:
 - A significant incident or audit finding affecting the program
 - Direction from the CISO
 
-Governance owns this procedure. The Cyber Governance Manager (Risk Register) is responsible for revisions, ongoing maintenance, and obtaining CISO approval for material updates.
+Governance owns this procedure. The Governance Pillar Leader (Risk Register) is responsible for revisions, ongoing maintenance, and obtaining CISO approval for material updates.
 
 ### Related Documents
 
