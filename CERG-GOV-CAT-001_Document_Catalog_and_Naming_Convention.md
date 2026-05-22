@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.22 |
+| **Version** | 1.23 |
 | **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -100,6 +100,14 @@ Files are named `<DocumentID>_<Short_Title>.md` using underscore-separated title
 | `IMP` | Implementation and adaptation guidance |
 | `VAR` | Organization adaptation / variable and token scheme |
 | `MAT` | Maturity self-assessment |
+| `RAC` | Roles, responsibilities, and RACI |
+| `SDL` | Secure software development / application security |
+| `AM` | Asset management and inventory |
+| `NET` | Network security and segmentation |
+| `EP` | Endpoint and mobile security |
+| `DG` | Data governance and classification |
+| `AI` | Artificial intelligence security |
+| `MSG` | Email and messaging security |
 
 New domains are added only by amendment to this catalog.
 
@@ -172,6 +180,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Implementation and Adaptation Guide | Governance Pillar Leader | Draft |
 | [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) | Organization Adaptation Profile | Governance Pillar Leader | Draft |
 | [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) | Maturity Self-Assessment and Scorecard | Governance Pillar Leader | Draft |
+| [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Consolidated Roles, Responsibilities, and RACI Instrument | Governance Pillar Leader | Draft |
 
 ### 5.3 Standards
 
@@ -185,6 +194,13 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Logging, Monitoring, and Detection Standard | Cyber Risk - Detection | Approved |
 | [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Cyber Resilience and Backup Standard | Cyber Engineering - Resilience | Approved |
 | [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Cryptography and Key Management Standard | Cyber Engineering - Platforms | Approved |
+| [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) | Secure Software Development and Application Security Standard | Cyber Engineering - Application Security | Draft |
+| [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) | Asset Management and Inventory Standard | Cyber Engineering - Platforms | Draft |
+| [`CERG-STD-NET-001`](CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md) | Network Security and Segmentation Standard | Cyber Engineering - Platforms | Draft |
+| [`CERG-STD-EP-001`](CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md) | Endpoint and Mobile Security Standard | Cyber Engineering - Endpoint | Draft |
+| [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) | Data Governance and Classification Standard | Cyber Governance - Policy & Standards | Draft |
+| [`CERG-STD-AI-001`](CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) | Artificial Intelligence Security Standard | Cyber Engineering - Application Security | Draft |
+| [`CERG-STD-MSG-001`](CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md) | Email and Messaging Security Standard | Cyber Engineering - Platforms | Draft |
 
 ### 5.4 Procedures
 
