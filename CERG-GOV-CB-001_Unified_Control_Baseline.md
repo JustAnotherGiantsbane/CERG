@@ -12,7 +12,7 @@
 | **Version** | 1.21 |
 | **Status** | Published |
 | **Classification** | Public |
-| **Owner** | Cyber Governance Manager (Control Baseline) |
+| **Owner** | Governance Pillar Leader (Control Baseline) |
 | **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Supporting Standards** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-CFG-001](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-RES-001](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) |
 | **Review Cycle** | Annual - and on framework version change ([NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) rev, [CMMC](https://dodcio.defense.gov/CMMC/) rev, NERC-CIP version) |
@@ -381,7 +381,7 @@ The CERG control family spine in §3 lists 19 NIST 800-53 families. §6 details 
 
 ### 10.1 Ownership
 
-The Cyber Governance Manager owns this baseline. Material changes (additions, removals, parameter changes that affect remediation SLAs or evidence requirements) require CISO approval; non-material changes (clarifications, typo fixes, additional implementation notes) require Governance Pillar Leader approval.
+The Governance Pillar Leader owns this baseline. Material changes (additions, removals, parameter changes that affect remediation SLAs or evidence requirements) require CISO approval; non-material changes (clarifications, typo fixes, additional implementation notes) require Governance Pillar Leader approval.
 
 Pillar leaders may propose changes at any time. The Governance Pillar Leader runs an open intake at the monthly Compliance Pulse forum (per [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §7).
 
@@ -431,7 +431,7 @@ When a control in §6 or an overlay in §7 changes, Governance issues a "ripple 
 | **Status** | Approved |
 | **Effective Date** | 2026-05-01 |
 | **Classification** | Internal - Confidential |
-| **Owner** | Cyber Governance Manager (Control Baseline) |
+| **Owner** | Governance Pillar Leader (Control Baseline) |
 | **Approved By** | Chief Information Security Officer |
 | **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on framework version change (NIST 800-53 rev, CMMC rev, NERC-CIP version) |
