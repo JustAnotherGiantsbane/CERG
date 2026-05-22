@@ -12,7 +12,7 @@
 | **Version** | 1.21 |
 | **Status** | Published |
 | **Classification** | Public |
-| **Owner** | Cyber Governance Manager (Document Control) |
+| **Owner** | Governance Pillar Leader (Document Control) |
 | **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Quarterly - or upon any artifact add/retire |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · ISO/IEC 27001 A.5 |
@@ -111,12 +111,12 @@ New domains are added only by amendment to this catalog.
 | **Type Code** | **Type** | **Authority** | **What It Looks Like** |
 |---|---|---|---|
 | `POL` | Policy | CISO / Executive | Durable principles. Short. Rarely changes. One per program. |
-| `STD` | Standard | Cyber Governance Manager | Specific, measurable, technology-aware requirements that implement policy principles. |
+| `STD` | Standard | Governance Pillar Leader | Specific, measurable, technology-aware requirements that implement policy principles. |
 | `PRC` | Procedure | Pillar Owner | Step-by-step "how" - workflow, owner, evidence, frequency. |
 | `PLN` | Plan / Operational Package | Pillar Owner | Bundled procedure + templates + checklists for a regulated or assessor-facing program (e.g., CIP, CUI, [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)). |
 | `GL` | Guideline | Pillar Owner | Recommendations and good practice, not mandatory. |
 | `TMPL` | Template | Pillar Owner | A blank artifact to be filled in (intake form, exception request, SSP). |
-| `GOV` | Governance Instrument | Cyber Governance Manager | Cross-cutting instruments that aren't a single policy/standard/procedure - catalogs, control baselines, operating model, metrics dictionary. |
+| `GOV` | Governance Instrument | Governance Pillar Leader | Cross-cutting instruments that aren't a single policy/standard/procedure - catalogs, control baselines, operating model, metrics dictionary. |
 
 > **PLN vs. PRC**
 >
@@ -137,10 +137,10 @@ New domains are added only by amendment to this catalog.
 Approval authority follows [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) Section 7:
 
 - Policy (`POL`), CISO approves; Executive leadership endorses.
-- Standard (`STD`), Cyber Governance Manager approves; CISO endorses.
-- Procedure / Plan / Guideline (`PRC`, `PLN`, `GL`), Pillar Owner approves; Cyber Governance Manager endorses.
+- Standard (`STD`), Governance Pillar Leader approves; CISO endorses.
+- Procedure / Plan / Guideline (`PRC`, `PLN`, `GL`), Pillar Owner approves; Governance Pillar Leader endorses.
 - Template (`TMPL`), Pillar Owner approves.
-- Governance instrument (`GOV`), Cyber Governance Manager approves.
+- Governance instrument (`GOV`), Governance Pillar Leader approves.
 
 ---
 
@@ -159,13 +159,13 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | **ID** | **Title** | **Owner** | **Status** |
 |---|---|---|---|
 | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | CERG Operating Model | CISO / Pillar Owners | Approved |
-| `CERG-GOV-CAT-001` | Document Catalog and Naming Convention | Cyber Governance Manager | Approved (this doc) |
-| [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Unified Control Baseline | Cyber Governance Manager | Approved |
-| [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Metrics, Dashboard, and CISO/Board Reporting | Cyber Governance Manager | Approved |
+| `CERG-GOV-CAT-001` | Document Catalog and Naming Convention | Governance Pillar Leader | Approved (this doc) |
+| [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Unified Control Baseline | Governance Pillar Leader | Approved |
+| [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Metrics, Dashboard, and CISO/Board Reporting | Governance Pillar Leader | Approved |
 | [`CERG-GOV-FRM-001`](CERG%20Framework%20-%20Cyber%20Engineering%20Risk%20and%20Governance.md) | SURGE / CERG Framework (narrative) | CISO | Approved |
-| [`CERG-GOV-RMF-001`](CERG_Risk_Management_Framework_v1.0.md) | Risk Management Framework | Cyber Governance Manager | Approved |
+| [`CERG-GOV-RMF-001`](CERG_Risk_Management_Framework_v1.0.md) | Risk Management Framework | Governance Pillar Leader | Approved |
 | [`CERG-GOV-TAX-001`](CERG%20Risk%20Taxonomy.md) | Risk Taxonomy | Cyber Risk | Approved |
-| [`CERG-GOV-CMX-001`](CERG%20Compliance%20Matrix.md) | Compliance Matrix | Cyber Governance Manager | Approved |
+| [`CERG-GOV-CMX-001`](CERG%20Compliance%20Matrix.md) | Compliance Matrix | Governance Pillar Leader | Approved |
 
 ### 5.3 Standards
 
@@ -187,7 +187,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Vulnerability Management Procedure | Cyber Risk | Approved |
 | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Risk Register and Exception Process | Cyber Governance - Risk Register | Approved |
 | [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Architecture Review and Project Intake Procedure | Cyber Engineering | Approved |
-| [`CERG-PRC-AC-002`](CERG-PRC-AC-002_Access_Management_Runbook.md) | Access Management Runbook | Cyber Engineering - Identity (or IAM team if external) | Approved |
+| [`CERG-PRC-AC-002`](CERG-PRC-AC-002_Access_Management_Runbook.md) | Access Management Runbook | Identity Engineer (or IAM team if external) | Approved |
 | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Third-Party and Supply Chain Risk Procedure | Cyber Risk - Vendor Risk | Approved |
 | [`CERG-PRC-AV-001`](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) | Adversarial Validation Procedure | Cyber Risk - Offensive Security | Approved |
 
