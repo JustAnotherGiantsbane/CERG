@@ -12,7 +12,7 @@
 | **Version** | 1.21 |
 | **Status** | Published |
 | **Classification** | Public |
-| **Owner** | Cyber Engineering Manager (Identity) - or IAM team lead when IAM is owned outside CERG, with CERG as cyber contributor |
+| **Owner** | Identity Engineer - or IAM team lead when IAM is owned outside CERG, with CERG as cyber contributor |
 | **Parent Standard** | [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) - Access Management Standard |
 | **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
 | **Review Cycle** | Annual / On IAM tooling change |
