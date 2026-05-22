@@ -244,34 +244,34 @@ The structure below is a pattern, not a fixed org chart. Smaller organizations c
 
 This roster is the single source of truth for role names used throughout the CERG document library. When a standard, procedure, plan, or template refers to "the Risk Manager" or "the IR Plan Steward," it means the canonical name listed below. Documents that use a synonym (column 3) are calling the same role; the corrective action is to update the citing document to the canonical name on its next revision, not to invent a new role.
 
-Roles are organized by pillar. Sub-role variants (e.g., Cyber Engineering Manager - Cloud vs. Cyber Engineering Manager - OT) are scaled out from the canonical name with a parenthetical domain qualifier.
+Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leader - Cloud vs. Engineering Pillar Leader - OT) are scaled out from the canonical name with a parenthetical domain qualifier.
 
 | Canonical Role | Pillar / Group | Common Synonyms (Do Not Use) | Primary Responsibilities |
 |---|---|---|---|
 | **Chief Information Security Officer (CISO)** | Executive | - | Strategy, board reporting, final authority on High and Critical risk acceptance per [`CERG_RMF`](CERG_Risk_Management_Framework_v1.0.md) §9.7. |
-| **Executive Sponsor** | Business / Executive | "VP," "Business Sponsor," "Leadership" | Concurrence for Critical risk acceptance per RMF §9.7; business representative on the COG; named per system in the categorization register. |
-| **Engineering Pillar Leader** | Engineering | "Cyber Engineering Manager," "Engineering Manager" (when speaking of the pillar lead) | Pillar accountability; project intake; reference-architecture authority. |
-| **Cloud Security Engineer** | Engineering | "Cyber Engineering - Cloud" | Cloud platforms, IaC, CSPM gating, landing-zone authority. |
-| **Identity Engineer** | Engineering | "Cyber Engineering - Identity," "Cyber Engineering Manager (Identity)" | IdP, MFA, SSO, PAM, secrets management, federation. |
-| **OT Security Engineer** | Engineering | "Cyber Engineering - OT," "OT/ICS Engineer" | IT/OT convergence, ESP/EAP design, BES Cyber System baselines. |
-| **Application Security Engineer** | Engineering | "AppSec Engineer," "Product Security Engineer" | SAST/DAST, SDLC controls, threat modeling. |
-| **Endpoint Engineer** | Engineering | "Workplace Engineer" | Endpoint, EDR, OS baselines. |
-| **Cryptography Engineer** | Engineering | "Cyber Engineering - Platforms (Crypto)" | Key management, CA hierarchy, TLS posture, FIPS compliance. |
+| **Executive Sponsor** | Business / Executive | "VP," "Executive Sponsor," "Leadership" | Concurrence for Critical risk acceptance per RMF §9.7; business representative on the COG; named per system in the categorization register. |
+| **Engineering Pillar Leader** | Engineering | "Engineering Pillar Leader," "Engineering Manager" (when speaking of the pillar lead) | Pillar accountability; project intake; reference-architecture authority. |
+| **Cloud Security Engineer** | Engineering | "Cloud Security Engineer" | Cloud platforms, IaC, CSPM gating, landing-zone authority. |
+| **Identity Engineer** | Engineering | "Identity Engineer," "Identity Engineer" | IdP, MFA, SSO, PAM, secrets management, federation. |
+| **OT Security Engineer** | Engineering | "OT Security Engineer," "OT Security Engineer" | IT/OT convergence, ESP/EAP design, BES Cyber System baselines. |
+| **Application Security Engineer** | Engineering | "Application Security Engineer," "Application Security Engineer" | SAST/DAST, SDLC controls, threat modeling. |
+| **Endpoint Engineer** | Engineering | "Endpoint Engineer" | Endpoint, EDR, OS baselines. |
+| **Cryptography Engineer** | Engineering | "Cryptography Engineer" | Key management, CA hierarchy, TLS posture, FIPS compliance. |
 | **Pre-production Reviewer** | Engineering (rotated) | - | Owns the pre-production checklist; signs off on go-live readiness. |
-| **Risk Pillar Leader** | Risk | "Cyber Risk Manager" (when speaking of the lead), "Risk Manager" | Pillar accountability; exposure posture reporting; Medium severity risk-acceptance authority per RMF §9.7. |
-| **Vulnerability Management Lead** | Risk | "Cyber Risk Manager (Vulnerability Management)" | Operates [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md); owns SLAs and posture metrics. |
-| **Adversarial Testing Lead** | Risk | "Cyber Risk Manager (Offensive Security)," "Red Team Lead" | Operates [`CERG-PRC-AV-001`](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md); pen test, red team, purple team. |
-| **Threat Intelligence Analyst** | Risk | "Senior Risk Analyst - Threat Intelligence" | Threat-actor tracking; advisories; intel-to-detection translation. |
-| **Vendor Risk Analyst** | Risk | "Cyber Risk Manager (Vendor Risk)," "TPRM Analyst" | Operates [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md); SCCT participation. |
+| **Risk Pillar Leader** | Risk | "Risk Pillar Leader" (when speaking of the lead), "Risk Manager" | Pillar accountability; exposure posture reporting; Medium severity risk-acceptance authority per RMF §9.7. |
+| **Vulnerability Management Lead** | Risk | "Vulnerability Management Lead" | Operates [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md); owns SLAs and posture metrics. |
+| **Adversarial Testing Lead** | Risk | "Adversarial Testing Lead," "Adversarial Testing Lead" | Operates [`CERG-PRC-AV-001`](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md); pen test, red team, purple team. |
+| **Threat Intelligence Analyst** | Risk | "Threat Intelligence Analyst" | Threat-actor tracking; advisories; intel-to-detection translation. |
+| **Vendor Risk Analyst** | Risk | "Vendor Risk Analyst," "Vendor Risk Analyst" | Operates [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md); SCCT participation. |
 | **OT Risk Analyst** | Risk | - | OT-safe vuln assessment, ICS threat intelligence. |
 | **Identity Risk Analyst** | Risk | - | UEBA, identity-threat detection, OAuth and token risk. |
-| **Detection Engineer** | Risk | "Risk - Detection Engineering," "Cloud Posture / Detection Engineer" | Detection-rule authoring; ATT&CK coverage; tuning lifecycle. |
-| **Governance Pillar Leader** | Governance | "Cyber Governance Manager," "Governance Manager" (when speaking of the lead) | Pillar accountability; regulator and auditor liaison; CISO reporting; Low and Informational severity risk-acceptance authority per RMF §9.7. |
-| **NERC-CIP Compliance Manager** | Governance | "Senior Governance Analyst - OT/NERC-CIP" | OT and BES Cyber System compliance posture. |
-| **CMMC / Federal Compliance Manager** | Governance | "Governance / Compliance Analyst - Federal Programs" | CUI posture; SSP and POA&M maintenance. |
-| **SOX ITGC Lead** | Governance | "Governance / Compliance Analyst - Commercial Frameworks (SOX)" | ITGC control evidence and audit coordination. |
-| **Policy & Standards Manager** | Governance | "Governance / Compliance Analyst - Policy & QA" | Document library, version control, review cycles. |
-| **Risk Register Owner** | Governance | "Risk Register Manager" | Operates [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md); curates the register; runs the Monthly Risk Register Review. |
+| **Detection Engineer** | Risk | "Detection Engineer," "Detection Engineer" | Detection-rule authoring; ATT&CK coverage; tuning lifecycle. |
+| **Governance Pillar Leader** | Governance | "Governance Pillar Leader," "Governance Pillar Leader" (when speaking of the lead) | Pillar accountability; regulator and auditor liaison; CISO reporting; Low and Informational severity risk-acceptance authority per RMF §9.7. |
+| **NERC-CIP Compliance Manager** | Governance | "NERC-CIP Compliance Manager" | OT and BES Cyber System compliance posture. |
+| **CMMC / Federal Compliance Manager** | Governance | "CMMC / Federal Compliance Manager" | CUI posture; SSP and POA&M maintenance. |
+| **SOX ITGC Lead** | Governance | "SOX ITGC Lead" | ITGC control evidence and audit coordination. |
+| **Policy & Standards Manager** | Governance | "Policy & Standards Manager" | Document library, version control, review cycles. |
+| **Risk Register Owner** | Governance | "Risk Register Owner" | Operates [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md); curates the register; runs the Monthly Risk Register Review. |
 | **Evidence Librarian** | Governance | - | Cross-framework evidence library curation. |
 | **Incident Commander** | Adjacent (IR team) | "IC" | Single-decision authority during an active incident. |
 | **Lead Investigator** | Adjacent (IR team) | - | Risk-side technical lead during an active incident. |
@@ -288,8 +288,8 @@ Roles are organized by pillar. Sub-role variants (e.g., Cyber Engineering Manage
 | Cloud Security Engineer | Cloud platforms, landing zones, IaC, CSPM gating. |
 | Identity Engineer | IdP, MFA, SSO, PAM, secrets management, federation. |
 | OT Security Engineer | IT/OT convergence, ESP/EAP design, BES Cyber System baselines (see [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md)). |
-| Application / Product Security Engineer | SAST/DAST integration, SDLC controls, threat modeling. |
-| Endpoint / Workplace Engineer | Endpoint controls, EDR engineering, OS baselines. |
+| Application / Application Security Engineer | SAST/DAST integration, SDLC controls, threat modeling. |
+| Endpoint / Endpoint Engineer | Endpoint controls, EDR engineering, OS baselines. |
 | Cryptography Engineer | Key management, CA, TLS posture, FIPS compliance. |
 | Pre-production Reviewer (often a rotated function) | Owns the pre-production checklist; signs off on go-live readiness. |
 
@@ -299,7 +299,7 @@ Roles are organized by pillar. Sub-role variants (e.g., Cyber Engineering Manage
 |---|---|
 | Risk Pillar Leader | Pillar accountability; exposure posture reporting. |
 | Vulnerability Management Lead | Operates [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md); owns the SLAs and posture metrics. |
-| Cloud Posture / Detection Engineer | CSPM / SSPM operations and detection rules. |
+| Detection Engineer | CSPM / SSPM operations and detection rules. |
 | Threat Intelligence Analyst | Source curation, internal advisories, detection translation. |
 | Adversarial Testing Lead (Red Team) | Internal or partner-managed offensive validation. |
 | Vendor / Third-Party Risk Analyst | Vendor assessment and continuous monitoring. |
@@ -315,7 +315,7 @@ Roles are organized by pillar. Sub-role variants (e.g., Cyber Engineering Manage
 | [CMMC](https://dodcio.defense.gov/CMMC/) / Federal Compliance Manager | CUI posture (see [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md)). |
 | [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC Lead | ITGC control evidence and audit coordination. |
 | Policy & Standards Manager | Document library curation; review cycles. |
-| Risk Register Manager | Operates [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md); curates the register. |
+| Risk Register Owner | Operates [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md); curates the register. |
 | Evidence Librarian | Maintains the cross-framework evidence library. |
 | IR Plan Steward | Maintains [CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md); coordinates exercises and notification clocks. |
 
