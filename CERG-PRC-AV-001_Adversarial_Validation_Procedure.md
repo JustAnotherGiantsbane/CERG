@@ -12,7 +12,7 @@
 | **Version** | 1.21 |
 | **Status** | Published |
 | **Classification** | Public |
-| **Owner** | Cyber Risk Manager (Offensive Security) |
+| **Owner** | Adversarial Testing Lead |
 | **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md) |
 | **Review Cycle** | Annual / On material program change |
@@ -339,7 +339,7 @@ Final reports are distributed under the confidentiality terms in the RoE. Full r
 | **Role** | **Responsibility** |
 |---|---|
 | Risk - Offensive Security | Owns this procedure. Maintains the annual Adversarial Validation Plan. Conducts or oversees engagements. Authors RoEs and Charters. |
-| Risk - Detection Engineering | Partners on purple-team cycles; turns findings into detection upgrades. |
+| Detection Engineer | Partners on purple-team cycles; turns findings into detection upgrades. |
 | Engineering - Platforms | Remediates identified misconfigurations and control gaps. |
 | Engineering - Identity | Remediates identity-related findings; tunes identity detections. |
 | Governance - Compliance | Tracks regulator-required cadence (CIP, [CMMC](https://dodcio.defense.gov/CMMC/)); audit interface. |
