@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.24 |
+| **Version** | 1.25 |
 | **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -112,6 +112,9 @@ Files are named `<DocumentID>_<Short_Title>.md` using underscore-separated title
 | `TI` | Threat intelligence |
 | `AUD` | Audit and evidence management |
 | `CHG` | Security change management |
+| `BC` | Business continuity and disaster recovery |
+| `ISO` | ISO/IEC 27001 operational package |
+| `PRIV` | Privacy and data protection |
 
 New domains are added only by amendment to this catalog.
 
@@ -232,6 +235,9 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) | CUI / CMMC Operational Package | Cyber Governance - CUI/CMMC | Approved |
 | [`CERG-PLN-CIP-001`](CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) | NERC-CIP Operational Package | Cyber Governance - OT | Approved |
 | [`CERG-PLN-SOX-001`](CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) | SOX ITGC Operational Package | Cyber Governance - SOX | Approved |
+| [`CERG-PLN-BC-001`](CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md) | Business Continuity and Disaster Recovery Plan | Governance Pillar Leader | Draft |
+| [`CERG-PLN-ISO-001`](CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md) | ISO/IEC 27001 Operational Package | Governance Pillar Leader | Draft |
+| [`CERG-PLN-PRIV-001`](CERG-PLN-PRIV-001_Privacy_and_Data_Protection_Operational_Package.md) | Privacy and Data Protection Operational Package | Governance Pillar Leader | Draft |
 
 ### 5.6 Templates
 
@@ -267,7 +273,7 @@ An artifact moves from this section to Section 5 when it is authored and reaches
 
 ### 7.1 Status of the V1.x Build
 
-The V1.x build extends the original V1 library along four tracks: the adoption layer, the Engineering-pillar standards, the governance glue, and the missing procedures. As of this version of the catalog, the adoption layer (`IMP`, `VAR`, `MAT`), the seven Engineering and data standards (`SDL`, `AM`, `NET`, `EP`, `DG`, `AI`, `MSG`), the consolidated RACI instrument (`RAC`), and the Group C in-scope procedures (`IR-002`, `TM`, `TI`, `AUD`, `CHG`) are authored and registered in Section 5. The artifacts below remain planned.
+The V1.x build extends the original V1 library along five tracks: the adoption layer, the Engineering-pillar standards, the governance glue, the missing procedures, and the missing operational packages. As of this version of the catalog, the adoption layer (`IMP`, `VAR`, `MAT`), the seven Engineering and data standards (`SDL`, `AM`, `NET`, `EP`, `DG`, `AI`, `MSG`), the consolidated RACI instrument (`RAC`), the Group C in-scope procedures (`IR-002`, `TM`, `TI`, `AUD`, `CHG`), and the Group D operational packages (`BC`, `ISO`, `PRIV`) are authored and registered in Section 5. The artifacts below remain planned.
 
 ### 7.2 Planned Procedures
 
@@ -275,11 +281,7 @@ No in-scope Group C procedures remain planned in V1.x. Security Awareness and Tr
 
 ### 7.3 Planned Plans and Operational Packages
 
-| **ID** | **Title** | **Owner** | **Target** |
-|---|---|---|---|
-| `CERG-PLN-BC-001` | Business Continuity and Disaster Recovery Plan | Cyber Engineering - Resilience | V1.x |
-| `CERG-PLN-ISO-001` | ISO/IEC 27001 Operational Package | Cyber Governance | V2 |
-| `CERG-PLN-PRIV-001` | Privacy and Data Protection Operational Package | Cyber Governance | V2 |
+No Group D operational packages remain planned. Business Continuity and Disaster Recovery, ISO/IEC 27001, and Privacy and Data Protection packages are authored and registered in Section 5.5.
 
 ### 7.4 Planned Templates
 
@@ -303,7 +305,7 @@ V1.x promotes high-reuse templates to standalone `TMPL` artifacts, consistent wi
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.24 |
+| **Version** | 1.25 |
 | **Status** | Published |
 | **Effective Date** | 2026-05-21 |
 | **Classification** | Public |
@@ -325,6 +327,7 @@ V1.x promotes high-reuse templates to standalone `TMPL` artifacts, consistent wi
 | 1.22 | 2026-05-21 | Cyber Governance | Registered the adoption-layer domains `IMP`, `VAR`, and `MAT` in Section 2.1 and added `CERG-GOV-IMP-001`, `CERG-GOV-VAR-001`, and `CERG-GOV-MAT-001` to Section 5.2. |
 | 1.23 | 2026-05-21 | Cyber Governance | Registered domains `RAC`, `SDL`, `AM`, `NET`, `EP`, `DG`, `AI`, and `MSG`. Added `CERG-GOV-RAC-001` to Section 5.2 and seven standards to Section 5.3. Set `CERG-GOV-RAC-001` and the seven new standards to `Approved` on CISO sign-off. Restored the document to its full structure: completed the Section 6 Reference Discipline Test callout, and authored Section 7 (Artifact Roadmap) and Section 8 (Document Control), which had been absent. |
 | 1.24 | 2026-05-22 | Cyber Governance | Registered domains `TM`, `TI`, `AUD`, and `CHG`; added `CERG-PRC-IR-002`, `CERG-PRC-TM-001`, `CERG-PRC-TI-001`, `CERG-PRC-AUD-001`, and `CERG-PRC-CHG-001` to Section 5.4 as Draft; removed the now-authored Group C procedure reservations from Section 7.2; noted that Security Awareness and Training and SOC / Forensics operations are intentionally out of CERG scope. |
+| 1.25 | 2026-05-22 | Cyber Governance | Registered domains `BC`, `ISO`, and `PRIV`; added `CERG-PLN-BC-001`, `CERG-PLN-ISO-001`, and `CERG-PLN-PRIV-001` to Section 5.5 as Draft; removed the now-authored Group D operational package reservations from Section 7.3. |
 
 ### Review Triggers
 
