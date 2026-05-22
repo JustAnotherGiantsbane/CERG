@@ -12,7 +12,7 @@
 | **Version** | 1.21 |
 | **Status** | Published |
 | **Classification** | Public |
-| **Owner** | Cyber Governance Manager ([CMMC](https://dodcio.defense.gov/CMMC/) / Federal Compliance) |
+| **Owner** | Governance Pillar Leader ([CMMC](https://dodcio.defense.gov/CMMC/) / Federal Compliance) |
 | **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / Upon Significant Change / [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) Revision |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r2](https://csrc.nist.gov/pubs/sp/800/171/r2/final) (and r3 transition) · [NIST 800-172](https://csrc.nist.gov/pubs/sp/800/172/final) · NIST RMF |
@@ -365,7 +365,7 @@ This standard shall be reviewed annually and upon any of the following triggerin
 - A reportable cyber incident affecting CUI
 - DoD assessor or C3PAO finding requiring corrective action
 
-Governance owns this document. The Cyber Governance Manager ([CMMC](https://dodcio.defense.gov/CMMC/) / Federal Compliance) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO approval for all changes.
+Governance owns this document. The Governance Pillar Leader ([CMMC](https://dodcio.defense.gov/CMMC/) / Federal Compliance) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO approval for all changes.
 
 ### Related Documents
 
