@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.21 |
+| **Version** | 1.22 |
 | **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -97,6 +97,9 @@ Files are named `<DocumentID>_<Short_Title>.md` using underscore-separated title
 | `TAX` | Risk taxonomy |
 | `CMX` | Compliance matrix |
 | `RMF` | Risk Management Framework |
+| `IMP` | Implementation and adaptation guidance |
+| `VAR` | Organization adaptation / variable and token scheme |
+| `MAT` | Maturity self-assessment |
 
 New domains are added only by amendment to this catalog.
 
@@ -166,6 +169,9 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-GOV-RMF-001`](CERG_Risk_Management_Framework_v1.0.md) | Risk Management Framework | Governance Pillar Leader | Approved |
 | [`CERG-GOV-TAX-001`](CERG%20Risk%20Taxonomy.md) | Risk Taxonomy | Cyber Risk | Approved |
 | [`CERG-GOV-CMX-001`](CERG%20Compliance%20Matrix.md) | Compliance Matrix | Governance Pillar Leader | Approved |
+| [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Implementation and Adaptation Guide | Governance Pillar Leader | Draft |
+| [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) | Organization Adaptation Profile | Governance Pillar Leader | Draft |
+| [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) | Maturity Self-Assessment and Scorecard | Governance Pillar Leader | Draft |
 
 ### 5.3 Standards
 
