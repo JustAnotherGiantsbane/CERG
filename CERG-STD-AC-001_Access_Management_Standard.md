@@ -12,7 +12,7 @@
 | **Version** | 1.21 |
 | **Status** | Published |
 | **Classification** | Public |
-| **Owner** | Cyber Governance Manager (Identity & Access) |
+| **Owner** | Governance Pillar Leader (Identity & Access) |
 | **Parent Policy** | [CERG-POL-001](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / Upon Significant Change |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-63](https://pages.nist.gov/800-63-3/)-3 (B/C) · [NIST 800-171r2](https://csrc.nist.gov/pubs/sp/800/171/r2/final) · NIST RMF |
@@ -341,7 +341,7 @@ The following access types shall be treated as privileged and subject to the con
 - Internal audit or regulatory finding affecting access control
 - Direction from the CISO
 
-Governance owns this document. The Cyber Governance Manager (Identity & Access) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO approval for all changes.
+Governance owns this document. The Governance Pillar Leader (Identity & Access) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO approval for all changes.
 
 ### Related Documents
 
