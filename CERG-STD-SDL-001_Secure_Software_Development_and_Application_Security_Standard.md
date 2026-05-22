@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-STD-SDL-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Application Security) |
 | **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
@@ -253,11 +253,11 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 |---|---|
 | **Document ID** | CERG-STD-SDL-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-21 |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Application Security) |
-| **Approved By** | Governance Pillar Leader (pending); CISO endorses |
+| **Approved By** | Governance Pillar Leader; CISO endorses |
 | **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on NIST SSDF revision or material toolchain change |
 | **Next Scheduled Review** | 2027-05-21 |
@@ -269,7 +269,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.0 Draft | 2026-05-21 | Cyber Engineering | Initial release. Establishes the secure SDLC, software risk tiers, the security gate set, code review requirements, SAST/DAST/SCA testing requirements, the absolute no-secrets-in-code rule, dependency and SBOM requirements, pipeline and build security, infrastructure-as-code coverage, and software vulnerability handling. |
+| 1.0 | 2026-05-21 | Cyber Engineering | Initial release. Establishes the secure SDLC, software risk tiers, the security gate set, code review requirements, SAST/DAST/SCA testing requirements, the absolute no-secrets-in-code rule, dependency and SBOM requirements, pipeline and build security, infrastructure-as-code coverage, and software vulnerability handling. |
 
 ### Review Triggers
 

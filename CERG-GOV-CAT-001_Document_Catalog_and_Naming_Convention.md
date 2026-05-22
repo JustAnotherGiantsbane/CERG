@@ -180,7 +180,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Implementation and Adaptation Guide | Governance Pillar Leader | Draft |
 | [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) | Organization Adaptation Profile | Governance Pillar Leader | Draft |
 | [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) | Maturity Self-Assessment and Scorecard | Governance Pillar Leader | Draft |
-| [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Consolidated Roles, Responsibilities, and RACI Instrument | Governance Pillar Leader | Draft |
+| [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Consolidated Roles, Responsibilities, and RACI Instrument | Governance Pillar Leader | Approved |
 
 ### 5.3 Standards
 
@@ -194,13 +194,13 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Logging, Monitoring, and Detection Standard | Cyber Risk - Detection | Approved |
 | [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Cyber Resilience and Backup Standard | Cyber Engineering - Resilience | Approved |
 | [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Cryptography and Key Management Standard | Cyber Engineering - Platforms | Approved |
-| [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) | Secure Software Development and Application Security Standard | Cyber Engineering - Application Security | Draft |
-| [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) | Asset Management and Inventory Standard | Cyber Engineering - Platforms | Draft |
-| [`CERG-STD-NET-001`](CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md) | Network Security and Segmentation Standard | Cyber Engineering - Platforms | Draft |
-| [`CERG-STD-EP-001`](CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md) | Endpoint and Mobile Security Standard | Cyber Engineering - Endpoint | Draft |
-| [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) | Data Governance and Classification Standard | Cyber Governance - Policy & Standards | Draft |
-| [`CERG-STD-AI-001`](CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) | Artificial Intelligence Security Standard | Cyber Engineering - Application Security | Draft |
-| [`CERG-STD-MSG-001`](CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md) | Email and Messaging Security Standard | Cyber Engineering - Platforms | Draft |
+| [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) | Secure Software Development and Application Security Standard | Cyber Engineering - Application Security | Approved |
+| [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) | Asset Management and Inventory Standard | Cyber Engineering - Platforms | Approved |
+| [`CERG-STD-NET-001`](CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md) | Network Security and Segmentation Standard | Cyber Engineering - Platforms | Approved |
+| [`CERG-STD-EP-001`](CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md) | Endpoint and Mobile Security Standard | Cyber Engineering - Endpoint | Approved |
+| [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) | Data Governance and Classification Standard | Cyber Governance - Policy & Standards | Approved |
+| [`CERG-STD-AI-001`](CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) | Artificial Intelligence Security Standard | Cyber Engineering - Application Security | Approved |
+| [`CERG-STD-MSG-001`](CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md) | Email and Messaging Security Standard | Cyber Engineering - Platforms | Approved |
 
 ### 5.4 Procedures
 
@@ -246,4 +246,96 @@ These rules govern every "Related Documents" table, every footnote reference, an
 
 > **The Reference Discipline Test**
 >
-> A new CERG team member opens 
+> A new CERG team member opens any artifact, follows a reference, and arrives at exactly the document the reference named, at the version the catalog records, with no dead links and no surprises. If that holds for every reference in the library, the catalog is doing its job. If it does not, the catalog, not the citing document, is the artifact that needs the fix.
+
+---
+
+## 7. Artifact Roadmap (V1.x to V2)
+
+This section is the authoritative list of planned artifacts. Per Cross-Reference Rule 1, a planned artifact may be referenced by another artifact only if it appears here, and the reference is marked `(Planned, V1.x)` or `(Planned, V2)`.
+
+An artifact moves from this section to Section 5 when it is authored and reaches `Draft` or above. An artifact in this section has an ID reserved and an owner assigned but is not yet authoritative and must not be relied upon.
+
+### 7.1 Status of the V1.x Build
+
+The V1.x build extends the original V1 library along three tracks: the adoption layer, the Engineering-pillar standards, and the governance glue. As of this version of the catalog, the adoption layer (`IMP`, `VAR`, `MAT`), the seven Engineering and data standards (`SDL`, `AM`, `NET`, `EP`, `DG`, `AI`, `MSG`), and the consolidated RACI instrument (`RAC`) are authored and registered in Section 5. The artifacts below remain planned.
+
+### 7.2 Planned Procedures
+
+| **ID** | **Title** | **Owner** | **Target** |
+|---|---|---|---|
+| `CERG-PRC-TM-001` | Threat Modeling Procedure | Cyber Engineering - Application Security | V1.x |
+| `CERG-PRC-TI-001` | Threat Intelligence Procedure | Cyber Risk - Threat Intelligence | V1.x |
+| `CERG-PRC-AUD-001` | Audit and Evidence Management Procedure | Cyber Governance | V1.x |
+| `CERG-PRC-CHG-001` | Security Change Management Procedure | Cyber Governance | V1.x |
+
+### 7.3 Planned Plans and Operational Packages
+
+| **ID** | **Title** | **Owner** | **Target** |
+|---|---|---|---|
+| `CERG-PLN-BC-001` | Business Continuity and Disaster Recovery Plan | Cyber Engineering - Resilience | V1.x |
+| `CERG-PLN-ISO-001` | ISO/IEC 27001 Operational Package | Cyber Governance | V2 |
+| `CERG-PLN-PRIV-001` | Privacy and Data Protection Operational Package | Cyber Governance | V2 |
+
+### 7.4 Planned Templates
+
+V1.x promotes high-reuse templates to standalone `TMPL` artifacts, consistent with the note in Section 5.6. The planned template set includes the System Security Plan, the POA&M, the security exception request, the architecture and project intake form, the vendor security questionnaire, the incident report and post-incident review, the risk acceptance memo, the control evidence worksheet, and the board and CISO reporting deck. Each is assigned a `CERG-TMPL-<DOMAIN>-NNN` ID when authored and registered in Section 5.6 at that time.
+
+### 7.5 Planned Governance Instruments
+
+| **ID** | **Title** | **Owner** | **Target** |
+|---|---|---|---|
+| `CERG-GOV-CAL-001` | Annual Security and Governance Calendar | Cyber Governance | V1.x |
+| `CERG-GOV-STY-001` | Document Authoring and Style Guide | Cyber Governance - Policy & Standards | V1.x |
+
+> **The Roadmap Is a Commitment, Not a Wishlist**
+>
+> An ID in this section is a reserved identifier with a named owner. It is not a vague intention. When an artifact is listed here, a citing document is permitted to forward-reference it, which means readers will encounter the reference before the artifact exists. That is only safe if this section is honest: every entry has a real owner and a real target, and an entry that is no longer intended is removed by amendment, not left to mislead.
+
+---
+
+## 8. Document Control
+
+| Field | Value |
+|---|---|
+| **Document ID** | CERG-GOV-CAT-001 |
+| **Version** | 1.23 |
+| **Status** | Published |
+| **Effective Date** | 2026-05-21 |
+| **Classification** | Public |
+| **Owner** | Governance Pillar Leader (Document Control) |
+| **Approved By** | Governance Pillar Leader |
+| **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
+| **Review Cycle** | Quarterly, or upon any artifact add or retire |
+| **Next Scheduled Review** | 2026-08-21 |
+| **Frameworks** | NIST CSF 2.0 (GOVERN); ISO/IEC 27001 A.5 |
+| **Regulations** | Cross-cutting |
+| **Environments** | All CERG-managed documentation |
+
+### Revision History
+
+| **Version** | **Date** | **Author** | **Change Summary** |
+|---|---|---|---|
+| 1.0 | 2026-05-01 | Cyber Governance | Initial release. Established the naming convention, document types, the authority and status lifecycle, the V1 authoritative catalog, and the cross-reference rules. |
+| 1.21 | 2026-05-01 | Cyber Governance | Catalog maintenance release aligning artifact versions across the V1 library. |
+| 1.22 | 2026-05-21 | Cyber Governance | Registered the adoption-layer domains `IMP`, `VAR`, and `MAT` in Section 2.1 and added `CERG-GOV-IMP-001`, `CERG-GOV-VAR-001`, and `CERG-GOV-MAT-001` to Section 5.2. |
+| 1.23 | 2026-05-21 | Cyber Governance | Registered domains `RAC`, `SDL`, `AM`, `NET`, `EP`, `DG`, `AI`, and `MSG`. Added `CERG-GOV-RAC-001` to Section 5.2 and seven standards to Section 5.3. Set `CERG-GOV-RAC-001` and the seven new standards to `Approved` on CISO sign-off. Restored the document to its full structure: completed the Section 6 Reference Discipline Test callout, and authored Section 7 (Artifact Roadmap) and Section 8 (Document Control), which had been absent. |
+
+### Review Triggers
+
+- Any artifact added to, or retired from, the CERG library
+- Any new domain or type code required by a new artifact
+- A change to the naming convention or the cross-reference rules
+- A planned artifact in Section 7 reaching `Draft` or above, which moves it to Section 5
+- Direction from the CISO
+
+Governance owns this document. The Governance Pillar Leader (Document Control) is responsible for initiating reviews, managing the revision cycle, and obtaining approval for all changes.
+
+### Related Documents
+
+| **Document** | **ID** | **Relationship** |
+|---|---|---|
+| Cybersecurity Policy | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) | Parent policy; establishes the document hierarchy this catalog inventories |
+| CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Defines the roles cited as artifact owners |
+| Consolidated Roles, Responsibilities, and RACI Instrument | [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Master RACI for ownership of every artifact in this catalog |
+| Implementation and Adaptation Guide | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Adoption sequencing; instructs adopters to keep this catalog current | 

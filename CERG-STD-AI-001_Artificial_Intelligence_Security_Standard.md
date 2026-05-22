@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-STD-AI-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Application Security) |
 | **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
@@ -192,11 +192,11 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 |---|---|
 | **Document ID** | CERG-STD-AI-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-21 |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Application Security) |
-| **Approved By** | Governance Pillar Leader (pending); CISO endorses |
+| **Approved By** | Governance Pillar Leader; CISO endorses |
 | **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to AI use or AI regulation |
 | **Next Scheduled Review** | 2027-05-21 |
@@ -208,7 +208,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.0 Draft | 2026-05-21 | Cyber Engineering | Initial release. Establishes three AI use categories, acceptable use of AI, the data-classification limits on AI input (a prompt is an export), security requirements for in-house and embedded AI, the AI-specific threat set aligned to the OWASP LLM Top 10, third-party AI service assessment, and the governance of shadow AI through a path to sanctioned use rather than a pure block. |
+| 1.0 | 2026-05-21 | Cyber Engineering | Initial release. Establishes three AI use categories, acceptable use of AI, the data-classification limits on AI input (a prompt is an export), security requirements for in-house and embedded AI, the AI-specific threat set aligned to the OWASP LLM Top 10, third-party AI service assessment, and the governance of shadow AI through a path to sanctioned use rather than a pure block. |
 
 ### Review Triggers
 

@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-STD-MSG-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Platforms) |
 | **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
@@ -185,11 +185,11 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 |---|---|
 | **Document ID** | CERG-STD-MSG-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-21 |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Platforms) |
-| **Approved By** | Governance Pillar Leader (pending); CISO endorses |
+| **Approved By** | Governance Pillar Leader; CISO endorses |
 | **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to the email or collaboration platform |
 | **Next Scheduled Review** | 2027-05-21 |
@@ -201,7 +201,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.0 Draft | 2026-05-21 | Cyber Engineering | Initial release. Establishes email authentication (SPF, DKIM, DMARC to an enforcing policy), inbound email protection, anti-phishing built on effortless blame-free reporting, outbound email and data protection, mailbox and account security, governance of collaboration and messaging platforms, and email and messaging monitoring feeding the detection platform. |
+| 1.0 | 2026-05-21 | Cyber Engineering | Initial release. Establishes email authentication (SPF, DKIM, DMARC to an enforcing policy), inbound email protection, anti-phishing built on effortless blame-free reporting, outbound email and data protection, mailbox and account security, governance of collaboration and messaging platforms, and email and messaging monitoring feeding the detection platform. |
 
 ### Review Triggers
 

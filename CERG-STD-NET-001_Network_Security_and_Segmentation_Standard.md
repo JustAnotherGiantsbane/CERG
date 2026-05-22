@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-STD-NET-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Platforms) |
 | **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
@@ -184,11 +184,11 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 |---|---|
 | **Document ID** | CERG-STD-NET-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-21 |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Platforms) |
-| **Approved By** | Governance Pillar Leader (pending); CISO endorses |
+| **Approved By** | Governance Pillar Leader; CISO endorses |
 | **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to network architecture |
 | **Next Scheduled Review** | 2027-05-21 |
@@ -200,7 +200,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.0 Draft | 2026-05-21 | Cyber Engineering | Initial release. Establishes zero-trust architecture direction, network segmentation by function and criticality, boundary control with owned and reviewed rules, the elevated-bar IT/OT boundary, remote access requirements including time-bound vendor access, cloud network security, and network monitoring including east-west visibility. |
+| 1.0 | 2026-05-21 | Cyber Engineering | Initial release. Establishes zero-trust architecture direction, network segmentation by function and criticality, boundary control with owned and reviewed rules, the elevated-bar IT/OT boundary, remote access requirements including time-bound vendor access, cloud network security, and network monitoring including east-west visibility. |
 
 ### Review Triggers
 

@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-STD-EP-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Endpoint) |
 | **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
@@ -195,11 +195,11 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 |---|---|
 | **Document ID** | CERG-STD-EP-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-21 |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Endpoint) |
-| **Approved By** | Governance Pillar Leader (pending); CISO endorses |
+| **Approved By** | Governance Pillar Leader; CISO endorses |
 | **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to the endpoint or mobility estate |
 | **Next Scheduled Review** | 2027-05-21 |
@@ -211,7 +211,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.0 Draft | 2026-05-21 | Cyber Engineering | Initial release. Establishes endpoint classes, baseline endpoint protection including removal of standing local administrator rights, endpoint detection and response, the device posture signal consumed by the network and access standards, mobile device management, bounded bring-your-own-device terms, and control of transient and removable devices. |
+| 1.0 | 2026-05-21 | Cyber Engineering | Initial release. Establishes endpoint classes, baseline endpoint protection including removal of standing local administrator rights, endpoint detection and response, the device posture signal consumed by the network and access standards, mobile device management, bounded bring-your-own-device terms, and control of transient and removable devices. |
 
 ### Review Triggers
 

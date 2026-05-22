@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-STD-DG-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
@@ -199,11 +199,11 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 |---|---|
 | **Document ID** | CERG-STD-DG-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-21 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
-| **Approved By** | Governance Pillar Leader (pending); CISO endorses |
+| **Approved By** | Governance Pillar Leader; CISO endorses |
 | **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to data handling obligations |
 | **Next Scheduled Review** | 2027-05-21 |
@@ -215,7 +215,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.0 Draft | 2026-05-21 | Cyber Governance | Initial release. Establishes the four-level classification scheme, how data is classified and labeled, the handling-requirements table that drives treatment across the other standards, the data lifecycle, retention and disposal with indefinite retention treated as a finding, and data loss prevention. Provides the general classification scheme that CERG-STD-AM-001 and CERG-STD-CUI-001 reference. |
+| 1.0 | 2026-05-21 | Cyber Governance | Initial release. Establishes the four-level classification scheme, how data is classified and labeled, the handling-requirements table that drives treatment across the other standards, the data lifecycle, retention and disposal with indefinite retention treated as a finding, and data loss prevention. Provides the general classification scheme that CERG-STD-AM-001 and CERG-STD-CUI-001 reference. |
 
 ### Review Triggers
 

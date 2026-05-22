@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-RAC-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
@@ -332,11 +332,11 @@ Risk-acceptance authority does not consolidate freely. The separation of the per
 |---|---|
 | **Document ID** | CERG-GOV-RAC-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-21 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
-| **Approved By** | Governance Pillar Leader (pending); CISO endorses |
+| **Approved By** | Governance Pillar Leader; CISO endorses |
 | **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on any change to the canonical role roster or the artifact catalog |
 | **Next Scheduled Review** | 2027-05-21 |
@@ -348,7 +348,7 @@ Risk-acceptance authority does not consolidate freely. The separation of the per
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.0 Draft | 2026-05-21 | Cyber Governance | Initial release. Consolidates the per-process RACI that CERG-GOV-OM-001 §9 deferred. Establishes RACI definitions and rules, a canonical role reference, a master RACI for document ownership, a master RACI for standing processes across engagement, risk, governance, and operations, normalized descriptions for all 27 canonical roles, and a scaling map showing role consolidation onto a five-person team. |
+| 1.0 | 2026-05-21 | Cyber Governance | Initial release. Consolidates the per-process RACI that CERG-GOV-OM-001 §9 deferred. Establishes RACI definitions and rules, a canonical role reference, a master RACI for document ownership, a master RACI for standing processes across engagement, risk, governance, and operations, normalized descriptions for all 27 canonical roles, and a scaling map showing role consolidation onto a five-person team. |
 
 ### Review Triggers
 
