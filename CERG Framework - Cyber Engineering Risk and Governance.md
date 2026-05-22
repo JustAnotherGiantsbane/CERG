@@ -429,22 +429,22 @@ A representative staffing structure for a CERG of this scale:
 |Role|Pillar|Key Responsibilities|
 |---|---|---|
 |CISO|Executive|Strategy, CERG leadership, board and executive reporting, regulatory escalation, budget authority|
-|Cyber Engineering Manager|Engineering|Engagement portfolio oversight; vertical alignment model; OT/IT convergence program lead; senior architecture decisions; team development|
+|Engineering Pillar Leader|Engineering|Engagement portfolio oversight; vertical alignment model; OT/IT convergence program lead; senior architecture decisions; team development|
 |Senior Cyber Engineer - OT/ICS (×3)|Engineering|Generation, transmission, and distribution vertical leads; SCADA and substation security architecture; CIP-005/CIP-010 design consultation; OT modernization advisory|
 |Senior Cyber Engineer - IT/Cloud (×3)|Engineering|Enterprise IT and cloud vertical leads; application and infrastructure security architecture; identity and access design; pre-production assessment leadership|
 |Cyber Engineer (×8)|Engineering|Project-level security consultation across assigned verticals; pre-production coordination with Risk; vendor solution review; risk treatment plan drafting; handoff documentation|
-|Cyber Risk Manager|Risk|Program ownership across vuln management, pen testing, threat intel, and vendor risk; OT risk strategy; executive risk reporting|
+|Risk Pillar Leader|Risk|Program ownership across vuln management, pen testing, threat intel, and vendor risk; OT risk strategy; executive risk reporting|
 |Senior Risk Analyst - Vulnerability Management (×3)|Risk|Enterprise vuln scan operations; OT-safe scanning program; finding prioritization and triage; SLA tracking and escalation; remediation verification|
-|Senior Risk Analyst - Threat Intelligence (×2)|Risk|Threat actor tracking; ICS/OT-specific intelligence production; E-ISAC and ICS-CERT liaison; intelligence distribution to Engineering and IR|
+|Threat Intelligence Analyst (×2)|Risk|Threat actor tracking; ICS/OT-specific intelligence production; E-ISAC and ICS-CERT liaison; intelligence distribution to Engineering and IR|
 |Senior Risk Analyst - Vendor & Third-Party Risk (×2)|Risk|Vendor security assessment program; contractor access risk; contract redline support; supply chain risk reporting|
 |Risk Analyst - Penetration Testing & Red Team (×3)|Risk|Internal pen test execution; external red team coordination; OT adversarial testing; findings documentation and tracking|
 |Risk Analyst (×5)|Risk|Day-to-day vuln tracking and owner follow-up; vendor assessment support; threat feed monitoring; finding remediation documentation|
-|Cyber Governance Manager|Governance|Policy and standard ownership; NERC-CIP compliance program leadership; regulatory and audit liaison; risk register governance; Governance team development|
-|Senior Governance Analyst - OT/NERC-CIP (×3)|Governance|BES Cyber System compliance; CIP deviation and mitigation management; NERC-CIP evidence library; regulatory exam coordination; reliability-security interface|
+|Governance Pillar Leader|Governance|Policy and standard ownership; NERC-CIP compliance program leadership; regulatory and audit liaison; risk register governance; Governance team development|
+|NERC-CIP Compliance Manager (×3)|Governance|BES Cyber System compliance; CIP deviation and mitigation management; NERC-CIP evidence library; regulatory exam coordination; reliability-security interface|
 |Senior Governance Analyst - Technical Domains (×4)|Governance|Domain SME coverage across network security, IAM, cloud, and cryptography; implementation guidance production; standard development; Engineering QA reviews|
-|Governance / Compliance Analyst - Federal Programs (×3)|Governance|[CMMC](https://dodcio.defense.gov/CMMC/) SSP and POA&M management; 800-171 control tracking; C3PAO coordination; federal contract compliance calendar|
+|CMMC / Federal Compliance Manager (×3)|Governance|[CMMC](https://dodcio.defense.gov/CMMC/) SSP and POA&M management; 800-171 control tracking; C3PAO coordination; federal contract compliance calendar|
 |Governance / Compliance Analyst - Commercial Frameworks (×3)|Governance|and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC compliance; external audit coordination; evidence collection and library management; compliance calendar|
-|Governance / Compliance Analyst - Policy & QA (×3)|Governance|Policy and procedure documentation; version control and review cycles; cross-pillar QA reviews; training content support for Security Awareness|
+|Policy & Standards Manager (×3)|Governance|Policy and procedure documentation; version control and review cycles; cross-pillar QA reviews; training content support for Security Awareness|
 
 This distributes the 60-person CERG across approximately 14 Engineering staff, 15 Risk staff, and 13 Governance staff, with the CISO and pillar managers rounding out the team. The specific allocation will shift based on organizational priorities, a utility in the middle of a major grid modernization program will weight Engineering more heavily; one preparing for a [CMMC](https://dodcio.defense.gov/CMMC/) Level 2 assessment or a NERC-CIP audit cycle will weight Governance.
 
