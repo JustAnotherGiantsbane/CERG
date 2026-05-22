@@ -14,7 +14,7 @@
 | **Classification** | Public |
 | **Owner** | Vendor Risk Analyst |
 | **Parent Document** | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) - Third-Party and Supply Chain Risk Procedure |
-| **Supporting Documents** | [`CERG-STD-TPRM-001`](CERG-STD-TPRM-001_Third_Party_and_Supply_Chain_Risk_Standard.md) · [`CERG-PLN-PRIV-001`](CERG-PLN-PRIV-001_Privacy_and_Data_Protection_Operational_Package.md) |
+| **Supporting Documents** | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [`CERG-PLN-PRIV-001`](CERG-PLN-PRIV-001_Privacy_and_Data_Protection_Operational_Package.md) |
 | **Review Cycle** | Annual / On process or control change |
 | **Frameworks** | NIST CSF 2.0 GV.SC · NIST 800-53r5 SR · ISO/IEC 27001 A.5.19 through A.5.23 |
 | **Regulations** | Cross-cutting; privacy, CUI, SOX, and contractual obligations where applicable |

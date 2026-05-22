@@ -15,7 +15,7 @@
 | **Owner** | Governance Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) - Cybersecurity Policy |
 | **Parent Documents** | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) |
-| **Supporting Documents** | [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) · [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) · [`CERG-STD-TPRM-001`](CERG-STD-TPRM-001_Third_Party_and_Supply_Chain_Risk_Standard.md) · [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [`CERG-PRC-IR-002`](CERG-PRC-IR-002_Incident_Response_Playbook_Set.md) · [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
+| **Supporting Documents** | [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) · [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) · [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [`CERG-PRC-IR-002`](CERG-PRC-IR-002_Incident_Response_Playbook_Set.md) · [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
 | **Review Cycle** | Annual / On material privacy-law, data-processing, or vendor-scope change |
 | **Frameworks** | NIST Privacy Framework · ISO/IEC 27701 · ISO/IEC 27001 · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) |
 | **Regulations** | GDPR · CCPA / CPRA · state privacy laws · breach-notification laws · contractual privacy obligations |
@@ -171,7 +171,7 @@ Notification decisions remain with the Incident Commander, legal, executive, and
 
 ## 7. Third-Party Privacy Risk
 
-Third parties processing personal data are assessed through `CERG-STD-TPRM-001` and `CERG-PRC-TPRM-001` with privacy-specific evidence added.
+Third parties processing personal data are assessed through `CERG-PRC-TPRM-001` with privacy-specific evidence added.
 
 Minimum vendor privacy evidence:
 
@@ -316,8 +316,7 @@ Cyber Governance owns this package. The Governance Pillar Leader is responsible 
 | Unified Control Baseline | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control source for privacy-support controls |
 | Data Governance and Classification Standard | [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) | Classification, labeling, handling, retention, and DLP support |
 | Asset Management and Inventory Standard | [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) | System and ownership inventory |
-| Third-Party and Supply Chain Risk Standard | [`CERG-STD-TPRM-001`](CERG-STD-TPRM-001_Third_Party_and_Supply_Chain_Risk_Standard.md) | Vendor risk requirements |
-| Third-Party and Supply Chain Risk Procedure | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Vendor privacy evidence workflow |
+| Third-Party and Supply Chain Risk Procedure | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Vendor risk requirements and privacy evidence workflow |
 | Incident Response Playbook Set | [`CERG-PRC-IR-002`](CERG-PRC-IR-002_Incident_Response_Playbook_Set.md) | Privacy incident support evidence |
 | Audit and Evidence Management Procedure | [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) | Evidence retention |
 | Risk Register and Exception Process | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Privacy-related risks and exceptions |
