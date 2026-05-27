@@ -14,7 +14,7 @@
 | **Classification** | Public |
 | **Owner** | Adversarial Testing Lead |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md) |
+| **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md) · [CERG-GOV-CEF-001](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) · [CERG-GOV-IMPREG-001](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) · [CERG-PRC-LL-001](CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) |
 | **Review Cycle** | Annual / On material program change |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (CA-8) · NIST 800-115 · PTES · MITRE ATT&CK · MITRE D3FEND · OWASP WSTG / MASTG |
 | **Regulations** | NERC-CIP CIP-007 (vulnerability assessment) · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.11.2) · SOX (indirect via control testing) |
@@ -34,10 +34,11 @@
 8. [Application Penetration Test Checklist](#8-application-penetration-test-checklist)
 9. [OT Adversarial Assessment, Safety Protocol](#9-ot-adversarial-assessment--safety-protocol)
 10. [Finding Rating, Routing, and Retest](#10-finding-rating-routing-and-retest)
-11. [Evidence Retention](#11-evidence-retention)
+11. [Systemic Analysis and Program Feedback Loop](#11-systemic-analysis-and-program-feedback-loop)
 12. [Roles and Responsibilities](#12-roles-and-responsibilities)
-13. [Regulatory and Framework Alignment Summary](#13-regulatory-and-framework-alignment-summary)
-14. [Document Control](#14-document-control)
+13. [Evidence Retention](#13-evidence-retention)
+14. [Regulatory and Framework Alignment Summary](#14-regulatory-and-framework-alignment-summary)
+15. [Document Control](#15-document-control)
 
 ---
 
@@ -312,7 +313,80 @@ Findings are rated using a uniform schema regardless of engagement type, alignin
 
 ---
 
-## 11. Evidence Retention
+## 11. Systemic Analysis and Program Feedback Loop
+
+An Adaptive program does not stop at fixing individual pen-test findings. It asks: why did four of six DMZ servers share the same misconfiguration? What standard or procedure failed to prevent this? How do we change the program so the next engagement does not repeat the same class of finding?
+
+This section defines the post-engagement systemic analysis that converts adversarial validation findings into program improvements.
+
+### 11.1 Post-Engagement Systemic Analysis
+
+After every adversarial validation engagement, the Adversarial Testing Lead produces two outputs: a findings report (existing) and a systemic analysis (new). The systemic analysis answers four questions:
+
+1. **Which findings share a common root cause?** Example: four findings relate to default credentials on newly provisioned systems : the provisioning process does not enforce credential rotation. This is not four separate problems; it is one systemic weakness manifesting in four locations.
+2. **Which findings indicate a standard or procedure gap?** Example: DMZ web servers all had the same TLS misconfiguration : STD-CFG-001 or STD-NET-001 does not specify DMZ TLS requirements clearly enough.
+3. **Which findings indicate a control effectiveness gap?** Example: WAF was deployed per CB-001 but three bypass techniques worked : the WAF control is Implemented but not effective (per CEF-001).
+4. **Which findings indicate a detection gap?** Example: testers pivoted laterally for four hours without an alert : detection rules need updating for the observed technique chain.
+
+### 11.2 Systemic Finding Routing
+
+Each systemic finding is routed to the appropriate owner for program-level action:
+
+| Systemic Finding Type | Routed To | Tracking Mechanism |
+|---|---|---|
+| Standard or procedure gap | Governance Pillar Leader (Policy & Standards Manager) | IMPREG-001 (Type: Standard revision or Procedure update) |
+| Control effectiveness gap | Accountable pillar leader (per CB-001) | IMPREG-001 (Type: Control amendment) + CEF-001 control failure analysis |
+| Detection gap | Risk Pillar Leader (Detection Engineer) | Detection backlog per LM-001 + IMPREG-001 if systemic |
+| Process gap | Accountable procedure owner (per RAC-001) | IMPREG-001 (Type: Procedure update) |
+| Tooling or capability gap | Relevant pillar leader | IMPREG-001 (Type: New capability) + CISO if budget required |
+
+Routed systemic findings are tracked in the improvement register (IMPREG-001) per the improvement lifecycle. The source field records the engagement ID and date.
+
+### 11.3 Prevention Verification
+
+At the next adversarial validation engagement of the same type, scope, or target environment, the engagement plan includes re-testing the systemic weaknesses identified in the prior engagement.
+
+- If the same class of finding does NOT recur: the systemic improvement is verified Effective in IMPREG-001.
+- If the same class of finding recurs: the improvement is marked Ineffective or Partially Effective, re-opened in IMPREG-001, and the root cause analysis is re-examined. The fact that a deliberate program change did not prevent recurrence is itself a critical lesson.
+
+> **The Recurrence Test**
+>
+> An assessor reviewing two consecutive pen test reports should see: (a) the specific vulnerabilities from the prior test are closed, AND (b) the systemic weakness that produced them no longer produces new findings of the same class. If the second report finds different specific vulnerabilities but the same systemic root cause : different default credentials on different systems : the improvement failed. The program that only fixes individual findings and never the systemic cause is operating at Repeatable, not Adaptive.
+
+### 11.4 Annual Trend Analysis
+
+Annually, the Adversarial Testing Lead produces an adversarial validation trend analysis covering all engagements in the trailing 12 months:
+
+- Are total findings increasing or decreasing? Segmented by severity.
+- Are systemic weaknesses repeating across engagements?
+- Which control families (per CB-001) produce the most findings? The most Critical and High findings?
+- Which control families show improvement (fewer findings year-over-year)?
+- How many systemic findings were routed to IMPREG-001, and what was their verification outcome?
+
+The trend analysis feeds into:
+- The control effectiveness program (CEF-001): control families with persistently high finding rates trigger a control failure analysis
+- The risk appetite calibration (RMF-001): a finding-rate trend that undermines a risk appetite assumption triggers recalibration
+- The annual maturity assessment (MAT-001): finding-rate trends are evidence of control effectiveness or ineffectiveness
+
+---
+
+## 12. Roles and Responsibilities
+
+| Role | Responsibility |
+|---|---|
+| **Adversarial Testing Lead** | Owns this procedure. Produces the annual plan, engagement RoE/Charter, findings report, and systemic analysis. Routes systemic findings. Produces the annual trend analysis. |
+| **Risk Pillar Leader** | Accountable for the adversarial validation program. Approves the annual plan. Reviews systemic analysis outputs. |
+| **CISO** | Approves the annual plan. Authorizes red-team and OT engagements. Receives Critical finding notifications. |
+| **Engineering Pillar Leader** | Receives and acts on design, architecture, and configuration systemic findings. Participates in scoping. |
+| **Governance Pillar Leader** | Receives standard and procedure gap systemic findings. Coordinates catalog amendments resulting from systemic improvements. |
+| **Detection Engineer** | Receives detection gap findings. Updates detection rules and reports on coverage improvement. |
+| **Vulnerability Management Lead** | Receives specific vulnerability findings. Tracks remediation to closure per PRC-VM-001. |
+| **Risk Register Owner** | Records material findings as risk register entries. Links risk entries to improvement entries when systemic. |
+| **OT Safety Officer** | Named for each OT engagement. Holds binding stop authority. Reviews OT scope and safety constraints. |
+
+---
+
+## 13. Evidence Retention
 
 | **Artifact** | **Retention** | **Access** |
 |---|---|---|
@@ -333,7 +407,7 @@ Final reports are distributed under the confidentiality terms in the RoE. Full r
 > An unsanitized pen-test report is a road map for attackers and should be treated as Restricted. Distribution is named, encrypted, and audited; "wider sharing" requests are reviewed by the Engagement Sponsor.
 
 ---
-## 13. Regulatory and Framework Alignment Summary
+## 14. Regulatory and Framework Alignment Summary
 
 | **Regulation / Framework** | **Where in This Procedure** |
 |---|---|
@@ -347,13 +421,13 @@ Final reports are distributed under the confidentiality terms in the RoE. Full r
 
 ---
 
-## 14. Document Control
+## 15. Document Control
 
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AV-001 |
-| **Version** | 1.0 |
+| **Version** | 1.2 |
 | **Approved By** | Cyber Risk Pillar Leader (Offensive Security) · CISO endorsement |
 | **Next Review** | Annual / on material program change |
-| **Change Log** | 1.0 - Initial publication. Engagement types, RoE, charter, purple, cloud, app, OT safety, rating/routing, evidence retention. |
+| **Change Log** | 1.0 - Initial publication. Engagement types, RoE, charter, purple, cloud, app, OT safety, rating/routing, evidence retention. · 1.1 - Added Section 11 Systemic Analysis and Program Feedback Loop: post-engagement systemic analysis, systemic finding routing, prevention verification, and annual trend analysis. · 1.2 - Restored Section 12 Roles and Responsibilities. Renumbered Evidence Retention to Section 13, Regulatory to 14, Document Control to 15. |
 
