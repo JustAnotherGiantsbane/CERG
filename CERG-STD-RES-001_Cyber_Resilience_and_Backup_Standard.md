@@ -17,7 +17,7 @@
 | **Supporting Standards** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-CFG-001](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
 | **Review Cycle** | Annual / On major platform change |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (CP) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (RECOVER) · NIST 800-184 · ISO/IEC 27031 |
-| **Regulations** | NERC-CIP CIP-009 · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.8 / 3.6) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC (Backups / Operations) |
+| **Regulations** | NERC-CIP CIP-009 · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.8 / 3.6) · SOX ITGC (Backups / Operations) |
 | **Environments** | Owned data center · IaaS / PaaS · SaaS Tier 1 · OT (BES and non-BES) · CUI scopes |
 
 ---
@@ -158,7 +158,7 @@ Each full restoration test follows the procedure below and produces the evidence
 | Integrity check method and result | ✓ | - |
 | Issues encountered | ✓ | - |
 | Lessons learned and follow-up actions | ✓ | Risk register IDs if any |
-| Approver sign-off | ✓ | Engineering Manager + Asset Owner |
+| Approver sign-off | ✓ | Engineering Pillar Leader + Asset Owner |
 
 ---
 
@@ -179,8 +179,8 @@ Provider native restore is the first line; CERG-managed SaaS backup is added whe
 
 | **Tier 1 SaaS** | **Provider Native Restore Sufficient?** | **CERG-Managed SaaS Backup?** |
 |---|---|---|
-| M365 (Exchange / SharePoint / OneDrive / Teams) | Limited (retention / point-in-time) | Yes - for CUI workspaces and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant mailboxes/sites |
-| Salesforce | Limited | Yes - daily export for [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) in-scope orgs |
+| M365 (Exchange / SharePoint / OneDrive / Teams) | Limited (retention / point-in-time) | Yes - for CUI workspaces and SOX-relevant mailboxes/sites |
+| Salesforce | Limited | Yes - daily export for SOX in-scope orgs |
 | ServiceNow | Yes (provider managed) | Audit-only export quarterly |
 | Other Tier 1 | Decision per onboarding review | Documented in shared responsibility matrix |
 
@@ -230,11 +230,11 @@ CUI recovery aligns with [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/
 
 ---
 
-## 9. [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) Availability Evidence
+## 9. SOX Availability Evidence
 
-[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant systems (per [`CERG-PLN-SOX-001`](CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-Relevant System Register) require evidence of backup, restoration, and availability controls reusable in the [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) cycle.
+SOX-relevant systems (per [`CERG-PLN-SOX-001`](CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) SOX-Relevant System Register) require evidence of backup, restoration, and availability controls reusable in the SOX cycle.
 
-| **[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC - Backup / Operations** | **Reused CERG Evidence** |
+| **SOX ITGC - Backup / Operations** | **Reused CERG Evidence** |
 |---|---|
 | Backups are taken | Backup tool report; failure logs |
 | Backups can be restored | Restoration test evidence (this standard, Section 5.3) |
@@ -242,7 +242,7 @@ CUI recovery aligns with [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/
 | Failed jobs are remediated | Backup job ticket history |
 | Availability incidents are tracked | Incident records (per [`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md)) with cyber annotation |
 
-[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) evidence reuses these artifacts; no duplicate "[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-only" restoration test is performed.
+SOX evidence reuses these artifacts; no duplicate "SOX-only" restoration test is performed.
 
 ---
 
@@ -319,9 +319,13 @@ RECOVERY PLAN - <System / Cluster Name>           PLAN-RES-YYYY-NNNN
 A populated example is maintained in the resilience program library; the template is reused without modification.
 
 ---
+## 13. Document Control
 
-## 12. Regulatory and Framework Alignment Summary
+| | |
+|---|---|
+| **Document ID** | CERG-STD-RES-001 |
+| **Version** | 1.0 |
+| **Approved By** | Cyber Engineering Pillar Leader (Resilience) · CISO endorsement |
+| **Next Review** | Annual / major platform change |
+| **Change Log** | 1.0 - Initial publication. Establishes recovery tiers, backup protection, restoration testing, regulated overlays, and BCP interface. |
 
-| **Regulation / Framework** | **Section** | **Where in This Standard** |
-|---|---|---|
-| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) CP family | CP-2, CP-4

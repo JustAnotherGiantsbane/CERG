@@ -17,7 +17,7 @@
 | **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-CFG-001](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-RES-001](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
 | **Review Cycle** | Annual / On platform or process change |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (PL, SA, SC) · NIST 800-160 · NIST SSDF · CSA STAR |
-| **Regulations** | [CMMC L2](https://dodcio.defense.gov/CMMC/) · NERC-CIP CIP-005/CIP-010 · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC (Change) |
+| **Regulations** | [CMMC L2](https://dodcio.defense.gov/CMMC/) · NERC-CIP CIP-005/CIP-010 · SOX ITGC (Change) |
 | **Environments** | All in-scope projects - IT, cloud, SaaS, OT, hybrid |
 
 ---
@@ -61,7 +61,7 @@ This procedure defines how a project enters CERG attention, how Engineering revi
 | **Project / Technical Lead** | Produces the architecture artifacts and answers reviewer questions. Drives remediation between reviews. |
 | **CERG - Pre-production Reviewer** | Conducts the review. Maintains review record. Determines findings. Recommends handoff disposition. |
 | **Application Security Engineer** | Performs threat modeling. Performs vendor risk per [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) if third parties are involved. Adds findings to the risk register. |
-| **Governance Pillar Leader** | Maps the project into the regulatory scope (CUI / BES / [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)) and triggers the relevant overlay reviewers. |
+| **Governance Pillar Leader** | Maps the project into the regulatory scope (CUI / BES / SOX) and triggers the relevant overlay reviewers. |
 | **Engineering Pillar Leader** | Approves Standard findings. Approves Medium risk acceptances per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) §8. |
 | **CISO** | Approves High / Critical risk acceptances at go-live. |
 | **IT Change Advisory Board (CAB)** | Hosts the go-live conversation; CERG review status is a CAB input, not a substitute for change management. |
@@ -92,7 +92,7 @@ CERG Architecture Review is mandatory for projects that meet any of the followin
 - Introduces a new SaaS service (any tier) handling business data.
 - Touches OT / BES Cyber Systems or the IT/OT boundary (per [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md)).
 - Handles CUI (storage, processing, transmission) or changes the CUI boundary.
-- Handles [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant financial data or process flows.
+- Handles SOX-relevant financial data or process flows.
 - Introduces or changes a third-party network connection.
 - Modifies the production identity provider, federation, or PAM topology.
 - Introduces a new authentication path to a system holding Restricted data.
@@ -188,7 +188,7 @@ G. ASKS
 The Intake reviewer (CERG Engineering) determines:
 
 - Review path: **Mandatory** (Phase 2 full), **Lightweight** (self-service checklist), or **Out of Scope**.
-- Overlay reviewers required: CUI, BES, [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204), OT, each named by [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md).
+- Overlay reviewers required: CUI, BES, SOX, OT, each named by [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md).
 - Threat modeling required: Y/N (default Y for Mandatory; conditional for Lightweight).
 - TPRM engagement required: Y/N (default Y if any vendor is new or tier > business default).
 - Estimated Phase 2–5 effort and target dates.
@@ -218,7 +218,7 @@ The reviewer works through the checklist below; findings are recorded with sever
 | Third party | Vendor tier; evidence by tier; SCCT in workflow; international access guardrail | PRC-TPRM-001 |
 | OT (if applicable) | Active scan rules; passive monitoring; safety review; CIP applicability | STD-OT-001 / PLN-CIP-001 |
 | CUI (if applicable) | Boundary marked; FIPS crypto; flow-down; FedRAMP equivalency captured | STD-CUI-001 / PLN-CUI-001 |
-| [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) (if applicable) | ITGC mapping; evidence reuse | PLN-[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-001 |
+| SOX (if applicable) | ITGC mapping; evidence reuse | PLN-SOX-001 |
 | Citizen-dev (if applicable) | Built on approved platform with guardrails; data classification compatible | This procedure §4.3 |
 | Diagrams provided | Context · Data flow · Network · Identity · Trust boundary · OT boundary (where applicable) | This procedure §10 |
 | Risk register entries | All findings entered; treatment proposed | PRC-RM-001 |
@@ -279,7 +279,7 @@ Pre-Production review is a focused, time-boxed readiness check. It produces a Pr
 | Cryptography | TLS configuration matches [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md); CMK where required; secrets pattern in use | Configuration evidence |
 | Resilience | Backups configured per tier; first restoration test scheduled | Backup config; resilience register entry |
 | Vendor / TPRM | Vendor records current; evidence-by-tier complete; SCCT in workflow | TPRM tool entries |
-| Regulatory overlay artifacts | CUI / BES / [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) artifacts populated per relevant package | Per overlay |
+| Regulatory overlay artifacts | CUI / BES / SOX artifacts populated per relevant package | Per overlay |
 | Phase 2 conditions cleared | All conditions either met or risk-accepted | Phase 2 record annotations |
 | Asset inventory | System added; ownership recorded | Asset inventory |
 | Run-book / on-call | Service has documented on-call and run-book | Run-book reference |
@@ -396,9 +396,26 @@ Where a diagram is implicit (e.g., a pure SaaS service has no on-prem network), 
 The templates below are part of this procedure. The intake form (§5.1), threat model (§6.2), handoff package (§9.1), and go-live risk acceptance (§9.2) above are the authoritative templates. Promotion of any of these to a standalone `CERG-TMPL-AR-*` artifact is tracked in [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) Section 7 as a V1.x roadmap item.
 
 ---
+## 13. Regulatory and Framework Alignment Summary
 
-## 12. Metrics
+| **Regulation / Framework** | **Where in This Procedure** |
+|---|---|
+| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) PL / SA / SC | All phases |
+| NIST 800-160 (Systems Security Engineering) | Phases 2–5 |
+| NIST SSDF | Phase 3 |
+| NERC-CIP CIP-005 / CIP-010 | Phase 2 OT scope, Phase 4 baseline |
+| [CMMC L2](https://dodcio.defense.gov/CMMC/) | CUI scope determination in Phase 1; FIPS check in Phase 2/4 |
+| SOX ITGC | SOX scope in Phase 1; change-management interface in Phase 5 |
 
-| **Metric** | **Definition** | **Reported** |
-|---|---|---|
-| CM
+---
+
+## 14. Document Control
+
+| | |
+|---|---|
+| **Document ID** | CERG-PRC-AR-001 |
+| **Version** | 1.0 |
+| **Approved By** | Cyber Engineering Pillar Leader · CISO endorsement |
+| **Next Review** | Annual / on platform or process change |
+| **Change Log** | 1.0 - Initial publication. Establishes intake, review, threat-model, build-time, pre-prod, and handoff phases with the citizen-development carve-out. |
+

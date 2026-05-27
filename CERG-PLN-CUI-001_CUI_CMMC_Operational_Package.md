@@ -348,10 +348,26 @@ For cloud / SaaS providers handling CUI that are not FedRAMP-authorized, the equ
 | Inheritance Evidence Package per [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) Section 5 on file | ✓ |
 
 ---
+## 16. Regulatory and Framework Alignment Summary
 
-## 15. Operating Cadence
-
-| **Activity** | **Cadence** |
+| **Regulation / Framework** | **Where in This Package** |
 |---|---|
-| POA&M update | Monthly |
-| 800-17
+| [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) | All sections; Section 10 is the principal evidence artifact |
+| [NIST 800-172](https://csrc.nist.gov/pubs/sp/800/172/final) (selected enhancements) | Where contract requires |
+| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (Moderate baseline mapping) | Sections 4, 14 |
+| [CMMC L2](https://dodcio.defense.gov/CMMC/) | All sections; Section 11 is the readiness check |
+| DFARS 252.204-7012 | Sections 4, 13 (flow-down) |
+| DFARS 252.204-7019 / 7020 / 7021 | Section 6 (SPRS) |
+
+---
+
+## 17. Document Control
+
+| | |
+|---|---|
+| **Document ID** | CERG-PLN-CUI-001 |
+| **Version** | 1.0 |
+| **Approved By** | Cyber Governance Manager (CUI / [CMMC](https://dodcio.defense.gov/CMMC/)) · CISO endorsement |
+| **Next Review** | Annual / on regulatory change |
+| **Change Log** | 1.0 - Initial publication. SSP, POA&M, SPRS, boundary, flow map, category register, evidence matrix, readiness, C3PAO logistics, subcontractor register, FedRAMP equivalency. |
+

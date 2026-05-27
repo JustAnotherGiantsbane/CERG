@@ -124,7 +124,7 @@ The dictionary is the source-of-truth definition for every CERG metric. Each ent
 | GV-002 | Open POA&M Items (CUI) | Count + age of open POA&M | POA&M | Monthly | n/a - age-weighted | Reg Posture |
 | GV-003 | NERC-CIP Evidence Library Currency | % of CIP requirements with current evidence ≤ cycle | OT GRC | Monthly | ≥ 98% / 90–98% / < 90% | Reg Posture |
 | GV-004 | CIP Deviations Open | Count of approved deviations + average days open | OT GRC | Monthly | n/a | Reg Posture |
-| GV-005 | [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC Control Pass Rate | % of in-scope [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC tests passed in cycle | [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) program | Quarterly | 100% / 95–100% / < 95% | Reg Posture |
+| GV-005 | SOX ITGC Control Pass Rate | % of in-scope SOX ITGC tests passed in cycle | SOX program | Quarterly | 100% / 95–100% / < 95% | Reg Posture |
 | GV-006 | Policy/Standard Currency | % of CERG-managed artifacts within review cycle | Document Catalog | Monthly | ≥ 95% / 85–95% / < 85% | CISO Dashboard |
 
 ---
@@ -141,7 +141,7 @@ The data source map tells the reporting team where each metric's underlying data
 | CM-001 – CM-005 | Configuration / VM / Backup tools | Cyber Engineering - Platforms / Resilience | Nightly aggregation | Backup tool outage: pull from job log; flag as Amber. |
 | ID-001 – ID-004 | IdP / IGA / PAM | Identity Engineer | Nightly export | Source change: re-baseline before publishing. |
 | TP-001 – TP-004 | TPRM tool | Cyber Risk - TPRM | Daily/weekly export | - |
-| GV-001 – GV-006 | CUI register / OT GRC / [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) program / Document Catalog | Cyber Governance - domain owners | Monthly publish | - |
+| GV-001 – GV-006 | CUI register / OT GRC / SOX program / Document Catalog | Cyber Governance - domain owners | Monthly publish | - |
 
 > **One Source per Metric**
 >
@@ -279,12 +279,13 @@ The guardrails baked into the metric definitions and reporting views above:
 > If a metric is structured such that good operating units always look good and bad ones can hide, it's vanity. CERG either reframes the metric to expose the gap or removes it from the dashboard.
 
 ---
+## 10. Document Control
 
-## 9. Cadence and Ownership
+| | |
+|---|---|
+| **Document ID** | CERG-GOV-MTR-001 |
+| **Version** | 1.0 |
+| **Approved By** | Cyber Governance Manager · CISO endorsement |
+| **Next Review** | Annual / metrics-platform change |
+| **Change Log** | 1.0 - Initial publication. Establishes dictionary, source map, CISO dashboard, briefs, and anti-shallow guardrails. |
 
-| **Artifact** | **Cadence** | **Owner** | **Audience** |
-|---|---|---|---|
-| CISO Dashboard | Monthly | Cyber Governance - Reporting | CISO |
-| Monthly CERG Leadership Report | Monthly | Cyber Governance - Reporting | CERG Leadership |
-| Quarterly COG Brief | Quarterly | CISO + Cyber Governance - Reporting | Cyber Oversight Group (per org structure) |
-| Board read-out slice | Quarterly | CI

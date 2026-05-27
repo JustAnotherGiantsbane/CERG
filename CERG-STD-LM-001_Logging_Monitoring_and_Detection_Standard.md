@@ -18,7 +18,7 @@
 | **Supporting Procedures** | [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-AV-001](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
 | **Review Cycle** | Annual / On SIEM platform change / On MITRE ATT&CK matrix update |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (DETECT) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (AU, SI) · [NIST 800-92](https://csrc.nist.gov/pubs/sp/800/92/final) · MITRE ATT&CK Enterprise / Cloud / ICS · MITRE D3FEND |
-| **Regulations** | NERC-CIP CIP-007 R4 · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.3.x) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC (Operations) · CIP-015 (forward-looking) |
+| **Regulations** | NERC-CIP CIP-007 R4 · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.3.x) · SOX ITGC (Operations) · CIP-015 (forward-looking) |
 | **Environments** | All in-scope assets - IT · cloud · SaaS · OT · CUI · identity · network |
 
 ---
@@ -148,7 +148,7 @@ The list below is the minimum every CERG-managed environment must onboard. Anyth
 | Default | 13 months | 7 years (or per regulatory requirement, whichever longer) |
 | BES Cyber Systems | 90 days searchable minimum | 12 months total minimum (CIP-007 R4.3); CERG default exceeds |
 | CUI | 13 months hot | 7 years per [CMMC L2](https://dodcio.defense.gov/CMMC/) / DFARS |
-| [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant | 13 months hot | 7 years per [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) requirement |
+| SOX-relevant | 13 months hot | 7 years per SOX requirement |
 
 ---
 
@@ -333,8 +333,28 @@ Identity is the most common attack surface; CERG names a use case pack explicitl
 | Impossible travel / geo anomalies | Two successful auths from geographically inconsistent locations. |
 
 ---
+## 13. Regulatory and Framework Alignment Summary
 
-## 12. Privileged Session Monitoring
+| **Regulation / Framework** | **Section** | **Where in This Standard** |
+|---|---|---|
+| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) AU / SI | AU-2, AU-6, AU-9, AU-11, SI-4 | All sections |
+| [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) DETECT | DE.CM, DE.AE | All sections |
+| [NIST 800-92](https://csrc.nist.gov/pubs/sp/800/92/final) | All | Sections 3–4 |
+| MITRE ATT&CK Enterprise / Cloud / ICS | All | Sections 6, 7 |
+| NERC-CIP CIP-007 R4 | Security Event Monitoring | Sections 3.4, 4.3, 9 |
+| NERC-CIP CIP-015 (draft) | INSM | Section 9 |
+| [CMMC L2](https://dodcio.defense.gov/CMMC/) / 800-171r3 | 3.3.x | Section 10 |
+| SOX ITGC | Operations / Monitoring | Sections 3, 4 |
 
-- Every privileged session traverses PAM and is recorded (command metadata at minimum; full session for high-blast-radius roles).
-- Session anomalies (long-running, off-hours, off-jurisdiction) raise 
+---
+
+## 14. Document Control
+
+| | |
+|---|---|
+| **Document ID** | CERG-STD-LM-001 |
+| **Version** | 1.0 |
+| **Approved By** | Cyber Risk Pillar Leader (Detection Engineering) · CISO endorsement |
+| **Next Review** | Annual / SIEM platform change / ATT&CK matrix update |
+| **Change Log** | 1.0 - Initial publication. Mandatory log sources, retention, SIEM onboarding, day-one detection set anchored to MITRE ATT&CK, OT/CUI/identity overlays, triage and tuning. |
+

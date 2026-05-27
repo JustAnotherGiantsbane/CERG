@@ -17,7 +17,7 @@
 | **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
 | **Review Cycle** | Annual / On IAM tooling change |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (AC, IA, AU) · [NIST 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (PROTECT) |
-| **Regulations** | NERC-CIP CIP-004 / CIP-005 · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.1, 3.5) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC (Access) |
+| **Regulations** | NERC-CIP CIP-004 / CIP-005 · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.1, 3.5) · SOX ITGC (Access) |
 | **Environments** | All in-scope identities - human, machine, service, vendor |
 
 ---
@@ -149,7 +149,7 @@ Same as 3.3 with all SLAs collapsed to "immediately" and the SOC alerted to moni
 | **Scope** | **Cadence** |
 |---|---|
 | All standard accounts | Annual (full base) |
-| [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant access | Quarterly |
+| SOX-relevant access | Quarterly |
 | CUI scope access | Quarterly |
 | BES Cyber System access | Quarterly (CIP-004 alignment, 15-month cap) |
 | Privileged access (any) | Quarterly |
@@ -318,15 +318,26 @@ MFA exceptions are time-bounded and tracked.
 Phishing-resistant MFA coverage is reported as `ID-001` in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md).
 
 ---
+## 13. Regulatory and Framework Alignment Summary
 
-## 12. Roles and Responsibilities
-
-| **Role** | **Responsibility** |
+| **Regulation / Framework** | **Where in This Runbook** |
 |---|---|
-| Identity Engineer | Owns the operational workflows in this runbook (or contributes them to the external IAM team). |
-| Detection Engineer | Identity detection use cases per [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) Section 11. |
-| Governance Pillar Leader | Recertification evidence, SoD evidence, regulator interface. |
-| Managers / Sponsors | Approval and recertification decisions. |
-| System / Role Owners | Approve sensitive and privileged access; participate in recert. |
-| HR | JML triggers; data quality in HRIS. |
-| Pr
+| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) AC / IA | All sections |
+| [NIST 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html) | Section 11 |
+| [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) PROTECT | All sections |
+| NERC-CIP CIP-004 R4/R5, CIP-005 R2 | Sections 3, 5, 6, 10 |
+| [CMMC L2](https://dodcio.defense.gov/CMMC/) / 800-171r3 (3.1, 3.5) | All sections |
+| SOX ITGC (Access) | Sections 3, 4, 5, 6 |
+
+---
+
+## 14. Document Control
+
+| | |
+|---|---|
+| **Document ID** | CERG-PRC-AC-002 |
+| **Version** | 1.0 |
+| **Approved By** | Cyber Engineering Pillar Leader (Identity) · CISO endorsement |
+| **Next Review** | Annual / IAM tooling change |
+| **Change Log** | 1.0 - Initial publication. JML, access request, recertification, PAM, break-glass, service accounts, secrets, vendor access, MFA. Dual operating model preserved. |
+

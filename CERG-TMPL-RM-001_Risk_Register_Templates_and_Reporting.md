@@ -17,7 +17,7 @@
 | **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-GOV-MTR-001](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) |
 | **Review Cycle** | Annual / On register tooling change |
 | **Frameworks** | [NIST 800-30r1](https://csrc.nist.gov/pubs/sp/800/30/r1/final) · [NIST 800-39](https://csrc.nist.gov/pubs/sp/800/39/final) · ISO 31000 |
-| **Regulations** | NERC-CIP · [CMMC L2](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC |
+| **Regulations** | NERC-CIP · [CMMC L2](https://dodcio.defense.gov/CMMC/) · SOX ITGC |
 | **Environments** | All in-scope assets |
 
 ---
@@ -78,7 +78,7 @@ The schema below is the system-of-record contract regardless of tool (Excel, Ser
 | Linked Control(s) | List of [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) IDs | Yes | At least one. |
 | Affected Asset(s) | Asset inventory ID(s) | Yes | From the authoritative asset inventory. |
 | Operating Unit | Enum (OU list) | Yes | Drives CISO slice-and-dice. |
-| Regulatory Scope | Multi-select: CUI · BES · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · None | Yes | Drives overlay scoring. |
+| Regulatory Scope | Multi-select: CUI · BES · SOX · None | Yes | Drives overlay scoring. |
 | Inherent Likelihood | 1–5 | Yes | Before controls. |
 | Inherent Impact | 1–5 | Yes | Before controls. |
 | Inherent Score | Likelihood × Impact | Auto | - |
@@ -121,7 +121,7 @@ The schema below is the system-of-record contract regardless of tool (Excel, Ser
 | Source | Self-Identified |
 | Linked Control(s) | IA-2 |
 | Operating Unit | Generation Operations IT |
-| Regulatory Scope | [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) |
+| Regulatory Scope | SOX |
 | Inherent Likelihood / Impact | 4 / 4 → 16 |
 | Control Effectiveness | Weak (legacy auth permitted) |
 | Residual Likelihood / Impact | 4 / 3 → 12 (High) |
@@ -248,7 +248,7 @@ Residual cannot fall below 1. Step-downs are applied to inherent, never to resid
 |---|---|---|
 | 17 – 25 | Critical | CISO + Executive Sponsor |
 | 12 – 16 | High | CISO |
-| 6 – 11 | Medium | Engineering Manager |
+| 6 – 11 | Medium | Engineering Pillar Leader |
 | 1 – 5 | Low | Risk Register Owner |
 
 ---
@@ -265,7 +265,7 @@ The CISO will not consume the operational view. The CISO will consume views that
 | OU Heat Map | Show where risk concentrates by OU × Family. | Matrix: OU rows × Control Family columns (AC, AU, CM, CP, IA, RA, SC, SI, SR). Cell = count of High/Critical. |
 | Trend Lines | Are we getting better or worse? | Monthly: total residual score (sum), Critical+High count, mean time to close, open exception count. 13-month rolling. |
 | Top 10 Risks | The set the board cares about. | The ten highest residual-score open risks with risk statement, owner, treatment, next milestone. |
-| Regulatory Posture | Per-overlay summary. | CUI / BES / [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) rows; columns: Practices Implemented %, Open POA&M items, Open Exceptions, Next Assessment Date. |
+| Regulatory Posture | Per-overlay summary. | CUI / BES / SOX rows; columns: Practices Implemented %, Open POA&M items, Open Exceptions, Next Assessment Date. |
 
 ### 7.2 Anti-Shallow-Metrics Guardrails
 
@@ -291,16 +291,13 @@ Additional guardrails baked into the views:
 | Regulatory Posture | Quarterly | CISO · Audit · Cyber Oversight Group |
 
 ---
+## 9. Document Control
 
-## 8. Operational Cadence
+| | |
+|---|---|
+| **Document ID** | CERG-TMPL-RM-001 |
+| **Version** | 1.0 |
+| **Approved By** | Cyber Governance Manager |
+| **Next Review** | Annual / on tooling change |
+| **Change Log** | 1.0 - Initial publication. Schema, examples, exception template, scoring guide, CISO reporting views. |
 
-| **Activity** | **Cadence** | **Owner** |
-|---|---|---|
-| New-risk intake triage | Weekly | Risk Register Owner |
-| Critical/High risk reviews | Quarterly | Risk Owner + CERG Coordinator |
-| Medium risk reviews | Semi-Annual | Risk Owner + CERG Coordinator |
-| Low risk reviews | Annual | Risk Register Owner (batch) |
-| Exception expiration sweep | Monthly | Risk Register Owner |
-| OU Scorecard publication | Monthly | Cyber Governance - Reporting |
-| Top 10 Risks publication | Monthly | Risk Register Owner + CISO |
-| Regulatory Posture publication | Quarterly | Governance Domain O

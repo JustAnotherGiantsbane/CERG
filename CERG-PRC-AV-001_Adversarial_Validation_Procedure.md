@@ -17,7 +17,7 @@
 | **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md) |
 | **Review Cycle** | Annual / On material program change |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (CA-8) · NIST 800-115 · PTES · MITRE ATT&CK · MITRE D3FEND · OWASP WSTG / MASTG |
-| **Regulations** | NERC-CIP CIP-007 (vulnerability assessment) · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.11.2) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) (indirect via control testing) |
+| **Regulations** | NERC-CIP CIP-007 (vulnerability assessment) · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.11.2) · SOX (indirect via control testing) |
 | **Environments** | All - IT · cloud · SaaS · OT (with safety constraints) · application · identity |
 
 ---
@@ -333,14 +333,27 @@ Final reports are distributed under the confidentiality terms in the RoE. Full r
 > An unsanitized pen-test report is a road map for attackers and should be treated as Restricted. Distribution is named, encrypted, and audited; "wider sharing" requests are reviewed by the Engagement Sponsor.
 
 ---
+## 13. Regulatory and Framework Alignment Summary
 
-## 12. Roles and Responsibilities
-
-| **Role** | **Responsibility** |
+| **Regulation / Framework** | **Where in This Procedure** |
 |---|---|
-| **Adversarial Testing Lead** | Owns this procedure. Maintains the annual Adversarial Validation Plan. Conducts or oversees engagements. Authors RoEs and Charters. |
-| **Detection Engineer** | Partners on purple-team cycles; turns findings into detection upgrades. |
-| **Cloud Security Engineer** | Remediates identified misconfigurations and control gaps. |
-| **Identity Engineer** | Remediates identity-related findings; tunes identity detections. |
-| **Governance Pillar Leader** | Tracks regulator-required cadence (CIP, [CMMC](https://dodcio.defense.gov/CMMC/)); audit interface. |
-| CISO | Approves Red-Team Charters and high-impact / cloud / OT engagements.
+| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) CA-8 | All sections |
+| NIST 800-115 | All sections |
+| PTES | Sections 3–4 |
+| MITRE ATT&CK | Sections 6, 7 |
+| OWASP WSTG / MASTG / API Top 10 | Section 8 |
+| NERC-CIP CIP-007 R3.2 (vulnerability assessment) | Sections 9, 10 |
+| [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.11.2) | Sections 3, 8 |
+
+---
+
+## 14. Document Control
+
+| | |
+|---|---|
+| **Document ID** | CERG-PRC-AV-001 |
+| **Version** | 1.0 |
+| **Approved By** | Cyber Risk Pillar Leader (Offensive Security) · CISO endorsement |
+| **Next Review** | Annual / on material program change |
+| **Change Log** | 1.0 - Initial publication. Engagement types, RoE, charter, purple, cloud, app, OT safety, rating/routing, evidence retention. |
+

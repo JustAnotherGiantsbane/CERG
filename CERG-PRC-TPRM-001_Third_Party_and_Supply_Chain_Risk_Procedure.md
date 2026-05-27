@@ -17,7 +17,7 @@
 | **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md) |
 | **Review Cycle** | Annual / On major TPRM platform change |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (SR) · NIST 800-161r1 · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GV.SC) · ISO 27036 · CSA STAR · NTIA SBOM minimum elements |
-| **Regulations** | NERC-CIP CIP-013 · DFARS / [CMMC L2](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC · FedRAMP equivalency |
+| **Regulations** | NERC-CIP CIP-013 · DFARS / [CMMC L2](https://dodcio.defense.gov/CMMC/) · SOX ITGC · FedRAMP equivalency |
 | **Environments** | All third-party-touched scopes - SaaS · IaaS/PaaS · OT vendors · CUI subcontractors · MSPs · software suppliers · hardware suppliers |
 
 ---
@@ -102,7 +102,7 @@ CERG adjusts the vendor tier *up* only when one or more cyber-specific concerns 
 | Vendor handles OT integration or BES Cyber System interaction | +1 tier (to T1 if BCS) |
 | Vendor has a recent (≤ 12 months) material breach affecting its customers | +1 tier with case-by-case review |
 | Vendor is operating below the evidence floor for its proposed tier | hold at lower tier until evidence is current |
-| Vendor's product / service supports a [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant business process | +1 tier if not already T2+ |
+| Vendor's product / service supports a SOX-relevant business process | +1 tier if not already T2+ |
 | Vendor product is software shipped to be deployed in our environment with elevated privileges | +1 tier |
 | Vendor relationship requires non-US access to in-scope systems / data | +1 tier (and see Section 10) |
 
@@ -171,7 +171,7 @@ CERG maintains an Approved Provider and SaaS Catalog as the system-of-record for
 |---|---|
 | Provider Name / Service | - |
 | Vendor Tier | Per Section 3 + Section 4 adjustments |
-| Approved Scopes | None / Public / Internal / Restricted / CUI / BCSI / [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant / BES-relevant |
+| Approved Scopes | None / Public / Internal / Restricted / CUI / BCSI / SOX-relevant / BES-relevant |
 | Data Residency Constraints | Approved regions / regions explicitly prohibited |
 | Last Evidence Review | Date and reviewer |
 | Next Required Review | - |
@@ -220,7 +220,7 @@ Every T2+ cloud / SaaS provider has a Shared Responsibility Matrix on file. Wher
 | Encryption (rest / transit) | Provider provides; Customer chooses CMK/BYOK | Customer configures | KMS inventory |
 | Logging | Provider provides; Customer routes | Customer routes | SIEM source inventory |
 | Detection | Provider provides limited; Customer extends | Customer extends | Detection coverage |
-| Recovery / backup | Provider depending on service | Customer-driven for CUI / [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) / Tier 1 | Backup config |
+| Recovery / backup | Provider depending on service | Customer-driven for CUI / SOX / Tier 1 | Backup config |
 | Configuration management | Provider for service; Customer for tenant | Customer | DISH scan |
 | Subprocessor management | Provider | Customer accepts / refuses | Sub-processor list |
 
@@ -316,7 +316,7 @@ At minimum:
 
 - **SOC / Incident Response lead**: coordinates investigation and customer-side detection / containment.
 - **CERG, Risk (TPRM)**: vendor liaison; assembles vendor-supplied facts; updates TPRM record.
-- **CERG, Governance**: regulator notification path; CUI / NERC-CIP / [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) reporting if applicable.
+- **CERG, Governance**: regulator notification path; CUI / NERC-CIP / SOX reporting if applicable.
 - **Legal**: contractual remedies, regulator interface, communications review.
 - **Procurement**: vendor relationship; commercial leverage.
 - **Business Owner of the affected service**: operational decision authority; user / customer communications.
@@ -338,7 +338,7 @@ Other invitees as needed: CISO (declared briefing), Privacy (PII implications), 
 2. **Assemble facts.** Vendor advisory, public reporting, internal exposure analysis (which systems, which data, which scopes).
 3. **Contain.** Coordinate with SOC / IR on containment, credentials rotation, vendor session termination, IOC sweep, detection tuning.
 4. **Decide.** Disposition: continue use with conditions / suspend use / terminate. Documented and owned by Business + CISO.
-5. **Communicate.** Internal user / customer notification per Legal; regulator notification where required (CUI DC3, NERC-CIP O&P, [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) disclosure committee).
+5. **Communicate.** Internal user / customer notification per Legal; regulator notification where required (CUI DC3, NERC-CIP O&P, SOX disclosure committee).
 6. **Remediate.** Risk register entries, exception updates, contract addenda, monitoring uplift.
 7. **Close.** SCCT after-action with lessons learned; feeds threat intelligence and detection.
 
@@ -351,14 +351,29 @@ Every SCCT activation produces an SCCT record with: trigger, membership, timelin
 > Naming the team in advance, with a roster, a trigger, and a 4-hour clock, converts vendor compromise from a panicked phone-tree exercise into a procedure. The first SolarWinds-class event tests every assumption about your TPRM program; SCCT is how that test doesn't surprise you.
 
 ---
+## 17. Regulatory and Framework Alignment Summary
 
-## 16. Continuous Monitoring and Re-Assessment
+| **Regulation / Framework** | **Where in This Procedure** |
+|---|---|
+| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) SR family | All sections |
+| NIST 800-161r1 | All sections; especially 11–15 |
+| [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GV.SC) | Sections 2–6, 15 |
+| ISO 27036 | Sections 5, 8, 9 |
+| DFARS 252.204-7012 / [CMMC L2](https://dodcio.defense.gov/CMMC/) | Sections 13, 14 |
+| NERC-CIP CIP-013 | Section 12 |
+| FedRAMP / FedRAMP equivalency | Section 14 |
+| NTIA SBOM minimum elements | Section 11 |
+| SOX ITGC | Cross-cutting; vendor SOC 1 reuse where applicable |
 
-| **Activity** | **T1** | **T2** | **T3** | **T4** | **T5** |
-|---|---|---|---|---|---|
-| Attestation currency check | Monthly | Quarterly | Semi-annual | Annual | Renewal |
-| Public-breach monitoring | Continuous | Continuous | Continuous | Continuous | n/a |
-| External attack surface monitoring | Continuous | Continuous | Sample | - | - |
-| Sub-processor change review | On change | On change | On change | - | - |
-| Country-of-access reconciliation | Quarterly | Quarterly | Annual | - | - |
-| Risk register reconciliation | Quarterly | Qua
+---
+
+## 18. Document Control
+
+| | |
+|---|---|
+| **Document ID** | CERG-PRC-TPRM-001 |
+| **Version** | 1.0 |
+| **Approved By** | Cyber Risk Pillar Leader (Vendor Risk) · CISO endorsement |
+| **Next Review** | Annual / TPRM platform change |
+| **Change Log** | 1.0 - Initial publication. Tiering, evidence by tier, shared responsibility, international access denial-by-default, SBOM, CIP-013, CUI flow-down, FedRAMP equivalency, SCCT. |
+

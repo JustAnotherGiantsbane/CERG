@@ -17,7 +17,7 @@
 | **Supporting Standards** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-CFG-001](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-RES-001](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) |
 | **Review Cycle** | Annual / On NIST FIPS publication change · On crypto algorithm deprecation |
 | **Frameworks** | NIST FIPS 140-3 · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (SC family) · [NIST 800-57](https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final) · [NIST 800-131A](https://csrc.nist.gov/pubs/sp/800/131/a/r2/final) · NIST 800-175B |
-| **Regulations** | NERC-CIP (BCSI) · [CMMC L2](https://dodcio.defense.gov/CMMC/) / 800-171r3 (3.13.x) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC · FedRAMP |
+| **Regulations** | NERC-CIP (BCSI) · [CMMC L2](https://dodcio.defense.gov/CMMC/) / 800-171r3 (3.13.x) · SOX ITGC · FedRAMP |
 | **Environments** | All in-scope assets |
 
 ---
@@ -108,7 +108,7 @@ CERG controls cryptography at four use cases. Each names the required algorithm 
 ### 3.1 Data at Rest
 
 - **Volume / disk encryption:** AES-256 via OS or storage platform; keys in HSM or cloud KMS; rotation per Section 8.
-- **Database TDE / column-level encryption:** AES-256; CMK for Restricted/CUI/[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) in-scope; rotation per Section 8.
+- **Database TDE / column-level encryption:** AES-256; CMK for Restricted/CUI/SOX in-scope; rotation per Section 8.
 - **Object storage:** server-side encryption with CMK for Restricted/CUI; client-side encryption optional where adversary model includes provider compromise.
 - **Backups:** AES-256; key separate from production credentials (see [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) Section 4).
 
@@ -190,11 +190,11 @@ CERG controls cryptography at four use cases. Each names the required algorithm 
 
 | **Action** | **Performed By** | **Approved By** |
 |---|---|---|
-| Generate root or issuing CA key | Two named operators | Engineering Manager |
-| Rotate KEK | Engineering - Platforms | Engineering Manager |
-| Generate CMK in production | Engineering - Platforms | Workload Owner + Engineering Manager |
-| Destroy / disable production key | Two named operators | Engineering Manager |
-| Export key material (rare; exceptional) | Two named operators | Engineering Manager + CISO |
+| Generate root or issuing CA key | Two named operators | Engineering Pillar Leader |
+| Rotate KEK | Engineering - Platforms | Engineering Pillar Leader |
+| Generate CMK in production | Engineering - Platforms | Workload Owner + Engineering Pillar Leader |
+| Destroy / disable production key | Two named operators | Engineering Pillar Leader |
+| Export key material (rare; exceptional) | Two named operators | Engineering Pillar Leader + CISO |
 
 ---
 
@@ -207,7 +207,7 @@ The CMK decision is about who controls the master key, the customer (us) or the 
 - Data classified **Restricted** at rest.
 - **CUI** in cloud / SaaS scopes (where the regulator permits a provider-managed alternative, CERG defaults to CMK anyway for crypto independence).
 - **BCSI** stored in non-OT cloud / SaaS.
-- **[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)** in-scope data where the auditor expects independent key control.
+- **SOX** in-scope data where the auditor expects independent key control.
 - **High-Impact** workloads where adversary model includes provider-side compromise.
 - Any workload subject to a **contractual obligation** requiring customer control of keys.
 
@@ -324,9 +324,13 @@ The checklist below is the minimum for any system in CUI scope, FedRAMP Moderate
 | **Procurement / TPRM** | Includes cryptographic conformance in vendor assessments; flags vendor advisories that affect cryptographic posture. |
 
 ---
+## 12. Document Control
 
-## 11. Regulatory and Framework Alignment Summary
+| | |
+|---|---|
+| **Document ID** | CERG-STD-CR-001 |
+| **Version** | 1.0 |
+| **Approved By** | Cloud Security Engineer · CISO endorsement |
+| **Next Review** | Annual / on FIPS publication change / on algorithm deprecation |
+| **Change Log** | 1.0 - Initial publication. Approved/prohibited algorithms, TLS/cert lifecycle, key management, CMK decision guide, secrets/tokens, rotation cadence, FIPS profile. |
 
-| **Regulation / Framework** | **Section** | **Where in This Standard** |
-|---|---|---|
-| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) SC family | SC-8, SC-12, SC-13, SC-17, SC-28 | All s

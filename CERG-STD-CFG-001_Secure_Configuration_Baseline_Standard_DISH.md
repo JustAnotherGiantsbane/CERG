@@ -17,7 +17,7 @@
 | **Supporting Standards** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) |
 | **Review Cycle** | Annual / Upon CIS Benchmark version change or new platform class |
 | **Frameworks** | CIS Benchmarks v8+ · CIS Controls v8 · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (CM family) · [NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/final) (OT) · [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) · IEC 62443-3-3 / 4-2 |
-| **Regulations** | NERC-CIP v7 CIP-007/CIP-010 · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.4.x) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC (Change/Operations) |
+| **Regulations** | NERC-CIP v7 CIP-007/CIP-010 · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.4.x) · SOX ITGC (Change/Operations) |
 | **Environments** | Owned data center · IaaS / PaaS · SaaS (Tier 1) · OT (BES and non-BES) · Endpoint · Network · Cloud control plane · Container/K8s |
 
 ---
@@ -335,11 +335,29 @@ OT baselines lead with [NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/f
 - MFA on entry; no clipboard / file transfer beyond named workflow.
 
 ---
+## 12. Regulatory and Framework Alignment Summary
 
-## 11. Drift Detection and Exception Handling
+| **Regulation / Framework** | **Section(s)** | **Where in This Standard** |
+|---|---|---|
+| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) CM family | CM-2, CM-6, CM-7 | Sections 2 – 11 |
+| [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) | 3.4.x | Tier 3 in Section 3, parameters in Sections 5, 6, 9 |
+| [NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/final) | All | Tier 4 in Section 3; Section 10 |
+| IEC 62443-3-3 / 4-2 | SR / CR families | Section 10 |
+| CIS Controls v8 | Controls 4, 12 | Sections 5–9 |
+| NERC-CIP CIP-007 R1, R2, R5 | Ports, patching, accounts | Section 10 + `CERG-PLN-CIP-001` |
+| NERC-CIP CIP-010 R1 | Baseline configuration | All sections, especially Section 11 |
+| [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.4.x) | Configuration management | Tier 3 in Section 3; Section 5–9 |
+| SOX ITGC | Change / Operations | Section 11 |
 
-### 11.1 Drift Detection
+---
 
-- DISH scans run on a cadence matched to platform criticality: continuous (or daily) for Tier 0/1; weekly minimum for Tier 2/3; weekly passive scope for Tier 4 OT (engineering-supervised authenticated checks per vendor guidance, monthly minimum).
-- Drift findings flow to the VM tool and are tracked per [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md).
-- Material drift on a Critical/High asset is also recorded in the risk register per 
+## 13. Document Control
+
+| | |
+|---|---|
+| **Document ID** | CERG-STD-CFG-001 |
+| **Version** | 1.0 |
+| **Approved By** | Cloud Security Engineer · CISO endorsement |
+| **Next Review** | Annual / CIS Benchmark or [NIST 800-82](https://csrc.nist.gov/pubs/sp/800/82/r3/final) revision |
+| **Change Log** | 1.0 - Initial publication. Establishes DISH profile, baseline catalog, and platform-specific baselines for IT, cloud, container, SaaS, and OT. |
+

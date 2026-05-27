@@ -209,10 +209,24 @@ Specifically, the most-reused artifacts:
 | Operating model review (with Internal Audit and Finance) | Annual |
 
 ---
+## 10. Regulatory and Framework Alignment Summary
 
-## 9. Roles and Responsibilities
-
-| **Role** | **Responsibility** |
+| **Regulation / Framework** | **Where in This Package** |
 |---|---|
-| CERG - Governance (SOX Liaison) | Owns this package. Coordinates with Internal Audit, Finance, and external auditors. Maintains library and register. |
-| CERG - Engineering / Risk / Identity | Operate the underlying controls; provide evidence on reque
+| Sarbanes-Oxley Act §404 | Sections 2–7 |
+| COSO Internal Control - Integrated Framework | Cross-cutting |
+| COBIT 2019 (selected) | Section 4 |
+| [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (mappings) | Section 4 reused control IDs |
+
+---
+
+## 11. Document Control
+
+| | |
+|---|---|
+| **Document ID** | CERG-PLN-SOX-001 |
+| **Version** | 1.0 |
+| **Approved By** | Cyber Governance Manager (SOX Liaison) · CISO endorsement · Coordinated with Internal Audit and Finance |
+| **Next Review** | Annual / per SOX year |
+| **Change Log** | 1.0 - Initial publication. ITGC scoping, control library, system register, evidence reuse mapping, deficiency workflow, auditor interface. |
+

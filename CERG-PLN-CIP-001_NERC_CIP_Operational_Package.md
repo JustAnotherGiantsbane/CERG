@@ -316,14 +316,54 @@ Operationalized in coordination with [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber
 | R3 Lessons learned and plan update within 90 days | [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) Section 5.2 step 8 |
 
 ---
+## 14. Operating Cadence and Reporting
 
-## 13. CIP-015 INSM: Forward-Looking Integration
+| **Activity** | **Cadence** |
+|---|---|
+| Evidence library refresh sweep | Continuous; full review monthly |
+| BES categorization review | Annual + on material change |
+| ESP/EAP topology review | Annual + on architecture change |
+| CIP-004 access reviews | Per CIP cadence (≤ 15 months); CERG operates quarterly |
+| CIP-007 R2 patch evaluation | Per CIP cadence |
+| CIP-009 recovery testing | Every 15 months minimum; full exercise every 36 months; CERG operates annually |
+| CIP-010 baseline review | Per CIP cadence |
+| CIP-013 plan review | Annual (R3) |
+| Deviation register review | Monthly |
+| Reg posture report | Quarterly per `CERG-GOV-MTR-001` |
+| Internal CIP walkthrough | Quarterly (sampling) |
+| Independent (third-line) review | Annual minimum |
 
-CIP-015 (Internal Network Security Monitoring) is in draft / approval at the time of V1 publication. CERG's posture:
+---
 
-- The detection foundation in [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) Sections 6.2 and 9 is designed to support CIP-015 obligations once finalized, passive OT monitoring with detection set anchored to ATT&CK for ICS.
-- ESP/EAP topology documentation in Section 5 provides the basis for INSM scoping.
-- Detection coverage metrics (DT-001 / DT-002) include OT sub-matrix; coverage on the BES INSM-relevant subset is tracked separately.
-- When CIP-015 is approved, CERG executes an implementation plan within the standard's enforcement window: incrementally onboarding INSM coverage to High Impact ESPs first, then Medium Impact; updating the Evidence Library; updating the Convergence Guideline if architectures shift.
+## 15. Regulatory and Framework Alignment Summary
 
-A risk register entry tracks the CIP-015 readiness gap until INSM coverage mat
+| **Regulation / Framework** | **Where in This Package** |
+|---|---|
+| CIP-002 | Section 4 |
+| CIP-003 | Cross-cutting (policy + program); Section 2 |
+| CIP-004 | Section 8 |
+| CIP-005 | Section 5 |
+| CIP-006 | Interface to Facilities (out of CERG scope; coordinated) |
+| CIP-007 | Sections 5–7, evidence library |
+| CIP-008 | Interface to `CERG-PLN-IR-001` |
+| CIP-009 | Section 12 + `CERG-STD-RES-001` |
+| CIP-010 | Sections 5, 7 + `CERG-STD-CFG-001` |
+| CIP-011 | Section 8 + `CERG-STD-CR-001` |
+| CIP-013 | Section 11 + `CERG-PRC-TPRM-001` |
+| CIP-014 | Interface to Facilities |
+| CIP-015 (draft) | Section 13 + `CERG-STD-LM-001` |
+| [NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/final) | Sections 7, 10 + `CERG-STD-OT-001` / `CERG-STD-CFG-001` |
+| IEC 62443-3-3 / 4-2 | Sections 7, 10 |
+
+---
+
+## 16. Document Control
+
+| | |
+|---|---|
+| **Document ID** | CERG-PLN-CIP-001 |
+| **Version** | 1.0 |
+| **Approved By** | Cyber Governance Manager (OT / NERC-CIP) · CISO endorsement |
+| **Next Review** | Annual / on CIP version or filing change |
+| **Change Log** | 1.0 - Initial publication. Evidence library, OT VM, BES access, deviation template, IT/OT convergence guideline, categorization, ESP/EAP, CIP-013, CIP-009, CIP-015 forward-looking. |
+
