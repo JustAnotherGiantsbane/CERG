@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.27 |
+| **Version** | 1.28 |
 | **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -118,6 +118,9 @@ Files are named `<DocumentID>_<Short_Title>.md` using underscore-separated title
 | `CAL` | Annual security and governance calendar |
 | `STY` | Document authoring and style guide |
 | `TRC` | Control-to-procedure traceability |
+| `LL` | Lessons learned and program improvement |
+| `IMPREG` | Program improvement register |
+| `CEF` | Control effectiveness |
 
 New domains are added only by amendment to this catalog.
 
@@ -194,6 +197,8 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-GOV-CAL-001`](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md) | Annual Security and Governance Calendar | Governance Pillar Leader | Draft |
 | [`CERG-GOV-STY-001`](CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md) | Document Authoring and Style Guide | Governance Pillar Leader (Policy & Standards) | Draft |
 | [`CERG-GOV-TRC-001`](CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md) | Control-to-Procedure Traceability Matrix | Governance Pillar Leader (Control Baseline) | Draft |
+| [`CERG-GOV-IMPREG-001`](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) | Program Improvement Register | Governance Pillar Leader | Draft |
+| [`CERG-GOV-CEF-001`](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) | Control Effectiveness Framework | Governance Pillar Leader | Draft |
 
 ### 5.3 Standards
 
@@ -230,6 +235,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-PRC-TI-001`](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) | Threat Intelligence Procedure | Cyber Risk - Threat Intelligence | Draft |
 | [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) | Audit and Evidence Management Procedure | Cyber Governance | Draft |
 | [`CERG-PRC-CHG-001`](CERG-PRC-CHG-001_Security_Change_Management_Procedure.md) | Security Change Management Procedure | Cyber Engineering | Draft |
+| [`CERG-PRC-LL-001`](CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) | Lessons Learned and Program Improvement Procedure | Governance Pillar Leader | Draft |
 
 > **Numbering note: CERG-PRC-AC-001.** The Access Management Runbook is identifier `CERG-PRC-AC-002` rather than `-001` because the original `-001` slot was reserved for a planned standalone Access Review Runbook that has not been authored; the work was folded into the parent standard [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) §9. The `-002` ID is preserved to avoid renumbering existing references. The `-001` slot is reserved for future use.
 
@@ -258,6 +264,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-TMPL-RM-003`](CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md) | Risk Acceptance Memo Template | Risk Pillar Leader | Draft |
 | [`CERG-TMPL-AUD-001`](CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md) | Control Evidence and Test Worksheet | Evidence Librarian | Draft |
 | [`CERG-TMPL-MTR-001`](CERG-TMPL-MTR-001_Board_and_CISO_Reporting_Deck_Template.md) | Board and CISO Reporting Deck Template | Governance Pillar Leader | Draft |
+| [`CERG-TMPL-GOV-001`](CERG-TMPL-GOV-001_Stakeholder_Perception_Survey.md) | Stakeholder Perception Survey | Governance Pillar Leader | Draft |
 
 Other templates remain embedded as appendices of their parent procedure or plan unless they have independent reuse outside that artifact. The Document Catalog references the parent.
 
@@ -318,9 +325,9 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.27 |
+| **Version** | 1.28 |
 | **Status** | Published |
-| **Effective Date** | 2026-05-21 |
+| **Effective Date** | 2026-05-26 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
 | **Approved By** | Governance Pillar Leader |
@@ -343,6 +350,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | 1.25 | 2026-05-22 | Cyber Governance | Registered domains `BC`, `ISO`, and `PRIV`; added `CERG-PLN-BC-001`, `CERG-PLN-ISO-001`, and `CERG-PLN-PRIV-001` to Section 5.5 as Draft; removed the now-authored Group D operational package reservations from Section 7.3. |
 | 1.26 | 2026-05-22 | Cyber Governance | Added eight standalone Group E templates to Section 5.6 as Draft: `CERG-TMPL-CUI-001`, `CERG-TMPL-CUI-002`, `CERG-TMPL-RM-002`, `CERG-TMPL-AR-001`, `CERG-TMPL-TPRM-001`, `CERG-TMPL-RM-003`, `CERG-TMPL-AUD-001`, and `CERG-TMPL-MTR-001`; updated Section 7.4 to state that no Group E standalone templates remain planned. |
 | 1.27 | 2026-05-22 | Cyber Governance | Registered domains `CAL`, `STY`, and `TRC`; added `CERG-GOV-CAL-001`, `CERG-GOV-STY-001`, and `CERG-GOV-TRC-001` to Section 5.2 as Draft; updated Section 7.5 to state that no F2-F4 governance instruments remain planned. |
+| 1.28 | 2026-05-26 | Cyber Governance | NIST CSF Adaptive gap closure amendment. Registered domains `LL`, `IMPREG`, and `CEF`. Added to Section 5.2: `CERG-GOV-IMPREG-001` (Program Improvement Register) and `CERG-GOV-CEF-001` (Control Effectiveness Framework). Added to Section 5.4: `CERG-PRC-LL-001` (Lessons Learned and Program Improvement Procedure). Added to Section 5.6: `CERG-TMPL-GOV-001` (Stakeholder Perception Survey). Noted extended artifacts: PRC-TI-001 v1.1, MTR-001 v1.3, PRC-AV-001 v1.2, RMF-001 v1.3, MAT-001 v1.1, OM-001 v1.22. |
 
 ### Review Triggers
 
