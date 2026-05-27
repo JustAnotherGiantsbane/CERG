@@ -12,7 +12,7 @@
 | **Version** | 1.21 |
 | **Status** | Published |
 | **Classification** | Public |
-| **Owner** | Governance Pillar Leader (Risk Register) |
+| **Owner** | Risk Register Owner |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Supporting Standards** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) |
 | **Review Cycle** | Annual / Upon Significant Change / Major Tooling Change |
@@ -66,11 +66,11 @@ This procedure applies to:
 
 | **Role** | **Risk Management Responsibility** |
 |---|---|
-| **Cyber Governance - Risk Register Owner** | Owns this procedure and the risk register tool. Maintains the data model, taxonomy, dashboards, and reporting. Coordinates the risk review cadence. Curates the register for quality and completeness. |
-| **Cyber Risk** | Identifies risks through vulnerability management, threat intelligence, vendor assessment, adversarial testing, and continuous monitoring. Records risks in the register and recommends scoring and treatment. |
-| **Cyber Engineering** | Identifies risks through architecture review and pre-production assessment. Recommends compensating controls. Implements risk-reduction treatments on assets it supports. |
+| **Risk Register Owner** | Owns this procedure and the risk register tool. Maintains the data model, taxonomy, dashboards, and reporting. Coordinates the risk review cadence. Curates the register for quality and completeness. |
+| **Risk Pillar Leader** | Identifies risks through vulnerability management, threat intelligence, vendor assessment, adversarial testing, and continuous monitoring. Records risks in the register and recommends scoring and treatment. |
+| **Engineering Pillar Leader** | Identifies risks through architecture review and pre-production assessment. Recommends compensating controls. Implements risk-reduction treatments on assets it supports. |
 | **Business / Asset Owners (Risk Owners)** | Accountable for the risks associated with the systems and processes they own. Authorize treatment decisions for their scope. Sign on risk acceptances. |
-| **Approvers (Engineering Manager → CISO → Executive Sponsor)** | Apply the approval matrix in Section 8. Approvers do not own risks; they authorize the treatment decision against organizational policy. |
+| **Approvers (Engineering Pillar Leader → CISO → Executive Sponsor)** | Apply the approval matrix in Section 8. Approvers do not own risks; they authorize the treatment decision against organizational policy. |
 | **CISO** | Approves High and Critical risk acceptances and material exceptions. Owns escalation to executive leadership and the board. Owns the overall organizational risk posture. |
 | **Internal Audit and Compliance Partners** | Consume the register as evidence of risk management activity. Verify integrity of the process through periodic audit. |
 
@@ -135,7 +135,7 @@ Risks are scored using a 5×5 matrix of **Likelihood** and **Impact**. The matri
 | 2 | Minor | Limited operational disruption or remediation cost; no regulatory or customer-visible impact. |
 | 3 | Moderate | Material remediation effort or modest customer impact; localized regulatory finding without breach. |
 | 4 | Major | Significant regulatory exposure (CIP, CUI, breach-law notification), material customer impact, or significant operational disruption (Tier 1 systems). |
-| 5 | Severe | Material business / financial impact; broad customer harm; regulatory enforcement; safety or reliability consequence; SEC-disclosable. |
+| 5 | Critical | Material business / financial impact; broad customer harm; regulatory enforcement; safety or reliability consequence; SEC-disclosable. |
 
 #### Rating Bands
 
@@ -145,7 +145,7 @@ Risks are scored using a 5×5 matrix of **Likelihood** and **Impact**. The matri
 | 5–9 | **Medium** | Treat within a defined plan; review at standing cadence. |
 | 10–14 | **High** | Treat with priority; CISO approves risk acceptance. |
 | 15–20 | **Critical** | Treat urgently; CISO + executive sponsor approval for any acceptance. |
-| 21–25 | **Severe** | Immediate treatment required; executive / board awareness. |
+| 21–25 | **Critical** | Immediate treatment required; executive / board awareness. |
 
 ### 4.3 Scoring Discipline
 
@@ -277,15 +277,15 @@ For exceptions affecting regulated assets:
 |---|---|
 | Low risk - Reduce / Transfer / Avoid | Risk Owner + Governance |
 | Low risk - Accept | Risk Owner + Governance |
-| Medium risk - Reduce / Transfer / Avoid | Risk Owner + Engineering / Risk Manager |
+| Medium risk - Reduce / Transfer / Avoid | Risk Owner + Engineering / Risk Pillar Leader |
 | Medium risk - Accept | Risk Owner + CISO designee |
 | High risk - any treatment | Risk Owner + CISO |
 | Critical risk - any treatment | Risk Owner + CISO + Executive Sponsor |
-| Severe risk - any treatment | Risk Owner + CISO + Executive Sponsor + Board awareness |
+| Critical risk - any treatment | Risk Owner + CISO + Executive Sponsor + Board awareness |
 | Any exception affecting BES Cyber Systems | CISO + NERC-CIP deviation process |
 | Any exception affecting CUI environment posture | CISO + POA&M entry |
 | Any exception affecting [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC | CISO + CFO designee |
-| Emergency exception (operational necessity) | CISO post-hoc within 24 hours |
+| Emergency exception (operational necessity) | Risk Pillar Leader or Engineering Pillar Leader may authorize the emergency action before CISO review. CISO must be notified immediately and must approve or deny post-hoc within 24 hours. If denied, the action must be reversed or mitigated to the extent operationally feasible, and the residual risk is logged to the risk register with the denial rationale. |
 
 Approvers may delegate within their authority but shall document the delegation. The CISO retains final authority for any risk-related decision.
 
@@ -391,7 +391,7 @@ This procedure shall be reviewed annually and upon any of the following:
 - A significant incident or audit finding affecting the program
 - Direction from the CISO
 
-Governance owns this procedure. The Governance Pillar Leader (Risk Register) is responsible for revisions, ongoing maintenance, and obtaining CISO approval for material updates.
+Governance owns this procedure. The Risk Register Owner is responsible for revisions, ongoing maintenance, and obtaining CISO approval for material updates.
 
 ### Related Documents
 

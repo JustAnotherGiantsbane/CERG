@@ -12,7 +12,7 @@
 | **Version** | 1.21 |
 | **Status** | Published |
 | **Classification** | Public |
-| **Owner** | CISO (Incident Commander Authority) · Cyber Governance (Plan Maintenance) |
+| **Owner** | CISO · IR Plan Steward |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Supporting Standards** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) |
 | **Review Cycle** | Annual / After Any Significant Incident / Regulatory Change |
@@ -114,13 +114,13 @@ Activate this plan upon any of the following:
 | **Role** | **Standing Responsibility** |
 |---|---|
 | **Incident Commander (CISO / designated deputy)** | Single-decision authority; convenes and directs the IRT; owns external notification decisions; briefs executive leadership. |
-| **Lead Investigator (Cyber Risk)** | Owns technical investigation; coordinates evidence collection and forensic analysis; produces the incident technical timeline. |
-| **Engineering Lead (Cyber Engineering)** | Executes containment and recovery technical actions; coordinates with platform teams; advises on architectural impact. |
-| **Governance Lead (Cyber Governance)** | Owns the regulatory notification clock; maintains the SSP / POA&M impact tracking; coordinates with Legal on privilege; supports evidence preservation; assembles the post-incident report. |
-| **Legal / Privacy Counsel** | Advises on privilege, notification obligations, regulator engagement, customer / partner contractual notifications, law enforcement engagement. |
-| **Communications / Public Affairs** | Coordinates internal, customer, partner, and external public communications under IC direction. |
+| **Lead Investigator** | Owns technical investigation; coordinates evidence collection and forensic analysis; produces the incident technical timeline. |
+| **Engineering Pillar Leader** | Executes containment and recovery technical actions; coordinates with platform teams; advises on architectural impact. |
+| **Governance Pillar Leader** | Owns the regulatory notification clock; maintains the SSP / POA&M impact tracking; coordinates with Legal on privilege; supports evidence preservation; assembles the post-incident report. |
+| **Legal (external function)** | Advises on privilege, notification obligations, regulator engagement, customer / partner contractual notifications, law enforcement engagement. |
+| **Communications (external function)** | Coordinates internal, customer, partner, and external public communications under IC direction. |
 | **Executive Sponsor (CEO / COO / CIO / CFO as appropriate)** | Provides executive decision support for material business, regulatory, or financial determinations. |
-| **Operations Liaison (IT / OT / Business Unit Operations)** | Coordinates operational impact assessment and recovery sequencing. For OT events, the operations liaison is the on-shift operations supervisor or designee. |
+| **Operations Representative (external function)** | Coordinates operational impact assessment and recovery sequencing. For OT events, the operations liaison is the on-shift operations supervisor or designee. |
 
 ### 3.2 Tier of Engagement
 

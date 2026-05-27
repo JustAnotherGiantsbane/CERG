@@ -12,7 +12,7 @@
 | **Version** | 1.21 |
 | **Status** | Published |
 | **Classification** | Public |
-| **Owner** | Governance Pillar Leader (Enterprise IT/Cloud) |
+| **Owner** | Governance Pillar Leader |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / Upon Significant Change / Material Cloud Service Adoption |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r2](https://csrc.nist.gov/pubs/sp/800/171/r2/final) · [NIST 800-144](https://csrc.nist.gov/pubs/sp/800/144/final) · NIST RMF · CSA CCM v4 |
@@ -297,7 +297,7 @@ No control in this standard may be waived without a documented exception. Except
 
 | **Exception Type** | **Approval Required** | **Process** | **Review Cycle** |
 |---|---|---|---|
-| Standard exception (Internal-data SaaS / non-prod IaaS) | Engineering Manager + Governance | Submit risk acceptance via risk register with compensating control documentation. | Annual |
+| Standard exception (Internal-data SaaS / non-prod IaaS) | Engineering Pillar Leader + Governance | Submit risk acceptance via risk register with compensating control documentation. | Annual |
 | Tier 1 SaaS / production IaaS | CISO | Risk register entry with compensating controls. Governance reviews shared-responsibility implications. | Annual |
 | Restricted-data placement exception | CISO + Data Owner | Risk register + data classification review. CUI placements additionally subject to [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md). | Annual |
 | [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant system control gap | CISO + CFO designee | Risk register + ITGC compensating control documentation. External audit notification as required. | Quarterly until closed |

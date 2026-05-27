@@ -300,7 +300,7 @@ Findings are rated using a uniform schema regardless of engagement type, alignin
 | Detection gap | Detection backlog + risk register if material |
 | Process / runbook weakness | Owning procedure (AR / IR / TPRM) + risk register if material |
 | Vendor / supply chain weakness | TPRM record per [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
-| OT-specific weakness | OT VM procedure within [`CERG-PLN-CIP-001`](CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) + risk register |
+| OT-specific weakness | OT vulnerability management workflow per [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §4.3 and §6.3 + risk register |
 
 ### 10.3 Retest and Closure
 
@@ -338,9 +338,9 @@ Final reports are distributed under the confidentiality terms in the RoE. Full r
 
 | **Role** | **Responsibility** |
 |---|---|
-| Risk - Offensive Security | Owns this procedure. Maintains the annual Adversarial Validation Plan. Conducts or oversees engagements. Authors RoEs and Charters. |
-| Detection Engineer | Partners on purple-team cycles; turns findings into detection upgrades. |
-| Engineering - Platforms | Remediates identified misconfigurations and control gaps. |
-| Engineering - Identity | Remediates identity-related findings; tunes identity detections. |
-| Governance - Compliance | Tracks regulator-required cadence (CIP, [CMMC](https://dodcio.defense.gov/CMMC/)); audit interface. |
+| **Adversarial Testing Lead** | Owns this procedure. Maintains the annual Adversarial Validation Plan. Conducts or oversees engagements. Authors RoEs and Charters. |
+| **Detection Engineer** | Partners on purple-team cycles; turns findings into detection upgrades. |
+| **Cloud Security Engineer** | Remediates identified misconfigurations and control gaps. |
+| **Identity Engineer** | Remediates identity-related findings; tunes identity detections. |
+| **Governance Pillar Leader** | Tracks regulator-required cadence (CIP, [CMMC](https://dodcio.defense.gov/CMMC/)); audit interface. |
 | CISO | Approves Red-Team Charters and high-impact / cloud / OT engagements.

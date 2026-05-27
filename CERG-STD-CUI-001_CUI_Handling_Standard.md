@@ -12,7 +12,7 @@
 | **Version** | 1.21 |
 | **Status** | Published |
 | **Classification** | Public |
-| **Owner** | Governance Pillar Leader ([CMMC](https://dodcio.defense.gov/CMMC/) / Federal Compliance) |
+| **Owner** | CMMC / Federal Compliance Manager |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / Upon Significant Change / [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) Revision |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r2](https://csrc.nist.gov/pubs/sp/800/171/r2/final) (and r3 transition) · [NIST 800-172](https://csrc.nist.gov/pubs/sp/800/172/final) · NIST RMF |
@@ -191,7 +191,7 @@ The fourteen [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) cont
 
 | **Requirement** | **Applies To** | **CERG Owner** | **Regulatory Reference** |
 |---|---|---|---|
-| Maintain an operational incident-handling capability covering preparation, detection, analysis, containment, recovery, and user response activities. Test the capability. | All CUI | Governance / Risk | [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) 3.6.1, 3.6.3 |
+| The standing Incident Response team (a separate function under CISO oversight per CERG-GOV-OM-001 §3.4) owns and maintains the operational incident-handling capability. CERG coordinates with the IR team by providing detection feeds, vulnerability context, asset documentation, and post-incident risk-register entries. Test participation follows the IR team's exercise schedule. | All CUI | Incident Response Team (CERG coordinates) | [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) 3.6.1, 3.6.3 |
 | Track, document, and report incidents to designated officials and authorities both internal and external (including DC3 under DFARS) - see Section 7. | All CUI | Governance | [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) 3.6.2 · DFARS 252.204-7012 |
 
 ### 5.7 Maintenance (3.7)

@@ -64,9 +64,9 @@ This procedure defines how CERG engages with the broader enterprise vendor progr
 | **Procurement** | Vendor onboarding, contracts, master vendor record. | CERG reviews proposed contracts for security clauses; SCCT escalation routes through Procurement for contractual remedies. |
 | **Enterprise Risk Management (ERM)** | Enterprise vendor tier, criticality, business-impact rating. | CERG accepts the business tier as input; adjusts only per Section 4. |
 | **Business Resiliency** | Vendor continuity, exit plans. | CERG cyber-recovery expectations feed BR vendor recovery plans. |
-| **Legal / Privacy** | Contract negotiation, regulatory flow-down, privacy notices. | CERG provides cyber clauses (Section 8); Legal owns negotiation. |
-| **CERG - Risk (TPRM)** | This procedure. Vendor cyber assessments, SCCT, evidence-by-tier, continuous monitoring. | - |
-| **CERG - Governance** | Cyber audit interface; regulator-facing artifacts ([CMMC](https://dodcio.defense.gov/CMMC/) SSP, CIP-013 plan). | - |
+| **Legal (external)** | Contract negotiation, regulatory flow-down, privacy notices. | CERG provides cyber clauses (Section 8); Legal owns negotiation. |
+| **Vendor Risk Analyst** | This procedure. Vendor cyber assessments, SCCT, evidence-by-tier, continuous monitoring. | - |
+| **Governance Pillar Leader** | Cyber audit interface; regulator-facing artifacts ([CMMC](https://dodcio.defense.gov/CMMC/) SSP, CIP-013 plan). | - |
 | **Business / Asset Owners** | Vendor relationship; business-side acceptance of vendor-related risk. | Sign off on residual cyber risk per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). |
 
 ---

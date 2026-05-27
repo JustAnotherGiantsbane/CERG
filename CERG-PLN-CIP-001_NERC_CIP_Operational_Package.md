@@ -12,7 +12,7 @@
 | **Version** | 1.21 |
 | **Status** | Published |
 | **Classification** | Public |
-| **Owner** | Governance Pillar Leader (OT / NERC-CIP) |
+| **Owner** | NERC-CIP Compliance Manager |
 | **Parent Standard** | [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) - Grid Control Systems Security Standard |
 | **Supporting Documents** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) · [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-CFG-001](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-RES-001](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [CERG-PRC-AV-001](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) · [CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md) |
 | **Review Cycle** | Annual / Continuous tracking - evidence currency monthly |
@@ -30,10 +30,10 @@
 4. [BES Cyber System Categorization Procedure](#4-bes-cyber-system-categorization-procedure)
 5. [ESP / EAP Topology Documentation](#5-esp--eap-topology-documentation)
 6. [NERC-CIP Evidence Library Procedure (`CERG-GOV-CIP-001`)](#6-nerc-cip-evidence-library-procedure-cerg-gov-cip-001)
-7. [OT Vulnerability Management Procedure (`CERG-PROC-VM-002`)](#7-ot-vulnerability-management-procedure-cerg-proc-vm-002)
-8. [BES Cyber System Access Management Procedure (`CERG-PROC-AC-002-BES`)](#8-bes-cyber-system-access-management-procedure-cerg-proc-ac-002-bes)
+7. [OT Vulnerability Management Procedure (`CERG-PRC-VM-002`)](#7-ot-vulnerability-management-procedure-cerg-proc-vm-002)
+8. [BES Cyber System Access Management Procedure (`CERG-PRC-AC-002-BES`)](#8-bes-cyber-system-access-management-procedure-cerg-proc-ac-002-bes)
 9. [CIP Deviation and Mitigation Plan Template (`CERG-TMPL-CIP-001`)](#9-cip-deviation-and-mitigation-plan-template-cerg-tmpl-cip-001)
-10. [IT/OT Convergence Security Architecture Guideline (`CERG-GL-OT-001`)](#10-itot-convergence-security-architecture-guideline-cerg-gl-ot-001)
+10. [IT/OT Convergence Security Architecture Guideline (`CERG-STD-OT-001 (planned IT/OT convergence architecture guideline to be registered as CERG-GL-OT-001 in future catalog amendment)`)](#10-itot-convergence-security-architecture-guideline-cerg-gl-ot-001)
 11. [CIP-013 Supply Chain Risk Management Plan](#11-cip-013-supply-chain-risk-management-plan)
 12. [CIP-009 Recovery Plan Package](#12-cip-009-recovery-plan-package)
 13. [CIP-015 INSM, Forward-Looking Integration](#13-cip-015-insm--forward-looking-integration)
@@ -62,7 +62,7 @@ CERG operates as the **second line of defense** for CIP controls.
 | **Line** | **Role** | **Who** |
 |---|---|---|
 | **First** | Implementation of controls in the field. | OT Operators (substation engineering, control center operations, OT IT support). |
-| **Second** | Review, track implementation, evidence, and deviation; coordinate with Operators on control design and remediation. | CERG (Governance - OT, Risk - OT, Engineering - OT). |
+| **Second** | Review, track implementation, evidence, and deviation; coordinate with Operators on control design and remediation. | CERG (NERC-CIP Compliance Manager, OT Risk Analyst, OT Security Engineer). |
 | **Third** | Dispassionate assurance independent of both. | Internal Audit and/or external firms. |
 
 The model is intentionally explicit so audit trails are clean: Operators do; CERG reviews and tracks; Audit independently assures. CERG never grades its own homework on first-line activities, and Operators are not asked to be their own auditors.
@@ -139,7 +139,7 @@ CIP evidence reuses the broader CERG evidence catalog wherever possible (per [`C
 
 ---
 
-## 7. OT Vulnerability Management Procedure (`CERG-PROC-VM-002`)
+## 7. OT Vulnerability Management Procedure (`CERG-PRC-VM-002`)
 
 The enterprise vulnerability procedure ([`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md)) governs IT scopes; this OT-specific procedure overlays it with OT-safe practices.
 
@@ -168,7 +168,7 @@ The enterprise vulnerability procedure ([`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vuln
 
 ---
 
-## 8. BES Cyber System Access Management Procedure (`CERG-PROC-AC-002-BES`)
+## 8. BES Cyber System Access Management Procedure (`CERG-PRC-AC-002-BES`)
 
 CIP-004 R4 / R5 obligations operationalized as an overlay on [`CERG-PRC-AC-002`](CERG-PRC-AC-002_Access_Management_Runbook.md).
 
@@ -225,8 +225,8 @@ E. PLAN TO ELIMINATE THE DEVIATION
    Target Closure           :
 
 F. APPROVAL
-   CERG Governance - OT     :
-   CERG CISO                :
+   CERG NERC-CIP Compliance Manager     :
+   CISO                :
    Operations               :
 
 G. RECORD
@@ -241,7 +241,7 @@ G. RECORD
 
 ---
 
-## 10. IT/OT Convergence Security Architecture Guideline (`CERG-GL-OT-001`)
+## 10. IT/OT Convergence Security Architecture Guideline (`CERG-STD-OT-001 (planned IT/OT convergence architecture guideline to be registered as CERG-GL-OT-001 in future catalog amendment)`)
 
 The convergence guideline informs architecture decisions where IT systems touch OT systems. It is referenced by [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) for any project crossing the IT/OT boundary.
 

@@ -12,7 +12,7 @@
 | **Version** | 1.21 |
 | **Status** | Published |
 | **Classification** | Public |
-| **Owner** | Identity Engineer - or IAM team lead when IAM is owned outside CERG, with CERG as cyber contributor |
+| **Owner** | Identity Engineer |
 | **Parent Standard** | [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) - Access Management Standard |
 | **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
 | **Review Cycle** | Annual / On IAM tooling change |
@@ -79,8 +79,8 @@ Where IAM is outside CERG, every requirement below is either implemented by the 
 | Baseline entitlements assigned by role | IGA via role / SoD model |
 | MFA enrollment notification | IdP - at first sign-in |
 | Required training assignment | Awareness function |
-| Phishing-resistant MFA enrolled before privileged use | User + Engineering - Identity |
-| Hardware token issued (where required by role) | Engineering - Identity |
+| Phishing-resistant MFA enrolled before privileged use | User + Identity Engineer |
+| Hardware token issued (where required by role) | Identity Engineer |
 | Privileged role(s) requested separately | Manager + named approver per role |
 
 ### 3.2 Mover
@@ -101,7 +101,7 @@ Where IAM is outside CERG, every requirement below is either implemented by the 
 | Active sessions terminated | IdP - within 1 hour |
 | Account disabled | IGA - within 1 business day (within 1 hour for involuntary) |
 | Privileged credentials and secrets attributed to user rotated | PAM + Engineering - within 1 business day |
-| MFA tokens / hardware deauthorized | Engineering - Identity - within 1 business day |
+| MFA tokens / hardware deauthorized | Identity Engineer - within 1 business day |
 | Mailbox and data retention applied per Legal | Engineering - IT |
 | Account permanently deleted | IGA - after retention period |
 
@@ -130,8 +130,8 @@ Same as 3.3 with all SLAs collapsed to "immediately" and the SOC alerted to moni
 |---|---|
 | Standard role | Direct manager |
 | Sensitive role | Direct manager + system owner |
-| Privileged role | Direct manager + role owner + Engineering - Identity |
-| Vendor / external | Sponsor + Engineering - Identity + TPRM record |
+| Privileged role | Direct manager + role owner + Identity Engineer |
+| Vendor / external | Sponsor + Identity Engineer + TPRM record |
 | Break-glass | Per Section 7 |
 
 ### 4.3 Approval Discipline
@@ -237,14 +237,14 @@ Break-glass accounts are the credentials of last resort, used only when normal i
 
 | **Step** | **Owner** |
 |---|---|
-| Request via service-account intake | Owner team + Engineering - Identity |
+| Request via service-account intake | Owner team + Identity Engineer |
 | Named human owner required | Owner team |
-| Scope and entitlements minimized | Engineering - Identity |
-| Stored in PAM / secrets manager per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Engineering - Identity |
-| Detection on anomalous use | Risk - Detection |
-| Recertification semi-annual | Engineering - Identity |
-| Rotation per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) Section 8 | Engineering - Identity / Workload owner |
-| Decommission on system retirement | Engineering - Identity |
+| Scope and entitlements minimized | Identity Engineer |
+| Stored in PAM / secrets manager per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Identity Engineer |
+| Detection on anomalous use | Detection Engineer |
+| Recertification semi-annual | Identity Engineer |
+| Rotation per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) Section 8 | Identity Engineer / Workload owner |
+| Decommission on system retirement | Identity Engineer |
 
 ### 8.3 Service Account Disciplines
 
@@ -275,13 +275,13 @@ This section operationalizes [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_an
 
 | **Step** | **Owner** |
 |---|---|
-| Vendor record created in TPRM with tier and country-of-access | CERG - TPRM |
+| Vendor record created in TPRM with tier and country-of-access | Vendor Risk Analyst |
 | Sponsor identified (named human in our org) | Business / Sponsor |
-| Access scope defined - minimum required entitlements, time-bounded | Engineering - Identity |
-| MFA enrolled - phishing-resistant required for privileged | Engineering - Identity |
-| Sessions brokered through PAM where privileged | Engineering - Identity |
-| Country-of-access validated against Country Risk Register ([`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) Section 10) | CERG - TPRM |
-| Time-boxed: explicit expiration; renewal requires re-justification | Engineering - Identity |
+| Access scope defined - minimum required entitlements, time-bounded | Identity Engineer |
+| MFA enrolled - phishing-resistant required for privileged | Identity Engineer |
+| Sessions brokered through PAM where privileged | Identity Engineer |
+| Country-of-access validated against Country Risk Register ([`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) Section 10) | Vendor Risk Analyst |
+| Time-boxed: explicit expiration; renewal requires re-justification | Identity Engineer |
 
 ### 10.2 Monitoring
 
@@ -323,9 +323,9 @@ Phishing-resistant MFA coverage is reported as `ID-001` in [`CERG-GOV-MTR-001`](
 
 | **Role** | **Responsibility** |
 |---|---|
-| Engineering - Identity | Owns the operational workflows in this runbook (or contributes them to the external IAM team). |
-| Risk - Detection | Identity detection use cases per [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) Section 11. |
-| Governance - Compliance | Recertification evidence, SoD evidence, regulator interface. |
+| Identity Engineer | Owns the operational workflows in this runbook (or contributes them to the external IAM team). |
+| Detection Engineer | Identity detection use cases per [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) Section 11. |
+| Governance Pillar Leader | Recertification evidence, SoD evidence, regulator interface. |
 | Managers / Sponsors | Approval and recertification decisions. |
 | System / Role Owners | Approve sensitive and privileged access; participate in recert. |
 | HR | JML triggers; data quality in HRIS. |

@@ -12,7 +12,7 @@
 | **Version** | 1.21 |
 | **Status** | Published |
 | **Classification** | Public |
-| **Owner** | Governance Pillar Leader (Identity & Access) |
+| **Owner** | Governance Pillar Leader |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / Upon Significant Change |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-63](https://pages.nist.gov/800-63-3/)-3 (B/C) · [NIST 800-171r2](https://csrc.nist.gov/pubs/sp/800/171/r2/final) · NIST RMF |
@@ -316,7 +316,7 @@ The following access types shall be treated as privileged and subject to the con
 |---|---|---|---|
 | Standard exception (non-privileged, non-regulated) | Manager + Governance | Risk register entry with compensating control documentation. | Annual |
 | Privileged access exception | CISO | PAM-bypass exceptions require enhanced session monitoring and quarterly review. | Quarterly |
-| Shared / vendor-required credential | Engineering Manager + Governance | Vault under PAM, document attribution model, monitor session use. | Annual |
+| Shared / vendor-required credential | Engineering Pillar Leader + Governance | Vault under PAM, document attribution model, monitor session use. | Annual |
 | MFA exception (workforce identity) | CISO | Permitted only for documented technical limitations; compensating controls required (e.g., source-IP restrictions, enhanced monitoring). | Quarterly |
 | Standing privileged access (no JIT) | CISO | Risk register entry; session recording required where technically feasible. | Quarterly |
 | BES Cyber System access exception | CISO + NERC-CIP deviation as applicable | Follow [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) §11 escalation. | Per CIP-mitigation milestones |

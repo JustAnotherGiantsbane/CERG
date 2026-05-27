@@ -59,10 +59,10 @@ This procedure defines how a project enters CERG attention, how Engineering revi
 |---|---|
 | **Project Sponsor / Business Owner** | Submits intake. Owns the project's residual risk. Approves go-live decisions for their scope. |
 | **Project / Technical Lead** | Produces the architecture artifacts and answers reviewer questions. Drives remediation between reviews. |
-| **CERG - Engineering (Reviewer)** | Conducts the review. Maintains review record. Determines findings. Recommends handoff disposition. |
-| **CERG - Risk (Threat Modeler / Vendor Assessor)** | Performs threat modeling. Performs vendor risk per [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) if third parties are involved. Adds findings to the risk register. |
-| **CERG - Governance (Compliance Liaison)** | Maps the project into the regulatory scope (CUI / BES / [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)) and triggers the relevant overlay reviewers. |
-| **Engineering Manager** | Approves Standard findings. Approves Medium risk acceptances per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) §8. |
+| **CERG - Pre-production Reviewer** | Conducts the review. Maintains review record. Determines findings. Recommends handoff disposition. |
+| **Application Security Engineer** | Performs threat modeling. Performs vendor risk per [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) if third parties are involved. Adds findings to the risk register. |
+| **Governance Pillar Leader** | Maps the project into the regulatory scope (CUI / BES / [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)) and triggers the relevant overlay reviewers. |
+| **Engineering Pillar Leader** | Approves Standard findings. Approves Medium risk acceptances per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) §8. |
 | **CISO** | Approves High / Critical risk acceptances at go-live. |
 | **IT Change Advisory Board (CAB)** | Hosts the go-live conversation; CERG review status is a CAB input, not a substitute for change management. |
 
@@ -272,7 +272,7 @@ Pre-Production review is a focused, time-boxed readiness check. It produces a Pr
 | **Check** | **Pass Criteria** | **Evidence** |
 |---|---|---|
 | DISH baseline applied | Pass against the asset's tier in [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | DISH scan output |
-| Vulnerability posture | No open Critical; High open ≤ exception count from Phase 2 | VM tool report |
+| Vulnerability posture | No un-remediated, un-accepted Critical findings (risk-accepted Critical per CERG-PRC-RM-001 §8 is acceptable); High open ≤ exception count from Phase 2 | VM tool report |
 | Identity wired | SSO + MFA enforced; PAM model in place; service accounts via approved pattern | IdP / PAM policy export |
 | Logging | Mandatory sources onboarded; SIEM ingest verified; retention configured | SIEM source inventory |
 | Detection | Day-one detection set enabled in the environment | Detection coverage report |
@@ -337,7 +337,7 @@ PRODUCTION HANDOFF PACKAGE - <System Name>     AR-YYYY-NNNN - PHP-001
    Engineering Reviewer
    Risk Reviewer
    Governance (overlay) Reviewer(s) - CUI / BES / SOX as applicable
-   Engineering Manager
+   Engineering Pillar Leader
    CISO (if High / Critical risk acceptance)
    Business Owner
 ```

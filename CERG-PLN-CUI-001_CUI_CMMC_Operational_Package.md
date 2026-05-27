@@ -12,7 +12,7 @@
 | **Version** | 1.21 |
 | **Status** | Published |
 | **Classification** | Public |
-| **Owner** | Governance Pillar Leader (CUI / [CMMC](https://dodcio.defense.gov/CMMC/)) |
+| **Owner** | CMMC / Federal Compliance Manager |
 | **Parent Standard** | [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) - CUI Handling Standard |
 | **Supporting Documents** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) · [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-CFG-001](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-RES-001](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [CERG-PRC-AV-001](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) |
 | **Review Cycle** | Annual / Continuous - POA&M monthly, SSP on material change |
@@ -105,9 +105,9 @@ SYSTEM SECURITY PLAN - <CUI System / Enclave Name>     SSP-CUI-NNN
    System Name(s) / Aliases
    System Type            (enclave / app / hybrid)
    Operational Status
-   System Owner
+   Executive Sponsor / System Representative
    Authorizing Official (CISO)
-   Information System Security Officer (ISSO)
+   Information System Security Point of Contact (CMMC / Federal Compliance Manager or delegate)
    System Boundary Description (Section 3.3 instance)
 
 2. SYSTEM ENVIRONMENT
@@ -140,7 +140,7 @@ SYSTEM SECURITY PLAN - <CUI System / Enclave Name>     SSP-CUI-NNN
    Reference to [CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md) with CUI-specific notes (DC3 reporting, 72-hour notification)
 
 8. APPROVALS
-   ISSO, System Owner, CISO
+   Information System Security Point of Contact, Executive Sponsor / System Representative, CISO
 
 Appendices:
   A. CUI Boundary Diagram (Section 7)
