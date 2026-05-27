@@ -9,12 +9,12 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-MAT-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Draft |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) · [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) · [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) |
+| **Supporting Documents** | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) · [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) · [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) · [`CERG-GOV-IMPREG-001`](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) · [`CERG-GOV-CAL-001`](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md) |
 | **Review Cycle** | Annual / On any change to the V1 library |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · NIST 800-55 · ISO/IEC 27004 |
 | **Regulations** | Cross-cutting |
@@ -35,7 +35,8 @@
 9. [Scoring the Result](#9-scoring-the-result)
 10. [The Scorecard Output](#10-the-scorecard-output)
 11. [Turning Gaps Into Work](#11-turning-gaps-into-work)
-12. [Document Control](#12-document-control)
+12. [Quarterly Gap Checkpoint](#12-quarterly-gap-checkpoint)
+13. [Document Control](#13-document-control)
 
 ---
 
@@ -254,20 +255,63 @@ A scorecard that is filed and forgotten is vanity. The assessment is only finish
 
 ---
 
-## 12. Document Control
+## 12. Quarterly Gap Checkpoint
+
+Between annual full assessments, the program operates with a 12-month blind spot. If a gap remediation stalls in month 3, the organization does not discover it until month 12. An Adaptive program runs lightweight quarterly checkpoints to verify that the top gaps are closing on schedule.
+
+### 12.1 Cadence and Ownership
+
+Quarterly, aligned with the CERG leadership review (GOV-CAL-001 Section 5), the Governance Pillar Leader runs a gap remediation checkpoint. This is NOT a full re-score : domains are not re-evaluated. Only the in-progress gap remediation actions from the most recent full assessment are reviewed.
+
+### 12.2 Checkpoint Questions
+
+For each open gap committed after the last full assessment, the checkpoint answers four questions:
+
+| Question | Response Options | Action |
+|---|---|---|
+| **Is the remediation on track to meet the target date?** | Yes / At Risk / No | At Risk: flagged for attention. No: escalated to CISO. |
+| **Has the evidence changed since the last checkpoint?** | New evidence exists / Same as last checkpoint / Evidence degraded | Degraded: the gap has gotten worse. Treat as a new finding. |
+| **Is this still a top-five gap, or has it been displaced?** | Still top-five / Displaced by new concern | If displaced, the new gap is assessed immediately rather than waiting for the next annual assessment. |
+| **Is the target tier still appropriate?** | Yes / No : should be raised / No : should be lowered | If changed, the target is adjusted and the owner is notified. |
+
+### 12.3 Escalation Rules
+
+- Any gap marked "At Risk" for two consecutive checkpoints is escalated to the CISO with a remediation demand.
+- Any gap marked "No" (off track) is escalated to the CISO immediately.
+- Any domain where evidence has degraded since the last assessment is treated as a new gap and entered into the improvement register (IMPREG-001) with the source "Maturity Checkpoint QN YYYY."
+
+### 12.4 Output
+
+The checkpoint produces a one-page Gap Checkpoint Summary, appended to the quarterly CISO brief (MTR-001). It shows:
+
+| Open Gap | Domain | Current Tier | Target Tier | Owner | Status | Target Date | Next Step |
+|---|---|---|---|---|---|---|---|
+
+### 12.5 Annual Assessment Integration
+
+The quarterly checkpoint feeds the annual full assessment in two ways:
+
+1. **Evidence currency.** By checking evidence quarterly, the annual assessment runs against evidence that is at most 90 days old, rather than scrambling to collect 12 months of evidence at assessment time.
+2. **Gap transition.** Gaps that transition from simple remediation to complex multi-domain program changes may be moved from MAT-001 tracking to the improvement register (IMPREG-001). The checkpoint is the decision point where a gap owner may request this transition.
+
+The annual assessment remains the authoritative tier re-score. The quarterly checkpoint is a progress review, not a re-score.
+
+---
+
+## 13. Document Control
 
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-MAT-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Draft |
-| **Effective Date** | 2026-05-21 |
+| **Effective Date** | 2026-05-26 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
 | **Approved By** | Chief Information Security Officer (pending) |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on any change to the V1 library |
-| **Next Scheduled Review** | 2027-05-21 |
+| **Next Scheduled Review** | 2027-05-26 |
 | **Frameworks** | NIST CSF 2.0 (GOVERN); NIST 800-55; ISO/IEC 27004 |
 | **Regulations** | Cross-cutting |
 | **Environments** | Program-wide |
@@ -277,6 +321,7 @@ A scorecard that is filed and forgotten is vanity. The assessment is only finish
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
 | 1.0 Draft | 2026-05-21 | Cyber Governance | Initial release. Establishes the four-tier self-assessment, 24 assessment domains across Governance, Engineering, Risk, and Cross-Pillar groups, evidence-anchored scoring rules, the domain-to-pillar-to-overall rollup with the weakest-link honesty check, the one-page scorecard and radar output specification, the assessment cadence, and the gaps-into-work discipline. |
+| 1.1 Draft | 2026-05-26 | Cyber Governance | Added Section 12 Quarterly Gap Checkpoint: quarterly remediation progress review with four checkpoint questions, escalation rules for at-risk and off-track gaps, one-page output format, and annual assessment integration. Renumbered Document Control to Section 13. Updated supporting documents to reference IMPREG-001 and CAL-001. |
 
 ### Review Triggers
 

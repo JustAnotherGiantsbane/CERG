@@ -1,6 +1,6 @@
 # SURGE: Cyber Engineering, Risk & Governance
 ## CERG Risk Management Framework
-**Document ID:** CERG-RMF-001 · **Version:** 1.21 · **Classification:** Public
+**Document ID:** CERG-RMF-001 · **Version:** 1.3 · **Classification:** Public
 
 > *A NIST-grounded, operationally adaptive risk management framework designed for IT and OT environments across CMMC, NERC-CIP, and SOX.*
 
@@ -19,7 +19,8 @@
 9. [Risk Register and Risk Treatment](#9-risk-register-and-risk-treatment)
 10. [IT/OT Risk Management Considerations](#10-itot-risk-management-considerations)
 11. [Regulatory Alignment Quick Reference](#11-regulatory-alignment-quick-reference)
-12. [Document Control and Review](#12-document-control-and-review)
+12. [Risk Appetite Calibration](#12-risk-appetite-calibration)
+13. [Document Control and Review](#13-document-control-and-review)
 
 ---
 
@@ -507,24 +508,82 @@ The CERG-RMF satisfies the risk management requirements of all applicable framew
 
 ---
 
-## 12. Document Control and Review
+## 12. Risk Appetite Calibration
+
+Risk appetite is not a once-and-done statement. An Adaptive organization formally recalibrates its risk appetite based on business changes, incident experience, threat landscape shifts, and regulatory changes. This section defines when, how, and with what inputs the CISO and leadership recalibrate the organization's risk appetite.
+
+### 12.1 Calibration Cadence
+
+Risk appetite is reviewed:
+
+- **Annually**, aligned with the annual planning cycle and the CISO Risk and Posture Review (per GOV-CAL-001)
+- **When triggered** by any of the following events:
+  - A major incident (Critical severity, or any incident requiring board notification)
+  - Merger, acquisition, or divestiture activity
+  - Entry into a new market, product line, or regulated domain
+  - A material regulatory framework change (new regulation, major amendment, new enforcement posture)
+  - CISO or board request
+  - A peer benchmarking finding (PRC-TI-001 Section 10.2) that shows a significant gap from sector norms
+
+### 12.2 Inputs to the Review
+
+The annual risk appetite review is prepared by the Governance Pillar Leader with inputs from all pillars. The review package contains:
+
+1. **Incident history (trailing 12 months):** frequency by severity, root cause clusters, control failures identified (per CEF-001), and incident trends
+2. **Threat landscape assessment:** from the most recent quarterly assessment (PRC-TI-001 Section 9.1), including top threat actors, TTP changes, and exploited vulnerabilities
+3. **Business strategy changes:** new markets, products, technologies, partnerships, or organizational changes from the executive planning cycle
+4. **Regulatory changes:** new or modified compliance obligations, enforcement trends, upcoming assessment or audit milestones
+5. **Peer and industry incident data:** from external incident learning (PRC-TI-001 Section 10.3) and peer benchmarking (PRC-TI-001 Section 10.2)
+6. **Current risk register state:** risk concentration by pillar, OU, and control family; treatment effectiveness rate (RA-EFF-001); exception renewal rate (RA-EFF-002)
+7. **Current metric threshold performance:** which thresholds are producing actionable signals vs. noise (per MTR-001 Section 10)
+
+### 12.3 Calibration Decisions
+
+The review produces one of two outputs:
+
+**Option A: No change.** Current risk appetite remains appropriate. The decision is documented with the specific rationale and the data that supported it. "No change" is a deliberate conclusion, not a default.
+
+**Option B: Risk appetite adjustment.** A revised risk appetite statement is produced, plus cascading changes:
+
+| Cascade | Action | Owned By |
+|---|---|---|
+| Metric thresholds | Tighten or relax relevant thresholds in MTR-001 per the Threshold Calibration procedure (MTR-001 Section 10) | Governance Pillar Leader |
+| Control baseline priorities | Controls protecting against newly elevated risks get increased review frequency and potentially tighter effectiveness thresholds | Pillar leader of affected controls |
+| Exception authority | The severity band at which a pillar leader can approve vs. requires CISO vs. requires board is adjusted if the risk appetite change warrants it | CISO |
+| Investment signals | If appetite tightens in an area, tooling, staffing, or capability gaps are identified and routed to budget planning | CISO |
+| Improvement register | Each cascading change is recorded in IMPREG-001 (Type: Metric or threshold change, Control amendment, Staffing or budget) with the risk appetite review as the source | Governance Pillar Leader |
+
+### 12.4 Approval
+
+- The CISO approves the risk appetite statement and all cascading changes.
+- If the change materially affects enterprise risk posture, the board or Cyber Oversight Group is informed or approves per the organization's governance charter.
+- The approved risk appetite statement is published and becomes the authoritative reference for all subsequent risk decisions until the next calibration.
+
+### 12.5 Cascade Tracking
+
+Cascading changes from a risk appetite adjustment are tracked in the improvement register (IMPREG-001) until verified. A metric threshold change is verified when it produces one full quarter of actionable signals. A control priority change is verified when the control's effectiveness metric reflects the new posture. No cascading change is considered complete until it is verified Effective.
+
+---
+
+## 13. Document Control and Review
 
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-RMF-001 |
-| **Version** | 1.0 |
+| **Version** | 1.3 |
 | **Status** | Approved |
-| **Effective Date** | 2026-05-01 |
+| **Effective Date** | 2026-05-26 |
 | **Classification** | Internal / Restricted |
 | **Document Owner** | Cyber Governance (CERG Pillar) |
 | **Approved By** | Chief Information Security Officer |
 | **Review Cycle** | Annual; triggered by significant regulatory change or organizational change |
-| **Next Scheduled Review** | 2027-05-01 |
+| **Next Scheduled Review** | 2027-05-26 |
 | **Parent Document** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - CERG Cybersecurity Policy |
-| **Related Documents** | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) · [`CERG-GOV-TAX-001`](CERG-GOV-TAX-001_Risk_Taxonomy.md) · [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) · [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) · System Security Plans (per system) · Plan of Action and Milestones (per system) |
+| **Related Documents** | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) · [`CERG-GOV-TAX-001`](CERG-GOV-TAX-001_Risk_Taxonomy.md) · [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) · [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) · [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) · [`CERG-GOV-IMPREG-001`](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) · [`CERG-PRC-TI-001`](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) · System Security Plans (per system) · Plan of Action and Milestones (per system) |
 
 ### Revision History
 
 | Version | Date | Author | Change Description |
 |---|---|---|---|
 | 1.0 | 2026-05-01 | Cyber Governance | Initial release. Establishes the CERG-RMF cycle, the FAIR-aligned risk statement format, the 5x5 likelihood/impact model, the canonical risk acceptance authority table, and the risk appetite and tolerance posture. Retires the parallel SLA table in favor of the single source of truth in CERG-PRC-VM-001. Adopts canonical ID CERG-GOV-RMF-001 per CERG-GOV-CAT-001 §5.2. |
+| 1.3 | 2026-05-26 | Cyber Governance | Added Section 12 Risk Appetite Calibration: annual and triggered review cadence, structured input package, calibration decision framework with cascading changes (metric thresholds, control priorities, exception authority, investment signals), approval workflow, and cascade tracking through the improvement register. Renumbered Document Control to Section 13. |
