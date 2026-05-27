@@ -275,8 +275,8 @@ For exceptions affecting regulated assets:
 
 | **Risk Rating / Treatment** | **Approval Authority** |
 |---|---|
-| Low risk - Reduce / Transfer / Avoid | Risk Owner + Governance |
-| Low risk - Accept | Risk Owner + Governance |
+| Low risk - Reduce / Transfer / Avoid | Risk Owner + Governance Pillar Leader |
+| Low risk - Accept | Risk Owner + Governance Pillar Leader |
 | Medium risk - Reduce / Transfer / Avoid | Risk Owner + Engineering / Risk Pillar Leader |
 | Medium risk - Accept | Risk Owner + CISO designee |
 | High risk - any treatment | Risk Owner + CISO |

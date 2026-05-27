@@ -314,7 +314,7 @@ The following access types shall be treated as privileged and subject to the con
 
 | **Exception Type** | **Approval Required** | **Process** | **Review Cycle** |
 |---|---|---|---|
-| Standard exception (non-privileged, non-regulated) | Manager + Governance | Risk register entry with compensating control documentation. | Annual |
+| Standard exception (non-privileged, non-regulated) | Engineering Pillar Leader + Governance Pillar Leader | Risk register entry with compensating control documentation. | Annual |
 | Privileged access exception | CISO | PAM-bypass exceptions require enhanced session monitoring and quarterly review. | Quarterly |
 | Shared / vendor-required credential | Engineering Pillar Leader + Governance | Vault under PAM, document attribution model, monitor session use. | Annual |
 | MFA exception (workforce identity) | CISO | Permitted only for documented technical limitations; compensating controls required (e.g., source-IP restrictions, enhanced monitoring). | Quarterly |
@@ -341,7 +341,7 @@ The following access types shall be treated as privileged and subject to the con
 - Internal audit or regulatory finding affecting access control
 - Direction from the CISO
 
-Governance owns this document. The Governance Pillar Leader (Identity & Access) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO approval for all changes.
+Governance owns this document. The Governance Pillar Leader is responsible for initiating reviews, managing the revision cycle, and obtaining CISO approval for all changes.
 
 ### Related Documents
 

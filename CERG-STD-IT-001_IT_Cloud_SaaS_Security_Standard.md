@@ -16,7 +16,7 @@
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / Upon Significant Change / Material Cloud Service Adoption |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r2](https://csrc.nist.gov/pubs/sp/800/171/r2/final) · [NIST 800-144](https://csrc.nist.gov/pubs/sp/800/144/final) · NIST RMF · CSA CCM v4 |
-| **Regulations** | [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC · [CMMC L2](https://dodcio.defense.gov/CMMC/) (where applicable) ·  · HIPAA (where applicable) |
+| **Regulations** | [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC · [CMMC L2](https://dodcio.defense.gov/CMMC/) (where applicable) · HIPAA (where applicable) |
 | **Environments** | Owned Data Center · Leased / Colocation · IaaS · PaaS · SaaS · Hybrid |
 
 ---
