@@ -2,19 +2,19 @@
 # SURGE: Cyber Engineering, Risk & Governance
 
 ## IMPLEMENTATION AND ADAPTATION GUIDE
-### The On-Ramp: Fork, Adapt, Run
+### The On-Ramp: Fork, Adapt, Run · Talent Brand · Interview Guide
 
 ---
 
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Draft |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) · [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) · [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) · [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) |
+| **Supporting Documents** | [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) · [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) · [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) · [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) · [`CERG-GOV-JA-001`](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) · [`CERG-GOV-CMP-001`](CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) · [`CERG-GOV-JD-001`](CERG-GOV-JD-001_CERG_Job_Descriptions.md) |
 | **Review Cycle** | Annual / On any change to the V1 library |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · ISO/IEC 27001 A.5 |
 | **Regulations** | Cross-cutting |
@@ -33,7 +33,8 @@
 7. [Adapting the Documents](#7-adapting-the-documents)
 8. [First-Adoption Sign-Off Workflow](#8-first-adoption-sign-off-workflow)
 9. [Common Adoption Pitfalls](#9-common-adoption-pitfalls)
-10. [Document Control](#10-document-control)
+10. [Employer Brand and Talent Attraction](#10-employer-brand-and-talent-attraction)
+11. [Document Control](#11-document-control)
 
 ---
 
@@ -281,20 +282,148 @@ The adoption is complete when step 5 is recorded. Not before.
 
 ---
 
-## 10. Document Control
+## 10. Employer Brand and Talent Attraction
+
+### 10.1 The Talent Problem CERG Solves
+
+The cybersecurity talent market is brutal. Organizations that cannot articulate why someone should work there lose candidates to organizations that can. CERG's structure is a genuine differentiator. Most candidates have never heard of it. The organization's job is to make them hear it and want it.
+
+CERG's employee value proposition is not "competitive salary and benefits." Every organization says that. CERG's EVP is that a CERG-structured team is a better place to practice cybersecurity than a traditionally structured team. This section articulates why, provides role-specific candidate messaging, and includes a structured interview guide aligned to the competency model.
+
+### 10.2 The CERG Employee Value Proposition
+
+Working in a CERG-structured team means:
+
+**You are a generalist who specializes.** In a traditional security organization, a Cloud Security Engineer reviews architectures and never sees a risk register. A Threat Intelligence Analyst writes threat reports and never touches an architecture diagram. In CERG, the left-right knowledge model means every practitioner understands the full lifecycle. You specialize in your domain, but you are not confined to it. After three years in a CERG Engineering team, you can credibly discuss risk methodology with a Risk practitioner and compliance requirements with a Governance practitioner. That breadth makes you more valuable than a specialist who has done one thing for five years.
+
+**You see the impact of your work.** A CERG architect's design decision is visible in the Risk pillar's posture report two quarters later. A CERG threat analyst's intelligence brief drives Engineering's next quarter of control improvements. The pillars are not silos; they are feedback loops. When you do your job well, the other two pillars get better. When they do their jobs well, you get better. The work you do on Tuesday is visible in the organization's security posture on Friday.
+
+**Your career path is defined, not discovered.** JA-001 defines exactly what each grade expects across five dimensions. CMP-001 defines the specific behaviors at each level. PERF-001 defines how you are evaluated and promoted. You do not need to guess what it takes to reach the next level or hope your manager advocates for you loudly enough. The path is documented, and the promotion process is designed to be consistent regardless of which manager you report to.
+
+**The best idea wins, regardless of who brings it.** CERG's "yes, and" operating philosophy and its three-pillar structure create an environment where a Specialist's well-reasoned finding carries as much weight as a Sr. Advisor's, and a Risk analyst can tell an Engineering director that a control design has a flaw without political consequence. The structure rewards rigor, not rank. Iron sharpens iron.
+
+**You are building a program, not running a tool.** Many cybersecurity roles are tool-operating jobs. The organization bought a scanner; you run the scanner. The organization bought a SIEM; you stare at the SIEM. CERG roles are program-building roles. You design how the function works, not just execute it. You improve procedures, author standards, mentor incoming practitioners, and shape the organization's security posture. If you want to be told what to do, CERG is not for you. If you want to define how it is done, CERG is.
+
+### 10.3 Role-Specific Candidate Messaging
+
+The EVP above applies to every CERG role. Each role family adds specific messaging for candidates:
+
+**Engineering candidates:**
+"You will not just review architectures; you will own reference architectures. You will not just configure security tools; you will design how the organization secures its cloud, identity, and application platforms. You will work with Risk to understand how your controls perform under attack and with Governance to ensure your designs are audit-ready by design, not retrofit."
+
+**Risk candidates:**
+"You will not just triage alerts; you will shape how the organization understands and responds to its exposure. Your threat assessments will drive Engineering's control priorities. Your risk judgments will inform executive decisions. You will work with Engineering to design controls that address the root cause of findings, not just ticket the symptoms."
+
+**Governance candidates:**
+"You will not just manage evidence binders; you will design the compliance program that makes audit findings rare. You will translate between regulatory language and technical reality, ensuring standards are both compliant and implementable. You will work with Engineering and Risk to build compliance into the operating model, not bolt it on after the fact."
+
+### 10.4 Structured Interview Guide
+
+The interview process assesses candidates against the CMP-001 competency domains. The guide below provides question banks for each domain, calibrated to the target grade. Use it to design interview panels that evaluate every candidate against the same dimensions.
+
+#### Interview Structure
+
+| Round | Focus | Interviewers | Duration |
+|---|---|---|---|
+| **Screening** | Role fit, communication, basic domain knowledge | Hiring manager | 30-45 min |
+| **Technical** | Technical Depth assessment calibrated to target grade | 1-2 senior practitioners from the candidate's pillar | 60-90 min |
+| **Cross-Pillar** | Cross-Pillar Fluency, Risk Judgment, Communication | 1 practitioner from each of the other two pillars | 60 min |
+| **Leadership / Final** | Influence, Operational Discipline, Continuous Learning; culture fit | Pillar leader or CISO | 45-60 min |
+
+#### Technical Depth Questions by Grade
+
+**S1-S2 (Specialist / Sr. Specialist):**
+
+- Walk me through a technical problem you solved recently in your domain. What was the problem, how did you diagnose it, what was the solution?
+- Describe a time you followed a procedure and discovered it needed improvement. What did you change, and why?
+- [Role-specific technical scenario, e.g., for Cloud Security Engineer: "A development team wants to deploy a new microservice that will store PII. Walk me through your security review."]
+
+**S3-S4 (Advisor / Sr. Advisor):**
+
+- Describe the hardest technical decision you have influenced in your current or previous role. Who disagreed with you, how did you resolve it, and what was the outcome?
+- You are evaluating a new technology or platform for organizational adoption. Walk me through your evaluation framework.
+- A junior team member has made a technical recommendation you believe is wrong. It is not dangerously wrong; it is suboptimal. How do you handle it?
+
+#### Cross-Pillar Fluency Questions
+
+- Describe a time you worked with a function outside your immediate team to solve a security problem. What made the collaboration effective or difficult?
+- [For Engineering candidates]: A Risk analyst has rated a finding Critical. You believe compensating controls reduce the actual risk to Medium. Walk me through how you would handle that disagreement.
+- [For Risk candidates]: An Engineering team tells you they cannot remediate a High finding within your SLA due to architectural constraints. How do you respond?
+- [For Governance candidates]: An Engineering team tells you a compliance requirement is technically impossible to implement as written. What do you do?
+
+#### Risk Judgment Questions
+
+- Describe the most significant security risk you have identified that others did not see. Why did they miss it? What did you do about it?
+- You have limited resources and two findings: a Critical vulnerability in an internet-facing system with compensating controls, and a High vulnerability in an internal system with a known exploitation path. Which do you address first? Why?
+- Tell me about a time you were wrong about a risk assessment. What did you miss, and what did you change about your approach afterward?
+
+#### Communication Questions
+
+- Describe a time you had to explain a technical security issue to a non-technical audience. How did you structure your explanation? What was the result?
+- You are briefing an executive on a material risk. They have five minutes before their next meeting. What do you say?
+- You have identified a significant security gap that requires budget to address. Write (or describe) the first three paragraphs of the business case you would present.
+
+#### Influence and Mentorship Questions
+
+- Tell me about someone you mentored or developed. What did they need, what did you do, and where are they now?
+- Describe a time you changed how your team or organization approached a security problem, without formal authority to mandate the change.
+- A peer is consistently producing work that is technically correct but poorly documented. Their evidence would not survive an audit. How do you address it?
+
+#### Operational Discipline Questions
+
+- Walk me through how you manage your work. How do you prioritize, how do you track what is done and what is pending, how do you handle interruptions?
+- Describe a time you discovered that something you thought was done was not actually done. What had you missed, and what did you change to prevent it from happening again?
+- How do you ensure your work is defensible under audit or regulatory scrutiny?
+
+#### Continuous Learning Questions
+
+- What is the last thing you learned about cybersecurity that changed how you think about your work?
+- What are you currently learning or working on improving?
+- If you had an annual professional development budget and time to use it, what would you invest in and why?
+
+### 10.5 Candidate Evaluation Rubric
+
+Interviewers rate candidates on each assessed dimension using a four-point scale:
+
+| Rating | Definition |
+|---|---|
+| **Strong Yes** | The candidate's response demonstrates clear, specific evidence of the competency at or above the target grade. I would be confident putting them in front of the organization's stakeholders. |
+| **Yes** | The candidate demonstrates the competency at the target level. Minor gaps that onboarding will close. |
+| **No** | The candidate does not demonstrate the competency at the target level. The gap is material and would require significant development to close. |
+| **Strong No** | The candidate's response raises a red flag: dismissive of process, inability to explain their own work, or concerning judgment. |
+
+A "Strong No" from any interviewer on any dimension should trigger a panel discussion before proceeding. A "No" on a dimension that is critical to the role (e.g., Technical Depth for an S3 Engineer, Risk Judgment for an S3 Risk Analyst) should also trigger discussion.
+
+### 10.6 Careers Page Guidance
+
+Organizations adopting CERG should consider adding a "Working in Our CERG Team" section to their careers page. The section should:
+
+1. Explain what CERG is in one paragraph (plain language, no jargon)
+2. Articulate what makes working in a CERG-structured team different (the EVP from §10.2, adapted for the organization's voice)
+3. List the role families (Engineering, Risk, Governance) and what kind of person thrives in each
+4. Link to the public CERG Framework so candidates can understand what they are signing up for
+5. Include the structured interview process so candidates know what to expect
+
+> **The Framework Itself Is the Brand**
+>
+> A candidate who reads the CERG Framework, the Job Architecture, the Competency Model, and the job description for their role before they apply has self-selected. They understand the structure, they want to work in it, and they arrive with a mental model of how the organization operates. The careers page does not need to sell CERG. It needs to surface CERG, make it understandable, and let the framework do the selling.
+
+---
+
+## 11. Document Control
 
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Draft |
-| **Effective Date** | 2026-05-21 |
+| **Effective Date** | 2026-05-27 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
 | **Approved By** | Chief Information Security Officer (pending) |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on any change to the V1 library |
-| **Next Scheduled Review** | 2027-05-21 |
+| **Next Scheduled Review** | 2027-05-27 |
 | **Frameworks** | NIST CSF 2.0 (GOVERN); ISO/IEC 27001 A.5 |
 | **Regulations** | Cross-cutting |
 | **Environments** | All CERG-managed documentation |
@@ -303,6 +432,7 @@ The adoption is complete when step 5 is recorded. Not before.
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 Draft | 2026-05-27 | Cyber Governance | Added §10 Employer Brand and Talent Attraction: CERG employee value proposition, role-specific candidate messaging, structured interview guide aligned to CMP-001 competency domains, candidate evaluation rubric, and careers page guidance. Updated supporting documents to reference JA-001, CMP-001, and JD-001. |
 | 1.0 Draft | 2026-05-21 | Cyber Governance | Initial release. Establishes the adoption model (fork, adapt, run), the Minimum Viable CERG spine, the 30/60/90-day rollout, the role-consolidation approach to scaling, document-adaptation guidance, the first-adoption sign-off workflow, and the adoption pitfalls register. |
 
 ### Review Triggers
