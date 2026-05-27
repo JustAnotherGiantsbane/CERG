@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
-| **Version** | 1.21 |
+| **Version** | 1.22 |
 | **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
@@ -452,6 +452,55 @@ Every CERG activity produces feedback into the program backlog:
 
 The backlog is reviewed monthly. Items that age beyond planned dates without justification are flagged to the CISO and surfaced to the Cyber Oversight Group.
 
+### 10.4 Knowledge Transfer and Cross-Training
+
+The CERG Framework (FRM-001 Section 9.2) describes the "Left-Right Knowledge Model" as a mechanism for talent resilience: engineers learn Risk thinking, Risk analysts understand Governance, and Governance practitioners understand what is technically possible. Domain X5 in the maturity assessment (MAT-001) scores single-point-of-failure resilience. CERG claims critical roles are backstopped and knowledge is "in the system."
+
+This section defines how the organization produces evidence that knowledge transfer is actually occurring, not just claimed.
+
+#### 10.4.1 Cross-Training Log
+
+Each pillar maintains a lightweight cross-training log. The log records cross-pillar knowledge activities:
+
+| Field | Example |
+|---|---|
+| Date | 2026-03-15 |
+| Participants | Cloud Security Engineer (Engineering), Threat Intelligence Analyst (Risk) |
+| Activity Type | Shadowing / Joint review / Cross-pillar presentation / Rotation assignment |
+| Topic | Threat modeling cloud architecture : Risk shares ATT&CK cloud matrix techniques; Engineering shares landing-zone design patterns |
+| Duration (hours) | 2 |
+
+The log is intentionally lightweight. It is not a training management system. Its purpose is to provide evidence that cross-pillar knowledge transfer is occurring on a regular cadence.
+
+#### 10.4.2 Documentation Completeness
+
+Knowledge "in the system" means knowledge that survives when the person who holds it is unavailable. Documentation completeness is measured by two metrics tracked in MTR-001:
+
+- **KM-001: Procedure Documentation Currency.** Percentage of critical processes with current (less than or equal to 12-month) procedure documentation. A procedure is "critical" if it supports a control marked Implemented in CB-001.
+- **KM-002: Role Backup Currency.** Percentage of canonical roles with a documented secondary or backup who has performed the role in an exercise or real event within 18 months. "Performed" means the backup has executed the role's core responsibility at least once, not just been named on an org chart.
+
+#### 10.4.3 Cross-Training Expectations
+
+The minimum cross-training expectation per team member is 4 hours per quarter of cross-pillar knowledge activity. This is tracked as metric KM-003 in MTR-001.
+
+Cross-training activities that qualify:
+- Shadowing a cross-pillar review or engagement
+- Presenting cross-pillar content at a CERG All-Hands or pillar sync
+- Participating in a joint review (architecture, threat model, risk assessment) where the participant is from a different pillar than the lead
+- Rotation assignment of at least one week duration in a different pillar
+- Participating in a tabletop exercise in a role different from the participant's day-to-day role
+
+#### 10.4.4 Maturity Assessment Integration
+
+At the annual maturity assessment (MAT-001), domain X5 (Single-Point-of-Failure Resilience) scoring is amended as follows:
+
+A domain scores Adaptive in X5 only when:
+- (a) Critical roles are backstopped (existing criterion), AND
+- (b) At least one cross-training activity is documented per critical role per year, AND
+- (c) Documentation currency metrics (KM-001, KM-002) are green
+
+This ensures that "no single point of failure" is not just a claim about org-chart coverage but is backed by evidence of actual knowledge transfer and current documentation.
+
 ---
 
 ## 11. Operating Model Control
@@ -461,6 +510,7 @@ The backlog is reviewed monthly. Items that age beyond planned dates without jus
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
 | 1.0 | 2026-05-01 | CISO + Cyber Governance | Initial release. Establishes the three pillars, decision rights, engagement models, the canonical role roster (§6.1), the Cyber Oversight Group (§4.4), the standing coordination cadence aligned with CERG-RMF §8.2, and the maturity indicator set cross-referenced to CERG-GOV-MTR-001. Clarifies that the Incident Response plan and capability are owned by a standing IR team outside CERG; CERG provides liaison roles and feeds data into the IR program. |
+| 1.22 | 2026-05-26 | Cyber Governance | Added Section 10.4 Knowledge Transfer and Cross-Training: cross-training log schema, documentation completeness metrics (KM-001, KM-002), cross-training expectations (KM-003, minimum 4 hours/quarter), and maturity assessment integration for domain X5 Adaptive scoring. |
 
 ### Review Triggers
 

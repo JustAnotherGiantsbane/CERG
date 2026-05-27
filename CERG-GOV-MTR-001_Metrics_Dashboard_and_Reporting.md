@@ -146,6 +146,16 @@ The metrics above are lagging indicators : they tell you what already happened. 
 >
 > A leading indicator does not need to be precise to be useful. It needs to change direction before the lagging indicator it predicts, and it needs to produce a signal the program can act on. PL-003 (near-miss rate) rising over three consecutive quarters is a signal even if the exact incident probability is unknown. The program that waits for precision misses the window to act.
 
+### 3.8 Knowledge Management Metrics (Owner: Governance Pillar Leader)
+
+Knowledge "in the system" means knowledge that survives when the person who holds it is unavailable. These metrics measure whether critical knowledge is documented and transferable.
+
+| **ID** | **Name** | **Formula** | **Source** | **Refresh** | **G / A / R** | **Reported In** |
+|---|---|---|---|---|---|---|
+| KM-001 | Procedure Documentation Currency | % of critical processes with current (<= 12 month) procedure documentation. "Critical" means the procedure supports a control marked Implemented in CB-001. | Document Catalog + procedure review dates | Quarterly | >= 95% / 85-95% / < 85% | CISO Dashboard |
+| KM-002 | Role Backup Currency | % of canonical roles (OM-001 Section 6.1) with a documented secondary or backup who has performed the role in an exercise or real event within 18 months | Cross-training log | Annual | >= 90% / 75-90% / < 75% | COG Brief |
+| KM-003 | Cross-Training Hours per Team Member | Mean cross-pillar knowledge activity hours per CERG team member per quarter. Target: >= 4 hours per quarter (OM-001 Section 10.4). | Cross-training log | Quarterly | >= 4.0 / 2.0-4.0 / < 2.0 | CISO Dashboard |
+
 ---
 
 ## 4. KRI / KPI Data Source Map
