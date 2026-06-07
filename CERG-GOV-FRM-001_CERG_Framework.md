@@ -5,7 +5,7 @@
 
 ### A Scalable, Adaptive Cybersecurity Operating Model
 
-> Designed for Adaptive [NIST CSF](https://www.nist.gov/cyberframework) maturity. Applicable to IT and OT environments. Calibrated for [CMMC](https://dodcio.defense.gov/CMMC/), NERC-CIP,, and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204).
+> Designed for Adaptive [NIST CSF 2.0](https://www.nist.gov/cyberframework) maturity. Applicable to IT and OT environments. Calibrated for [CMMC](https://dodcio.defense.gov/CMMC/), NERC-CIP,, and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204).
 > 
 > _For illustrative purposes, examples in this document reference a major electrical utility with 14,000 employees, an equal population of consultants and contractors, and a 60-person CERG team, representing the upper-bound of the framework so readers can scale down to fit their environment._
 
@@ -52,10 +52,10 @@ The CERG model names these activities explicitly, Engineering, Risk, and Governa
 ### Design Principles
 
 - **Scale up or down:** applicable to a 5-person team or a 500-person organization
-- **Regulatory-ready:** designed to satisfy [CMMC](https://dodcio.defense.gov/CMMC/), NERC-CIP, [NIST CSF](https://www.nist.gov/cyberframework), 800-53, 800-171,, and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)
+- **Regulatory-ready:** designed to satisfy [CMMC](https://dodcio.defense.gov/CMMC/), NERC-CIP, [NIST CSF 2.0](https://www.nist.gov/cyberframework), 800-53, 800-171,, and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)
 - **IT/OT aware:** principles apply equally to enterprise IT and operational technology environments
 - **Talent resilient:** cross-pillar knowledge sharing means no single person is a point of failure
-- **Adaptive-targeted:** the framework describes what operating at [NIST CSF](https://www.nist.gov/cyberframework) Adaptive maturity looks like in practice
+- **Adaptive-targeted:** the framework describes what operating at [NIST CSF 2.0](https://www.nist.gov/cyberframework) Adaptive maturity looks like in practice
 - **"Yes, and..." oriented:** Governance enables the business through risk treatment, not reflexive refusal
 
 ---
@@ -163,7 +163,7 @@ Engineering operates on a lightweight internal consulting model. The goal is to 
 
 |NIST Framework|Relevant Controls / Functions|Engineering Role|
 |---|---|---|
-|[NIST CSF](https://www.nist.gov/cyberframework)|GOVERN, IDENTIFY (Asset Mgmt, Risk Assessment), PROTECT (Identity Mgmt, Data Security, Platform Security)|Primary driver of PROTECT function; co-owner of IDENTIFY|
+|[NIST CSF 2.0](https://www.nist.gov/cyberframework)|GOVERN, IDENTIFY (Asset Mgmt, Risk Assessment), PROTECT (Identity Mgmt, Data Security, Platform Security)|Primary driver of PROTECT function; co-owner of IDENTIFY|
 |[NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)|SA (System & Services Acquisition), CM (Configuration Mgmt), SI (System & Info Integrity)|Implements SA and CM controls during project delivery|
 |[NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final)|3.13 System & Communications Protection, 3.14 System & Info Integrity|Ensures CUI protection controls are designed into systems handling federal data|
 |NIST RMF|Steps 2 (Select), 3 (Implement), 4 (Assess - pre-production)|Leads control selection and implementation; supports pre-production assessment|
@@ -215,7 +215,7 @@ Risk serves both a pre-production function (finding issues before systems go liv
 
 |NIST Framework|Relevant Controls / Functions|Risk Team Role|
 |---|---|---|
-|[NIST CSF](https://www.nist.gov/cyberframework)|GOVERN (Risk Strategy), IDENTIFY (Risk Assessment, Improvement), DETECT (Adverse Event Analysis)|Primary driver of IDENTIFY and DETECT; co-owner of GOVERN risk functions|
+|[NIST CSF 2.0](https://www.nist.gov/cyberframework)|GOVERN (Risk Strategy), IDENTIFY (Risk Assessment, Improvement), DETECT (Adverse Event Analysis)|Primary driver of IDENTIFY and DETECT; co-owner of GOVERN risk functions|
 |[NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)|RA (Risk Assessment), CA (Assessment & Authorization), PM (Program Mgmt), SI-2 (Flaw Remediation)|Executes RA and CA controls; owns SI-2 for patch and vuln tracking|
 |[NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final)|3.11 Risk Assessment|Performs periodic assessments of CUI-handling environments|
 |NIST RMF|Step 4 (Assess), Step 6 (Monitor)|Primary executor of continuous monitoring; supports periodic assessments|
@@ -276,7 +276,7 @@ Governance maintains the evidence library and ensures that evidence is organized
 
 |NIST Framework|Relevant Controls / Functions|Governance Role|
 |---|---|---|
-|[NIST CSF](https://www.nist.gov/cyberframework)|GOVERN (all functions), IDENTIFY (Improvement), RESPOND (Improvements)|Primary owner of the GOVERN function across all six sub-functions|
+|[NIST CSF 2.0](https://www.nist.gov/cyberframework)|GOVERN (all functions), IDENTIFY (Improvement), RESPOND (Improvements)|Primary owner of the GOVERN function across all six sub-functions|
 |[NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)|PL (Planning), PM (Program Mgmt), CA (Assessment), PS (Personnel Security)|Owns PL and PM control families; coordinates CA; sets PS standards|
 |[NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final)|3.12 Security Assessment, all documentation requirements|Manages 800-171 assessment readiness and documentation compliance|
 |NIST RMF|Step 1 (Categorize), Step 2 (Select - policy), Step 5 (Authorize), Step 6 (Monitor - compliance)|Leads categorization; co-leads authorization; owns compliance monitoring|
@@ -286,7 +286,7 @@ Governance maintains the evidence library and ensures that evidence is organized
 
 ---
 
-## 6. Targeting [NIST CSF](https://www.nist.gov/cyberframework) Adaptive Maturity
+## 6. Targeting [NIST CSF 2.0](https://www.nist.gov/cyberframework) Adaptive Maturity
 
 ### 6.1 What Adaptive Means
 

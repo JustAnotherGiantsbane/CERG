@@ -129,7 +129,7 @@ You cannot protect what you do not know you own. An incomplete inventory is not 
 
 **References**
 
-`NIST CSF IDENTIFY` · `NIST 800-53 CM-8` · `NIST 800-171 03.04.01` · `NIST RMF Step 1` · `NERC-CIP CIP-002` · `CMMC CM.L2-3.4.1`
+`NIST CSF 2.0 IDENTIFY` · `NIST 800-53 CM-8` · `NIST 800-171 03.04.01` · `NIST RMF Step 1` · `NERC-CIP CIP-002` · `CMMC CM.L2-3.4.1`
 
 ---
 
@@ -149,7 +149,7 @@ Credential-based attacks are the leading initial access vector. Excessive privil
 
 **References**
 
-`NIST CSF PROTECT` · `NIST 800-53 AC-2, AC-6, IA-2, IA-5` · `NIST 800-171 03.01.01–03.01.03, 03.05.01–03.05.03` · `NIST RMF Step 3` · `NERC-CIP CIP-004 R4, CIP-005 R2, CIP-007 R5` · `CMMC AC.L1-3.1.1, AC.L2-3.1.5, IA.L1-3.5.1, IA.L2-3.5.3` · `SOX ITGC access controls`
+`NIST CSF 2.0 PROTECT` · `NIST 800-53 AC-2, AC-6, IA-2, IA-5` · `NIST 800-171 03.01.01–03.01.03, 03.05.01–03.05.03` · `NIST RMF Step 3` · `NERC-CIP CIP-004 R4, CIP-005 R2, CIP-007 R5` · `CMMC AC.L1-3.1.1, AC.L2-3.1.5, IA.L1-3.5.1, IA.L2-3.5.3` · `SOX ITGC access controls`
 
 ---
 
@@ -168,7 +168,7 @@ Default and unrestricted configurations are the attack surface that was never ne
 
 **References**
 
-`NIST CSF PROTECT` · `NIST 800-53 CM-6, CM-7` · `NIST 800-171 03.04.06, 03.04.07` · `NIST RMF Step 3` · `NERC-CIP CIP-007 R1, CIP-010 R1` · `CMMC CM.L2-3.4.6, CM.L2-3.4.7`
+`NIST CSF 2.0 PROTECT` · `NIST 800-53 CM-6, CM-7` · `NIST 800-171 03.04.06, 03.04.07` · `NIST RMF Step 3` · `NERC-CIP CIP-007 R1, CIP-010 R1` · `CMMC CM.L2-3.4.6, CM.L2-3.4.7`
 
 ---
 
@@ -187,7 +187,7 @@ Flat networks convert a single compromised endpoint into an enterprise-wide brea
 
 **References**
 
-`NIST CSF PROTECT` · `NIST 800-53 SC-7, SC-8, SC-28` · `NIST 800-171 03.13.01, 03.13.08, 03.13.10` · `NIST RMF Step 3` · `NERC-CIP CIP-005 (ESP/EAP), CIP-011` · `CMMC SC.L1-3.13.1, SC.L2-3.13.16`
+`NIST CSF 2.0 PROTECT` · `NIST 800-53 SC-7, SC-8, SC-28` · `NIST 800-171 03.13.01, 03.13.08, 03.13.10` · `NIST RMF Step 3` · `NERC-CIP CIP-005 (ESP/EAP), CIP-011` · `CMMC SC.L1-3.13.1, SC.L2-3.13.16`
 
 ---
 
@@ -207,7 +207,7 @@ The majority of successful breaches exploit known vulnerabilities for which patc
 
 **References**
 
-`NIST CSF IDENTIFY, DETECT` · `NIST 800-53 SI-2, RA-5, CA-8` · `NIST 800-171 03.11.02` · `NIST RMF Steps 4, 6` · `NERC-CIP CIP-007-6 R2, CIP-010 R3` · `CMMC RA.L2-3.11.2, SI.L1-3.14.1, CA.L2-3.12.1`
+`NIST CSF 2.0 IDENTIFY, DETECT` · `NIST 800-53 SI-2, RA-5, CA-8` · `NIST 800-171 03.11.02` · `NIST RMF Steps 4, 6` · `NERC-CIP CIP-007-6 R2, CIP-010 R3` · `CMMC RA.L2-3.11.2, SI.L1-3.14.1, CA.L2-3.12.1`
 
 ---
 
@@ -227,7 +227,7 @@ Controls that cannot be observed cannot be verified. Privileged and remote acces
 
 **References**
 
-`NIST CSF PROTECT, DETECT` · `NIST 800-53 AU-2, AU-9, AU-11, AU-12, AC-17, SI-4` · `NIST 800-171 03.03.01, 03.14.06` · `NIST RMF Steps 3, 6` · `NERC-CIP CIP-005 R2, CIP-007 R4` · `CMMC AU.L2-3.3.1, AU.L2-3.3.2, SI.L2-3.14.6` · `SOX ITGC access logging`
+`NIST CSF 2.0 PROTECT, DETECT` · `NIST 800-53 AU-2, AU-9, AU-11, AU-12, AC-17, SI-4` · `NIST 800-171 03.03.01, 03.14.06` · `NIST RMF Steps 3, 6` · `NERC-CIP CIP-005 R2, CIP-007 R4` · `CMMC AU.L2-3.3.1, AU.L2-3.3.2, SI.L2-3.14.6` · `SOX ITGC access logging`
 
 ---
 
@@ -246,7 +246,7 @@ A hardened system that drifts back to an insecure state provides the same exposu
 
 **References**
 
-`NIST CSF PROTECT` · `NIST 800-53 CM-3, CM-5` · `NIST 800-171 03.04.03` · `NIST RMF Step 3` · `NERC-CIP CIP-010 R1` · `CMMC CM.L2-3.4.3` · `SOX ITGC change management`
+`NIST CSF 2.0 PROTECT` · `NIST 800-53 CM-3, CM-5` · `NIST 800-171 03.04.03` · `NIST RMF Step 3` · `NERC-CIP CIP-010 R1` · `CMMC CM.L2-3.4.3` · `SOX ITGC change management`
 
 ---
 
@@ -265,7 +265,7 @@ The organization's security posture extends only as far as its weakest trusted t
 
 **References**
 
-`NIST CSF GOVERN` · `NIST 800-53 SA-9, SR-3` · `NIST 800-171 03.01.20` · `NIST RMF Step 2` · `NERC-CIP CIP-013` · `CMMC SR.L2 family` · `SOX ITGC third-party SOC 2`
+`NIST CSF 2.0 GOVERN` · `NIST 800-53 SA-9, SR-3` · `NIST 800-171 03.01.20` · `NIST RMF Step 2` · `NERC-CIP CIP-013` · `CMMC SR.L2 family` · `SOX ITGC third-party SOC 2`
 
 ---
 
@@ -284,7 +284,7 @@ Risks that are not formally documented are effectively accepted without acknowle
 
 **References**
 
-`NIST CSF GOVERN` · `NIST 800-53 RA-3, PM-9` · `NIST 800-171 03.11.01` · `NIST RMF Steps 4–5` · `NERC-CIP CIP-003` · `CMMC RA.L2-3.11.1` · `SOX ERM interface`
+`NIST CSF 2.0 GOVERN` · `NIST 800-53 RA-3, PM-9` · `NIST 800-171 03.11.01` · `NIST RMF Steps 4–5` · `NERC-CIP CIP-003` · `CMMC RA.L2-3.11.1` · `SOX ERM interface`
 
 ---
 
@@ -304,7 +304,7 @@ An organization that has not practiced its incident response plan has a document
 
 **References**
 
-`NIST CSF RESPOND, RECOVER` · `NIST 800-53 IR-2, IR-4, IR-8, CP-2, CP-9` · `NIST 800-171 03.06.01–03.06.03` · `NIST RMF Step 6` · `NERC-CIP CIP-008, CIP-009` · `CMMC IR.L2-3.6.1, IR.L2-3.6.2`
+`NIST CSF 2.0 RESPOND, RECOVER` · `NIST 800-53 IR-2, IR-4, IR-8, CP-2, CP-9` · `NIST 800-171 03.06.01–03.06.03` · `NIST RMF Step 6` · `NERC-CIP CIP-008, CIP-009` · `CMMC IR.L2-3.6.1, IR.L2-3.6.2`
 
 ---
 

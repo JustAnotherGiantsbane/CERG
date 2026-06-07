@@ -134,7 +134,7 @@ Cloud accounts and SaaS tenants are control boundaries. They are governed, not a
 
 | **Requirement** | **Applies To** | **CERG Owner** | **Regulatory Reference** |
 |---|---|---|---|
-| Maintain a real-time inventory of all cloud resources across all approved cloud platforms, populated via provider APIs (e.g., AWS Config, Azure Resource Graph, GCP Asset Inventory). Static spreadsheets are not acceptable. | IaaS / PaaS | Engineering / Risk | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) CM-8 · [NIST CSF](https://www.nist.gov/cyberframework) ID.AM |
+| Maintain a real-time inventory of all cloud resources across all approved cloud platforms, populated via provider APIs (e.g., AWS Config, Azure Resource Graph, GCP Asset Inventory). Static spreadsheets are not acceptable. | IaaS / PaaS | Engineering / Risk | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) CM-8 · [NIST CSF 2.0](https://www.nist.gov/cyberframework) ID.AM |
 | Maintain a SaaS inventory populated from at minimum: SSO/IdP logs, expense data, and SaaS discovery tooling. Reconcile monthly. | All SaaS | Risk / Governance | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) CM-8 · CSA CCM AIS-04 |
 | Deploy continuous cloud security posture management (CSPM) covering all production cloud accounts and subscriptions. Posture findings flow to the centralized vulnerability program. | IaaS / PaaS | Risk | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) CA-7 · CSA CCM IVS-09 |
 | Deploy SaaS security posture management (SSPM) for all Tier 1 SaaS applications and for any SaaS storing Restricted-tier data. | All SaaS (Tier 1) | Risk | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) CA-7 |

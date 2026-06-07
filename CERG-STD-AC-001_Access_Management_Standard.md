@@ -156,7 +156,7 @@ The organization recognizes the following identity classes. Controls in this sta
 |---|---|---|
 | Grant access strictly on the basis of least privilege - the minimum required to perform an authorized function. New roles and entitlements shall be reviewed for least-privilege adherence before approval. | Engineering / Governance | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) AC-6 · [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) 3.1.5 |
 | Default to deny. Network, application, and platform authorization defaults shall be deny-by-default with explicitly authorized exceptions. | Engineering | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) AC-3 · [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) 3.1.3 |
-| Authorization shall reference role, attribute, or policy - not user identity alone. Identity-only authorization (entitlements assigned directly to a user without role/group/policy abstraction) is restricted to documented exceptions. | Engineering / Governance | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) AC-3 · [NIST CSF](https://www.nist.gov/cyberframework) PR.AA |
+| Authorization shall reference role, attribute, or policy - not user identity alone. Identity-only authorization (entitlements assigned directly to a user without role/group/policy abstraction) is restricted to documented exceptions. | Engineering / Governance | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) AC-3 · [NIST CSF 2.0](https://www.nist.gov/cyberframework) PR.AA |
 
 ### 5.2 Role and Group Design
 
@@ -171,7 +171,7 @@ The organization recognizes the following identity classes. Controls in this sta
 | **Requirement** | **CERG Owner** | **Regulatory Reference** |
 |---|---|---|
 | Access to Restricted-tier data (CUI, PCI, PHI, financially material data) requires explicit authorization by the data owner. Inherited group access is permitted only where the inheriting group has an authorized purpose. | Governance / Engineering | [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) 3.1.3 · HIPAA 164.308 |
-| Highly destructive functions (mass delete, configuration baseline modification, identity-platform changes) shall require additional authorization controls: dual approval, JIT elevation, or compensating session monitoring. | Engineering | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) AC-6 · [NIST CSF](https://www.nist.gov/cyberframework) PR.AA |
+| Highly destructive functions (mass delete, configuration baseline modification, identity-platform changes) shall require additional authorization controls: dual approval, JIT elevation, or compensating session monitoring. | Engineering | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) AC-6 · [NIST CSF 2.0](https://www.nist.gov/cyberframework) PR.AA |
 | Cross-organizational data sharing (federation, OAuth grants to third-party apps, API integrations) shall be authorized by Engineering and Governance and documented in the third-party integration register. | Engineering / Governance | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) AC-21 · CSA CCM IAM-13 |
 
 ---
@@ -206,7 +206,7 @@ The following access types shall be treated as privileged and subject to the con
 | **Requirement** | **CERG Owner** | **Regulatory Reference** |
 |---|---|---|
 | Maintain documented break-glass procedures for critical platforms (IdP, cloud control plane, OT control systems). Procedures define when break-glass is permitted, how to invoke it, who is notified, and the post-use review. | Engineering / Governance | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) AC-6, IR-4 |
-| Break-glass credentials shall be vaulted, dual-controlled, alarmed on use, and rotated after each use. The credential check-out and check-in shall be logged. | Engineering | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) IA-5 · [NIST CSF](https://www.nist.gov/cyberframework) PR.AA |
+| Break-glass credentials shall be vaulted, dual-controlled, alarmed on use, and rotated after each use. The credential check-out and check-in shall be logged. | Engineering | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) IA-5 · [NIST CSF 2.0](https://www.nist.gov/cyberframework) PR.AA |
 | Test break-glass procedures at least annually. Document the test, validate the credential is usable, and confirm alerting fires. | Engineering / Risk | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) CP-4 |
 
 ---

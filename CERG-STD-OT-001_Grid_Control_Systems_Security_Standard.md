@@ -92,7 +92,7 @@ All in-scope assets must be inventoried and categorized before security controls
 
 | **Requirement** | **Applies To** | **CERG Owner** | **Regulatory Reference** |
 |---|---|---|---|
-| Maintain a current inventory of all OT assets including make, model, firmware version, network connectivity, and physical location. | All OT | Engineering | [NIST CSF](https://www.nist.gov/cyberframework) GV.AM · 800-53 CM-8 · 800-82 §6.2 |
+| Maintain a current inventory of all OT assets including make, model, firmware version, network connectivity, and physical location. | All OT | Engineering | [NIST CSF 2.0](https://www.nist.gov/cyberframework) GV.AM · 800-53 CM-8 · 800-82 §6.2 |
 | Perform CIP-002 BES Cyber System categorization annually and upon any change to the environment that could affect categorization. Document the rationale for each categorization decision. | **BES ONLY** | Governance | CIP-002-5.1a R1 |
 | Classify each BES Cyber System as High, Medium, or Low impact per CIP-002 Attachment 1 criteria. | **BES ONLY** | Governance | CIP-002-5.1a R1 |
 | Identify all EACMS, PACS, and PCAs associated with each BES Cyber System and include them in the asset register. | **BES ONLY** | Engineering / Governance | CIP-002-5.1a R1.3 |
@@ -105,7 +105,7 @@ All identified security risks to grid and control systems must be documented in 
 
 | **Requirement** | **Applies To** | **CERG Owner** | **Regulatory Reference** |
 |---|---|---|---|
-| Document all OT security findings and unmitigated risks in the centralized risk register within 5 business days of identification. | All OT | Governance | [NIST CSF](https://www.nist.gov/cyberframework) GV.RM · 800-53 RA-3 |
+| Document all OT security findings and unmitigated risks in the centralized risk register within 5 business days of identification. | All OT | Governance | [NIST CSF 2.0](https://www.nist.gov/cyberframework) GV.RM · 800-53 RA-3 |
 | Assign a risk owner to every open risk item. Risk owners are accountable for treatment plan execution. | All OT | Governance | NIST RMF Step 2 · 800-53 RA-3(1) |
 | Risk acceptance for BES Cyber System findings requires documented CISO approval and must be reviewed annually. Accepted risks do not close the finding - they suspend the SLA with documented rationale. | **BES ONLY** | Governance / CISO | CIP-007-6 · NIST RMF Step 4 |
 | Initiate a NERC-CIP deviation and mitigation plan when a CIP compliance obligation cannot be met on schedule. Notify the CISO immediately upon identification. | **BES ONLY** | Governance | NERC Rules of Procedure §410 |
@@ -135,7 +135,7 @@ Continuous visibility into OT network activity is essential for detecting threat
 | Collect security event logs from all OT assets capable of generating them. For assets that cannot forward logs natively, use syslog aggregators or protocol translators deployed in the OT DMZ. | **BES ONLY** | Engineering / Risk | CIP-007-6 R4 |
 | Retain OT security event logs for a minimum of 90 days immediately accessible and 12 months total. | **BES ONLY** | Engineering / Governance | CIP-007-6 R4.1.1 |
 | Integrate OT monitoring data with the enterprise SIEM via one-way data transfer controls through the OT DMZ. Do not create bidirectional monitoring connections into OT networks. | All OT | Engineering / Risk | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) SI-4 · CIP-005-6 R1 |
-| Define and document alert thresholds for OT-specific anomalies: unexpected outbound connections from OT segments, unauthorized protocol usage, configuration changes outside maintenance windows, and communications with unknown external endpoints. | All OT | Risk | [NIST CSF](https://www.nist.gov/cyberframework) DE.CM · 800-53 SI-4(5) |
+| Define and document alert thresholds for OT-specific anomalies: unexpected outbound connections from OT segments, unauthorized protocol usage, configuration changes outside maintenance windows, and communications with unknown external endpoints. | All OT | Risk | [NIST CSF 2.0](https://www.nist.gov/cyberframework) DE.CM · 800-53 SI-4(5) |
 
 ### 4.2 Vulnerability Identification
 
@@ -226,7 +226,7 @@ Enterprise threat feeds optimized for IT adversaries provide incomplete coverage
 
 | **Requirement** | **Applies To** | **CERG Owner** | **Regulatory Reference** |
 |---|---|---|---|
-| Maintain active subscriptions to ICS/OT-specific threat intelligence sources: CISA ICS-CERT advisories, E-ISAC (Electricity ISAC), and vendor security bulletins for all OT platforms in use. | All OT | Risk | [NIST CSF](https://www.nist.gov/cyberframework) DE.CM · CIP-013-2 |
+| Maintain active subscriptions to ICS/OT-specific threat intelligence sources: CISA ICS-CERT advisories, E-ISAC (Electricity ISAC), and vendor security bulletins for all OT platforms in use. | All OT | Risk | [NIST CSF 2.0](https://www.nist.gov/cyberframework) DE.CM · CIP-013-2 |
 | Produce OT threat intelligence summaries for Engineering and Incident Response at least quarterly. Summaries must include relevant threat actor activity, newly disclosed ICS vulnerabilities, and intelligence specific to the organization's OT platforms. | All OT | Risk | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) PM-16 · IEC 62443-2-1 |
 | Participate in E-ISAC information sharing. Report indicators of compromise related to BES Cyber Systems per E-ISAC and NERC requirements. | **BES ONLY** | Risk / Governance | NERC Rules of Procedure · CIP-008-6 |
 
@@ -242,7 +242,7 @@ Enterprise threat feeds optimized for IT adversaries provide incomplete coverage
 
 | **Requirement** | **Applies To** | **CERG Owner** | **Regulatory Reference** |
 |---|---|---|---|
-| Maintain an OT Cybersecurity Incident Response Plan (IRP) that addresses: incident classification, notification and escalation paths, containment actions with operational impact assessment, evidence preservation, and recovery initiation. | All OT | Governance | [NIST CSF](https://www.nist.gov/cyberframework) RS · CIP-008-6 R1 |
+| Maintain an OT Cybersecurity Incident Response Plan (IRP) that addresses: incident classification, notification and escalation paths, containment actions with operational impact assessment, evidence preservation, and recovery initiation. | All OT | Governance | [NIST CSF 2.0](https://www.nist.gov/cyberframework) RS · CIP-008-6 R1 |
 | The OT IRP must include pre-coordinated response playbooks for high-probability OT scenarios: ransomware impacting OT networks, unauthorized access to BES Cyber Systems, loss of SCADA visibility, and supply chain compromise. | All OT | Governance / Engineering | CIP-008-6 R1 · [NIST 800-82](https://csrc.nist.gov/pubs/sp/800/82/r3/final) §6.7 |
 | For BES Cyber System incidents, document and follow NERC-CIP CIP-008 reporting timelines. Personnel with reporting responsibilities must know the timelines and have them documented in the IRP. | **BES ONLY** | Governance | CIP-008-6 R1.3 |
 | Conduct OT incident response tabletop exercises at least annually involving operational team representation - not only cybersecurity personnel. Lessons learned must be documented and drive IRP updates. | All OT | Governance / Risk | CIP-008-6 R3 · [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) IR-3 |

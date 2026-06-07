@@ -58,7 +58,7 @@ The six phases map directly to the NIST RMF, with CERG pillar ownership assigned
 | 5. Authorize  | Step 5 - Authorize  | Governance         | Risk, Engineering  |
 | 6. Monitor    | Step 6 - Monitor    | Risk + Governance  | Engineering        |
 
-### 2.2 [NIST CSF](https://www.nist.gov/cyberframework) Function Mapping
+### 2.2 [NIST CSF 2.0](https://www.nist.gov/cyberframework) Function Mapping
 
 [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) defines six functions. The CERG-RMF operationalizes all six within the risk cycle:
 
@@ -127,7 +127,7 @@ CERG uses a layered baseline model. Every system inherits the Organizational Bas
 
 | Baseline Layer | Applies To | Primary Source |
 |---|---|---|
-| **Organizational Baseline** | All systems | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) Rev 5 Moderate baseline; [NIST CSF](https://www.nist.gov/cyberframework) Subcategories |
+| **Organizational Baseline** | All systems | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) Rev 5 Moderate baseline; [NIST CSF 2.0](https://www.nist.gov/cyberframework) Subcategories |
 | **High Impact Overlay** | Systems with any High CIA impact rating | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) High baseline additions |
 | **CUI Overlay** | Systems handling Controlled Unclassified Information | [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) Rev 3 |
 | **BES Overlay** | BES Cyber Systems, EACMs, PACSs | NERC-CIP CIP-002 through CIP-014 |

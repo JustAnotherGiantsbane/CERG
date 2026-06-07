@@ -188,7 +188,7 @@ CERG provides Legal with a clause library; Legal owns negotiation. Clauses below
 
 | **Clause** | **Required For** | **Substantive Content** |
 |---|---|---|
-| Security controls baseline | T2+ | Vendor commits to maintain controls aligned to a named standard ([NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final), [NIST CSF](https://www.nist.gov/cyberframework), ISO 27001) for the data and access in scope. |
+| Security controls baseline | T2+ | Vendor commits to maintain controls aligned to a named standard ([NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final), [NIST CSF 2.0](https://www.nist.gov/cyberframework), ISO 27001) for the data and access in scope. |
 | Incident notification | All accessing data/systems | Notification within 24 hours (T1/OT/BES) or 72 hours (T2) of confirmed incident affecting customer data or services. |
 | Right to audit | T2+ | Documented audit rights, including evidence on request, with reasonable notice; alternatives include current SOC 2/ISO/FedRAMP report. |
 | Subprocessor consent | SaaS T2+ | Customer-facing list of sub-processors; notification on change. |
