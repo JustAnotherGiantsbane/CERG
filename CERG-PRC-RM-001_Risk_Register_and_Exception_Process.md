@@ -61,6 +61,36 @@ This procedure applies to:
 
 ---
 
+### 1.3 Risk Appetite and Tolerance
+
+The organization's risk appetite defines the amount and type of risk the organization is willing to accept in pursuit of its objectives. Without a stated appetite, "accept" decisions lack an objective anchor, and scoring discussions drift toward personal calibration.
+
+#### Appetite Statement
+
+The organization accepts residual risk only where (a) the cost or operational impact of further treatment demonstrably exceeds the residual risk, (b) compensating controls are in place and operating effectively, and (c) the risk does not threaten regulatory standing, customer trust, or safety. Risk that cannot satisfy all three conditions must be treated.
+
+#### Quantitative Tolerance Thresholds
+
+| **Tier / Scope** | **Maximum Acceptable Residual Risk Score** | **Maximum Acceptable Duration** | **Notes** |
+|---|---|---|---|
+| BES Cyber Systems (NERC-CIP) | 6 (Medium-Low) | 90 days | Aligned to CIP mitigation plan timelines |
+| CUI Environments (CMMC) | 6 (Medium-Low) | 90 days | Aligned to POA&M timelines; Critical not acceptable |
+| SOX-Relevant Systems | 8 (Medium) | 180 days | ITGC compensating controls required |
+| Production Tier 1 (Customer-Facing) | 8 (Medium) | 180 days | Critical not acceptable without CISO + Executive Sponsor |
+| Production Tier 2 (Internal Business) | 10 (Medium-High) | 365 days | |
+| Production Tier 3+ / Non-Production | 12 (High-Low) | 365 days | |
+| SaaS / Third-Party | 10 (Medium-High) | Contract cycle | Driven by vendor tier per [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
+
+#### Tolerance by Business Unit
+
+Tolerance thresholds may vary by business unit where the business unit operates under materially different regulatory, contractual, or operational risk profiles. Business unit tolerance adjustments are proposed by the Risk Owner in that unit, reviewed by the Governance Pillar Leader, and approved by the CISO. Adjustments are recorded in the risk register as a standing annotation on the business unit's scope.
+
+#### Board and Leadership Engagement
+
+The board or an authorized board committee reviews and affirms the organization's risk appetite annually. Material changes to risk appetite — including adjustments to quantitative thresholds or tolerance by business unit — are submitted to the CISO for recommendation and board approval. The CISO owns the annual appetite affirmation cycle and reports the organization's actual risk posture against appetite at each quarterly CISO-level review.
+
+---
+
 ## 2. Roles and Responsibilities
 
 | **Role** | **Risk Management Responsibility** |
@@ -222,7 +252,27 @@ The Governance Lead curates the register for quality. Specifically:
 - Risks that are no longer relevant (e.g., the underlying system has been decommissioned) are closed with rationale.
 - Closed risks remain queryable; the register is append-only at the audit-trail level.
 
-### 6.3 Access and Confidentiality
+### 6.3 Risk Taxonomy
+
+The following taxonomy is the controlled vocabulary for risk categorization. Every risk entry must be assigned exactly one category from this taxonomy. Consistent categorization enables trend analysis, ownership clarity, and regulatory mapping.
+
+| **Category** | **Definition** | **Examples** |
+|---|---|---|
+| **Identity & Access** | Risks related to identity lifecycle, authentication, authorization, privilege management, and access control failures. | Standing privileged access, MFA gaps, orphaned accounts, over-privileged service principals, credential theft. |
+| **OT / NERC-CIP** | Risks affecting Operational Technology, BES Cyber Systems, or NERC-CIP compliance posture. | Unpatched OT assets, IT/OT boundary weaknesses, CIP-007 deviation, BCSI exposure. |
+| **Cloud / SaaS** | Risks arising from cloud platform misconfiguration, SaaS security posture, or cloud-native service exposure. | Open S3 bucket, excessive IAM roles, SaaS OAuth grant abuse, tenant isolation failure. |
+| **CUI / Data Protection** | Risks to the confidentiality, integrity, or availability of Controlled Unclassified Information or other regulated data. | CUI stored outside authorized boundary, FIPS non-compliance, data spillage, missing encryption at rest. |
+| **Third-Party / Vendor** | Risks introduced through vendor relationships, supply chain dependencies, or subcontractor access. | Vendor SOC 2 exception, subprocessor concentration, vendor breach with downstream impact. |
+| **Endpoint** | Risks related to endpoint security, including workstations, servers, and mobile devices. | Missing EDR coverage, unpatched endpoint, local admin abuse, removable media exposure. |
+| **Network** | Risks to network segmentation, perimeter controls, traffic inspection, or remote access. | Flat network, exposed management interface, missing segmentation between regulatory zones. |
+| **Application Security** | Risks in custom or third-party application code, APIs, or application architecture. | SQL injection, broken authentication in custom app, API key exposure, SSRF vulnerability. |
+| **Cryptography** | Risks related to cryptographic key management, algorithm selection, certificate lifecycle, or secrets handling. | Expired certificate, weak cipher suite, hard-coded secret, missing HSM for CA key. |
+| **Governance / Compliance** | Risks from gaps in policy, process, regulatory alignment, or program maturity. | Missing policy review cycle, undocumented exception process, audit finding without remediation plan. |
+| **Resilience** | Risks to business continuity, disaster recovery, backup integrity, or service restoration capability. | Untested backups, single-region dependency, RTO/RPO gap for Tier 1 system. |
+| **Insider** | Risks from intentional or unintentional actions by authorized personnel. | Data exfiltration by departing employee, accidental PII exposure, privilege misuse. |
+| **Physical / Environmental** | Risks from physical access, environmental controls, or facility security. | Unsecured data center access, missing CCTV coverage, inadequate fire suppression. |
+
+Access and Confidentiality
 
 Risk register access is role-based. Business owners see their scope by default; CERG personnel see organization-wide. Specific risk entries may be marked Restricted (e.g., active high-sensitivity exposure, insider matters) with limited visibility. The CISO has full visibility at all times.
 
@@ -267,6 +317,75 @@ For exceptions affecting regulated assets:
 - **[CMMC](https://dodcio.defense.gov/CMMC/) / 800-171 (CUI environments):** A POA&M entry is opened in addition to this exception, per [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) §11.
 - **[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant systems:** Internal Audit and CFO designee are notified for ITGC control gaps. Compensating ITGC controls are documented for audit.
 - **Customer / contractual:** Where the affected control supports a customer contractual commitment, Account Management and Legal are notified for customer-notification decisions.
+
+---
+
+### 7.5 Exception Request Form Template
+
+The following template shall be used for all exception requests. Completed forms are submitted through the centralized risk intake and referenced in the risk register.
+
+```
+EXCEPTION REQUEST FORM — EXC-YYYY-NNNN
+
+1. REQUESTOR
+   Name:
+   Role / Title:
+   Department / Business Unit:
+   Date of Request:
+
+2. CONTROL(S) TO BE EXCEPTED
+   Control ID (from CERG-GOV-CB-001 or applicable standard):
+   Control Description:
+   Standard / Policy Reference:
+
+3. AFFECTED SCOPE
+   System(s) / Asset(s):
+   Environment (IT / Cloud / SaaS / OT):
+   Data Classification(s):
+   Regulatory Scope (NERC-CIP / CUI / SOX / Other):
+   Number of Users Impacted:
+
+4. BUSINESS JUSTIFICATION
+   Why is the exception necessary? What business outcome depends on it?
+
+   What alternatives were considered and why were they rejected?
+
+5. RISK ASSESSMENT OF THE EXCEPTION
+   Inherent Risk (Likelihood × Impact):
+   Description of the risk created by this exception:
+   Existing Compensating Controls:
+   Residual Risk after Compensating Controls (Likelihood × Impact):
+   Residual Risk Rating (Low / Medium / High / Critical):
+
+6. COMPENSATING CONTROLS (detailed)
+   | Control | Description | Owner | Implementation Date | Validation Method |
+   |---|---|---|---|---|
+   | | | | | |
+
+7. DURATION
+   Proposed Start Date:
+   Proposed End Date:
+   Renewal Expected? (Yes / No):
+   If yes, what conditions must be met for renewal?
+
+8. APPROVAL
+   | Role | Name | Decision | Date |
+   |---|---|---|---|
+   | Risk Owner | | Approve / Deny / Conditional | |
+   | Engineering Pillar Leader | | Approve / Deny / Conditional | |
+   | Governance Pillar Leader | | Approve / Deny / Conditional | |
+   | CISO (if High or Critical) | | Approve / Deny / Conditional | |
+   | Executive Sponsor (if Critical) | | Approve / Deny / Conditional | |
+
+9. RISK REGISTER LINKAGE
+   Risk Register Entry ID:
+   Exception ID cross-reference:
+
+10. CLOSURE
+    Actual End Date:
+    Closure Rationale:
+    Closure Approver:
+```
 
 ---
 
@@ -397,7 +516,8 @@ Governance owns this procedure. The Risk Register Owner is responsible for revis
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
 | Cybersecurity Policy | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy - Principle 9 |
-| Grid and Control System Standard | [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | OT risk and CIP deviation overlay |IT / Cloud / SaaS Security Standard | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | IT/Cloud/SaaS risk scope, tier-based control expectations |
+| Grid and Control System Standard | [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | OT risk and CIP deviation overlay |
+| IT / Cloud / SaaS Security Standard | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | IT/Cloud/SaaS risk scope, tier-based control expectations |
 | CUI Handling Standard | [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) | CUI risk scope, POA&M tracking |
 | Access Management Standard | [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) | Identity-related risk and access exception handling |
 | Unified Control Baseline | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control framework that risk entries reference |
