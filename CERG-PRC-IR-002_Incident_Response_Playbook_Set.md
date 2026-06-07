@@ -33,10 +33,16 @@
 8. [Playbook 5: Distributed Denial of Service](#8-playbook-5-distributed-denial-of-service)
 9. [Playbook 6: Insider Threat](#9-playbook-6-insider-threat)
 10. [Playbook 7: Cloud Account Compromise](#10-playbook-7-cloud-account-compromise)
-11. [Post-Incident CERG Actions](#11-post-incident-cerg-actions)
-12. [Roles and Responsibilities](#12-roles-and-responsibilities)
-13. [Regulatory and Framework Alignment Summary](#13-regulatory-and-framework-alignment-summary)
-14. [Document Control](#14-document-control)
+11. [Playbook 8: Supply Chain Compromise](#11-playbook-8-supply-chain-compromise)
+12. [Playbook 9: Web Application Attack](#12-playbook-9-web-application-attack)
+13. [Playbook 10: Malware Outbreak](#13-playbook-10-malware-outbreak-non-ransomware)
+14. [Playbook 11: Zero-Day Exploitation](#14-playbook-11-zero-day-exploitation)
+15. [Playbook 12: Cryptographic Compromise](#15-playbook-12-cryptographic-compromise)
+16. [Playbook 13: Social Engineering](#16-playbook-13-social-engineering-vishing--smishing)
+17. [Post-Incident CERG Actions](#17-post-incident-cerg-actions)
+18. [Roles and Responsibilities](#18-roles-and-responsibilities)
+19. [Regulatory and Framework Alignment Summary](#19-regulatory-and-framework-alignment-summary)
+20. [Document Control](#20-document-control)
 
 ---
 
@@ -267,7 +273,133 @@ CERG preserves cloud audit logs, IAM history, key and secret rotation records, w
 
 ---
 
-## 11. Post-Incident CERG Actions
+## 11. Playbook 8: Supply Chain Compromise
+
+### 11.1 Triage
+
+CERG supports the Incident Response team by rapidly identifying:
+- affected vendor, service, or software component from the TPRM records and asset inventory;
+- data classifications and regulated data potentially exposed through the vendor;
+- vendor tier and criticality from [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md);
+- the organization's usage of the affected service (direct, embedded, transitive);
+- any IOCs or threat intelligence from [CERG-PRC-TI-001](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md);
+- affected systems, identities, or data paths that integrate with the compromised vendor.
+
+### 11.2 Containment
+
+CERG-supported containment may include: disabling vendor access and integrations, revoking vendor API keys and service accounts, blocking vendor IP ranges, isolating systems that consume the affected service, suspending data flows to/from the vendor, and preserving evidence of the vendor relationship for investigation. If the vendor compromise is confirmed, the SCCT is activated per [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) Section 15.
+
+### 11.3 Eradication and Recovery
+
+CERG identifies the vendor dependency path: direct integration, embedded library, transitive dependency, or shared infrastructure. Recovery may require vendor remediation, service replacement, or architectural decoupling. CERG validates that replacement or remediated services meet control requirements before restoration. Vendor risk records are updated to reflect the incident and any tier, evidence, or monitoring changes.
+
+### 11.4 Evidence and Communications Inputs
+
+CERG preserves: vendor contract and security obligations, TPRM assessment records, vendor access logs, data flow documentation, integration architecture, and evidence of containment and recovery actions. Governance supplies regulatory mapping for any regulated data exposed through the vendor.
+
+---
+
+## 12. Playbook 9: Web Application Attack
+
+### 12.1 Triage
+
+CERG identifies: the affected application, its data classification, authentication mechanism, hosting environment (cloud, on-prem, SaaS), whether it processes regulated data (CUI, SOX, PII), the likely attack vector (SQLi, XSS, CSRF, SSRF, IDOR, auth bypass, API abuse), and whether WAF or other protective controls were in place and functioning per [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md).
+
+### 12.2 Containment
+
+Containment may include: taking the affected application or endpoint offline, blocking the attack source IPs, enabling WAF blocking rules, disabling the vulnerable function, revoking compromised sessions and tokens, rotating application secrets, and quarantining affected application servers for forensic imaging.
+
+### 12.3 Eradication and Recovery
+
+CERG supports the application team in identifying and fixing the vulnerability: code fix, configuration change, WAF rule, or architectural change. Recovery includes validating the fix, re-scanning per the application penetration test checklist in [CERG-PRC-AV-001](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) Section 8, and confirming detection rules are updated for the observed attack pattern.
+
+### 12.4 Evidence and Communications Inputs
+
+CERG preserves: application logs, WAF logs, authentication logs, database audit logs, attack payloads, vulnerability scan results, fix evidence, and retest results. If the application handles regulated data, Governance determines notification obligations.
+
+---
+
+## 13. Playbook 10: Malware Outbreak (Non-Ransomware)
+
+### 13.1 Triage
+
+CERG identifies: affected endpoints and servers, malware type (infostealer, RAT, botnet, cryptominer, wiper — differentiated from ransomware per Playbook 1), command-and-control infrastructure, initial infection vector, scope of compromise (which systems, what data accessed), and whether the malware has credential-theft or lateral-movement capability.
+
+### 13.2 Containment
+
+Containment may include: isolating affected systems, blocking C2 indicators at the network edge, disabling compromised accounts, forcing credential resets, quarantining affected mailboxes or file shares, and suspending automation or scheduled tasks that could propagate the malware.
+
+### 13.3 Eradication and Recovery
+
+CERG supports eradication by identifying the infection vector: email attachment, drive-by download, removable media, software supply chain, or exploited vulnerability. Recovery includes: re-imaging affected systems from known-good baselines, restoring data from clean backups, validating EDR coverage, and confirming that C2 indicators are blocked and detection rules are active.
+
+### 13.4 Evidence and Communications Inputs
+
+CERG preserves: malware samples, C2 logs, affected system inventory, infection timeline, containment actions, and recovery evidence. If the malware accessed regulated data, Governance determines notification obligations.
+
+---
+
+## 14. Playbook 11: Zero-Day Exploitation
+
+### 14.1 Triage
+
+CERG identifies: the affected software, version, vendor, and patch status; whether the vulnerability is publicly disclosed or actively exploited in the wild; which organizational assets are vulnerable; the exploit vector (remote, local, authenticated); and whether the vulnerability affects regulated systems (SOX, CUI, NERC-CIP). Threat intelligence from [CERG-PRC-TI-001](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) is consulted for IOCs and TTPs.
+
+### 14.2 Containment
+
+Containment may include: disabling the affected service or feature, applying vendor-provided mitigation (if available before a patch), implementing network-level blocking rules, isolating vulnerable systems, increasing monitoring on vulnerable but not-yet-compromised systems, and communicating the threat to system owners per the vulnerability management procedure.
+
+### 14.3 Eradication and Recovery
+
+CERG tracks the vendor patch release and coordinates with Engineering for emergency patch deployment per [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5.2. If compromise is confirmed, eradication follows the relevant playbook for the post-exploitation activity (Data Breach, Cloud Compromise, etc.). Recovery validates that the patch is applied, the vulnerability is remediated, and compensating controls are in place for any systems that cannot be immediately patched.
+
+### 14.4 Evidence and Communications Inputs
+
+CERG preserves: vulnerability advisory or CVE, affected asset inventory, patch deployment evidence, containment actions, and any compromise evidence. For vulnerabilities affecting regulated systems, Governance determines regulatory notification obligations.
+
+---
+
+## 15. Playbook 12: Cryptographic Compromise
+
+### 15.1 Triage
+
+CERG identifies: the compromised cryptographic material (certificate, private key, signing key, API key, secret), its scope of use (which systems, services, or identities depend on it), whether it protects regulated data or authentication, the likely compromise vector (exposed secret, insider, CA compromise, weak algorithm, side-channel), and the blast radius if the key is actively exploited.
+
+### 15.2 Containment
+
+Containment may include: revoking the compromised certificate or key, rotating all secrets in the same scope, invalidating sessions and tokens signed with the compromised key, blocking authentication paths that relied on the compromised material, and preserving forensic evidence of the compromise for root cause analysis. Emergency rotation follows [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) Section 8.
+
+### 15.3 Eradication and Recovery
+
+CERG coordinates with the Cryptography Engineer to: identify how the material was compromised (exposed in repository, weak generation, insider action, CA breach), remediate the root cause, issue replacement material through the approved PKI or secrets management process, deploy replacement material to all dependent systems, and validate that no system continues to trust the compromised material.
+
+### 15.4 Evidence and Communications Inputs
+
+CERG preserves: certificate or key metadata, revocation records, rotation evidence, affected system inventory, and timeline of compromise and recovery. If the compromised material protected regulated data or authentication to regulated systems, Governance determines notification obligations. Certificate Transparency logs are monitored for 30 days post-incident for anomalous issuance.
+
+---
+
+## 16. Playbook 13: Social Engineering (Vishing / Smishing)
+
+### 16.1 Triage
+
+CERG identifies: the social engineering vector (phone call, SMS, messaging app), the pretext used, targeted individuals and their roles (executive, finance, IT admin, privileged user), what information or access was obtained, whether credentials were disclosed or MFA was bypassed, and whether the attack led to account compromise, financial transfer, or data disclosure.
+
+### 16.2 Containment
+
+Containment may include: disabling affected accounts, revoking sessions, resetting credentials, blocking the attacker's phone number or messaging account, quarantining related messages, identifying and protecting other potential targets briefed on the pretext, and notifying the telecom provider or messaging platform if account takeover is suspected.
+
+### 16.3 Eradication and Recovery
+
+CERG supports eradication by identifying the control gap: lack of verification procedure for sensitive requests, MFA bypass, absence of out-of-band confirmation for financial transfers, or training gap. Recovery includes: updating awareness content, implementing verification procedures for high-risk requests (financial, credential, data), and confirming that affected individuals receive targeted follow-up training.
+
+### 16.4 Evidence and Communications Inputs
+
+CERG preserves: call or message records, pretext details (sanitized for distribution), affected account logs, containment actions, and awareness recommendations. Social engineering findings are reported separately from technical findings. No disciplinary action shall result from an employee falling for a social engineering attack; the incident informs program improvement, not individual performance management.
+
+
+
+## 17. Post-Incident CERG Actions
 
 After the Incident Commander closes active response, CERG completes its own post-incident work.
 
@@ -283,7 +415,7 @@ After the Incident Commander closes active response, CERG completes its own post
 
 ---
 
-## 12. Roles and Responsibilities
+## 18. Roles and Responsibilities
 
 Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
 
@@ -336,7 +468,7 @@ CERG maintains an on-call rotation for incident support. The rotation schedule i
 
 ---
 
-## 13. Regulatory and Framework Alignment Summary
+## 19. Regulatory and Framework Alignment Summary
 
 | **Regulation / Framework** | **Reference** | **Where in This Playbook Set** |
 |---|---|---|
@@ -466,7 +598,7 @@ Reviewed by: [Incident Commander, CISO]
 
 ---
 
-## 14. Document Control
+## 20. Document Control
 
 | Field | Value |
 |---|---|
