@@ -33,8 +33,9 @@
 8. [Finding Severity and Treatment](#8-finding-severity-and-treatment)
 9. [Scaling the Procedure](#9-scaling-the-procedure)
 10. [Roles and Responsibilities](#10-roles-and-responsibilities)
-11. [Regulatory and Framework Alignment Summary](#11-regulatory-and-framework-alignment-summary)
-12. [Document Control](#12-document-control)
+11. [Metrics](#11-metrics)
+12. [Regulatory and Framework Alignment Summary](#12-regulatory-and-framework-alignment-summary)
+13. [Document Control](#13-document-control)
 
 ---
 
@@ -425,7 +426,7 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CE
 
 ---
 
-## 10. Metrics
+## 11. Metrics
 
 | **KPI** | **Formula** | **Source** | **Refresh** | **Green** | **Amber** | **Red** |
 |---|---|---|---|---|---|---|
@@ -440,7 +441,7 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CE
 
 ---
 
-## 11. Regulatory and Framework Alignment Summary
+## 12. Regulatory and Framework Alignment Summary
 
 | **Regulation / Framework** | **Reference** | **Where in This Procedure** |
 |---|---|---|
@@ -515,7 +516,7 @@ THREAT MODEL — TM-YYYY-NNNN
     Risk Pillar Leader: [name, date]
 ```
 
-## 12. Document Control
+## 13. Document Control
 
 | Field | Value |
 |---|---|
