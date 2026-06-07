@@ -9,7 +9,7 @@
 |---|---|
 | **Document ID** | CERG-PRC-LL-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -271,11 +271,11 @@ The effectiveness of this procedure itself is measured. These metrics are report
 |---|---|
 | **Document ID** | CERG-PRC-LL-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Published |
 | **Effective Date** | 2026-05-26 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
-| **Approved By** | (pending) |
+| **Approved By** | Governance Pillar Leader · CISO endorsement |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / After each quarterly lessons-aggregation cycle |
 | **Next Scheduled Review** | 2027-05-26 |

@@ -1,4 +1,3 @@
-
 # SURGE: Cyber Engineering, Risk & Governance
 
 ## INCIDENT RESPONSE PLAYBOOK SET
@@ -10,7 +9,7 @@
 |---|---|
 | **Document ID** | CERG-PRC-IR-002 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -293,11 +292,11 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CE
 |---|---|
 | **Document ID** | CERG-PRC-IR-002 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Published |
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
-| **Approved By** | CISO (pending); Incident Commander owner concurrence required |
+| **Approved By** | CISO · Incident Commander owner concurrence |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and after significant incident or IR plan change |
 | **Next Scheduled Review** | 2027-05-22 |
