@@ -9,7 +9,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-IMPREG-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |

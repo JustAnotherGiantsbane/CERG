@@ -30,7 +30,7 @@
 4. [BES Cyber System Categorization Procedure](#4-bes-cyber-system-categorization-procedure)
 5. [ESP / EAP Topology Documentation](#5-esp--eap-topology-documentation)
 6. [NERC-CIP Evidence Library Procedure (`CERG-GOV-CIP-001`)](#6-nerc-cip-evidence-library-procedure-cerg-gov-cip-001)
-7. [OT Vulnerability Management Procedure (`CERG-PRC-VM-002`)](#7-ot-vulnerability-management-procedure-cerg-proc-vm-002)
+7. [OT Vulnerability Management Procedure (`CERG-PRC-VM-001`)](#7-ot-vulnerability-management-procedure-cerg-proc-vm-002)
 8. [BES Cyber System Access Management Procedure (`CERG-PRC-AC-002-BES`)](#8-bes-cyber-system-access-management-procedure-cerg-proc-ac-002-bes)
 9. [CIP Deviation and Mitigation Plan Template (`CERG-TMPL-CIP-001`)](#9-cip-deviation-and-mitigation-plan-template-cerg-tmpl-cip-001)
 10. [IT/OT Convergence Security Architecture Guideline (`CERG-STD-OT-001 (planned IT/OT convergence architecture guideline to be registered as CERG-GL-OT-001 in future catalog amendment)`)](#10-itot-convergence-security-architecture-guideline-cerg-gl-ot-001)
@@ -139,7 +139,7 @@ CIP evidence reuses the broader CERG evidence catalog wherever possible (per [`C
 
 ---
 
-## 7. OT Vulnerability Management Procedure (`CERG-PRC-VM-002`)
+## 7. OT Vulnerability Management Procedure (`CERG-PRC-VM-001`)
 
 The enterprise vulnerability procedure ([`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md)) governs IT scopes; this OT-specific procedure overlays it with OT-safe practices.
 

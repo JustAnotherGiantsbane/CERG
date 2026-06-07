@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-STY-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -405,7 +405,7 @@ When a new framework revision is published (e.g., NIST 800-53 Rev 6, NIST 800-17
 |---|---|
 | **Document ID** | CERG-GOV-STY-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Published |
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
