@@ -424,21 +424,21 @@ EXCEPTION REQUEST FORM — EXC-YYYY-NNNN
 
 ## 8. Approval Authority
 
+Risk treatment decisions require documented approval from the authority matching the risk's severity. The canonical approval authority table is maintained in [CERG-GOV-RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 and is the single source of truth for acceptance authority by severity tier. The table below reproduces the same authorities for convenience within this procedure, with additional detail on treatment-type distinctions and the emergency exception path.
+
 | **Risk Rating / Treatment** | **Approval Authority** |
 |---|---|
-| Low risk - Reduce / Transfer / Avoid | Risk Owner + Governance Pillar Leader |
-| Low risk - Accept | Risk Owner + Governance Pillar Leader |
-| Medium risk - Reduce / Transfer / Avoid | Risk Owner + Engineering / Risk Pillar Leader |
-| Medium risk - Accept | Risk Owner + CISO designee |
-| High risk - any treatment | Risk Owner + CISO |
-| Critical risk - any treatment | Risk Owner + CISO + Executive Sponsor |
-| Critical risk - any treatment | Risk Owner + CISO + Executive Sponsor + Board awareness |
+| Low risk – any treatment | Risk Owner + Governance Pillar Leader |
+| Medium risk – Reduce / Transfer / Avoid | Risk Owner + Engineering or Risk Pillar Leader |
+| Medium risk – Accept | Risk Owner + CISO (or CISO designee) |
+| High risk – any treatment | Risk Owner + CISO |
+| Critical risk – any treatment | Risk Owner + CISO + Executive Sponsor |
 | Any exception affecting BES Cyber Systems | CISO + NERC-CIP deviation process |
 | Any exception affecting CUI environment posture | CISO + POA&M entry |
 | Any exception affecting [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC | CISO + CFO designee |
-| Emergency exception (operational necessity) | Risk Pillar Leader or Engineering Pillar Leader may authorize the emergency action before CISO review. CISO must be notified immediately and must approve or deny post-hoc within 24 hours. If denied, the action must be reversed or mitigated to the extent operationally feasible, and the residual risk is logged to the risk register with the denial rationale. |
+| Emergency exception (operational necessity) | Risk Pillar Leader or Engineering Pillar Leader may authorize immediately; CISO must approve or deny post-hoc within 24 hours. If denied, the action must be reversed or mitigated, and the residual risk is logged to the risk register with the denial rationale. |
 
-Approvers may delegate within their authority but shall document the delegation. The CISO retains final authority for any risk-related decision.
+Approvers may delegate within their authority but shall document the delegation. The CISO retains final authority for any risk-related decision. Acceptance of residual risk at any tier follows the canonical authority table in [CERG-GOV-RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. No acceptance expires automatically; every acceptance at every tier requires a fresh approval cycle at expiration.
 
 ---
 
