@@ -36,7 +36,8 @@
 10. [Org-Adaptation and Token Rules](#10-org-adaptation-and-token-rules)
 11. [Blank Document Skeleton](#11-blank-document-skeleton)
 12. [Quality Gates Before Commit](#12-quality-gates-before-commit)
-13. [Document Control](#13-document-control)
+12.5. [Document Lifecycle Procedure](#125-document-lifecycle-procedure)
+13. [Document Control](#14-document-control)
 
 ---
 
@@ -343,7 +344,62 @@ A document is not complete until the catalog is amended where required.
 
 ---
 
-## 13. Document Control
+## 12.5 Document Lifecycle Procedure
+
+Every CERG document follows a defined lifecycle from creation through retirement.
+
+### Status States
+
+| **Status** | **Meaning** | **Who Can Set** |
+|---|---|---|
+| Planned | Artifact has an ID and owner but no draft yet | Governance Pillar Leader |
+| Draft | Work in progress; not authoritative | Any author |
+| Published | Approved and active; authoritative for operations and audit | CISO |
+| Retired | No longer authoritative but retained for history | CISO |
+
+### Lifecycle Workflow
+
+1. **Create**: New artifact is drafted in `Draft` status. Document ID and naming follow [CERG-GOV-CAT-001](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) conventions.
+2. **Peer Review**: Draft is reviewed by a second qualified analyst from the same or adjacent pillar. Review checks structure, cross-references, role discipline, and framework alignment.
+3. **Pillar Leader Approval**: The owning pillar leader reviews and approves the document for publication.
+4. **CISO Approval**: The CISO (or CISO designee) gives final approval. Material changes to policy (CERG-POL-001) require CISO approval directly.
+5. **Publish**: Status is set to `Published` in both the header and Document Control section. The document is added to the catalog if new, or the catalog entry is updated if revised.
+6. **Annual Review**: Each Published document is reviewed at least annually. The review is triggered by the review cycle defined in the document's front matter or by material changes to referenced frameworks, regulations, or organizational structure.
+7. **Retire**: Documents that are superseded or no longer applicable are set to `Retired` status. The document is not deleted; it remains in the repository for historical reference.
+
+### Emergency Fast-Track
+
+When a document is needed urgently (e.g., to address a new regulatory requirement or respond to a significant incident), the peer review and pillar leader approval steps may be completed concurrently. CISO approval is still required before publication.
+
+### Version Numbering
+
+- New documents start at version 1.0.
+- Material changes increment the minor version (1.0 → 1.1, 1.1 → 1.2).
+- Major structural or scope changes increment the major version (1.x → 2.0).
+- The version in the header front matter and the Document Control section must always match.
+- Every version change is recorded in the Revision History table.
+
+### Change Log Requirements
+
+Every edit to a Published document must include a Revision History entry with:
+- Version number
+- Date
+- Author
+- Brief change summary
+
+### Framework-Wide Updates
+
+When a new framework revision is published (e.g., NIST 800-53 Rev 6, NIST 800-171 Rev 4):
+
+1. Governance Pillar Leader assesses impact across all documents.
+2. Affected documents are prioritized by regulatory criticality.
+3. Updates are drafted, reviewed, and published following the standard lifecycle.
+4. The Document Catalog is updated to reflect new versions.
+5. Stakeholders are notified of material changes through the CERG All-Hands or pillar sync.
+
+---
+
+## 14. Document Control
 
 | Field | Value |
 |---|---|
