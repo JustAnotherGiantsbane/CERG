@@ -263,3 +263,39 @@
 |**Governance**|IR planning · Recovery · Physical security · Policy & standards · Personnel training · Risk management · Audit evidence · Compliance calendar|
 
 ---
+
+---
+
+## Document Control
+
+| Field | Value |
+|---|---|
+| **Document ID** | CERG-GOV-TAX-001 |
+| **Version** | 1.21 |
+| **Status** | Published |
+| **Classification** | Public |
+| **Owner** | Risk Pillar Leader |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Review Cycle** | Annual; and on framework or organizational change |
+| **Next Scheduled Review** | 2027-05-01 |
+
+### Revision History
+
+| **Version** | **Date** | **Author** | **Change Summary** |
+|---|---|---|---|
+| 1.0 | 2026-05-01 | Cyber Risk | Initial release. Risk taxonomy with categories, definitions, and control mappings. |
+| 1.21 | 2026-05-22 | Cyber Risk | Updated category definitions and regulatory mappings. |
+
+### Review Triggers
+
+- New regulatory framework affecting risk categories
+- Material change to organizational scope or structure
+- Direction from the CISO
+
+### Related Documents
+
+| **Document** | **ID** | **Relationship** |
+|---|---|---|
+| Cybersecurity Policy | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| Risk Register and Exception Process | [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Uses taxonomy for risk categorization |
+| Document Catalog | [CERG-GOV-CAT-001](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Master document inventory |
