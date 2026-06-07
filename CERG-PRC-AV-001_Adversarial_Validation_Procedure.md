@@ -68,6 +68,46 @@ This procedure makes it explicit. It applies to every CERG-led or CERG-overseen 
 
 ---
 
+### 2.4 External Tester Management
+
+When adversarial validation is conducted by an external firm rather than internal staff, the following requirements apply.
+
+#### Minimum Tester Qualifications
+
+| **Engagement Type** | **Minimum Qualification** |
+|---|---|
+| Network / infrastructure penetration test | OSCP, GPEN, or equivalent; 2+ years of hands-on testing experience |
+| Web application penetration test | OSWE, GWAPT, or equivalent; demonstrated web app testing portfolio |
+| Red team engagement | GXPN, OSEP, or equivalent; 5+ years of adversarial emulation experience |
+| Cloud security assessment | Cloud-specific certification (AWS Security, Azure Security, GCP Professional Security) or equivalent |
+| OT / ICS assessment | GICSP, GRID, or equivalent; operational technology experience with safety-aware methodology |
+| Social engineering engagement | SE-specific training or certification; understanding of legal and ethical boundaries |
+
+#### Selection and Vetting Requirements
+
+| **Requirement** | **Detail** |
+|---|---|
+| Conflict of interest disclosure | Firm must disclose any prior or current relationship with the organization's competitors, vendors, or key personnel that could compromise objectivity |
+| Background checks | All testers assigned to the engagement must have passed a background check within the last 12 months; evidence of clearance retained by the Vendor Risk Analyst |
+| Insurance | Firm must carry professional liability / errors and omissions insurance appropriate to the engagement scope; certificate of insurance on file |
+| References | At least two references from engagements of comparable scope and sensitivity in the last 24 months |
+
+#### Vendor Rotation Policy
+
+- External testing vendors are rotated at minimum every 3 years for each scope area (network, application, cloud, OT, social engineering).
+- Rotation applies to the firm, not individual testers.
+- Exceptions require CISO approval and are documented in the risk register.
+
+#### Contractual Requirements
+
+- Non-disclosure agreement (NDA) covering all findings, data accessed, and methods used
+- Data handling: all customer data accessed during testing is treated as Restricted; no data leaves the organization's control without explicit authorization
+- Evidence destruction: upon engagement closure or within 30 days, the firm certifies destruction of all engagement data, findings drafts, and tool output in their possession
+- Right-to-audit: the organization reserves the right to audit the firm's handling of engagement data
+- Notification of subcontractors: the firm must disclose any subcontractors and their qualifications before engagement start
+
+---
+
 ## 3. Annual Cadence and Scoping
 
 CERG produces an annual Adversarial Validation Plan that schedules the engagements above against the in-scope environments. The plan is reviewed and approved by the CISO; it is updated quarterly to reflect emerging threats and program priorities.
@@ -244,6 +284,59 @@ Application tests use OWASP WSTG (web), MASTG (mobile), and API Security Top 10 
 
 ---
 
+### 8.5 Social Engineering Engagements
+
+Social engineering tests the human layer of security controls. These engagements carry unique legal, ethical, and operational risks that require explicit guardrails.
+
+#### Scope Definition
+
+| **Engagement Subtype** | **Description** | **Typical Scope** |
+|---|---|---|
+| Phishing simulation | Simulated phishing email campaign to test user awareness and reporting behavior | Organization-wide or targeted departments |
+| Vishing (voice phishing) | Simulated phone-based social engineering to extract information or credentials | Named individuals or departments with CISO approval |
+| Smishing (SMS phishing) | Simulated text message-based social engineering | Named individuals or departments with CISO approval |
+| Physical social engineering | Tailgating, badge cloning, or pretext-based physical access attempts | Named facilities with Facility Security coordination |
+| USB drop | Simulated malicious USB devices placed in common areas | Named facilities with Facility Security coordination |
+
+#### Pretexting Rules and Limitations
+
+- Pretexts must not impersonate law enforcement, government officials, or regulatory authorities.
+- Pretexts must not exploit personal tragedy, medical conditions, or family emergencies.
+- Pretexts must not target minors or non-employees.
+- Pretexts must not threaten employment status, compensation, or benefits.
+- All pretexts are defined in the RoE and approved by the Engagement Sponsor.
+
+#### Prohibited Targets (require explicit CISO approval)
+
+- C-suite executives and their direct administrative staff
+- Board members
+- Legal counsel (internal and external)
+- Human Resources personnel
+- Personnel on leave (medical, family, or other protected leave)
+
+#### Coordination Protocol
+
+| **Stakeholder** | **When** | **Purpose** |
+|---|---|---|
+| Legal | Before RoE approval | Review pretexts for legal risk; confirm no violation of wiretapping, recording, or privacy laws |
+| HR | Before RoE approval | Confirm no employee relations risk |
+| Facility Security | Before physical or USB engagements | Coordinate access testing; prevent alarm triggers or law enforcement response |
+| SOC / Detection Team | Before go-live | Prevent the engagement from being treated as a real incident |
+| Incident Commander | Before go-live | Pre-brief: if engagement triggers detection, the IC knows it's a test |
+
+#### Reporting Requirements
+
+Social engineering findings are reported separately from technical findings. The report includes:
+
+- Engagement subtype and scope
+- Number of targets and interactions
+- Success rate per subtype and per department
+- Root cause themes (e.g., lack of verification procedure, urgency exploitation, authority bias)
+- Recommended awareness and control improvements
+- Comparison to prior social engineering engagements (if applicable)
+
+---
+
 ## 9. OT Adversarial Assessment: Safety Protocol
 
 OT testing is uniquely constrained. Safety overrides any test objective.
@@ -309,6 +402,56 @@ Findings are rated using a uniform schema regardless of engagement type, alignin
 - Medium/Low retested at next routine engagement or by sampled VM scan.
 - A finding moves to Closed only after retest demonstrates remediation; a finding that cannot be remediated moves through the risk register acceptance path with explicit Approver.
 - Closed findings inform the threat model for the affected system at next architecture review.
+
+### 10.4 Escalation for Stalled Remediation
+
+When remediation stalls beyond the retest window, the finding escalates.
+
+#### Escalation Triggers
+
+| **Trigger** | **Action** |
+|---|---|
+| Critical finding not remediated at 30 days | Adversarial Testing Lead escalates to Risk Pillar Leader |
+| Critical finding not remediated at 45 days | Risk Pillar Leader escalates to CISO |
+| Critical finding not remediated at 60 days | CISO escalates to Executive; risk acceptance required |
+| High finding not remediated at 60 days | Adversarial Testing Lead escalates to Risk Pillar Leader |
+| High finding not remediated at 90 days | Risk Pillar Leader escalates to CISO |
+| Medium finding not remediated at 120 days | Adversarial Testing Lead escalates to system owner's pillar leader |
+
+#### Escalation Ladder
+
+Adversarial Testing Lead → Risk Pillar Leader → CISO → Executive Sponsor
+
+At each level, the responsible party must either (a) produce a credible remediation plan with a committed date, (b) initiate a risk acceptance through [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md), or (c) provide a written rationale. Non-response at any level automatically escalates after 5 business days.
+
+#### Risk Acceptance as the Only Alternative
+
+When remediation is not feasible, risk acceptance requires: a written risk statement per PRC-RM-001 §4.1, documented compensating controls, approval per the authority matrix, and a scheduled re-review date. A finding that is neither remediated nor risk-accepted is a program gap, not an operational delay.
+
+---
+
+### 10.5 Adversarial Validation Final Report
+
+Every engagement produces a Final Report — the authoritative record of what was tested, found, and recommended.
+
+#### Required Sections
+
+| **Section** | **Content** |
+|---|---|
+| Executive Summary | Engagement type, scope, dates; findings summary by severity; top three risks; overall posture assessment; recommended next actions |
+| Engagement Overview | RoE reference; scope (systems, networks, applications); out-of-scope items; timeline; tester(s); methodology summary |
+| Methodology | Reconnaissance and enumeration techniques; exploitation approach; post-exploitation and lateral movement; tools and frameworks used |
+| Findings | Each finding includes ID, severity, title, description, affected assets, evidence (annotated screenshots, command output), risk statement, remediation recommendation, references (CVE, ATT&CK, CWE) |
+| Systemic Analysis | Patterns across findings; control themes that failed; root cause candidates |
+| Trend Analysis (if applicable) | Comparison to prior engagements; findings closed since last engagement; new vs. recurring findings; trend direction |
+| Appendices | Evidence artifacts, exploit code references (sanitized), timeline of key events, tools inventory |
+
+#### Evidence Artifact Standards
+
+- **Screenshots**: Annotated with arrows or captions highlighting relevant detail; include timestamp and host identifier
+- **Command output**: Full command and output with timestamp; truncation acceptable with notation
+- **Packet captures**: Time-stamped with source/destination; filtered to relevant conversation
+- **Exploit code**: Referenced by tool and version, not reproduced in full
 
 ---
 
