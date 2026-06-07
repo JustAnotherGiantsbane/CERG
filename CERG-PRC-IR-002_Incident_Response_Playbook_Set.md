@@ -165,7 +165,7 @@ If none of the above match, or if the incident type is unclear, activate the pla
 
 ### 3.6 Incident Severity Classification
 
-All incidents are classified by severity to determine response priority, escalation requirements, and notification obligations.
+All incidents are classified by severity to determine response priority, escalation requirements, and notification obligations. This playbook set uses the P1–P4 severity scale aligned with the Incident Response Plan ([CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md) §5, which defines the authoritative Sev 1–4 classification). The mapping is: P1 = Sev 1 (Critical), P2 = Sev 2 (Significant), P3 = Sev 3 (Moderate), P4 = Sev 4 (Minor).
 
 | **Severity** | **Label** | **Criteria** | **CERG Activation** |
 |---|---|---|---|
