@@ -8,7 +8,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AR-001 |
-| **Version** | 1.21 |
+| **Version** | 1.0 |
 | **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |

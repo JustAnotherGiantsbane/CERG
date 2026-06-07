@@ -8,7 +8,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-RM-001 |
-| **Version** | 1.21 |
+| **Version** | 1.0 DRAFT |
 | **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |

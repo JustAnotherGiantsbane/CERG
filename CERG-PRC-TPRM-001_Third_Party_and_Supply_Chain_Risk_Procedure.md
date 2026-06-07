@@ -8,7 +8,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-TPRM-001 |
-| **Version** | 1.21 |
+| **Version** | 1.0 |
 | **Status** | Published |
 | **Classification** | Public |
 | **Owner** | Vendor Risk Analyst |
