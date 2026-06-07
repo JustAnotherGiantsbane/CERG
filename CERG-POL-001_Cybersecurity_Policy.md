@@ -445,3 +445,43 @@ The authoritative inventory, IDs, owners, status, and deferred / planned artifac
 | NERC-CIP Operational Package | [`CERG-PLN-CIP-001`](CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) | Cyber Governance |
 | SOX ITGC Operational Package | [`CERG-PLN-SOX-001`](CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) | Cyber Governance |
 | Risk Register Templates and Reporting | [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) | Cyber Governance |
+
+---
+
+## 11. Document Control
+
+| Field | Value |
+|---|---|
+| **Document ID** | CERG-POL-001 |
+| **Version** | 1.21 |
+| **Status** | Published |
+| **Classification** | Public |
+| **Owner** | Chief Information Security Officer |
+| **Effective Date** | 2026-05-01 |
+| **Review Cycle** | Annual / Upon Significant Change |
+| **Next Scheduled Review** | 2027-05-01 |
+| **Frameworks** | NIST CSF 2.0; NIST 800-53r5; NIST 800-171r3; NIST RMF |
+| **Regulations** | NERC-CIP; CMMC Level 2; SOX ITGC |
+
+### Revision History
+
+| **Version** | **Date** | **Author** | **Change Summary** |
+|---|---|---|---|
+| 1.0 | 2026-05-01 | CISO | Initial release. Establishes the ten foundational principles, CERG operating model, definitions, and policy hierarchy. |
+| 1.21 | 2026-05-22 | CISO | Updated framework references and regulatory alignment. |
+
+### Review Triggers
+
+- Material change to applicable regulations
+- Significant organizational change affecting scope
+- Significant security incident revealing a policy gap
+- Direction from the CISO or executive leadership
+
+### Related Documents
+
+| **Document** | **ID** | **Relationship** |
+|---|---|---|
+| CERG Operating Model | [CERG-GOV-OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) | Operating model detail |
+| CERG Framework | [CERG-GOV-FRM-001](CERG-GOV-FRM-001_CERG_Framework.md) | Narrative framework |
+| Document Catalog | [CERG-GOV-CAT-001](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Master document inventory |
+| Risk Management Framework | [CERG-GOV-RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk lifecycle |

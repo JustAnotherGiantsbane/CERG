@@ -517,6 +517,45 @@ An organization operating at Adaptive maturity will demonstrate these observable
 
 ---
 
+## 11. Document Control
+
+| Field | Value |
+|---|---|
+| **Document ID** | CERG-GOV-FRM-001 |
+| **Version** | 1.21 |
+| **Status** | Published |
+| **Classification** | Public |
+| **Owner** | CISO |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Review Cycle** | Annual; and on material change to framework |
+| **Next Scheduled Review** | 2027-05-01 |
+| **Frameworks** | NIST CSF 2.0; NIST 800-53r5; NIST 800-171r3; NIST RMF |
+| **Regulations** | NERC-CIP; CMMC L2; SOX ITGC |
+
+### Revision History
+
+| **Version** | **Date** | **Author** | **Change Summary** |
+|---|---|---|---|
+| 1.0 | 2026-05-01 | CISO + Cyber Governance | Initial release. Narrative description of the CERG framework, pillars, and operating model. |
+| 1.21 | 2026-05-22 | Cyber Governance | Updated framework references and pillar descriptions. |
+
+### Review Triggers
+
+- Material change to CERG structure or operating model
+- Framework version change
+- Direction from the CISO or executive leadership
+
+### Related Documents
+
+| **Document** | **ID** | **Relationship** |
+|---|---|---|
+| Cybersecurity Policy | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| CERG Operating Model | [CERG-GOV-OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) | Operating model detail |
+| Document Catalog | [CERG-GOV-CAT-001](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Master document inventory |
+| Unified Control Baseline | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control spine |
+
+---
+
 > ## SURGE
 > 
 > **Engineering. Risk. Governance.** _Fast. Powerful. Directional._
