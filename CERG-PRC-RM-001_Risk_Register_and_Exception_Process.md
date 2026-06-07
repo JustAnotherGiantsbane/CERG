@@ -1,4 +1,3 @@
-
 # SURGE: Cyber Engineering, Risk & Governance
 
 ## RISK REGISTER AND EXCEPTION PROCESS
@@ -398,5 +397,22 @@ Governance owns this procedure. The Risk Register Owner is responsible for revis
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
 | Cybersecurity Policy | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy - Principle 9 |
-| Grid and Control System Standard | [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | OT risk and CIP deviation overlay |
-| I
+| Grid and Control System Standard | [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | OT risk and CIP deviation overlay |IT / Cloud / SaaS Security Standard | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | IT/Cloud/SaaS risk scope, tier-based control expectations |
+| CUI Handling Standard | [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) | CUI risk scope, POA&M tracking |
+| Access Management Standard | [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) | Identity-related risk and access exception handling |
+| Unified Control Baseline | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control framework that risk entries reference |
+| Vulnerability Management Procedure | [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Vulnerability risk acceptance path |
+| Adversarial Validation Procedure | [CERG-PRC-AV-001](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) | Adversarial testing finding risk acceptance |
+| Third Party and Supply Chain Risk Procedure | [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Vendor risk register entries and tier-based acceptance authority |
+| Architecture Review and Project Intake Procedure | [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Project review findings flow to risk register |
+| CERG Operating Model | [CERG-GOV-OM-001](CERG-GOV-OM-001_Operating_Model.md) | Pillar structure and risk governance |
+
+---
+
+> **SURGE, Cyber Engineering, Risk & Governance**
+>
+> _Identify it. Score it. Record it. Own it._
+
+---
+
+_CERG-PRC-RM-001 · Version 1.0 DRAFT · CONFIDENTIAL · Internal Use Only_
