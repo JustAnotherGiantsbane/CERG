@@ -79,6 +79,28 @@ Security-relevant changes include:
 
 A change not on this list may still be security-relevant if the Engineering Pillar Leader, Risk Pillar Leader, or Governance Pillar Leader determines that it affects control posture.
 
+### 3.1 Materiality
+
+The term "material" is used throughout this procedure and related CERG documents to distinguish changes that fundamentally alter security posture from those that are routine. A change is "material" if it meets any of the following criteria:
+
+- Affects systems in SOX, CUI, or NERC-CIP regulated scope
+- Modifies trust boundaries or network segmentation between environments
+- Introduces new external connectivity (internet-facing services, vendor interconnects, API gateways)
+- Changes identity or privilege models (federation, PAM topology, role-based access architecture)
+- Introduces a new data classification into an environment
+- Impacts more than 100 users or a customer-facing production service
+- Introduces a new SaaS platform, cloud account, or cloud service
+
+A change is explicitly NOT material if it:
+
+- Is a routine patch or version upgrade within the same product line
+- Reuses a pre-approved architecture pattern without modification
+- Adds capacity to an already-reviewed system without changing its architecture
+- Is a configuration change within the DISH-conformant baseline
+- Is a standard user provisioning or de-provisioning action
+
+When classification is ambiguous, the Engineering Pillar Leader determines materiality in consultation with the relevant pillar leader for the affected scope.
+
 ---
 
 ## 4. Change Categories
@@ -90,6 +112,55 @@ A change not on this list may still be security-relevant if the Engineering Pill
 | Material architecture change | Creates new trust boundary, data path, identity pattern, internet exposure, vendor integration, AI capability, or regulated scope. | Architecture review under [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). |
 | Emergency change | Must be implemented before normal review to restore service, contain risk, or meet urgent operational need. | Emergency approval plus post-implementation security review. |
 | Control bypass or exception | Temporarily or permanently weakens an approved control. | Risk acceptance or exception under [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). |
+
+### 4.5 Security Review Workflow
+
+The following workflow defines the step-by-step process from change submission through security review to closure.
+
+| **Step** | **Action** | **Owner** | **Decision Point** |
+|---|---|---|---|
+| 1 | Change submitted through the enterprise change management system | Requester | — |
+| 2 | Security relevance determination: is the change security-relevant per Section 3? | Engineering Pillar Leader or delegate | If No: no CERG review required. If Yes: proceed to Step 3 |
+| 3 | Categorization: classify the change per Section 4 (Standard / Normal / Material / Emergency / Control Bypass) | Engineering Pillar Leader or delegate | — |
+| 4 | Route to appropriate reviewer based on change type and affected scope | Engineering Pillar Leader | Cloud, Identity, OT, AppSec, or Endpoint Engineer as appropriate |
+| 5 | Security review: evaluate against minimum review questions (Section 5.1) | Designated reviewer | — |
+| 6 | Decision: determine review outcome | Designated reviewer | **Approved** → proceed to Step 8. **Approved with Conditions** → proceed to Step 7. **Requires Architecture Review** → enter PRC-AR-001. **Requires Risk Acceptance** → enter PRC-RM-001. **Rejected** → return to requester with rationale |
+| 7 | Conditions met: requester satisfies conditions; reviewer verifies | Requester + Reviewer | Conditions verified → proceed to Step 8 |
+| 8 | Evidence recorded: change record captures review decision, approver, date, conditions (if any), and linked risk/architecture actions | Reviewer | — |
+| 9 | Implementation: change is executed per the enterprise change management process | Implementer | — |
+| 10 | Closure: post-implementation validation confirms the change achieved its objective without unintended security impact | Reviewer or delegate | Closed |
+
+#### Decision Points Summary
+
+```
+Change Submitted
+    │
+    ├── Not security-relevant ──► No CERG review
+    │
+    └── Security-relevant
+            │
+            ├── Standard (sampled) ──► Sample review or no review
+            ├── Emergency ──► Emergency approval + post-review
+            └── Normal / Material / Control Bypass
+                    │
+                    ├── Approved ──► Implement + Evidence
+                    ├── Approved with Conditions ──► Conditions met → Implement + Evidence
+                    ├── Requires Architecture Review ──► PRC-AR-001
+                    ├── Requires Risk Acceptance ──► PRC-RM-001
+                    └── Rejected ──► Return to requester
+```
+
+### 4.6 Sampling Methodology for Standard Changes
+
+Standard security-preserving changes do not require individual CERG review, but a sample is reviewed each month to verify that the "standard" classification is accurate and that security posture is not degrading through accumulated small changes.
+
+| **Parameter** | **Value** |
+|---|---|
+| Sampling rate | 10% of standard changes per month (minimum 5, maximum 50) |
+| Selection method | Random selection with risk-based oversampling |
+| Risk-based oversampling criteria | Changes affecting regulated scope (SOX, CUI, NERC-CIP); changes by team members with < 6 months tenure; changes outside business hours; changes to systems with Critical or High open risk-register entries |
+| Documentation | Sampling results recorded monthly; any standard change found to be misclassified is re-categorized and reviewed retroactively |
+| Trend monitoring | If > 5% of sampled standard changes are found to be misclassified (should have been Normal or Material), the sampling rate increases to 20% until the trend resolves |
 
 ---
 
@@ -119,6 +190,26 @@ Every normal security-relevant change answers these questions before implementat
 | Rejected | Change weakens control posture without sufficient mitigation or acceptance. |
 
 A change cannot be closed as security-approved until conditions, risk acceptances, or architecture-review actions are linked.
+
+### 5.3 Security Review SLAs
+
+Security reviews are time-bound to prevent the review process from becoming a bottleneck. The following SLAs apply from the time a complete change request is received.
+
+| **Change Category** | **SLA** | **Notes** |
+|---|---|---|
+| Emergency security review | 4 hours | Reviewer must respond within 4 hours; post-implementation review within the next business review cycle |
+| Material architecture change | 5 business days | Review may extend if the change enters the full architecture review process per [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) |
+| Normal security-relevant change | 3 business days | Reviewer must provide outcome (Approved / Approved with Conditions / Rejected / Requires AR / Requires RA) within this window |
+| Standard security-preserving change | Sampled (no individual SLA) | Sampled per Section 4.6; no individual review timeline applies |
+| Control bypass or exception | 3 business days for initial assessment; full exception processing per [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Risk acceptance timeline governed by PRC-RM-001 |
+
+#### SLA Escalation
+
+| **Condition** | **Action** |
+|---|---|
+| Review not completed within SLA | Reviewer escalates to Engineering Pillar Leader with reason for delay |
+| Review not completed within SLA + 2 business days | Engineering Pillar Leader escalates to CISO |
+| SLA consistently missed (> 20% of reviews in a calendar month) | Engineering Pillar Leader reviews resourcing, process, or tooling; CISO notified |
 
 ---
 
