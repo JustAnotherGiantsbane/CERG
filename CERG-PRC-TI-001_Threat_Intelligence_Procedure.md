@@ -117,6 +117,82 @@ Every actionable item records:
 
 ---
 
+### 4.5 Analysis Methodology
+
+Raw intelligence is analyzed before dissemination. The following frameworks and standards ensure consistent, defensible analysis.
+
+#### Analysis Frameworks
+
+| **Framework** | **Application** | **Description** |
+|---|---|---|
+| Diamond Model | Intrusion analysis | Maps adversary, capability, infrastructure, and victim for each intrusion event. Used to identify adversary campaigns and infrastructure patterns. |
+| Intelligence Cycle | Production workflow | Planning → Collection → Processing → Analysis → Dissemination → Feedback. Each intelligence product follows this cycle. |
+| Kill Chain Analysis | Attack reconstruction | Maps observed activity to Recon → Weaponization → Delivery → Exploitation → Installation → C2 → Actions. Used to identify where defenses failed or succeeded. |
+
+#### Confidence Levels
+
+Every intelligence product includes a confidence assessment:
+
+| **Confidence** | **Definition** | **Criteria** |
+|---|---|---|
+| Confirmed | Independently corroborated by multiple reliable sources | ≥ 3 corroborating sources; no conflicting information |
+| Probable | Supported by reliable sources with minor gaps | 2 corroborating sources or 1 highly reliable source |
+| Possible | Plausible but single source or limited corroboration | 1 source of moderate reliability; limited supporting evidence |
+| Unlikely | Contradicted by more reliable information | Primary source contradicted; low reliability |
+| Doubtful | Highly improbable based on available information | Single low-reliability source; significant contradicting evidence |
+
+#### Source Reliability Assessment
+
+| **Rating** | **Definition** |
+|---|---|
+| A — Completely Reliable | History of complete reliability; no doubt of authenticity |
+| B — Usually Reliable | Minor doubts; history of valid information with occasional errors |
+| C — Fairly Reliable | Some doubts; information used but not confirmed through other sources |
+| D — Not Usually Reliable | Significant doubts; information used only when corroborated |
+| E — Unreliable | History of invalid information; not used |
+| F — Cannot Be Judged | No basis for reliability assessment |
+
+The Threat Intelligence Analyst assesses both confidence in the analyzed intelligence and reliability of the source. Products clearly state the confidence level and source reliability rating.
+
+---
+
+### 4.6 IOC Lifecycle Management
+
+Indicators of Compromise (IOCs) have a lifecycle from ingestion through deployment to retirement.
+
+#### IOC Confidence Scoring
+
+| **Score** | **Criteria** |
+|---|---|
+| High | Confirmed malicious by ≥ 2 independent sources; observed in production attacks |
+| Medium | Reported by a trusted source; limited independent confirmation |
+| Low | Single report; unverified; or context-dependent (e.g., IP that is also used legitimately) |
+
+#### IOC Expiration
+
+IOCs auto-expire after 90 days unless refreshed. The Threat Intelligence Analyst reviews expiring IOCs and either:
+- Refreshes: IOC is still active and confirmed; expiration clock resets
+- Retires: IOC is no longer active, has been remediated, or is no longer relevant
+
+Expired IOCs are removed from active detection tooling but retained in the intelligence archive for historical analysis.
+
+#### False Positive Management
+
+| **Step** | **Action** |
+|---|---|
+| 1 | Detection Engineer identifies a false positive IOC (alert fires on benign activity) |
+| 2 | IOC is suppressed in detection tooling with a note and timestamp |
+| 3 | Threat Intelligence Analyst reviews within 5 business days |
+| 4 | If confirmed false positive: IOC is retired with rationale. If disputed: IOC remains active; detection rule is tuned instead |
+
+False positive rate is tracked as a metric. A sustained false positive rate > 20% on any IOC source triggers a source quality review.
+
+#### Integration with Detection Tooling
+
+IOCs are deployed to detection tooling (SIEM, EDR, NGFW) through an automated or semi-automated pipeline. IOC retirement is synchronized: when an IOC is retired in the intelligence platform, it is automatically removed from detection tooling within 24 hours.
+
+---
+
 ## 5. Relevance and Priority
 
 Priority is based on relevance, exposure, exploitation, and potential impact. A dramatic threat report with no relationship to the environment is lower priority than a quiet advisory for a product the organization runs on the internet.
@@ -323,6 +399,27 @@ When in doubt, the CISO and legal counsel review before sharing.
 
 ---
 
+### 10.5 Traffic Light Protocol (TLP) Handling
+
+CERG uses the Traffic Light Protocol (TLP) for all intelligence sharing with external partners, ISACs, and industry groups.
+
+| **TLP Level** | **Definition** | **Handling Requirement** |
+|---|---|---|
+| TLP:RED | For the eyes and ears of named recipients only; no further distribution | Not shared beyond named recipients. Stored with access restricted to the Threat Intelligence Analyst and named recipients. Not included in any wider-distribution product. |
+| TLP:AMBER | Limited distribution within the organization and named partners | May be shared within CERG and with named partner organizations on a need-to-know basis. Not posted on publicly accessible platforms. Products containing TLP:AMBER information are clearly marked. |
+| TLP:GREEN | Distribution within the community | May be shared with peer organizations, ISAC members, and trusted partners within the same sector or community. Not released publicly. |
+| TLP:CLEAR | Unlimited distribution | May be shared freely. No restrictions on distribution. |
+
+#### TLP Marking
+
+Every intelligence product that contains TLP-classified information is marked with the highest applicable TLP level. The marking appears in the product header. When a product combines intelligence from multiple TLP sources, the most restrictive level applies.
+
+#### Source TLP Compliance
+
+The Threat Intelligence Analyst ensures that intelligence received under a TLP designation is handled per that designation. Intelligence received as TLP:RED is never sourced in a TLP:AMBER or lower product. Intelligence received under Chatham House Rule is paraphrased and not attributed to a specific organization or individual.
+
+---
+
 ## 11. Metrics
 
 Threat intelligence metrics measure relevance and action, not raw feed volume.
@@ -373,6 +470,136 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CE
 | SOX ITGC | Threat context for financially relevant systems | Sections 7, 8 |
 
 ---
+
+
+---
+
+## Appendix A: Intelligence Product Templates
+
+### A.1 Flash Advisory
+
+```
+FLASH ADVISORY — TI-YYYY-NNNN
+TLP: [AMBER / GREEN]
+Date: [date]
+Priority: [CRITICAL / HIGH / MEDIUM]
+
+Title:
+Summary: [one paragraph — what happened, what to do]
+
+Affected Technology: [vendor, product, version]
+Recommended Actions:
+  1. [action]
+  2. [action]
+
+IOCs (Confidence: [High/Medium/Low]):
+  - [type]: [value]
+
+ATT&CK Mapping: [technique IDs]
+Source: [source type, reliability rating]
+Analyst: [name]
+```
+
+### A.2 Weekly Digest
+
+```
+WEEKLY THREAT DIGEST — TI-WD-YYYY-WNN
+TLP: GREEN
+Period: [start] to [end]
+
+Key Developments:
+  1. [development]
+  2. [development]
+
+New IOCs: [count] — [summary of types]
+Upcoming Threats: [what to watch for in the next 7 days]
+Recommended Reading: [links to relevant advisories, reports]
+Analyst: [name]
+```
+
+### A.3 Threat Model Input Brief
+
+```
+THREAT MODEL INPUT BRIEF — TI-TM-YYYY-NNNN
+TLP: AMBER
+System: [system name]
+Architecture Review: [AR-YYYY-NNNN]
+
+Threat Actors in Scope:
+  | Actor | Capability | Relevance |
+  |---|---|---|
+  | | | |
+
+Relevant TTPs:
+  | TTP | Description | Relevance to System |
+  |---|---|---|
+  | | | |
+
+Relevant CVEs (last 90 days):
+  | CVE | CVSS | Affected Product | Exploit Available? |
+  |---|---|---|---|
+  | | | | |
+
+Recommended Abuse Cases:
+  1. [abuse case]
+  2. [abuse case]
+
+Analyst: [name]
+```
+
+### A.4 Vulnerability Context Note
+
+```
+VULNERABILITY CONTEXT NOTE — TI-VC-YYYY-NNNN
+TLP: GREEN
+Date: [date]
+CVE: [CVE-ID]
+CVSS: [score]
+
+Exploit Status:
+  [ ] Not observed in wild
+  [ ] PoC available
+  [ ] Actively exploited
+
+Affected Assets (from CMDB): [list or "None identified"]
+Recommended Priority: [Immediate / 72hr / 30-day / Patch-cycle]
+Context: [why this matters to the organization]
+Analyst: [name]
+```
+
+### A.5 Vendor Risk Note
+
+```
+VENDOR RISK NOTE — TI-VR-YYYY-NNNN
+TLP: AMBER
+Date: [date]
+Vendor: [name]
+Vendor Tier: [T1/T2/T3]
+
+Finding: [description of threat intelligence]
+Risk Implication: [what this means for the organization's use of this vendor]
+Recommended Action: [specific action for Vendor Risk Analyst]
+Related: [CERG-PRC-TPRM-001 reference]
+Analyst: [name]
+```
+
+### A.6 Executive Threat Brief
+
+```
+EXECUTIVE THREAT BRIEF — TI-EX-YYYY-QN
+TLP: AMBER
+Period: [quarter] [year]
+
+Top Threats:
+  1. [threat] — [impact to organization] — [likelihood]
+  2. [threat] — [impact] — [likelihood]
+  3. [threat] — [impact] — [likelihood]
+
+Program Impact: [how the threat landscape affects CERG program priorities]
+Recommended Decisions: [specific decisions for CISO/executive consideration]
+Analyst: [name]
+Reviewer: [CISO]
+```
 
 ## 14. Document Control
 
