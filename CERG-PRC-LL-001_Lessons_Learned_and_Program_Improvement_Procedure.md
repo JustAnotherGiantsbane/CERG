@@ -59,6 +59,27 @@ This procedure closes that gap. It defines how CERG collects, analyzes, and conv
 
 ---
 
+### 2.1 Definition of a Significant Event
+
+Principle 1 states "Every significant event produces a lesson." A "significant event" is defined as any event that meets one or more of the following criteria:
+
+- Triggers a P1 or P2 incident response per [CERG-PRC-IR-002](CERG-PRC-IR-002_Incident_Response_Playbook_Set.md) Section 3.6
+- Results in a Critical or High finding from adversarial validation per [CERG-PRC-AV-001](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md)
+- Produces a "Deficient" control rating from an audit or control test per [CERG-PRC-AUD-001](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md)
+- Involves a near-miss that could have resulted in any of the above (e.g., a control that failed silently but was caught before impact)
+- Is directed by the CISO to produce a lesson regardless of the above criteria
+
+#### Events Explicitly NOT Significant
+
+The following do not require a lesson artifact unless they reveal systemic findings:
+
+- Routine P3 or P4 incidents with no systemic findings and no new control gap identified
+- Standard operational changes with no security impact
+- Routine vulnerability remediation within SLA with no program implication
+- Standard access reviews, recertifications, or metric reports that pass without exception
+
+---
+
 ## 3. Intake Sources and Triggers
 
 The following events trigger a lessons-learned artifact. Each source names the accountable role for producing the artifact and the target SLA for completion.
@@ -111,6 +132,30 @@ Each lesson artifact is triaged within 7 days of receipt by the Governance Pilla
 > An incident can be Low severity (single user, contained in minutes) but produce a Critical lesson (the root cause reveals a systemic weakness across an entire control family). Conversely, a Critical incident can produce a Low lesson (the controls worked; the root cause was a one-off human error with no systemic implications). Classify the lesson, not the event.
 
 ---
+
+
+### 4.1 Escalation for Overdue Artifacts
+
+SLAs for lesson artifact production and triage are defined in Section 3.1 (artifact production within 7-21 days of event closure) and Section 4 (triage within 7 days of receipt). When these SLAs are missed, the following escalation applies.
+
+#### Escalation Triggers
+
+| **Trigger** | **Action** |
+|---|---|
+| Lesson artifact not produced within SLA + 3 business days | Governance Pillar Leader notifies the event owner and requests status |
+| Lesson artifact not produced within SLA + 10 business days | Governance Pillar Leader escalates to the responsible pillar leader |
+| Lesson artifact not produced within SLA + 20 business days | Pillar leader escalates to CISO |
+| Triage not completed within SLA + 3 business days | Governance Pillar Leader escalates internally; covered in monthly curation pass |
+
+#### Escalation Ladder
+
+Event Owner → Governance Pillar Leader → Responsible Pillar Leader → CISO
+
+At each level, the responsible party must either (a) produce the artifact, (b) provide a documented rationale for why the event does not require an artifact (per Section 2.1), or (c) commit to a revised production date. Overdue artifacts are reported in the quarterly lessons aggregation summary and tracked as a metric.
+
+#### Tracking
+
+The Governance Pillar Leader maintains a register of overdue artifacts. The count and age of overdue artifacts is reported in the monthly CERG leadership review. More than 3 artifacts overdue at any time triggers a process review.
 
 ## 5. Quarterly Lessons Aggregation
 
@@ -264,6 +309,102 @@ The effectiveness of this procedure itself is measured. These metrics are report
 | LL-005 | Improvement Aging | % of open improvements older than 2 quarters | IMPREG-001 | Quarterly | <= 20% / 21-40% / > 40% |
 
 ---
+
+
+---
+
+## Appendix A: Lesson Artifact Template
+
+The following template captures the 7 required fields for every lesson artifact.
+
+```
+LESSON ARTIFACT — LL-YYYY-NNNN
+
+1. SOURCE EVENT
+   Event Type: [Incident / Pen Test / Red Team / Audit / Exercise / Near-Miss / Metric Breach / CISO Directed]
+   Event ID: [IR-YYYY-NNNN / AV-YYYY-NNNN / AUD-YYYY-NNNN / etc.]
+   Event Date: [date event occurred or closed]
+   Event Summary: [one paragraph describing what happened]
+
+2. DATE
+   Artifact Production Date: [date]
+   Produced By: [name, role]
+
+3. SUMMARY
+   What Happened: [factual, concise — what was observed, what the finding was, what failed or succeeded]
+
+4. ROOT CAUSE
+   Direct Cause: [the immediate technical, procedural, or human factor]
+   Systemic Cause: [the underlying standard, process, or control gap that allowed the direct cause]
+   Was This Preventable? [Yes / Partially / No — with rationale]
+
+5. IMPROVEMENT RECOMMENDATION
+   What Should Change: [specific, actionable recommendation]
+   What Standard, Procedure, or Control Is Affected: [document ID(s)]
+   Expected Impact: [how the change prevents recurrence]
+
+6. PRIORITY
+   Severity: [Critical / High / Medium / Low — per Section 4]
+   Urgency: [Immediate / This Quarter / This Year / Opportunistic]
+
+7. OWNER
+   Improvement Owner: [name, role — who will drive the change]
+   Approver: [name, role — who approves the change]
+   Target Completion Date: [date]
+```
+
+## Appendix B: Lessons Aggregation Summary Template
+
+```
+LESSONS AGGREGATION SUMMARY — LAS-YYYY-QN
+
+PERIOD COVERED
+   Quarter: [Q1 / Q2 / Q3 / Q4] [YYYY]
+   Date Range: [start] to [end]
+
+SOURCES REVIEWED
+   | Source Type | Count Reviewed | Count with Artifacts |
+   |---|---|---|
+   | Incidents (P1/P2) | | |
+   | Pen Tests / Red Teams | | |
+   | Audits / Control Tests | | |
+   | Exercises (TTX, DR, BC) | | |
+   | Near-Miss Events | | |
+   | Metric Breaches | | |
+   | CISO-Directed | | |
+
+   Total Artifacts Produced This Quarter: [N]
+   Overdue Artifacts (from prior periods): [N]
+
+KEY THEMES
+   1. [Theme]: [description, frequency, affected controls/standards]
+   2. [Theme]: [description, frequency, affected controls/standards]
+   ...
+
+IMPROVEMENT ACTIONS RECOMMENDED
+   | Action ID | Description | Priority | Owner | Target Date |
+   |---|---|---|---|---|
+   | | | | | |
+
+ACTIONS APPROVED
+   | Action ID | Description | Approved By | Approved Date |
+   |---|---|---|---|
+   | | | | |
+
+ACTIONS DEFERRED
+   | Action ID | Description | Reason for Deferral | Next Review Date |
+   |---|---|---|---|
+   | | | | |
+
+TREND ANALYSIS (if 4+ quarters available)
+   - Artifact production trend: [increasing / stable / decreasing]
+   - Top recurring theme: [theme] — appeared in [N] of last [M] quarters
+   - Improvement closure rate: [X%] of actions from prior quarter(s) verified closed
+
+Prepared by: [Governance Pillar Leader]
+Date: [date]
+Reviewed by: [CISO]
+```
 
 ## 11. Document Control
 
