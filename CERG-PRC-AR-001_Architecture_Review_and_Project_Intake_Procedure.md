@@ -242,7 +242,11 @@ THREAT MODEL - <Project Name>            AR-YYYY-NNNN - TM-001
 >
 > A threat model that documents what was already decided is paperwork. A threat model that surfaces a control the design missed, a missing boundary, a misplaced trust, is the reason the review exists.
 
-### 6.3 Phase 2 Output
+### 6.3 Phase 2 SLA
+
+Phase 2 review (Architecture Review and Threat Model) is completed within 10 business days of Phase 1 Scope Determination. Extensions may be granted by the Engineering Pillar Leader for complex systems (e.g., multi-cloud, OT-integrated, or CUI-scope systems with novel architecture). The project team is notified of any extension with rationale within the original SLA window.
+
+### 6.4 Phase 2 Output
 
 - Architecture Review record with status `Approved` / `Approved-with-Conditions` / `Not Approved`.
 - Threat model attached.
@@ -253,12 +257,52 @@ THREAT MODEL - <Project Name>            AR-YYYY-NNNN - TM-001
 
 ## 7. Phase 3: Build-Time Engagement
 
-Build-time engagement is the period between design approval and pre-production. CERG's posture is light-touch on routine builds and present on novel builds. The artifacts produced during build are:
+Build-time engagement is the period between design approval and pre-production. CERG differentiates between routine and novel builds.
 
-- **IaC review** for new modules and patterns.
-- **Pipeline gates**: DISH baseline conformance, container image signing per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md), SBOM produced, vulnerability scan gate.
-- **Secrets check**: no secrets in repo; secrets manager wired in.
-- **Conditional re-review** if material design changes happen between Phase 2 and Phase 4.
+### 7.1 Routine vs. Novel Builds
+
+| **Build Type** | **Definition** | **CERG Posture** |
+|---|---|---|
+| Routine | Deploys a pre-approved architecture pattern or IaC module without modification; uses an existing pipeline with all gates active; no new trust boundary, data path, or integration | Light-touch: CERG does not actively review unless pipeline gate failures trigger review |
+| Novel | Introduces a new IaC module, a new service pattern, a new integration, or a material change from the Phase 2 architecture; or is the first deployment of a new application stack | CERG actively reviews the build artifacts |
+
+The Engineering Pillar Leader determines whether a build is routine or novel based on the Phase 2 architecture review record and the project's pipeline configuration.
+
+### 7.2 CERG Review Checklist for Novel Builds
+
+| **Check** | **Pass Criteria** | **Evidence** |
+|---|---|---|
+| IaC conformance | IaC modules match the approved architecture per Phase 2; no material deviations | IaC diff or module reference |
+| Pipeline gates active | DISH baseline scan, container image signing, SBOM generation, and vulnerability scan are all enforced (not optional) in the CI/CD pipeline | Pipeline configuration |
+| Secrets scanning | No secrets detected in repository, build artifacts, or container images; secrets manager integration is wired and tested | Secrets scan output |
+| SBOM generated | Software Bill of Materials is produced for every build; SBOM is stored with the build artifact | SBOM artifact |
+| Image signing | Container images are signed per [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Image signature verification |
+| Vulnerability scan gate | Build fails if Critical or High vulnerabilities are detected; Medium and below are flagged for tracking | Pipeline scan output |
+
+### 7.3 Acceptance Criteria for Build-Time Gates
+
+| **Gate** | **Blocking** | **Non-Blocking** |
+|---|---|---|
+| DISH baseline conformance | Non-conformance on Critical or High severity settings | Low severity or informational deviations (flagged) |
+| Vulnerability scan | Critical or High vulnerabilities in application dependencies | Medium or Low vulnerabilities (tracked in backlog) |
+| Secrets scanning | Any confirmed secret detected | False positive (documented and suppressed) |
+| Image signing | Unsigned image in a pipeline that requires signing | — |
+
+### 7.4 Escalation for Build-Time Findings
+
+Build-time findings are escalated within the development team first, then to CERG:
+
+| **Trigger** | **Action** |
+|---|---|
+| Pipeline gate failure (Critical/High) | Development team must resolve before build proceeds; CERG notified |
+| Repeated gate failure (≥ 3 builds) | CERG reviews; may trigger conditional re-review under Phase 2 |
+| Disabling or bypassing a security gate | Treated as a security incident; CISO notified |
+
+### 7.5 SLA for Build-Time Review
+
+CERG completes novel-build review within 3 business days of notification. If the review cannot be completed within SLA, the build may proceed with CERG acknowledgment and a scheduled follow-up review; risk is accepted by the Engineering Pillar Leader.
+
+The artifacts produced during build include: IaC review for new modules and patterns; pipeline gates enforcing DISH baseline conformance, container image signing, SBOM generation, and vulnerability scanning; secrets checking; and conditional re-review if material design changes happen between Phase 2 and Phase 4.
 
 ---
 
@@ -284,7 +328,11 @@ Pre-Production review is a focused, time-boxed readiness check. It produces a Pr
 | Run-book / on-call | Service has documented on-call and run-book | Run-book reference |
 | Change management | Go-live aligned with CAB cadence | Change record |
 
-### 8.2 Outcome
+### 8.2 Phase 4 SLA
+
+Pre-Production Security Review is completed within 5 business days of the project team submitting the Pre-Production checklist evidence. Extensions may be granted by the Risk Pillar Leader where evidence review requires additional subject matter expertise.
+
+### 8.3 Outcome
 
 - **Ready**: go-live disposition in Phase 5.
 - **Ready-with-Risk-Acceptance**: outstanding findings have risk register entries with approved exceptions per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) §7.
@@ -363,11 +411,51 @@ Aggregate:
    - First post-go-live review date (≤ 90 days for Critical / High)
 ```
 
-### 9.3 Post-Go-Live Watch Period
+### 9.3 Phase 5 SLA
+
+Production Handoff and Go-Live is completed within 3 business days of Phase 4 Ready disposition. The handoff package is the gate; go-live proceeds when the package is complete and signed.
+
+### 9.4 Post-Go-Live Watch Period
 
 - Critical / High risk acceptances trigger a post-go-live watch period of ≤ 90 days with a scheduled re-review.
 - Detection telemetry is reviewed at 30 days for unexpected behavior tied to the accepted risk.
 - Findings from the watch period feed back into the risk register and, where appropriate, the threat model.
+
+---
+
+### 8.3 Dispute and Appeal Process
+
+If a project team disagrees with a finding, disposition, or outcome from any phase of the architecture review, the following appeal path is available.
+
+#### Appeal Triggers
+
+An appeal may be filed for:
+- A finding the project team believes is inaccurate, inapplicable, or overstated
+- A "Not Approved" disposition on a Phase 2 review
+- A "Not Ready" disposition on a Phase 4 pre-production review
+- A go-live condition the project team believes is unreasonable or infeasible
+
+#### Appeal Process
+
+| **Step** | **Action** | **Timing** |
+|---|---|---|
+| 1 | Project team submits written appeal to the CERG Pre-Production Reviewer, stating the specific finding or disposition being appealed, the rationale, and any supporting evidence | Within 5 business days of the original decision |
+| 2 | CERG Pre-Production Reviewer re-evaluates with the project team; may consult additional subject matter experts | Within 5 business days |
+| 3 | If resolved: decision is updated and recorded. If not resolved: escalates to Risk Pillar Leader. | — |
+| 4 | Risk Pillar Leader reviews the appeal and the CERG position; makes a determination or escalates to CISO | Within 5 business days |
+| 5 | CISO makes final determination. CISO's decision is binding and is recorded in the review record. | Within 10 business days of escalation |
+
+#### Criteria for Overturning a Decision
+
+A decision may be overturned if:
+- New or overlooked evidence demonstrates the finding is inapplicable
+- The project team proposes an alternative compensating control that achieves equivalent or superior risk reduction
+- The original decision was based on a misinterpretation of a standard or control requirement
+- The business impact of the decision is disproportionate to the risk it addresses
+
+#### Documentation
+
+Every appeal is documented in the review record, including: the appealed finding or disposition, the appellant's rationale, the resolution, and the final decision-maker. Appeal outcomes inform program improvement per [CERG-PRC-LL-001](CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md).
 
 ---
 
