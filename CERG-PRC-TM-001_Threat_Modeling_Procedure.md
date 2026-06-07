@@ -102,6 +102,35 @@ The Threat Intelligence Analyst and the project team provide inputs before the s
 
 ---
 
+### 4.5 Threat Actor Identification
+
+The abuse-case format includes a threat actor field. The following framework guides consistent actor identification.
+
+| **Actor Category** | **Description** | **Capability** | **Motivation** |
+|---|---|---|---|
+| Nation-state | State-sponsored actors with advanced capabilities | Advanced (custom tools, zero-days) | Espionage, disruption, strategic advantage |
+| Cybercriminal | Financially motivated organized groups | Intermediate to Advanced | Financial gain, data theft |
+| Hacktivist | Ideologically motivated individuals or groups | Low to Intermediate | Publicity, political statement |
+| Insider — Disgruntled | Employee/contractor with authorized access, malicious intent | Variable (access-dependent) | Revenge, financial gain |
+| Insider — Negligent | Employee/contractor who unintentionally causes harm | Low (accidental) | None (error, negligence) |
+| Competitor | Business competitor seeking advantage | Low to Intermediate | IP theft, market advantage |
+| Script Kiddie | Low-skill actor using publicly available tools | Low | Curiosity, notoriety |
+
+#### Actor Scoping
+
+Actors are scoped based on data classification, industry sector, system exposure, and threat intelligence from [CERG-PRC-TI-001](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md). Nation-state and competitor actors are in scope for CUI, BCSI, and strategic IP. Internet-facing systems include cybercriminal and hacktivist actors. Internal-only systems emphasize insider actors.
+
+#### Actor-to-ATT&CK Mapping
+
+| **Actor** | **Typical ATT&CK Techniques** |
+|---|---|
+| Nation-state | T1190, T1078, T1021, T1003, T1041 |
+| Cybercriminal | T1566, T1203, T1486, T1048 |
+| Insider | T1078, T1530, T1048, T1485 |
+| Hacktivist | T1498, T1499, T1485, T1491 |
+
+---
+
 ## 5. Method
 
 CERG uses a practical hybrid method. It combines asset and data-flow review, trust-boundary analysis, abuse-case generation, and MITRE ATT&CK mapping. The method is intentionally simple enough to run in a one-hour working session but complete enough to produce durable findings.
@@ -156,6 +185,76 @@ For each abuse case, the team decides one of four dispositions:
 ### 5.6 Step 6: Record Findings
 
 Findings are written as control-relevant statements, not vague concerns. A good finding names the attack path, the affected asset, the missing or weak control, the likely impact, and the recommended treatment.
+
+---
+
+### 5.6 Structured Threat Classification (STRIDE)
+
+STRIDE is the default threat classification framework for all CERG threat models. During abuse-case brainstorming (Section 5.3), the facilitator uses STRIDE categories as prompts to ensure comprehensive coverage.
+
+| **STRIDE** | **Question** | **Example** |
+|---|---|---|
+| **S**poofing | Can an actor impersonate an identity? | Attacker authenticates as admin using stolen credentials |
+| **T**ampering | Can an actor modify data? | Attacker modifies API payload to change authorization scope |
+| **R**epudiation | Can an actor deny an action without proof? | User deletes sensitive record; audit log insufficient |
+| **I**nformation Disclosure | Can an actor access data they should not see? | Attacker enumerates S3 bucket and downloads data |
+| **D**enial of Service | Can an actor degrade or deny service? | Attacker exhausts API rate limits |
+| **E**levation of Privilege | Can an actor gain unauthorized permissions? | Attacker exploits misconfigured IAM role to escalate |
+
+#### STRIDE-to-ATT&CK Mapping
+
+| **STRIDE** | **ATT&CK Tactics** | **Example Techniques** |
+|---|---|---|
+| Spoofing | Credential Access | T1078, T1550 |
+| Tampering | Impact | T1565, T1485 |
+| Repudiation | Defense Evasion | T1070, T1562 |
+| Information Disclosure | Collection, Exfiltration | T1530, T1048 |
+| Denial of Service | Impact | T1498, T1499 |
+| Elevation of Privilege | Privilege Escalation | T1068, T1078 |
+
+For OT systems, add **L**ateral Movement as a seventh category (STRIDE-LM).
+
+### 5.7 Facilitation Guide
+
+#### Pre-Session Preparation
+
+| **Activity** | **Timing** |
+|---|---|
+| Distribute inputs (diagrams, data classification, asset inventory, threat intelligence) | 5 business days before |
+| Confirm participants (system owner, architect, security engineer) | 5 business days before |
+| Pre-read threat intelligence per [CERG-PRC-TI-001](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) | 2 business days before |
+
+#### Session Time-Boxing
+
+| **Step** | **Activity** | **Time** |
+|---|---|---|
+| 1 | Define assets, data, scope | 30 min |
+| 2 | Identify actors and entry points | 30 min |
+| 3 | Generate abuse cases using STRIDE prompts | 60 min |
+| 4 | Map existing controls | 30 min |
+| 5 | Assess residual risk, assign severity | 30 min |
+| 6 | Document findings, dispositions, control updates | 15 min |
+
+#### Handling Disagreements
+
+Disagreements during threat modeling indicate that a trust assumption or design decision needs clarification. The facilitator records disputed items, defaults to the higher severity when severity is disputed, and escalates to the Risk Pillar Leader for resolution if disagreements block session progress. Items are not allowed to derail the session; unresolved items are captured for follow-up.
+
+#### Brainstorming Techniques
+
+- **STRIDE prompts**: Use each category as a prompt per trust boundary
+- **Attack trees**: Start with the attacker's goal and work backward
+- **Kill chain mapping**: Map abuse cases to Recon → Weaponization → Delivery → Exploitation → Installation → C2 → Actions
+- **"What if" scenarios**: "What if this API key is leaked? What if this admin account is compromised?"
+
+#### Post-Session Activities
+
+| **Activity** | **Timing** |
+|---|---|
+| Distribute draft threat model | 2 business days after session |
+| Participants review | 5 business days |
+| Finalize threat model | 10 business days |
+| Enter findings in risk register per [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | 3 business days after finalization |
+| Archive with review record per [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | At finalization |
 
 ---
 
@@ -222,6 +321,43 @@ A five-person team still performs all four depths. One person may hold multiple 
 
 ---
 
+### 9.5 Quality Assurance
+
+The Risk Pillar Leader is accountable for threat model quality. The following process ensures consistency and completeness.
+
+#### Peer Review
+
+All threat models receive a peer review by a second qualified analyst before finalization. The peer reviewer validates:
+
+- All trust boundaries are identified and documented
+- All data flows are mapped
+- All STRIDE categories are considered per trust boundary
+- All abuse cases have severity ratings and dispositions
+- All deferred or accepted items have named owners and target dates
+- The threat model references current threat intelligence from [CERG-PRC-TI-001](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md)
+
+#### Calibration Sessions
+
+Quarterly calibration sessions are conducted using a sample threat model reviewed by all analysts. The purpose is to align severity ratings, ensure consistent abuse-case generation across analysts, and identify systematic gaps in the threat modeling process. The Risk Pillar Leader facilitates calibration and documents outcomes.
+
+#### Quality Checklist
+
+| **Check** | **Criteria** |
+|---|---|
+| Scope | System boundaries are clearly defined; out-of-scope items are documented with rationale |
+| Assets | All data classifications and critical assets are identified |
+| Diagrams | Context, data flow, network, identity, trust boundary diagrams are complete |
+| Threats | All STRIDE categories are considered; abuse cases are specific and testable |
+| Controls | Existing controls are mapped to each threat; control gaps are identified |
+| Findings | All findings have severity, disposition, owner, and due date |
+| Residual risk | Residual risk is assessed and documented; accepted risk has approval |
+
+#### Escalation
+
+Quality disputes that cannot be resolved between the analyst and peer reviewer are escalated to the Risk Pillar Leader for final determination.
+
+---
+
 ## 10. Roles and Responsibilities
 
 Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
@@ -243,6 +379,21 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CE
 
 ---
 
+## 10. Metrics
+
+| **KPI** | **Formula** | **Source** | **Refresh** | **Green** | **Amber** | **Red** |
+|---|---|---|---|---|---|---|
+| Threat models completed | Count of threat models finalized | Threat model repository | Quarterly | Baseline Y1 | | |
+| Average time per threat model | Mean calendar days from session to finalization | Threat model tracker | Quarterly | ≤ 15 days | 16–20 days | > 20 days |
+| Findings designed out | % of findings with disposition "Designed Out" vs. "Accepted" | Threat model repository | Quarterly | ≥ 40% | 20–39% | < 20% |
+| Deferred findings past due | Count of deferred findings with past-due target dates | Risk register | Monthly | 0 | 1–3 | > 3 |
+| Recurrence rate | % of findings that recur in subsequent threat models for the same system | Threat model repository | Annually | ≤ 10% | 11–25% | > 25% |
+| Threat model coverage rate | % of in-scope systems (per PRC-AR-001 Section 4.1) with current threat models | Asset inventory + TM repo | Quarterly | ≥ 90% | 75–89% | < 75% |
+
+> Baseline: "Baseline Y1" indicates the metric is collected for 12 months before Green/Amber/Red thresholds are established.
+
+---
+
 ## 11. Regulatory and Framework Alignment Summary
 
 | **Regulation / Framework** | **Reference** | **Where in This Procedure** |
@@ -258,6 +409,65 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CE
 | SOX ITGC | Change-risk analysis for financially relevant systems | Sections 7, 8 |
 
 ---
+
+
+---
+
+## Appendix A: Threat Model Template
+
+```
+THREAT MODEL — TM-YYYY-NNNN
+
+1. SYSTEM OVERVIEW
+   System Name:
+   System Owner:
+   Data Classification(s):
+   Regulatory Scope (CUI / SOX / NERC-CIP / None):
+   Environment (IT / Cloud / SaaS / OT):
+   Architecture Review Reference (AR-YYYY-NNNN):
+
+2. SCOPE AND BOUNDARIES
+   In Scope:
+   Out of Scope (with rationale):
+   Trust Boundaries:
+     - [Boundary Name]: [between X and Y]
+
+3. DATA FLOW DIAGRAM
+   [Placeholder — reference to diagram artifact]
+
+4. TRUST BOUNDARY DIAGRAM
+   [Placeholder — reference to diagram artifact]
+
+5. ASSET INVENTORY
+   | Asset | Classification | Owner | Environment |
+   |---|---|---|---|
+   | | | | |
+
+6. ABUSE CASES
+   | ID | Threat Actor | Abuse Case | STRIDE | ATT&CK | Severity | Disposition |
+   |---|---|---|---|---|---|---|
+   | TM-001 | | | | | | |
+
+   Disposition values: Designed Out / Mitigated / Transferred / Accepted / Deferred
+
+7. FINDINGS
+   | ID | Description | Severity | Disposition | Owner | Due Date |
+   |---|---|---|---|---|---|
+   | | | | | | |
+
+8. CONTROL UPDATES REQUIRED
+   | Control ID (CB-001) | Current State | Required State | Owner | Due Date |
+   |---|---|---|---|---|
+   | | | | | |
+
+9. RESIDUAL RISK
+   [Summary of residual risk after controls; link to risk register entries]
+
+10. SIGN-OFF
+    Threat Modeling Facilitator: [name, date]
+    Peer Reviewer: [name, date]
+    Risk Pillar Leader: [name, date]
+```
 
 ## 12. Document Control
 
