@@ -69,7 +69,7 @@ It applies to every network CERG-managed systems use: physical and virtual netwo
 CERG networks are designed toward the zero-trust model in NIST 800-207. The estate does not have to reach a fully mature zero-trust architecture on day one; it does have to move deliberately in that direction and never away from it.
 
 1. **Access is per-session and per-resource.** A user or service is granted access to a specific resource for a specific session, not to a network zone indefinitely.
-2. **Every access decision uses identity and device posture.** Access decisions combine the authenticated identity per [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) with the posture of the device making the request per [`CERG-STD-EP-001`](CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md) (Planned, V1.x).
+2. **Every access decision uses identity and device posture.** Access decisions combine the authenticated identity per [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) with the posture of the device making the request per [`CERG-STD-EP-001`](CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md).
 3. **Encryption in transit is assumed everywhere.** Traffic is encrypted in transit per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md), including traffic between internal segments. The network is treated as hostile.
 4. **The policy decision point is logged.** Every access decision a zero-trust enforcement point makes is logged per [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md).
 
@@ -120,7 +120,7 @@ This section applies to organizations that operate operational technology. For N
 
 1. **Remote access is identified, authenticated, and authorized.** Every remote connection into the estate authenticates the identity per [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md), including multi-factor authentication, and is authorized to a specific set of resources.
 2. **Remote access is least-privilege.** A remote session reaches the resources the session needs, not the whole internal network. Remote access that drops a user onto a flat internal network is prohibited.
-3. **Device posture is checked.** A device connecting remotely is checked for posture before access is granted, per [`CERG-STD-EP-001`](CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md) (Planned, V1.x).
+3. **Device posture is checked.** A device connecting remotely is checked for posture before access is granted, per [`CERG-STD-EP-001`](CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md).
 4. **Remote administrative access is brokered and recorded.** Privileged remote access to infrastructure goes through a privileged access broker per [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md). Privileged remote sessions are recorded.
 5. **Vendor and third-party remote access is time-bound and supervised.** A vendor granted remote access receives it for a defined window, scoped to defined systems, and the access is removed when the window closes. Standing vendor access is prohibited. This aligns with [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md).
 6. **Remote access to OT is exceptional.** Remote access into the OT network is granted only where operationally necessary, is brokered, is supervised in real time where it affects control systems, and follows [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md).
