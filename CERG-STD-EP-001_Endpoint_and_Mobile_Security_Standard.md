@@ -91,7 +91,7 @@ Every managed endpoint carries the following at minimum.
 7. **Screen lock and authentication.** The endpoint enforces an automatic screen lock and authenticates the user per [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md).
 8. **Local administrative rights are restricted.** Users do not hold standing local administrator rights on their workstations. Where elevation is needed it is granted just in time and recorded.
 
-### 4.5 Privileged-Access Endpoints
+### 4.1 Privileged-Access Endpoints
 
 An endpoint used to administer infrastructure is a high-value target and is hardened beyond the baseline: application allowlisting is mandatory, the device is dedicated to administrative use and not used for email or general browsing, and it is segmented per [`CERG-STD-NET-001`](CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md). Administering the estate from a general-purpose daily-use laptop is prohibited.
 
