@@ -1,6 +1,17 @@
 # SURGE: Cyber Engineering, Risk & Governance
 ## CERG Risk Management Framework
-**Document ID:** CERG-GOV-RMF-001 · **Version:** 1.3 · **Classification:** Public
+| | |
+|---|---|
+| **Document ID** | CERG-GOV-RMF-001 |
+| **Version** | 1.3 |
+| **Status** | Approved |
+| **Classification** | Internal / Restricted |
+| **Owner** | Cyber Governance (CERG Pillar) |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - CERG Cybersecurity Policy |
+| **Review Cycle** | Annual; triggered by significant regulatory change or organizational change |
+| **Frameworks** | NIST SP 800-37 (RMF); NIST SP 800-53r5; NIST CSF 2.0 |
+| **Regulations** | NERC-CIP (CIP-005, CIP-007, CIP-010); CMMC L2; SOX ITGC |
+| **Environments** | All in-scope environments: IT, OT, Cloud, CUI |
 
 > *A NIST-grounded, operationally adaptive risk management framework designed for IT and OT environments across CMMC, NERC-CIP, and SOX.*
 
