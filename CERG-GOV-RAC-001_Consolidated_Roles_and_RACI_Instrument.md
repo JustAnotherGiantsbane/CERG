@@ -88,13 +88,13 @@ Rules that govern every row in this instrument:
 
 The 27 canonical roles, grouped by pillar, as established in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1. This table is a reference copy for use with the RACI below; the Operating Model remains authoritative for the roster itself.
 
-| **Group** | **Canonical Roles** |
-|---|---|
-| Executive | Chief Information Security Officer (CISO); Executive Sponsor |
-| Engineering | Engineering Pillar Leader; Cloud Security Engineer; Identity Engineer; OT Security Engineer; Application Security Engineer; Endpoint Engineer; Cryptography Engineer; Pre-production Reviewer |
-| Risk | Risk Pillar Leader; Vulnerability Management Lead; Adversarial Testing Lead; Threat Intelligence Analyst; Vendor Risk Analyst; OT Risk Analyst; Identity Risk Analyst; Detection Engineer |
-| Governance | Governance Pillar Leader; NERC-CIP Compliance Manager; CMMC / Federal Compliance Manager; SOX ITGC Lead; Policy & Standards Manager; Risk Register Owner; Evidence Librarian |
-| Adjacent (IR team) | Incident Commander; Lead Investigator |
+| **Group** | **Canonical Roles** | **NICE Work Role Category** |
+|---|---|---|
+| Executive | Chief Information Security Officer (CISO); Executive Sponsor | OV (Oversee and Govern) |
+| Engineering | Engineering Pillar Leader; Cloud Security Engineer; Identity Engineer; OT Security Engineer; Application Security Engineer; Endpoint Engineer; Cryptography Engineer; Pre-production Reviewer | SP (Securely Provision), OM (Operate and Maintain) |
+| Risk | Risk Pillar Leader; Vulnerability Management Lead; Adversarial Testing Lead; Threat Intelligence Analyst; Vendor Risk Analyst; OT Risk Analyst; Identity Risk Analyst; Detection Engineer | PR (Protect and Defend), AN (Analyze) |
+| Governance | Governance Pillar Leader; NERC-CIP Compliance Manager; CMMC / Federal Compliance Manager; SOX ITGC Lead; Policy & Standards Manager; Risk Register Owner; Evidence Librarian | OV (Oversee and Govern) |
+| Adjacent (IR team) | Incident Commander; Lead Investigator | PR (Protect and Defend), IN (Investigate) |
 
 The two Adjacent roles belong to the standing Incident Response team, not to CERG, per [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4. They appear in this instrument only where CERG work interfaces with incident response.
 
