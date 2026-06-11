@@ -75,6 +75,9 @@ It applies to every CERG team member. Certifications are role-dependent; the tra
 | **Recommended** | The certification materially improves the person's capability in their role and is expected within the first 18-24 months. | Organization | Expected within 18-24 months of role entry or grade advancement |
 | **Aspirational** | The certification represents advanced capability in the role or a related domain. It is a development target for progression to the next grade. | Organization (if aligned to development plan) or individual with organizational support | No fixed timeline; pursued when aligned to development priorities |
 
+
+> **NICE Mapping**: The NICE Work Role(s) associated with each certification are documented in [JF-002](roles/CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md). Each certification row below supports the NICE Work Role mapping for the corresponding CERG role. See the individual per-role JD documents for role-specific NICE TKS statement references.
+
 ### 3.2 Engineering Pillar: Certification Matrix
 
 #### Cloud Security Engineer
