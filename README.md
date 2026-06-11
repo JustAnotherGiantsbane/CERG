@@ -64,7 +64,7 @@ The pillars are not sequential. They run simultaneously, with structured handoff
 
 ## What's in the repo
 
-**Governance (26 documents)**
+**Governance (29 documents)**
 - [CERG Framework](CERG-GOV-FRM-001_CERG_Framework.md) — design philosophy, the three-pillar model, team structure, and the path to adaptive maturity
 - [Cybersecurity Policy](CERG-POL-001_Cybersecurity_Policy.md) — the durable principles that anchor everything below
 - [Operating Model](CERG-GOV-OM-001_CERG_Operating_Model.md) — pillar charters, interfaces, and governance cadence
@@ -92,6 +92,9 @@ The pillars are not sequential. They run simultaneously, with structured handoff
 - [Onboarding Program](CERG-GOV-ONB-001_Onboarding_and_Integration_Program.md) — structured new-hire integration plan
 - [Contractor Integration](CERG-GOV-CON-001_Contractor_and_Non-Employee_Staff_Integration_Guide.md) — non-employee staff onboarding
 - [Program Improvement Register](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) — continuous improvement tracking
+- [Job Families Overview](roles/CERG-GOV-JF-001_Job_Families_Overview.md) — five job families, level structure, progression gates, career lattice
+- [NICE Workforce Crosswalk](roles/CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) — all 27 canonical roles mapped to NICE Work Roles
+- [Cross-Pillar Operational Flows](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) — seven deterministic workflows with triggers, SLAs, and record templates
 
 **Standards (15 documents)**
 - [Access Management](CERG-STD-AC-001_Access_Management_Standard.md)
@@ -147,6 +150,36 @@ The pillars are not sequential. They run simultaneously, with structured handoff
 
 ---
 
+## Job Families & Role Descriptions
+
+The 27 canonical CERG roles are now organized into five job families, each with per-role description documents that include NICE Work Role mapping, grade-level responsibilities, KPI placeholders, and competency anchors.
+
+| Family | Directory | Roles |
+|--------|-----------|-------|
+| Security Engineering | [`roles/jf-seceng/`](roles/jf-seceng/) | 8 (Cloud Security Engineer through Pre-production Reviewer) |
+| Risk Operations | [`roles/jf-riskops/`](roles/jf-riskops/) | 8 (Vulnerability Management Lead through Risk Pillar Leader) |
+| Governance & Compliance | [`roles/jf-govcomp/`](roles/jf-govcomp/) | 7 (NERC-CIP Compliance Manager through Governance Pillar Leader) |
+| Executive Leadership | [`roles/jf-exec/`](roles/jf-exec/) | 2 (CISO, Executive Sponsor) |
+| Incident Response | [`roles/jf-adjunct/`](roles/jf-adjunct/) | 2 (Incident Commander, Lead Investigator) |
+
+See [Job Families Overview](roles/CERG-GOV-JF-001_Job_Families_Overview.md) for the career lattice, level definitions, and progression gates. See [JD-001](CERG-GOV-JD-001_CERG_Job_Descriptions.md) for the master role index.
+
+---
+
+## Machine-Readable Artifacts
+
+For LLM and automation consumption, a YAML layer is available under [`machine-readable/`](machine-readable/). Key artifacts:
+
+- [`cerg-manifest.yaml`](machine-readable/cerg-manifest.yaml) — canonical manifest of every artifact with hashes, classification, and LLM consumption flags
+- [`cerg-requirements.yaml`](machine-readable/cerg-requirements.yaml) — atomic requirements extracted from spine documents
+- [`cerg-flows.yaml`](machine-readable/cerg-flows.yaml) — seven cross-pillar operational flows as structured YAML
+- [`cerg-record-schemas.yaml`](machine-readable/cerg-record-schemas.yaml) — record template schemas (finding, exception, risk, asset, incident)
+- 14 additional schema files covering runtime objects, evidence, metrics, crown jewels, vulnerability prioritization, and more
+
+See [`machine-readable/README.md`](machine-readable/README.md) for the complete inventory.
+
+---
+
 ## Scales to fit you
 
 The framework describes what operating at [NIST CSF Adaptive maturity](https://www.nist.gov/cyberframework) looks like for a large organization — 14,000 employees, 60-person security team. That's the upper bound. Every team structure, headcount, and engagement model in these documents is designed to scale down. A 5-person team runs the same model with fewer people covering more pillars.
@@ -154,6 +187,14 @@ The framework describes what operating at [NIST CSF Adaptive maturity](https://w
 ---
 
 ## For LLMs and automation
+
+Every document is Markdown. The full corpus is available at [cerg.nexus](https://cerg.nexus):
+
+- **[/llms.txt](https://cerg.nexus/llms.txt)** — document index for AI tools and crawlers
+- **[/llms-full.txt](https://cerg.nexus/llms-full.txt)** — full corpus concatenated into one file
+- **[Bulk download](https://cerg.nexus/downloads/cerg-docs.zip)** — all documents as a single ZIP
+
+For structured consumption, the [`machine-readable/`](machine-readable/) directory provides YAML manifests, atomic requirements, flow specifications, record schemas, and runtime models designed for LLM and automation ingestion.
 
 Every document is Markdown. The full corpus is available at [cerg.nexus](https://cerg.nexus):
 
