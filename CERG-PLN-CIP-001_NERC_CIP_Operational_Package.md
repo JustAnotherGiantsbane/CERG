@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-PLN-CIP-001 |
 | **Version** | 1.21 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | NERC-CIP Compliance Manager |
 | **Parent Standard** | [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) - Grid Control Systems Security Standard |
@@ -37,9 +37,9 @@
 11. [CIP-013 Supply Chain Risk Management Plan](#11-cip-013-supply-chain-risk-management-plan)
 12. [CIP-009 Recovery Plan Package](#12-cip-009-recovery-plan-package)
 13. [CIP-015 INSM, Forward-Looking Integration](#13-cip-015-insm--forward-looking-integration)
-14. [Operating Cadence and Reporting](#14-operating-cadence-and-reporting)
-15. [Regulatory and Framework Alignment Summary](#15-regulatory-and-framework-alignment-summary)
-16. [Document Control](#16-document-control)
+13. [Operating Cadence and Reporting](#13-operating-cadence-and-reporting)
+14. [Regulatory and Framework Alignment Summary](#14-regulatory-and-framework-alignment-summary)
+15. [Document Control](#15-document-control)
 
 ---
 
@@ -316,7 +316,7 @@ Operationalized in coordination with [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber
 | R3 Lessons learned and plan update within 90 days | [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) Section 5.2 step 8 |
 
 ---
-## 14. Operating Cadence and Reporting
+## 13. Operating Cadence and Reporting
 
 | **Activity** | **Cadence** |
 |---|---|
@@ -335,7 +335,7 @@ Operationalized in coordination with [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber
 
 ---
 
-## 15. Regulatory and Framework Alignment Summary
+## 14. Regulatory and Framework Alignment Summary
 
 | **Regulation / Framework** | **Where in This Package** |
 |---|---|
@@ -357,7 +357,7 @@ Operationalized in coordination with [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber
 
 ---
 
-## 16. Document Control
+## 15. Document Control
 
 | | |
 |---|---|
