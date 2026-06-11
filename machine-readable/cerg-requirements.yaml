@@ -1,0 +1,1075 @@
+# CERG Atomic Requirements Register (PILOT)
+# Extracted from 8 spine documents | 85 requirements
+# SCHEMA: requirement_id, source_document_id, source_section, requirement_text,
+#   normative_verb, obligation_level, owner_role, evidence_required,
+#   linked_controls, validation_method, content_type
+
+- requirement_id: CERG-REQ-CERG-POL-001-4-001
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- The organization shall maintain a complete and current inventory of all assets within scope of this policy.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-002
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Each asset record shall include, at minimum: asset identifier, system type (IT or OT), data classification, regulatory designation (BES Cyber System, CUI environment, [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant
+    system, or general IT), asset owner, and hosting environment.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-003
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Asset inventory shall be updated upon any addition, modification, or decommission of an in-scope asset.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-004
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: You cannot protect what you do not know you own. An incomplete inventory is not a documentation gap, it is an unmanaged attack surface and, for regulated systems, a compliance gap that
+    may constitute a reportable finding independent of any security event.
+  normative_verb: may
+  obligation_level: optional
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-005
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Access to all organizational assets shall be granted on the basis of least privilege, the minimum access required to perform an authorized function.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-006
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Identity shall be verified before access is granted. Multi-factor authentication (MFA) is required for all remote access and all access to privileged functions, regardless of network
+    segment or system type.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-007
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Default, shared, and generic credentials shall be eliminated. Each user, system, and service shall be uniquely identified.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-008
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Accounts shall be provisioned, modified, and deprovisioned through a documented lifecycle process tied to authoritative sources (e.g., HR system, approved request workflow). Access
+    reviews shall be conducted on a frequency defined in subordinate standards.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: example
+- requirement_id: CERG-REQ-CERG-POL-001-4-009
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Privileged access shall be managed under heightened controls, documented separately from standard user access, and subject to enhanced logging and session controls.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-010
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: Credential-based attacks are the leading initial access vector. Excessive privilege is the primary lateral movement enabler. Together, weak authentication and over-provisioned accounts
+    convert every phishing attempt or credential theft into a potential enterprise-wide breach. In OT environments, ...
+  normative_verb: may
+  obligation_level: optional
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-011
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- All organizational assets shall be configured to a documented, approved security baseline prior to production deployment and maintained against that baseline throughout their operational
+    life.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-012
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Unnecessary services, protocols, ports, and software components shall be disabled or removed. Default configurations shall be replaced with organization-approved secure configurations.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-013
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Configuration baselines shall be documented per asset class and maintained as a living artifact by Cyber Engineering.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-014
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Deviation from an approved baseline requires a documented exception with compensating controls, owner acknowledgment, and a defined remediation timeline. Exceptions shall be tracked
+    in the risk register.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-015
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Networks shall be divided into defined security zones. Access between zones shall be explicitly permitted, documented, and enforced by technical controls.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-016
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Environments containing regulated or sensitive data, including BES Cyber Systems, CUI-handling systems, and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant systems,
+    shall be isolated from general-purpose networks through documented, validated controls.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-017
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Data shall be protected in transit using approved encryption standards. Data at rest that is classified as sensitive, regulated, or subject to contractual protection requirements
+    shall be encrypted using organization-approved methods.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-018
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- IT and OT network interconnections shall receive heightened architectural scrutiny. All data flows crossing an IT/OT boundary require documented authorization, shall be minimized
+    to operational necessity, and shall be validated through regular assessment.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-019
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- The organization shall maintain continuous visibility into vulnerabilities affecting in-scope assets through a documented vulnerability management program operated by Cyber Risk.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-020
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Vulnerabilities shall be assessed for severity, exploitability, and asset criticality. Findings shall be tracked to remediation or documented risk acceptance within the SLAs published
+    in [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5.2.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-021
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- OT and BES Cyber Systems shall be scanned using approved methods that do not introduce operational risk. Timelines for OT remediation shall account for vendor testing requirements
+    and operational windows, with NERC-CIP deviation processes invoked as required.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-022
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Vulnerabilities identified during pre-production assessment shall be remediated or formally risk-accepted prior to production deployment per the Risk Acceptance Authority table in
+    [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. High and Critical severity findings requi...'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-023
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- The organization shall conduct periodic adversarial testing, penetration testing and red team operations, to validate that controls function under active attack conditions, not only
+    under passive assessment.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-024
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- All privileged access sessions and all remote access connections to organizational assets shall be logged. Log data shall include at minimum: identity, source, target system, session
+    initiation and termination time, and actions performed where technically feasible.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-025
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Session recording shall be applied to high-risk access as defined in subordinate standards.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-026
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Log data shall be protected from modification and retained for periods defined per regulatory requirement. Log review shall occur on a defined cadence with findings escalated through
+    the risk management process.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-027
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Continuous monitoring capabilities, including security information and event management (SIEM) or equivalent, shall be deployed to detect anomalous activity across in-scope systems.
+    OT monitoring shall use passive or approved active methods that do not introduce operational risk.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-028
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Threat intelligence shall be integrated into monitoring to enable detection of known adversary techniques relevant to the organization''s industry and system profile.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-029
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- All changes to in-scope assets, including software, firmware, configuration, and network changes, shall be authorized, documented, and reviewed prior to implementation.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-030
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Configuration baselines shall be compared before and after changes to verify that only intended modifications were made.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-031
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Unauthorized configuration changes shall be detected through technical controls and treated as security events subject to investigation.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-032
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Change records shall be retained as audit evidence in accordance with applicable regulatory requirements.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-033
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- All third-party vendors, contractors, and service providers with access to organizational assets or data shall be assessed for security risk prior to onboarding and on a recurring
+    basis defined in subordinate standards.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-034
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Contractual agreements with third parties shall include security requirements addressing, at minimum: data handling, incident notification, access controls, right-to-audit provisions,
+    and applicable regulatory compliance obligations.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-035
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Software and technology acquired from third parties shall be assessed for supply chain integrity risk. Vendor-provided code and firmware shall be validated through organization-approved
+    integrity verification methods.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-036
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Third-party access shall be subject to the same least privilege, MFA, and logging requirements as organizational users. Remote access by vendors to OT and BES Cyber Systems requires
+    explicit authorization and shall be logged and monitored.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-037
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: The organization's security posture extends only as far as its weakest trusted third party. Third parties with legitimate access are a primary attack vector, not because they are adversaries,
+    but because they represent a trusted pathway that may be compromised without the organization's knowledge...
+  normative_verb: may
+  obligation_level: optional
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: rationale
+- requirement_id: CERG-REQ-CERG-POL-001-4-038
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- All identified risks to organizational assets and operations shall be documented in the organizational risk register with, at minimum: risk description, affected assets, risk owner,
+    severity, treatment decision, compensating controls, and target closure date.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-039
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- The risk register shall be reviewed in two cadences per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §8.2: weekly for High and Critical items, monthly in full.
+    Overdue or deteriorating risk items shall be escalated to the CISO and the Cyber Oversight Group.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-040
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- The organization shall maintain documented, tested incident response and recovery plans that address the full lifecycle of a security event: detection, containment, investigation,
+    notification, recovery, and lessons learned.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-041
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Incident response plans shall include regulatory notification timelines and contact procedures for all applicable frameworks. Responsible parties shall know their roles before an
+    incident occurs.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-042
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Incident response capabilities shall be tested through tabletop exercises and simulated events at a frequency defined in subordinate standards. Untested plans shall not be treated
+    as operational.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-043
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Post-incident reviews shall produce documented lessons learned that are tracked to closure through Engineering (architectural improvements), Risk (threat landscape and assessment
+    updates), and Governance (policy, standard, and playbook revisions).'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-044
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: '- Recovery capabilities, including backup restoration, shall be tested on a defined schedule. Restoration of in-scope systems shall follow documented procedures that account for system-specific
+    regulatory and operational constraints.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-4-045
+  source_document_id: CERG-POL-001
+  source_section: '4'
+  source_section_title: Foundational Security Principles
+  requirement_text: 'An organization that has not practiced its incident response plan has a documented assumption, not an operational capability. The incident itself may be unavoidable; poor response is
+    not. NERC-CIP CIP-008 makes this concrete for BES environments: the regulatory notification clock runs whether or ...'
+  normative_verb: may
+  obligation_level: optional
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-7-1-001
+  source_document_id: CERG-POL-001
+  source_section: '7.1'
+  source_section_title: Exception Process
+  requirement_text: '- Any personnel may initiate an exception request through Cyber Governance using the organization''s approved exception request process.'
+  normative_verb: may
+  obligation_level: optional
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-POL-001-7-1-002
+  source_document_id: CERG-POL-001
+  source_section: '7.1'
+  source_section_title: Exception Process
+  requirement_text: '- Exception requests shall document: the principle or requirement subject to exception, the business or operational justification, the affected systems, the proposed compensating controls,
+    the risk owner, and the proposed exception duration.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-POL-001-7-1-003
+  source_document_id: CERG-POL-001
+  source_section: '7.1'
+  source_section_title: Exception Process
+  requirement_text: '- Cyber Risk shall assess the risk associated with each exception and provide a written finding to support the approval decision.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-POL-001-7-1-004
+  source_document_id: CERG-POL-001
+  source_section: '7.1'
+  source_section_title: Exception Process
+  requirement_text: '- Approval authority follows the canonical Risk Acceptance Authority table in [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. Exceptions affecting BES Cyber
+    Systems, CUI environments, or SOX-relevant systems may require additional escalation as defined in applicable regu...'
+  normative_verb: may
+  obligation_level: optional
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-POL-001-7-1-005
+  source_document_id: CERG-POL-001
+  source_section: '7.1'
+  source_section_title: Exception Process
+  requirement_text: '- Approved exceptions shall be entered into the risk register and tracked to expiration or remediation. Exceptions shall not be renewed without a new approval cycle.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-POL-001-7-2-001
+  source_document_id: CERG-POL-001
+  source_section: '7.2'
+  source_section_title: Regulatory Deviations
+  requirement_text: 'For regulated environments, exceptions with regulatory implications shall follow the applicable deviation or mitigation plan process in addition to this exception process:'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-POL-001-8-1-001
+  source_document_id: CERG-POL-001
+  source_section: '8.1'
+  source_section_title: Compliance Monitoring
+  requirement_text: '- Cyber Governance shall maintain a master compliance calendar covering all applicable frameworks and conduct ongoing monitoring of the organization''s posture against each.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-POL-001-8-1-002
+  source_document_id: CERG-POL-001
+  source_section: '8.1'
+  source_section_title: Compliance Monitoring
+  requirement_text: '- Cyber Risk shall produce vulnerability and exposure data that informs the compliance posture assessment.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-POL-001-8-1-003
+  source_document_id: CERG-POL-001
+  source_section: '8.1'
+  source_section_title: Compliance Monitoring
+  requirement_text: '- Cyber Engineering shall produce handoff documentation and pre-production confirmations that serve as compliance evidence for Engineering activities.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-POL-001-8-1-004
+  source_document_id: CERG-POL-001
+  source_section: '8.1'
+  source_section_title: Compliance Monitoring
+  requirement_text: '- Evidence shall be collected as a byproduct of daily operations, not assembled retroactively in anticipation of audits. The evidence library shall be current, organized by control
+    and regulatory citation, and retained per applicable framework requirements.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-POL-001-8-2-001
+  source_document_id: CERG-POL-001
+  source_section: '8.2'
+  source_section_title: Non-Compliance
+  requirement_text: Non-compliance with this policy shall be managed through the risk register and exception process defined in Section 7. Willful or repeated non-compliance by personnel shall be referred
+    to Human Resources and may result in disciplinary action up to and including termination.
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-POL-001-8-2-002
+  source_document_id: CERG-POL-001
+  source_section: '8.2'
+  source_section_title: Non-Compliance
+  requirement_text: Non-compliance findings identified by external regulators or auditors shall be escalated to the CISO immediately and tracked through the Governance risk register. The CISO shall determine
+    whether escalation to executive leadership or the board is required.
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-POL-001-9-001
+  source_document_id: CERG-POL-001
+  source_section: '9'
+  source_section_title: Policy Review and Maintenance
+  requirement_text: This policy shall be reviewed annually by Cyber Governance and updated as needed to reflect changes in the threat environment, organizational structure, or applicable regulatory requirements.
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-9-002
+  source_document_id: CERG-POL-001
+  source_section: '9'
+  source_section_title: Policy Review and Maintenance
+  requirement_text: 'This policy shall also be reviewed and updated upon: material changes to applicable regulations, significant organizational changes affecting scope, a significant security incident
+    that reveals a gap in foundational principles, or direction from the CISO or executive leadership.'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-POL-001-9-003
+  source_document_id: CERG-POL-001
+  source_section: '9'
+  source_section_title: Policy Review and Maintenance
+  requirement_text: Proposed updates shall be reviewed by Cyber Engineering and Cyber Risk to ensure operational practicability before submission for CISO approval. Approved revisions shall be version-controlled
+    and distributed to all personnel with compliance obligations under this policy.
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-STD-AC-001-6-1-001
+  source_document_id: CERG-STD-AC-001
+  source_section: '6.1'
+  source_section_title: Privileged Access Definition
+  requirement_text: 'The following access types shall be treated as privileged and subject to the controls in this section:'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-STD-IT-001-3-1-001
+  source_document_id: CERG-STD-IT-001
+  source_section: '3.1'
+  source_section_title: Approved Provider and Service Catalog
+  requirement_text: The organization shall not consume cloud or SaaS services that have not been assessed and approved through CERG. Shadow IT, services procured outside this process, is one of the most
+    material sources of unmanaged risk in modern enterprises.
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-STD-IT-001-3-2-001
+  source_document_id: CERG-STD-IT-001
+  source_section: '3.2'
+  source_section_title: Data Classification and Placement
+  requirement_text: Where data lives determines what controls apply. Every workload and SaaS tenant shall be mapped to a documented data classification.
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-STD-IT-001-11-001
+  source_document_id: CERG-STD-IT-001
+  source_section: '11'
+  source_section_title: Exceptions and Escalation
+  requirement_text: No control in this standard may be waived without a documented exception. Exceptions to controls supporting [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC, [CMMC](https://dodcio.defense.gov/CMMC/),
+    or Restricted-data handling carry additional obligations.
+  normative_verb: may
+  obligation_level: optional
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-STD-IT-001-12-001
+  source_document_id: CERG-STD-IT-001
+  source_section: '12'
+  source_section_title: Document Control
+  requirement_text: 'This standard shall be reviewed annually and upon any of the following triggering events:'
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: control-objective
+- requirement_id: CERG-REQ-CERG-STD-LM-001-1-001
+  source_document_id: CERG-STD-LM-001
+  source_section: '1'
+  source_section_title: Purpose and Scope
+  requirement_text: This standard consolidates those requirements. It defines the log sources every in-scope environment must onboard, how those logs are routed and retained, the detection set the SIEM
+    must implement on day one, and how detections are validated and tuned over time. It applies to every in-scope asset...
+  normative_verb: must
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-STD-LM-001-2-001
+  source_document_id: CERG-STD-LM-001
+  source_section: '2'
+  source_section_title: Operating Principles
+  requirement_text: 4. **Tune to signal, not silence.** A muted alert that should have fired is an incident. Tuning suppresses noise, not findings.
+  normative_verb: should
+  obligation_level: recommended
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-STD-LM-001-2-002
+  source_document_id: CERG-STD-LM-001
+  source_section: '2'
+  source_section_title: Operating Principles
+  requirement_text: 6. **OT collection is passive by default.** Collection methods that risk OT availability are prohibited without engineering approval.
+  normative_verb: prohibited
+  obligation_level: prohibited
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: policy-principle
+- requirement_id: CERG-REQ-CERG-STD-LM-001-3-001
+  source_document_id: CERG-STD-LM-001
+  source_section: '3'
+  source_section_title: Mandatory Log Sources
+  requirement_text: The list below is the minimum every CERG-managed environment must onboard. Anything not listed may still be required by a subordinate standard; nothing in this list may be waived without
+    an approved exception per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md).
+  normative_verb: must
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-STD-LM-001-6-001
+  source_document_id: CERG-STD-LM-001
+  source_section: '6'
+  source_section_title: Day-One Detection Set
+  requirement_text: The Day-One Detection Set is the minimum coverage required in any in-scope environment within 30 days of onboarding. The set is curated against MITRE ATT&CK with ATT&CK Enterprise as
+    the IT spine, ATT&CK for Cloud sub-techniques for cloud/SaaS scopes, and ATT&CK for ICS for OT scopes.
+  normative_verb: required
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-STD-RES-001-6-1-001
+  source_document_id: CERG-STD-RES-001
+  source_section: '6.1'
+  source_section_title: Cloud-Native Workloads (IaaS / PaaS)
+  requirement_text: '- **Cross-region or cross-cloud failover**: where required by Tier, tested and evidenced.'
+  normative_verb: required
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-STD-RES-001-7-1-001
+  source_document_id: CERG-STD-RES-001
+  source_section: '7.1'
+  source_section_title: OT Artifacts That Must Be Backed Up
+  requirement_text: '- Historian data sets at the retention required for operational and regulatory needs'
+  normative_verb: required
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-STD-CR-001-0-001
+  source_document_id: CERG-STD-CR-001
+  source_section: '0'
+  source_section_title: ''
+  requirement_text: 2. [Approved and Prohibited Algorithms](#2-approved-and-prohibited-algorithms)
+  normative_verb: prohibited
+  obligation_level: prohibited
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-STD-CR-001-1-001
+  source_document_id: CERG-STD-CR-001
+  source_section: '1'
+  source_section_title: Purpose and Scope
+  requirement_text: 'This standard establishes a unified cryptographic policy: which algorithms are approved, which are prohibited, how TLS and certificates are managed, how keys / secrets / API tokens
+    are stored and rotated, when customer-managed keys are required, and the FIPS profile for regulated scopes.'
+  normative_verb: required
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-STD-CR-001-3-001
+  source_document_id: CERG-STD-CR-001
+  source_section: '3'
+  source_section_title: Cryptographic Use Cases
+  requirement_text: CERG controls cryptography at four use cases. Each names the required algorithm class and the key source.
+  normative_verb: required
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-STD-CR-001-7-001
+  source_document_id: CERG-STD-CR-001
+  source_section: '7'
+  source_section_title: Secrets, API Keys, and Tokens
+  requirement_text: Plaintext secrets in source code, configuration files, environment variables on disk, or chat history are prohibited under this standard. The handling pattern below is the only acceptable
+    approach.
+  normative_verb: prohibited
+  obligation_level: prohibited
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-STD-CR-001-7-2-001
+  source_document_id: CERG-STD-CR-001
+  source_section: '7.2'
+  source_section_title: Distribution and Use
+  requirement_text: '- **Scope-bounded.** Each token is scoped to the minimum required resource and action.'
+  normative_verb: required
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-GOV-CB-001-4-001
+  source_document_id: CERG-GOV-CB-001
+  source_section: '4'
+  source_section_title: Implementation Statuses
+  requirement_text: Every control entry in the baseline carries one of the following statuses. The set is intentionally small, it survives audits in every framework CERG must support.
+  normative_verb: must
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-GOV-CB-001-8-2-001
+  source_document_id: CERG-GOV-CB-001
+  source_section: '8.2'
+  source_section_title: Evidence Discipline
+  requirement_text: 3. **Retrievability.** Evidence shall be retrievable within five business days of an auditor request. Anything that takes longer is a process finding regardless of whether the underlying
+    control is operating.
+  normative_verb: shall
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-GOV-CB-001-10-1-001
+  source_document_id: CERG-GOV-CB-001
+  source_section: '10.1'
+  source_section_title: Ownership
+  requirement_text: Pillar leaders may propose changes at any time. The Governance Pillar Leader runs an open intake at the monthly Compliance Pulse forum (per [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md)
+    §7).
+  normative_verb: may
+  obligation_level: optional
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-GOV-RMF-001-3-2-001
+  source_document_id: CERG-GOV-RMF-001
+  source_section: '3.2'
+  source_section_title: What Gets Categorized
+  requirement_text: '- Operational Technology systems are categorized with additional consideration for Safety, Reliability, and Continuity impacts, recognizing that an OT system failure may carry consequences
+    beyond information loss.'
+  normative_verb: may
+  obligation_level: optional
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-GOV-RMF-001-5-3-001
+  source_document_id: CERG-GOV-RMF-001
+  source_section: '5.3'
+  source_section_title: Implementation Standards
+  requirement_text: '- **[NIST 800-82](https://csrc.nist.gov/pubs/sp/800/82/r3/final)** supplemental guidance for OT and ICS system hardening, recognizing that CIS benchmarks may not directly apply to industrial
+    control systems.'
+  normative_verb: may
+  obligation_level: optional
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-GOV-RMF-001-9-5-001
+  source_document_id: CERG-GOV-RMF-001
+  source_section: '9.5'
+  source_section_title: Likelihood, Impact, and Severity Bands
+  requirement_text: 'CERG uses a 5x5 model: likelihood and impact are each rated 1-5, scored, and mapped to a severity band. The bands below are the canonical CERG model. Every CERG document that scores
+    risk must produce the same severity rating as this table.'
+  normative_verb: must
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-GOV-RMF-001-9-7-001
+  source_document_id: CERG-GOV-RMF-001
+  source_section: '9.7'
+  source_section_title: Risk Acceptance Authority (Canonical)
+  requirement_text: This table is the single source of truth for who may accept residual risk. Every other CERG document that references acceptance authority points at this section.
+  normative_verb: may
+  obligation_level: optional
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: requirement
+- requirement_id: CERG-REQ-CERG-GOV-RMF-001-9-9-001
+  source_document_id: CERG-GOV-RMF-001
+  source_section: '9.9'
+  source_section_title: 'Worked Example: Risk Register Entry'
+  requirement_text: required because compensating controls maintain ESP integrity.
+  normative_verb: required
+  obligation_level: mandatory
+  owner_role: ''
+  evidence_required: ''
+  linked_controls: []
+  validation_method: audit
+  content_type: rationale
