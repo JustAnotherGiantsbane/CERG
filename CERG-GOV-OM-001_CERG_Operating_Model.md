@@ -155,7 +155,7 @@ The three pillars report to the CISO through pillar leaders (Manager / Director 
 |---|---|
 | Policy approval ([CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) and subordinate standards) | CISO |
 | Standards / procedure approval | Pillar leader; CISO for material changes |
-| Risk acceptance - all severities | Per the canonical Risk Acceptance Authority table in [`CERG_Risk_Management_Framework_v1.0`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 |
+| Risk acceptance - all severities | Per the canonical Risk Acceptance Authority table in [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 |
 | Exception approval | Per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) §8, which routes to RMF §9.7 for approval authority |
 | Incident classification & containment | Incident Commander (CISO or designee), per the standing IR team (see §3.4) |
 | External notification (regulator, public) | IC + CISO + Legal |
@@ -176,7 +176,7 @@ The **Cyber Oversight Group (COG)** is the standing internal forum that reviews 
 2. **Cross-functional treatment alignment.** Risks whose treatment crosses business boundaries - e.g., a risk that requires Operations to change a maintenance practice, or Finance to fund a remediation - are surfaced for cross-functional decision or escalation.
 3. **Pre-board review.** The COG serves as the dress rehearsal for board-cycle reporting; material risk decisions surface here first so the board reporting is informed by cross-functional perspective.
 
-The COG is not a risk-acceptance authority. Acceptance authority lives in the [`CERG_RMF`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 table. The COG is the forum where the right decision-makers are in the room, informed, and aligned. Downstream reports - including the metrics dashboard in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) §9 and the risk-register reporting cadence in [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) §7.3 - have the COG as their primary audience.
+The COG is not a risk-acceptance authority. Acceptance authority lives in the [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 table. The COG is the forum where the right decision-makers are in the room, informed, and aligned. Downstream reports - including the metrics dashboard in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) §9 and the risk-register reporting cadence in [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) §7.3 - have the COG as their primary audience.
 
 ---
 
@@ -248,7 +248,7 @@ Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leade
 
 | Canonical Role | Pillar / Group | Common Synonyms (Do Not Use) | Primary Responsibilities |
 |---|---|---|---|
-| **Chief Information Security Officer (CISO)** | Executive | - | Strategy, board reporting, final authority on High and Critical risk acceptance per [`CERG_RMF`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. |
+| **Chief Information Security Officer (CISO)** | Executive | - | Strategy, board reporting, final authority on High and Critical risk acceptance per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. |
 | **Executive Sponsor** | Business / Executive | "VP," "Executive Sponsor," "Leadership" | Concurrence for Critical risk acceptance per RMF §9.7; business representative on the COG; named per system in the categorization register. |
 | **Engineering Pillar Leader** | Engineering | "Engineering Pillar Leader," "Engineering Manager" (when speaking of the pillar lead) | Pillar accountability; project intake; reference-architecture authority. |
 | **Cloud Security Engineer** | Engineering | "Cloud Security Engineer" | Cloud platforms, IaC, CSPM gating, landing-zone authority. |
@@ -336,8 +336,8 @@ CERG operates as one team because it talks like one team. The standing cadence b
 | **Forum** | **Cadence** | **Participants** | **Purpose** |
 |---|---|---|---|
 | CERG Leadership Sync | Weekly | CISO + pillar leaders | Cross-pillar priorities, blockers, escalations. |
-| Risk Posture Review (High / Critical items) | Weekly | Risk + Engineering + Governance | Top-of-list High and Critical risks, treatment progress, SLA breaches. Aligns with [`CERG_RMF`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §8.2 weekly cadence for High and Critical items. |
-| Monthly Risk Register Review (full register) | Monthly | Risk Register Owner + Risk + Engineering + Governance | Full register pass, POA&M status, treatment closures, exception renewals. Aligns with [`CERG_RMF`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §8.2 monthly full cadence. |
+| Risk Posture Review (High / Critical items) | Weekly | Risk + Engineering + Governance | Top-of-list High and Critical risks, treatment progress, SLA breaches. Aligns with [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §8.2 weekly cadence for High and Critical items. |
+| Monthly Risk Register Review (full register) | Monthly | Risk Register Owner + Risk + Engineering + Governance | Full register pass, POA&M status, treatment closures, exception renewals. Aligns with [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §8.2 monthly full cadence. |
 | Pre-production Review Board | Twice weekly | Engineering + Risk + Governance | Pre-production go/no-go for in-scope projects. |
 | Vulnerability Triage | Daily / standing | Risk team + Engineering rep | PPR / Critical / Internet-exposed findings per [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5.2. |
 | Threat Intelligence Brief | Weekly | Risk + Engineering + Governance | Relevant intel, posture implications. |
