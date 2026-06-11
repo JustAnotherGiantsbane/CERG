@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.30 |
+| **Version** | 1.31 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -29,10 +29,10 @@
 4. [Authority and Status Lifecycle](#4-authority-and-status-lifecycle)
 5. [Authoritative Catalog (V1)](#5-authoritative-catalog-v1)
 6. [Cross-Reference Rules](#6-cross-reference-rules)
+5. [Authoritative Catalog (V1)](#5-authoritative-catalog-v1)
+6. [Cross-Reference Rules](#6-cross-reference-rules)
 7. [Artifact Roadmap (V1.x → V2)](#7-artifact-roadmap-v1x--v2)
 8. [Document Control](#8-document-control)
-
----
 
 ## 1. Purpose and Scope
 
@@ -130,8 +130,12 @@ Files are named `<DocumentID>_<Short_Title>.md` using underscore-separated title
 | `TRN` | Training, development, and certification framework |
 | `SUCC` | Succession planning and talent review framework |
 | `CON` | Contractor and non-employee staff integration |
+| `JF` | Job Families and workforce architecture |
+| `FLOW` | Cross-pillar operational flows |
 
 New domains are added only by amendment to this catalog.
+
+> **Domain codes reserved for workforce and operational flows:** `JF` (Job Families) and `FLOW` (Cross-Pillar Operational Flows) were added in CAT-001 v1.31 as part of the workforce architecture and operational flow build-out.
 
 > **Type-Code Discipline**
 >
@@ -217,6 +221,9 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-GOV-TRN-001`](CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) | Training, Development, and Certification Framework | Governance Pillar Leader (Policy & Standards) | Approved |
 | [`CERG-GOV-SUCC-001`](CERG-GOV-SUCC-001_Succession_Planning_and_Talent_Review_Framework.md) | Succession Planning and Talent Review Framework | CISO | Approved |
 | [`CERG-GOV-CON-001`](CERG-GOV-CON-001_Contractor_and_Non-Employee_Staff_Integration_Guide.md) | Contractor and Non-Employee Staff Integration Guide | Governance Pillar Leader (Policy & Standards) | Approved |
+| [`CERG-GOV-JF-001`](roles/CERG-GOV-JF-001_Job_Families_Overview.md) | Job Families Overview | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-JF-002`](roles/CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) | NICE Workforce Framework Crosswalk | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-FLOW-001`](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) | Cross-Pillar Operational Flows | Governance Pillar Leader | Draft |
 
 ### 5.3 Standards
 
@@ -288,6 +295,74 @@ Other templates remain embedded as appendices of their parent procedure or plan 
 
 ---
 
+
+### 5.7 Job Descriptions (Per-Role)
+
+Per-role job description documents, extracted from the monolithic JD-001, live under `roles/`. Each document follows the Enhanced Role Description Template with NICE mapping, KPI placeholders, and competency anchors.
+
+#### JF-SECENG — Security Engineering
+
+| **ID** | **Title** | **Owner** | **Status** |
+|---|---|---|---|
+| [`CERG-GOV-JD-SECENG-001`](roles/jf-seceng/CERG-GOV-JD-SECENG-001_Cloud_Security_Engineer.md) | Cloud Security Engineer | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-JD-SECENG-002`](roles/jf-seceng/CERG-GOV-JD-SECENG-002_Identity_Engineer.md) | Identity Engineer | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-JD-SECENG-003`](roles/jf-seceng/CERG-GOV-JD-SECENG-003_OT_Security_Engineer.md) | OT Security Engineer | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-JD-SECENG-004`](roles/jf-seceng/CERG-GOV-JD-SECENG-004_Application_Security_Engineer.md) | Application Security Engineer | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-JD-SECENG-005`](roles/jf-seceng/CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md) | Endpoint Engineer | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-JD-SECENG-006`](roles/jf-seceng/CERG-GOV-JD-SECENG-006_Cryptography_Engineer.md) | Cryptography Engineer | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-JD-SECENG-007`](roles/jf-seceng/CERG-GOV-JD-SECENG-007_Engineering_Pillar_Leader.md) | Engineering Pillar Leader | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-JD-SECENG-008`](roles/jf-seceng/CERG-GOV-JD-SECENG-008_Pre-production_Reviewer.md) | Pre-production Reviewer | Governance Pillar Leader (Policy & Standards) | Draft |
+
+#### JF-RISKOPS — Risk Operations
+
+| **ID** | **Title** | **Owner** | **Status** |
+|---|---|---|---|
+| [`CERG-GOV-JD-RISKOPS-001`](roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Vulnerability_Management_Lead.md) | Vulnerability Management Lead | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-JD-RISKOPS-002`](roles/jf-riskops/CERG-GOV-JD-RISKOPS-002_Adversarial_Testing_Lead.md) | Adversarial Testing Lead | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-JD-RISKOPS-003`](roles/jf-riskops/CERG-GOV-JD-RISKOPS-003_Threat_Intelligence_Analyst.md) | Threat Intelligence Analyst | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-JD-RISKOPS-004`](roles/jf-riskops/CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md) | Detection Engineer | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-JD-RISKOPS-005`](roles/jf-riskops/CERG-GOV-JD-RISKOPS-005_OT_Risk_Analyst.md) | OT Risk Analyst | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-JD-RISKOPS-006`](roles/jf-riskops/CERG-GOV-JD-RISKOPS-006_Identity_Risk_Analyst.md) | Identity Risk Analyst | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-JD-RISKOPS-007`](roles/jf-riskops/CERG-GOV-JD-RISKOPS-007_Vendor_Risk_Analyst.md) | Vendor Risk Analyst | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-JD-RISKOPS-008`](roles/jf-riskops/CERG-GOV-JD-RISKOPS-008_Risk_Pillar_Leader.md) | Risk Pillar Leader | Governance Pillar Leader (Policy & Standards) | Draft |
+
+#### JF-GOVCOMP — Governance & Compliance
+
+| **ID** | **Title** | **Owner** | **Status** |
+|---|---|---|---|
+| [`CERG-GOV-JD-GOVCOMP-001`](roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-001_NERC-CIP_Compliance_Manager.md) | NERC-CIP Compliance Manager | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-JD-GOVCOMP-002`](roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-002_CMMC_Federal_Compliance_Manager.md) | CMMC / Federal Compliance Manager | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-JD-GOVCOMP-003`](roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-003_SOX_ITGC_Lead.md) | SOX ITGC Lead | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-JD-GOVCOMP-004`](roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-004_Policy_and_Standards_Manager.md) | Policy & Standards Manager | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-JD-GOVCOMP-005`](roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-005_Risk_Register_Owner.md) | Risk Register Owner | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-JD-GOVCOMP-006`](roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-006_Evidence_Librarian.md) | Evidence Librarian | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-JD-GOVCOMP-007`](roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-007_Governance_Pillar_Leader.md) | Governance Pillar Leader | Governance Pillar Leader (Policy & Standards) | Draft |
+
+#### JF-EXEC — Executive Leadership
+
+| **ID** | **Title** | **Owner** | **Status** |
+|---|---|---|---|
+| [`CERG-GOV-JD-EXEC-001`](roles/jf-exec/CERG-GOV-JD-EXEC-001_Chief_Information_Security_Officer.md) | Chief Information Security Officer (CISO) | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-JD-EXEC-002`](roles/jf-exec/CERG-GOV-JD-EXEC-002_Executive_Sponsor.md) | Executive Sponsor | Governance Pillar Leader (Policy & Standards) | Draft |
+
+#### JF-ADJUNCT — Incident Response
+
+| **ID** | **Title** | **Owner** | **Status** |
+|---|---|---|---|
+| [`CERG-GOV-JD-ADJUNCT-001`](roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-001_Incident_Commander.md) | Incident Commander | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-JD-ADJUNCT-002`](roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-002_Lead_Investigator.md) | Lead Investigator | Governance Pillar Leader (Policy & Standards) | Draft |
+
+### 5.8 Machine-Readable Artifacts
+
+The `machine-readable/` directory contains YAML specifications generated from the CERG corpus for LLM and automation consumption. These are derived artifacts, not independently authored documents. See `machine-readable/README.md` for the complete inventory.
+
+Key artifacts include:
+- `cerg-manifest.yaml` — Canonical manifest of all 71 artifacts
+- `cerg-requirements.yaml` — Atomic requirements extracted from 8 spine documents
+- `cerg-flows.yaml` — Cross-pillar operational flow specifications (7 flows)
+- `cerg-record-schemas.yaml` — Record template schemas (5 record types)
+- Plus 14 additional schema files (runtime model, evidence, metrics, etc.)
+
 ## 6. Cross-Reference Rules
 
 These rules govern every "Related Documents" table, every footnote reference, and every link in a CERG artifact.
@@ -345,7 +420,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | **Document ID** | CERG-GOV-CAT-001 |
 | **Version** | 1.30 |
 | **Status** | Approved |
-| **Effective Date** | 2026-05-27 |
+| **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
 | **Approved By** | Governance Pillar Leader |
@@ -369,6 +444,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | 1.26 | 2026-05-22 | Cyber Governance | Added eight standalone Group E templates to Section 5.6 as Draft: `CERG-TMPL-CUI-001`, `CERG-TMPL-CUI-002`, `CERG-TMPL-RM-002`, `CERG-TMPL-AR-001`, `CERG-TMPL-TPRM-001`, `CERG-TMPL-RM-003`, `CERG-TMPL-AUD-001`, and `CERG-TMPL-MTR-001`; updated Section 7.4 to state that no Group E standalone templates remain planned. |
 | 1.27 | 2026-05-22 | Cyber Governance | Registered domains `CAL`, `STY`, and `TRC`; added `CERG-GOV-CAL-001`, `CERG-GOV-STY-001`, and `CERG-GOV-TRC-001` to Section 5.2 as Draft; updated Section 7.5 to state that no F2-F4 governance instruments remain planned. |
 | 1.30 | 2026-05-27 | Cyber Governance | HR program build-out amendment. Registered domains `CMP`, `PERF`, `ONB`, `WFP`, `TRN`, `SUCC`, and `CON`. Added to Section 5.2: `CERG-GOV-CMP-001` (Competency Model and Behavioral Anchors), `CERG-GOV-PERF-001` (Performance Management and Promotion Framework), `CERG-GOV-ONB-001` (Onboarding and Integration Program), `CERG-GOV-WFP-001` (Workforce Planning and Capacity Model), `CERG-GOV-TRN-001` (Training, Development, and Certification Framework), `CERG-GOV-SUCC-001` (Succession Planning and Talent Review Framework), and `CERG-GOV-CON-001` (Contractor and Non-Employee Staff Integration Guide). Extended `CERG-GOV-IMP-001` to v1.1 with Employer Brand and Talent Attraction section. |
+| 1.31 | 2026-06-11 | Governance Pillar Leader | Workforce architecture and cross-pillar flows amendment. Registered domains `JF` and `FLOW`. Added JF-001 (Job Families Overview), JF-002 (NICE Crosswalk), and FLOW-001 (Cross-Pillar Operational Flows) to §5.2. Added §5.7 (Job Descriptions — 27 per-role documents across five job families) and §5.8 (Machine-Readable Artifacts). Rewrote JD-001 as family-level index. Modified RAC-001, JA-001, CMP-001, TRN-001, PERF-001, and OM-001 with NICE and Job Family cross-references. |
 | 1.29 | 2026-05-27 | Cyber Governance | Job architecture and human capital amendment. Registered domains `JA` and `JD`. Added to Section 5.2: `CERG-GOV-JA-001` (Job Architecture and Grade Framework) and `CERG-GOV-JD-001` (CERG Job Descriptions). The JA-001 establishes the two-track grade structure (SME: Specialist through Sr. Advisor; Management: Manager through Director), leveling dimensions, span-of-control guidelines, and compensation philosophy. The JD-001 provides full job descriptions for all 25 canonical CERG roles. |
 | 1.28 | 2026-05-26 | Cyber Governance | NIST CSF Adaptive gap closure amendment. Registered domains `LL`, `IMPREG`, and `CEF`. Added to Section 5.2: `CERG-GOV-IMPREG-001` (Program Improvement Register) and `CERG-GOV-CEF-001` (Control Effectiveness Framework). Added to Section 5.4: `CERG-PRC-LL-001` (Lessons Learned and Program Improvement Procedure). Added to Section 5.6: `CERG-TMPL-GOV-001` (Stakeholder Perception Survey). Noted extended artifacts: PRC-TI-001 v1.1, MTR-001 v1.3, PRC-AV-001 v1.2, RMF-001 v1.3, MAT-001 v1.1, OM-001 v1.22. |
 
