@@ -246,6 +246,9 @@ This roster is the single source of truth for role names used throughout the CER
 
 Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leader - Cloud vs. Engineering Pillar Leader - OT) are scaled out from the canonical name with a parenthetical domain qualifier.
 
+
+> **See also:** [JF-001](roles/CERG-GOV-JF-001_Job_Families_Overview.md) for job family grouping and level definitions that organize these roles for career development and hiring. The roster below (and the supporting §6.2-6.4 sections) remains authoritative for role names and pillar assignments.
+
 | Canonical Role | Pillar / Group | Common Synonyms (Do Not Use) | Primary Responsibilities |
 |---|---|---|---|
 | **Chief Information Security Officer (CISO)** | Executive | - | Strategy, board reporting, final authority on High and Critical risk acceptance per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. |
