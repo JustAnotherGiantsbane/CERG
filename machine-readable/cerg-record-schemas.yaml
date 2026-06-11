@@ -1,0 +1,172 @@
+# CERG Record Template Schemas — Machine-Readable
+# Extracted from FLOW-001 §16 | 5 record types
+
+finding_record:
+  description: Captures a discovered exposure requiring treatment.
+  fields:
+  - name: finding_id
+    type: string
+    required: true
+  - name: source
+    type: enum
+    values:
+    - vulnerability
+    - adversarial
+    - threat_intel
+    - third_party
+    - incident
+    - audit
+    - architecture_review
+  - name: severity
+    type: enum
+    values:
+    - Critical
+    - High
+    - Medium
+    - Low
+  - name: exploitability
+    type: string
+  - name: affected_assets
+    type: array
+    items: string
+  - name: business_owner
+    type: string
+  - name: technical_owner
+    type: string
+  - name: regulatory_scope
+    type: array
+    items: string
+  - name: treatment_class
+    type: enum
+    values:
+    - immediate
+    - planned
+    - redesign
+    - compensating
+    - exception
+    - acceptance
+    - incident
+  - name: current_state
+    type: string
+  - name: due_date
+    type: date
+  - name: evidence_links
+    type: array
+    items: string
+exception_record:
+  description: Formal non-conformance to a control or requirement.
+  fields:
+  - name: exception_id
+    type: string
+    required: true
+  - name: control_id
+    type: string
+  - name: affected_asset
+    type: string
+  - name: rationale
+    type: string
+  - name: compensating_controls
+    type: array
+    items: string
+  - name: residual_risk
+    type: string
+  - name: approver
+    type: string
+  - name: expiration_date
+    type: date
+  - name: monitoring_cadence
+    type: string
+  - name: linked_risk_id
+    type: string
+  - name: evidence_links
+    type: array
+    items: string
+risk_record:
+  description: Enterprise risk entry in the authoritative risk register.
+  fields:
+  - name: risk_id
+    type: string
+    required: true
+  - name: risk_statement
+    type: string
+  - name: inherent_risk
+    type: string
+  - name: residual_risk
+    type: string
+  - name: owner
+    type: string
+  - name: treatment_strategy
+    type: string
+  - name: review_cadence
+    type: string
+  - name: linked_findings
+    type: array
+    items: string
+  - name: linked_exceptions
+    type: array
+    items: string
+  - name: status
+    type: string
+asset_record:
+  description: Authoritative inventory entry for an in-scope asset.
+  fields:
+  - name: asset_id
+    type: string
+    required: true
+  - name: asset_type
+    type: string
+  - name: owner
+    type: string
+  - name: business_owner
+    type: string
+  - name: technical_owner
+    type: string
+  - name: environment
+    type: string
+  - name: classification
+    type: string
+  - name: regulatory_scope
+    type: array
+    items: string
+  - name: criticality
+    type: string
+  - name: scan_coverage
+    type: boolean
+  - name: logging_coverage
+    type: boolean
+  - name: backup_assignment
+    type: boolean
+  - name: access_review_population
+    type: boolean
+  - name: status
+    type: string
+incident_record:
+  description: Authoritative record for a declared security incident.
+  fields:
+  - name: incident_id
+    type: string
+    required: true
+  - name: severity
+    type: string
+  - name: incident_commander
+    type: string
+  - name: affected_assets
+    type: array
+    items: string
+  - name: current_state
+    type: string
+  - name: notification_obligations
+    type: array
+    items: string
+  - name: containment_actions
+    type: array
+    items: string
+  - name: investigation_summary
+    type: string
+  - name: recovery_actions
+    type: array
+    items: string
+  - name: lessons_learned_decision
+    type: string
+  - name: corrective_action_owner
+    type: string

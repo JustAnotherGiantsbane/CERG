@@ -1,0 +1,374 @@
+# CERG Cross-Pillar Operational Flows — Machine-Readable Specification
+# Extracted from FLOW-001 | 7 flows
+
+flows:
+  F-01:
+    name: Control Intent to Implementation
+    primary_owner: Governance Pillar
+    supporting_owners:
+    - Engineering Pillar
+    - Risk Pillar
+    triggers:
+    - policy_changed
+    - standard_changed
+    - control_baseline_changed
+    - material_audit_finding
+    - recurring_incident_pattern
+    - repeated_exception_same_family
+    - regulatory_requirement_added
+    - board_or_ciso_directive
+    primary_record: Control Change Record
+    workflow_steps:
+    - step: 1
+      actor: Governance Pillar
+      action: Create Control Change Record
+    - step: 2
+      actor: Governance Pillar
+      action: Define control intent and conformance scope
+    - step: 3
+      actor: Engineering Pillar
+      action: Produce implementation design
+    - step: 4
+      actor: Risk Pillar
+      action: Define validation criteria
+    - step: 5
+      actor: Governance Pillar
+      action: Approve evidence plan
+    - step: 6
+      actor: Engineering Pillar
+      action: Execute rollout; record evidence
+    - step: 7
+      actor: Risk Pillar
+      action: Validate effectiveness
+    - step: 8
+      actor: Governance Pillar
+      action: Update dashboard; close or reopen
+    evidence_required:
+    - implementation_design_package
+    - validation_plan
+    - control_test_evidence
+    - reporting_metric_record
+    - linked_evidence_record
+    slas:
+      governance_publish_package: 5bd
+      engineering_design: 10bd
+      risk_validation_plan: 5bd
+      evidence_link: 3bd
+    closure_criteria:
+    - implementation_completed
+    - risk_validated
+    - evidence_linked
+    - dashboard_updated
+  F-02:
+    name: Project Intake, Architecture Review, and Threat Modeling
+    primary_owner: Engineering Pillar
+    supporting_owners:
+    - Risk Pillar
+    - Governance Pillar
+    triggers:
+    - new_application
+    - new_service
+    - major_change
+    - new_cloud_saas
+    - new_integration
+    - internet_exposed
+    - regulated_scope_project
+    - ai_system
+    - it_ot_convergence
+    primary_record: Project Intake Record
+    workflow_steps:
+    - step: 1
+      actor: Engineering Pillar
+      action: Open Project Intake Record
+    - step: 2
+      actor: Engineering Pillar
+      action: Perform initial security scoping
+    - step: 3
+      actor: Engineering Pillar
+      action: Perform Architecture Review
+    - step: 4
+      actor: Engineering Pillar
+      action: Perform Threat Model
+    - step: 5
+      actor: Governance Pillar
+      action: Issue Conformance Scope Statement
+    - step: 6
+      actor: Risk Pillar
+      action: Participate if risk concentration threshold met
+    - step: 7
+      actor: Engineering Pillar
+      action: Classify issues pre-go-live or post-go-live
+    - step: 8
+      actor: Engineering Pillar
+      action: Issue final security disposition
+    risk_concentration_thresholds:
+    - sensitive_data
+    - regulated_scope
+    - internet_exposure
+    - high_risk_third_party
+    - complex_privileged_path
+    - ot_or_safety_impact
+    allowed_dispositions:
+    - approved_go_live
+    - approved_with_pre_go_live_remediation
+    - approved_with_post_go_live_risk
+    - blocked_pending_prerequisite
+    evidence_required:
+    - architecture_review_record
+    - threat_model_record
+    - conformance_scope_statement
+    - production_handoff_security_summary
+  F-03:
+    name: Asset Registration and Coverage Validation
+    primary_owner: Engineering Pillar
+    supporting_owners:
+    - Risk Pillar
+    - Governance Pillar
+    triggers:
+    - project_go_live_approved
+    - new_asset_discovered
+    - major_asset_change
+    - ownership_change
+    - environment_change
+    - regulatory_scope_change
+    - asset_decommission
+    primary_record: Asset Record
+    workflow_steps:
+    - step: 1
+      actor: Engineering Pillar
+      action: Create or update Asset Record
+    - step: 2
+      actor: Engineering Pillar
+      action: Confirm owner and classification
+    - step: 3
+      actor: Risk Pillar
+      action: Validate scan coverage and exposure visibility
+    - step: 4
+      actor: Governance Pillar
+      action: Map asset to control and calendar obligations
+    - step: 5
+      actor: Governance Pillar
+      action: Determine coverage gap disposition
+    coverage_requirements:
+    - owner_assigned
+    - classification_complete
+    - regulatory_flag
+    - scan_coverage
+    - logging_source
+    - backup_assignment
+    - access_review_assignment
+    metrics:
+    - asset_coverage_completeness_pct
+    - assets_missing_owner_pct
+    - assets_missing_scan_pct
+    - assets_missing_logging_pct
+  F-04:
+    name: Finding to Remediation, Exception, or Residual Risk
+    primary_owner: Risk Pillar
+    supporting_owners:
+    - Engineering Pillar
+    - Governance Pillar
+    triggers:
+    - vulnerability_discovered
+    - adversarial_validation_result
+    - threat_intel_match
+    - third_party_risk
+    - incident_follow_on
+    - audit_finding
+    - architecture_review_deferred
+    primary_record: Finding Record
+    workflow_steps:
+    - step: 1
+      actor: Risk Pillar
+      action: Create Finding Record and triage
+    - step: 2
+      actor: Risk Pillar
+      action: Identify exposure path and treatment options
+    - step: 3
+      actor: Engineering Pillar
+      action: Assess technical feasibility
+    - step: 4
+      actor: Governance Pillar
+      action: Determine exception/acceptance need
+    - step: 5
+      actor: Engineering Pillar
+      action: Execute remediation or compensating control
+    - step: 6
+      actor: Risk Pillar
+      action: Validate closure or establish residual monitoring
+    - step: 7
+      actor: Governance Pillar
+      action: Update reporting; escalate patterns
+    treatment_paths:
+    - immediate_remediation
+    - planned_remediation
+    - redesign
+    - compensating_control
+    - exception_request
+    - risk_acceptance
+    - incident_response
+    evidence_required:
+    - triage_result
+    - engineering_treatment_plan
+    - remediation_evidence
+    - validation_result
+    - exception_or_acceptance_record
+    escalation:
+      critical_unassigned_5bd: escalate_to_ciso
+      repeated_exception_same_family: create_control_change_record
+  F-05:
+    name: Change and Release Security Routing
+    primary_owner: Engineering Pillar
+    supporting_owners:
+    - Risk Pillar
+    - Governance Pillar
+    triggers:
+    - normal_change
+    - major_change
+    - emergency_change
+    - release_candidate
+    - prod_config_change
+    - identity_model_change
+    - encryption_key_change
+    - new_external_dependency
+    primary_record: Change Record
+    workflow_steps:
+    - step: 1
+      actor: Engineering Pillar
+      action: Classify change; open Change Record
+    - step: 2
+      actor: Engineering Pillar
+      action: Complete Security Impact Analysis
+    - step: 3
+      actor: Risk Pillar
+      action: Review if risk-significant
+    - step: 4
+      actor: Governance Pillar
+      action: Apply conformance and evidence requirements
+    - step: 5
+      actor: Engineering Pillar
+      action: Execute change
+    - step: 6
+      actor: Engineering Pillar
+      action: Perform control continuity checks
+    - step: 7
+      actor: Governance Pillar
+      action: Verify evidence; close or reopen
+    risk_significant_criteria:
+    - internet_exposure_changed
+    - privileged_access_changed
+    - logging_impacted
+    - backup_recovery_changed
+    - encryption_key_changed
+    - third_party_added
+    - regulated_asset_impacted
+    - emergency_bypass_used
+    evidence_required:
+    - security_impact_analysis
+    - test_evidence
+    - control_continuity_result
+    - linked_risk_or_exception
+  F-06:
+    name: Incident to Recovery to Standards Feedback
+    primary_owner: Risk Pillar
+    supporting_owners:
+    - Engineering Pillar
+    - Governance Pillar
+    - CISO
+    triggers:
+    - alert_validated_incident
+    - material_security_event
+    - third_party_incident_internal_impact
+    - active_exploitation
+    - regulatory_notifiable_event
+    primary_record: Incident Record
+    workflow_steps:
+    - step: 1
+      actor: Risk Pillar
+      action: Validate and classify incident
+    - step: 2
+      actor: CISO
+      action: Assign or confirm Incident Commander
+    - step: 3
+      actor: Engineering Pillar
+      action: Execute containment, eradication, recovery
+    - step: 4
+      actor: Governance Pillar
+      action: Manage notifications, evidence, reporting
+    - step: 5
+      actor: Risk Pillar
+      action: Complete scope analysis and root cause
+    - step: 6
+      actor: Governance Pillar
+      action: Open lessons-learned and feedback record
+    - step: 7
+      actor: Engineering Pillar
+      action: Implement corrective actions
+    - step: 8
+      actor: Governance Pillar
+      action: Determine standards/procedure/metrics updates
+    mandatory_post_incident_outputs:
+    - root_cause_class
+    - control_failure_class
+    - standards_change_decision
+    - metrics_update_decision
+    - corrective_action_owner
+    - review_due_date
+    evidence_required:
+    - incident_timeline
+    - recovery_action_log
+    - investigation_summary
+    - notification_package
+    - improvement_record
+  F-07:
+    name: Metrics, Oversight, and Improvement Routing
+    primary_owner: Governance Pillar
+    supporting_owners:
+    - Risk Pillar
+    - Engineering Pillar
+    - CISO
+    triggers:
+    - monthly_reporting
+    - quarterly_reporting
+    - metric_threshold_breach
+    - repeated_missed_sla
+    - maturity_assessment
+    - board_request
+    - repeated_control_failure
+    primary_record: Reporting Metric Record
+    workflow_steps:
+    - step: 1
+      actor: Governance Pillar
+      action: Collect metrics per dictionary
+    - step: 2
+      actor: Risk Pillar
+      action: Supply exposure metrics
+    - step: 3
+      actor: Engineering Pillar
+      action: Supply implementation metrics
+    - step: 4
+      actor: Governance Pillar
+      action: Evaluate thresholds and trends
+    - step: 5
+      actor: Governance Pillar
+      action: Assign action type for outliers
+    - step: 6
+      actor: CISO
+      action: Review material outliers
+    - step: 7
+      actor: Governance Pillar
+      action: Publish report
+    allowed_action_types:
+    - engineering_action
+    - risk_escalation
+    - governance_standards_review
+    - exception_review
+    - no_action_with_rationale
+    baseline_metrics:
+    - new_assets_fully_covered_sla_pct
+    - pre_production_findings_closed_before_go_live_pct
+    - post_production_findings_assigned_5bd_pct
+    - exceptions_with_active_compensating_controls_pct
+    - median_discovery_to_validated_closure
+    - incidents_resulting_in_standards_update_pct
+    - board_metrics_backed_by_direct_evidence_pct
