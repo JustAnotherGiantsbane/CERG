@@ -432,7 +432,7 @@ When remediation is not feasible, risk acceptance requires: a written risk state
 
 ### 10.5 Adversarial Validation Final Report
 
-Every engagement produces a Final Report — the authoritative record of what was tested, found, and recommended.
+Every engagement produces a Final Report - the authoritative record of what was tested, found, and recommended.
 
 #### Required Sections
 
