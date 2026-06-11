@@ -9,7 +9,7 @@
 |---|---|
 | **Document ID** | CERG-PRC-TI-001 |
 | **Version** | 1.1 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -117,7 +117,7 @@ Every actionable item records:
 
 ---
 
-### 4.5 Analysis Methodology
+### 4.4 Analysis Methodology
 
 Raw intelligence is analyzed before dissemination. The following frameworks and standards ensure consistent, defensible analysis.
 
@@ -156,7 +156,7 @@ The Threat Intelligence Analyst assesses both confidence in the analyzed intelli
 
 ---
 
-### 4.6 IOC Lifecycle Management
+### 4.5 IOC Lifecycle Management
 
 Indicators of Compromise (IOCs) have a lifecycle from ingestion through deployment to retirement.
 
@@ -399,7 +399,7 @@ When in doubt, the CISO and legal counsel review before sharing.
 
 ---
 
-### 10.5 Traffic Light Protocol (TLP) Handling
+### 10.6 Traffic Light Protocol (TLP) Handling
 
 CERG uses the Traffic Light Protocol (TLP) for all intelligence sharing with external partners, ISACs, and industry groups.
 
@@ -420,7 +420,7 @@ The Threat Intelligence Analyst ensures that intelligence received under a TLP d
 
 ---
 
-### 7.5 Consumer Feedback Loop
+### 10.7 Consumer Feedback Loop
 
 Intelligence products are assessed by the consumers who use them. This feedback loop drives continuous improvement in intelligence production.
 
@@ -632,7 +632,7 @@ Reviewer: [CISO]
 |---|---|
 | **Document ID** | CERG-PRC-TI-001 |
 | **Version** | 1.1 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-26 |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
