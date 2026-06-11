@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-STD-CR-001 |
 | **Version** | 1.21 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Platforms) |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -35,7 +35,7 @@
 9. [FIPS / FedRAMP / CUI Cryptography Checklist](#9-fips--fedramp--cui-cryptography-checklist)
 10. [Roles and Responsibilities](#10-roles-and-responsibilities)
 11. [Regulatory and Framework Alignment Summary](#11-regulatory-and-framework-alignment-summary)
-12. [Document Control](#12-document-control)
+11. [Document Control](#11-document-control)
 
 ---
 
@@ -324,7 +324,7 @@ The checklist below is the minimum for any system in CUI scope, FedRAMP Moderate
 | **Procurement / TPRM** | Includes cryptographic conformance in vendor assessments; flags vendor advisories that affect cryptographic posture. |
 
 ---
-## 12. Document Control
+## 11. Document Control
 
 | | |
 |---|---|
