@@ -144,7 +144,7 @@ Not every control applies equally to every system. CERG's tailoring process allo
 
 | Tailoring Action | Definition | Approval Required |
 |---|---|---|
-| **Compensating Control** | An alternative control that meets the intent of the baseline control when the standard control cannot be implemented (common in OT environments) | Risk assessment + Risk Manager approval |
+| **Compensating Control** | An alternative control that meets the intent of the baseline control when the standard control cannot be implemented (common in OT environments) | Risk assessment + Risk Pillar Leader approval |
 | **Control Enhancement** | Additional control implementation above baseline, based on threat intelligence or risk assessment findings | Engineering + Governance alignment |
 | **Exception / Deviation** | Documented acknowledgment that a control cannot be satisfied; requires compensating controls and risk acceptance | Per the canonical Risk Acceptance Authority table in [§9.4](#94-risk-acceptance-authority) |
 
