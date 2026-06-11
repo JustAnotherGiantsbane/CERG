@@ -9,7 +9,7 @@
 |---|---|
 | **Document ID** | CERG-PRC-TM-001 |
 | **Version** | 1.0 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -84,7 +84,7 @@ A project below these thresholds may still receive a lightweight threat model at
 
 ---
 
-### 3.5 Legacy and Brownfield Systems
+### 3.1 Legacy and Brownfield Systems
 
 The triggers in Section 3.1 focus on new systems and material changes. For existing (brownfield) systems that have never been threat-modeled, the following prioritization framework applies.
 
@@ -127,7 +127,7 @@ The Threat Intelligence Analyst and the project team provide inputs before the s
 
 ---
 
-### 4.5 Threat Actor Identification
+### 4.1 Threat Actor Identification
 
 The abuse-case format includes a threat actor field. The following framework guides consistent actor identification.
 
@@ -213,7 +213,7 @@ Findings are written as control-relevant statements, not vague concerns. A good 
 
 ---
 
-### 5.6 Structured Threat Classification (STRIDE)
+### 5.7 Structured Threat Classification (STRIDE)
 
 STRIDE is the default threat classification framework for all CERG threat models. During abuse-case brainstorming (Section 5.3), the facilitator uses STRIDE categories as prompts to ensure comprehensive coverage.
 
@@ -261,7 +261,7 @@ When an AI component is in scope, the threat model additionally:
 - Assesses the model supply chain: pre-trained weights, fine-tuning datasets, model-serving infrastructure
 - References [CERG-STD-AI-001] for detailed control requirements for each abuse case category
 
-### 5.7 Facilitation Guide
+### 5.8 Facilitation Guide
 
 #### Pre-Session Preparation
 
@@ -368,7 +368,7 @@ A five-person team still performs all four depths. One person may hold multiple 
 
 ---
 
-### 9.5 Quality Assurance
+### 9.1 Quality Assurance
 
 The Risk Pillar Leader is accountable for threat model quality. The following process ensures consistency and completeness.
 
@@ -522,7 +522,7 @@ THREAT MODEL - TM-YYYY-NNNN
 |---|---|
 | **Document ID** | CERG-PRC-TM-001 |
 | **Version** | 1.0 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
