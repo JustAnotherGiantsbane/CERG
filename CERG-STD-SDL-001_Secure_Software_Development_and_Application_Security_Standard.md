@@ -76,7 +76,7 @@ Secure development is not a phase bolted onto delivery. Security activity is def
 
 | **Phase** | **Security Activity** | **Primary Owner** |
 |---|---|---|
-| Requirements | Security and abuse-case requirements captured; data classification per [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) (Planned, V1.x) identified. | Application Security Engineer |
+| Requirements | Security and abuse-case requirements captured; data classification per [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) identified. | Application Security Engineer |
 | Design | Threat modeling; architecture review intake per [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). | Application Security Engineer |
 | Implementation | Secure coding practice; SAST and SCA in the developer loop; secrets scanning. | Engineering Pillar Leader |
 | Verification | DAST; code review gate; pre-production review per [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). | Pre-production Reviewer |
