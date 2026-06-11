@@ -255,48 +255,48 @@ Roles are not locked into a single grade. A "Threat Intelligence Analyst" can be
 
 ### 7.1 Executive
 
-| Canonical Role | Track | Grade Range | Terminal Grade | Notes |
-|---|---|---|---|---|
-| Chief Information Security Officer (CISO) | Executive | Above grade structure | N/A | Reports to CEO/board. Not mapped to the CERG grade framework. |
-| Executive Sponsor | Business | N/A | N/A | Business-side role. Not a CERG employee. |
+| Canonical Role | Job Family | Track | Grade Range | Terminal Grade | NICE Work Role | Notes |
+|---|---|---|---|---|---|---|
+| Chief Information Security Officer (CISO) | JF-EXEC | Executive | Above grade structure | N/A | Executive Cyber Leader (OG-WRL-001) | Reports to CEO/board. Not mapped to the CERG grade framework. |
+| Executive Sponsor | JF-EXEC | Business | N/A | N/A | N/A — Business-side role | Business-side role. Not a CERG employee. |
 
 ### 7.2 Engineering Pillar
 
-| Canonical Role | Track | Grade Range | Terminal Grade | Notes |
-|---|---|---|---|---|
-| Engineering Pillar Leader | Management | M4 (Director) | M4 | Full pillar accountability. Reports to CISO. |
-| Cloud Security Engineer | SME | S1-S4 | S4 | May specialize further (AWS, Azure, SaaS). |
-| Identity Engineer | SME | S1-S4 | S4 | May specialize in IGA, PAM, or federation. |
-| OT Security Engineer | SME | S2-S4 | S4 | Requires OT/ICS experience. Rarely filled below S2. |
-| Application Security Engineer | SME | S1-S4 | S4 | May specialize in SAST/DAST tooling or secure code review. |
-| Endpoint Engineer | SME | S1-S3 | S3 | Broader scope at S4 would typically transition to Cloud Security Engineer or a cross-domain Advisor role. |
-| Cryptography Engineer | SME | S2-S4 | S4 | Requires cryptography expertise. Rarely filled below S2. |
-| Pre-production Reviewer | SME (rotated) | S2-S4 | N/A | A function, not a permanent role. Rotated among qualified Engineers. |
+| Canonical Role | Job Family | Track | Grade Range | Terminal Grade | NICE Work Role | Notes |
+|---|---|---|---|---|---|---|
+| Engineering Pillar Leader | JF-SECENG | Management | M4 (Director) | M4 | Exec Cyber Leader / Security Architect (OG-WRL-001 / SP-ARC-001) | Full pillar accountability. Reports to CISO. |
+| Cloud Security Engineer | JF-SECENG | SME | S1-S4 | S4 | Security Architect (SP-ARC-001) | May specialize further (AWS, Azure, SaaS). |
+| Identity Engineer | JF-SECENG | SME | S1-S4 | S4 | Systems Security Analyst (OM-ANA-001) | May specialize in IGA, PAM, or federation. |
+| OT Security Engineer | JF-SECENG | SME | S2-S4 | S4 | Security Architect (SP-ARC-001) | Requires OT/ICS experience. Rarely filled below S2. |
+| Application Security Engineer | JF-SECENG | SME | S1-S4 | S4 | Secure Software Assessor (SP-DEV-001) | May specialize in SAST/DAST tooling or secure code review. |
+| Endpoint Engineer | JF-SECENG | SME | S1-S3 | S3 | Systems Security Analyst (OM-ANA-001) | Broader scope at S4 would typically transition to Cloud Security Engineer or a cross-domain Advisor role. |
+| Cryptography Engineer | JF-SECENG | SME | S2-S4 | S4 | Security Architect (SP-ARC-001) | Requires cryptography expertise. Rarely filled below S2. |
+| Pre-production Reviewer | JF-SECENG | SME (rotated) | S2-S4 | N/A | Security Control Assessor (OV-SCA-001) | A function, not a permanent role. Rotated among qualified Engineers. |
 
 ### 7.3 Risk Pillar
 
-| Canonical Role | Track | Grade Range | Terminal Grade | Notes |
-|---|---|---|---|---|
-| Risk Pillar Leader | Management | M4 (Director) | M4 | Full pillar accountability. Reports to CISO. |
-| Vulnerability Management Lead | Management | M1-M3 | M3 | Leads VM operations. In a small team, may be an SME at S3-S4. |
-| Adversarial Testing Lead | Management | M1-M3 | M3 | Leads pen test, red team, purple team. In a small team, may be an SME at S3-S4. |
-| Threat Intelligence Analyst | SME | S1-S4 | S4 | May specialize in geopolitical, criminal, or ICS threat actors. |
-| Vendor Risk Analyst | SME | S1-S4 | S4 | May specialize in SaaS, critical suppliers, or supply chain. |
-| OT Risk Analyst | SME | S2-S4 | S4 | Requires OT/ICS risk assessment experience. |
-| Identity Risk Analyst | SME | S1-S4 | S4 | Requires UEBA, identity threat detection expertise. |
-| Detection Engineer | SME | S1-S4 | S4 | Detection content authoring and tuning. |
+| Canonical Role | Job Family | Track | Grade Range | Terminal Grade | NICE Work Role | Notes |
+|---|---|---|---|---|---|---|
+| Risk Pillar Leader | JF-RISKOPS | Management | M4 (Director) | M4 | Exec Cyber Leader / Vuln Assessment Analyst (OG-WRL-001 / PR-VAM-001) | Full pillar accountability. Reports to CISO. |
+| Vulnerability Management Lead | JF-RISKOPS | Management | M1-M3 | M3 | Vulnerability Assessment Analyst (PR-VAM-001) | Leads VM operations. In a small team, may be an SME at S3-S4. |
+| Adversarial Testing Lead | JF-RISKOPS | Management | M1-M3 | M3 | Vulnerability Assessment Analyst (PR-VAM-001) | Leads pen test, red team, purple team. In a small team, may be an SME at S3-S4. |
+| Threat Intelligence Analyst | JF-RISKOPS | SME | S1-S4 | S4 | Threat/Warning Analyst (AN-TWA-001) | May specialize in geopolitical, criminal, or ICS threat actors. |
+| Vendor Risk Analyst | JF-RISKOPS | SME | S1-S4 | S4 | Security Control Assessor (OV-SCA-001) | May specialize in SaaS, critical suppliers, or supply chain. |
+| OT Risk Analyst | JF-RISKOPS | SME | S2-S4 | S4 | Threat/Warning Analyst (AN-TWA-001) | Requires OT/ICS risk assessment experience. |
+| Identity Risk Analyst | JF-RISKOPS | SME | S1-S4 | S4 | Cyber Defense Analyst (PR-CDA-001) | Requires UEBA, identity threat detection expertise. |
+| Detection Engineer | JF-RISKOPS | SME | S1-S4 | S4 | Cyber Defense Analyst (PR-CDA-001) | Detection content authoring and tuning. |
 
 ### 7.4 Governance Pillar
 
-| Canonical Role | Track | Grade Range | Terminal Grade | Notes |
-|---|---|---|---|---|
-| Governance Pillar Leader | Management | M4 (Director) | M4 | Full pillar accountability. Reports to CISO. |
-| NERC-CIP Compliance Manager | Management or SME | M1-M3 or S3-S4 | M3 / S4 | In a large org, leads a compliance team (M track). In a small org, an expert IC (SME track). |
-| CMMC / Federal Compliance Manager | Management or SME | M1-M3 or S3-S4 | M3 / S4 | Same dual-track pattern as NERC-CIP. |
-| SOX ITGC Lead | Management or SME | M1-M2 or S3-S4 | M2 / S4 | Typically an IC role except in heavily regulated orgs. |
-| Policy & Standards Manager | Management or SME | M1-M2 or S3-S4 | M2 / S4 | Owns the document library. May lead a small team in large orgs. |
-| Risk Register Owner | SME or Management | S2-S4 or M1 | S4 / M1 | Curates the risk register. Management track only if leading a team of risk analysts. |
-| Evidence Librarian | SME | S1-S3 | S3 | A specialized IC role. At S4, transitions to a broader Governance Advisor role. |
+| Canonical Role | Job Family | Track | Grade Range | Terminal Grade | NICE Work Role | Notes |
+|---|---|---|---|---|---|---|
+| Governance Pillar Leader | JF-GOVCOMP | Management | M4 (Director) | M4 | Exec Cyber Leader / Security Control Assessor (OG-WRL-001 / OV-SCA-001) | Full pillar accountability. Reports to CISO. |
+| NERC-CIP Compliance Manager | JF-GOVCOMP | Management or SME | M1-M3 or S3-S4 | M3 / S4 | Security Control Assessor (OV-SCA-001) | In a large org, leads a compliance team (M track). In a small org, an expert IC (SME track). |
+| CMMC / Federal Compliance Manager | JF-GOVCOMP | Management or SME | M1-M3 or S3-S4 | M3 / S4 | Security Control Assessor (OV-SCA-001) | Same dual-track pattern as NERC-CIP. |
+| SOX ITGC Lead | JF-GOVCOMP | Management or SME | M1-M2 or S3-S4 | M2 / S4 | Security Control Assessor (OV-SCA-001) | Typically an IC role except in heavily regulated orgs. |
+| Policy & Standards Manager | JF-GOVCOMP | Management or SME | M1-M2 or S3-S4 | M2 / S4 | Cyber Policy and Strategy Planner (OV-PSP-001) | Owns the document library. May lead a small team in large orgs. |
+| Risk Register Owner | JF-GOVCOMP | SME or Management | S2-S4 or M1 | S4 / M1 | Information Systems Security Manager (OV-ISSN-001) | Curates the risk register. Management track only if leading a team of risk analysts. |
+| Evidence Librarian | JF-GOVCOMP | SME | S1-S3 | S3 | Security Control Assessor (OV-SCA-001) | A specialized IC role. At S4, transitions to a broader Governance Advisor role. |
 
 ### 7.5 Reading the Mapping
 
@@ -352,7 +352,7 @@ Movement between CERG and the adjacent teams (Security Awareness, Incident Respo
 ### 9.1 Span-of-Control Guidelines
 
 | Manager Grade | Minimum Span | Optimal Span | Maximum Span | Notes |
-|---|---|---|---|---|
+|---|---|---|---|---|---|---|
 | Manager (M1) | 3 | 5-7 | 8 | Below 3, the role may not justify full-time management. Above 8, 1:1 frequency and quality degrade. |
 | Senior Manager (M2) | 8 (total) | 12-16 (total) | 20 | Counts all reports, direct and indirect. A Senior Manager with 3 Managers each carrying 5 ICs is at 18 and well within range. |
 | Principal Manager (M3) | 15 (total) | 25-35 (total) | 40 | At this scale, the Principal Manager's direct reports should be primarily M2s and senior ICs. |
