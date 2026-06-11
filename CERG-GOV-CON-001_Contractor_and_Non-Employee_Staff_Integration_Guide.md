@@ -9,7 +9,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-CON-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -302,7 +302,7 @@ An engagement that is renewed more than twice should trigger a review of whether
 |---|---|
 | **Document ID** | CERG-GOV-CON-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-27 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |

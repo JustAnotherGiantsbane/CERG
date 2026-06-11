@@ -9,7 +9,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-CEF-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -285,7 +285,7 @@ To substantiate an Adaptive score in a domain, the assessor should expect to see
 |---|---|
 | **Document ID** | CERG-GOV-CEF-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-26 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |

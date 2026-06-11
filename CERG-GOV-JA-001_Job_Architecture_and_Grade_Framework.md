@@ -9,7 +9,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-JA-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -440,7 +440,7 @@ The grade title is separate. An organization may call an S3 Cloud Security Engin
 |---|---|
 | **Document ID** | CERG-GOV-JA-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-27 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |

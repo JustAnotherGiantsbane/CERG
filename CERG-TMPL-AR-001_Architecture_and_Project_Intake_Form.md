@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-TMPL-AR-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
 | **Parent Document** | [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) - Architecture Review and Project Intake Procedure |
@@ -122,7 +122,7 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 |---|---|
 | **Document ID** | CERG-TMPL-AR-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |

@@ -15,7 +15,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-FRM-001 |
 | **Version** | 1.21 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -530,7 +530,7 @@ An organization operating at Adaptive maturity will demonstrate these observable
 |---|---|
 | **Document ID** | CERG-GOV-FRM-001 |
 | **Version** | 1.21 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | CISO |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |

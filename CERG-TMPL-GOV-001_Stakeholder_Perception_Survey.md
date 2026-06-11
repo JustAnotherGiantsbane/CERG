@@ -9,7 +9,7 @@
 |---|---|
 | **Document ID** | CERG-TMPL-GOV-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -178,7 +178,7 @@ When a perception score decline or an open-ended theme triggers a program change
 |---|---|
 | **Document ID** | CERG-TMPL-GOV-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-26 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |

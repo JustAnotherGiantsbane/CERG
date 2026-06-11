@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-TMPL-TPRM-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Vendor Risk Analyst |
 | **Parent Document** | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) - Third-Party and Supply Chain Risk Procedure |
@@ -111,7 +111,7 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 |---|---|
 | **Document ID** | CERG-TMPL-TPRM-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | Vendor Risk Analyst |

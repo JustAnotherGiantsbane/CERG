@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-TMPL-AUD-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Evidence Librarian |
 | **Parent Document** | [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) - Audit and Evidence Management Procedure |
@@ -109,7 +109,7 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 |---|---|
 | **Document ID** | CERG-TMPL-AUD-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | Evidence Librarian |

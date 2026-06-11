@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-TMPL-RM-002 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |
 | **Parent Document** | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) - Risk Register and Exception Process |
@@ -120,7 +120,7 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 |---|---|
 | **Document ID** | CERG-TMPL-RM-002 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |

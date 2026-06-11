@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
 | **Version** | 1.22 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |

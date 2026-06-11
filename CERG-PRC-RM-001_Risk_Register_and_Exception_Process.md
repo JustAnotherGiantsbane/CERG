@@ -9,7 +9,7 @@
 |---|---|
 | **Document ID** | CERG-PRC-RM-001 |
 | **Version** | 1.0 DRAFT |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |

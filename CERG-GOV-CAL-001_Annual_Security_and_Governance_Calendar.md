@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-CAL-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -219,7 +219,7 @@ Calendar maintenance includes:
 |---|---|
 | **Document ID** | CERG-GOV-CAL-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |

@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
 | **Version** | 1.30 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -344,7 +344,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
 | **Version** | 1.30 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-27 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |

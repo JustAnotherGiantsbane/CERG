@@ -9,7 +9,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-ONB-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -419,7 +419,7 @@ Aggregated feedback is reviewed annually by the Governance Pillar Leader as part
 |---|---|
 | **Document ID** | CERG-GOV-ONB-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-27 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |

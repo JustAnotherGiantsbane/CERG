@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-MTR-001 |
 | **Version** | 1.3 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Reporting) |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |

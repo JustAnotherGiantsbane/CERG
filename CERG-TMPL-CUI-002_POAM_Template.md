@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-TMPL-CUI-002 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | CMMC / Federal Compliance Manager |
 | **Parent Plan** | [`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) - CUI / CMMC Operational Package |
@@ -157,7 +157,7 @@ POA&M review outputs:
 |---|---|
 | **Document ID** | CERG-TMPL-CUI-002 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | CMMC / Federal Compliance Manager |

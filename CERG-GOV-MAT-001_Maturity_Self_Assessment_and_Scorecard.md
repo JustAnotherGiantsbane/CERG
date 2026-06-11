@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-MAT-001 |
 | **Version** | 1.1 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -301,7 +301,7 @@ The annual assessment remains the authoritative tier re-score. The quarterly che
 |---|---|
 | **Document ID** | CERG-GOV-MAT-001 |
 | **Version** | 1.1 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-26 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |

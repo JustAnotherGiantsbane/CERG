@@ -6,7 +6,7 @@
 | **Document ID**    | CERG-POL-001                                             |
 | ------------------ | -------------------------------------------------------- |
 | **Version**        | 1.21 |
-| **Status**         | Published |
+| **Status**         | Approved |
 | **Effective Date** | 2026-05-01                                               |
 | **Classification** | Public |
 | **Owner**          | Chief Information Security Officer                       |
@@ -454,7 +454,7 @@ The authoritative inventory, IDs, owners, status, and deferred / planned artifac
 |---|---|
 | **Document ID** | CERG-POL-001 |
 | **Version** | 1.21 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
 | **Effective Date** | 2026-05-01 |

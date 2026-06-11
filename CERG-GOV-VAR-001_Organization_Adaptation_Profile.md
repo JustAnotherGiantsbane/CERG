@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-VAR-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -248,7 +248,7 @@ When CERG publishes an update upstream, the adopter pulls the new source, update
 |---|---|
 | **Document ID** | CERG-GOV-VAR-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-21 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |

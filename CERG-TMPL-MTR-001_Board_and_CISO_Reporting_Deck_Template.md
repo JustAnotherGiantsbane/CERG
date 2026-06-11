@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-TMPL-MTR-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Parent Document** | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) - Metrics Dashboard and Reporting |
@@ -106,7 +106,7 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 |---|---|
 | **Document ID** | CERG-TMPL-MTR-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |

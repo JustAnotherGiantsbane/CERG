@@ -9,7 +9,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-IMPREG-001 |
 | **Version** | 1.0 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -261,7 +261,7 @@ The improvement register is archived annually. The archived register becomes an 
 |---|---|
 | **Document ID** | CERG-GOV-IMPREG-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-26 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |

@@ -9,7 +9,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-WFP-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -462,7 +462,7 @@ A team of predominantly S3-S4 practitioners handles more throughput per person t
 |---|---|
 | **Document ID** | CERG-GOV-WFP-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-27 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |

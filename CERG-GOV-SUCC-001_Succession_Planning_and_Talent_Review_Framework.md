@@ -9,7 +9,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-SUCC-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Confidential - CISO and Pillar Leaders |
 | **Owner** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -300,7 +300,7 @@ Succession information is communicated on a need-to-know basis:
 |---|---|
 | **Document ID** | CERG-GOV-SUCC-001 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-27 |
 | **Classification** | Confidential - CISO and Pillar Leaders |
 | **Owner** | CISO |
