@@ -8,7 +8,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-CMX-001 |
 | **Version** | 1.21 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -45,7 +45,7 @@
 22. [Define and enforce a compliance calendar: no surprises at audit time](#22-define-and-enforce-a-compliance-calendar-no-surprises-at-audit-time)
 23. [Quick Reference: Pillar Summary](#quick-reference-pillar-summary)
 24. [Key Consolidation Opportunities](#key-consolidation-opportunities)
-25. [Document Control](#document-control)
+23. [Document Control](#document-control)
 
 ## 1. Know what you own: maintain an authoritative asset inventory
 
@@ -391,13 +391,13 @@ These control areas produce evidence satisfying four or more frameworks simultan
 
 ---
 
-## 25. Document Control
+## 23. Document Control
 
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CMX-001 |
 | **Version** | 1.21 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
