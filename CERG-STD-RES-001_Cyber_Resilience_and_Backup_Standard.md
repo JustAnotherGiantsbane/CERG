@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-STD-RES-001 |
 | **Version** | 1.21 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Resilience) |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -36,7 +36,7 @@
 10. [Roles and BCP Interface](#10-roles-and-bcp-interface)
 11. [Recovery Plan Template](#11-recovery-plan-template)
 12. [Regulatory and Framework Alignment Summary](#12-regulatory-and-framework-alignment-summary)
-13. [Document Control](#13-document-control)
+12. [Document Control](#12-document-control)
 
 ---
 
@@ -319,7 +319,7 @@ RECOVERY PLAN - <System / Cluster Name>           PLAN-RES-YYYY-NNNN
 A populated example is maintained in the resilience program library; the template is reused without modification.
 
 ---
-## 13. Document Control
+## 12. Document Control
 
 | | |
 |---|---|
