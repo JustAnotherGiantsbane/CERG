@@ -95,7 +95,7 @@ The triggers in Section 3.1 focus on new systems and material changes. For exist
 | Priority 1 | Systems handling CUI, BCSI, or SOX-relevant data; BES Cyber Systems; systems with Critical or High open risk register entries; internet-facing Tier 1 systems | Within 6 months |
 | Priority 2 | Internal Tier 1 or Tier 2 systems with Medium risk entries; systems supporting customer-facing services | Within 12 months |
 | Priority 3 | Tier 2 or Tier 3 systems with Low risk entries; internal-only non-production systems | Within 24 months |
-| Out of Scope | Tier 4+ systems; systems scheduled for decommissioning within 12 months; pure SaaS services where the vendor provides an equivalent threat model | — |
+| Out of Scope | Tier 4+ systems; systems scheduled for decommissioning within 12 months; pure SaaS services where the vendor provides an equivalent threat model | - |
 
 #### Lightweight Threat Model for Legacy Systems
 
@@ -136,8 +136,8 @@ The abuse-case format includes a threat actor field. The following framework gui
 | Nation-state | State-sponsored actors with advanced capabilities | Advanced (custom tools, zero-days) | Espionage, disruption, strategic advantage |
 | Cybercriminal | Financially motivated organized groups | Intermediate to Advanced | Financial gain, data theft |
 | Hacktivist | Ideologically motivated individuals or groups | Low to Intermediate | Publicity, political statement |
-| Insider — Disgruntled | Employee/contractor with authorized access, malicious intent | Variable (access-dependent) | Revenge, financial gain |
-| Insider — Negligent | Employee/contractor who unintentionally causes harm | Low (accidental) | None (error, negligence) |
+| Insider - Disgruntled | Employee/contractor with authorized access, malicious intent | Variable (access-dependent) | Revenge, financial gain |
+| Insider - Negligent | Employee/contractor who unintentionally causes harm | Low (accidental) | None (error, negligence) |
 | Competitor | Business competitor seeking advantage | Low to Intermediate | IP theft, market advantage |
 | Script Kiddie | Low-skill actor using publicly available tools | Low | Curiosity, notoriety |
 
@@ -463,7 +463,7 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CE
 ## Appendix A: Threat Model Template
 
 ```
-THREAT MODEL — TM-YYYY-NNNN
+THREAT MODEL - TM-YYYY-NNNN
 
 1. SYSTEM OVERVIEW
    System Name:
@@ -480,10 +480,10 @@ THREAT MODEL — TM-YYYY-NNNN
      - [Boundary Name]: [between X and Y]
 
 3. DATA FLOW DIAGRAM
-   [Placeholder — reference to diagram artifact]
+   [Placeholder - reference to diagram artifact]
 
 4. TRUST BOUNDARY DIAGRAM
-   [Placeholder — reference to diagram artifact]
+   [Placeholder - reference to diagram artifact]
 
 5. ASSET INVENTORY
    | Asset | Classification | Owner | Environment |
