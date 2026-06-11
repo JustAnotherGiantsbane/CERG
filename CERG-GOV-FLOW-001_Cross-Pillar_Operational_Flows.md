@@ -1,0 +1,799 @@
+| | |
+|---|---|
+| **Document ID** | CERG-GOV-FLOW-001 |
+| **Version** | 1.0 |
+| **Status** | Draft |
+| **Classification** | Internal |
+| **Owner** | Governance Pillar Leader |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Review Cycle** | Annual |
+| **Frameworks** | NIST CSF 2.0 |
+| **Regulations** | Cross-cutting |
+| **Environments** | All CERG-managed operations |
+
+---
+
+## Table of Contents
+
+1. [Operating Principles](#1-operating-principles)
+2. [Canonical Roles](#2-canonical-roles)
+3. [Authoritative Record Types](#3-authoritative-record-types)
+4. [Common Required Fields](#4-common-required-fields)
+5. [Default SLA Policy](#5-default-sla-policy)
+6. [Allowed Decision Classes](#6-allowed-decision-classes)
+7. [Shared State Models](#7-shared-state-models)
+8. [Flow F-01: Control Intent to Implementation](#8-flow-f-01--control-intent-to-implementation)
+9. [Flow F-02: Project Intake, Architecture Review, and Threat Modeling](#9-flow-f-02--project-intake-architecture-review-and-threat-modeling)
+10. [Flow F-03: Asset Registration and Coverage Validation](#10-flow-f-03--asset-registration-and-coverage-validation)
+11. [Flow F-04: Finding to Remediation, Exception, or Residual Risk](#11-flow-f-04--finding-to-remediation-exception-or-residual-risk)
+12. [Flow F-05: Change and Release Security Routing](#12-flow-f-05--change-and-release-security-routing)
+13. [Flow F-06: Incident to Recovery to Standards Feedback](#13-flow-f-06--incident-to-recovery-to-standards-feedback)
+14. [Flow F-07: Metrics, Oversight, and Improvement Routing](#14-flow-f-07--metrics-oversight-and-improvement-routing)
+15. [LLM Execution Directives](#15-llm-execution-directives)
+16. [Minimum Record Templates](#16-minimum-record-templates)
+17. [Recommended Implementation Sequence](#17-recommended-implementation-sequence)
+18. [Document Control](#18-document-control)
+
+---
+
+## 1. Operating Principles
+
+1. **One material event creates one primary record and one accountable owner.** CERG repeatedly emphasizes authoritative records and explicit ownership as the basis for mature execution.
+2. **Pre-production security work is Engineering-led unless explicitly escalated.** CERG positions Engineering as the embedded consulting and architecture-review function for projects before production.
+3. **Post-production findings are Risk-led unless they are active incident-response actions.** CERG assigns Risk responsibility for continuous exposure identification through vulnerability management, adversarial testing, vendor assessment, and monitoring.
+4. **Governance owns control intent, conformance scope, exception authority routing, evidence rules, and reporting.** CERG's governance layer includes the control system for the program: baseline, calendar, evidence, metrics, compliance mapping, and oversight artifacts.
+5. **No issue may remain in an undefined state.** Every issue must become one of: remediation, compensating control, exception, accepted residual risk, or incident action.
+6. **Evidence must be created during execution and linked to the primary record.** CERG's annual calendar and reporting model both assume evidence-producing activities generate or refresh evidence as part of the operating rhythm.
+7. **Missed review cadence, missing ownership, or missing evidence creates a finding or risk record.** The CERG annual calendar explicitly states that missed activities are tracked as program findings or risk-register entries.
+8. **Every major event must produce a standards/process/metrics feedback decision.** CERG's RMF, incident plan, maturity model, and metrics apparatus all imply that mature operation requires monitoring and response to feed continuous improvement.
+
+---
+
+## 2. Canonical Roles
+
+Use the following canonical role names consistently across all records and flows:
+
+- **Engineering Pillar**
+- **Risk Pillar**
+- **Governance Pillar**
+- **CISO**
+- **Business Owner**
+- **Asset Owner**
+- **Technical Owner**
+- **Risk Register Owner**
+- **Evidence Librarian**
+- **Incident Commander**
+- **Control Owner**
+
+---
+
+## 3. Authoritative Record Types
+
+Every material workflow must resolve to one primary system-of-record object:
+
+- **Project Intake Record**
+- **Architecture Review Record**
+- **Threat Model Record**
+- **Asset Record**
+- **Finding Record**
+- **Risk Record**
+- **Exception Record**
+- **Change Record**
+- **Incident Record**
+- **Evidence Record**
+- **Improvement Record**
+- **Control Change Record**
+- **Reporting Metric Record**
+
+---
+
+## 4. Common Required Fields
+
+Every authoritative record should contain the following minimum fields:
+
+- `record_id`
+- `source_event`
+- `current_state`
+- `accountable_role`
+- `supporting_roles`
+- `business_owner`
+- `technical_owner`
+- `in_scope_assets`
+- `data_classification`
+- `regulatory_scope`
+- `evidence_links`
+- `due_date`
+- `escalation_date`
+- `closure_criteria`
+- `feedback_destination`
+
+---
+
+## 5. Default SLA Policy
+
+| Activity | SLA |
+|----------|-----|
+| Triage due | 5 business days |
+| Assignment due | 5 business days |
+| Validation due | 5 business days |
+| Evidence link due | 3 business days |
+| Escalate if past due | Yes |
+
+---
+
+## 6. Allowed Decision Classes
+
+All workflows should terminate in one of the following decision classes:
+
+- **Remediate pre-production**
+- **Remediate post-production**
+- **Compensating control**
+- **Exception required**
+- **Risk acceptance required**
+- **Block release**
+- **Monitor only**
+- **Incident response**
+- **Standards update required**
+- **Metrics update required**
+
+---
+
+## 7. Shared State Models
+
+### 7.1 Project Security Review State Model
+
+Allowed states:
+
+- Intake open
+- Scope defined
+- Architecture review in progress
+- Threat model in progress
+- Remediation required pre-go-live
+- Approved for go-live
+- Approved with post-go-live risk
+- Blocked pending prerequisite
+- Closed
+
+### 7.2 Finding Lifecycle State Model
+
+Allowed states:
+
+- New
+- Triage
+- Assigned
+- Treatment planned
+- In engineering work
+- Exception review
+- Risk acceptance review
+- Validation pending
+- Residual monitoring
+- Closed
+
+### 7.3 Asset Coverage Lifecycle
+
+Allowed states:
+
+- Discovered
+- Registered
+- Owner confirmed
+- Classified
+- Control coverage pending
+- Fully covered
+- Coverage gap open
+- Decommissioned
+
+### 7.4 Incident Lifecycle
+
+Allowed states:
+
+- Detected
+- Validated
+- Classified
+- Containment active
+- Investigation active
+- Recovery active
+- Lessons learned pending
+- Corrective action open
+- Closed
+
+### 7.5 Control Change Lifecycle
+
+Allowed states:
+
+- Proposed
+- Approved for design
+- Implementation designed
+- Validation defined
+- Rollout in progress
+- Validation pending
+- Evidenced
+- Reported
+- Closed
+
+---
+
+## 8. Flow F-01 — Control Intent to Implementation
+
+### Purpose
+Convert governance-originated control intent into implementable technical change and risk-validated outcomes.
+
+### Primary Owner
+**Governance Pillar**
+
+### Supporting Owners
+- Engineering Pillar
+- Risk Pillar
+
+### Trigger Events
+- Policy changed
+- Standard changed
+- Control baseline changed
+- Material audit finding
+- Recurring incident pattern
+- Repeated exception in same control family
+- Regulatory requirement added
+- Board or CISO directive
+
+### Primary Record
+**Control Change Record**
+
+### Workflow
+1. Governance creates the **Control Change Record**.
+2. Governance defines **control intent and conformance scope**.
+3. Engineering produces the **implementation design**.
+4. Risk defines **validation criteria before rollout**.
+5. Governance approves the **evidence plan**.
+6. Engineering executes rollout and records implementation evidence.
+7. Risk validates effectiveness.
+8. Governance updates dashboard/reporting and closes or reopens the record.
+
+### Decision Logic
+- If validation is effective, close the record.
+- If validation is ineffective, reopen or create Engineering action.
+- If the control cannot be met as written or by deadline, route to exception workflow.
+
+### Evidence Required
+- Implementation design package
+- Validation plan
+- Control test or outcome evidence
+- Updated reporting metric record
+- Linked evidence record
+
+### SLA
+- Governance publishes package: 5 business days
+- Engineering design: 10 business days
+- Risk validation plan: 5 business days
+- Evidence link: 3 business days
+
+### Escalation
+- Missing Engineering design after SLA → escalate to CISO and create finding
+- Missing validation → do not allow closure; create risk record
+
+### Closure Criteria
+- Implementation completed
+- Risk validated
+- Evidence linked
+- Dashboard updated
+
+---
+
+## 9. Flow F-02 — Project Intake, Architecture Review, and Threat Modeling
+
+### Purpose
+Ensure that new systems and major changes enter production with known scope, required controls, and explicit security disposition.
+
+### Primary Owner
+**Engineering Pillar**
+
+### Supporting Owners
+- Risk Pillar
+- Governance Pillar
+
+### Trigger Events
+- New application
+- New service
+- Major change
+- New cloud or SaaS adoption
+- New integration
+- Internet-exposed component
+- Regulated-scope project
+- AI system introduction
+- IT/OT convergence change
+
+### Primary Record
+**Project Intake Record**
+
+### Workflow
+1. Engineering opens **Project Intake Record**.
+2. Engineering performs initial security scoping.
+3. Engineering performs **Architecture Review**.
+4. Engineering performs **Threat Model**.
+5. Governance issues **Conformance Scope Statement**.
+6. Risk participates if risk concentration threshold is met.
+7. Engineering classifies issues as pre-go-live or post-go-live.
+8. Engineering issues final security disposition.
+
+### Risk Concentration Thresholds
+Risk participation is required when one or more of the following are true:
+- Sensitive data present
+- Regulated scope present
+- Internet exposure present
+- High-risk third-party dependency present
+- Complex privileged path present
+- OT or safety impact present
+
+### Allowed Dispositions
+- Approved for go-live
+- Approved with pre-go-live remediation
+- Approved with post-go-live risk record
+- Blocked pending prerequisite
+
+### Mandatory Rules
+- Every identified issue must be classified as **pre-production remediation** or **post-production managed risk**, not both.
+- Any issue deferred beyond go-live must create a **Risk Record** and, where nonconformance exists, an **Exception Record candidate**.
+- No go-live proceeds without named business and technical owners.
+
+### Evidence Required
+- Architecture Review Record
+- Threat Model Record
+- Conformance Scope Statement
+- Production Handoff Security Summary
+
+### Escalation
+- Go-live requested while blocked → escalate to CISO
+- Missing ownership or scope → hold project and create finding
+
+---
+
+## 10. Flow F-03 — Asset Registration and Coverage Validation
+
+### Purpose
+Ensure every in-scope asset has ownership, classification, regulatory designation, and required control coverage.
+
+### Primary Owner
+**Engineering Pillar**
+
+### Supporting Owners
+- Risk Pillar
+- Governance Pillar
+
+### Trigger Events
+- Project approved for go-live
+- New asset discovered
+- Major asset change
+- Ownership change
+- Environment change
+- Regulatory scope change
+- Asset decommission request
+
+### Primary Record
+**Asset Record**
+
+### Workflow
+1. Engineering creates or updates **Asset Record**.
+2. Engineering confirms owner and classification.
+3. Risk validates scan coverage and exposure visibility.
+4. Governance maps asset to control and calendar obligations.
+5. Governance determines whether any coverage gap is a finding or risk.
+
+### Coverage Requirements
+- Owner assigned
+- Classification complete
+- Regulatory flag present if applicable
+- Scan coverage established if required
+- Logging source established if required
+- Backup assignment established if required
+- Access review population assigned if required
+
+### Evidence Required
+- Asset Record
+- Coverage validation result
+- Governance obligation map
+
+### Metrics Generated
+- Asset coverage completeness %
+- Assets missing owner %
+- Assets missing scan coverage %
+- Assets missing logging %
+
+---
+
+## 11. Flow F-04 — Finding to Remediation, Exception, or Residual Risk
+
+### Purpose
+Convert discovered exposure into a deterministic treatment path: remediation, compensating control, exception, formal risk acceptance, or incident handling.
+
+### Primary Owner
+**Risk Pillar**
+
+### Supporting Owners
+- Engineering Pillar
+- Governance Pillar
+
+### Trigger Events
+- Vulnerability discovered
+- Adversarial validation result
+- Threat intelligence match
+- Third-party risk result
+- Incident follow-on issue
+- Audit finding
+- Architecture review deferred issue
+
+### Primary Record
+**Finding Record**
+
+### Workflow
+1. Risk creates **Finding Record** and triages.
+2. Risk identifies exposure path and treatment options.
+3. Engineering assesses technical feasibility of treatment.
+4. Governance determines whether exception or acceptance process is required.
+5. Engineering executes remediation or compensating control if approved.
+6. Risk validates closure or establishes residual monitoring.
+7. Governance updates reporting and escalates recurring patterns.
+
+### Allowed Treatment Paths
+- Immediate remediation
+- Planned remediation
+- Redesign
+- Compensating control
+- Exception request
+- Formal risk acceptance
+- Incident response (if active exploitation exists)
+
+### Mandatory Rules
+- No finding may remain undefined beyond triage SLA.
+- Engineering may not close a finding unilaterally; Risk must validate.
+- Any control not met as written or on time routes to exception review.
+- Accepted residual risk requires named approver, rationale, review cadence, and expiration if applicable.
+
+### Evidence Required
+- Triage result
+- Engineering treatment plan
+- Remediation or compensating-control evidence
+- Validation result
+- Exception or risk-acceptance record if used
+
+### Escalation
+- Critical finding unassigned after 5 business days → escalate to CISO
+- Repeated exception in same control family → create Control Change Record
+
+---
+
+## 12. Flow F-05 — Change and Release Security Routing
+
+### Purpose
+Ensure that security-significant changes receive consistent cross-pillar handling.
+
+### Primary Owner
+**Engineering Pillar**
+
+### Supporting Owners
+- Risk Pillar
+- Governance Pillar
+
+### Trigger Events
+- Normal change requested
+- Major change requested
+- Emergency change requested
+- Release candidate created
+- Production configuration change
+- Identity model change
+- Encryption or key change
+- New external dependency
+
+### Primary Record
+**Change Record**
+
+### Workflow
+1. Engineering classifies the change and opens **Change Record**.
+2. Engineering completes **Security Impact Analysis**.
+3. Risk reviews if the change is risk-significant.
+4. Governance applies conformance and evidence requirements.
+5. Engineering executes the change.
+6. Engineering performs control continuity checks.
+7. Governance verifies evidence and closes or reopens the change.
+
+### Risk-Significant Change Criteria
+- Internet exposure changed
+- Privileged access changed
+- Logging coverage impacted
+- Backup or recovery path changed
+- Encryption or key handling changed
+- Third-party dependency added or materially modified
+- Regulated-scope asset impacted
+- Emergency bypass used
+
+### Mandatory Rules
+- Emergency security deviations require linked risk or exception review.
+- Change closure requires control continuity verification, not only service success.
+- Missing rollback strategy blocks major-change approval.
+
+### Evidence Required
+- Security Impact Analysis
+- Test evidence
+- Control continuity result
+- Linked risk or exception if applicable
+
+---
+
+## 13. Flow F-06 — Incident to Recovery to Standards Feedback
+
+### Purpose
+Handle incidents consistently across environments while forcing lessons learned into engineering controls, risk posture, and governance artifacts.
+
+### Primary Owner
+**Risk Pillar**
+
+### Supporting Owners
+- Engineering Pillar
+- Governance Pillar
+- CISO
+
+### Trigger Events
+- Alert validated as incident
+- Material security event declared
+- Third-party incident with internal impact
+- Active exploitation of known issue
+- Regulatory notifiable event
+
+### Primary Record
+**Incident Record**
+
+### Workflow
+1. Risk validates and classifies incident.
+2. CISO assigns or confirms Incident Commander.
+3. Engineering executes containment, eradication, and recovery changes.
+4. Governance manages notifications, evidence, and reporting obligations.
+5. Risk completes scope analysis and root cause assessment.
+6. Governance opens lesson-learned and feedback decision record.
+7. Engineering implements required corrective actions.
+8. Governance determines standards, procedure, and metrics updates.
+
+### Mandatory Post-Incident Outputs
+- Root cause class
+- Control failure class
+- Standards/procedure change decision
+- Metrics/KRI update decision
+- Corrective-action owner
+- Review due date
+
+### Mandatory Rules
+- Incident closure requires a lessons-learned decision, not only technical recovery.
+- If an incident exposes previously accepted risk, the acceptance rationale must be reviewed.
+- Recurring incident pattern in the same control family creates a Control Change Record.
+
+### Evidence Required
+- Incident timeline
+- Recovery action log
+- Investigation summary
+- Notification and evidence package
+- Improvement record
+
+---
+
+## 14. Flow F-07 — Metrics, Oversight, and Improvement Routing
+
+### Purpose
+Convert operational data into management action, improvement backlog, standards review, risk escalation, and board-grade reporting.
+
+### Primary Owner
+**Governance Pillar**
+
+### Supporting Owners
+- Risk Pillar
+- Engineering Pillar
+- CISO
+
+### Trigger Events
+- Monthly reporting cycle
+- Quarterly reporting cycle
+- Metric threshold breach
+- Repeated missed SLA
+- Maturity assessment run
+- Board or executive request
+- Repeated control failure pattern
+
+### Primary Record
+**Reporting Metric Record**
+
+### Workflow
+1. Governance collects metrics per canonical dictionary.
+2. Risk supplies exposure and residual-risk metrics.
+3. Engineering supplies implementation and quality metrics.
+4. Governance evaluates thresholds and trends.
+5. Governance assigns action type for each outlier.
+6. CISO reviews material outliers and escalations.
+7. Governance publishes monthly or quarterly report.
+
+### Allowed Action Types
+- Engineering action
+- Risk escalation
+- Governance standards review
+- Exception review
+- No action with rationale
+
+### Baseline Cross-Pillar Metrics
+- % of new assets fully covered within SLA
+- % of pre-production findings closed before go-live
+- % of post-production findings assigned within 5 business days
+- % of exceptions with active compensating controls
+- Median time from discovery to validated closure
+- % of incidents resulting in standards or procedure update
+- % of board metrics backed by direct evidence
+
+### Mandatory Rules
+- Every threshold breach must produce an action type or explicit no-action rationale.
+- Metrics without evidence links are not board-reportable.
+- Repeated outlier in same control family creates a Control Change Record or Improvement Record.
+
+---
+
+## 15. LLM Execution Directives
+
+These instructions tell an LLM how to execute the flows without ambiguity:
+
+1. **Always identify the primary record before taking action.** If no primary record exists, create it first.
+2. **Always assign exactly one accountable role.** Supporting roles may be many; accountability must be singular.
+3. **If an issue is pre-production, default owner is Engineering.** If post-production, default owner is Risk. If it concerns standards, exceptions, evidence, or reporting, include Governance.
+4. **Never close a finding based on implementation evidence alone.** Require validation from Risk.
+5. **Never treat control deviation informally.** If deadline or control intent cannot be met, route to an Exception Record.
+6. **If required owner, classification, or evidence is missing, mark the item blocked or gap-open and create a finding or risk as defined by the relevant flow.**
+7. **At closure of any major event, require a feedback destination:** standards, procedure, metric, backlog, risk register, or no-change-with-rationale.
+8. **If SLA breach occurs, escalate according to the flow; do not silently continue.**
+9. **Use canonical CERG role names and record names consistently.**
+10. **Prefer evidence generation during execution over retrospective evidence collection.**
+
+---
+
+## 16. Minimum Record Templates
+
+### 16.1 Finding Record
+
+Required fields:
+- Finding ID
+- Source
+- Severity
+- Exploitability
+- Affected assets
+- Business owner
+- Technical owner
+- Regulatory scope
+- Treatment class
+- Current state
+- Due date
+- Evidence links
+
+### 16.2 Exception Record
+
+Required fields:
+- Exception ID
+- Control ID
+- Affected asset
+- Rationale
+- Compensating controls
+- Residual risk
+- Approver
+- Expiration date
+- Monitoring cadence
+- Linked risk ID
+- Evidence links
+
+### 16.3 Risk Record
+
+Required fields:
+- Risk ID
+- Risk statement
+- Inherent risk
+- Residual risk
+- Owner
+- Treatment strategy
+- Review cadence
+- Linked findings
+- Linked exceptions
+- Status
+
+### 16.4 Asset Record
+
+Required fields:
+- Asset ID
+- Asset type
+- Owner
+- Business owner
+- Technical owner
+- Environment
+- Classification
+- Regulatory scope
+- Criticality
+- Scan coverage
+- Logging coverage
+- Backup assignment
+- Access review population
+- Status
+
+### 16.5 Incident Record
+
+Required fields:
+- Incident ID
+- Severity
+- Incident commander
+- Affected assets
+- Current state
+- Notification obligations
+- Containment actions
+- Investigation summary
+- Recovery actions
+- Lessons-learned decision
+- Corrective-action owner
+
+---
+
+## 17. Recommended Implementation Sequence
+
+### Phase 1
+Implement:
+- Global contract (§1-6)
+- Shared state models (§7)
+- Flow F-02 (Project Intake / Architecture Review / Threat Model)
+- Flow F-03 (Asset Registration / Coverage Validation)
+- Flow F-04 (Finding to Remediation / Exception / Risk)
+
+### Phase 2
+Implement:
+- Flow F-05 (Change and Release Security Routing)
+- Flow F-06 (Incident to Recovery to Standards Feedback)
+
+### Phase 3
+Implement:
+- Flow F-01 (Control Intent to Implementation)
+- Flow F-07 (Metrics, Oversight, and Improvement Routing)
+
+---
+
+## 18. Document Control
+
+| Field | Value |
+|---|---|
+| **Document ID** | CERG-GOV-FLOW-001 |
+| **Version** | 1.0 |
+| **Status** | Draft |
+| **Effective Date** | 2026-06-11 |
+| **Classification** | Internal |
+| **Owner** | Governance Pillar Leader |
+| **Approved By** | Pending |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Review Cycle** | Annual |
+| **Next Scheduled Review** | 2027-06-11 |
+| **Frameworks** | NIST CSF 2.0 |
+| **Regulations** | Cross-cutting |
+| **Environments** | All CERG-managed operations |
+
+### Revision History
+
+| **Version** | **Date** | **Author** | **Change Summary** |
+|---|---|---|---|
+| 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Seven cross-pillar operational flows, five shared state models, five minimum record templates, LLM execution directives, and recommended implementation sequence. |
+
+### Review Triggers
+
+- Change to the CERG Operating Model (OM-001)
+- Change to the Risk Management Framework (RMF-001)
+- Change to the Control Baseline (CB-001)
+- Material incident or audit finding that exposes a flow gap
+- Direction from the CISO
+
+Governance owns this document. The Governance Pillar Leader is responsible for initiating reviews, managing the revision cycle, and obtaining approval for all changes.
+
+### Related Documents
+
+| **Document** | **ID** | **Relationship** |
+|---|---|---|
+| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical roles and pillar structure |
+| Risk Management Framework | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk treatment, exception, and acceptance rules |
+| Unified Control Baseline | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control inventory and evidence standards |
+| Compliance Matrix | [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) | Regulatory and framework mapping |
+| Metrics and Reporting | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Metric definitions and reporting cadence |
+| Annual Calendar | [`CERG-GOV-CAL-001`](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md) | Operating rhythm and cadence |
+| Architecture Review Procedure | [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Project intake and architecture review process |
+| Risk Register and Exception Process | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Exception and risk acceptance workflow |
+| Incident Response Plan | [`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md) | Standing IR procedures |
