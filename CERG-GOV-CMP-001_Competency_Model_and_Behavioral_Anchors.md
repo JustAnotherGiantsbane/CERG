@@ -421,17 +421,50 @@ A promotion case addresses every competency domain. The standard is not "checks 
 ## 9. Mapping to NICE and Industry Frameworks
 
 ### 9.1 NIST NICE Workforce Framework (SP 800-181r1)
+### 9.1 NIST NICE Workforce Framework (SP 800-181r1)
 
-The NICE Framework defines cybersecurity work through Task, Knowledge, and Skill (TKS) statements organized into Work Roles. CERG roles map to NICE Work Roles as follows, and the competency domains in this model align to NICE Knowledge and Skill statements:
+The NICE Framework defines cybersecurity work through Task, Knowledge, and Skill (TKS) statements organized into Work Roles and Competency Areas. This section maps CERG's eight competency domains to NICE Competency Areas and provides sample TKS references for skills-gap analysis.
 
-| CERG Role Family | Primary NICE Work Role | NICE Category |
-|---|---|---|
-| **Engineering** | Secure Software Assessor (SP-DEV-002); Security Architect (SP-ARC-002) | Securely Provision |
-| **Risk** | Vulnerability Assessment Analyst (PR-VAM-001); Threat/Warning Analyst (AN-TWA-001) | Protect and Defend; Analyze |
-| **Governance** | Cyber Legal Advisor (OV-LGA-002); Security Control Assessor (OV-SPP-001) | Oversee and Govern |
+#### 9.1.1 CERG Competency Domains → NICE Competency Areas
 
-NICE Knowledge and Skill statements have been incorporated into the behavioral anchors for each domain. Organizations that need to demonstrate workforce alignment to NICE (e.g., federal agencies, defense contractors under DoD 8140.03) can map each anchor back to the relevant NICE KSAs using the cross-reference in NICE SP 800-181r1 Appendix C.
+| CERG Competency Domain | NICE Competency Area(s) | Description |
+|------------------------|------------------------|-------------|
+| Technical Depth | Technology Management; Systems Integration | Deep expertise in security technologies, architectures, and platforms |
+| Cross-Pillar Fluency | Interpersonal Skills; Systems Integration | Ability to work across Engineering, Risk, and Governance boundaries |
+| Risk Judgment | Risk Management; Threat Analysis | Sound judgment about security risk, severity, and treatment |
+| Communication | Interpersonal Skills; Communication | Clear, audience-appropriate communication of security concepts |
+| Operational Discipline | Process Management; Data Management | Reliable execution of security processes and evidence production |
+| Influence and Mentorship | Leadership; Training and Education | Developing others; shaping security culture and practice |
+| Compliance & Regulatory Literacy | Legal and Regulatory; Policy and Governance | Understanding and applying regulatory requirements |
+| Continuous Learning | Continuous Learning; Training and Education | Staying current; developing new capabilities |
 
+#### 9.1.2 Sample TKS References by Competency Domain
+
+| CERG Domain | NICE Task ID (Example) | NICE Knowledge ID (Example) | NICE Skill ID (Example) |
+|-------------|----------------------|----------------------------|------------------------|
+| Technical Depth | T0452: Develop security architectures | K0004: Knowledge of cybersecurity principles | S0005: Skill in applying security architecture methods |
+| Risk Judgment | T0043: Conduct risk assessments | K0002: Knowledge of risk management processes | S0034: Skill in conducting vulnerability assessments |
+| Compliance & Regulatory Literacy | T0034: Conduct security audits | K0060: Knowledge of applicable laws and regulations | S0025: Skill in evaluating security controls |
+| Operational Discipline | T0012: Maintain security documentation | K0023: Knowledge of configuration management | S0013: Skill in maintaining operational security |
+| Communication | T0295: Brief senior leadership on security posture | K0059: Knowledge of business continuity | S0012: Skill in preparing and presenting briefings |
+
+#### 9.1.3 CERG Role Family → NICE Work Role Mapping
+
+The complete mapping of all 27 canonical CERG roles to NICE Work Roles is maintained in [JF-002](roles/CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md). The summary below maps role families to their primary NICE categories:
+
+| CERG Job Family | Primary NICE Category | Representative NICE Work Roles |
+|-----------------|----------------------|-------------------------------|
+| **JF-SECENG** (Security Engineering) | SP — Securely Provision | Security Architect (SP-ARC-001), Systems Security Analyst (OM-ANA-001) |
+| **JF-RISKOPS** (Risk Operations) | PR — Protect and Defend; AN — Analyze | Vulnerability Assessment Analyst (PR-VAM-001), Threat/Warning Analyst (AN-TWA-001) |
+| **JF-GOVCOMP** (Governance & Compliance) | OV — Oversee and Govern | Security Control Assessor (OV-SCA-001), Cyber Policy and Strategy Planner (OV-PSP-001) |
+| **JF-EXEC** (Executive) | OV — Oversee and Govern | Executive Cyber Leader (OG-WRL-001) |
+| **JF-ADJUNCT** (Incident Response) | PR — Protect and Defend | Cyber Defense Incident Responder (PR-CIR-001) |
+
+#### 9.1.4 How to Use the NICE TKS Database
+
+The full NICE TKS database is available as a downloadable CSV from the NICE Framework Resource Center at https://www.nist.gov/nice/framework/. For each CERG role, filter by the NICE Work Role(s) mapped to that role (see [JF-002](roles/CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md)) and extract the TKS statements. The most relevant 5-10 Task statements, 5-10 Knowledge statements, and 5-10 Skill statements should be included in each per-role description's §6 (NICE TKS Statement References).
+
+Organizations that need to demonstrate workforce alignment to NICE (e.g., federal agencies, defense contractors under DoD 8140.03) can map each CMP-001 behavioral anchor back to the relevant NICE KSAs using the cross-reference in NIST SP 800-181r1 Appendix C.
 ### 9.2 Other Frameworks
 
 The competency domains in this model are compatible with:
