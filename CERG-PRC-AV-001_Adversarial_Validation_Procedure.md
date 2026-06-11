@@ -9,7 +9,7 @@
 |---|---|
 | **Document ID** | CERG-PRC-AV-001 |
 | **Version** | 1.2 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Adversarial Testing Lead |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -68,7 +68,7 @@ This procedure makes it explicit. It applies to every CERG-led or CERG-overseen 
 
 ---
 
-### 2.4 External Tester Management
+### 2.1 External Tester Management
 
 When adversarial validation is conducted by an external firm rather than internal staff, the following requirements apply.
 
@@ -284,7 +284,7 @@ Application tests use OWASP WSTG (web), MASTG (mobile), and API Security Top 10 
 
 ---
 
-### 8.5 Social Engineering Engagements
+### 8.1 Social Engineering Engagements
 
 Social engineering tests the human layer of security controls. These engagements carry unique legal, ethical, and operational risks that require explicit guardrails.
 
@@ -455,7 +455,7 @@ Every engagement produces a Final Report - the authoritative record of what was 
 
 ---
 
-### 10.4 Inter-Rater Reliability for Finding Ratings
+### 10.6 Inter-Rater Reliability for Finding Ratings
 
 Different testers may rate the same finding differently. The following process ensures severity ratings are consistent and defensible.
 
