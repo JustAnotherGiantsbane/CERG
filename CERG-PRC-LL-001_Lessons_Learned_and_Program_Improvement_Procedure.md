@@ -86,13 +86,13 @@ The following events trigger a lessons-learned artifact. Each source names the a
 
 | Source | Trigger Event | Accountable Role | SLA (from event close) |
 |---|---|---|---|
-| Post-incident review | Incident closed per PRC-IR-002 | Incident Commander (IR team) or CERG IR Plan Steward | 14 calendar days |
+| Post-incident review | Incident closed per PRC-IR-002 | Incident Commander (IR team) or Governance Pillar Leader | 14 calendar days |
 | Penetration test / red team | Engagement report delivered per PRC-AV-001 | Adversarial Testing Lead | 14 calendar days |
 | Purple team exercise | Exercise completed per LM-001 | Detection Engineer | 14 calendar days |
 | Audit finding (internal) | Audit report issued per PRC-AUD-001 | Governance Pillar Leader | 21 calendar days |
 | Audit finding (external / regulator) | Final report received | Governance Pillar Leader | 21 calendar days |
 | DR / BC exercise | Exercise AAR completed per PLN-BC-001 | Governance Pillar Leader | 14 calendar days |
-| Tabletop exercise | Exercise AAR completed per PRC-IR-002 | IR Plan Steward | 14 calendar days |
+| Tabletop exercise | Exercise AAR completed per PRC-IR-002 | Governance Pillar Leader | 14 calendar days |
 | Near-miss event | Event contained before impact; documented | Risk Pillar Leader | 7 calendar days |
 | Metrics threshold breach | Any metric in MTR-001 Section 3 exceeds red threshold for 2 consecutive periods | Metric owner | 7 calendar days |
 | External intelligence shift | Threat landscape assessment identifies a material change per PRC-TI-001 | Threat Intelligence Analyst | 7 calendar days |
@@ -288,7 +288,7 @@ An improvement marked "Ineffective" or "Partially effective" is re-opened in the
 | **Risk Pillar Leader** | Produces lesson artifacts for vulnerability, adversarial, intelligence, and near-miss sources. Participates in quarterly aggregation. Accountable for improvement actions in the Risk pillar. |
 | **Engineering Pillar Leader** | Produces lesson artifacts for architecture, configuration, and design-review sources. Participates in quarterly aggregation. Accountable for improvement actions in the Engineering pillar. |
 | **Adversarial Testing Lead** | Produces the post-engagement systemic analysis per PRC-AV-001. Ensures pen test findings are analyzed for root cause patterns, not just remediated individually. |
-| **Incident Commander (IR team)** | Produces post-incident lesson artifacts per PRC-IR-002. CERG IR Plan Steward coordinates if the standing IR team does not produce them. |
+| **Incident Commander (IR team)** | Produces post-incident lesson artifacts per PRC-IR-002. Governance Pillar Leader coordinates if the standing IR team does not produce them. |
 | **Threat Intelligence Analyst** | Produces lesson artifacts for external intelligence shifts. Presents threat landscape changes at quarterly aggregation. |
 | **Vulnerability Management Lead** | Produces lesson artifacts when VM metrics signal a systemic weakness. |
 | **Evidence Librarian** | Archives all lesson artifacts, aggregation summaries, and verification records. Ensures auditability of the lessons-learned pipeline. |
