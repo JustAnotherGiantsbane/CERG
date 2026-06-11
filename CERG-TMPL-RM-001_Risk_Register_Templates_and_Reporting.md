@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-TMPL-RM-001 |
 | **Version** | 1.21 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Risk Register) |
 | **Parent Procedure** | [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) - Risk Register and Exception Process |
@@ -32,7 +32,7 @@
 6. [Risk Scoring Guide](#6-risk-scoring-guide)
 7. [CISO Slice-and-Dice Reporting Views](#7-ciso-slice-and-dice-reporting-views)
 8. [Operational Cadence](#8-operational-cadence)
-9. [Document Control](#9-document-control)
+8. [Document Control](#8-document-control)
 
 ---
 
@@ -291,7 +291,7 @@ Additional guardrails baked into the views:
 | Regulatory Posture | Quarterly | CISO · Audit · Cyber Oversight Group |
 
 ---
-## 9. Document Control
+## 8. Document Control
 
 | | |
 |---|---|
