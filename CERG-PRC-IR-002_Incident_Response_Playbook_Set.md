@@ -9,7 +9,7 @@
 |---|---|
 | **Document ID** | CERG-PRC-IR-002 |
 | **Version** | 1.0 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -73,7 +73,7 @@ This is not a SOC procedure, forensics manual, or replacement Incident Response 
 
 CERG may author and maintain this playbook set, but scenario execution during an active incident is under the Incident Commander.
 
-### 2.5 Integration with the Incident Response Plan
+### 2.1 Integration with the Incident Response Plan
 
 This playbook set operates under [CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md) (the IR Plan), which is owned by the standing Incident Response team. The following defines how the two documents connect operationally.
 
@@ -98,7 +98,7 @@ This playbook set operates under [CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Resp
 
 ---
 
-### 2.6 Playbook Testing and Exercise Program
+### 2.2 Playbook Testing and Exercise Program
 
 Playbooks are tested to validate that they work as intended and that CERG personnel can execute them under pressure.
 
@@ -147,7 +147,7 @@ Each scenario uses the same structure so teams can move quickly.
 
 ---
 
-### 3.5 Playbook Selection Guide
+### 3.1 Playbook Selection Guide
 
 When an incident is reported, use the following decision tree to select the appropriate playbook. For multi-vector incidents, activate the highest-severity playbook first, then supplement with relevant sections from other playbooks as the incident scope clarifies.
 
@@ -163,7 +163,7 @@ When an incident is reported, use the following decision tree to select the appr
 
 If none of the above match, or if the incident type is unclear, activate the playbook that most closely matches the observed indicators and consult the Incident Commander for direction. The Incident Commander may override playbook selection at any time.
 
-### 3.6 Incident Severity Classification
+### 3.2 Incident Severity Classification
 
 All incidents are classified by severity to determine response priority, escalation requirements, and notification obligations. This playbook set uses the P1–P4 severity scale aligned with the Incident Response Plan ([CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md) §5, which defines the authoritative Sev 1–4 classification). The mapping is: P1 = Sev 1 (Critical), P2 = Sev 2 (Significant), P3 = Sev 3 (Moderate), P4 = Sev 4 (Minor).
 
@@ -498,7 +498,7 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CE
 
 ---
 
-### 12.1 CERG On-Call and Activation
+### 18.1 CERG On-Call and Activation
 
 CERG maintains an on-call rotation for incident support. The rotation schedule is maintained in the incident response tooling and is not duplicated here to avoid staleness. The following defines the activation procedure and escalation contacts.
 
@@ -538,7 +538,7 @@ CERG maintains an on-call rotation for incident support. The rotation schedule i
 
 ---
 
-### 13.1 Communication Templates
+### 19.1 Communication Templates
 
 The following templates support incident communications. Templates are populated during the Communications phase of each playbook. All templates are marked with the incident's classification level.
 
@@ -661,7 +661,7 @@ Reviewed by: [Incident Commander, CISO]
 |---|---|
 | **Document ID** | CERG-PRC-IR-002 |
 | **Version** | 1.0 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
