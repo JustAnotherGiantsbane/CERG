@@ -199,24 +199,24 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk Management Framework | Governance Pillar Leader | Approved |
 | [`CERG-GOV-TAX-001`](CERG-GOV-TAX-001_Risk_Taxonomy.md) | Risk Taxonomy | Cyber Risk | Approved |
 | [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) | Compliance Matrix | Governance Pillar Leader | Approved |
-| [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Implementation and Adaptation Guide | Governance Pillar Leader | Draft |
-| [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) | Organization Adaptation Profile | Governance Pillar Leader | Draft |
-| [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) | Maturity Self-Assessment and Scorecard | Governance Pillar Leader | Draft |
+| [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Implementation and Adaptation Guide | Governance Pillar Leader | Approved |
+| [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) | Organization Adaptation Profile | Governance Pillar Leader | Approved |
+| [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) | Maturity Self-Assessment and Scorecard | Governance Pillar Leader | Approved |
 | [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Consolidated Roles, Responsibilities, and RACI Instrument | Governance Pillar Leader | Approved |
-| [`CERG-GOV-CAL-001`](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md) | Annual Security and Governance Calendar | Governance Pillar Leader | Draft |
+| [`CERG-GOV-CAL-001`](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md) | Annual Security and Governance Calendar | Governance Pillar Leader | Approved |
 | [`CERG-GOV-STY-001`](CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md) | Document Authoring and Style Guide | Governance Pillar Leader (Policy & Standards) | Published |
-| [`CERG-GOV-TRC-001`](CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md) | Control-to-Procedure Traceability Matrix | Governance Pillar Leader (Control Baseline) | Draft |
+| [`CERG-GOV-TRC-001`](CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md) | Control-to-Procedure Traceability Matrix | Governance Pillar Leader (Control Baseline) | Approved |
 | [`CERG-GOV-IMPREG-001`](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) | Program Improvement Register | Governance Pillar Leader | Published |
-| [`CERG-GOV-CEF-001`](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) | Control Effectiveness Framework | Governance Pillar Leader | Draft |
-| [`CERG-GOV-JA-001`](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Job Architecture and Grade Framework | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-JD-001`](CERG-GOV-JD-001_CERG_Job_Descriptions.md) | CERG Job Descriptions | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-CMP-001`](CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) | Competency Model and Behavioral Anchors | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-PERF-001`](CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) | Performance Management and Promotion Framework | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-ONB-001`](CERG-GOV-ONB-001_Onboarding_and_Integration_Program.md) | Onboarding and Integration Program | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-WFP-001`](CERG-GOV-WFP-001_Workforce_Planning_and_Capacity_Model.md) | Workforce Planning and Capacity Model | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-TRN-001`](CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) | Training, Development, and Certification Framework | Governance Pillar Leader (Policy & Standards) | Draft |
-| [`CERG-GOV-SUCC-001`](CERG-GOV-SUCC-001_Succession_Planning_and_Talent_Review_Framework.md) | Succession Planning and Talent Review Framework | CISO | Draft |
-| [`CERG-GOV-CON-001`](CERG-GOV-CON-001_Contractor_and_Non-Employee_Staff_Integration_Guide.md) | Contractor and Non-Employee Staff Integration Guide | Governance Pillar Leader (Policy & Standards) | Draft |
+| [`CERG-GOV-CEF-001`](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) | Control Effectiveness Framework | Governance Pillar Leader | Approved |
+| [`CERG-GOV-JA-001`](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Job Architecture and Grade Framework | Governance Pillar Leader (Policy & Standards) | Approved |
+| [`CERG-GOV-JD-001`](CERG-GOV-JD-001_CERG_Job_Descriptions.md) | CERG Job Descriptions | Governance Pillar Leader (Policy & Standards) | Approved |
+| [`CERG-GOV-CMP-001`](CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) | Competency Model and Behavioral Anchors | Governance Pillar Leader (Policy & Standards) | Approved |
+| [`CERG-GOV-PERF-001`](CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) | Performance Management and Promotion Framework | Governance Pillar Leader (Policy & Standards) | Approved |
+| [`CERG-GOV-ONB-001`](CERG-GOV-ONB-001_Onboarding_and_Integration_Program.md) | Onboarding and Integration Program | Governance Pillar Leader (Policy & Standards) | Approved |
+| [`CERG-GOV-WFP-001`](CERG-GOV-WFP-001_Workforce_Planning_and_Capacity_Model.md) | Workforce Planning and Capacity Model | Governance Pillar Leader (Policy & Standards) | Approved |
+| [`CERG-GOV-TRN-001`](CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) | Training, Development, and Certification Framework | Governance Pillar Leader (Policy & Standards) | Approved |
+| [`CERG-GOV-SUCC-001`](CERG-GOV-SUCC-001_Succession_Planning_and_Talent_Review_Framework.md) | Succession Planning and Talent Review Framework | CISO | Approved |
+| [`CERG-GOV-CON-001`](CERG-GOV-CON-001_Contractor_and_Non-Employee_Staff_Integration_Guide.md) | Contractor and Non-Employee Staff Integration Guide | Governance Pillar Leader (Policy & Standards) | Approved |
 
 ### 5.3 Standards
 
@@ -265,24 +265,24 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) | CUI / CMMC Operational Package | Cyber Governance - CUI/CMMC | Approved |
 | [`CERG-PLN-CIP-001`](CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) | NERC-CIP Operational Package | Cyber Governance - OT | Approved |
 | [`CERG-PLN-SOX-001`](CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) | SOX ITGC Operational Package | Cyber Governance - SOX | Approved |
-| [`CERG-PLN-BC-001`](CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md) | Business Continuity and Disaster Recovery Plan | Governance Pillar Leader | Draft |
-| [`CERG-PLN-ISO-001`](CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md) | ISO/IEC 27001 Operational Package | Governance Pillar Leader | Draft |
-| [`CERG-PLN-PRIV-001`](CERG-PLN-PRIV-001_Privacy_and_Data_Protection_Operational_Package.md) | Privacy and Data Protection Operational Package | Governance Pillar Leader | Draft |
+| [`CERG-PLN-BC-001`](CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md) | Business Continuity and Disaster Recovery Plan | Governance Pillar Leader | Approved |
+| [`CERG-PLN-ISO-001`](CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md) | ISO/IEC 27001 Operational Package | Governance Pillar Leader | Approved |
+| [`CERG-PLN-PRIV-001`](CERG-PLN-PRIV-001_Privacy_and_Data_Protection_Operational_Package.md) | Privacy and Data Protection Operational Package | Governance Pillar Leader | Approved |
 
 ### 5.6 Templates
 
 | **ID** | **Title** | **Owner** | **Status** |
 |---|---|---|---|
 | [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) | Risk Register Templates and Reporting | Cyber Governance - Risk Register | Approved |
-| [`CERG-TMPL-CUI-001`](CERG-TMPL-CUI-001_System_Security_Plan_Template.md) | System Security Plan Template | CMMC / Federal Compliance Manager | Draft |
-| [`CERG-TMPL-CUI-002`](CERG-TMPL-CUI-002_POAM_Template.md) | Plan of Action and Milestones Template | CMMC / Federal Compliance Manager | Draft |
-| [`CERG-TMPL-RM-002`](CERG-TMPL-RM-002_Security_Exception_Request_Form.md) | Security Exception Request Form | Risk Register Owner | Draft |
-| [`CERG-TMPL-AR-001`](CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md) | Architecture and Project Intake Form | Engineering Pillar Leader | Draft |
-| [`CERG-TMPL-TPRM-001`](CERG-TMPL-TPRM-001_Vendor_Security_Questionnaire_and_Assessment_Template.md) | Vendor Security Questionnaire and TPRM Assessment Template | Vendor Risk Analyst | Draft |
-| [`CERG-TMPL-RM-003`](CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md) | Risk Acceptance Memo Template | Risk Pillar Leader | Draft |
-| [`CERG-TMPL-AUD-001`](CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md) | Control Evidence and Test Worksheet | Evidence Librarian | Draft |
-| [`CERG-TMPL-MTR-001`](CERG-TMPL-MTR-001_Board_and_CISO_Reporting_Deck_Template.md) | Board and CISO Reporting Deck Template | Governance Pillar Leader | Draft |
-| [`CERG-TMPL-GOV-001`](CERG-TMPL-GOV-001_Stakeholder_Perception_Survey.md) | Stakeholder Perception Survey | Governance Pillar Leader | Draft |
+| [`CERG-TMPL-CUI-001`](CERG-TMPL-CUI-001_System_Security_Plan_Template.md) | System Security Plan Template | CMMC / Federal Compliance Manager | Approved |
+| [`CERG-TMPL-CUI-002`](CERG-TMPL-CUI-002_POAM_Template.md) | Plan of Action and Milestones Template | CMMC / Federal Compliance Manager | Approved |
+| [`CERG-TMPL-RM-002`](CERG-TMPL-RM-002_Security_Exception_Request_Form.md) | Security Exception Request Form | Risk Register Owner | Approved |
+| [`CERG-TMPL-AR-001`](CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md) | Architecture and Project Intake Form | Engineering Pillar Leader | Approved |
+| [`CERG-TMPL-TPRM-001`](CERG-TMPL-TPRM-001_Vendor_Security_Questionnaire_and_Assessment_Template.md) | Vendor Security Questionnaire and TPRM Assessment Template | Vendor Risk Analyst | Approved |
+| [`CERG-TMPL-RM-003`](CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md) | Risk Acceptance Memo Template | Risk Pillar Leader | Approved |
+| [`CERG-TMPL-AUD-001`](CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md) | Control Evidence and Test Worksheet | Evidence Librarian | Approved |
+| [`CERG-TMPL-MTR-001`](CERG-TMPL-MTR-001_Board_and_CISO_Reporting_Deck_Template.md) | Board and CISO Reporting Deck Template | Governance Pillar Leader | Approved |
+| [`CERG-TMPL-GOV-001`](CERG-TMPL-GOV-001_Stakeholder_Perception_Survey.md) | Stakeholder Perception Survey | Governance Pillar Leader | Approved |
 
 Other templates remain embedded as appendices of their parent procedure or plan unless they have independent reuse outside that artifact. The Document Catalog references the parent.
 
