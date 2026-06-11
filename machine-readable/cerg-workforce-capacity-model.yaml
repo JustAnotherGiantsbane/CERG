@@ -1,0 +1,25 @@
+# CERG Workforce Capacity Model Schema
+# Capacity planning inputs
+
+capacity_factors:
+- role_headcount
+- workload_volume
+- automation_ratio
+- outsourcing_ratio
+- span_of_control
+per_role_inputs:
+- role: Cloud Security Engineer
+  workload_drivers:
+  - cloud_accounts
+  - iac_repos
+  - cspm_findings_volume
+- role: Detection Engineer
+  workload_drivers:
+  - log_sources
+  - detection_rules
+  - alert_volume
+- role: Vulnerability Management Lead
+  workload_drivers:
+  - assets_scanned
+  - findings_volume
+  - sla_tiers

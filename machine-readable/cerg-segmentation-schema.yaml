@@ -1,0 +1,21 @@
+# CERG Segmentation Verification Schema
+# Verify network segmentation integrity
+
+segmentation_zones:
+- crown_jewel
+- regulated
+- production
+- development
+- corporate
+- guest
+- dmz
+verification_checks:
+- zone_to_zone_connectivity_audit
+- unintended_path_discovery
+- firewall_rule_review
+- acl_consistency_check
+verification_frequency:
+  crown_jewel: continuous
+  regulated: monthly
+  production: quarterly
+  other: semi_annual

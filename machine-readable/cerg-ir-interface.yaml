@@ -1,0 +1,36 @@
+# CERG-to-IR Interface Contract
+# Activation triggers, roles, and data flows
+
+activation_triggers:
+- severity: Critical
+  trigger: Immediate CISO + IR activation
+- severity: High
+  trigger: CISO notification; Incident Commander assessment within 1 hour
+- severity: Medium
+  trigger: Risk Pillar triage; escalate if exploitation confirmed
+roles_engaged:
+  cerg:
+  - CISO
+  - Risk Pillar
+  - Engineering Pillar
+  - Governance Pillar
+  ir:
+  - Incident Commander
+  - Lead Investigator
+  - IR Team
+required_data_inputs:
+- incident_id
+- affected_assets
+- severity
+- detection_source
+- regulatory_scope
+required_data_outputs:
+- root_cause_class
+- control_failure_class
+- corrective_actions
+- standards_update_decision
+- metrics_update_decision
+post_incident_feedback:
+- lessons_learned_report
+- control_change_record_if_applicable
+- metrics_review

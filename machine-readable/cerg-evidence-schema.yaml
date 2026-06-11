@@ -1,0 +1,43 @@
+# CERG Evidence Object Schema
+# Defines evidence lifecycle and structure
+
+evidence_lifecycle:
+  states:
+  - source_defined
+  - collection_trigger_defined
+  - evidence_generated
+  - evidence_ingested
+  - hash_calculated
+  - metadata_assigned
+  - control_mapping_applied
+  - quality_check_completed
+  - retention_timer_assigned
+  - freshness_monitored
+  - used_in_audit_review
+  - expired_replaced_archived
+evidence_object:
+  fields:
+  - evidence_id
+  - evidence_name
+  - source_system
+  - source_owner
+  - control_ids
+  - requirement_ids
+  - framework_mappings
+  - generated_date
+  - ingested_date
+  - expiration_date
+  - hash
+  - classification
+  - publication_profile
+  - retention_rule
+  - chain_of_custody
+  - quality_status
+  - quality_reviewer
+  - audit_use_history
+  quality_status_values:
+  - pending-review
+  - accepted
+  - rejected
+  - stale
+  - superseded

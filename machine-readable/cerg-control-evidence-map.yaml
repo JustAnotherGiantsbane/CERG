@@ -1,0 +1,26 @@
+# CERG Control Evidence Map
+# Maps controls to their evidence requirements
+
+controls:
+- control_id: AC-2
+  control_name: Account Management
+  control_owner: Identity Engineer
+  requirement_ids:
+  - CERG-REQ-CERG-STD-AC-001-05-001
+  evidence_items:
+  - name: JML Log
+    source_system: IAM Platform
+    cadence: monthly
+    retention: 3 years
+    quality_check: automated
+    expiration_rule: refresh monthly
+  control_test_method: quarterly access review
+- control_id: AC-6
+  control_name: Least Privilege
+  control_owner: Identity Engineer
+  evidence_items:
+  - name: Privileged Access Review
+    source_system: PAM Tool
+    cadence: quarterly
+    retention: 3 years
+  control_test_method: quarterly privileged access certification

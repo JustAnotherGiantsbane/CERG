@@ -1,0 +1,29 @@
+# CERG Vendor Kill Switch Procedure Schema
+# Emergency vendor access disablement
+
+vendor_access_inventory:
+- vendor_id
+- vendor_name
+- access_type
+- access_path
+- systems_accessible
+- privilege_level
+activation_triggers:
+- vendor_breach_confirmed
+- vendor_compromise_suspected
+- regulatory_directive
+- contract_termination
+disablement_procedure_by_type:
+- access_type: API
+  procedure: Rotate API keys; revoke tokens; disable integration
+- access_type: VPN
+  procedure: Disable VPN account; revoke certificates; block IP ranges
+- access_type: Federated Identity
+  procedure: Disable federation trust; revoke IdP access; block attributes
+- access_type: Direct Network
+  procedure: Apply ACL deny; shut BGP peer; physically disconnect
+reconnection_process:
+- verify_vendor_remediation
+- reissue_credentials
+- re-enable_access_sequentially
+- monitor_for_48_hours

@@ -1,0 +1,189 @@
+# CERG Runtime Object Model — Machine-Readable
+# Core operational objects and their relationships
+
+objects:
+  Asset:
+    description: Any in-scope system, application, device, or service.
+    fields:
+    - asset_id
+    - asset_type
+    - name
+    - owner
+    - business_owner
+    - technical_owner
+    - environment
+    - data_classification
+    - regulatory_scope
+    - criticality_tier
+    relationships:
+      has_owner: Role
+      belongs_to: System
+      has_criticality: CriticalityTier
+      has_data_classification: DataClassification
+      maps_to_controls:
+      - Control
+  System:
+    description: A logical grouping of assets that support a business service.
+    fields:
+    - system_id
+    - name
+    - business_service
+    - owner
+    - regulatory_scope
+    - recovery_objectives
+    relationships:
+      contains_assets:
+      - Asset
+      supports_business_service: BusinessService
+      has_regulatory_scope:
+      - RegulatoryScope
+      has_recovery_objectives: RecoveryProfile
+  Identity:
+    description: A human or machine identity.
+    fields:
+    - identity_id
+    - type
+    - display_name
+    - source
+    - privileged
+    - service_account
+    - federated
+    relationships:
+      has_accounts:
+      - PrivilegedAccount
+      maps_to_assets:
+      - Asset
+  Control:
+    description: A security control from the CERG Unified Control Baseline.
+    fields:
+    - control_id
+    - control_name
+    - family
+    - standard
+    - status
+    - owner
+    relationships:
+      satisfies_requirements:
+      - Requirement
+      has_owner: Role
+      has_evidence:
+      - EvidenceItem
+      has_tests:
+      - ControlTest
+      has_exceptions:
+      - Exception
+  Requirement:
+    description: An atomic requirement extracted from CERG documents.
+    fields:
+    - requirement_id
+    - source_document
+    - requirement_text
+    - normative_verb
+    - obligation_level
+    relationships:
+      maps_to_controls:
+      - Control
+      has_evidence:
+      - EvidenceItem
+  EvidenceItem:
+    description: Evidence proving a control or requirement is satisfied.
+    fields:
+    - evidence_id
+    - evidence_name
+    - source_system
+    - hash
+    - generated_date
+    - expiration_date
+    - quality_status
+    relationships:
+      maps_to_controls:
+      - Control
+      maps_to_requirements:
+      - Requirement
+  Risk:
+    description: An identified risk in the enterprise risk register.
+    fields:
+    - risk_id
+    - risk_statement
+    - inherent_risk
+    - residual_risk
+    - owner
+    - treatment_strategy
+    - status
+    relationships:
+      affects_assets:
+      - Asset
+      affects_systems:
+      - System
+      has_owner: Role
+      has_treatment_plan: RiskTreatment
+      has_acceptance: RiskAcceptance
+  Exception:
+    description: A formal non-conformance to a control or requirement.
+    fields:
+    - exception_id
+    - control_id
+    - rationale
+    - approver
+    - expiration_date
+    relationships:
+      maps_to_requirement: Requirement
+      maps_to_control: Control
+      has_expiration_date: Date
+      has_compensating_controls:
+      - Control
+  VulnerabilityFinding:
+    description: A vulnerability discovered through scanning or testing.
+    fields:
+    - finding_id
+    - source
+    - severity
+    - cve_id
+    - cvss_score
+    - kev_status
+  Incident:
+    description: A declared security incident.
+    fields:
+    - incident_id
+    - severity
+    - detected_time
+    - incident_commander
+    - current_state
+    relationships:
+      affects_assets:
+      - Asset
+      involves_identities:
+      - Identity
+      involves_vendors:
+      - Vendor
+      creates_findings:
+      - ProgramImprovement
+  Change:
+    description: A change with security significance.
+    fields:
+    - change_id
+    - change_type
+    - affected_assets
+    - implementation_window
+    - rollback_plan
+  Vendor:
+    description: A third-party vendor or supplier.
+    fields:
+    - vendor_id
+    - vendor_name
+    - risk_rating
+    - contractual_requirements
+    relationships:
+      provides_services_to:
+      - System
+      has_access_paths:
+      - ThirdPartyConnection
+      has_risk_rating: RiskRating
+  DecisionRecord:
+    description: A governance decision (risk acceptance, exception approval, strategy directive).
+    fields:
+    - decision_id
+    - decision_type
+    - approver
+    - rationale
+    - review_date

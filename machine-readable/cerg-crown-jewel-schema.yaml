@@ -1,0 +1,43 @@
+# CERG Crown Jewel Register Schema
+# Governance for critical systems
+
+criticality_tiers:
+- tier: Tier 0
+  description: Crown Jewel — loss would be catastrophic
+  minimum_controls: All applicable controls at enhanced verification frequency
+- tier: Tier 1
+  description: Critical — loss would be severe
+  minimum_controls: All applicable controls at standard verification frequency
+- tier: Tier 2
+  description: High — loss would be significant
+  minimum_controls: All applicable controls
+- tier: Tier 3
+  description: Moderate — loss would be manageable
+  minimum_controls: Priority controls
+- tier: Tier 4
+  description: Low — loss would be minor
+  minimum_controls: Baseline controls
+crown_jewel_fields:
+- asset_id
+- system_id
+- business_service
+- owner
+- executive_sponsor
+- criticality_tier
+- crown_jewel
+- regulated_scope
+- data_classification
+- operational_impact
+- safety_impact
+- financial_reporting_impact
+- customer_impact
+- internet_exposed
+- third_party_dependencies
+- recovery_time_objective
+- recovery_point_objective
+- minimum_logging_profile
+- minimum_backup_profile
+- minimum_identity_profile
+- minimum_segmentation_profile
+- minimum_adversarial_validation_profile
+- review_date

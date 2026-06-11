@@ -1,0 +1,31 @@
+# CERG Tier 0 Identity Profile
+# Minimum identity controls for Crown Jewel systems
+
+mfa_requirements:
+  required: true
+  methods:
+  - FIDO2
+  - phishing-resistant MFA
+  - hardware token
+  prohibited:
+  - SMS
+  - voice call
+  - email OTP
+privileged_access:
+  just_in_time: true
+  break_glass: true
+  session_recording: true
+  approval_required: true
+break_glass_monitoring:
+  alert_on_use: true
+  post_use_review_required: true
+  review_cadence: within 24 hours
+service_account_governance:
+  inventory_required: true
+  credential_rotation: 90 days
+  interactive_login_disabled: true
+identity_logging:
+- all_authentication_events
+- all_authorization_changes
+- all_privileged_session_activity
+- all_break_glass_activations

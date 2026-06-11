@@ -1,0 +1,39 @@
+# CERG Metrics Model — Decision-Grade
+# Metrics that show risk movement and required action
+
+metric_schema:
+- metric_id
+- metric_name
+- risk_question_answered
+- owner
+- source_system
+- calculation_method
+- frequency
+- threshold_green
+- threshold_amber
+- threshold_red
+- trend_required
+- linked_risks
+- linked_controls
+- executive_action_trigger
+ciso_dashboard_sections:
+- top_enterprise_cyber_risks
+- high_critical_risk_aging
+- crown_jewel_control_coverage
+- vulnerability_sla_health_weighted_by_criticality
+- actively_exploited_or_kev_exposure
+- identity_risk
+- privileged_access_health
+- logging_and_detection_coverage
+- backup_restore_test_health
+- third_party_critical_risk_exposure
+- exception_aging_and_expiration
+- maturity_score_movement
+- program_improvement_backlog
+metric_rules:
+- every_metric_has_owner
+- every_metric_has_source_system
+- every_metric_has_trend
+- every_red_metric_has_action_owner
+- every_board_metric_maps_to_risk
+- every_metric_has_defined_decision

@@ -1,0 +1,27 @@
+# CERG Control Efficacy Test Plan Schema
+# Structured control testing
+
+control_test_schema:
+- test_id
+- control_id
+- test_type
+- test_description
+- frequency
+- pass_criteria
+- fail_criteria
+- last_test_date
+- last_test_result
+- tester_role
+test_types:
+- automated
+- manual_review
+- walkthrough
+- sampling
+- penetration_test
+- tabletop_exercise
+frequencies:
+- continuous
+- monthly
+- quarterly
+- semi_annual
+- annual

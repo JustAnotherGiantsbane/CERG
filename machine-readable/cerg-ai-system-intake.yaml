@@ -1,0 +1,23 @@
+# CERG AI System Intake Schema
+# Security review for AI/ML systems
+
+intake_fields:
+- ai_system_id
+- model_type
+- training_data_source
+- data_classification
+- inference_location
+- api_exposure
+- human_in_the_loop
+- model_supply_chain
+security_review_areas:
+- model_poisoning_risk
+- prompt_injection_risk
+- data_exfiltration_risk
+- model_inversion_risk
+- supply_chain_risk
+- regulatory_applicability
+dispositions:
+- approved
+- approved_with_controls
+- blocked_pending_remediation

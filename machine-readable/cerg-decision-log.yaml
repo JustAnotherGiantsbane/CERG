@@ -1,0 +1,23 @@
+# CERG Decision Log Schema
+# Governance decision record
+
+fields:
+- decision_id
+- decision_type
+- decision_title
+- decided_by
+- decision_date
+- rationale
+- alternatives_considered
+- linked_risks
+- linked_exceptions
+- review_date
+- status
+decision_types:
+- risk_acceptance
+- exception_approval
+- budget_allocation
+- strategy_change
+- standard_change
+- control_waiver
+- ciso_directive
