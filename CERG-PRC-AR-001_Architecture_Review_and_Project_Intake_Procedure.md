@@ -9,7 +9,7 @@
 |---|---|
 | **Document ID** | CERG-PRC-AR-001 |
 | **Version** | 1.0 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -35,8 +35,8 @@
 10. [Required Diagrams](#10-required-diagrams)
 11. [Templates](#11-templates)
 12. [Metrics](#12-metrics)
-14. [Regulatory and Framework Alignment Summary](#14-regulatory-and-framework-alignment-summary)
-15. [Document Control](#15-document-control)
+13. [Regulatory and Framework Alignment Summary](#13-regulatory-and-framework-alignment-summary)
+14. [Document Control](#14-document-control)
 
 ---
 
@@ -423,7 +423,7 @@ Production Handoff and Go-Live is completed within 3 business days of Phase 4 Re
 
 ---
 
-### 8.3 Dispute and Appeal Process
+### 9.5 Dispute and Appeal Process
 
 If a project team disagrees with a finding, disposition, or outcome from any phase of the architecture review, the following appeal path is available.
 
@@ -505,7 +505,7 @@ The templates below are part of this procedure. The intake form (§5.1), threat 
 > Where a metric is marked "Baseline to be established in first year of operation," the CERG Risk Pillar collects 12 months of data and proposes Green/Amber/Red thresholds at the next annual review. Prior to baseline, the metric is reported without RAG coloring.
 
 ---
-## 14. Regulatory and Framework Alignment Summary
+## 13. Regulatory and Framework Alignment Summary
 
 | **Regulation / Framework** | **Where in This Procedure** |
 |---|---|
@@ -518,7 +518,7 @@ The templates below are part of this procedure. The intake form (§5.1), threat 
 
 ---
 
-## 15. Document Control
+## 14. Document Control
 
 | | |
 |---|---|
