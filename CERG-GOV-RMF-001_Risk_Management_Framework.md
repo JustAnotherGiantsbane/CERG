@@ -1,6 +1,6 @@
 # SURGE: Cyber Engineering, Risk & Governance
 ## CERG Risk Management Framework
-**Document ID:** CERG-RMF-001 · **Version:** 1.3 · **Classification:** Public
+**Document ID:** CERG-GOV-RMF-001 · **Version:** 1.3 · **Classification:** Public
 
 > *A NIST-grounded, operationally adaptive risk management framework designed for IT and OT environments across CMMC, NERC-CIP, and SOX.*
 
