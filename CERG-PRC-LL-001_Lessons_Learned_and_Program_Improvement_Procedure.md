@@ -318,7 +318,7 @@ The effectiveness of this procedure itself is measured. These metrics are report
 The following template captures the 7 required fields for every lesson artifact.
 
 ```
-LESSON ARTIFACT — LL-YYYY-NNNN
+LESSON ARTIFACT - LL-YYYY-NNNN
 
 1. SOURCE EVENT
    Event Type: [Incident / Pen Test / Red Team / Audit / Exercise / Near-Miss / Metric Breach / CISO Directed]
@@ -331,12 +331,12 @@ LESSON ARTIFACT — LL-YYYY-NNNN
    Produced By: [name, role]
 
 3. SUMMARY
-   What Happened: [factual, concise — what was observed, what the finding was, what failed or succeeded]
+   What Happened: [factual, concise - what was observed, what the finding was, what failed or succeeded]
 
 4. ROOT CAUSE
    Direct Cause: [the immediate technical, procedural, or human factor]
    Systemic Cause: [the underlying standard, process, or control gap that allowed the direct cause]
-   Was This Preventable? [Yes / Partially / No — with rationale]
+   Was This Preventable? [Yes / Partially / No - with rationale]
 
 5. IMPROVEMENT RECOMMENDATION
    What Should Change: [specific, actionable recommendation]
@@ -344,19 +344,19 @@ LESSON ARTIFACT — LL-YYYY-NNNN
    Expected Impact: [how the change prevents recurrence]
 
 6. PRIORITY
-   Severity: [Critical / High / Medium / Low — per Section 4]
+   Severity: [Critical / High / Medium / Low - per Section 4]
    Urgency: [Immediate / This Quarter / This Year / Opportunistic]
 
 7. OWNER
-   Improvement Owner: [name, role — who will drive the change]
-   Approver: [name, role — who approves the change]
+   Improvement Owner: [name, role - who will drive the change]
+   Approver: [name, role - who approves the change]
    Target Completion Date: [date]
 ```
 
 ## Appendix B: Lessons Aggregation Summary Template
 
 ```
-LESSONS AGGREGATION SUMMARY — LAS-YYYY-QN
+LESSONS AGGREGATION SUMMARY - LAS-YYYY-QN
 
 PERIOD COVERED
    Quarter: [Q1 / Q2 / Q3 / Q4] [YYYY]
@@ -398,7 +398,7 @@ ACTIONS DEFERRED
 
 TREND ANALYSIS (if 4+ quarters available)
    - Artifact production trend: [increasing / stable / decreasing]
-   - Top recurring theme: [theme] — appeared in [N] of last [M] quarters
+   - Top recurring theme: [theme] - appeared in [N] of last [M] quarters
    - Improvement closure rate: [X%] of actions from prior quarter(s) verified closed
 
 Prepared by: [Governance Pillar Leader]
