@@ -380,7 +380,7 @@ CERG preserves: application logs, WAF logs, authentication logs, database audit 
 
 ### 13.1 Triage
 
-CERG identifies: affected endpoints and servers, malware type (infostealer, RAT, botnet, cryptominer, wiper — differentiated from ransomware per Playbook 1), command-and-control infrastructure, initial infection vector, scope of compromise (which systems, what data accessed), and whether the malware has credential-theft or lateral-movement capability.
+CERG identifies: affected endpoints and servers, malware type (infostealer, RAT, botnet, cryptominer, wiper - differentiated from ransomware per Playbook 1), command-and-control infrastructure, initial infection vector, scope of compromise (which systems, what data accessed), and whether the malware has credential-theft or lateral-movement capability.
 
 ### 13.2 Containment
 
@@ -545,7 +545,7 @@ The following templates support incident communications. Templates are populated
 #### Initial Incident Notification (Internal)
 
 ```
-INCIDENT NOTIFICATION — IR-YYYY-NNNN
+INCIDENT NOTIFICATION - IR-YYYY-NNNN
 Classification: [per incident classification]
 Date/Time: [declaration timestamp]
 Severity: [P1/P2/P3/P4]
@@ -569,7 +569,7 @@ Contact: [Incident Commander contact]
 #### Status Update Template
 
 ```
-INCIDENT STATUS UPDATE — IR-YYYY-NNNN
+INCIDENT STATUS UPDATE - IR-YYYY-NNNN
 Update #: [N]
 Date/Time: [timestamp]
 Classification: [per incident classification]
@@ -591,8 +591,8 @@ Next Update Expected: [time]
 #### Regulatory Breach Notification Template
 
 ```
-REGULATORY NOTIFICATION — IR-YYYY-NNNN
-Classification: CONFIDENTIAL — REGULATORY
+REGULATORY NOTIFICATION - IR-YYYY-NNNN
+Classification: CONFIDENTIAL - REGULATORY
 Date/Time: [timestamp]
 
 To: [Regulatory body / contact]
@@ -613,7 +613,7 @@ Attachments: [list]
 #### Customer / Partner Communication Template
 
 ```
-INCIDENT NOTICE — IR-YYYY-NNNN
+INCIDENT NOTICE - IR-YYYY-NNNN
 Classification: [as approved by Legal and Incident Commander]
 Date: [date]
 
@@ -635,7 +635,7 @@ We will provide additional information as it becomes available. If you have ques
 #### Post-Incident Summary Template
 
 ```
-POST-INCIDENT SUMMARY — IR-YYYY-NNNN
+POST-INCIDENT SUMMARY - IR-YYYY-NNNN
 Classification: [per incident classification]
 Date Closed: [date]
 
