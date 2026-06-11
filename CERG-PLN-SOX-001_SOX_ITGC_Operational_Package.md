@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-PLN-SOX-001 |
 | **Version** | 1.21 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (SOX Liaison) |
 | **Parent Documents** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) · [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-GOV-OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) |
@@ -33,8 +33,8 @@
 7. [Auditor Interface](#7-auditor-interface)
 8. [Operating Cadence](#8-operating-cadence)
 9. [Roles and Responsibilities](#9-roles-and-responsibilities)
-10. [Regulatory and Framework Alignment Summary](#10-regulatory-and-framework-alignment-summary)
-11. [Document Control](#11-document-control)
+9. [Regulatory and Framework Alignment Summary](#9-regulatory-and-framework-alignment-summary)
+10. [Document Control](#10-document-control)
 
 ---
 
@@ -209,7 +209,7 @@ Specifically, the most-reused artifacts:
 | Operating model review (with Internal Audit and Finance) | Annual |
 
 ---
-## 10. Regulatory and Framework Alignment Summary
+## 9. Regulatory and Framework Alignment Summary
 
 | **Regulation / Framework** | **Where in This Package** |
 |---|---|
@@ -220,7 +220,7 @@ Specifically, the most-reused artifacts:
 
 ---
 
-## 11. Document Control
+## 10. Document Control
 
 | | |
 |---|---|
