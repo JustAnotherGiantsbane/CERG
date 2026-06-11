@@ -1,0 +1,634 @@
+# CERG Publication Eligibility Manifest
+# Generated from document metadata | 70 artifacts
+# Separates "approved" status from "safe to publish"
+
+- document_id: CERG-GOV-OM-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-CB-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader (Control Baseline)
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-MTR-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-FRM-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: CISO
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-RMF-001
+  classification: Internal / Restricted
+  publication_profile: public
+  public_summary_allowed: false
+  full_text_public_allowed: false
+  redaction_required: true
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-TAX-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-CMX-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-IMP-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader (Document Control)
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-VAR-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader (Document Control)
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-MAT-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader (Document Control)
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-RAC-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader (Policy & Standards)
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-CAL-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-STY-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader (Policy & Standards)
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-TRC-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader (Control Baseline)
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-IMPREG-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-CEF-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-JA-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader (Policy & Standards)
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-JD-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader (Policy & Standards)
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-CMP-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader (Policy & Standards)
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-PERF-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader (Policy & Standards)
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-ONB-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader (Policy & Standards)
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-WFP-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader (Policy & Standards)
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-TRN-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader (Policy & Standards)
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-SUCC-001
+  classification: Confidential - CISO and Pillar Leaders
+  publication_profile: public
+  public_summary_allowed: false
+  full_text_public_allowed: false
+  redaction_required: true
+  approved_public_release_by: CISO
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-CON-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader (Policy & Standards)
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-STD-IT-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-STD-OT-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-STD-CUI-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-STD-AC-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-STD-CFG-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-STD-LM-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-STD-RES-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-STD-CR-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-STD-SDL-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Engineering Pillar Leader (Application Security)
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-STD-AM-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Engineering Pillar Leader (Platforms)
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-STD-NET-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Engineering Pillar Leader (Platforms)
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-STD-EP-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Engineering Pillar Leader (Endpoint)
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-STD-DG-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader (Policy & Standards)
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-STD-AI-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Engineering Pillar Leader (Application Security)
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-STD-MSG-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Engineering Pillar Leader (Platforms)
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-PRC-VM-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-PRC-RM-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-PRC-AR-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-PRC-AC-002
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-PRC-TPRM-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-PRC-AV-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-PRC-IR-002
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-PRC-TM-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Risk Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-PRC-TI-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Risk Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-PRC-AUD-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-PRC-CHG-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Engineering Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-PRC-LL-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-PLN-IR-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-PLN-CUI-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-PLN-CIP-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-PLN-SOX-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-PLN-BC-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-PLN-ISO-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-PLN-PRIV-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-TMPL-RM-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-TMPL-CUI-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: CMMC / Federal Compliance Manager
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-TMPL-CUI-002
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: CMMC / Federal Compliance Manager
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-TMPL-RM-002
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Risk Register Owner
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-TMPL-AR-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Engineering Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-TMPL-TPRM-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Vendor Risk Analyst
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-TMPL-RM-003
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Risk Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-TMPL-AUD-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Evidence Librarian
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-TMPL-MTR-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-TMPL-GOV-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'
+- document_id: CERG-GOV-CAT-001
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader (Document Control)
+  release_date: '2026-05-27'
+  review_date: '2026-08-27'

@@ -1,0 +1,2761 @@
+# CERG Content Type Tags
+# Section headings tagged by content function | 70 documents
+
+CERG-GOV-OM-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - governance
+  - heading: Operating Premise
+    tags:
+    - governance
+  - heading: The Three Pillars
+    tags:
+    - governance
+  - heading: Authority, Reporting, and Decision Rights
+    tags:
+    - governance
+  - heading: Engagement Models
+    tags:
+    - governance
+  - heading: Staffing and Roles
+    tags:
+    - role
+    - governance
+  - heading: Coordination Cadence
+    tags:
+    - governance
+  - heading: Interfaces With Other Functions
+    tags:
+    - governance
+  - heading: RACI Patterns
+    tags:
+    - governance
+  - heading: Maturity, Metrics, and the Adaptive Target
+    tags:
+    - metric
+    - governance
+  - heading: Operating Model Control
+    tags:
+    - control
+    - governance
+CERG-GOV-CB-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - governance
+  - heading: Design Principles
+    tags:
+    - governance
+  - heading: The CERG Control Family Spine
+    tags:
+    - control
+    - governance
+  - heading: Implementation Statuses
+    tags:
+    - governance
+  - heading: Inheritance Model
+    tags:
+    - governance
+  - heading: Organizational Baseline (Core)
+    tags:
+    - governance
+  - heading: Overlay Matrix
+    tags:
+    - governance
+  - heading: Control-to-Evidence Mapping
+    tags:
+    - evidence
+    - governance
+  - heading: Regulatory Crosswalks
+    tags:
+    - governance
+  - heading: Governance, Change, and Versioning
+    tags:
+    - governance
+  - heading: Document Control
+    tags:
+    - control
+    - governance
+CERG-GOV-MTR-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - governance
+  - heading: Reporting Principles
+    tags:
+    - governance
+  - heading: Metrics Dictionary
+    tags:
+    - metric
+    - governance
+  - heading: KRI / KPI Data Source Map
+    tags:
+    - metric
+    - governance
+  - heading: CISO Risk and Posture Dashboard
+    tags:
+    - governance
+  - heading: Quarterly Cyber Oversight Group Brief Template
+    tags:
+    - template
+  - heading: Monthly CERG Leadership Report Template
+    tags:
+    - template
+  - heading: Anti-Shallow-Metrics Guardrails
+    tags:
+    - metric
+    - governance
+  - heading: Cadence and Ownership
+    tags:
+    - governance
+  - heading: Threshold Calibration
+    tags:
+    - governance
+  - heading: Document Control
+    tags:
+    - control
+    - governance
+CERG-GOV-FRM-001:
+  sections:
+  - heading: Executive Summary
+    tags:
+    - governance
+  - heading: The CERG Operating Model
+    tags:
+    - governance
+  - heading: Cyber Engineering
+    tags:
+    - governance
+  - heading: Cyber Risk
+    tags:
+    - governance
+  - heading: Cyber Governance
+    tags:
+    - governance
+  - heading: Targeting [NIST CSF 2.0](https://www.nist.gov/cyberframework) Adaptive Maturity
+    tags:
+    - governance
+  - heading: Regulatory Alignment
+    tags:
+    - governance
+  - heading: IT/OT Considerations
+    tags:
+    - governance
+  - heading: Team Structure and Talent Model
+    tags:
+    - governance
+  - heading: 'Getting Started: The Path to Adaptive'
+    tags:
+    - governance
+  - heading: Document Control
+    tags:
+    - control
+    - governance
+CERG-GOV-RMF-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - governance
+  - heading: Framework Architecture
+    tags:
+    - governance
+  - heading: 'Phase 1: Categorize'
+    tags:
+    - governance
+  - heading: 'Phase 2: Select'
+    tags:
+    - governance
+  - heading: 'Phase 3: Implement'
+    tags:
+    - governance
+  - heading: 'Phase 4: Assess'
+    tags:
+    - governance
+  - heading: 'Phase 5: Authorize'
+    tags:
+    - governance
+  - heading: 'Phase 6: Monitor'
+    tags:
+    - governance
+  - heading: Risk Register and Risk Treatment
+    tags:
+    - governance
+  - heading: IT/OT Risk Management Considerations
+    tags:
+    - governance
+  - heading: Regulatory Alignment Quick Reference
+    tags:
+    - governance
+  - heading: Risk Appetite Calibration
+    tags:
+    - governance
+  - heading: Document Control and Review
+    tags:
+    - control
+    - governance
+CERG-GOV-TAX-001:
+  sections: []
+CERG-GOV-CMX-001:
+  sections:
+  - heading: 'Know what you own: maintain an authoritative asset inventory'
+    tags:
+    - governance
+  - heading: Identify and remediate known vulnerabilities on a defined schedule
+    tags:
+    - governance
+  - heading: 'Control who can access what: enforce least privilege'
+    tags:
+    - control
+    - governance
+  - heading: 'Authenticate users and systems: verify identity before granting access'
+    tags:
+    - governance
+  - heading: 'Harden systems: remove what isn''t needed, lock down what is'
+    tags:
+    - governance
+  - heading: 'Protect data in transit and at rest: encryption as a baseline control'
+    tags:
+    - control
+    - governance
+  - heading: 'Segment networks: limit lateral movement and blast radius'
+    tags:
+    - governance
+  - heading: 'Manage vendor and third-party risk: extend controls beyond the perimeter'
+    tags:
+    - control
+    - governance
+  - heading: 'Control and log privileged/remote access: know who did what, when'
+    tags:
+    - control
+    - governance
+  - heading: 'Conduct adversarial testing: find what scanners miss'
+    tags:
+    - governance
+  - heading: Train and background-check personnel with access to sensitive systems
+    tags:
+    - governance
+  - heading: 'Write and maintain policies: define what good looks like'
+    tags:
+    - governance
+  - heading: 'Manage configuration changes: track drift, prevent unauthorized changes'
+    tags:
+    - governance
+  - heading: 'Collect, protect, and retain audit evidence: prove controls are working'
+    tags:
+    - evidence
+    - governance
+  - heading: 'Assess your own security posture: periodic internal evaluation'
+    tags:
+    - governance
+  - heading: 'Manage risk formally: document, accept, or treat identified risks'
+    tags:
+    - governance
+  - heading: 'Protect physical access to critical systems: cyber starts at the door'
+    tags:
+    - governance
+  - heading: 'Monitor threats continuously: detect what vulnerability scans miss'
+    tags:
+    - governance
+  - heading: 'Plan and practice incident response: know what to do before it happens'
+    tags:
+    - governance
+  - heading: 'Manage recovery: restore operations and capture lessons learned'
+    tags:
+    - governance
+  - heading: 'Manage accounts throughout their lifecycle: provisioning through termination'
+    tags:
+    - governance
+  - heading: 'Define and enforce a compliance calendar: no surprises at audit time'
+    tags:
+    - governance
+  - heading: Document Control
+    tags:
+    - control
+    - governance
+CERG-GOV-IMP-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - governance
+  - heading: Before You Start
+    tags:
+    - governance
+  - heading: The Adoption Model
+    tags:
+    - governance
+  - heading: Minimum Viable CERG
+    tags:
+    - governance
+  - heading: The 30/60/90-Day Rollout
+    tags:
+    - governance
+  - heading: 'Scaling the Model: 5 People to 60'
+    tags:
+    - governance
+  - heading: Adapting the Documents
+    tags:
+    - governance
+  - heading: First-Adoption Sign-Off Workflow
+    tags:
+    - governance
+  - heading: Common Adoption Pitfalls
+    tags:
+    - governance
+  - heading: Employer Brand and Talent Attraction
+    tags:
+    - governance
+  - heading: Document Control
+    tags:
+    - control
+    - governance
+CERG-GOV-VAR-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - governance
+  - heading: How Adaptation Works
+    tags:
+    - governance
+  - heading: The Token Scheme
+    tags:
+    - governance
+  - heading: Token Catalog
+    tags:
+    - governance
+  - heading: The Organization Profile File
+    tags:
+    - governance
+  - heading: The Render Tool
+    tags:
+    - governance
+  - heading: The Phrase Map
+    tags:
+    - governance
+  - heading: Adaptation Workflow
+    tags:
+    - governance
+  - heading: Rules and Discipline
+    tags:
+    - governance
+  - heading: Document Control
+    tags:
+    - control
+    - governance
+CERG-GOV-MAT-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - governance
+  - heading: How the Assessment Works
+    tags:
+    - governance
+  - heading: The Tier Scale
+    tags:
+    - governance
+  - heading: Scoring Rules
+    tags:
+    - governance
+  - heading: 'The Assessment: Governance Domains'
+    tags:
+    - governance
+  - heading: 'The Assessment: Engineering Domains'
+    tags:
+    - governance
+  - heading: 'The Assessment: Risk Domains'
+    tags:
+    - governance
+  - heading: 'The Assessment: Cross-Pillar Domains'
+    tags:
+    - governance
+  - heading: Scoring the Result
+    tags:
+    - governance
+  - heading: The Scorecard Output
+    tags:
+    - governance
+  - heading: Turning Gaps Into Work
+    tags:
+    - governance
+  - heading: Quarterly Gap Checkpoint
+    tags:
+    - governance
+  - heading: Document Control
+    tags:
+    - control
+    - governance
+CERG-GOV-RAC-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - governance
+  - heading: How This Instrument Relates to the Operating Model
+    tags:
+    - governance
+  - heading: RACI Definitions and Rules
+    tags:
+    - definition
+    - governance
+  - heading: The Canonical Role Reference
+    tags:
+    - role
+    - governance
+  - heading: 'Master RACI: Document Ownership'
+    tags:
+    - governance
+  - heading: 'Master RACI: Standing Processes'
+    tags:
+    - procedure
+    - governance
+  - heading: Role Descriptions
+    tags:
+    - role
+    - governance
+  - heading: The Scaling Map
+    tags:
+    - governance
+  - heading: Maintaining This Instrument
+    tags:
+    - governance
+  - heading: Document Control
+    tags:
+    - control
+    - governance
+CERG-GOV-CAL-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - governance
+  - heading: Calendar Rules
+    tags:
+    - governance
+  - heading: Standing Cadence Summary
+    tags:
+    - governance
+  - heading: Annual Calendar by Quarter
+    tags:
+    - governance
+  - heading: Monthly Operating Rhythm
+    tags:
+    - governance
+  - heading: Quarterly Operating Rhythm
+    tags:
+    - governance
+  - heading: Annual Operating Rhythm
+    tags:
+    - governance
+  - heading: Event-Driven Triggers
+    tags:
+    - governance
+  - heading: Calendar Maintenance
+    tags:
+    - governance
+  - heading: Document Control
+    tags:
+    - control
+    - governance
+CERG-GOV-STY-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - governance
+  - heading: CERG House Voice
+    tags:
+    - governance
+  - heading: Document Anatomy
+    tags:
+    - governance
+  - heading: Metadata Rules
+    tags:
+    - governance
+  - heading: ID, File Name, and Status Rules
+    tags:
+    - governance
+  - heading: Role and RACI Rules
+    tags:
+    - role
+    - governance
+  - heading: Cross-Reference Rules
+    tags:
+    - governance
+  - heading: Callouts, Tables, and Lists
+    tags:
+    - governance
+  - heading: Language and Style Rules
+    tags:
+    - governance
+  - heading: Org-Adaptation and Token Rules
+    tags:
+    - governance
+  - heading: Blank Document Skeleton
+    tags:
+    - governance
+  - heading: Quality Gates Before Commit
+    tags:
+    - governance
+  - heading: Document Control
+    tags:
+    - control
+    - governance
+CERG-GOV-TRC-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - governance
+  - heading: How to Read the Matrix
+    tags:
+    - governance
+  - heading: Traceability Rules
+    tags:
+    - governance
+  - heading: Baseline Control Traceability Matrix
+    tags:
+    - control
+    - governance
+  - heading: Overlay Traceability
+    tags:
+    - governance
+  - heading: Gap Detection Rules
+    tags:
+    - governance
+  - heading: Maintenance Workflow
+    tags:
+    - governance
+  - heading: Document Control
+    tags:
+    - control
+    - governance
+CERG-GOV-IMPREG-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - governance
+  - heading: Why a Separate Improvement Register
+    tags:
+    - governance
+  - heading: Register Schema
+    tags:
+    - governance
+  - heading: Improvement Lifecycle
+    tags:
+    - governance
+  - heading: Integration with the Risk Register
+    tags:
+    - governance
+  - heading: Integration with Other CERG Instruments
+    tags:
+    - governance
+  - heading: Reporting
+    tags:
+    - governance
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - governance
+  - heading: Register Maintenance and Hygiene
+    tags:
+    - governance
+  - heading: Document Control
+    tags:
+    - control
+    - governance
+CERG-GOV-CEF-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - governance
+  - heading: Why Implementation Is Not Effectiveness
+    tags:
+    - governance
+  - heading: Effectiveness Measurement Model
+    tags:
+    - governance
+  - heading: Control Family Effectiveness Metrics
+    tags:
+    - metric
+    - governance
+  - heading: Control Failure Analysis
+    tags:
+    - control
+    - governance
+  - heading: Control Rationalization
+    tags:
+    - control
+    - governance
+  - heading: Integration with Maturity Assessment
+    tags:
+    - governance
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - governance
+  - heading: Document Control
+    tags:
+    - control
+    - governance
+CERG-GOV-JA-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - governance
+  - heading: Design Principles
+    tags:
+    - governance
+  - heading: The Two-Track Model
+    tags:
+    - governance
+  - heading: 'SME Progression: Grade Definitions'
+    tags:
+    - definition
+    - governance
+  - heading: 'Management Progression: Grade Definitions'
+    tags:
+    - definition
+    - governance
+  - heading: 'Leveling Guide: Dimensions of Growth'
+    tags:
+    - governance
+  - heading: Role-to-Grade Mapping
+    tags:
+    - role
+    - governance
+  - heading: 'Career Pathing: Moving Between Tracks and Pillars'
+    tags:
+    - governance
+  - heading: Span of Control and Team Design
+    tags:
+    - control
+    - governance
+  - heading: Compensation Philosophy
+    tags:
+    - governance
+  - heading: Adapting Grade Titles to Your Organization
+    tags:
+    - governance
+  - heading: Document Control
+    tags:
+    - control
+    - governance
+CERG-GOV-JD-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - governance
+  - heading: How to Read These Descriptions
+    tags:
+    - governance
+  - heading: Executive Roles
+    tags:
+    - role
+    - governance
+  - heading: Engineering Pillar Roles
+    tags:
+    - role
+    - governance
+  - heading: Risk Pillar Roles
+    tags:
+    - role
+    - governance
+  - heading: Governance Pillar Roles
+    tags:
+    - role
+    - governance
+  - heading: Adjacent Roles (Incident Response)
+    tags:
+    - role
+    - governance
+  - heading: Using These Descriptions for Hiring
+    tags:
+    - governance
+  - heading: Document Control
+    tags:
+    - control
+    - governance
+CERG-GOV-CMP-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - governance
+  - heading: How This Model Works
+    tags:
+    - governance
+  - heading: Competency Domains
+    tags:
+    - governance
+  - heading: 'Engineering Pillar: Competency Matrix and Behavioral Anchors'
+    tags:
+    - governance
+  - heading: 'Risk Pillar: Competency Matrix and Behavioral Anchors'
+    tags:
+    - governance
+  - heading: 'Governance Pillar: Competency Matrix and Behavioral Anchors'
+    tags:
+    - governance
+  - heading: Management Track Competency Addendum
+    tags:
+    - governance
+  - heading: Using This Model for Hiring, Development, and Promotion
+    tags:
+    - governance
+  - heading: Mapping to NICE and Industry Frameworks
+    tags:
+    - governance
+  - heading: Document Control
+    tags:
+    - control
+    - governance
+CERG-GOV-PERF-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - governance
+  - heading: Design Principles
+    tags:
+    - governance
+  - heading: Performance Management Cadence
+    tags:
+    - governance
+  - heading: Evaluation Dimensions
+    tags:
+    - governance
+  - heading: The Performance Conversation
+    tags:
+    - governance
+  - heading: Calibration Process
+    tags:
+    - procedure
+    - governance
+  - heading: Promotion Process
+    tags:
+    - procedure
+    - governance
+  - heading: Performance Improvement Process
+    tags:
+    - procedure
+    - governance
+  - heading: Documentation Standards
+    tags:
+    - standard
+    - governance
+  - heading: Integration with Other CERG Instruments
+    tags:
+    - governance
+  - heading: Document Control
+    tags:
+    - control
+    - governance
+CERG-GOV-ONB-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - governance
+  - heading: Onboarding Philosophy
+    tags:
+    - governance
+  - heading: 'Before Day One: Manager Preparation'
+    tags:
+    - governance
+  - heading: 'Week One: Orientation and Access'
+    tags:
+    - governance
+  - heading: The 30/60/90-Day Model
+    tags:
+    - governance
+  - heading: 'CERG 101: The Core Curriculum'
+    tags:
+    - governance
+  - heading: The Buddy System
+    tags:
+    - governance
+  - heading: The First Contribution Milestone
+    tags:
+    - governance
+  - heading: Cross-Pillar Rotation
+    tags:
+    - governance
+  - heading: Role-Specific Onboarding by Family
+    tags:
+    - role
+    - governance
+  - heading: Onboarding for Managers
+    tags:
+    - governance
+  - heading: Measuring Onboarding Effectiveness
+    tags:
+    - governance
+  - heading: Document Control
+    tags:
+    - control
+    - governance
+CERG-GOV-WFP-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - governance
+  - heading: The Capacity Problem
+    tags:
+    - governance
+  - heading: Workload Drivers by Pillar
+    tags:
+    - governance
+  - heading: The Staffing Methodology
+    tags:
+    - governance
+  - heading: 'Engineering Pillar: Capacity Model'
+    tags:
+    - governance
+  - heading: 'Risk Pillar: Capacity Model'
+    tags:
+    - governance
+  - heading: 'Governance Pillar: Capacity Model'
+    tags:
+    - governance
+  - heading: 'The Scaling Map: From 5 to 60+'
+    tags:
+    - governance
+  - heading: Validating the Model
+    tags:
+    - governance
+  - heading: Document Control
+    tags:
+    - control
+    - governance
+CERG-GOV-TRN-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - governance
+  - heading: Training Philosophy
+    tags:
+    - governance
+  - heading: 'Certification Matrix: Required, Recommended, and Aspirational'
+    tags:
+    - governance
+  - heading: Training Curriculum by Competency Domain
+    tags:
+    - governance
+  - heading: 'Cross-Training: The 5% Rule'
+    tags:
+    - governance
+  - heading: Professional Development Budget
+    tags:
+    - governance
+  - heading: Conference and External Engagement
+    tags:
+    - governance
+  - heading: Training Administration
+    tags:
+    - governance
+  - heading: Document Control
+    tags:
+    - control
+    - governance
+CERG-GOV-SUCC-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - governance
+  - heading: The Single-Point-of-Failure Problem
+    tags:
+    - governance
+  - heading: Annual Talent Review
+    tags:
+    - governance
+  - heading: The Succession Heat Map
+    tags:
+    - governance
+  - heading: Emergency Succession
+    tags:
+    - governance
+  - heading: Successor Development Plans
+    tags:
+    - governance
+  - heading: Cross-Pillar Succession
+    tags:
+    - governance
+  - heading: Confidentiality and Access
+    tags:
+    - governance
+  - heading: Document Control
+    tags:
+    - control
+    - governance
+CERG-GOV-CON-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - governance
+  - heading: The Contractor Reality
+    tags:
+    - governance
+  - heading: 'Role Eligibility: Who Can Be a Contractor'
+    tags:
+    - role
+    - governance
+  - heading: Engagement Models
+    tags:
+    - governance
+  - heading: Supervision and Accountability
+    tags:
+    - governance
+  - heading: Knowledge Retention and Artifact Ownership
+    tags:
+    - governance
+  - heading: Contractor Onboarding
+    tags:
+    - governance
+  - heading: Contractor Offboarding
+    tags:
+    - governance
+  - heading: Contractor Performance and Renewal
+    tags:
+    - governance
+  - heading: Document Control
+    tags:
+    - control
+    - governance
+CERG-STD-IT-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - standard
+  - heading: CERG Roles in Hosted and Cloud Environments
+    tags:
+    - role
+    - standard
+  - heading: 'GOVERN: Cloud Program Foundation and Shared Responsibility'
+    tags:
+    - standard
+  - heading: 'IDENTIFY: Visibility Across Estates'
+    tags:
+    - standard
+  - heading: 'PROTECT: Architecture, Identity, and Data'
+    tags:
+    - standard
+  - heading: 'DETECT: Cloud-Native and Cross-Estate Monitoring'
+    tags:
+    - standard
+  - heading: 'RESPOND: Containment Without Crossing Tenant Boundaries'
+    tags:
+    - standard
+  - heading: 'RECOVER: Resilience in Multi-Tenant Environments'
+    tags:
+    - standard
+  - heading: Training and Personnel
+    tags:
+    - standard
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - standard
+  - heading: Exceptions and Escalation
+    tags:
+    - exception
+    - standard
+  - heading: Document Control
+    tags:
+    - control
+    - standard
+CERG-STD-OT-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - standard
+  - heading: CERG Roles in Grid and Control System Security
+    tags:
+    - control
+    - standard
+  - heading: 'GOVERN: Program Foundation and Risk Management'
+    tags:
+    - standard
+  - heading: 'IDENTIFY: Visibility Into Assets and Threats'
+    tags:
+    - standard
+  - heading: 'PROTECT: Reduce Attack Surface and Limit Blast Radius'
+    tags:
+    - standard
+  - heading: 'DETECT: Find Threats Before They Find the Grid'
+    tags:
+    - standard
+  - heading: 'RESPOND: React Without Making It Worse'
+    tags:
+    - standard
+  - heading: 'RECOVER: Restore Operations and Capture Learning'
+    tags:
+    - standard
+  - heading: Training and Personnel Security
+    tags:
+    - standard
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - standard
+  - heading: Exceptions and Escalation
+    tags:
+    - exception
+    - standard
+  - heading: Document Control
+    tags:
+    - control
+    - standard
+CERG-STD-CUI-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - standard
+  - heading: CERG Roles in CUI Environments
+    tags:
+    - role
+    - standard
+  - heading: 'GOVERN: CUI Program Foundation'
+    tags:
+    - standard
+  - heading: 'IDENTIFY: Inventory, Boundary, and Flow'
+    tags:
+    - standard
+  - heading: 'PROTECT: Control Implementation for CUI'
+    tags:
+    - control
+    - standard
+  - heading: 'DETECT: Monitoring CUI Environments'
+    tags:
+    - standard
+  - heading: 'RESPOND: Cyber Incident Reporting Under DFARS'
+    tags:
+    - standard
+  - heading: 'RECOVER: Recovery and Lessons Learned'
+    tags:
+    - standard
+  - heading: Training and Personnel
+    tags:
+    - standard
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - standard
+  - heading: Exceptions, POA&M, and SSP Maintenance
+    tags:
+    - exception
+    - standard
+  - heading: Document Control
+    tags:
+    - control
+    - standard
+CERG-STD-AC-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - standard
+  - heading: CERG Roles in Access Management
+    tags:
+    - role
+    - standard
+  - heading: Identity Foundation
+    tags:
+    - standard
+  - heading: Authentication
+    tags:
+    - standard
+  - heading: Authorization
+    tags:
+    - standard
+  - heading: Privileged Access Management
+    tags:
+    - standard
+  - heading: Remote, Vendor, and Third-Party Access
+    tags:
+    - standard
+  - heading: Identity Lifecycle (Joiner / Mover / Leaver)
+    tags:
+    - standard
+  - heading: Access Review and Recertification
+    tags:
+    - standard
+  - heading: Monitoring, Logging, and Detection
+    tags:
+    - standard
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - standard
+  - heading: Exceptions and Escalation
+    tags:
+    - exception
+    - standard
+  - heading: Document Control
+    tags:
+    - control
+    - standard
+CERG-STD-CFG-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - standard
+  - heading: The DISH Profile
+    tags:
+    - standard
+  - heading: Baseline Tiers and When Each Applies
+    tags:
+    - standard
+  - heading: Baseline Catalog
+    tags:
+    - standard
+  - heading: IT Platform Baselines
+    tags:
+    - standard
+  - heading: Cloud Baselines
+    tags:
+    - standard
+  - heading: Container and Kubernetes Baseline
+    tags:
+    - standard
+  - heading: Network and Firewall Baselines
+    tags:
+    - standard
+  - heading: SaaS Tier 1 Baselines
+    tags:
+    - standard
+  - heading: OT Platform Baselines
+    tags:
+    - standard
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - standard
+  - heading: Document Control
+    tags:
+    - control
+    - standard
+CERG-STD-LM-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - standard
+  - heading: Operating Principles
+    tags:
+    - standard
+  - heading: Mandatory Log Sources
+    tags:
+    - standard
+  - heading: Log Routing, Protection, and Retention
+    tags:
+    - standard
+  - heading: SIEM Onboarding
+    tags:
+    - standard
+  - heading: Day-One Detection Set
+    tags:
+    - standard
+  - heading: Detection Lifecycle and Validation
+    tags:
+    - standard
+  - heading: Alert Triage and Tuning
+    tags:
+    - standard
+  - heading: OT Monitoring Overlay
+    tags:
+    - standard
+  - heading: CUI Monitoring Overlay
+    tags:
+    - standard
+  - heading: Identity Detection Use Case Pack
+    tags:
+    - standard
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - standard
+  - heading: Document Control
+    tags:
+    - control
+    - standard
+CERG-STD-RES-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - standard
+  - heading: 'Boundary: Cyber Resilience vs. Enterprise BCP'
+    tags:
+    - standard
+  - heading: Recovery Tiers and RTO/RPO Model
+    tags:
+    - standard
+  - heading: Backup Protection and Immutability
+    tags:
+    - standard
+  - heading: Restoration Testing
+    tags:
+    - standard
+  - heading: Cloud and SaaS Recovery
+    tags:
+    - standard
+  - heading: OT Recovery and CIP-009
+    tags:
+    - standard
+  - heading: CUI Recovery
+    tags:
+    - standard
+  - heading: SOX Availability Evidence
+    tags:
+    - evidence
+    - standard
+  - heading: Roles and BCP Interface
+    tags:
+    - role
+    - standard
+  - heading: Recovery Plan Template
+    tags:
+    - template
+  - heading: Document Control
+    tags:
+    - control
+    - standard
+CERG-STD-CR-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - standard
+  - heading: Approved and Prohibited Algorithms
+    tags:
+    - standard
+  - heading: Cryptographic Use Cases
+    tags:
+    - standard
+  - heading: TLS and Certificate Management
+    tags:
+    - standard
+  - heading: Key Management
+    tags:
+    - standard
+  - heading: Customer-Managed Keys (CMK) Decision Guide
+    tags:
+    - standard
+  - heading: Secrets, API Keys, and Tokens
+    tags:
+    - standard
+  - heading: Rotation Cadence
+    tags:
+    - standard
+  - heading: FIPS / FedRAMP / CUI Cryptography Checklist
+    tags:
+    - standard
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - standard
+  - heading: Document Control
+    tags:
+    - control
+    - standard
+CERG-STD-SDL-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - standard
+  - heading: Principles
+    tags:
+    - standard
+  - heading: The Secure SDLC
+    tags:
+    - standard
+  - heading: Security Gates
+    tags:
+    - standard
+  - heading: Code Review Requirements
+    tags:
+    - requirement
+    - standard
+  - heading: 'Automated Security Testing: SAST, DAST, SCA'
+    tags:
+    - standard
+  - heading: Secrets in Code
+    tags:
+    - standard
+  - heading: Dependencies and Software Bill of Materials
+    tags:
+    - standard
+  - heading: Pipeline and Build Security
+    tags:
+    - standard
+  - heading: Infrastructure as Code
+    tags:
+    - standard
+  - heading: Vulnerability Handling for Software
+    tags:
+    - standard
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - standard
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - standard
+  - heading: Document Control
+    tags:
+    - control
+    - standard
+CERG-STD-AM-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - standard
+  - heading: Principles
+    tags:
+    - standard
+  - heading: Asset Classes
+    tags:
+    - standard
+  - heading: The Authoritative Inventory
+    tags:
+    - standard
+  - heading: Required Attributes
+    tags:
+    - standard
+  - heading: Asset Ownership
+    tags:
+    - standard
+  - heading: Asset Criticality and Classification
+    tags:
+    - standard
+  - heading: The Asset Lifecycle
+    tags:
+    - standard
+  - heading: End-of-Life and Secure Disposal
+    tags:
+    - standard
+  - heading: Inventory Accuracy and Reconciliation
+    tags:
+    - standard
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - standard
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - standard
+  - heading: Document Control
+    tags:
+    - control
+    - standard
+CERG-STD-NET-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - standard
+  - heading: Principles
+    tags:
+    - standard
+  - heading: Zero-Trust Architecture
+    tags:
+    - standard
+  - heading: Network Segmentation
+    tags:
+    - standard
+  - heading: Boundary Control
+    tags:
+    - control
+    - standard
+  - heading: The IT/OT Boundary
+    tags:
+    - standard
+  - heading: Remote Access
+    tags:
+    - standard
+  - heading: Cloud Network Security
+    tags:
+    - standard
+  - heading: Network Monitoring
+    tags:
+    - standard
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - standard
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - standard
+  - heading: Document Control
+    tags:
+    - control
+    - standard
+CERG-STD-EP-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - standard
+  - heading: Principles
+    tags:
+    - standard
+  - heading: Endpoint Classes
+    tags:
+    - standard
+  - heading: Baseline Endpoint Protection
+    tags:
+    - standard
+  - heading: Endpoint Detection and Response
+    tags:
+    - standard
+  - heading: Device Posture
+    tags:
+    - standard
+  - heading: Mobile Device Management
+    tags:
+    - standard
+  - heading: Bring Your Own Device
+    tags:
+    - standard
+  - heading: Transient and Removable Devices
+    tags:
+    - standard
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - standard
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - standard
+  - heading: Document Control
+    tags:
+    - control
+    - standard
+CERG-STD-DG-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - standard
+  - heading: Principles
+    tags:
+    - standard
+  - heading: The Classification Scheme
+    tags:
+    - standard
+  - heading: Classifying Data
+    tags:
+    - standard
+  - heading: Labeling
+    tags:
+    - standard
+  - heading: Handling Requirements by Classification
+    tags:
+    - requirement
+    - standard
+  - heading: The Data Lifecycle
+    tags:
+    - standard
+  - heading: Retention and Disposal
+    tags:
+    - standard
+  - heading: Data Loss Prevention
+    tags:
+    - standard
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - standard
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - standard
+  - heading: Document Control
+    tags:
+    - control
+    - standard
+CERG-STD-AI-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - standard
+  - heading: Principles
+    tags:
+    - standard
+  - heading: AI Use Categories
+    tags:
+    - standard
+  - heading: Acceptable Use of AI
+    tags:
+    - standard
+  - heading: Data and AI
+    tags:
+    - standard
+  - heading: In-House and Embedded AI Systems
+    tags:
+    - standard
+  - heading: AI-Specific Threats
+    tags:
+    - standard
+  - heading: Third-Party AI Services
+    tags:
+    - standard
+  - heading: Shadow AI
+    tags:
+    - standard
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - standard
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - standard
+  - heading: Document Control
+    tags:
+    - control
+    - standard
+CERG-STD-MSG-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - standard
+  - heading: Principles
+    tags:
+    - standard
+  - heading: Email Authentication
+    tags:
+    - standard
+  - heading: Inbound Email Protection
+    tags:
+    - standard
+  - heading: Anti-Phishing
+    tags:
+    - standard
+  - heading: Outbound Email and Data Protection
+    tags:
+    - standard
+  - heading: Mailbox and Account Security
+    tags:
+    - standard
+  - heading: Collaboration and Messaging Platforms
+    tags:
+    - standard
+  - heading: Monitoring and Detection
+    tags:
+    - standard
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - standard
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - standard
+  - heading: Document Control
+    tags:
+    - control
+    - standard
+CERG-PRC-VM-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - procedure
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - procedure
+  - heading: Inputs to the Vulnerability Management Process
+    tags:
+    - procedure
+    - procedure
+  - heading: Discovery and Scanning
+    tags:
+    - procedure
+  - heading: Prioritization
+    tags:
+    - procedure
+  - heading: Remediation and Tracking
+    tags:
+    - procedure
+  - heading: Risk Acceptance and Exceptions
+    tags:
+    - exception
+    - procedure
+  - heading: Adversarial Validation
+    tags:
+    - procedure
+  - heading: Reporting and Metrics
+    tags:
+    - metric
+    - procedure
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - procedure
+  - heading: Procedure Control
+    tags:
+    - control
+    - procedure
+CERG-PRC-RM-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - procedure
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - procedure
+  - heading: Risk Identification
+    tags:
+    - procedure
+  - heading: Risk Assessment and Scoring
+    tags:
+    - procedure
+  - heading: Risk Treatment
+    tags:
+    - procedure
+  - heading: The Risk Register
+    tags:
+    - procedure
+  - heading: Exception Process
+    tags:
+    - exception
+    - procedure
+  - heading: Approval Authority
+    tags:
+    - procedure
+  - heading: Review, Escalation, and Reporting
+    tags:
+    - procedure
+  - heading: Integration With Other Programs
+    tags:
+    - procedure
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - procedure
+  - heading: Procedure Control
+    tags:
+    - control
+    - procedure
+CERG-PRC-AR-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - procedure
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - procedure
+  - heading: The Five-Phase Engagement Model
+    tags:
+    - procedure
+  - heading: 'Who Needs a Review: and Who Doesn''t'
+    tags:
+    - procedure
+  - heading: 'Phase 1: Intake'
+    tags:
+    - procedure
+  - heading: 'Phase 2: Architecture Review and Threat Model'
+    tags:
+    - procedure
+  - heading: 'Phase 3: Build-Time Engagement'
+    tags:
+    - procedure
+  - heading: 'Phase 4: Pre-Production Security Review'
+    tags:
+    - procedure
+  - heading: 'Phase 5: Production Handoff and Go-Live'
+    tags:
+    - procedure
+  - heading: Required Diagrams
+    tags:
+    - procedure
+  - heading: Templates
+    tags:
+    - template
+  - heading: Metrics
+    tags:
+    - metric
+    - procedure
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - procedure
+  - heading: Document Control
+    tags:
+    - control
+    - procedure
+CERG-PRC-AC-002:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - procedure
+  - heading: 'The Two Operating Models: CERG-Owned vs. Cyber-Contributing'
+    tags:
+    - procedure
+  - heading: Joiner / Mover / Leaver
+    tags:
+    - procedure
+  - heading: Access Request and Approval
+    tags:
+    - procedure
+  - heading: Access Review and Recertification
+    tags:
+    - procedure
+  - heading: Privileged Access Management (PAM)
+    tags:
+    - procedure
+  - heading: Break-Glass Access
+    tags:
+    - procedure
+  - heading: Service Accounts and Machine Identities
+    tags:
+    - procedure
+  - heading: Secrets, API Keys, and Tokens
+    tags:
+    - procedure
+  - heading: Vendor Access
+    tags:
+    - procedure
+  - heading: MFA Enrollment and Exception
+    tags:
+    - exception
+    - procedure
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - procedure
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - procedure
+  - heading: Document Control
+    tags:
+    - control
+    - procedure
+CERG-PRC-TPRM-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - procedure
+  - heading: Roles and Interface to Procurement / ERM / BR
+    tags:
+    - role
+    - procedure
+  - heading: Vendor Tiering
+    tags:
+    - procedure
+  - heading: Cyber-Specific Score Adjustment
+    tags:
+    - procedure
+  - heading: Evidence by Tier
+    tags:
+    - evidence
+    - procedure
+  - heading: Differences by Vendor Type
+    tags:
+    - procedure
+  - heading: Approved Provider and SaaS Catalog
+    tags:
+    - procedure
+  - heading: Contract Security Clause Library
+    tags:
+    - procedure
+  - heading: Shared Responsibility Matrix
+    tags:
+    - procedure
+  - heading: 'International Access: Denied by Default'
+    tags:
+    - procedure
+  - heading: SBOM and Software Integrity
+    tags:
+    - procedure
+  - heading: CIP-013 Supply Chain Plan
+    tags:
+    - procedure
+  - heading: CUI Subcontractor Flow-Down
+    tags:
+    - procedure
+  - heading: FedRAMP Equivalency Evidence
+    tags:
+    - evidence
+    - procedure
+  - heading: Supply Chain Compromise Team (SCCT)
+    tags:
+    - procedure
+  - heading: Continuous Monitoring and Re-Assessment
+    tags:
+    - procedure
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - procedure
+  - heading: Document Control
+    tags:
+    - control
+    - procedure
+CERG-PRC-AV-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - procedure
+  - heading: Engagement Types
+    tags:
+    - procedure
+  - heading: Annual Cadence and Scoping
+    tags:
+    - procedure
+  - heading: Rules of Engagement (RoE) Template
+    tags:
+    - template
+  - heading: Red-Team Engagement Charter
+    tags:
+    - procedure
+  - heading: Purple-Team Detection Validation
+    tags:
+    - procedure
+  - heading: Cloud Attack Simulation
+    tags:
+    - procedure
+  - heading: Application Penetration Test Checklist
+    tags:
+    - procedure
+  - heading: 'OT Adversarial Assessment: Safety Protocol'
+    tags:
+    - procedure
+  - heading: Finding Rating, Routing, and Retest
+    tags:
+    - procedure
+  - heading: Systemic Analysis and Program Feedback Loop
+    tags:
+    - procedure
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - procedure
+  - heading: Evidence Retention
+    tags:
+    - evidence
+    - procedure
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - procedure
+  - heading: Document Control
+    tags:
+    - control
+    - procedure
+CERG-PRC-IR-002:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - procedure
+  - heading: Ownership Boundary
+    tags:
+    - procedure
+  - heading: Common Playbook Structure
+    tags:
+    - procedure
+  - heading: 'Playbook 1: Ransomware'
+    tags:
+    - procedure
+  - heading: 'Playbook 2: Business Email Compromise'
+    tags:
+    - procedure
+  - heading: 'Playbook 3: Data Breach or Exfiltration'
+    tags:
+    - procedure
+  - heading: 'Playbook 4: Phishing Campaign'
+    tags:
+    - procedure
+  - heading: 'Playbook 5: Distributed Denial of Service'
+    tags:
+    - procedure
+  - heading: 'Playbook 6: Insider Threat'
+    tags:
+    - procedure
+  - heading: 'Playbook 7: Cloud Account Compromise'
+    tags:
+    - procedure
+  - heading: 'Playbook 8: Supply Chain Compromise'
+    tags:
+    - procedure
+  - heading: 'Playbook 9: Web Application Attack'
+    tags:
+    - procedure
+  - heading: 'Playbook 10: Malware Outbreak (Non-Ransomware)'
+    tags:
+    - procedure
+  - heading: 'Playbook 11: Zero-Day Exploitation'
+    tags:
+    - procedure
+  - heading: 'Playbook 12: Cryptographic Compromise'
+    tags:
+    - procedure
+  - heading: 'Playbook 13: Social Engineering (Vishing / Smishing)'
+    tags:
+    - procedure
+  - heading: Post-Incident CERG Actions
+    tags:
+    - procedure
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - procedure
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - procedure
+  - heading: Document Control
+    tags:
+    - control
+    - procedure
+CERG-PRC-TM-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - procedure
+  - heading: Principles
+    tags:
+    - procedure
+  - heading: When Threat Modeling Is Required
+    tags:
+    - procedure
+  - heading: Inputs
+    tags:
+    - procedure
+  - heading: Method
+    tags:
+    - procedure
+  - heading: Outputs
+    tags:
+    - procedure
+  - heading: Integration With Architecture Review
+    tags:
+    - procedure
+  - heading: Finding Severity and Treatment
+    tags:
+    - procedure
+  - heading: Scaling the Procedure
+    tags:
+    - procedure
+    - procedure
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - procedure
+  - heading: Metrics
+    tags:
+    - metric
+    - procedure
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - procedure
+  - heading: Document Control
+    tags:
+    - control
+    - procedure
+CERG-PRC-TI-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - procedure
+  - heading: Principles
+    tags:
+    - procedure
+  - heading: Intelligence Sources
+    tags:
+    - procedure
+  - heading: Intake and Triage
+    tags:
+    - procedure
+  - heading: Relevance and Priority
+    tags:
+    - procedure
+  - heading: Products and Dissemination
+    tags:
+    - procedure
+  - heading: Action Tracking
+    tags:
+    - procedure
+  - heading: Integration With CERG Processes
+    tags:
+    - procedure
+    - procedure
+  - heading: Intelligence-Driven Program Reprioritization
+    tags:
+    - procedure
+  - heading: External Collaboration and Information Sharing
+    tags:
+    - procedure
+  - heading: Metrics
+    tags:
+    - metric
+    - procedure
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - procedure
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - procedure
+  - heading: Document Control
+    tags:
+    - control
+    - procedure
+CERG-PRC-AUD-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - procedure
+  - heading: Principles
+    tags:
+    - procedure
+  - heading: Evidence Library Structure
+    tags:
+    - evidence
+    - procedure
+  - heading: Evidence Types and Quality Bar
+    tags:
+    - evidence
+    - procedure
+  - heading: Evidence Collection Cadence
+    tags:
+    - evidence
+    - procedure
+  - heading: Control Testing
+    tags:
+    - control
+    - procedure
+  - heading: Audit Intake and Response
+    tags:
+    - procedure
+  - heading: Findings and Corrective Actions
+    tags:
+    - procedure
+  - heading: Metrics
+    tags:
+    - metric
+    - procedure
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - procedure
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - procedure
+  - heading: Document Control
+    tags:
+    - control
+    - procedure
+CERG-PRC-CHG-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - procedure
+  - heading: Principles
+    tags:
+    - procedure
+  - heading: What Is a Security-Relevant Change
+    tags:
+    - procedure
+  - heading: Change Categories
+    tags:
+    - procedure
+  - heading: Security Review Requirements
+    tags:
+    - requirement
+    - procedure
+  - heading: Emergency Changes
+    tags:
+    - procedure
+  - heading: SOX and Regulated-Scope Changes
+    tags:
+    - scope
+    - procedure
+  - heading: Evidence and Records
+    tags:
+    - evidence
+    - procedure
+  - heading: Metrics
+    tags:
+    - metric
+    - procedure
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - procedure
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - procedure
+  - heading: Document Control
+    tags:
+    - control
+    - procedure
+CERG-PRC-LL-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - procedure
+  - heading: Principles
+    tags:
+    - procedure
+  - heading: Intake Sources and Triggers
+    tags:
+    - procedure
+  - heading: Lesson Triage and Classification
+    tags:
+    - procedure
+  - heading: Quarterly Lessons Aggregation
+    tags:
+    - procedure
+  - heading: Improvement Action Pipeline
+    tags:
+    - procedure
+  - heading: Improvement Register Integration
+    tags:
+    - procedure
+  - heading: Verification and Closure
+    tags:
+    - procedure
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - procedure
+  - heading: Metrics
+    tags:
+    - metric
+    - procedure
+  - heading: Document Control
+    tags:
+    - control
+    - procedure
+CERG-PLN-IR-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - plan
+  - heading: Authority and Activation
+    tags:
+    - plan
+  - heading: Roles and the Incident Response Team
+    tags:
+    - role
+    - plan
+  - heading: Incident Lifecycle
+    tags:
+    - plan
+  - heading: Severity Classification
+    tags:
+    - plan
+  - heading: Notification Obligations
+    tags:
+    - plan
+  - heading: Environment-Specific Considerations
+    tags:
+    - plan
+  - heading: Playbooks
+    tags:
+    - plan
+  - heading: Communications
+    tags:
+    - plan
+  - heading: Evidence, Forensics, and Legal Privilege
+    tags:
+    - evidence
+    - plan
+  - heading: Exercises and Plan Maintenance
+    tags:
+    - plan
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - plan
+  - heading: Plan Control
+    tags:
+    - control
+    - plan
+CERG-PLN-CUI-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - plan
+  - heading: 'Assumed Scrutiny Level: [CMMC L2](https://dodcio.defense.gov/CMMC/) Third-Party Assessment'
+    tags:
+    - plan
+  - heading: 'CUI Boundary: Finding It and Drawing It'
+    tags:
+    - plan
+  - heading: SSP Template
+    tags:
+    - template
+  - heading: POA&M Template
+    tags:
+    - template
+  - heading: SPRS Score Worksheet
+    tags:
+    - plan
+  - heading: CUI Boundary Diagram Template
+    tags:
+    - template
+  - heading: CUI Data Flow Map Template
+    tags:
+    - template
+  - heading: CUI Category Register
+    tags:
+    - plan
+  - heading: 800-171 Practice Evidence Matrix
+    tags:
+    - evidence
+    - plan
+  - heading: '[CMMC L2](https://dodcio.defense.gov/CMMC/) Readiness Checklist'
+    tags:
+    - plan
+  - heading: C3PAO Assessment Logistics
+    tags:
+    - plan
+  - heading: CUI Subcontractor Register
+    tags:
+    - plan
+  - heading: FedRAMP Equivalency Evidence Checklist
+    tags:
+    - evidence
+    - plan
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - plan
+  - heading: Document Control
+    tags:
+    - control
+    - plan
+CERG-PLN-CIP-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - plan
+  - heading: Three-Lines-of-Defense Model
+    tags:
+    - plan
+  - heading: CIP Version Strategy
+    tags:
+    - plan
+  - heading: BES Cyber System Categorization Procedure
+    tags:
+    - procedure
+    - plan
+  - heading: ESP / EAP Topology Documentation
+    tags:
+    - plan
+  - heading: NERC-CIP Evidence Library Procedure (`CERG-GOV-CIP-001`)
+    tags:
+    - evidence
+    - plan
+  - heading: OT Vulnerability Management Procedure (`CERG-PRC-VM-001`)
+    tags:
+    - procedure
+    - plan
+  - heading: BES Cyber System Access Management Procedure (`CERG-PRC-AC-002-BES`)
+    tags:
+    - procedure
+    - plan
+  - heading: CIP Deviation and Mitigation Plan Template (`CERG-TMPL-CIP-001`)
+    tags:
+    - template
+  - heading: IT/OT Convergence Security Architecture Guideline (`CERG-STD-OT-001 (planned IT/OT convergence architecture guideline to be registered as CERG-GL-OT-001 in future catalog amendment)`)
+    tags:
+    - plan
+  - heading: CIP-013 Supply Chain Risk Management Plan
+    tags:
+    - plan
+  - heading: CIP-009 Recovery Plan Package
+    tags:
+    - plan
+  - heading: Operating Cadence and Reporting
+    tags:
+    - plan
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - plan
+  - heading: Document Control
+    tags:
+    - control
+    - plan
+CERG-PLN-SOX-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - plan
+  - heading: In-Scope ITGC Domains
+    tags:
+    - scope
+    - plan
+  - heading: SOX-Relevant System Register
+    tags:
+    - plan
+  - heading: ITGC Control Library
+    tags:
+    - control
+    - plan
+  - heading: Evidence Reuse Mapping
+    tags:
+    - evidence
+    - plan
+  - heading: Deficiency Workflow
+    tags:
+    - plan
+  - heading: Auditor Interface
+    tags:
+    - plan
+  - heading: Operating Cadence
+    tags:
+    - plan
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - plan
+  - heading: Document Control
+    tags:
+    - control
+    - plan
+CERG-PLN-BC-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - plan
+  - heading: BCP and Cyber Recovery Boundary
+    tags:
+    - plan
+  - heading: Business Impact Analysis
+    tags:
+    - plan
+  - heading: Recovery Tier Model
+    tags:
+    - plan
+  - heading: Recovery Sequencing
+    tags:
+    - plan
+  - heading: Crisis Roles and Governance
+    tags:
+    - role
+    - plan
+  - heading: Plan Activation and Communications
+    tags:
+    - plan
+  - heading: Disaster Recovery Exercise Program
+    tags:
+    - plan
+  - heading: Evidence and Records
+    tags:
+    - evidence
+    - plan
+  - heading: Metrics
+    tags:
+    - metric
+    - plan
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - plan
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - plan
+  - heading: Document Control
+    tags:
+    - control
+    - plan
+CERG-PLN-ISO-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - plan
+  - heading: ISMS Boundary
+    tags:
+    - plan
+  - heading: ISO 27001 Operating Model
+    tags:
+    - plan
+  - heading: Statement of Applicability
+    tags:
+    - plan
+  - heading: Annex A Mapping
+    tags:
+    - plan
+  - heading: Risk Assessment and Treatment Interface
+    tags:
+    - plan
+  - heading: Internal Audit Program
+    tags:
+    - plan
+  - heading: Management Review Package
+    tags:
+    - plan
+  - heading: Certification and External Audit Interface
+    tags:
+    - plan
+  - heading: Evidence Library
+    tags:
+    - evidence
+    - plan
+  - heading: Metrics
+    tags:
+    - metric
+    - plan
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - plan
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - plan
+  - heading: Document Control
+    tags:
+    - control
+    - plan
+CERG-PLN-PRIV-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - plan
+  - heading: Ownership Boundary
+    tags:
+    - plan
+  - heading: Privacy Data Inventory
+    tags:
+    - plan
+  - heading: Privacy Impact and DPIA Workflow
+    tags:
+    - plan
+  - heading: Data Subject Request Support
+    tags:
+    - plan
+  - heading: Breach Notification Clock Support
+    tags:
+    - plan
+  - heading: Third-Party Privacy Risk
+    tags:
+    - plan
+  - heading: Retention, Deletion, and Minimization
+    tags:
+    - plan
+  - heading: Evidence Library
+    tags:
+    - evidence
+    - plan
+  - heading: Metrics
+    tags:
+    - metric
+    - plan
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - plan
+  - heading: Regulatory and Framework Alignment Summary
+    tags:
+    - plan
+  - heading: Document Control
+    tags:
+    - control
+    - plan
+CERG-TMPL-RM-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - template
+  - heading: Risk Statement Standard
+    tags:
+    - standard
+    - template
+  - heading: Risk Register Schema
+    tags:
+    - template
+  - heading: Worked Examples
+    tags:
+    - example
+    - template
+  - heading: Exception Request Template
+    tags:
+    - exception
+    - template
+  - heading: Risk Scoring Guide
+    tags:
+    - template
+  - heading: CISO Slice-and-Dice Reporting Views
+    tags:
+    - template
+  - heading: Document Control
+    tags:
+    - control
+    - template
+CERG-TMPL-CUI-001:
+  sections:
+  - heading: Purpose and Use
+    tags:
+    - scope
+    - template
+  - heading: Template Instructions
+    tags:
+    - template
+  - heading: SSP Cover Page
+    tags:
+    - template
+  - heading: System Boundary
+    tags:
+    - template
+  - heading: System Environment
+    tags:
+    - template
+  - heading: CUI Data Flow
+    tags:
+    - template
+  - heading: Roles and Responsibilities
+    tags:
+    - role
+    - template
+  - heading: Control Implementation Matrix
+    tags:
+    - control
+    - template
+  - heading: Inherited Controls
+    tags:
+    - control
+    - template
+  - heading: External Providers and Interconnections
+    tags:
+    - template
+  - heading: Open Items and POA&M Linkage
+    tags:
+    - template
+  - heading: Evidence Index
+    tags:
+    - evidence
+    - template
+  - heading: Approval and Maintenance
+    tags:
+    - template
+  - heading: Document Control
+    tags:
+    - control
+    - template
+CERG-TMPL-CUI-002:
+  sections:
+  - heading: Purpose and Use
+    tags:
+    - scope
+    - template
+  - heading: POA&M Discipline
+    tags:
+    - template
+  - heading: POA&M Register Template
+    tags:
+    - template
+  - heading: Milestone Detail Template
+    tags:
+    - template
+  - heading: Evidence and Validation
+    tags:
+    - evidence
+    - template
+  - heading: Closure Criteria
+    tags:
+    - template
+  - heading: Review Cadence
+    tags:
+    - template
+  - heading: Document Control
+    tags:
+    - control
+    - template
+CERG-TMPL-RM-002:
+  sections:
+  - heading: Purpose and Use
+    tags:
+    - scope
+    - template
+  - heading: Template Instructions
+    tags:
+    - template
+  - heading: Fill-In Template
+    tags:
+    - template
+  - heading: Review and Approval
+    tags:
+    - template
+  - heading: Document Control
+    tags:
+    - control
+    - template
+CERG-TMPL-AR-001:
+  sections:
+  - heading: Purpose and Use
+    tags:
+    - scope
+    - template
+  - heading: Template Instructions
+    tags:
+    - template
+  - heading: Fill-In Template
+    tags:
+    - template
+  - heading: Review and Approval
+    tags:
+    - template
+  - heading: Document Control
+    tags:
+    - control
+    - template
+CERG-TMPL-TPRM-001:
+  sections:
+  - heading: Purpose and Use
+    tags:
+    - scope
+    - template
+  - heading: Template Instructions
+    tags:
+    - template
+  - heading: Fill-In Template
+    tags:
+    - template
+  - heading: Review and Approval
+    tags:
+    - template
+  - heading: Document Control
+    tags:
+    - control
+    - template
+CERG-TMPL-RM-003:
+  sections:
+  - heading: Purpose and Use
+    tags:
+    - scope
+    - template
+  - heading: Template Instructions
+    tags:
+    - template
+  - heading: Fill-In Template
+    tags:
+    - template
+  - heading: Review and Approval
+    tags:
+    - template
+  - heading: Document Control
+    tags:
+    - control
+    - template
+CERG-TMPL-AUD-001:
+  sections:
+  - heading: Purpose and Use
+    tags:
+    - scope
+    - template
+  - heading: Template Instructions
+    tags:
+    - template
+  - heading: Fill-In Template
+    tags:
+    - template
+  - heading: Review and Approval
+    tags:
+    - template
+  - heading: Document Control
+    tags:
+    - control
+    - template
+CERG-TMPL-MTR-001:
+  sections:
+  - heading: Purpose and Use
+    tags:
+    - scope
+    - template
+  - heading: Template Instructions
+    tags:
+    - template
+  - heading: Fill-In Template
+    tags:
+    - template
+  - heading: Review and Approval
+    tags:
+    - template
+  - heading: Document Control
+    tags:
+    - control
+    - template
+CERG-TMPL-GOV-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - template
+  - heading: Why Measure Perception
+    tags:
+    - template
+  - heading: Survey Instrument
+    tags:
+    - template
+  - heading: Administration
+    tags:
+    - template
+  - heading: Analysis and Reporting
+    tags:
+    - template
+  - heading: Program Integration
+    tags:
+    - template
+  - heading: Document Control
+    tags:
+    - control
+    - template
+CERG-GOV-CAT-001:
+  sections:
+  - heading: Purpose and Scope
+    tags:
+    - scope
+    - governance
+  - heading: Naming Convention
+    tags:
+    - governance
+  - heading: Document Types
+    tags:
+    - governance
+  - heading: Authority and Status Lifecycle
+    tags:
+    - governance
+  - heading: Authoritative Catalog (V1)
+    tags:
+    - governance
+  - heading: Cross-Reference Rules
+    tags:
+    - governance
+  - heading: Artifact Roadmap (V1.x to V2)
+    tags:
+    - governance
+  - heading: Document Control
+    tags:
+    - control
+    - governance
