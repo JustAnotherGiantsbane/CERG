@@ -214,10 +214,10 @@ Sampling is used when testing the full population is infeasible due to volume or
 
 | **Condition** | **Use Sampling** | **Use Full Population** |
 |---|---|---|
-| Population size < 50 items | No — test all | Yes |
+| Population size < 50 items | No - test all | Yes |
 | Population size 50–250 items | Yes, with minimum sample per table below | Optional |
 | Population size > 250 items | Yes | Only if automated or required by regulation |
-| Control is automated and fully logged | No — test all programmatically | Yes |
+| Control is automated and fully logged | No - test all programmatically | Yes |
 | SOX ITGC key control | Consult SOX ITGC Lead | Often full population |
 | CMMC assessment sample | Per CMMC Assessment Guide sampling guidance | Per assessor direction |
 
