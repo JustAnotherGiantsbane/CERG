@@ -136,12 +136,9 @@ Score each domain 1 to 4 against the tier scale. The evidence column names what 
 | R3 | Third-party and supply chain risk | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Vendors tiered and assessed; supply chain risks in the register. | |
 | R4 | Logging, monitoring, and detection | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Log sources defined; retention enforced; detection coverage mapped. | |
 | R5 | Risk taxonomy and exposure posture | [`CERG-GOV-TAX-001`](CERG-GOV-TAX-001_Risk_Taxonomy.md) | Risks categorized to the taxonomy; exposure posture reported. | |
-| R6 | Threat intelligence | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) §6.2 | Intelligence collected and distributed to Engineering, Detection, and Governance. | |
+| R6 | Threat intelligence | [`CERG-PRC-TI-001`](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) | Intelligence collected and distributed to Engineering, Detection, and Governance. | |
 | R7 | Pre-production versus post-production risk discipline | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) §4.3 | Pre-production findings handled as engineering inputs; post-production findings as managed risks. | |
 
-> **R6 Threat Intelligence Has No Dedicated Procedure Yet**
->
-> Domain R6 is scored against the framework narrative because the V1 library does not yet contain a standalone threat intelligence procedure. An organization can still score R6 honestly against observable practice. When a threat intelligence procedure is added to the catalog, this domain's governing artifact is updated to point at it.
 
 ---
 
