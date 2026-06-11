@@ -10,7 +10,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-STY-001 |
 | **Version** | 1.0 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -37,7 +37,7 @@
 11. [Blank Document Skeleton](#11-blank-document-skeleton)
 12. [Quality Gates Before Commit](#12-quality-gates-before-commit)
 12.5. [Document Lifecycle Procedure](#125-document-lifecycle-procedure)
-13. [Document Control](#14-document-control)
+13. [Document Control](#13-document-control)
 
 ---
 
@@ -309,7 +309,7 @@ Copy this skeleton for new substantive artifacts.
 |---|---|
 | **Document ID** | CERG-[TYPE]-[DOMAIN]-[NNN] |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | [Canonical role] |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -399,13 +399,13 @@ When a new framework revision is published (e.g., NIST 800-53 Rev 6, NIST 800-17
 
 ---
 
-## 14. Document Control
+## 13. Document Control
 
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-STY-001 |
 | **Version** | 1.0 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
