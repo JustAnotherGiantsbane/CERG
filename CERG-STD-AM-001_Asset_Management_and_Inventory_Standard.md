@@ -74,7 +74,7 @@ CERG tracks five asset classes. Each has a named authoritative inventory.
 | **Hardware** | Physical computing and network devices. | Servers, workstations, laptops, network gear, mobile devices, OT field devices. |
 | **Software** | Operating systems, applications, and firmware in use. | OS images, installed applications, in-house software per [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md), firmware versions. |
 | **Cloud and SaaS** | Cloud infrastructure resources and subscribed SaaS services. | Cloud compute, storage, managed services, accounts and subscriptions, SaaS tenants. |
-| **Data** | Information assets, governed for classification and handling. | Datasets, databases, document repositories. Handling is governed by [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) (Planned, V1.x). |
+| **Data** | Information assets, governed for classification and handling. | Datasets, databases, document repositories. Handling is governed by [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md). |
 | **Identity** | Accounts and service principals that act on the estate. | User accounts, service accounts, machine identities, API principals. Governed by [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md); inventoried here. |
 
 > **OT Assets Are In Scope and Need Care**
@@ -143,7 +143,7 @@ Every asset is assigned a criticality tier. Criticality reflects the business an
 
 ### 7.2 Data Classification
 
-Every asset carries the classification of the highest-classified data it stores or processes. The classification scheme itself is owned by [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) (Planned, V1.x). Until that standard is published, assets carry the data classification used by [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md) for CUI scope and a simple internal scheme elsewhere.
+Every asset carries the classification of the highest-classified data it stores or processes. The classification scheme itself is owned by [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md). Until that standard is published, assets carry the data classification used by [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md) for CUI scope and a simple internal scheme elsewhere.
 
 ### 7.3 What Classification Drives
 
