@@ -145,12 +145,12 @@ Every intelligence product includes a confidence assessment:
 
 | **Rating** | **Definition** |
 |---|---|
-| A — Completely Reliable | History of complete reliability; no doubt of authenticity |
-| B — Usually Reliable | Minor doubts; history of valid information with occasional errors |
-| C — Fairly Reliable | Some doubts; information used but not confirmed through other sources |
-| D — Not Usually Reliable | Significant doubts; information used only when corroborated |
-| E — Unreliable | History of invalid information; not used |
-| F — Cannot Be Judged | No basis for reliability assessment |
+| A - Completely Reliable | History of complete reliability; no doubt of authenticity |
+| B - Usually Reliable | Minor doubts; history of valid information with occasional errors |
+| C - Fairly Reliable | Some doubts; information used but not confirmed through other sources |
+| D - Not Usually Reliable | Significant doubts; information used only when corroborated |
+| E - Unreliable | History of invalid information; not used |
+| F - Cannot Be Judged | No basis for reliability assessment |
 
 The Threat Intelligence Analyst assesses both confidence in the analyzed intelligence and reliability of the source. Products clearly state the confidence level and source reliability rating.
 
@@ -504,13 +504,13 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CE
 ### A.1 Flash Advisory
 
 ```
-FLASH ADVISORY — TI-YYYY-NNNN
+FLASH ADVISORY - TI-YYYY-NNNN
 TLP: [AMBER / GREEN]
 Date: [date]
 Priority: [CRITICAL / HIGH / MEDIUM]
 
 Title:
-Summary: [one paragraph — what happened, what to do]
+Summary: [one paragraph - what happened, what to do]
 
 Affected Technology: [vendor, product, version]
 Recommended Actions:
@@ -528,7 +528,7 @@ Analyst: [name]
 ### A.2 Weekly Digest
 
 ```
-WEEKLY THREAT DIGEST — TI-WD-YYYY-WNN
+WEEKLY THREAT DIGEST - TI-WD-YYYY-WNN
 TLP: GREEN
 Period: [start] to [end]
 
@@ -536,7 +536,7 @@ Key Developments:
   1. [development]
   2. [development]
 
-New IOCs: [count] — [summary of types]
+New IOCs: [count] - [summary of types]
 Upcoming Threats: [what to watch for in the next 7 days]
 Recommended Reading: [links to relevant advisories, reports]
 Analyst: [name]
@@ -545,7 +545,7 @@ Analyst: [name]
 ### A.3 Threat Model Input Brief
 
 ```
-THREAT MODEL INPUT BRIEF — TI-TM-YYYY-NNNN
+THREAT MODEL INPUT BRIEF - TI-TM-YYYY-NNNN
 TLP: AMBER
 System: [system name]
 Architecture Review: [AR-YYYY-NNNN]
@@ -575,7 +575,7 @@ Analyst: [name]
 ### A.4 Vulnerability Context Note
 
 ```
-VULNERABILITY CONTEXT NOTE — TI-VC-YYYY-NNNN
+VULNERABILITY CONTEXT NOTE - TI-VC-YYYY-NNNN
 TLP: GREEN
 Date: [date]
 CVE: [CVE-ID]
@@ -595,7 +595,7 @@ Analyst: [name]
 ### A.5 Vendor Risk Note
 
 ```
-VENDOR RISK NOTE — TI-VR-YYYY-NNNN
+VENDOR RISK NOTE - TI-VR-YYYY-NNNN
 TLP: AMBER
 Date: [date]
 Vendor: [name]
@@ -611,14 +611,14 @@ Analyst: [name]
 ### A.6 Executive Threat Brief
 
 ```
-EXECUTIVE THREAT BRIEF — TI-EX-YYYY-QN
+EXECUTIVE THREAT BRIEF - TI-EX-YYYY-QN
 TLP: AMBER
 Period: [quarter] [year]
 
 Top Threats:
-  1. [threat] — [impact to organization] — [likelihood]
-  2. [threat] — [impact] — [likelihood]
-  3. [threat] — [impact] — [likelihood]
+  1. [threat] - [impact to organization] - [likelihood]
+  2. [threat] - [impact] - [likelihood]
+  3. [threat] - [impact] - [likelihood]
 
 Program Impact: [how the threat landscape affects CERG program priorities]
 Recommended Decisions: [specific decisions for CISO/executive consideration]
