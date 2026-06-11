@@ -9,7 +9,7 @@
 |---|---|
 | **Document ID** | CERG-PRC-AC-002 |
 | **Version** | 1.0 |
-| **Status** | Published |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Identity Engineer |
 | **Parent Standard** | [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) - Access Management Standard |
@@ -35,8 +35,8 @@
 10. [Vendor Access](#10-vendor-access)
 11. [MFA Enrollment and Exception](#11-mfa-enrollment-and-exception)
 12. [Roles and Responsibilities](#12-roles-and-responsibilities)
-14. [Regulatory and Framework Alignment Summary](#14-regulatory-and-framework-alignment-summary)
-15. [Document Control](#15-document-control)
+13. [Regulatory and Framework Alignment Summary](#13-regulatory-and-framework-alignment-summary)
+14. [Document Control](#14-document-control)
 
 ---
 
@@ -332,7 +332,7 @@ Phishing-resistant MFA coverage is reported as `ID-001` in [`CERG-GOV-MTR-001`](
 | **CISO** | Endorses this runbook. Resolves disputes escalated beyond the Identity Engineer and Cyber Engineering Pillar Leader. Approves risk acceptances for MFA exceptions and compensating controls beyond standard tolerance. Signs off on annual recertification program results. |
 
 ---
-## 14. Regulatory and Framework Alignment Summary
+## 13. Regulatory and Framework Alignment Summary
 
 | **Regulation / Framework** | **Where in This Runbook** |
 |---|---|
@@ -345,7 +345,7 @@ Phishing-resistant MFA coverage is reported as `ID-001` in [`CERG-GOV-MTR-001`](
 
 ---
 
-## 15. Document Control
+## 14. Document Control
 
 | | |
 |---|---|
