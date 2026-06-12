@@ -157,7 +157,7 @@ Not every control applies equally to every system. CERG's tailoring process allo
 |---|---|---|
 | **Compensating Control** | An alternative control that meets the intent of the baseline control when the standard control cannot be implemented (common in OT environments) | Risk assessment + Risk Pillar Leader approval |
 | **Control Enhancement** | Additional control implementation above baseline, based on threat intelligence or risk assessment findings | Engineering + Governance alignment |
-| **Exception / Deviation** | Documented acknowledgment that a control cannot be satisfied; requires compensating controls and risk acceptance | Per the canonical Risk Acceptance Authority table in [§9.4](#94-risk-acceptance-authority) |
+| **Exception / Deviation** | Documented acknowledgment that a control cannot be satisfied; requires compensating controls and risk acceptance | Per the canonical Risk Acceptance Authority table in [§9.7](#97-risk-acceptance-authority) |
 
 ---
 
@@ -215,7 +215,7 @@ Assessment validates that implemented controls are working as intended. In CERG,
 
 ### 6.3 Finding Severity and SLAs
 
-All findings from assessment activities are assigned a severity rating and a remediation SLA. Exceptions to SLAs require documented risk acceptance per the process in [§9.4](#94-risk-acceptance-authority).
+All findings from assessment activities are assigned a severity rating and a remediation SLA. Exceptions to SLAs require documented risk acceptance per the process in [§9.7](#97-risk-acceptance-authority).
 
 The authoritative remediation-SLA table lives in [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5. The values published there govern every CERG-managed scan, pen test, and assessment finding across IT, cloud, SaaS, and (with the BES schedule overlay) OT environments. Pillar dashboards and KRIs in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) measure compliance against PRC-VM-001's SLA values, not against a separate table.
 
@@ -398,25 +398,43 @@ CERG uses a 5x5 model: likelihood and impact are each rated 1-5, scored, and map
 | **Remediate** | Eliminate the risk by removing the vulnerability, threat source, or exposure. | When technically feasible within a reasonable timeframe and at proportionate cost. | Engineering leads technical remediation. Risk verifies closure via rescan or retest. Governance closes the risk register item. |
 | **Mitigate** | Reduce the likelihood or impact of the risk to an acceptable level through compensating controls. | When full remediation is not immediately feasible (common in OT); when residual risk after mitigation falls within risk appetite. | Engineering implements compensating controls. Risk validates control effectiveness. Governance documents and tracks to eventual remediation. |
 | **Transfer** | Shift the financial impact of the risk through insurance or contractual liability provisions. | For risks where cyber insurance coverage is appropriate and available. | Governance coordinates with Legal/Finance for contract and insurance language. Risk quantifies the risk for insurance submission. |
-| **Accept** | Formally acknowledge and document the risk without further treatment, when residual risk falls within risk appetite. | For Low/Informational risks where cost of treatment exceeds the risk value; or when all other options have been exhausted and the risk owner is willing to own the consequence. | Requires documented approval at the authority level defined by severity (§9.7). Risk provides a written risk finding. Governance records the acceptance in the risk register. |
+| **Accept** | Formally acknowledge and document the risk without further treatment, when residual risk falls within risk appetite. | For Low/Informational risks where cost of treatment exceeds the risk value; or when all other options have been exhausted and the risk owner is willing to own the consequence. | Requires documented approval at the authority level defined in §9.7. Risk provides a written risk finding. Governance records the acceptance in the risk register. The business owner accepts the residual risk — security does not accept business risk. |
 
 ### 9.7 Risk Acceptance Authority (Canonical)
 
 This table is the single source of truth for who may accept residual risk. Every other CERG document that references acceptance authority points at this section.
 
-| Severity | Acceptance Authority | Notification | Required Documentation | Maximum Acceptance Duration |
-|---|---|---|---|---|
-| **Critical** | CISO with Executive Sponsor concurrence | CEO notified; Board notification at next quarterly cycle (or sooner if systemic) | Risk assessment, compensating controls, business justification, target remediation date | 12 months; renewal requires fresh approval cycle |
-| **High** | CISO | Executive Sponsor notified | Risk assessment, compensating controls, business justification, target remediation date | 12 months; renewal requires fresh approval cycle |
-| **Medium** | Risk Pillar Leader (Risk pillar lead) | CISO informed at monthly Risk Posture Review | Risk assessment, compensating controls, target remediation date | 12 months |
-| **Low** | Governance Pillar Leader | Tracked in monthly Risk Register report | Brief justification; tracked in risk register | 12 months |
-| **Informational** | Cyber Governance (Risk Register Owner) | Tracked in quarterly trending report | Tracked in risk register | Reviewed annually |
+Security can assess, recommend, document, validate compensating controls, and escalate. But the business owner owns the consequence. Risk acceptance requires a business risk owner at every level where business impact exists. The CISO and Executive Sponsor are security leaders who accept on behalf of the security function; the business owner accepts on behalf of the business unit that bears the operational impact.
+
+| Residual Risk | Risk Role | Governance Role | Business Role | Acceptance By | Documentation | Max Duration |
+|---|---|---|---|---|---|---|---|
+| **Critical** | Signs finding; validates compensating controls; provides written risk assessment | Structures acceptance package; ensures regulatory notification; tracks conditions | **Executive Sponsor + CISO** accept; Board notified at next cycle | Security + Business jointly | Risk assessment, compensating controls, business justification, target remediation date | 12 months; renewal requires fresh approval |
+| **High** | Signs finding; validates compensating controls; provides written risk assessment | Structures acceptance package; ensures conditions documented | **Executive Sponsor (business owner) + CISO** accept | Security + Business jointly | Risk assessment, compensating controls, business justification, target remediation date | 12 months; renewal requires fresh approval |
+| **Medium** | Performs risk assessment; confirms residual risk level | Confirms exception conditions; documents acceptance in register | **Business owner** accepts | Business owner | Risk assessment, compensating controls, target remediation date | 12 months |
+| **Low** | Confirms low residual risk (if needed) | Approves procedural exception; tracks in risk register | **Business owner** owns local decision | Governance (for exception); Business (for risk) | Brief justification; tracked in risk register | 12 months |
+| **Informational** | N/A | Tracks in register; reports in quarterly trending | **No formal acceptance required** | Risk Register Owner | Tracked in risk register | Reviewed annually |
 
 > **Renewals**
 >
 > No acceptance renews automatically. An acceptance at any tier requires a fresh approval cycle at expiration. An acceptance renewed more than twice without movement on the treatment plan escalates one tier above the original approver.
 
 > **Role names** below match the canonical roster in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1. If a role name disagrees with that roster, the roster wins.
+
+
+### 9.7a Policy Exception vs. Risk Acceptance
+
+These are not the same thing. Collapsing them into one process creates confusion about who owns what.
+
+| Scenario | Type | Path | Owner |
+|----------|------|------|-------|
+| "We cannot meet password length because legacy system maxes at 12 characters" | **Policy / control exception** | Governance-owned exception workflow | Governance Pillar Leader |
+| "The legacy system is Internet-reachable, privileged, and has weak auth" | **Risk** | Risk-owned residual risk analysis | Risk Pillar Leader |
+| "We will isolate it, broker access, monitor sessions, and retire by Q3" | **Treatment** | Engineering + Risk | Engineering Pillar Leader |
+| "The VP of Operations accepts the residual risk until Q3" | **Business risk acceptance** | Business owner accepts per §9.7 | Business owner |
+
+**Governance** owns the exception workflow: when a control cannot be met, Governance determines whether the gap is a procedural exception (low risk, documented and tracked) or a risk event (requires Risk assessment). **Risk** owns residual risk analysis: when a gap creates material exposure, Risk quantifies it, validates compensating controls, and recommends treatment. **Business** owns the consequence: business leaders accept risk on systems they own, because they own the operational impact.
+
+The [Exception Request Form](../templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md) handles both types. The key distinction is the approval path: a policy exception approved by Governance stays in the exception register; a risk acceptance above Medium requires a business owner signature per §9.7.
 
 ### 9.8 Risk Appetite and Tolerance
 
