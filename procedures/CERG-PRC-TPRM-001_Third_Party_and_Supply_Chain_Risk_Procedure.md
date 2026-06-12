@@ -48,7 +48,7 @@
 
 The policy makes third-party and supply-chain security Principle 8. Subordinate standards each impose specific requirements: IT/cloud/SaaS approval and attestation tracking, OT vendor assessment and CIP-013, CUI flow-down and FedRAMP equivalency, SBOM and software integrity. Until this procedure, those obligations had no shared operating model.
 
-This procedure defines how CERG engages with the broader enterprise vendor program, where CERG's cyber-specific work begins and ends, what evidence is collected at each tier, and how the program responds when a vendor is compromised.
+This procedure defines how CERG engages with the broader enterprise vendor program, where CERG's cyber-specific work begins and ends, what evidence is collected at each tier, and how the program responds when a vendor is compromised. It operationalizes the edge types defined in the [Edge Register](../governance/CERG-GOV-EDG-001_Edge_Register.md) — specifically the Vendor, SaaS, and Software Supply edges.
 
 > **CERG Doesn't Own Vendor Management, It Owns the Cyber Slice**
 >
@@ -159,6 +159,42 @@ Requirements differ by what the vendor *is*. The table below summarizes the most
 | **Managed Service Provider (MSP)** | Privileged access via PAM ([`CERG-STD-AC-001`](../standards/CERG-STD-AC-001_Access_Management_Standard.md)); session recording; named-individual accounts; geographic-access controls; tenant separation evidence. |
 | **Software supplier (commercial / open source)** | SBOM (NTIA minimum elements); CVE / advisory subscription; software integrity (signed releases); patch / EOL commitments. |
 | **Hardware supplier (esp. OT)** | HBOM where in BES scope; chain-of-custody; firmware integrity; tamper-evidence; secure delivery. |
+
+
+### 6.1 Low-Control / High-Dependency Operating Model
+
+Not every provider relationship allows the organization to configure, monitor, patch, or test. CERG recognizes four control levels that determine what can be required of a provider and how residual risk is managed.
+
+| Control Level | What the Org Can Do | Examples | CERG Approach |
+|---------------|---------------------|----------|---------------|
+| **Direct Control** | Configure, monitor, patch, test | Owned servers, self-managed cloud workloads, on-premise network | Standard CERG controls: baselines, scanning, change management, evidence collection |
+| **Shared Control** | Configure tenant, require evidence, validate logs | SaaS tenants (M365, Salesforce), IaaS/PaaS (AWS, Azure) | Customer-side evidence: IdP exports, KMS inventory, SIEM source inventory, backup config, tenant configuration scans |
+| **Contractual Control** | Negotiate clauses, notification, audit rights | MSPs, managed security providers, subprocessors | Contract language, annual evidence collection (SOC 2, ISO 27001), incident notification commitments, tested kill-switch |
+| **Opaque Dependency** | Track residual risk, exit plan, kill switch, compensating monitoring | SaaS vendor's underlying infrastructure, open-source library maintainers, upstream cloud provider outages | Documented residual risk acceptance, exit/migration plan, compensating monitoring (CSPM/SSPM for visible surface), documented assumption register |
+
+The control level is recorded per provider in the Approved Provider Catalog and re-assessed at each annual review. A provider at Contractual or Opaque levels must have a documented kill-switch procedure tested at least annually.
+
+> **CERG does not pretend to control what it cannot control.** The distinction between "we require this" and "we hope this" is not a compliance failure — it is operational honesty. Document the gap, monitor what is visible, plan the exit.
+
+### 6.2 MSP and MSSP Hard Requirements
+
+Managed Service Providers and Managed Security Service Providers operate inside the organization's trust boundary with elevated access. The following requirements apply to every MSP/MSSP relationship, regardless of tier:
+
+| Requirement | Description | Verification |
+|-------------|-------------|-------------|
+| **Named accounts only** | Every provider user accessing organizational systems operates under a uniquely identifiable, named account. Shared, generic, or role-based accounts are prohibited. | Quarterly access review; IdP audit log |
+| **PAM or brokered access** | Provider access is brokered through a Privileged Access Management (PAM) solution per [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md). Direct RDP, SSH, or VPN with standing credentials is prohibited. | PAM session logs; monthly access review |
+| **No standing global admin** | No provider account holds standing global administrator, domain admin, or equivalent superuser privilege. Privilege is elevated per-session, per-task, with justification logged. | PAM elevation log; quarterly privileged group audit |
+| **Customer-owned logs** | All provider activity logs are owned by the customer organization and stored in customer-controlled infrastructure. The provider shall not delete, modify, or restrict access to logs of their own activity. | SIEM source verification; quarterly log completeness check |
+| **Break-glass process** | A documented break-glass procedure exists for emergency provider access that cannot follow the normal PAM path. Break-glass use triggers immediate notification to the CISO and is reviewed within 24 hours. | Break-glass event log; quarterly review of all break-glass activations |
+| **Kill-switch procedure tested quarterly** | A documented procedure exists to revoke all provider access within 60 minutes of activation. The procedure is tested at least quarterly and test results are logged. The machine-readable kill-switch schema in [`machine-readable/`](../machine-readable/) provides the artifact format. | Quarterly test log; time-to-revoke measurement |
+| **Provider access reviewed like privileged internal access** | Provider access is subject to the same access review cadence, recertification requirements, and anomalous-access detection as internal privileged users per [CERG-PRC-AC-002](CERG-PRC-AC-002_Access_Management_Runbook.md). | Access review records; recertification status |
+| **Separate incident path for provider compromise** | A documented incident response path exists for "provider compromise with uncertain blast radius." This path is distinct from standard incident response — it assumes the attacker may have visibility into the organization's incident coordination channels if the provider's systems are compromised. | SCCT activation records; annual tabletop exercise |
+
+**MSP/MSSP onboarding requires:** contract language covering all eight requirements, evidence of the provider's own security posture (SOC 2 Type II or equivalent), a completed shared responsibility matrix, and a successful kill-switch test before production access is granted.
+
+**MSP/MSSP offboarding requires:** revocation of all access within 24 hours of contract termination, confirmation that provider-owned artifacts (logs, configurations, credentials) have been returned or destroyed, and a final access review confirming no residual access paths remain.
+
 
 ---
 
