@@ -11,7 +11,7 @@
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
 | **Parent Policy** | N/A — this is the parent policy |
-| **Review Cycle** | Annual / Upon Significant Change |
+| **Review Cycle** | Quarterly / Upon Significant Change |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) · NIST RMF |
 | **Regulations** | NERC-CIP · CMMC Level 2 · SOX ITGC |
 | **Environments** | All in-scope environments |
@@ -472,7 +472,7 @@ The following documents extend this policy into workforce management and cross-p
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
 | **Effective Date** | 2026-05-01 |
-| **Review Cycle** | Annual / Upon Significant Change |
+| **Review Cycle** | Quarterly / Upon Significant Change |
 | **Next Scheduled Review** | 2027-05-01 |
 | **Frameworks** | NIST CSF 2.0; NIST 800-53r5; NIST 800-171r3; NIST RMF |
 | **Regulations** | NERC-CIP; CMMC Level 2; SOX ITGC |

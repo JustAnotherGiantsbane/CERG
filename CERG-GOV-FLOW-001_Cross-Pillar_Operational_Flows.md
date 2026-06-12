@@ -1060,7 +1060,7 @@ Implement:
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Internal |
 | **Owner** | Governance Pillar Leader |
-| **Approved By** | Pending |
+| **Approved By** | Governance Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual |
 | **Next Scheduled Review** | 2027-06-11 |

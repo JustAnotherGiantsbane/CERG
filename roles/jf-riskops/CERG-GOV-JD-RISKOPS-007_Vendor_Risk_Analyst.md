@@ -4,7 +4,7 @@
 | **Version** | 1.0 |
 | **Status** | Approved |
 | **Classification** | Public |
-| **Owner** | Governance Pillar Leader (Policy & Standards) |
+| **Owner** | Risk Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](../../CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual |
 | **Frameworks** | NIST SP 800-181r1 (NICE) |
@@ -151,8 +151,8 @@ Cross-family movement options are defined in the [Family-to-Family Career Lattic
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
-| **Owner** | Governance Pillar Leader (Policy & Standards) |
-| **Approved By** | Pending |
+| **Owner** | Risk Pillar Leader |
+| **Approved By** | Risk Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](../../CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual |
 | **Next Scheduled Review** | 2027-06-11 |

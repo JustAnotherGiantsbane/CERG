@@ -4,7 +4,7 @@
 | **Version** | 1.0 |
 | **Status** | Approved |
 | **Classification** | Public |
-| **Owner** | Governance Pillar Leader (Policy & Standards) |
+| **Owner** | Governance Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](../../CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual |
 | **Frameworks** | NIST SP 800-181r1 (NICE) |
@@ -89,8 +89,8 @@ Certifications relevant to the Incident Response family are detailed in [TRN-001
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
-| **Owner** | Governance Pillar Leader (Policy & Standards) |
-| **Approved By** | Pending |
+| **Owner** | Governance Pillar Leader |
+| **Approved By** | Governance Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](../../CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual |
 | **Next Scheduled Review** | 2027-06-11 |
