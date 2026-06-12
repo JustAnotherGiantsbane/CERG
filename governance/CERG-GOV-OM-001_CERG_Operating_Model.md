@@ -240,6 +240,39 @@ CERG staffing is intentionally consistent across the pillars: a pillar leader, s
 
 The structure below is a pattern, not a fixed org chart. Smaller organizations consolidate roles; larger organizations expand them.
 
+### 6.0 Core Capabilities — What Survives Reorgs
+
+Before defining roles, CERG defines capabilities — the durable work that must get done regardless of headcount, org chart, or reporting structure. Capabilities survive reorgs. Roles are implementation detail.
+
+CERG has 11 core capabilities:
+
+| Capability | Description | Primary Pillar |
+|-----------|-------------|---------------|
+| **Security Architecture** | Design review, threat modeling, pre-production assessment, pre-approved patterns | Engineering |
+| **Identity and Security Platform Engineering** | IdP architecture, PAM, secrets management, IaC, cloud landing zones, endpoint security platform | Engineering |
+| **Exposure Management** | Observation collection, exposure path validation, classification, treatment tracking, verification | Risk |
+| **Threat and Adversarial Validation** | Penetration testing, red team, purple team, threat intelligence production, detection validation | Risk |
+| **Third-Party Edge Management** | Vendor tiering and assessment, SaaS governance, MSP/MSSP requirements, SBOM, supply chain compromise response | Risk |
+| **Risk Register and Analysis** | Risk identification, scoring, treatment recommendation, appetite calibration, board reporting | Risk |
+| **Policy and Standards** | Policy authorship, standard maintenance, style governance, version control, regulatory citation mapping | Governance |
+| **Compliance and Evidence** | Evidence library management, control-to-evidence mapping, audit coordination, POA&M tracking, regulatory submissions | Governance |
+| **Metrics and Reporting** | CISO dashboard, board reporting, KRI/KPI maintenance, maturity assessment, stakeholder perception | Governance |
+| **Program Improvement** | Lessons learned, improvement register, control effectiveness testing, maturity advancement | Governance |
+| **Executive Risk Decision Support** | Cyber Oversight Group preparation, risk appetite affirmation, executive escalation, budget defense | CISO / Governance |
+
+In a small team, one person may hold several capabilities. In a large team, each capability splits into specialized roles. The canonical role roster in §6.1 shows the full specialization; the capability map shows the irreducible minimum.
+
+**Role consolidation for small teams:**
+
+| Small Team (≤5 people) | Capabilities Consolidated |
+|------------------------|--------------------------|
+| CISO / Security Lead | Executive Risk Decision Support + Risk Register + Program Improvement |
+| Security Engineer | Security Architecture + Identity/Platform Engineering + Exposure Management |
+| Risk Analyst | Threat/Adversarial Validation + Third-Party Edge Management |
+| Governance Lead | Policy/Standards + Compliance/Evidence + Metrics/Reporting |
+
+**Principle:** A 5-person CERG runs the same 11 capabilities as a 60-person CERG. The difference is headcount per capability, not the capabilities themselves. When headcount increases, roles split. When headcount decreases, roles consolidate. The capabilities remain.
+
 ### 6.1 Canonical Role Roster
 
 This roster is the single source of truth for role names used throughout the CERG document library. When a standard, procedure, plan, or template refers to "the Risk Manager" or "the IR Plan Steward," it means the canonical name listed below. Documents that use a synonym (column 3) are calling the same role; the corrective action is to update the citing document to the canonical name on its next revision, not to invent a new role.
