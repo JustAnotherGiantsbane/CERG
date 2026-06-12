@@ -331,15 +331,40 @@ Ensure that new systems and major changes enter production with known scope, req
 - Logging plan
 - Backup / recovery plan
 
-### Workflow
-1. Engineering opens **Project Intake Record**.
+### Review Tiers
+
+Projects are triaged into one of three review tiers based on risk characteristics. The tier determines review depth, not whether a review occurs. PRC-AR-001 provides the detailed procedure for each tier.
+
+| Tier | Criteria | Review Depth | Architecture Review | Threat Model | Governance Conformance |
+|------|----------|-------------|---------------------|--------------|------------------------|
+| **T1 — Full Review** | Internet-exposed, regulated-scope, sensitive data, OT/safety impact, new platform pattern, high-risk third-party, complex privileged path | Full Phase 2-4 per PRC-AR-001 | Full architecture review | Full threat model | Governance issues Conformance Scope Statement |
+| **T2 — Lightweight Review** | Internal service on reviewed platform, reuse of approved architecture pattern, capacity addition to reviewed system, non-sensitive data, no regulatory scope | Checklist review per PRC-AR-001 §4 | Checklist-based architecture review | Threat model review (confirm existing model covers change) | Governance confirms existing conformance applies |
+| **T3 — Automated-Only** | Pre-approved change pattern (e.g., config update within baseline, dependency bump within allowed range), citizen-development platform app, pipeline already enforces SAST/policy-as-code/CSPM gates | Automated gates only; no manual review | Automated SAST + policy-as-code pass = architecture review satisfied | N/A (platform-level threat model covers) | Automated CSPM posture check = conformance satisfied |
+
+### Workflow (by Tier)
+
+**T1 — Full Review:**
+1. Engineering opens **Project Intake Record** and assigns T1.
 2. Engineering performs initial security scoping.
-3. Engineering performs **Architecture Review**.
-4. Engineering performs **Threat Model**.
+3. Engineering performs full **Architecture Review** (PRC-AR-001 Phase 2).
+4. Engineering performs full **Threat Model** (PRC-AR-001 Phase 2).
 5. Governance issues **Conformance Scope Statement**.
-6. Risk participates if risk concentration threshold is met.
+6. Risk participates per risk concentration thresholds.
 7. Engineering classifies issues as pre-go-live or post-go-live.
 8. Engineering issues final security disposition.
+
+**T2 — Lightweight Review:**
+1. Engineering opens **Project Intake Record** and assigns T2.
+2. Engineering completes the T2 checklist (PRC-AR-001 §4).
+3. Engineering confirms existing threat model covers the change; documents any delta.
+4. Governance confirms existing conformance scope applies.
+5. Engineering issues disposition. Risk participates only if checklist flags a risk concentration threshold.
+
+**T3 — Automated-Only:**
+1. Engineering opens **Project Intake Record** and assigns T3.
+2. Automated gates execute: SAST scan, policy-as-code validation, CSPM posture check.
+3. If all gates pass: Engineering issues disposition. No manual review required.
+4. If any gate fails: revert to T2 and flag the failure for Engineering review.
 
 ### Risk Concentration Thresholds
 Risk participation is required when one or more of the following are true:
@@ -405,6 +430,18 @@ Ensure every in-scope asset has ownership, classification, regulatory designatio
 ### Primary Record
 **Asset Record**
 
+
+### Asset Classes and Registration Requirements
+
+Assets are classified by lifecycle to determine registration depth. Ephemeral and auto-scaling assets are registered via automated discovery, not manual entry.
+
+| Asset Class | Examples | Registration Method | Required Fields |
+|------------|----------|-------------------|-----------------|
+| **Persistent** | Physical servers, VMs, databases, network appliances, SaaS platforms | Manual or automated via CMDB integration | All 14 fields below |
+| **Dynamic** | Long-lived cloud instances (EC2, GCE), Kubernetes nodes, PaaS services | Automated via cloud API / CSPM discovery | Asset ID, type, environment, classification, owner, scan coverage, logging source. Remaining fields derived from tags or platform defaults. |
+| **Ephemeral** | Auto-scaling instances, spot instances, containers, serverless functions, batch jobs | Automated via cloud API / orchestrator; registered at the *workload level*, not per-instance | Workload ID (e.g., ECS service name, Lambda function name, Deployment name), type, environment, classification, owner, scan coverage (inherited from platform). Individual instances tracked as members of the workload group. |
+
+**Workload-level registration** means that a Kubernetes Deployment, an ECS Service, or a Lambda function is registered once. Individual pods, tasks, or invocations are tracked as members of that workload group. Coverage validation (§ Coverage Requirements) is assessed at the workload level, not the instance level.
 
 ### Required Inputs
 - Asset ID
@@ -529,6 +566,13 @@ Convert discovered exposure into a deterministic treatment path: remediation, co
 
 ### Mandatory Rules
 - No finding may remain undefined beyond triage SLA.
+- Engineering may not close a Critical or High finding unilaterally; Risk must validate.
+- **Self-Service Closure (Medium/Low):** Engineering may close Medium and Low findings when automated validation confirms the fix. Automated validation includes: authenticated vulnerability re-scan (findings from scanning), SAST re-scan passing (findings from code review), CSPM posture check passing (findings from cloud posture), or policy-as-code gate passing (findings from IaC review). Risk validates Medium/Low findings by exception — spot-checking a sample rather than re-validating every closure.
+- Any control not met as written or on time routes to exception review.
+- Accepted residual risk requires named approver, rationale, review cadence, and expiration if applicable.
+
+### Mandatory Rules
+- No finding may remain undefined beyond triage SLA.
 - Engineering may not close a finding unilaterally; Risk must validate.
 - Any control not met as written or on time routes to exception review.
 - Accepted residual risk requires named approver, rationale, review cadence, and expiration if applicable.
@@ -613,14 +657,32 @@ Ensure that security-significant changes receive consistent cross-pillar handlin
 - Regulatory scope
 - Testing plan
 
+### Change Classification and Required Activities
+
+Not all changes carry the same security risk. The table below defines what each change class requires. "SIA" = Security Impact Analysis. "CC" = Control Continuity check.
+
+| Change Class | Examples | SIA Required | SIA Depth | Control Continuity Scope | Risk Review | Fast-Lane Eligible |
+|-------------|----------|-------------|-----------|--------------------------|-------------|--------------------|
+| **Pre-Approved** | Documentation update, dashboard color change, log format adjustment, non-security config change within approved baseline, dependency bump within allowed semver range | No | N/A | None — change has no security surface | No | Yes — deploy immediately, record change post-hoc |
+| **Standard** | New feature deployment, scaling adjustment, routine cert rotation, IAM role addition within existing policy, database schema change | Yes | Lightweight — confirm change does not alter security boundary | Verify specific controls affected by the change (e.g., cert rotation → CR-001 controls; IAM change → AC-2 controls) | No, unless risk-significant criteria met | No — standard flow |
+| **Major** | New service introduction, architecture change, firewall rule change, encryption protocol change, identity model restructure, new external dependency | Yes | Full — assess impact across all control families | Verify all controls on affected assets; confirm no control regression | Yes — mandatory Risk review | No — requires full review |
+| **Emergency** | Active incident remediation, zero-day patch, critical service restoration | Yes — post-execution within 24 hours | Full — documented after execution | Verify as soon as practical; automate where possible | Post-execution; linked risk or exception required for any deviation | Yes — bypass normal gates; document rationale and create post-hoc record |
+
+**Control Continuity Scope by Change Class:**
+- **Pre-Approved:** No control continuity check required.
+- **Standard:** Verify the specific controls directly affected by the change. A cert rotation verifies CR-001 controls. An IAM role addition verifies AC-2 controls for the new role. Do not re-verify unrelated controls.
+- **Major:** Verify all controls mapped to the affected assets (per CB-001). Confirm no control has regressed.
+- **Emergency:** Verify as soon as practical. Automated CSPM/CNAPP scanning is acceptable as control continuity evidence. Document any gaps as a finding.
+
 ### Workflow
-1. Engineering classifies the change and opens **Change Record**.
-2. Engineering completes **Security Impact Analysis**.
-3. Risk reviews if the change is risk-significant.
-4. Governance applies conformance and evidence requirements.
-5. Engineering executes the change.
-6. Engineering performs control continuity checks.
-7. Governance verifies evidence and closes or reopens the change.
+1. Engineering classifies the change per the table above and opens **Change Record**.
+2. For Pre-Approved: deploy immediately; create Change Record post-hoc. Skip to step 6.
+3. For Standard: Engineering completes lightweight SIA. For Major/Emergency: Engineering completes full SIA.
+4. Risk reviews if change is risk-significant (Standard) or mandatory (Major/Emergency).
+5. Governance applies conformance and evidence requirements (Standard/Major/Emergency).
+6. Engineering executes the change.
+7. Engineering performs control continuity checks per the scope defined above.
+8. Governance verifies evidence and closes or reopens the change.
 
 ### Risk-Significant Change Criteria
 - Internet exposure changed
@@ -809,6 +871,11 @@ Convert operational data into management action, improvement backlog, standards 
 - weighted sum of (open findings × 1) + (open exceptions × 3) + (accepted risks × 2) per NIST control family
 - % of exceptions within 30 days of expiration without a renewal or closure decision
 - % of flow steps where a pillar missed its SLA, reported monthly per pillar
+- **Review cycle time by tier**: median hours/days from F-02 intake to security disposition, reported by review tier (T1/T2/T3) — measures whether review depth is proportional to project risk
+- **Deployment frequency of reviewed projects**: number of deployments per week for projects that passed F-02 review — measures whether security review enables or impedes delivery velocity
+- **Pre-approved change ratio**: % of F-05 changes classified as Pre-Approved vs. Standard/Major — measures whether the change classification model is appropriately tuned; a ratio below 30% suggests over-classification
+- **Automated closure rate**: % of F-04 Medium/Low findings closed via self-service automated validation vs. manual Risk validation — measures automation adoption
+- **SLA breach rate by pillar**: % of flow steps where a pillar missed its SLA, reported monthly per pillar — identifies bottlenecks across Engineering, Risk, and Governance
 ### Mandatory Rules
 - Every threshold breach must produce an action type or explicit no-action rationale.
 - Metrics without evidence links are not board-reportable.
@@ -826,7 +893,28 @@ Convert operational data into management action, improvement backlog, standards 
 - Repeated outliers in same control family escalated to Control Change Record or Improvement Record
 
 
-## 15. Evidence Quality Tiers
+
+## 15. Automation Integration Points
+
+The flows in this document describe human-driven steps, but automated security controls can satisfy or accelerate many of them. The table below defines where automation is accepted as valid execution and what evidence is required.
+
+| Flow Step | Automated Equivalent | Evidence Required | Tier Equivalent |
+|-----------|---------------------|-------------------|-----------------|
+| F-02 Architecture Review | SAST scan passes in CI/CD pipeline; policy-as-code gates pass at apply time | Pipeline run ID + scan results | T3 (Automated-Only) for pre-approved patterns; supports T2 (Lightweight) for internal services |
+| F-02 Threat Model | Platform-level threat model on file; change within modeled scope | Reference to existing threat model + delta analysis | T2/T3 |
+| F-03 Asset Registration | Cloud API / CSPM auto-discovery; tag-based owner/classification assignment | CSPM inventory export; tag audit log | Automated for Dynamic and Ephemeral classes |
+| F-04 Finding Validation | Authenticated vulnerability re-scan; SAST re-scan; CSPM posture re-check; policy-as-code gate re-run | Scan report + finding ID correlation | E3 for code/vulnerability findings; E2 for config findings |
+| F-05 Security Impact Analysis | IaC diff analysis; policy-as-code evaluation of proposed change; blast radius assessment from CMDB | Automated SIA report; policy evaluation result | Standard/Major — augments but does not replace human SIA for Major changes |
+| F-05 Control Continuity Check | CSPM/CNAPP posture scan post-deployment; automated control test suite | Posture scan report; test suite results | Acceptable for Standard changes; augments Major change CC |
+| F-07 Metric Collection | API integration with scanning tools, pipeline analytics, CSPM dashboards | API response or dashboard export with timestamp | Fully automated |
+
+**Automation Evidence Standard:** Automated evidence must be traceable to a specific pipeline run, scan job, or API call with a timestamp and a unique identifier. A link to the pipeline run (e.g., CI/CD run #1247) is sufficient; screenshots are not required when a programmatic reference is available.
+
+**When Automation Satisfies a Step Entirely:** For T3 (Automated-Only) projects and Pre-Approved changes, automated gate passage satisfies the requirement with no human review. For T2 and Standard changes, automation satisfies evidence requirements but a human reviewer confirms it. For T1 and Major changes, automation augments but does not replace human review.
+
+---
+
+## 16. Evidence Quality Tiers
 
 Not all evidence proves the same thing. Flows reference evidence by tier so that operators know what level of proof is required.
 
@@ -834,7 +922,7 @@ Not all evidence proves the same thing. Flows reference evidence by tier so that
 |------|------|---------------|---------|--------------|
 | **E1** | Control Exists | The artifact that implements the control is present | JML log file exists in the evidence library | Routine governance checks (F-03, F-07) |
 | **E2** | Control Operates | The control processed a transaction successfully | JML log shows 3 leavers processed this month; access review spreadsheet completed | Standard evidence collection; Medium/Low finding closure (F-04) |
-| **E3** | Control Is Effective | An adversary-facing test or independent verification confirms the control works as intended | Access review confirmed all leaver accounts were disabled within SLA; penetration test confirmed patch prevents exploitation | Critical/High finding closure (F-04); control test results (F-01); incident post-mortem validation (F-06) |
+| **E3** | Control Is Effective | An adversary-facing test, independent verification, or automated re-validation confirms the control works as intended | Automated authenticated vulnerability re-scan confirming fix; SAST re-scan passing with no regressions; policy-as-code gate passing for IaC change; CSPM posture check confirming drift remediation. Full penetration test is E3+ and reserved for adversarial-sourced findings (pen test, red team) or when automated validation is architecturally impossible. | Critical/High finding closure (F-04); control test results (F-01); incident post-mortem validation (F-06) |
 
 Flows that specify "Evidence Required" should note the minimum tier. Where E3 is not feasible (e.g., architecturally impossible to test), the rationale must be documented in the record.
 
