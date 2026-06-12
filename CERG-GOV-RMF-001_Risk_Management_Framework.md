@@ -479,6 +479,24 @@ Regulatory Implication:  NERC-CIP CIP-005 R2, CIP-013 supply chain; CIP deviatio
 
 ---
 
+
+### 9.10 Event-Driven Re-Assessment Triggers
+
+An accepted risk is automatically re-opened for re-assessment when any of the following trigger events occur. Re-assessment follows the full treatment evaluation process in §9.6 and may result in a changed severity score, a new treatment strategy, or re-confirmation of the existing acceptance.
+
+| Trigger Event | Action | Rationale |
+|--------------|--------|-----------|
+| CVE added to CISA KEV catalog affecting the accepted vulnerability | Immediate re-score; treat as Critical if exploitation is active | KEV listing signals active exploitation; accepted risk tolerance is invalidated |
+| Exploit observed in the wild for the accepted vulnerability (per Threat Intelligence) | Re-score within 5 business days; re-assess treatment urgency | Threat landscape has materially changed since acceptance |
+| Affected asset changes criticality tier | Re-score within 30 days | Asset criticality is an input to the risk score; a tier change shifts the calculation |
+| Regulatory change materially alters compliance impact | Re-score within 30 days of regulatory effective date | Regulatory non-compliance may make the risk unacceptable under any treatment |
+| Related incident occurs involving the accepted vulnerability or affected asset | Immediate re-score as part of F-06 post-incident review | An incident proves the risk was underestimated |
+| Acceptance renewed more than twice without treatment progress | Escalate one approval tier above original approver (per §9.7); create Finding Record | Repeated renewal without treatment signals acceptance complacency |
+
+The Risk Register Owner is responsible for monitoring these triggers. Threat Intelligence (TI-001) supplies the exploit observation feed. The Evidence Librarian monitors KEV catalog changes. Governance Pillar Leader maintains the regulatory change watch.
+
+---
+
 ## 10. IT/OT Risk Management Considerations
 
 ### 10.1 Why OT Requires a Different Lens
