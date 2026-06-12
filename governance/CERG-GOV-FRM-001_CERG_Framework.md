@@ -64,6 +64,7 @@ The CERG model names these activities explicitly, Engineering, Risk, and Governa
 - **Talent resilient:** cross-pillar knowledge sharing means no single person is a point of failure
 - **Adaptive-targeted:** the framework describes what operating at [NIST CSF 2.0](https://www.nist.gov/cyberframework) Adaptive maturity looks like in practice
 - **"Yes, and..." oriented:** Governance enables the business through risk treatment, not reflexive refusal
+- **Definition of Done:** A CERG task is not done when a meeting happened, a document was approved, a ticket moved columns, a scanner showed fewer highs, or someone said "accepted risk." A CERG task is done when all of the following are true: (1) an owner is named, (2) a decision is recorded, (3) evidence is linked and independently verifiable, (4) residual risk is understood and documented, (5) the control state or register entry is updated, (6) a next review date exists, and (7) the system of record agrees with the operational reality. This standard applies to every CERG-managed workflow, finding, exception, risk acceptance, architecture review, and metric. If the Definition of Done cannot be satisfied because the organization lacks the tooling or discipline, CERG adoption is not complete.
 
 ---
 
