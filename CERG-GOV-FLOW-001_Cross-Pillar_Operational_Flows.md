@@ -47,6 +47,7 @@
 7. **Missed review cadence, missing ownership, or missing evidence creates a finding or risk record.** The CERG annual calendar explicitly states that missed activities are tracked as program findings or risk-register entries.
 8. **Every major event must produce a standards/process/metrics feedback decision.** CERG's RMF, incident plan, maturity model, and metrics apparatus all imply that mature operation requires monitoring and response to feed continuous improvement.
 
+9. **If a required actor does not respond within SLA, the primary owner may proceed with documented rationale.** When Governance, Engineering, or Risk fails to act within the flow-defined SLA, the primary owner documents the default decision, proceeds with the next workflow step, and creates a Finding Record noting the missed SLA. No flow may stall indefinitely waiting for a single actor.
 ---
 
 ## 2. Canonical Roles
@@ -507,6 +508,16 @@ Convert discovered exposure into a deterministic treatment path: remediation, co
 6. Risk validates closure or establishes residual monitoring.
 7. Governance updates reporting and escalates recurring patterns.
 
+
+### Severity-Tiered SLA
+
+| Severity | Triage SLA | Remediation SLA | KEV / Active Exploit SLA |
+|----------|-----------|----------------|--------------------------|
+| **Critical** | 4 hours | 48 hours | 24 hours |
+| **High** | 24 hours | 14 days | 7 days |
+| **Medium** | 5 business days | 30 days | N/A |
+| **Low** | 10 business days | 90 days | N/A |
+
 ### Allowed Treatment Paths
 - Immediate remediation
 - Planned remediation
@@ -523,6 +534,19 @@ Convert discovered exposure into a deterministic treatment path: remediation, co
 - Accepted residual risk requires named approver, rationale, review cadence, and expiration if applicable.
 
 
+
+### Validation Method by Finding Source
+
+| Finding Source | Minimum Validation Method | Sufficient Evidence |
+|----------------|--------------------------|---------------------|
+| Vulnerability scan | Authenticated re-scan of affected asset | Scan report showing finding resolved |
+| Adversarial test | Targeted re-test of the specific finding | Test report confirming closure |
+| Code review (SAST) | Re-scan + code diff review for High/Critical | Scan report + reviewer sign-off |
+| Architecture review | Architecture Review Record updated | Signed disposition from Engineering |
+| Threat intelligence | IOC search across environment | Negative search result |
+| Audit finding | Evidence package per auditor specification | Auditor acceptance confirmation |
+| Third-party risk | Vendor attestation or re-assessment | Updated vendor assessment |
+
 ### Closure Criteria
 - Treatment executed (remediation, compensating control, exception, or risk acceptance)
 - Risk validation confirms closure or establishes residual monitoring
@@ -538,8 +562,17 @@ Convert discovered exposure into a deterministic treatment path: remediation, co
 - Exception or risk-acceptance record if used
 
 ### Escalation
-- Critical finding unassigned after 5 business days → escalate to CISO
-- Repeated exception in same control family → create Control Change Record
+
+| Trigger | Escalation Target | Action |
+|----------|------------------|--------|
+| Critical finding unassigned after **4 hours** | CISO | Immediate notification; CISO may invoke incident response |
+| Critical finding past remediation SLA (48 hours) | CISO | Mandatory review; create risk record for delayed remediation |
+| High finding unassigned after **24 hours** | Pillar Leader (Risk) | Pillar Leader must assign or explain |
+| High finding past remediation SLA (14 days) | Governance Pillar Leader | Create exception record or escalate to CISO |
+| Medium finding past SLA (30 days) | Risk Pillar Leader | Included in monthly roll-up report; risk of SLA drift |
+| Low finding past SLA (90 days) | Risk Pillar Leader | Included in quarterly review |
+| Repeated exception in same control family | Governance Pillar Leader | Create Control Change Record (F-01) |
+| Engineering refuses or stalls treatment | Pillar Leader (Risk → Engineering) | Cross-pillar escalation; CISO if unresolved after 5 business days |
 
 ---
 
@@ -657,6 +690,16 @@ Handle incidents consistently across environments while forcing lessons learned 
 - Legal / notification requirements
 - Containment strategy
 
+
+### Incident Severity Classification and Response Times
+
+| Severity | Description | IC Assignment | Containment Target | Lessons Learned Due |
+|----------|------------|--------------|-------------------|---------------------|
+| **P1 — Critical** | Active threat to life safety, grid reliability, or material business disruption | 15 minutes | 4 hours | 5 business days |
+| **P2 — High** | Confirmed compromise of regulated data, privileged access, or crown jewel system | 1 hour | 24 hours | 10 business days |
+| **P3 — Medium** | Suspected compromise, policy violation with exposure, or third-party incident with internal impact | 24 hours | 5 business days | 30 days |
+| **P4 — Low** | Isolated policy violation, informational alert, or routine incident | 5 business days | Next business day after triage | 90 days |
+
 ### Workflow
 1. Risk validates and classifies incident.
 2. CISO assigns or confirms Incident Commander.
@@ -761,6 +804,11 @@ Convert operational data into management action, improvement backlog, standards 
 - % of incidents resulting in standards or procedure update
 - % of board metrics backed by direct evidence
 
+- % of Critical/High findings where validation method was E3 (adversary-facing test or authenticated re-scan) vs. E2 (process artifact only)
+- % of accepted risks re-opened due to threat landscape change within 12 months of acceptance
+- weighted sum of (open findings × 1) + (open exceptions × 3) + (accepted risks × 2) per NIST control family
+- % of exceptions within 30 days of expiration without a renewal or closure decision
+- % of flow steps where a pillar missed its SLA, reported monthly per pillar
 ### Mandatory Rules
 - Every threshold breach must produce an action type or explicit no-action rationale.
 - Metrics without evidence links are not board-reportable.
@@ -777,7 +825,23 @@ Convert operational data into management action, improvement backlog, standards 
 - Monthly or quarterly report published
 - Repeated outliers in same control family escalated to Control Change Record or Improvement Record
 
-## 15. LLM Execution Directives
+
+## 15. Evidence Quality Tiers
+
+Not all evidence proves the same thing. Flows reference evidence by tier so that operators know what level of proof is required.
+
+| Tier | Name | What It Proves | Example | Required For |
+|------|------|---------------|---------|--------------|
+| **E1** | Control Exists | The artifact that implements the control is present | JML log file exists in the evidence library | Routine governance checks (F-03, F-07) |
+| **E2** | Control Operates | The control processed a transaction successfully | JML log shows 3 leavers processed this month; access review spreadsheet completed | Standard evidence collection; Medium/Low finding closure (F-04) |
+| **E3** | Control Is Effective | An adversary-facing test or independent verification confirms the control works as intended | Access review confirmed all leaver accounts were disabled within SLA; penetration test confirmed patch prevents exploitation | Critical/High finding closure (F-04); control test results (F-01); incident post-mortem validation (F-06) |
+
+Flows that specify "Evidence Required" should note the minimum tier. Where E3 is not feasible (e.g., architecturally impossible to test), the rationale must be documented in the record.
+
+---
+
+## 16. LLM Execution Directives
+
 
 These instructions tell an LLM how to execute the flows without ambiguity:
 
@@ -794,7 +858,7 @@ These instructions tell an LLM how to execute the flows without ambiguity:
 
 ---
 
-## 16. Minimum Record Templates
+## 17. Minimum Record Templates
 
 ### 16.1 Finding Record
 
@@ -876,7 +940,7 @@ Required fields:
 
 ---
 
-## 17. Recommended Implementation Sequence
+## 18. Recommended Implementation Sequence
 
 ### Phase 1
 Implement:
@@ -898,7 +962,7 @@ Implement:
 
 ---
 
-## 18. Document Control
+## 19. Document Control
 
 | Field | Value |
 |---|---|
