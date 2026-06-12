@@ -110,22 +110,21 @@ KPIs for this role are defined in [MTR-001](../../governance/CERG-GOV-MTR-001_Me
 
 ## 9. Competency Expectations by Grade
 
-Competency expectations for this role are defined in [CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md), organized by the eight CERG competency domains (Technical Depth, Cross-Pillar Fluency, Risk Judgment, Communication, Operational Discipline, Influence and Mentorship, Compliance & Regulatory Literacy, Continuous Learning). Behavioral anchors are specified per domain per grade per family.
+Competency expectations for this role follow the Management Track Competency Addendum ([CMP-001 §7]). The five management-specific domains are: People Leadership, Strategic Thinking, Resource and Budget Management, Stakeholder Management, and Organizational Development. Grade-level expectations (M1-M4) for each domain are in CMP-001 §7. This role is also expected to demonstrate SME competencies in the relevant home pillar at or above S2 level, as defined in CMP-001 §1.
 
-| Competency Domain (CMP-001) | L1 Expectation | L2 Expectation | L3 Expectation | L4 Expectation |
-|-----------------------------|----------------|----------------|----------------|----------------|
-| Technical Depth | [Anchor] | [Anchor] | [Anchor] | [Anchor] |
-| Cross-Pillar Fluency | [Anchor] | [Anchor] | [Anchor] | [Anchor] |
-| Risk Judgment | [Anchor] | [Anchor] | [Anchor] | [Anchor] |
-| Communication | [Anchor] | [Anchor] | [Anchor] | [Anchor] |
-| Operational Discipline | [Anchor] | [Anchor] | [Anchor] | [Anchor] |
-| Influence and Mentorship | [Anchor] | [Anchor] | [Anchor] | [Anchor] |
-| Compliance & Regulatory Literacy | [Anchor] | [Anchor] | [Anchor] | [Anchor] |
-| Continuous Learning | [Anchor] | [Anchor] | [Anchor] | [Anchor] |
+| CMP-001 §7 Domain | M1 Expectation | M2 Expectation | M3 Expectation | M4 Expectation |
+|-------------------|----------------|----------------|----------------|----------------|
+| People Leadership | Conducts regular, meaningful 1:1s. Sets clear expectations. Delivers honest performance feedback promptly. | Develops the Managers reporting to them. Ensures consistent people-management practices. | Builds a leadership bench. Shapes the people strategy. | Accountable for the entire pillar's talent health. Develops next generation of leaders. |
+| Strategic Thinking | Translates pillar goals into actionable team tasks. Prioritizes team work against organizational objectives. | Defines a function strategy and roadmap. Anticipates changes affecting priorities. | Shapes pillar strategy. Identifies emerging organizational needs. | Sets multi-year strategic direction. Aligns pillar with org strategy. |
+| Resource and Budget Management | Manages team resources effectively. Identifies resource gaps. | Owns the function's budget input. Manages vendor relationships. | Owns significant budget lines. Builds multi-year resource plans. | Owns the pillar's budget. Makes investment cases to leadership. |
+| Stakeholder Management | Represents the team effectively. Manages stakeholder expectations honestly. | Manages complex stakeholder relationships across functions. | Manages executive stakeholder relationships. Represents CERG externally. | Manages the organization's most critical stakeholder relationships. |
+| Organizational Development | Contributes to team culture and morale. Recognizes contributions publicly. | Builds a positive, high-performance culture within the function. | Shapes organizational culture across the pillar. Leads change initiatives. | Shapes organizational culture across CERG. Designs org model. |
+
+> **Full Reference:** See [CMP-001 §7] for the complete Management Track Competency Addendum. Grade definitions (M1-M4) are in [JA-001 §5]. The role-specific SME competency matrix from the home pillar is available in CMP-001 §4-6 as applicable.
 
 ## 10. Success Profile
 
-Placeholder — see JD-001 original content.
+An Executive Sponsor is successful when cybersecurity is resourced and governed as a business priority, not a technical cost center. Key indicators: the sponsor ensures that cybersecurity has a seat at the leadership table; budget requests are evaluated against risk, not against last year's spend; the sponsor champions security culture from the top; the CISO has direct access to the sponsor without going through intermediaries. The sponsor's success is measured by whether the organization's security posture improves during their tenure, not by whether an incident occurred.
 
 ## 11. Career Path
 
@@ -139,7 +138,7 @@ Cross-family movement options are defined in the [Family-to-Family Career Lattic
 
 ### 11.3 Management Track Option
 
-*[Placeholder — at L3+, a Management track option may be available per [JA-001 §8](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md).]*
+The Executive Sponsor is a business leadership role outside the CERG grade structure. See [OM-001 §5] for the Executive Sponsor's role definition. CERG's Management track for internal roles is documented in [JA-001 §5] and [CMP-001 §7].
 
 ## 12. Related CERG Documents
 

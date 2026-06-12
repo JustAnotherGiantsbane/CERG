@@ -114,22 +114,24 @@ KPIs for this role are defined in [MTR-001](../../governance/CERG-GOV-MTR-001_Me
 
 ## 9. Competency Expectations by Grade
 
-Competency expectations for this role are defined in [CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md), organized by the eight CERG competency domains (Technical Depth, Cross-Pillar Fluency, Risk Judgment, Communication, Operational Discipline, Influence and Mentorship, Compliance & Regulatory Literacy, Continuous Learning). Behavioral anchors are specified per domain per grade per family.
+The two Adjacent Incident Response roles are out of scope for the CERG Competency Model ([CMP-001 §1]). Behavioral anchors for these roles follow the Incident Response team's competency framework. For reference, the eight CERG competency domains are listed below; contact the Incident Response team for domain-specific anchors.
 
 | Competency Domain (CMP-001) | L1 Expectation | L2 Expectation | L3 Expectation | L4 Expectation |
 |-----------------------------|----------------|----------------|----------------|----------------|
-| Technical Depth | [Anchor] | [Anchor] | [Anchor] | [Anchor] |
-| Cross-Pillar Fluency | [Anchor] | [Anchor] | [Anchor] | [Anchor] |
-| Risk Judgment | [Anchor] | [Anchor] | [Anchor] | [Anchor] |
-| Communication | [Anchor] | [Anchor] | [Anchor] | [Anchor] |
-| Operational Discipline | [Anchor] | [Anchor] | [Anchor] | [Anchor] |
-| Influence and Mentorship | [Anchor] | [Anchor] | [Anchor] | [Anchor] |
-| Compliance & Regulatory Literacy | [Anchor] | [Anchor] | [Anchor] | [Anchor] |
-| Continuous Learning | [Anchor] | [Anchor] | [Anchor] | [Anchor] |
+| Technical Depth | See IR team framework | See IR team framework | See IR team framework | See IR team framework |
+| Cross-Pillar Fluency | See IR team framework | See IR team framework | See IR team framework | See IR team framework |
+| Risk Judgment | See IR team framework | See IR team framework | See IR team framework | See IR team framework |
+| Communication | See IR team framework | See IR team framework | See IR team framework | See IR team framework |
+| Operational Discipline | See IR team framework | See IR team framework | See IR team framework | See IR team framework |
+| Influence and Mentorship | See IR team framework | See IR team framework | See IR team framework | See IR team framework |
+| Compliance and Regulatory Literacy | See IR team framework | See IR team framework | See IR team framework | See IR team framework |
+| Continuous Learning | See IR team framework | See IR team framework | See IR team framework | See IR team framework |
+
+> **Note:** CMP-001 competency domains provide the organizing structure; actual anchor text must be sourced from the Incident Response team's competency framework per OM-001 §3.4.
 
 ## 10. Success Profile
 
-Placeholder — see JD-001 original content.
+A Lead Investigator is successful when every investigation produces defensible findings that stand up to legal and regulatory scrutiny. Key indicators: evidence is collected and preserved with a complete chain of custody; the investigation timeline is documented and repeatable; findings are specific enough that the organization can act on them; post-incident reports are structured, complete, and filed within SLA. The investigator's work ensures that the organization can explain exactly what happened, when, and why — to a regulator, a court, or the board.
 
 ## 11. Career Path
 
@@ -143,7 +145,7 @@ Cross-family movement options are defined in the [Family-to-Family Career Lattic
 
 ### 11.3 Management Track Option
 
-*[Placeholder — at L3+, a Management track option may be available per [JA-001 §8](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md).]*
+Management track progression for Adjacent roles follows the Incident Response team's career framework, not CERG's. See [OM-001 §3.4] for the Adjacent Function boundary definition. CERG's Management track is documented in [JA-001 §5] (Management Progression: Grade Definitions) and §8.1 (SME to Management Transition).
 
 ## 12. Related CERG Documents
 
