@@ -11,7 +11,7 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on framework version change |
 | **Frameworks** | NIST 800-53r5; NIST 800-171r3; NIST CSF 2.0; NIST RMF |
 | **Regulations** | NERC-CIP; CMMC L2; SOX ITGC |
@@ -400,7 +400,7 @@ These control areas produce evidence satisfying four or more frameworks simultan
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
-| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on framework version change |
 | **Next Scheduled Review** | 2027-05-01 |
 | **Frameworks** | NIST 800-53r5; NIST 800-171r3; NIST CSF 2.0; NIST RMF |
@@ -424,7 +424,7 @@ These control areas produce evidence satisfying four or more frameworks simultan
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| Unified Control Baseline | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control spine, overlays, evidence mapping |
-| CERG Framework | [CERG-GOV-FRM-001](CERG-GOV-FRM-001_CERG_Framework.md) | Narrative framework |
-| Document Catalog | [CERG-GOV-CAT-001](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Master document inventory |
+| Cybersecurity Policy | [CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| Unified Control Baseline | [CERG-GOV-CB-001](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control spine, overlays, evidence mapping |
+| CERG Framework | [CERG-GOV-FRM-001](governance/CERG-GOV-FRM-001_CERG_Framework.md) | Narrative framework |
+| Document Catalog | [CERG-GOV-CAT-001](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Master document inventory |

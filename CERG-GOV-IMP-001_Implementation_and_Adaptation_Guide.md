@@ -17,8 +17,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) · [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) · [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) · [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) · [`CERG-GOV-JA-001`](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) · [`CERG-GOV-CMP-001`](CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) · [`CERG-GOV-JD-001`](CERG-GOV-JD-001_CERG_Job_Descriptions.md) |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Documents** | [`CERG-GOV-VAR-001`](governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) · [`CERG-GOV-MAT-001`](governance/CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) · [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) · [`CERG-GOV-FRM-001`](governance/CERG-GOV-FRM-001_CERG_Framework.md) · [`CERG-GOV-JA-001`](governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) · [`CERG-GOV-CMP-001`](governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) · [`CERG-GOV-JD-001`](governance/CERG-GOV-JD-001_CERG_Job_Descriptions.md) |
 | **Review Cycle** | Annual / On any change to the V1 library |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · ISO/IEC 27001 A.5 |
 | **Regulations** | Cross-cutting |
@@ -46,13 +46,13 @@
 
 CERG is a cybersecurity operating model starter kit — the spine, artifacts, workflows, and evidence model to run a program. What it has needed is a clear on-ramp: a single document that tells an organization which has just forked the repository what to do on Monday morning.
 
-This is that document. It is the first thing a new adopter should read after the [README](README.md) and the [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) framework narrative.
+This is that document. It is the first thing a new adopter should read after the [README](README.md) and the [`CERG-GOV-FRM-001`](governance/CERG-GOV-FRM-001_CERG_Framework.md) framework narrative.
 
 It applies to any organization adopting CERG, whether that organization is standing up a security function for the first time, replacing a pile of disconnected policies, or formalizing a program that has run on tribal knowledge. It does not assume a large team, a big budget, or an existing document library.
 
 > **What This Guide Is Not**
 >
-> This is not a maturity model and it is not a control catalog. The maturity self-assessment is [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md); the control set is [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md). This guide is the sequencing layer that tells you the order to do things in. Read it once, then keep it open during the first 90 days.
+> This is not a maturity model and it is not a control catalog. The maturity self-assessment is [`CERG-GOV-MAT-001`](governance/CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md); the control set is [`CERG-GOV-CB-001`](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md). This guide is the sequencing layer that tells you the order to do things in. Read it once, then keep it open during the first 90 days.
 
 ---
 
@@ -87,7 +87,7 @@ Fork the whole thing. Decide what to defer later, in the open, as a recorded dec
 
 ### 3.2 Adapt
 
-Adaptation is mechanical, not creative. Every place the documents name an organization, a headcount, a regulator, or an example is a variable. [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) defines the full token scheme and ships a render tool that turns the generic corpus into an organization-specific one. Use it. Do not hand-edit 28 documents.
+Adaptation is mechanical, not creative. Every place the documents name an organization, a headcount, a regulator, or an example is a variable. [`CERG-GOV-VAR-001`](governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) defines the full token scheme and ships a render tool that turns the generic corpus into an organization-specific one. Use it. Do not hand-edit 28 documents.
 
 What you do change by hand is judgment: which optional standards apply, which regulators are in scope, where the team structure consolidates. Section 6 and Section 7 cover both.
 
@@ -97,7 +97,7 @@ A program runs when work is happening on the cadence the documents describe: int
 
 > **One Source, Many Exports**
 >
-> The authoritative copy of every adopted CERG document is the Markdown file in your repository. Word exports, PDF deliverables, intranet pages, and regulator uploads are exports. This rule is inherited from [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) and it matters from day one. If you start editing a Word copy, you have already lost version control.
+> The authoritative copy of every adopted CERG document is the Markdown file in your repository. Word exports, PDF deliverables, intranet pages, and regulator uploads are exports. This rule is inherited from [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) and it matters from day one. If you start editing a Word copy, you have already lost version control.
 
 ---
 
@@ -109,14 +109,14 @@ You do not adopt 28 documents in week one. You adopt the spine first. Minimum Vi
 
 | **Order** | **Artifact** | **ID** | **Why It Is in the Spine** |
 |---|---|---|---|
-| 1 | Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | The durable principles everything else hangs from. Nothing is authoritative until this is signed. |
-| 2 | CERG Framework | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | Explains the three-pillar model the rest of the library assumes. |
-| 3 | Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Defines pillars, decision rights, and the canonical role roster. |
-| 4 | Document Catalog | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Your authoritative inventory. Update it as you adopt. |
-| 5 | Risk Management Framework | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) | How risk is identified, scored, treated, and accepted. |
-| 6 | Risk Register and Exception Process | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | The first procedure that produces running work. |
-| 7 | Risk Register Templates | [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) | The fill-in artifact that makes the register real. |
-| 8 | Vulnerability Management Procedure | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | The second source of running work, and the one auditors look for first. |
+| 1 | Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | The durable principles everything else hangs from. Nothing is authoritative until this is signed. |
+| 2 | CERG Framework | [`CERG-GOV-FRM-001`](governance/CERG-GOV-FRM-001_CERG_Framework.md) | Explains the three-pillar model the rest of the library assumes. |
+| 3 | Operating Model | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | Defines pillars, decision rights, and the canonical role roster. |
+| 4 | Document Catalog | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Your authoritative inventory. Update it as you adopt. |
+| 5 | Risk Management Framework | [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) | How risk is identified, scored, treated, and accepted. |
+| 6 | Risk Register and Exception Process | [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | The first procedure that produces running work. |
+| 7 | Risk Register Templates | [`CERG-TMPL-RM-001`](templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) | The fill-in artifact that makes the register real. |
+| 8 | Vulnerability Management Procedure | [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | The second source of running work, and the one auditors look for first. |
 
 Eight artifacts. A policy, three governance instruments, a framework, two procedures, and a template. That is a program. It has an owner, a way to record risk, and a way to drive remediation.
 
@@ -139,9 +139,9 @@ This is the sequence for a first adoption. Dates are guidance; the order is not.
 | **Step** | **Action** | **Lead Role** |
 |---|---|---|
 | 1 | Fork the full V1 library into your content repository. | Governance Pillar Leader |
-| 2 | Build the organization profile and run the render tool per [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md). | Policy & Standards Manager |
+| 2 | Build the organization profile and run the render tool per [`CERG-GOV-VAR-001`](governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md). | Policy & Standards Manager |
 | 3 | Review and adapt the eight MVC artifacts (Section 4.1). | Governance Pillar Leader |
-| 4 | Baseline current maturity using [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md). | CISO |
+| 4 | Baseline current maturity using [`CERG-GOV-MAT-001`](governance/CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md). | CISO |
 | 5 | CISO signs the Cybersecurity Policy; Executive Sponsor endorses. | CISO |
 | 6 | Stand up the risk register; load known risks from the maturity baseline. | Risk Register Owner |
 | 7 | Run the first Monthly Risk Register Review. | Risk Register Owner |
@@ -153,20 +153,20 @@ By day 30 the program has a signed policy, a populated risk register, a maturity
 | **Step** | **Action** | **Lead Role** |
 |---|---|---|
 | 8 | Adopt the standards that match your environment (Section 7.2). | Governance Pillar Leader |
-| 9 | Adopt the Architecture Review and Project Intake Procedure [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). | Engineering Pillar Leader |
-| 10 | Stand up vulnerability management against [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) SLAs. | Vulnerability Management Lead |
-| 11 | Adopt the Access Management Standard [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) and its runbook [`CERG-PRC-AC-002`](CERG-PRC-AC-002_Access_Management_Runbook.md). | Identity Engineer |
+| 9 | Adopt the Architecture Review and Project Intake Procedure [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). | Engineering Pillar Leader |
+| 10 | Stand up vulnerability management against [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) SLAs. | Vulnerability Management Lead |
+| 11 | Adopt the Access Management Standard [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md) and its runbook [`CERG-PRC-AC-002`](procedures/CERG-PRC-AC-002_Access_Management_Runbook.md). | Identity Engineer |
 | 12 | Route the first real project through architecture review. | Engineering Pillar Leader |
 
 ### 5.3 Days 61 to 90: Close the Loop
 
 | **Step** | **Action** | **Lead Role** |
 |---|---|---|
-| 13 | Adopt [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md); publish the first CISO dashboard. | Governance Pillar Leader |
+| 13 | Adopt [`CERG-GOV-MTR-001`](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md); publish the first CISO dashboard. | Governance Pillar Leader |
 | 14 | Adopt the operational package for each regulator in scope (Section 7.3). | Governance Pillar Leader |
 | 15 | Adopt remaining procedures: third-party risk, adversarial validation. | Risk Pillar Leader |
 | 16 | Run the first Quarterly Cyber Oversight Group brief. | CISO |
-| 17 | Re-run [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md); compare to the day-1 baseline. | CISO |
+| 17 | Re-run [`CERG-GOV-MAT-001`](governance/CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md); compare to the day-1 baseline. | CISO |
 
 By day 90 every pillar is producing work, the CISO is reporting on a cadence, and the maturity score has moved. That is a running program.
 
@@ -182,7 +182,7 @@ The README promises a five-person team runs the same model as a sixty-person tea
 
 ### 6.1 The Principle
 
-The canonical role roster in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1 lists every role CERG names. A small team does not delete roles. It assigns several roles to one person. The documents do not change; the **assignment map** changes. One person can hold the CISO role, the Governance Pillar Leader role, and the Risk Register Owner role at once. The work of each role still happens; it happens in one head.
+The canonical role roster in [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1 lists every role CERG names. A small team does not delete roles. It assigns several roles to one person. The documents do not change; the **assignment map** changes. One person can hold the CISO role, the Governance Pillar Leader role, and the Risk Register Owner role at once. The work of each role still happens; it happens in one head.
 
 > **Consolidate Roles, Never Delete Them**
 >
@@ -204,13 +204,13 @@ These are starting points, not mandates. Adjust to the skills you actually have.
 
 **Fifteen-person team.** Pillar leaders are dedicated; senior practitioners own a domain each; the rest are individual contributors. Compliance manager roles are assigned only for regulators in scope.
 
-**Sixty-person team.** The full roster maps roughly one role to one person, with sub-role domain qualifiers (for example, Engineering Pillar Leader - Cloud and Engineering Pillar Leader - OT) split out as described in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
+**Sixty-person team.** The full roster maps roughly one role to one person, with sub-role domain qualifiers (for example, Engineering Pillar Leader - Cloud and Engineering Pillar Leader - OT) split out as described in [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
 
 ### 6.3 What Does Not Scale Down
 
 Two things hold regardless of headcount.
 
-1. **Separation of approval authority.** The person who accepts a risk cannot be the only person who assessed it. Even on a five-person team, risk acceptance follows the authority table in [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. If one person genuinely holds every role, the Executive Sponsor provides the second set of eyes on High and Critical acceptance.
+1. **Separation of approval authority.** The person who accepts a risk cannot be the only person who assessed it. Even on a five-person team, risk acceptance follows the authority table in [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. If one person genuinely holds every role, the Executive Sponsor provides the second set of eyes on High and Critical acceptance.
 2. **The cadence.** A five-person team still runs the Monthly Risk Register Review and the Quarterly Cyber Oversight Group brief. The meetings are shorter. They are not skipped.
 
 ---
@@ -219,7 +219,7 @@ Two things hold regardless of headcount.
 
 ### 7.1 Mechanical Adaptation
 
-Names, headcounts, regulators, and illustrative examples are variables. They are adapted with the token scheme and render tool defined in [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md). Do not hand-edit. Build the organization profile once, render the corpus, review the output.
+Names, headcounts, regulators, and illustrative examples are variables. They are adapted with the token scheme and render tool defined in [`CERG-GOV-VAR-001`](governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md). Do not hand-edit. Build the organization profile once, render the corpus, review the output.
 
 ### 7.2 Choosing Standards
 
@@ -227,14 +227,14 @@ Adopt every standard whose environment you operate. Skip none that apply.
 
 | **Standard** | **ID** | **Adopt If** |
 |---|---|---|
-| IT / Cloud / SaaS Security | [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | You run any cloud or SaaS. Nearly everyone. |
-| Grid Control Systems Security | [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | You operate operational technology or industrial control systems. |
-| CUI Handling | [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md) | You handle Controlled Unclassified Information or pursue CMMC. |
-| Access Management | [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) | Always. Every organization has identities. |
-| Secure Configuration Baseline | [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | Always. Every organization has systems to harden. |
-| Logging, Monitoring, and Detection | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Always. |
-| Cyber Resilience and Backup | [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Always. |
-| Cryptography and Key Management | [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Always. |
+| IT / Cloud / SaaS Security | [`CERG-STD-IT-001`](standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | You run any cloud or SaaS. Nearly everyone. |
+| Grid Control Systems Security | [`CERG-STD-OT-001`](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | You operate operational technology or industrial control systems. |
+| CUI Handling | [`CERG-STD-CUI-001`](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) | You handle Controlled Unclassified Information or pursue CMMC. |
+| Access Management | [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md) | Always. Every organization has identities. |
+| Secure Configuration Baseline | [`CERG-STD-CFG-001`](standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | Always. Every organization has systems to harden. |
+| Logging, Monitoring, and Detection | [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Always. |
+| Cyber Resilience and Backup | [`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Always. |
+| Cryptography and Key Management | [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Always. |
 
 If you defer a standard, record the decision and a target adoption date in the risk register. A deferred standard is an accepted risk, not a silent gap.
 
@@ -244,20 +244,20 @@ Operational packages are adopted per regulator. Adopt only what applies to you.
 
 | **Package** | **ID** | **Adopt If** |
 |---|---|---|
-| NERC-CIP | [`CERG-PLN-CIP-001`](CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) | You are a registered entity under NERC-CIP. |
-| CUI / CMMC | [`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) | You are pursuing CMMC certification. |
-| SOX ITGC | [`CERG-PLN-SOX-001`](CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) | You are a public company subject to SOX. |
-| Incident Response Plan | [`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md) | Always. Note this plan is owned by a standing IR team, not by CERG; see [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4. |
+| NERC-CIP | [`CERG-PLN-CIP-001`](plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) | You are a registered entity under NERC-CIP. |
+| CUI / CMMC | [`CERG-PLN-CUI-001`](plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) | You are pursuing CMMC certification. |
+| SOX ITGC | [`CERG-PLN-SOX-001`](plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) | You are a public company subject to SOX. |
+| Incident Response Plan | [`CERG-PLN-IR-001`](plans/CERG-PLN-IR-001_Incident_Response_Plan.md) | Always. Note this plan is owned by a standing IR team, not by CERG; see [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4. |
 
 ### 7.4 Keep the Catalog Honest
 
-Every adoption decision updates your copy of [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md). An artifact you adopted is `Approved` in your catalog. An artifact you deferred is `Planned`. The catalog is the one place anyone can see what your program actually consists of. Letting it drift is the first sign the program is becoming a library again.
+Every adoption decision updates your copy of [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md). An artifact you adopted is `Approved` in your catalog. An artifact you deferred is `Planned`. The catalog is the one place anyone can see what your program actually consists of. Letting it drift is the first sign the program is becoming a library again.
 
 ---
 
 ## 8. First-Adoption Sign-Off Workflow
 
-A first adoption is approved once, as a package. After that, individual documents follow the per-type approval authority in [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) §4.
+A first adoption is approved once, as a package. After that, individual documents follow the per-type approval authority in [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) §4.
 
 | **Step** | **What Happens** | **Authority** |
 |---|---|---|
@@ -277,7 +277,7 @@ The adoption is complete when step 5 is recorded. Not before.
 |---|---|---|
 | Big-bang adoption | The library looks complete, so the team tries to approve all of it at once. | Adopt the MVC spine. Layer the rest. Section 4. |
 | Editing exports | Someone opens a Word copy and edits it. | The Markdown source is authoritative. Exports are downstream. Section 3.3. |
-| Inventing roles | The team writes a role name that feels natural instead of using the roster. | Use only canonical roles from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1. Consolidate, never invent. |
+| Inventing roles | The team writes a role name that feels natural instead of using the roster. | Use only canonical roles from [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1. Consolidate, never invent. |
 | Deleting roles to "fit" a small team | The roster looks too big for five people. | Consolidate roles onto people. The roster is fixed. Section 6.1. |
 | Skipping the cadence | The reviews feel like overhead before the program is "ready." | The cadence is the program. A short review is still a review. Section 6.3. |
 | Silent gaps | A standard is deferred and never recorded. | Every deferral is a risk register entry with a target date. Section 7.2. |
@@ -425,7 +425,7 @@ Organizations adopting CERG should consider adding a "Working in Our CERG Team" 
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on any change to the V1 library |
 | **Next Scheduled Review** | 2027-05-27 |
 | **Frameworks** | NIST CSF 2.0 (GOVERN); ISO/IEC 27001 A.5 |
@@ -442,8 +442,8 @@ Organizations adopting CERG should consider adding a "Working in Our CERG Team" 
 ### Review Triggers
 
 - Any artifact added to or retired from the V1 library
-- Material change to the canonical role roster in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1
-- Material change to the token scheme in [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md)
+- Material change to the canonical role roster in [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1
+- Material change to the token scheme in [`CERG-GOV-VAR-001`](governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md)
 - Adopter feedback indicating a sequencing or scaling gap
 - Direction from the CISO
 
@@ -453,11 +453,11 @@ Governance owns this document. The Governance Pillar Leader (Document Control) i
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Authoritative artifact inventory; adoption updates the catalog |
-| CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role roster used by the scaling guidance |
-| CERG Framework | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | Narrative framework an adopter reads before this guide |
-| Organization Adaptation Profile | [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) | Token scheme and render tool used in mechanical adaptation |
-| Maturity Self-Assessment and Scorecard | [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) | Day-1 baseline and day-90 re-measurement |
-| Risk Management Framework | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk acceptance authority cited by the scaling guidance |
-| Unified Control Baseline | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | The control set layered in after the MVC spine |
+| Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Authoritative artifact inventory; adoption updates the catalog |
+| CERG Operating Model | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role roster used by the scaling guidance |
+| CERG Framework | [`CERG-GOV-FRM-001`](governance/CERG-GOV-FRM-001_CERG_Framework.md) | Narrative framework an adopter reads before this guide |
+| Organization Adaptation Profile | [`CERG-GOV-VAR-001`](governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) | Token scheme and render tool used in mechanical adaptation |
+| Maturity Self-Assessment and Scorecard | [`CERG-GOV-MAT-001`](governance/CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) | Day-1 baseline and day-90 re-measurement |
+| Risk Management Framework | [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk acceptance authority cited by the scaling guidance |
+| Unified Control Baseline | [`CERG-GOV-CB-001`](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) | The control set layered in after the MVC spine |

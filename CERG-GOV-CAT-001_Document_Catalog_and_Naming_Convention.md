@@ -13,7 +13,7 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Quarterly - or upon any artifact add/retire |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · ISO/IEC 27001 A.5 |
 | **Regulations** | Cross-cutting |
@@ -36,7 +36,7 @@
 
 ## 1. Purpose and Scope
 
-[CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) establishes a hierarchy of policy, standards, procedures, and guidelines. As the library grows, that hierarchy is only useful if there is a single, authoritative inventory of which artifacts exist, which are planned, which are authoritative, and which are exports of an authoritative artifact for a specific audience. This document is that inventory.
+[CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) establishes a hierarchy of policy, standards, procedures, and guidelines. As the library grows, that hierarchy is only useful if there is a single, authoritative inventory of which artifacts exist, which are planned, which are authoritative, and which are exports of an authoritative artifact for a specific audience. This document is that inventory.
 
 It applies to every CERG-owned artifact, policy, standard, procedure, plan, guideline, template, and operational package, regardless of medium (Markdown source, exported Word/PDF, intranet page, or third-party portal entry).
 
@@ -176,7 +176,7 @@ New domains are added only by amendment to this catalog.
 | `Retired` | Replaced or no longer in force. Retained for audit. | Yes - appendix to Section 5. |
 | `External Interface` | Artifact owned by an adjacent function (e.g., IR team). Included for cross-reference only. Not a CERG-governed document. | Yes — Section 5, flagged ⚠ |
 
-Approval authority follows [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) Section 7:
+Approval authority follows [CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) Section 7:
 
 - Policy (`POL`), CISO approves; Executive leadership endorses.
 - Standard (`STD`), Governance Pillar Leader approves; CISO endorses.
@@ -261,111 +261,111 @@ The V1 library is the set below. Every artifact listed has either an approved or
 
 | **ID** | **Title** | **Owner** | **Status** |
 |---|---|---|---|
-| [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Cybersecurity Policy | CISO | Approved |
+| [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Cybersecurity Policy | CISO | Approved |
 
 ### 5.2 Framework, Operating Model, and Cross-Cutting Instruments
 
 | **ID** | **Title** | **Owner** | **Status** |
 |---|---|---|---|
-| [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | CERG Operating Model | CISO / Pillar Owners | Approved |
+| [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | CERG Operating Model | CISO / Pillar Owners | Approved |
 | `CERG-GOV-CAT-001` | Document Catalog and Naming Convention | Governance Pillar Leader | Approved (this doc) |
-| [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Unified Control Baseline | Governance Pillar Leader | Approved |
-| [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Metrics, Dashboard, and CISO/Board Reporting | Governance Pillar Leader | Published |
-| [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | SURGE / CERG Framework (narrative) | CISO | Approved |
-| [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk Management Framework | Governance Pillar Leader | Approved |
-| [`CERG-GOV-TAX-001`](CERG-GOV-TAX-001_Risk_Taxonomy.md) | Risk Taxonomy | Cyber Risk | Approved |
-| [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) | Compliance Matrix | Governance Pillar Leader | Approved |
-| [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Implementation and Adaptation Guide | Governance Pillar Leader | Approved |
-| [`CERG-GOV-IMP-002`](CERG-GOV-IMP-002_Adoption_Safety_Guide.md) | Adoption Safety Guide | Governance Pillar Leader | Approved |
-| [`CERG-GOV-IMP-003`](CERG-GOV-IMP-003_Small_Team_Adoption_Path.md) | Small Team Adoption Path | Governance Pillar Leader | Approved |
-| [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) | Organization Adaptation Profile | Governance Pillar Leader | Approved |
-| [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) | Maturity Self-Assessment and Scorecard | Governance Pillar Leader | Approved |
-| [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Consolidated Roles, Responsibilities, and RACI Instrument | Governance Pillar Leader | Approved |
-| [`CERG-GOV-CAL-001`](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md) | Annual Security and Governance Calendar | Governance Pillar Leader | Approved |
-| [`CERG-GOV-STY-001`](CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md) | Document Authoring and Style Guide | Governance Pillar Leader (Policy & Standards) | Published |
-| [`CERG-GOV-STY-002`](CERG-GOV-STY-002_Style_Compliance_Tracker.md) | Style Compliance Tracker | Governance Pillar Leader (Document Control) | Active |
-| [`CERG-GOV-TRC-001`](CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md) | Control-to-Procedure Traceability Matrix | Governance Pillar Leader (Control Baseline) | Approved |
-| [`CERG-GOV-IMPREG-001`](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) | Program Improvement Register | Governance Pillar Leader | Published |
-| [`CERG-GOV-CEF-001`](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) | Control Effectiveness Framework | Governance Pillar Leader | Approved |
-| [`CERG-GOV-AUD-001`](CERG-GOV-AUD-001_Evidence_Quality_Standard.md) | Evidence Quality Standard | Governance Pillar Leader | Approved |
-| [`CERG-GOV-JA-001`](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Job Architecture and Grade Framework | Governance Pillar Leader (Policy & Standards) | Approved |
-| [`CERG-GOV-JD-001`](CERG-GOV-JD-001_CERG_Job_Descriptions.md) | CERG Job Descriptions | Governance Pillar Leader (Policy & Standards) | Approved |
-| [`CERG-GOV-CMP-001`](CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) | Competency Model and Behavioral Anchors | Governance Pillar Leader (Policy & Standards) | Approved |
-| [`CERG-GOV-PERF-001`](CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) | Performance Management and Promotion Framework | Governance Pillar Leader (Policy & Standards) | Approved |
-| [`CERG-GOV-ONB-001`](CERG-GOV-ONB-001_Onboarding_and_Integration_Program.md) | Onboarding and Integration Program | Governance Pillar Leader (Policy & Standards) | Approved |
-| [`CERG-GOV-WFP-001`](CERG-GOV-WFP-001_Workforce_Planning_and_Capacity_Model.md) | Workforce Planning and Capacity Model | Governance Pillar Leader (Policy & Standards) | Approved |
-| [`CERG-GOV-TRN-001`](CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) | Training, Development, and Certification Framework | Governance Pillar Leader (Policy & Standards) | Approved |
-| [`CERG-GOV-SUCC-001`](CERG-GOV-SUCC-001_Succession_Planning_and_Talent_Review_Framework.md) | Succession Planning and Talent Review Framework | CISO | Approved |
-| [`CERG-GOV-CON-001`](CERG-GOV-CON-001_Contractor_and_Non-Employee_Staff_Integration_Guide.md) | Contractor and Non-Employee Staff Integration Guide | Governance Pillar Leader (Policy & Standards) | Approved |
+| [`CERG-GOV-CB-001`](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) | Unified Control Baseline | Governance Pillar Leader | Approved |
+| [`CERG-GOV-MTR-001`](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Metrics, Dashboard, and CISO/Board Reporting | Governance Pillar Leader | Published |
+| [`CERG-GOV-FRM-001`](governance/CERG-GOV-FRM-001_CERG_Framework.md) | SURGE / CERG Framework (narrative) | CISO | Approved |
+| [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk Management Framework | Governance Pillar Leader | Approved |
+| [`CERG-GOV-TAX-001`](governance/CERG-GOV-TAX-001_Risk_Taxonomy.md) | Risk Taxonomy | Cyber Risk | Approved |
+| [`CERG-GOV-CMX-001`](governance/CERG-GOV-CMX-001_Compliance_Matrix.md) | Compliance Matrix | Governance Pillar Leader | Approved |
+| [`CERG-GOV-IMP-001`](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Implementation and Adaptation Guide | Governance Pillar Leader | Approved |
+| [`CERG-GOV-IMP-002`](governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md) | Adoption Safety Guide | Governance Pillar Leader | Approved |
+| [`CERG-GOV-IMP-003`](governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md) | Small Team Adoption Path | Governance Pillar Leader | Approved |
+| [`CERG-GOV-VAR-001`](governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) | Organization Adaptation Profile | Governance Pillar Leader | Approved |
+| [`CERG-GOV-MAT-001`](governance/CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) | Maturity Self-Assessment and Scorecard | Governance Pillar Leader | Approved |
+| [`CERG-GOV-RAC-001`](governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Consolidated Roles, Responsibilities, and RACI Instrument | Governance Pillar Leader | Approved |
+| [`CERG-GOV-CAL-001`](governance/CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md) | Annual Security and Governance Calendar | Governance Pillar Leader | Approved |
+| [`CERG-GOV-STY-001`](governance/CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md) | Document Authoring and Style Guide | Governance Pillar Leader (Policy & Standards) | Published |
+| [`CERG-GOV-STY-002`](governance/CERG-GOV-STY-002_Style_Compliance_Tracker.md) | Style Compliance Tracker | Governance Pillar Leader (Document Control) | Active |
+| [`CERG-GOV-TRC-001`](governance/CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md) | Control-to-Procedure Traceability Matrix | Governance Pillar Leader (Control Baseline) | Approved |
+| [`CERG-GOV-IMPREG-001`](governance/CERG-GOV-IMPREG-001_Program_Improvement_Register.md) | Program Improvement Register | Governance Pillar Leader | Published |
+| [`CERG-GOV-CEF-001`](governance/CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) | Control Effectiveness Framework | Governance Pillar Leader | Approved |
+| [`CERG-GOV-AUD-001`](governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md) | Evidence Quality Standard | Governance Pillar Leader | Approved |
+| [`CERG-GOV-JA-001`](governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Job Architecture and Grade Framework | Governance Pillar Leader (Policy & Standards) | Approved |
+| [`CERG-GOV-JD-001`](governance/CERG-GOV-JD-001_CERG_Job_Descriptions.md) | CERG Job Descriptions | Governance Pillar Leader (Policy & Standards) | Approved |
+| [`CERG-GOV-CMP-001`](governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) | Competency Model and Behavioral Anchors | Governance Pillar Leader (Policy & Standards) | Approved |
+| [`CERG-GOV-PERF-001`](governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) | Performance Management and Promotion Framework | Governance Pillar Leader (Policy & Standards) | Approved |
+| [`CERG-GOV-ONB-001`](governance/CERG-GOV-ONB-001_Onboarding_and_Integration_Program.md) | Onboarding and Integration Program | Governance Pillar Leader (Policy & Standards) | Approved |
+| [`CERG-GOV-WFP-001`](governance/CERG-GOV-WFP-001_Workforce_Planning_and_Capacity_Model.md) | Workforce Planning and Capacity Model | Governance Pillar Leader (Policy & Standards) | Approved |
+| [`CERG-GOV-TRN-001`](governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) | Training, Development, and Certification Framework | Governance Pillar Leader (Policy & Standards) | Approved |
+| [`CERG-GOV-SUCC-001`](governance/CERG-GOV-SUCC-001_Succession_Planning_and_Talent_Review_Framework.md) | Succession Planning and Talent Review Framework | CISO | Approved |
+| [`CERG-GOV-CON-001`](governance/CERG-GOV-CON-001_Contractor_and_Non-Employee_Staff_Integration_Guide.md) | Contractor and Non-Employee Staff Integration Guide | Governance Pillar Leader (Policy & Standards) | Approved |
 | [`CERG-GOV-JF-001`](roles/CERG-GOV-JF-001_Job_Families_Overview.md) | Job Families Overview | Governance Pillar Leader (Policy & Standards) | Approved |
 | [`CERG-GOV-JF-002`](roles/CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) | NICE Workforce Framework Crosswalk | Governance Pillar Leader (Policy & Standards) | Approved |
-| [`CERG-GOV-FLOW-001`](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) | Cross-Pillar Operational Flows | Governance Pillar Leader | Approved |
+| [`CERG-GOV-FLOW-001`](governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) | Cross-Pillar Operational Flows | Governance Pillar Leader | Approved |
 
 ### 5.3 Standards
 
 | **ID** | **Title** | **Owner** | **Status** |
 |---|---|---|---|
-| [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | IT / Cloud / SaaS Security Standard | Cyber Governance - IT/Cloud | Approved |
-| [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | Grid Control Systems Security Standard | Cyber Governance - OT | Approved |
-| [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md) | CUI Handling Standard | Cyber Governance - CUI/CMMC | Approved |
-| [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) | Access Management Standard | Cyber Governance - Identity | Approved |
-| [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | Secure Configuration Baseline Standard (DISH) | Cyber Engineering - Platforms | Approved |
-| [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Logging, Monitoring, and Detection Standard | Cyber Risk - Detection | Approved |
-| [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Cyber Resilience and Backup Standard | Cyber Engineering - Resilience | Approved |
-| [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Cryptography and Key Management Standard | Cyber Engineering - Platforms | Approved |
-| [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) | Secure Software Development and Application Security Standard | Cyber Engineering - Application Security | Approved |
-| [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) | Asset Management and Inventory Standard | Cyber Engineering - Platforms | Approved |
-| [`CERG-STD-NET-001`](CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md) | Network Security and Segmentation Standard | Cyber Engineering - Platforms | Approved |
-| [`CERG-STD-EP-001`](CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md) | Endpoint and Mobile Security Standard | Cyber Engineering - Endpoint | Approved |
-| [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) | Data Governance and Classification Standard | Cyber Governance - Policy & Standards | Approved |
-| [`CERG-STD-AI-001`](CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) | Artificial Intelligence Security Standard | Cyber Engineering - Application Security | Approved |
-| [`CERG-STD-MSG-001`](CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md) | Email and Messaging Security Standard | Cyber Engineering - Platforms | Approved |
+| [`CERG-STD-IT-001`](standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | IT / Cloud / SaaS Security Standard | Cyber Governance - IT/Cloud | Approved |
+| [`CERG-STD-OT-001`](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | Grid Control Systems Security Standard | Cyber Governance - OT | Approved |
+| [`CERG-STD-CUI-001`](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) | CUI Handling Standard | Cyber Governance - CUI/CMMC | Approved |
+| [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md) | Access Management Standard | Cyber Governance - Identity | Approved |
+| [`CERG-STD-CFG-001`](standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | Secure Configuration Baseline Standard (DISH) | Cyber Engineering - Platforms | Approved |
+| [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Logging, Monitoring, and Detection Standard | Cyber Risk - Detection | Approved |
+| [`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Cyber Resilience and Backup Standard | Cyber Engineering - Resilience | Approved |
+| [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Cryptography and Key Management Standard | Cyber Engineering - Platforms | Approved |
+| [`CERG-STD-SDL-001`](standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) | Secure Software Development and Application Security Standard | Cyber Engineering - Application Security | Approved |
+| [`CERG-STD-AM-001`](standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) | Asset Management and Inventory Standard | Cyber Engineering - Platforms | Approved |
+| [`CERG-STD-NET-001`](standards/CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md) | Network Security and Segmentation Standard | Cyber Engineering - Platforms | Approved |
+| [`CERG-STD-EP-001`](standards/CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md) | Endpoint and Mobile Security Standard | Cyber Engineering - Endpoint | Approved |
+| [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) | Data Governance and Classification Standard | Cyber Governance - Policy & Standards | Approved |
+| [`CERG-STD-AI-001`](standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) | Artificial Intelligence Security Standard | Cyber Engineering - Application Security | Approved |
+| [`CERG-STD-MSG-001`](standards/CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md) | Email and Messaging Security Standard | Cyber Engineering - Platforms | Approved |
 
 ### 5.4 Procedures
 
 | **ID** | **Title** | **Owner** | **Status** |
 |---|---|---|---|
-| [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Vulnerability Management Procedure | Cyber Risk | Approved |
-| [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Risk Register and Exception Process | Cyber Governance - Risk Register | Approved |
-| [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Architecture Review and Project Intake Procedure | Cyber Engineering | Approved |
-| [`CERG-PRC-AC-002`](CERG-PRC-AC-002_Access_Management_Runbook.md) | Access Management Runbook | Identity Engineer (or IAM team if external) | Approved |
-| [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Third-Party and Supply Chain Risk Procedure | Cyber Risk - Vendor Risk | Approved |
-| [`CERG-PRC-AV-001`](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) | Adversarial Validation Procedure | Cyber Risk - Offensive Security | Approved |
-| [`CERG-PRC-IR-002`](CERG-PRC-IR-002_Incident_Response_Playbook_Set.md) | Incident Response Playbook Set ⚠ ADJACENT — owned by standing IR team; included for cross-reference only | Standing IR Team / Incident Commander | External Interface |
-| [`CERG-PRC-TM-001`](CERG-PRC-TM-001_Threat_Modeling_Procedure.md) | Threat Modeling Procedure | Cyber Risk | Published |
-| [`CERG-PRC-TI-001`](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) | Threat Intelligence Procedure | Cyber Risk - Threat Intelligence | Published |
-| [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) | Audit and Evidence Management Procedure | Cyber Governance | Published |
-| [`CERG-PRC-CHG-001`](CERG-PRC-CHG-001_Security_Change_Management_Procedure.md) | Security Change Management Procedure | Cyber Engineering | Published |
-| [`CERG-PRC-LL-001`](CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) | Lessons Learned and Program Improvement Procedure | Governance Pillar Leader | Published |
+| [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Vulnerability Management Procedure | Cyber Risk | Approved |
+| [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Risk Register and Exception Process | Cyber Governance - Risk Register | Approved |
+| [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Architecture Review and Project Intake Procedure | Cyber Engineering | Approved |
+| [`CERG-PRC-AC-002`](procedures/CERG-PRC-AC-002_Access_Management_Runbook.md) | Access Management Runbook | Identity Engineer (or IAM team if external) | Approved |
+| [`CERG-PRC-TPRM-001`](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Third-Party and Supply Chain Risk Procedure | Cyber Risk - Vendor Risk | Approved |
+| [`CERG-PRC-AV-001`](procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) | Adversarial Validation Procedure | Cyber Risk - Offensive Security | Approved |
+| [`CERG-PRC-IR-002`](procedures/CERG-PRC-IR-002_Incident_Response_Playbook_Set.md) | Incident Response Playbook Set ⚠ ADJACENT — owned by standing IR team; included for cross-reference only | Standing IR Team / Incident Commander | External Interface |
+| [`CERG-PRC-TM-001`](procedures/CERG-PRC-TM-001_Threat_Modeling_Procedure.md) | Threat Modeling Procedure | Cyber Risk | Published |
+| [`CERG-PRC-TI-001`](procedures/CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) | Threat Intelligence Procedure | Cyber Risk - Threat Intelligence | Published |
+| [`CERG-PRC-AUD-001`](procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) | Audit and Evidence Management Procedure | Cyber Governance | Published |
+| [`CERG-PRC-CHG-001`](procedures/CERG-PRC-CHG-001_Security_Change_Management_Procedure.md) | Security Change Management Procedure | Cyber Engineering | Published |
+| [`CERG-PRC-LL-001`](procedures/CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) | Lessons Learned and Program Improvement Procedure | Governance Pillar Leader | Published |
 
-> **Numbering note: CERG-PRC-AC-001.** The Access Management Runbook is identifier `CERG-PRC-AC-002` rather than `-001` because the original `-001` slot was reserved for a planned standalone Access Review Runbook that has not been authored; the work was folded into the parent standard [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) §9. The `-002` ID is preserved to avoid renumbering existing references. The `-001` slot is reserved for future use.
+> **Numbering note: CERG-PRC-AC-001.** The Access Management Runbook is identifier `CERG-PRC-AC-002` rather than `-001` because the original `-001` slot was reserved for a planned standalone Access Review Runbook that has not been authored; the work was folded into the parent standard [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md) §9. The `-002` ID is preserved to avoid renumbering existing references. The `-001` slot is reserved for future use.
 
 ### 5.5 Plans / Operational Packages
 
 | **ID** | **Title** | **Owner** | **Status** |
 |---|---|---|---|
-| [`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md) | Incident Response Plan ⚠ ADJACENT — owned by standing IR team; included for cross-reference only | Standing IR Team / Incident Commander | External Interface |
-| [`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) | CUI / CMMC Operational Package | Cyber Governance - CUI/CMMC | Approved |
-| [`CERG-PLN-CIP-001`](CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) | NERC-CIP Operational Package | Cyber Governance - OT | Approved |
-| [`CERG-PLN-SOX-001`](CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) | SOX ITGC Operational Package | Cyber Governance - SOX | Approved |
-| [`CERG-PLN-BC-001`](CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md) | Business Continuity and Disaster Recovery Plan | Governance Pillar Leader | Approved |
-| [`CERG-PLN-ISO-001`](CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md) | ISO/IEC 27001 Operational Package | Governance Pillar Leader | Approved |
-| [`CERG-PLN-PRIV-001`](CERG-PLN-PRIV-001_Privacy_and_Data_Protection_Operational_Package.md) | Privacy and Data Protection Operational Package | Governance Pillar Leader | Approved |
+| [`CERG-PLN-IR-001`](plans/CERG-PLN-IR-001_Incident_Response_Plan.md) | Incident Response Plan ⚠ ADJACENT — owned by standing IR team; included for cross-reference only | Standing IR Team / Incident Commander | External Interface |
+| [`CERG-PLN-CUI-001`](plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) | CUI / CMMC Operational Package | Cyber Governance - CUI/CMMC | Approved |
+| [`CERG-PLN-CIP-001`](plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) | NERC-CIP Operational Package | Cyber Governance - OT | Approved |
+| [`CERG-PLN-SOX-001`](plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) | SOX ITGC Operational Package | Cyber Governance - SOX | Approved |
+| [`CERG-PLN-BC-001`](plans/CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md) | Business Continuity and Disaster Recovery Plan | Governance Pillar Leader | Approved |
+| [`CERG-PLN-ISO-001`](plans/CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md) | ISO/IEC 27001 Operational Package | Governance Pillar Leader | Approved |
+| [`CERG-PLN-PRIV-001`](plans/CERG-PLN-PRIV-001_Privacy_and_Data_Protection_Operational_Package.md) | Privacy and Data Protection Operational Package | Governance Pillar Leader | Approved |
 
 ### 5.6 Templates
 
 | **ID** | **Title** | **Owner** | **Status** |
 |---|---|---|---|
-| [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) | Risk Register Templates and Reporting | Cyber Governance - Risk Register | Approved |
-| [`CERG-TMPL-CUI-001`](CERG-TMPL-CUI-001_System_Security_Plan_Template.md) | System Security Plan Template | CMMC / Federal Compliance Manager | Approved |
-| [`CERG-TMPL-CUI-002`](CERG-TMPL-CUI-002_POAM_Template.md) | Plan of Action and Milestones Template | CMMC / Federal Compliance Manager | Approved |
-| [`CERG-TMPL-RM-002`](CERG-TMPL-RM-002_Security_Exception_Request_Form.md) | Security Exception Request Form | Risk Register Owner | Approved |
-| [`CERG-TMPL-AR-001`](CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md) | Architecture and Project Intake Form | Engineering Pillar Leader | Approved |
-| [`CERG-TMPL-TPRM-001`](CERG-TMPL-TPRM-001_Vendor_Security_Questionnaire_and_Assessment_Template.md) | Vendor Security Questionnaire and TPRM Assessment Template | Vendor Risk Analyst | Approved |
-| [`CERG-TMPL-RM-003`](CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md) | Risk Acceptance Memo Template | Risk Pillar Leader | Approved |
-| [`CERG-TMPL-AUD-001`](CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md) | Control Evidence and Test Worksheet | Evidence Librarian | Approved |
-| [`CERG-TMPL-MTR-001`](CERG-TMPL-MTR-001_Board_and_CISO_Reporting_Deck_Template.md) | Board and CISO Reporting Deck Template | Governance Pillar Leader | Approved |
-| [`CERG-TMPL-GOV-001`](CERG-TMPL-GOV-001_Stakeholder_Perception_Survey.md) | Stakeholder Perception Survey | Governance Pillar Leader | Approved |
+| [`CERG-TMPL-RM-001`](templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) | Risk Register Templates and Reporting | Cyber Governance - Risk Register | Approved |
+| [`CERG-TMPL-CUI-001`](templates/CERG-TMPL-CUI-001_System_Security_Plan_Template.md) | System Security Plan Template | CMMC / Federal Compliance Manager | Approved |
+| [`CERG-TMPL-CUI-002`](templates/CERG-TMPL-CUI-002_POAM_Template.md) | Plan of Action and Milestones Template | CMMC / Federal Compliance Manager | Approved |
+| [`CERG-TMPL-RM-002`](templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md) | Security Exception Request Form | Risk Register Owner | Approved |
+| [`CERG-TMPL-AR-001`](templates/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md) | Architecture and Project Intake Form | Engineering Pillar Leader | Approved |
+| [`CERG-TMPL-TPRM-001`](templates/CERG-TMPL-TPRM-001_Vendor_Security_Questionnaire_and_Assessment_Template.md) | Vendor Security Questionnaire and TPRM Assessment Template | Vendor Risk Analyst | Approved |
+| [`CERG-TMPL-RM-003`](templates/CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md) | Risk Acceptance Memo Template | Risk Pillar Leader | Approved |
+| [`CERG-TMPL-AUD-001`](templates/CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md) | Control Evidence and Test Worksheet | Evidence Librarian | Approved |
+| [`CERG-TMPL-MTR-001`](templates/CERG-TMPL-MTR-001_Board_and_CISO_Reporting_Deck_Template.md) | Board and CISO Reporting Deck Template | Governance Pillar Leader | Approved |
+| [`CERG-TMPL-GOV-001`](templates/CERG-TMPL-GOV-001_Stakeholder_Perception_Survey.md) | Stakeholder Perception Survey | Governance Pillar Leader | Approved |
 
 Other templates remain embedded as appendices of their parent procedure or plan unless they have independent reuse outside that artifact. The Document Catalog references the parent.
 
@@ -489,7 +489,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Quarterly, or upon any artifact add or retire |
 | **Next Scheduled Review** | 2026-08-27 |
 | **Frameworks** | NIST CSF 2.0 (GOVERN); ISO/IEC 27001 A.5 |
@@ -527,7 +527,7 @@ Governance owns this document. The Governance Pillar Leader (Document Control) i
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy; establishes the document hierarchy this catalog inventories |
-| CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Defines the roles cited as artifact owners |
-| Consolidated Roles, Responsibilities, and RACI Instrument | [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Master RACI for ownership of every artifact in this catalog |
-| Implementation and Adaptation Guide | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Adoption sequencing; instructs adopters to keep this catalog current | 
+| Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy; establishes the document hierarchy this catalog inventories |
+| CERG Operating Model | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | Defines the roles cited as artifact owners |
+| Consolidated Roles, Responsibilities, and RACI Instrument | [`CERG-GOV-RAC-001`](governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Master RACI for ownership of every artifact in this catalog |
+| Implementation and Adaptation Guide | [`CERG-GOV-IMP-001`](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Adoption sequencing; instructs adopters to keep this catalog current | 

@@ -12,8 +12,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) · [`CERG-STD-AI-001`](CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Documents** | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [`CERG-GOV-CB-001`](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-STD-SDL-001`](standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) · [`CERG-STD-AI-001`](standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) · [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
 | **Review Cycle** | Annual / On material change to architecture review or threat modeling methods |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (RA, SA, PL, SC) · [NIST 800-160](https://csrc.nist.gov/pubs/sp/800/160/v1/final) · [NIST SSDF](https://csrc.nist.gov/pubs/sp/800/218/final) · [MITRE ATT&CK](https://attack.mitre.org/) · [MITRE ATT&CK for ICS](https://attack.mitre.org/matrices/ics/) · [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) |
 | **Regulations** | CMMC L2 / 800-171r3 · NERC-CIP · SOX ITGC where applicable |
@@ -41,7 +41,7 @@
 
 ## 1. Purpose and Scope
 
-The CERG README states that during architecture and design review, Engineering leads and Risk performs threat modeling. [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) makes threat modeling part of Phase 2. Until this procedure, the method, triggers, inputs, outputs, and handoff rules were implicit. This procedure makes them executable.
+The CERG README states that during architecture and design review, Engineering leads and Risk performs threat modeling. [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) makes threat modeling part of Phase 2. Until this procedure, the method, triggers, inputs, outputs, and handoff rules were implicit. This procedure makes them executable.
 
 Threat modeling is the design-time discipline of asking how a system can be abused before it is built or changed. It is not a paperwork exercise. It is how CERG turns threat knowledge into architecture decisions, control requirements, and risk register entries early enough that the project can still change cheaply.
 
@@ -66,7 +66,7 @@ This procedure applies to every project subject to CERG architecture review, eve
 
 ## 3. When Threat Modeling Is Required
 
-Threat modeling is required when a project meets any of the mandatory architecture review triggers in [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) §4.1 and also meets any of the following threat-modeling triggers.
+Threat modeling is required when a project meets any of the mandatory architecture review triggers in [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) §4.1 and also meets any of the following threat-modeling triggers.
 
 | **Trigger** | **Why It Matters** |
 |---|---|
@@ -117,7 +117,7 @@ The Threat Intelligence Analyst and the project team provide inputs before the s
 | Business purpose and scope | Project sponsor or technical lead | Every model |
 | Architecture diagram | Project technical lead | Every model |
 | Data flow diagram | Project technical lead | Any system moving data across trust boundaries |
-| Data classification | Asset Owners, per [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) | Any system processing data |
+| Data classification | Asset Owners, per [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) | Any system processing data |
 | Identity and access model | Identity Engineer | Any system with user, service, or privileged access |
 | External dependencies and vendors | Vendor Risk Analyst | Any third-party integration |
 | Deployment model and network paths | Cloud Security Engineer, OT Security Engineer, Endpoint Engineer as applicable | Cloud, OT, endpoint, and networked systems |
@@ -143,7 +143,7 @@ The abuse-case format includes a threat actor field. The following framework gui
 
 #### Actor Scoping
 
-Actors are scoped based on data classification, industry sector, system exposure, and threat intelligence from [CERG-PRC-TI-001](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md). Nation-state and competitor actors are in scope for CUI, BCSI, and strategic IP. Internet-facing systems include cybercriminal and hacktivist actors. Internal-only systems emphasize insider actors.
+Actors are scoped based on data classification, industry sector, system exposure, and threat intelligence from [CERG-PRC-TI-001](procedures/CERG-PRC-TI-001_Threat_Intelligence_Procedure.md). Nation-state and competitor actors are in scope for CUI, BCSI, and strategic IP. Internet-facing systems include cybercriminal and hacktivist actors. Internal-only systems emphasize insider actors.
 
 #### Actor-to-ATT&CK Mapping
 
@@ -204,7 +204,7 @@ For each abuse case, the team decides one of four dispositions:
 |---|---|
 | **Design out** | Change the architecture so the abuse case is no longer plausible. |
 | **Mitigate** | Add or strengthen a preventive, detective, or recovery control. |
-| **Accept** | Record and approve residual risk through [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). |
+| **Accept** | Record and approve residual risk through [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). |
 | **Defer with owner and date** | Temporarily defer action, with an owner, due date, and review point. Deferment is not a parking lot. |
 
 ### 5.6 Step 6: Record Findings
@@ -269,7 +269,7 @@ When an AI component is in scope, the threat model additionally:
 |---|---|
 | Distribute inputs (diagrams, data classification, asset inventory, threat intelligence) | 5 business days before |
 | Confirm participants (system owner, architect, security engineer) | 5 business days before |
-| Pre-read threat intelligence per [CERG-PRC-TI-001](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) | 2 business days before |
+| Pre-read threat intelligence per [CERG-PRC-TI-001](procedures/CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) | 2 business days before |
 
 #### Session Time-Boxing
 
@@ -300,8 +300,8 @@ Disagreements during threat modeling indicate that a trust assumption or design 
 | Distribute draft threat model | 2 business days after session |
 | Participants review | 5 business days |
 | Finalize threat model | 10 business days |
-| Enter findings in risk register per [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | 3 business days after finalization |
-| Archive with review record per [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | At finalization |
+| Enter findings in risk register per [CERG-PRC-RM-001](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | 3 business days after finalization |
+| Archive with review record per [CERG-PRC-AR-001](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | At finalization |
 
 ---
 
@@ -311,10 +311,10 @@ Every completed threat model produces the following outputs.
 
 | **Output** | **Description** | **Destination** |
 |---|---|---|
-| Threat model summary | Scope, date, participants, assumptions, diagrams reviewed, and high-level conclusion. | Project review record in [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). |
+| Threat model summary | Scope, date, participants, assumptions, diagrams reviewed, and high-level conclusion. | Project review record in [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). |
 | Abuse-case table | Abuse cases, ATT&CK mappings, impacted assets, and disposition. | Project review record; reused in secure development. |
 | Findings list | Specific design, control, or risk findings with owner and due date. | Architecture review action log. |
-| Risk entries | Residual risks that are not remediated before go-live. | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). |
+| Risk entries | Residual risks that are not remediated before go-live. | [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). |
 | Control updates | Needed changes to standards, baselines, detection, or evidence requirements. | Relevant document owner or control owner. |
 | Detection leads | ATT&CK-informed detection ideas arising from the model. | Detection Engineer. |
 
@@ -326,7 +326,7 @@ Every completed threat model produces the following outputs.
 
 ## 7. Integration With Architecture Review
 
-Threat modeling is embedded in Phase 2 of [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md), not run as an unrelated side process.
+Threat modeling is embedded in Phase 2 of [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md), not run as an unrelated side process.
 
 | **Architecture Review Phase** | **Threat Modeling Role** |
 |---|---|
@@ -342,7 +342,7 @@ A go-live recommendation is not complete if required threat-model findings are u
 
 ## 8. Finding Severity and Treatment
 
-Threat-model findings are scored using the risk and exception process in [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). Severity considers both likelihood and impact, including the data classification from [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md), the asset criticality from [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md), and the system's regulatory scope.
+Threat-model findings are scored using the risk and exception process in [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). Severity considers both likelihood and impact, including the data classification from [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md), the asset criticality from [`CERG-STD-AM-001`](standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md), and the system's regulatory scope.
 
 A finding may be closed only when one of the following is true:
 
@@ -364,7 +364,7 @@ Threat modeling scales by depth, not by skipping accountability.
 | High-value, regulated, internet-facing, AI, or OT system | Full session, may require multiple workshops. | Risk Pillar Leader, Threat Intelligence Analyst, relevant Engineering role, relevant compliance manager, project technical lead. |
 | Material post-incident redesign | Full session focused on the failed control path. | Risk Pillar Leader, Lead Investigator, relevant Engineering role, Risk Register Owner. |
 
-A five-person team still performs all four depths. One person may hold multiple roles under [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md), but the record still names the canonical role responsible for each decision.
+A five-person team still performs all four depths. One person may hold multiple roles under [`CERG-GOV-RAC-001`](governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md), but the record still names the canonical role responsible for each decision.
 
 ---
 
@@ -381,7 +381,7 @@ All threat models receive a peer review by a second qualified analyst before fin
 - All STRIDE categories are considered per trust boundary
 - All abuse cases have severity ratings and dispositions
 - All deferred or accepted items have named owners and target dates
-- The threat model references current threat intelligence from [CERG-PRC-TI-001](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md)
+- The threat model references current threat intelligence from [CERG-PRC-TI-001](procedures/CERG-PRC-TI-001_Threat_Intelligence_Procedure.md)
 
 #### Calibration Sessions
 
@@ -407,7 +407,7 @@ Quality disputes that cannot be resolved between the analyst and peer reviewer a
 
 ## 10. Roles and Responsibilities
 
-Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
+Roles below are canonical role names from [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
 
 | **Role** | **Threat Modeling Responsibility** |
 |---|---|
@@ -527,7 +527,7 @@ THREAT MODEL - TM-YYYY-NNNN
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to architecture review or threat modeling methods |
 | **Next Scheduled Review** | 2027-05-22 |
 | **Frameworks** | NIST 800-53r5 (RA, SA, PL, SC); NIST 800-160; NIST SSDF; MITRE ATT&CK; MITRE ATT&CK for ICS; OWASP ASVS |
@@ -542,7 +542,7 @@ THREAT MODEL - TM-YYYY-NNNN
 
 ### Review Triggers
 
-- Change to [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md)
+- Change to [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md)
 - Change to the CERG secure development or AI security standards
 - Revision to MITRE ATT&CK, MITRE ATT&CK for ICS, NIST SSDF, or relevant NIST 800-53 controls
 - Significant incident showing threat-modeling gaps
@@ -554,14 +554,14 @@ Cyber Risk owns this document. The Risk Pillar Leader is responsible for initiat
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Establishes the pillar handoff and canonical roles |
-| Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Threat modeling is Phase 2 input and output |
-| Unified Control Baseline | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control requirements considered during modeling |
-| Secure Software Development and Application Security Standard | [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) | Threat-model findings feed secure development gates |
-| Artificial Intelligence Security Standard | [`CERG-STD-AI-001`](CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) | AI-specific threat classes and required modeling |
-| Risk Register and Exception Process | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Residual threat-model findings are recorded and treated |
-| Data Governance and Classification Standard | [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) | Data classification input |
-| Asset Management and Inventory Standard | [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) | Asset criticality input |
-| Consolidated Roles, Responsibilities, and RACI Instrument | [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Scaling and role accountability reference |
-| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `TM` domain |
+| Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| CERG Operating Model | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | Establishes the pillar handoff and canonical roles |
+| Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Threat modeling is Phase 2 input and output |
+| Unified Control Baseline | [`CERG-GOV-CB-001`](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control requirements considered during modeling |
+| Secure Software Development and Application Security Standard | [`CERG-STD-SDL-001`](standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) | Threat-model findings feed secure development gates |
+| Artificial Intelligence Security Standard | [`CERG-STD-AI-001`](standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) | AI-specific threat classes and required modeling |
+| Risk Register and Exception Process | [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Residual threat-model findings are recorded and treated |
+| Data Governance and Classification Standard | [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) | Data classification input |
+| Asset Management and Inventory Standard | [`CERG-STD-AM-001`](standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) | Asset criticality input |
+| Consolidated Roles, Responsibilities, and RACI Instrument | [`CERG-GOV-RAC-001`](governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Scaling and role accountability reference |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `TM` domain |

@@ -13,8 +13,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | NERC-CIP Compliance Manager |
-| **Parent Standard** | [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) - Grid Control Systems Security Standard |
-| **Supporting Documents** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) · [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-CFG-001](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-RES-001](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [CERG-PRC-AV-001](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) · [CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md) |
+| **Parent Standard** | [CERG-STD-OT-001](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) - Grid Control Systems Security Standard |
+| **Supporting Documents** | [CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) · [CERG-GOV-CB-001](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-AC-001](standards/CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-CFG-001](standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-LM-001](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-RES-001](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [CERG-STD-CR-001](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-PRC-AR-001](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-VM-001](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-RM-001](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-TPRM-001](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [CERG-PRC-AV-001](procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) · [CERG-PLN-IR-001](plans/CERG-PLN-IR-001_Incident_Response_Plan.md) |
 | **Review Cycle** | Annual / Continuous tracking - evidence currency monthly |
 | **Frameworks** | [NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/final) · IEC 62443-3-3 / 4-2 |
 | **Regulations** | NERC-CIP v7 (CIP-002 through CIP-014) · CIP-015 (draft, forward-looking) · CIP-013-2 |
@@ -135,13 +135,13 @@ The library is organized by CIP Standard, then by Requirement, then by Sub-requi
 
 ### 6.3 Reused Evidence
 
-CIP evidence reuses the broader CERG evidence catalog wherever possible (per [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) Section 8). The library cites where it lives rather than duplicating the artifact.
+CIP evidence reuses the broader CERG evidence catalog wherever possible (per [`CERG-GOV-CB-001`](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) Section 8). The library cites where it lives rather than duplicating the artifact.
 
 ---
 
 ## 7. OT Vulnerability Management Procedure (`CERG-PRC-VM-001`)
 
-The enterprise vulnerability procedure ([`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md)) governs IT scopes; this OT-specific procedure overlays it with OT-safe practices.
+The enterprise vulnerability procedure ([`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md)) governs IT scopes; this OT-specific procedure overlays it with OT-safe practices.
 
 ### 7.1 Identification
 
@@ -149,7 +149,7 @@ The enterprise vulnerability procedure ([`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vuln
 - **Authenticated checks** under engineering supervision in defined windows.
 - **Vendor advisories** subscribed; advisories triaged against in-service firmware / software inventories.
 - **NVD / CISA ICS Advisories** subscribed.
-- Active scanning is permitted only under an approved scope and time window per [`CERG-PRC-AV-001`](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) Section 9.
+- Active scanning is permitted only under an approved scope and time window per [`CERG-PRC-AV-001`](procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) Section 9.
 
 ### 7.2 Risk Assessment and Treatment
 
@@ -164,13 +164,13 @@ The enterprise vulnerability procedure ([`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vuln
 
 ### 7.4 Documentation
 
-- Per the procedure in [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) Section 6 with OT-specific fields: applicability to BES, CIP-007 R2 timing, CIP-010 R1 change record.
+- Per the procedure in [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) Section 6 with OT-specific fields: applicability to BES, CIP-007 R2 timing, CIP-010 R1 change record.
 
 ---
 
 ## 8. BES Cyber System Access Management Procedure (`CERG-PRC-AC-002-BES`)
 
-CIP-004 R4 / R5 obligations operationalized as an overlay on [`CERG-PRC-AC-002`](CERG-PRC-AC-002_Access_Management_Runbook.md).
+CIP-004 R4 / R5 obligations operationalized as an overlay on [`CERG-PRC-AC-002`](procedures/CERG-PRC-AC-002_Access_Management_Runbook.md).
 
 ### 8.1 Authorization
 
@@ -188,13 +188,13 @@ CIP-004 R4 / R5 obligations operationalized as an overlay on [`CERG-PRC-AC-002`]
 
 - Brokered through approved gateways with session recording.
 - Authenticated per CIP-005 R2; monitored per CIP-005 R2.5 (interactive remote access via intermediate system).
-- Vendor identities enrolled via [`CERG-PRC-AC-002`](CERG-PRC-AC-002_Access_Management_Runbook.md) Section 10 and [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md).
+- Vendor identities enrolled via [`CERG-PRC-AC-002`](procedures/CERG-PRC-AC-002_Access_Management_Runbook.md) Section 10 and [`CERG-PRC-TPRM-001`](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md).
 
 ---
 
 ## 9. CIP Deviation and Mitigation Plan Template (`CERG-TMPL-CIP-001`)
 
-When a CIP requirement cannot be met as written (or cannot be met for a defined window), CERG documents a deviation and mitigation plan. This is in addition to the risk register entry in [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md).
+When a CIP requirement cannot be met as written (or cannot be met for a defined window), CERG documents a deviation and mitigation plan. This is in addition to the risk register entry in [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md).
 
 ```
 CIP DEVIATION AND MITIGATION PLAN - DEV-CIP-YYYY-NNNN
@@ -211,7 +211,7 @@ B. CAUSE
    Why the requirement is not met as written
 
 C. RISK
-   Risk Register ID (per [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md))
+   Risk Register ID (per [CERG-PRC-RM-001](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md))
    Residual Risk Score
    Operator Sign-Off
 
@@ -243,7 +243,7 @@ G. RECORD
 
 ## 10. IT/OT Convergence Security Architecture Guideline (`CERG-STD-OT-001 (planned IT/OT convergence architecture guideline to be registered as CERG-GL-OT-001 in future catalog amendment)`)
 
-The convergence guideline informs architecture decisions where IT systems touch OT systems. It is referenced by [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) for any project crossing the IT/OT boundary.
+The convergence guideline informs architecture decisions where IT systems touch OT systems. It is referenced by [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) for any project crossing the IT/OT boundary.
 
 ### 10.1 Foundational Patterns
 
@@ -277,7 +277,7 @@ Each pattern lists the controls, the diagrams required, and the architecture rev
 
 ## 11. CIP-013 Supply Chain Risk Management Plan
 
-Operationalized in coordination with [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md). The CIP-013 Plan satisfies CIP-013-2 R1 and is reviewed annually (R3).
+Operationalized in coordination with [`CERG-PRC-TPRM-001`](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md). The CIP-013 Plan satisfies CIP-013-2 R1 and is reviewed annually (R3).
 
 ### 11.1 Scope
 
@@ -287,12 +287,12 @@ Vendor relationships involving Medium or High Impact BCS planning, design, insta
 
 | **R1 Risk Area** | **CERG Implementation** |
 |---|---|
-| Notification of vendor incidents | Contract clause + SCCT activation per [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) Section 15 |
-| Coordination of incident response | SCCT + [`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md) interface |
+| Notification of vendor incidents | Contract clause + SCCT activation per [`CERG-PRC-TPRM-001`](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) Section 15 |
+| Coordination of incident response | SCCT + [`CERG-PLN-IR-001`](plans/CERG-PLN-IR-001_Incident_Response_Plan.md) interface |
 | Notification of vendor personnel changes affecting access | Contract clause + CIP-004 access revocation per Section 8 |
 | Disclosure of known vulnerabilities | Subscription to vendor advisories + Section 7 OT VM |
-| Software / firmware integrity verification | [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) + [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) Section 11 |
-| Vendor remote access - coordination of session controls | Section 8 + [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) |
+| Software / firmware integrity verification | [`CERG-STD-OT-001`](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) + [`CERG-PRC-TPRM-001`](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) Section 11 |
+| Vendor remote access - coordination of session controls | Section 8 + [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md) |
 
 ### 11.3 Evidence
 
@@ -302,18 +302,18 @@ CIP-013 evidence flows from this section into the Evidence Library (Section 6).
 
 ## 12. CIP-009 Recovery Plan Package
 
-Operationalized in coordination with [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md). The CIP-009 obligations:
+Operationalized in coordination with [`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md). The CIP-009 obligations:
 
 | **CIP-009 Requirement** | **CERG Implementation** |
 |---|---|
-| R1.1 Plan specifications | [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) Section 11 Recovery Plan template + Section 7 OT artifacts |
+| R1.1 Plan specifications | [`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) Section 11 Recovery Plan template + Section 7 OT artifacts |
 | R1.2 Roles and responsibilities | Documented per plan |
-| R1.3 Process for backup management | [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) Section 4 |
-| R1.4 Method for preserving recovery data | [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) Section 7.1 |
+| R1.3 Process for backup management | [`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) Section 4 |
+| R1.4 Method for preserving recovery data | [`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) Section 7.1 |
 | R1.5 Operator-led recovery | Plan names operator with substation engineering authority |
-| R2.1 Testing | [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) Section 5 - at least every 15 months |
+| R2.1 Testing | [`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) Section 5 - at least every 15 months |
 | R2.2 Operational exercise | Every 36 months - full operational exercise |
-| R3 Lessons learned and plan update within 90 days | [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) Section 5.2 step 8 |
+| R3 Lessons learned and plan update within 90 days | [`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) Section 5.2 step 8 |
 
 ---
 ## 13. Operating Cadence and Reporting

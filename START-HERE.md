@@ -29,14 +29,14 @@ If you answered **yes** to all four, pick your path below.
 
 ### First 48 hours
 
-1. **Read the [Cybersecurity Policy](CERG-POL-001_Cybersecurity_Policy.md).** This is the spine. Nothing is authoritative until an Executive Sponsor signs this.
-2. **Read the [CERG Framework](CERG-GOV-FRM-001_CERG_Framework.md)** — the three-pillar model. You'll consolidate roles heavily; that's expected.
-3. **Read the [Small Team Adoption Path](CERG-GOV-IMP-003_Small_Team_Adoption_Path.md).** This is your primary guide. It covers the CERG Lite package, 5-person operating rhythm, role consolidation map, first 10 records, and spreadsheet schemas.
-4. **Read the [Implementation Guide](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md)** §4 (MVC). Follow the Minimum Viable CERG sequence.
+1. **Read the [Cybersecurity Policy](governance/CERG-POL-001_Cybersecurity_Policy.md).** This is the spine. Nothing is authoritative until an Executive Sponsor signs this.
+2. **Read the [CERG Framework](governance/CERG-GOV-FRM-001_CERG_Framework.md)** — the three-pillar model. You'll consolidate roles heavily; that's expected.
+3. **Read the [Small Team Adoption Path](governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md).** This is your primary guide. It covers the CERG Lite package, 5-person operating rhythm, role consolidation map, first 10 records, and spreadsheet schemas.
+4. **Read the [Implementation Guide](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md)** §4 (MVC). Follow the Minimum Viable CERG sequence.
 5. **Fork the repo.** Do not cherry-pick individual files. The documents are interconnected.
-6. **Fill in the [Organization Adaptation Profile](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md).** Set your headcount, sector, and regulators. Do NOT leave the default values.
-7. **Start the Risk Register.** Open [the template](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md). Create your first entry. It can be simple.
-8. **Run the first Vulnerability scan cycle.** Even if it's one Nessus scan on your production subnet. Open [PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) and follow the triage flow.
+6. **Fill in the [Organization Adaptation Profile](governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md).** Set your headcount, sector, and regulators. Do NOT leave the default values.
+7. **Start the Risk Register.** Open [the template](templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md). Create your first entry. It can be simple.
+8. **Run the first Vulnerability scan cycle.** Even if it's one Nessus scan on your production subnet. Open [PRC-VM-001](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) and follow the triage flow.
 
 ### Your MVC set
 
@@ -68,8 +68,8 @@ If you answered **yes** to all four, pick your path below.
 
 ### First 48 hours
 
-1. **Read the [CERG Framework](CERG-GOV-FRM-001_CERG_Framework.md).** Map your existing team to the three pillars. Identify gaps.
-2. **Read the [Implementation Guide](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md)** §4-5. Follow the MVC sequence plus core standards.
+1. **Read the [CERG Framework](governance/CERG-GOV-FRM-001_CERG_Framework.md).** Map your existing team to the three pillars. Identify gaps.
+2. **Read the [Implementation Guide](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md)** §4-5. Follow the MVC sequence plus core standards.
 3. **Map your current documents to CAT-001.** What do you already have that maps to a CERG artifact? What's missing?
 4. **Adopt the spine (8 MVC docs) first.** Adapt them to your organization — not the other way around.
 5. **Layer core standards next:** Access Management, Configuration Baseline (DISH), IT/Cloud/SaaS, Logging/Monitoring.
@@ -89,16 +89,16 @@ MVC (all 8) + Access Standard, Config Baseline Standard, IT/Cloud/SaaS Standard,
 
 ### First 48 hours
 
-1. **Read the [CERG Framework](CERG-GOV-FRM-001_CERG_Framework.md).** Understand the three-pillar model.
-2. **Read the [Implementation Guide](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md)** §4-5.
+1. **Read the [CERG Framework](governance/CERG-GOV-FRM-001_CERG_Framework.md).** Understand the three-pillar model.
+2. **Read the [Implementation Guide](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md)** §4-5.
 3. **Adopt the MVC spine.**
 4. **Identify your regulatory overlay.** Open the relevant operational package:
-   - NERC-CIP → [PLN-CIP-001](CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md)
-   - CMMC / CUI → [PLN-CUI-001](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md)
-   - SOX ITGC → [PLN-SOX-001](CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md)
-   - ISO 27001 → [PLN-ISO-001](CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md)
+   - NERC-CIP → [PLN-CIP-001](plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md)
+   - CMMC / CUI → [PLN-CUI-001](plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md)
+   - SOX ITGC → [PLN-SOX-001](plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md)
+   - ISO 27001 → [PLN-ISO-001](plans/CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md)
 5. **Map your evidence requirements.** Each operational package links evidence to specific CERG procedures. Understanding this linkage is the key to making compliance a byproduct of operations.
-6. **See the [Compliance Matrix](CERG-GOV-CMX-001_Compliance_Matrix.md).** 22 security intents mapped to every framework simultaneously.
+6. **See the [Compliance Matrix](governance/CERG-GOV-CMX-001_Compliance_Matrix.md).** 22 security intents mapped to every framework simultaneously.
 
 ### Your starting set
 
@@ -118,8 +118,8 @@ MVC + all 15 standards + Architecture Review, TPRM, Change Management, Audit/Evi
 ## When you get stuck
 
 **Before you ask for help:**
-1. Re-read the [Implementation Guide](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) §9 (Common Adoption Pitfalls).
-2. Check your org profile in [VAR-001](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) — are you still using the default values?
+1. Re-read the [Implementation Guide](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) §9 (Common Adoption Pitfalls).
+2. Check your org profile in [VAR-001](governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) — are you still using the default values?
 3. Run `python3 tools/cerg-validate.py` — broken links or catalog mismatches will surface mechanical problems.
 4. Look at the [examples/](examples/) directory for sample profiles that match your sector and size.
 
@@ -129,4 +129,4 @@ MVC + all 15 standards + Architecture Review, TPRM, Change Management, Audit/Evi
 
 Once MVC is running, layer the remaining documents as needed. The sequence matters less after the spine is in place. Prioritize based on what's causing the most operational friction.
 
-**[Back to README](README.md)** · **[Full catalog](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md)** · **[Implementation Guide](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md)**
+**[Back to README](README.md)** · **[Full catalog](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md)** · **[Implementation Guide](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md)**

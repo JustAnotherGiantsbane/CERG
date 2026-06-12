@@ -12,8 +12,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-JA-001`](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) · [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) · [`CERG-GOV-ONB-001`](CERG-GOV-ONB-001_Onboarding_and_Integration_Program.md) · [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Documents** | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-JA-001`](governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) · [`CERG-GOV-RAC-001`](governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) · [`CERG-GOV-ONB-001`](governance/CERG-GOV-ONB-001_Onboarding_and_Integration_Program.md) · [`CERG-GOV-IMP-001`](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) |
 | **Review Cycle** | Annual / On any significant change to contractor population or engagement model |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · ISO/IEC 27001 A.7.2 · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) PS-7 |
 | **Regulations** | Cross-cutting |
@@ -307,7 +307,7 @@ An engagement that is renewed more than twice should trigger a review of whether
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on any significant change to contractor population or engagement model |
 | **Next Scheduled Review** | 2027-05-27 |
 | **Frameworks** | NIST CSF 2.0 (GOVERN); ISO/IEC 27001 A.7.2; NIST 800-53r5 PS-7 |
@@ -331,13 +331,13 @@ An engagement that is renewed more than twice should trigger a review of whether
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role roster; engagement models |
-| Job Architecture | [`CERG-GOV-JA-001`](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Grade structure (contractors are typically engaged at S2-S4 level) |
-| RACI Instrument | [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Accountabilities that determine role eligibility |
-| Onboarding Program | [`CERG-GOV-ONB-001`](CERG-GOV-ONB-001_Onboarding_and_Integration_Program.md) | Full employee onboarding (condensed version for contractors) |
-| Implementation Guide | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Organizational adoption of CERG |
-| CERG Framework | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | Illustrative staffing model referencing contractors |
-| Document Catalog | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact |
+| Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| CERG Operating Model | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role roster; engagement models |
+| Job Architecture | [`CERG-GOV-JA-001`](governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Grade structure (contractors are typically engaged at S2-S4 level) |
+| RACI Instrument | [`CERG-GOV-RAC-001`](governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Accountabilities that determine role eligibility |
+| Onboarding Program | [`CERG-GOV-ONB-001`](governance/CERG-GOV-ONB-001_Onboarding_and_Integration_Program.md) | Full employee onboarding (condensed version for contractors) |
+| Implementation Guide | [`CERG-GOV-IMP-001`](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Organizational adoption of CERG |
+| CERG Framework | [`CERG-GOV-FRM-001`](governance/CERG-GOV-FRM-001_CERG_Framework.md) | Illustrative staffing model referencing contractors |
+| Document Catalog | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact |
 
 Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO endorsement for all changes.

@@ -13,7 +13,7 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
-| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / Upon Significant Change |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-63](https://pages.nist.gov/800-63-3/)-3 (B/C) · [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r2/final) · NIST RMF |
 | **Regulations** | NERC-CIP · [CMMC L2](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC · HIPAA (where applicable) |
@@ -41,7 +41,7 @@
 
 ## 1. Purpose and Scope
 
-This standard implements the foundational principles established in **[CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md)** for identity, authentication, authorization, and the full access lifecycle. It defines specific, measurable requirements that apply to every in-scope asset, regardless of system class, environment, or trust level.
+This standard implements the foundational principles established in **[CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md)** for identity, authentication, authorization, and the full access lifecycle. It defines specific, measurable requirements that apply to every in-scope asset, regardless of system class, environment, or trust level.
 
 Access management is the connective tissue between every other security control. A perfectly hardened system is no more secure than the worst credential authorized to log into it. A perfectly classified data store is no more protected than the weakest authorization rule that permits read access. This standard treats identity as the primary enforcement layer it has become.
 
@@ -61,7 +61,7 @@ This standard establishes the requirements. Specific implementation details, IdP
 
 ### 1.3 Relationship to Parent Policy and Peer Standards
 
-This standard is subordinate to **[CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md)** and operates alongside the IT ([CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md)), OT ([CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md)), and CUI ([CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md)) standards. Where any peer standard imposes more stringent access requirements for a specific environment or data class (e.g., NERC-CIP CIP-004 for BES Cyber Systems, 800-171 3.5 for CUI), the more stringent requirement controls.
+This standard is subordinate to **[CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md)** and operates alongside the IT ([CERG-STD-IT-001](standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md)), OT ([CERG-STD-OT-001](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md)), and CUI ([CERG-STD-CUI-001](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md)) standards. Where any peer standard imposes more stringent access requirements for a specific environment or data class (e.g., NERC-CIP CIP-004 for BES Cyber Systems, 800-171 3.5 for CUI), the more stringent requirement controls.
 
 ---
 
@@ -219,7 +219,7 @@ The following access types shall be treated as privileged and subject to the con
 |---|---|---|
 | All remote access to organizational assets shall be authorized, MFA-enforced, logged, and routed through a documented secure path (VPN, zero-trust access broker, SSE, or equivalent). | Engineering | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) AC-17 · [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) 3.1.12 |
 | Remote administrative access shall require additional controls: phishing-resistant MFA, compliant or managed endpoint, and where applicable, session recording. | Engineering | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) AC-17(2)(3) · CIP-005-6 R2 |
-| Remote access to BES Cyber Systems shall traverse an Intermediate System per [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) and NERC-CIP CIP-005 R2 requirements. | Engineering / Governance | NERC-CIP CIP-005 R2 · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) |
+| Remote access to BES Cyber Systems shall traverse an Intermediate System per [CERG-STD-OT-001](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) and NERC-CIP CIP-005 R2 requirements. | Engineering / Governance | NERC-CIP CIP-005 R2 · [CERG-STD-OT-001](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) |
 | Split-tunnel VPN configurations are prohibited for sessions accessing Restricted-tier data or privileged functions, unless a documented exception with compensating controls is approved. | Engineering | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) AC-17(3) |
 
 ### 7.2 Vendor and Third-Party Access
@@ -319,8 +319,8 @@ The following access types shall be treated as privileged and subject to the con
 | Shared / vendor-required credential | Engineering Pillar Leader + Governance | Vault under PAM, document attribution model, monitor session use. | Annual |
 | MFA exception (workforce identity) | CISO | Permitted only for documented technical limitations; compensating controls required (e.g., source-IP restrictions, enhanced monitoring). | Quarterly |
 | Standing privileged access (no JIT) | CISO | Risk register entry; session recording required where technically feasible. | Quarterly |
-| BES Cyber System access exception | CISO + NERC-CIP deviation as applicable | Follow [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) §11 escalation. | Per CIP-mitigation milestones |
-| CUI-environment access exception | CISO; POA&M entry | Follow [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) §11. | Per POA&M plan |
+| BES Cyber System access exception | CISO + NERC-CIP deviation as applicable | Follow [CERG-STD-OT-001](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) §11 escalation. | Per CIP-mitigation milestones |
+| CUI-environment access exception | CISO; POA&M entry | Follow [CERG-STD-CUI-001](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) §11. | Per POA&M plan |
 | Emergency / break-glass use | CISO post-hoc within 24 hours | Alerted at time of use; post-use review and credential rotation. | Per use |
 
 ---
@@ -347,7 +347,7 @@ Governance owns this document. The Governance Pillar Leader is responsible for i
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy - this standard is subordinate |
-| Grid and Control System Standard | [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | Peer standard - BES Cyber System access provisions apply in addition |
-| IT (Hosted/Cloud/SaaS) Security Standard | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | Peer standard - cloud/SaaS-specific provisions apply in addition |
+| Cybersecurity Policy | [CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy - this standard is subordinate |
+| Grid and Control System Standard | [CERG-STD-OT-001](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | Peer standard - BES Cyber System access provisions apply in addition |
+| IT (Hosted/Cloud/SaaS) Security Standard | [CERG-STD-IT-001](standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | Peer standard - cloud/SaaS-specific provisions apply in addition |
 | CUI Handling Standard | [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handli

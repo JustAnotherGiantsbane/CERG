@@ -5,7 +5,7 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
-| **Parent Policy** | [`CERG-POL-001`](../../CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](../../governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual |
 | **Frameworks** | NIST SP 800-181r1 (NICE) |
 | **Regulations** | Cross-cutting |
@@ -62,13 +62,13 @@ Progression within the Risk Operations family follows the standard four-tier str
 
 See [JF-001 §8](../CERG-GOV-JF-001_Job_Families_Overview.md) for the standard progression gates (L1→L2, L2→L3, L3→L4). See [JF-001 §9](../CERG-GOV-JF-001_Job_Families_Overview.md) for family-specific level definitions.
 
-Cross-family movement is encouraged per the [Family-to-Family Career Lattice](../CERG-GOV-JF-001_Job_Families_Overview.md#4-family-to-family-career-lattice). The Left-Right Knowledge Model ([FRM-001 §9.2](../../CERG-GOV-FRM-001_CERG_Framework.md)) and cross-training expectations ([OM-001 §10.4](../../CERG-GOV-OM-001_CERG_Operating_Model.md)) operationalize this movement.
+Cross-family movement is encouraged per the [Family-to-Family Career Lattice](../CERG-GOV-JF-001_Job_Families_Overview.md#4-family-to-family-career-lattice). The Left-Right Knowledge Model ([FRM-001 §9.2](../../governance/CERG-GOV-FRM-001_CERG_Framework.md)) and cross-training expectations ([OM-001 §10.4](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md)) operationalize this movement.
 
 ---
 
 ## 4. Shared Certifications
 
-Certifications relevant to the Risk Operations family are detailed in [TRN-001](../../CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md). Each role's certification matrix specifies Required, Recommended, and Aspirational certifications at each grade level. Consult the individual role description for role-specific certification requirements.
+Certifications relevant to the Risk Operations family are detailed in [TRN-001](../../governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md). Each role's certification matrix specifies Required, Recommended, and Aspirational certifications at each grade level. Consult the individual role description for role-specific certification requirements.
 
 ---
 
@@ -78,10 +78,10 @@ Certifications relevant to the Risk Operations family are detailed in [TRN-001](
 |----------|-----|-----------|
 | Job Families Overview | [`CERG-GOV-JF-001`](../CERG-GOV-JF-001_Job_Families_Overview.md) | Family structure, levels, progression gates |
 | NICE Crosswalk | [`CERG-GOV-JF-002`](../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) | NICE Work Role mapping for each role |
-| Operating Model | [`CERG-GOV-OM-001`](../../CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role roster |
-| Job Architecture | [`CERG-GOV-JA-001`](../../CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Grade definitions |
-| Competency Model | [`CERG-GOV-CMP-001`](../../CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) | Behavioral anchors |
-| Training Framework | [`CERG-GOV-TRN-001`](../../CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) | Certification matrix |
+| Operating Model | [`CERG-GOV-OM-001`](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role roster |
+| Job Architecture | [`CERG-GOV-JA-001`](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Grade definitions |
+| Competency Model | [`CERG-GOV-CMP-001`](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) | Behavioral anchors |
+| Training Framework | [`CERG-GOV-TRN-001`](../../governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) | Certification matrix |
 
 ---
 
@@ -96,7 +96,7 @@ Certifications relevant to the Risk Operations family are detailed in [TRN-001](
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](../../CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](../../governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual |
 | **Next Scheduled Review** | 2027-06-11 |
 | **Frameworks** | NIST SP 800-181r1 (NICE) |
@@ -122,6 +122,6 @@ Governance owns this document. The Governance Pillar Leader (Policy & Standards)
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](../../CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| Cybersecurity Policy | [`CERG-POL-001`](../../governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
 | Job Families Overview | [`CERG-GOV-JF-001`](../CERG-GOV-JF-001_Job_Families_Overview.md) | Family structure and level definitions |
 | NICE Crosswalk | [`CERG-GOV-JF-002`](../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) | NICE Work Role mapping |

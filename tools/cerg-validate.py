@@ -9,7 +9,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from urllib.parse import unquote
 
-CATALOG_FILE = "CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md"
+CATALOG_FILE = "governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md"
 DOC_ID_PATTERN = r"CERG-(?:POL-\d{3}|(?:STD|PRC|PLN|GL|TMPL|GOV)-[A-Z]{2,8}(?:-[A-Z]{2,8})?-\d{3})"
 DOC_ID_RE = re.compile(rf"\b{DOC_ID_PATTERN}\b")
 MARKDOWN_LINK_RE = re.compile(r"(?<!!)\[[^\]]+\]\(([^)]+)\)")
@@ -186,7 +186,8 @@ def validate_repository(root: Path) -> list[Finding]:
 
     for entry in catalog.values():
         if entry.file_path:
-            target = root / entry.file_path
+            catalog_file_path_ = root / CATALOG_FILE
+            target = catalog_file_path_.parent / entry.file_path
             if not target.exists():
                 findings.append(
                     Finding(

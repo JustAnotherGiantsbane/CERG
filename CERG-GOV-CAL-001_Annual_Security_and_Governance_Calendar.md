@@ -13,8 +13,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) · [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) · [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) · [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) · [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Documents** | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) · [`CERG-GOV-MTR-001`](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) · [`CERG-GOV-MAT-001`](governance/CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) · [`CERG-GOV-RAC-001`](governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) · [`CERG-PRC-AUD-001`](procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) |
 | **Review Cycle** | Annual / On major program, regulatory, or reporting cadence change |
 | **Frameworks** | NIST CSF 2.0 GOVERN · NIST 800-53r5 PM, CA · ISO/IEC 27001 Clauses 9 and 10 |
 | **Regulations** | Cross-cutting; SOX, CMMC, NERC-CIP, privacy, customer assurance where applicable |
@@ -224,7 +224,7 @@ Calendar maintenance includes:
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on major program, regulatory, or reporting cadence change |
 | **Next Scheduled Review** | 2027-05-22 |
 | **Frameworks** | NIST CSF 2.0 GOVERN; NIST 800-53r5 PM, CA; ISO/IEC 27001 Clauses 9 and 10 |
@@ -249,7 +249,7 @@ Calendar maintenance includes:
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Authoritative artifact inventory and review trigger source |
-| Metrics Dashboard and Reporting | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Reporting cadence and dashboard source |
-| Maturity Self-Assessment and Scorecard | [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) | Annual maturity assessment source |
-| Consolidated Roles and RACI Instrument | [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Accountability source for calendar activities |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Authoritative artifact inventory and review trigger source |
+| Metrics Dashboard and Reporting | [`CERG-GOV-MTR-001`](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Reporting cadence and dashboard source |
+| Maturity Self-Assessment and Scorecard | [`CERG-GOV-MAT-001`](governance/CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) | Annual maturity assessment source |
+| Consolidated Roles and RACI Instrument | [`CERG-GOV-RAC-001`](governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Accountability source for calendar activities |

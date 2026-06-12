@@ -5,7 +5,7 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual |
 | **Frameworks** | NIST CSF 2.0 |
 | **Regulations** | Cross-cutting |
@@ -29,7 +29,7 @@
 
 ## 1. Who This Is For
 
-This guide is for teams of 8 people or fewer who want to run CERG as their operating model. It assumes you have read the [Adoption Safety Guide](CERG-GOV-IMP-002_Adoption_Safety_Guide.md) and confirmed the prerequisites in §1.
+This guide is for teams of 8 people or fewer who want to run CERG as their operating model. It assumes you have read the [Adoption Safety Guide](governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md) and confirmed the prerequisites in §1.
 
 The full CERG corpus describes what a 60-person security team looks like at NIST CSF Adaptive maturity. That is the upper bound. This guide describes the lower bound — what a 5-person team can actually operate without burning out.
 
@@ -522,7 +522,7 @@ Create this folder structure in your shared drive, document management system, o
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual |
 | **Next Scheduled Review** | 2027-06-11 |
 | **Frameworks** | NIST CSF 2.0 |
@@ -546,9 +546,9 @@ Create this folder structure in your shared drive, document management system, o
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| Implementation and Adaptation Guide | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | How to adapt CERG |
-| Adoption Safety Guide | [`CERG-GOV-IMP-002`](CERG-GOV-IMP-002_Adoption_Safety_Guide.md) | Prerequisites and safety rules |
-| Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical roles and scaling map |
-| Risk Management Framework | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk scoring and treatment |
-| Cross-Pillar Operational Flows | [`CERG-GOV-FLOW-001`](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) | Evidence tiers and automation |
+| Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| Implementation and Adaptation Guide | [`CERG-GOV-IMP-001`](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | How to adapt CERG |
+| Adoption Safety Guide | [`CERG-GOV-IMP-002`](governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md) | Prerequisites and safety rules |
+| Operating Model | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical roles and scaling map |
+| Risk Management Framework | [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk scoring and treatment |
+| Cross-Pillar Operational Flows | [`CERG-GOV-FLOW-001`](governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) | Evidence tiers and automation |

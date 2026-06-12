@@ -1,7 +1,7 @@
 # CERG Example Profiles
 
 Sample organization profiles for different sectors and sizes. Use these as starting points
-for your [Organization Adaptation Profile](../CERG-GOV-VAR-001_Organization_Adaptation_Profile.md).
+for your [Organization Adaptation Profile](../governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md).
 
 ## Available profiles
 

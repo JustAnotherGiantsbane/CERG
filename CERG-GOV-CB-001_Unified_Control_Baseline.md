@@ -13,8 +13,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Control Baseline) |
-| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Standards** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-CFG-001](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-RES-001](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) |
+| **Parent Policy** | [CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Standards** | [CERG-STD-IT-001](standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](standards/CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-CFG-001](standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-LM-001](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-RES-001](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [CERG-STD-CR-001](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) |
 | **Review Cycle** | Annual - and on framework version change ([NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) rev, [CMMC](https://dodcio.defense.gov/CMMC/) rev, NERC-CIP version) |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · CIS Controls v8 · ISO/IEC 27001 A.5–A.8 · CSA CCM v4 |
 | **Regulations** | NERC-CIP v7 (and CIP-015 draft) · [CMMC L2](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC |
@@ -40,7 +40,7 @@
 
 ## 1. Purpose and Scope
 
-The Unified Control Baseline turns the principles in [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md), the requirements in subordinate standards, and the philosophy in the [CERG Risk Management Framework](CERG-GOV-RMF-001_Risk_Management_Framework.md) into an implementation-ready control set. It is the document a control owner, an internal auditor, a [CMMC](https://dodcio.defense.gov/CMMC/) C3PAO, a NERC-CIP auditor, or a [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) auditor opens first.
+The Unified Control Baseline turns the principles in [CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md), the requirements in subordinate standards, and the philosophy in the [CERG Risk Management Framework](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) into an implementation-ready control set. It is the document a control owner, an internal auditor, a [CMMC](https://dodcio.defense.gov/CMMC/) C3PAO, a NERC-CIP auditor, or a [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) auditor opens first.
 
 It applies to every in-scope asset and every CERG-owned control. Where a subordinate standard imposes a more specific requirement, the standard controls and is referenced from the relevant entry here.
 
@@ -100,7 +100,7 @@ Every control entry in the baseline carries one of the following statuses. The s
 | `Partially Implemented` | Control is in place for some scope or is operating at reduced effectiveness. | Evidence of what is in place plus a POA&M entry. |
 | `Inherited` | Implementation is provided by another party - cloud provider, SaaS provider, parent enterprise control, IAM team. | Inheritance Evidence Package (Section 5). |
 | `Planned` | Control is in the roadmap with an owner and target date. | POA&M entry with date and owner. |
-| `Risk Accepted` | Deviation is approved and tracked via [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) Section 7. | Risk register entry, exception ID, approver. |
+| `Risk Accepted` | Deviation is approved and tracked via [CERG-PRC-RM-001](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) Section 7. | Risk register entry, exception ID, approver. |
 | `Not Applicable` | Control does not apply to this scope. | Documented N/A rationale (system type, no in-scope data, etc.). |
 
 > **What's Not on the List**
@@ -322,7 +322,7 @@ The discipline rule is unchanged from §2: a control without a named evidence ar
 Three rules apply to every entry above:
 
 1. **Currency.** Evidence captured in the prior refresh cycle is current. Evidence older than two refresh cycles is stale; staleness is a finding in its own right and routes to the owning pillar for action.
-2. **Attribution.** Every evidence artifact carries the named owning role from the canonical roster in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1. "Owned by the team" is not attribution.
+2. **Attribution.** Every evidence artifact carries the named owning role from the canonical roster in [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1. "Owned by the team" is not attribution.
 3. **Retrievability.** Evidence shall be retrievable within five business days of an auditor request. Anything that takes longer is a process finding regardless of whether the underlying control is operating.
 
 > **Inheritance Evidence**
@@ -335,7 +335,7 @@ Three rules apply to every entry above:
 
 This section translates each baseline control into the regulator-facing identifier or expectation. It is the read-once map for cross-framework audits: NERC-CIP auditors, CMMC C3PAOs, and SOX external auditors each look at the same controls under different names.
 
-The [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) Compliance Matrix is the broader cross-regulator map (intent-level); the table below is the implementation-level crosswalk, control-by-control. Where the two disagree, the Compliance Matrix governs intent and this baseline governs implementation.
+The [`CERG-GOV-CMX-001`](governance/CERG-GOV-CMX-001_Compliance_Matrix.md) Compliance Matrix is the broader cross-regulator map (intent-level); the table below is the implementation-level crosswalk, control-by-control. Where the two disagree, the Compliance Matrix governs intent and this baseline governs implementation.
 
 ### 9.1 NIST 800-53 → 800-171 r3 / NERC-CIP / CMMC L2 / SOX ITGC
 
@@ -380,42 +380,42 @@ The §7 overlays carry additional crosswalks. Subordinate operational packages o
 
 | **Overlay** | **Primary Regulator Lens** | **Operational Package** |
 |---|---|---|
-| High-Impact | NIST 800-53 High baseline; tightened DISH | [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) + [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
-| CUI | NIST 800-171 r3; DFARS 252.204-7012; CMMC L2 | [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md) + [`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) |
-| BES | NERC-CIP v7 (CIP-002 through CIP-014; CIP-015 INSM where applicable) | [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) + [`CERG-PLN-CIP-001`](CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) |
-| SOX ITGC | SOX §404 ITGC (Access, Change, Operations) | [`CERG-PLN-SOX-001`](CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) |
-| OT Safety | IEC 62443; NIST 800-82r3 | [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) |
+| High-Impact | NIST 800-53 High baseline; tightened DISH | [`CERG-STD-CFG-001`](standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) + [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+| CUI | NIST 800-171 r3; DFARS 252.204-7012; CMMC L2 | [`CERG-STD-CUI-001`](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) + [`CERG-PLN-CUI-001`](plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) |
+| BES | NERC-CIP v7 (CIP-002 through CIP-014; CIP-015 INSM where applicable) | [`CERG-STD-OT-001`](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) + [`CERG-PLN-CIP-001`](plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) |
+| SOX ITGC | SOX §404 ITGC (Access, Change, Operations) | [`CERG-PLN-SOX-001`](plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) |
+| OT Safety | IEC 62443; NIST 800-82r3 | [`CERG-STD-OT-001`](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) |
 
 ---
 
 ### 9.3 Compliance Matrix Intent-to-Control Bridge
 
-[`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) (the Compliance Matrix) is organized by 22 cross-regulator **intents** ("Know what you own," "Manage vendor risk," etc.). This baseline is organized by **controls** (AC-2, AC-3, CM-8, etc.). The table below resolves each Compliance Matrix intent to the §6 controls that implement it. Where an intent is implemented outside the §6 control set, the table names the authoritative subordinate document instead.
+[`CERG-GOV-CMX-001`](governance/CERG-GOV-CMX-001_Compliance_Matrix.md) (the Compliance Matrix) is organized by 22 cross-regulator **intents** ("Know what you own," "Manage vendor risk," etc.). This baseline is organized by **controls** (AC-2, AC-3, CM-8, etc.). The table below resolves each Compliance Matrix intent to the §6 controls that implement it. Where an intent is implemented outside the §6 control set, the table names the authoritative subordinate document instead.
 
 | **CMX Intent** | **Title** | **CB-001 §6 Controls** | **Where Else Implementation Lives** |
 |---|---|---|---|
-| 1 | Know what you own: authoritative asset inventory | CM-8 | [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md); [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) (CIP-002 categorization) |
-| 2 | Identify and remediate vulnerabilities on schedule | RA-5, SI-2 | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5.2 (canonical SLAs) |
-| 3 | Control who can access what: least privilege | AC-3, AC-6 | [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) |
-| 4 | Authenticate users and systems | IA-2, IA-3, IA-5 | [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md); [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) (authenticators) |
-| 5 | Harden systems | CM-2, CM-6, CM-7 | [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) (DISH baselines) |
-| 6 | Protect data in transit and at rest | IA-5 (key mgmt) | [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) (full SC-8 / SC-28 detail); SC family controls covered there |
-| 7 | Segment networks | AC-3, AC-17 | [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md); [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) (ESP/EAP); SC family controls implemented there |
-| 8 | Manage vendor and third-party risk | SR-2, SR-3 | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
-| 9 | Control and log privileged / remote access | AC-6, AC-17, AU-2, AU-6 | [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md); [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
-| 10 | Conduct adversarial testing | _CA-8 / RA-5(8) not detailed in §6_ | [`CERG-PRC-AV-001`](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) (pen test, red team, purple team); CA-8 implementation lives here |
-| 11 | Train and background-check personnel | _AT and PS families not detailed in §6_ | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) Principle 2; Security Awareness function (training); HR (background check) per [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §8 |
-| 12 | Write and maintain policies | _PL family not detailed in §6_ | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md); [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) (document lifecycle) |
-| 13 | Manage configuration changes | CM-3 | [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md); [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) (pre-production gate) |
-| 14 | Collect, protect, and retain audit evidence | AU-2, AU-6, AU-9, AU-11; this doc §8 evidence catalog | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) (retention) |
-| 15 | Assess your own security posture | RA-3; _CA family not detailed in §6_ | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §6 (assessment portfolio); CA-2 / CA-7 implementation lives here |
-| 16 | Manage risk formally | RA-3, SI-2 (exception register) | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md); [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md); [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 (canonical approval table) |
-| 17 | Protect physical access | _PE family not detailed in §6_ | [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) (CIP-006 PSP); Facilities (non-cyber per [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4) |
-| 18 | Monitor threats continuously | SI-4; AU-6 | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) (Day-One Detection Set; 70% ATT&CK target) |
-| 19 | Plan and practice incident response | _IR family not detailed in §6_ | [`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md) (owned by standing IR team) |
-| 20 | Manage recovery | CP-2, CP-4, CP-9, CP-10 | [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) |
-| 21 | Manage accounts through lifecycle | AC-2, AC-7, IA-2, IA-5 | [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md); [`CERG-PRC-AC-002`](CERG-PRC-AC-002_Access_Management_Runbook.md) (JML runbook) |
-| 22 | Define and enforce a compliance calendar | _PM-9 / PM-30 not detailed in §6_ | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §7 (coordination cadence); [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md); Governance compliance calendar |
+| 1 | Know what you own: authoritative asset inventory | CM-8 | [`CERG-STD-IT-001`](standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md); [`CERG-STD-OT-001`](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) (CIP-002 categorization) |
+| 2 | Identify and remediate vulnerabilities on schedule | RA-5, SI-2 | [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5.2 (canonical SLAs) |
+| 3 | Control who can access what: least privilege | AC-3, AC-6 | [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md) |
+| 4 | Authenticate users and systems | IA-2, IA-3, IA-5 | [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md); [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) (authenticators) |
+| 5 | Harden systems | CM-2, CM-6, CM-7 | [`CERG-STD-CFG-001`](standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) (DISH baselines) |
+| 6 | Protect data in transit and at rest | IA-5 (key mgmt) | [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) (full SC-8 / SC-28 detail); SC family controls covered there |
+| 7 | Segment networks | AC-3, AC-17 | [`CERG-STD-IT-001`](standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md); [`CERG-STD-OT-001`](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) (ESP/EAP); SC family controls implemented there |
+| 8 | Manage vendor and third-party risk | SR-2, SR-3 | [`CERG-PRC-TPRM-001`](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
+| 9 | Control and log privileged / remote access | AC-6, AC-17, AU-2, AU-6 | [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md); [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+| 10 | Conduct adversarial testing | _CA-8 / RA-5(8) not detailed in §6_ | [`CERG-PRC-AV-001`](procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) (pen test, red team, purple team); CA-8 implementation lives here |
+| 11 | Train and background-check personnel | _AT and PS families not detailed in §6_ | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) Principle 2; Security Awareness function (training); HR (background check) per [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §8 |
+| 12 | Write and maintain policies | _PL family not detailed in §6_ | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md); [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) (document lifecycle) |
+| 13 | Manage configuration changes | CM-3 | [`CERG-STD-CFG-001`](standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md); [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) (pre-production gate) |
+| 14 | Collect, protect, and retain audit evidence | AU-2, AU-6, AU-9, AU-11; this doc §8 evidence catalog | [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) (retention) |
+| 15 | Assess your own security posture | RA-3; _CA family not detailed in §6_ | [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §6 (assessment portfolio); CA-2 / CA-7 implementation lives here |
+| 16 | Manage risk formally | RA-3, SI-2 (exception register) | [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md); [`CERG-TMPL-RM-001`](templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md); [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 (canonical approval table) |
+| 17 | Protect physical access | _PE family not detailed in §6_ | [`CERG-STD-OT-001`](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) (CIP-006 PSP); Facilities (non-cyber per [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4) |
+| 18 | Monitor threats continuously | SI-4; AU-6 | [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) (Day-One Detection Set; 70% ATT&CK target) |
+| 19 | Plan and practice incident response | _IR family not detailed in §6_ | [`CERG-PLN-IR-001`](plans/CERG-PLN-IR-001_Incident_Response_Plan.md) (owned by standing IR team) |
+| 20 | Manage recovery | CP-2, CP-4, CP-9, CP-10 | [`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) |
+| 21 | Manage accounts through lifecycle | AC-2, AC-7, IA-2, IA-5 | [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md); [`CERG-PRC-AC-002`](procedures/CERG-PRC-AC-002_Access_Management_Runbook.md) (JML runbook) |
+| 22 | Define and enforce a compliance calendar | _PM-9 / PM-30 not detailed in §6_ | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §7 (coordination cadence); [`CERG-GOV-MTR-001`](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md); Governance compliance calendar |
 
 > **Reading the Bridge**
 >
@@ -427,17 +427,17 @@ The CERG control family spine in §3 lists 19 NIST 800-53 families. §6 details 
 
 | **Family** | **Why Handled Elsewhere** | **Authoritative Location** |
 |---|---|---|
-| AT (Awareness and Training) | Operated by the Security Awareness function, not CERG | Awareness program; [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) Principle coverage |
-| CA (Assessment, Authorization, Monitoring) | Continuous assurance is operated by Risk (RA-5, SI-4) and Governance (POA&M, CA-7) | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §6; this doc §8 |
-| IR (Incident Response) | Standing IR team outside CERG owns the plan and operates the capability | [`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md) |
-| MA (Maintenance) | Detail lives in OT operations (vendor-managed maintenance windows) and IT change management | [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md); CM-3 above |
-| MP (Media Protection) | CUI / Restricted-data media handling lives in the CUI standard | [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md) |
-| PE (Physical / Environmental) | Cyber dependency on physical; facilities-owned for non-OT, NERC-CIP CIP-006 for OT | [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md); Facilities |
-| PL (Planning) | SSPs and authorization packages live in the operational packages | [`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md); [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §7.3 |
-| PM (Program Management) | The CERG program itself - reporting, metrics, governance | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md); [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) |
-| PS (Personnel Security) | Screening and access-tied personnel controls operated by HR with Governance interface | HR; [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) coverage |
-| SA (System and Services Acquisition) | Procurement / vendor / SDLC controls split across TPRM and architecture review | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md); [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) |
-| SC (System and Communications Protection) | Network segmentation and cryptography are detailed in IT/OT standards and crypto standard | [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md); [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md); [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) |
+| AT (Awareness and Training) | Operated by the Security Awareness function, not CERG | Awareness program; [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) Principle coverage |
+| CA (Assessment, Authorization, Monitoring) | Continuous assurance is operated by Risk (RA-5, SI-4) and Governance (POA&M, CA-7) | [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §6; this doc §8 |
+| IR (Incident Response) | Standing IR team outside CERG owns the plan and operates the capability | [`CERG-PLN-IR-001`](plans/CERG-PLN-IR-001_Incident_Response_Plan.md) |
+| MA (Maintenance) | Detail lives in OT operations (vendor-managed maintenance windows) and IT change management | [`CERG-STD-OT-001`](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md); CM-3 above |
+| MP (Media Protection) | CUI / Restricted-data media handling lives in the CUI standard | [`CERG-STD-CUI-001`](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) |
+| PE (Physical / Environmental) | Cyber dependency on physical; facilities-owned for non-OT, NERC-CIP CIP-006 for OT | [`CERG-STD-OT-001`](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md); Facilities |
+| PL (Planning) | SSPs and authorization packages live in the operational packages | [`CERG-PLN-CUI-001`](plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md); [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §7.3 |
+| PM (Program Management) | The CERG program itself - reporting, metrics, governance | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md); [`CERG-GOV-MTR-001`](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) |
+| PS (Personnel Security) | Screening and access-tied personnel controls operated by HR with Governance interface | HR; [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) coverage |
+| SA (System and Services Acquisition) | Procurement / vendor / SDLC controls split across TPRM and architecture review | [`CERG-PRC-TPRM-001`](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md); [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) |
+| SC (System and Communications Protection) | Network segmentation and cryptography are detailed in IT/OT standards and crypto standard | [`CERG-STD-IT-001`](standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md); [`CERG-STD-OT-001`](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md); [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) |
 
 > **Why a Minimum-Surface §6**
 >
@@ -449,7 +449,7 @@ The CERG control family spine in §3 lists 19 NIST 800-53 families. §6 details 
 
 The Governance Pillar Leader owns this baseline. Material changes (additions, removals, parameter changes that affect remediation SLAs or evidence requirements) require CISO approval; non-material changes (clarifications, typo fixes, additional implementation notes) require Governance Pillar Leader approval.
 
-Pillar leaders may propose changes at any time. The Governance Pillar Leader runs an open intake at the monthly Compliance Pulse forum (per [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §7).
+Pillar leaders may propose changes at any time. The Governance Pillar Leader runs an open intake at the monthly Compliance Pulse forum (per [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §7).
 
 ### 10.2 Change Triggers
 
@@ -499,7 +499,7 @@ When a control in §6 or an overlay in §7 changes, Governance issues a "ripple 
 | **Classification** | Internal - Confidential |
 | **Owner** | Governance Pillar Leader (Control Baseline) |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on framework version change (NIST 800-53 rev, CMMC rev, NERC-CIP version) |
 | **Next Scheduled Review** | 2027-05-01 |
 | **Frameworks** | NIST 800-53r5; NIST 800-171r3; NIST CSF 2.0; CIS Controls v8; ISO/IEC 27001 A.5-A.8 |
@@ -516,17 +516,17 @@ When a control in §6 or an overlay in §7 changes, Governance issues a "ripple 
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Authoritative artifact inventory |
-| CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Pillar / role definitions cited by §8 evidence owners |
-| Risk Management Framework | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk treatment, approval authority, and FAIR risk format |
-| Metrics, Dashboard, and Reporting | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Hosts the dashboards cited in §8 evidence catalog |
-| Compliance Matrix | [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) | Intent-level cross-regulator map (this doc is implementation-level) |
-| Risk Taxonomy | [`CERG-GOV-TAX-001`](CERG-GOV-TAX-001_Risk_Taxonomy.md) | Risk categorization that feeds RA-3 register entries |
-| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Canonical SLAs cited by SI-2 |
-| Risk Register and Exception Process | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Exception register cited by §6 and §8 |
-| Secure Configuration Baseline Standard (DISH) | [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | Underlying baselines cited by CM-2 |
-| Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Underlying detection set cited by AU-* and SI-4 |
-| Cyber Resilience and Backup Standard | [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Underlying recovery posture cited by CP-* |
-| Cryptography and Key Management Standard | [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Underlying crypto posture cited by IA-5 |
-| Access Management Standard | [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) | Underlying access posture cited by AC-* and IA-2 |
+| Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Authoritative artifact inventory |
+| CERG Operating Model | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | Pillar / role definitions cited by §8 evidence owners |
+| Risk Management Framework | [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk treatment, approval authority, and FAIR risk format |
+| Metrics, Dashboard, and Reporting | [`CERG-GOV-MTR-001`](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Hosts the dashboards cited in §8 evidence catalog |
+| Compliance Matrix | [`CERG-GOV-CMX-001`](governance/CERG-GOV-CMX-001_Compliance_Matrix.md) | Intent-level cross-regulator map (this doc is implementation-level) |
+| Risk Taxonomy | [`CERG-GOV-TAX-001`](governance/CERG-GOV-TAX-001_Risk_Taxonomy.md) | Risk categorization that feeds RA-3 register entries |
+| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Canonical SLAs cited by SI-2 |
+| Risk Register and Exception Process | [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Exception register cited by §6 and §8 |
+| Secure Configuration Baseline Standard (DISH) | [`CERG-STD-CFG-001`](standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | Underlying baselines cited by CM-2 |
+| Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Underlying detection set cited by AU-* and SI-4 |
+| Cyber Resilience and Backup Standard | [`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Underlying recovery posture cited by CP-* |
+| Cryptography and Key Management Standard | [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Underlying crypto posture cited by IA-5 |
+| Access Management Standard | [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md) | Underlying access posture cited by AC-* and IA-2 |

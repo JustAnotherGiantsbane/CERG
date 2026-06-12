@@ -12,8 +12,8 @@
 | **Status** | Approved |
 | **Classification** | Confidential - CISO and Pillar Leaders |
 | **Owner** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [`CERG-GOV-JA-001`](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) · [`CERG-GOV-CMP-001`](CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) · [`CERG-GOV-PERF-001`](CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) · [`CERG-GOV-TRN-001`](CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) · [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Documents** | [`CERG-GOV-JA-001`](governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) · [`CERG-GOV-CMP-001`](governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) · [`CERG-GOV-PERF-001`](governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) · [`CERG-GOV-TRN-001`](governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) · [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-FRM-001`](governance/CERG-GOV-FRM-001_CERG_Framework.md) |
 | **Review Cycle** | Annual talent review; emergency succession list reviewed semi-annually |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · ISO/IEC 27001 A.7.2 |
 | **Regulations** | Cross-cutting |
@@ -305,7 +305,7 @@ Succession information is communicated on a need-to-know basis:
 | **Classification** | Confidential - CISO and Pillar Leaders |
 | **Owner** | CISO |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual talent review; emergency succession list reviewed semi-annually |
 | **Next Scheduled Review** | 2027-05-27 |
 | **Frameworks** | NIST CSF 2.0 (GOVERN); ISO/IEC 27001 A.7.2 |
@@ -329,13 +329,13 @@ Succession information is communicated on a need-to-know basis:
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| Job Architecture | [`CERG-GOV-JA-001`](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Grade expectations for successor readiness evaluation |
-| Competency Model | [`CERG-GOV-CMP-001`](CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) | Competency domains for gap assessment |
-| Performance Management | [`CERG-GOV-PERF-001`](CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) | Input ratings for talent review |
-| Training Framework | [`CERG-GOV-TRN-001`](CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) | Development resources for successor plans |
-| CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role roster and role definitions |
-| CERG Framework | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | Left-right knowledge model and talent resilience |
-| Document Catalog | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact |
+| Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| Job Architecture | [`CERG-GOV-JA-001`](governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Grade expectations for successor readiness evaluation |
+| Competency Model | [`CERG-GOV-CMP-001`](governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) | Competency domains for gap assessment |
+| Performance Management | [`CERG-GOV-PERF-001`](governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) | Input ratings for talent review |
+| Training Framework | [`CERG-GOV-TRN-001`](governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) | Development resources for successor plans |
+| CERG Operating Model | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role roster and role definitions |
+| CERG Framework | [`CERG-GOV-FRM-001`](governance/CERG-GOV-FRM-001_CERG_Framework.md) | Left-right knowledge model and talent resilience |
+| Document Catalog | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact |
 
 Governance owns the framework. The CISO owns the succession plans and heat maps produced under it. The CISO is responsible for initiating the annual talent review, maintaining the emergency succession list, and ensuring successor development plans are resourced and tracked.

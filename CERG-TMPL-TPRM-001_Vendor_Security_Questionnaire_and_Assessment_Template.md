@@ -13,8 +13,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Vendor Risk Analyst |
-| **Parent Document** | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) - Third-Party and Supply Chain Risk Procedure |
-| **Supporting Documents** | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [`CERG-PLN-PRIV-001`](CERG-PLN-PRIV-001_Privacy_and_Data_Protection_Operational_Package.md) |
+| **Parent Document** | [`CERG-PRC-TPRM-001`](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) - Third-Party and Supply Chain Risk Procedure |
+| **Supporting Documents** | [`CERG-PRC-TPRM-001`](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [`CERG-PLN-PRIV-001`](plans/CERG-PLN-PRIV-001_Privacy_and_Data_Protection_Operational_Package.md) |
 | **Review Cycle** | Annual / On process or control change |
 | **Frameworks** | NIST CSF 2.0 GV.SC · NIST 800-53r5 SR · ISO/IEC 27001 A.5.19 through A.5.23 |
 | **Regulations** | Cross-cutting; privacy, CUI, SOX, and contractual obligations where applicable |
@@ -116,7 +116,7 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 | **Classification** | Public |
 | **Owner** | Vendor Risk Analyst |
 | **Approved By** | CISO |
-| **Parent Document** | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) - Third-Party and Supply Chain Risk Procedure |
+| **Parent Document** | [`CERG-PRC-TPRM-001`](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) - Third-Party and Supply Chain Risk Procedure |
 | **Review Cycle** | Annual; and on process or control change |
 | **Next Scheduled Review** | 2027-05-22 |
 | **Frameworks** | NIST CSF 2.0 GV.SC · NIST 800-53r5 SR · ISO/IEC 27001 A.5.19 through A.5.23 |
@@ -140,5 +140,5 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Third-Party and Supply Chain Risk Procedure | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Governing procedure |
-| Privacy and Data Protection Operational Package | [`CERG-PLN-PRIV-001`](CERG-PLN-PRIV-001_Privacy_and_Data_Protection_Operational_Package.md) | Privacy vendor evidence interface |
+| Third-Party and Supply Chain Risk Procedure | [`CERG-PRC-TPRM-001`](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Governing procedure |
+| Privacy and Data Protection Operational Package | [`CERG-PLN-PRIV-001`](plans/CERG-PLN-PRIV-001_Privacy_and_Data_Protection_Operational_Package.md) | Privacy vendor evidence interface |

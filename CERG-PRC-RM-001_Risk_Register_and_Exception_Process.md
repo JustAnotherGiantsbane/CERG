@@ -12,8 +12,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |
-| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Standards** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) |
+| **Parent Policy** | [CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Standards** | [CERG-STD-IT-001](standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](standards/CERG-STD-AC-001_Access_Management_Standard.md) |
 | **Review Cycle** | Annual / Upon Significant Change / Major Tooling Change |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r2/final) · [NIST 800-30r1](https://csrc.nist.gov/pubs/sp/800/30/r1/final) · [NIST 800-39](https://csrc.nist.gov/pubs/sp/800/39/final) · NIST RMF · ISO 31000 |
 | **Regulations** | NERC-CIP · [CMMC L2](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC · |
@@ -40,7 +40,7 @@
 
 ## 1. Purpose and Scope
 
-This procedure operationalizes the risk management principle established in **[CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) Principle 9**. It defines how the organization identifies, documents, scores, treats, reviews, and reports cybersecurity risks, and how exceptions to established controls are requested, approved, tracked, and reviewed.
+This procedure operationalizes the risk management principle established in **[CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) Principle 9**. It defines how the organization identifies, documents, scores, treats, reviews, and reports cybersecurity risks, and how exceptions to established controls are requested, approved, tracked, and reviewed.
 
 The risk register is the single, authoritative record of organizational cybersecurity risk. The exception process is the single, authoritative record of intentional deviations from established controls. The two are coupled: every approved exception is itself a risk-register entry.
 
@@ -49,7 +49,7 @@ The risk register is the single, authoritative record of organizational cybersec
 This procedure applies to:
 
 - All cybersecurity risks affecting in-scope assets, data, or operations
-- All deviations from controls established in [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) and its subordinate standards and procedures
+- All deviations from controls established in [CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) and its subordinate standards and procedures
 - All risk-related decisions requiring documentation: acceptance, transfer, avoidance, and reduction
 - All organizational personnel, every CERG team member, every asset owner, every business sponsor of a system or process that holds cybersecurity risk
 
@@ -79,7 +79,7 @@ The organization accepts residual risk only where (a) the cost or operational im
 | Production Tier 1 (Customer-Facing) | 8 (Medium) | 180 days | Critical not acceptable without CISO + Executive Sponsor |
 | Production Tier 2 (Internal Business) | 10 (Medium-High) | 365 days | |
 | Production Tier 3+ / Non-Production | 12 (High-Low) | 365 days | |
-| SaaS / Third-Party | 10 (Medium-High) | Contract cycle | Driven by vendor tier per [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
+| SaaS / Third-Party | 10 (Medium-High) | Contract cycle | Driven by vendor tier per [CERG-PRC-TPRM-001](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
 
 #### Tolerance by Business Unit
 
@@ -315,7 +315,7 @@ Risk register access is role-based. Business owners see their scope by default; 
 
 ### 7.1 What Requires an Exception
 
-An exception is required whenever a system, person, or process intentionally deviates from a control established in [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) or its subordinate standards. Examples include:
+An exception is required whenever a system, person, or process intentionally deviates from a control established in [CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) or its subordinate standards. Examples include:
 
 - A system that cannot meet a hardening baseline due to a vendor or operational constraint
 - A user role that requires standing privileged access despite the JIT requirement
@@ -361,8 +361,8 @@ An exception renewed more than twice without material progress toward remediatio
 
 For exceptions affecting regulated assets:
 
-- **NERC-CIP (BES Cyber Systems):** A CIP deviation and mitigation plan is initiated in addition to this exception. Governance coordinates per [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) §11.
-- **[CMMC](https://dodcio.defense.gov/CMMC/) / 800-171 (CUI environments):** A POA&M entry is opened in addition to this exception, per [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) §11.
+- **NERC-CIP (BES Cyber Systems):** A CIP deviation and mitigation plan is initiated in addition to this exception. Governance coordinates per [CERG-STD-OT-001](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) §11.
+- **[CMMC](https://dodcio.defense.gov/CMMC/) / 800-171 (CUI environments):** A POA&M entry is opened in addition to this exception, per [CERG-STD-CUI-001](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) §11.
 - **[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant systems:** Internal Audit and CFO designee are notified for ITGC control gaps. Compensating ITGC controls are documented for audit.
 - **Customer / contractual:** Where the affected control supports a customer contractual commitment, Account Management and Legal are notified for customer-notification decisions.
 
@@ -439,7 +439,7 @@ EXCEPTION REQUEST FORM - EXC-YYYY-NNNN
 
 ## 8. Approval Authority
 
-Risk treatment decisions require documented approval from the authority matching the risk's severity. The canonical approval authority table is maintained in [CERG-GOV-RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 and is the single source of truth for acceptance authority by severity tier. The table below reproduces the same authorities for convenience within this procedure, with additional detail on treatment-type distinctions and the emergency exception path.
+Risk treatment decisions require documented approval from the authority matching the risk's severity. The canonical approval authority table is maintained in [CERG-GOV-RMF-001](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 and is the single source of truth for acceptance authority by severity tier. The table below reproduces the same authorities for convenience within this procedure, with additional detail on treatment-type distinctions and the emergency exception path.
 
 | **Risk Rating / Treatment** | **Approval Authority** |
 |---|---|
@@ -453,7 +453,7 @@ Risk treatment decisions require documented approval from the authority matching
 | Any exception affecting [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC | CISO + CFO designee |
 | Emergency exception (operational necessity) | Risk Pillar Leader or Engineering Pillar Leader may authorize immediately; CISO must approve or deny post-hoc within 24 hours. If denied, the action must be reversed or mitigated, and the residual risk is logged to the risk register with the denial rationale. |
 
-Approvers may delegate within their authority but shall document the delegation. The CISO retains final authority for any risk-related decision. Acceptance of residual risk at any tier follows the canonical authority table in [CERG-GOV-RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. No acceptance expires automatically; every acceptance at every tier requires a fresh approval cycle at expiration.
+Approvers may delegate within their authority but shall document the delegation. The CISO retains final authority for any risk-related decision. Acceptance of residual risk at any tier follows the canonical authority table in [CERG-GOV-RMF-001](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. No acceptance expires automatically; every acceptance at every tier requires a fresh approval cycle at expiration.
 
 ---
 
@@ -513,8 +513,8 @@ The risk register is the integration point for several other programs. Risk-regi
 
 | **Program** | **Integration** |
 |---|---|
-| Vulnerability Management ([CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md)) | Out-of-SLA findings and aggregate exposure feed risk entries; large remediation campaigns are tracked as treatments. |
-| Incident Response ([CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md)) | Post-incident corrective actions are recorded as risks or risk-acceptance closures. |
+| Vulnerability Management ([CERG-PRC-VM-001](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md)) | Out-of-SLA findings and aggregate exposure feed risk entries; large remediation campaigns are tracked as treatments. |
+| Incident Response ([CERG-PLN-IR-001](plans/CERG-PLN-IR-001_Incident_Response_Plan.md)) | Post-incident corrective actions are recorded as risks or risk-acceptance closures. |
 | Vendor / Third-Party Risk | Vendor assessment findings open risks; vendor reassessment cadence reviews them. |
 | Compliance - NERC-CIP, [CMMC](https://dodcio.defense.gov/CMMC/), [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) | Open compliance gaps map to risk entries; POA&M and CIP deviations link to register entries. |
 | Architecture / Engineering Review | Pre-production review findings open risks where acceptance is sought to deploy. |
@@ -563,17 +563,17 @@ Governance owns this procedure. The Risk Register Owner is responsible for revis
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy - Principle 9 |
-| Grid and Control System Standard | [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | OT risk and CIP deviation overlay |
-| IT / Cloud / SaaS Security Standard | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | IT/Cloud/SaaS risk scope, tier-based control expectations |
-| CUI Handling Standard | [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) | CUI risk scope, POA&M tracking |
-| Access Management Standard | [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) | Identity-related risk and access exception handling |
-| Unified Control Baseline | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control framework that risk entries reference |
-| Vulnerability Management Procedure | [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Vulnerability risk acceptance path |
-| Adversarial Validation Procedure | [CERG-PRC-AV-001](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) | Adversarial testing finding risk acceptance |
-| Third Party and Supply Chain Risk Procedure | [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Vendor risk register entries and tier-based acceptance authority |
-| Architecture Review and Project Intake Procedure | [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Project review findings flow to risk register |
-| CERG Operating Model | [CERG-GOV-OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) | Pillar structure and risk governance |
+| Cybersecurity Policy | [CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy - Principle 9 |
+| Grid and Control System Standard | [CERG-STD-OT-001](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | OT risk and CIP deviation overlay |
+| IT / Cloud / SaaS Security Standard | [CERG-STD-IT-001](standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | IT/Cloud/SaaS risk scope, tier-based control expectations |
+| CUI Handling Standard | [CERG-STD-CUI-001](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) | CUI risk scope, POA&M tracking |
+| Access Management Standard | [CERG-STD-AC-001](standards/CERG-STD-AC-001_Access_Management_Standard.md) | Identity-related risk and access exception handling |
+| Unified Control Baseline | [CERG-GOV-CB-001](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control framework that risk entries reference |
+| Vulnerability Management Procedure | [CERG-PRC-VM-001](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Vulnerability risk acceptance path |
+| Adversarial Validation Procedure | [CERG-PRC-AV-001](procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) | Adversarial testing finding risk acceptance |
+| Third Party and Supply Chain Risk Procedure | [CERG-PRC-TPRM-001](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Vendor risk register entries and tier-based acceptance authority |
+| Architecture Review and Project Intake Procedure | [CERG-PRC-AR-001](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Project review findings flow to risk register |
+| CERG Operating Model | [CERG-GOV-OM-001](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | Pillar structure and risk governance |
 
 ---
 

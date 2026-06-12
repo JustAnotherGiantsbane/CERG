@@ -13,8 +13,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) · [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) · [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Documents** | [`CERG-GOV-IMP-001`](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) · [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) · [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) |
 | **Review Cycle** | Annual / On any change to the token scheme |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · ISO/IEC 27001 A.5 |
 | **Regulations** | Cross-cutting |
@@ -64,7 +64,7 @@ Adaptation is the act of replacing variable content with an organization's own v
 1. **Tokens.** Explicit placeholders of the form `{{TOKEN_NAME}}`. Any new CERG content, and any organization-maintained content, uses tokens directly. The render tool substitutes them.
 2. **The phrase map.** The V1 corpus was written before the token scheme existed, so it contains hard-coded variable phrases (for example, a specific headcount used as a scaling upper bound). The phrase map is a configurable list of those known phrases and the token each maps to. The render tool applies it so the existing corpus adapts without the source files being rewritten.
 
-The published corpus is left intact and generic. The render tool produces a separate, organization-specific output. The source stays the master; the output is an export, exactly as [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) requires.
+The published corpus is left intact and generic. The render tool produces a separate, organization-specific output. The source stays the master; the output is an export, exactly as [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) requires.
 
 > **Why Not Just Edit the 28 Documents**
 >
@@ -90,7 +90,7 @@ Rules for tokens:
 
 > **Tokens Are Not for Roles**
 >
-> The single most important rule. Canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1 are fixed content. They are never tokenized. "Governance Pillar Leader" is written literally, every time, in every document. If an organization renames that seat internally, that mapping lives in the organization's own role-assignment map, not in the CERG corpus. Tokenizing a role would let an adopter silently rename a seat and break every cross-reference that depends on it.
+> The single most important rule. Canonical role names from [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1 are fixed content. They are never tokenized. "Governance Pillar Leader" is written literally, every time, in every document. If an organization renames that seat internally, that mapping lives in the organization's own role-assignment map, not in the CERG corpus. Tokenizing a role would let an adopter silently rename a seat and break every cross-reference that depends on it.
 
 ---
 
@@ -216,7 +216,7 @@ The V1 phrase map covers the known hard-coded strings, primarily the upper-bound
 
 ## 8. Adaptation Workflow
 
-This is the workflow an adopter follows. It is referenced by [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) §5.1, step 2.
+This is the workflow an adopter follows. It is referenced by [`CERG-GOV-IMP-001`](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) §5.1, step 2.
 
 | **Step** | **Action** | **Role** |
 |---|---|---|
@@ -232,7 +232,7 @@ When CERG publishes an update upstream, the adopter pulls the new source, update
 
 ## 9. Rules and Discipline
 
-1. **Never tokenize a canonical role name.** Roles from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1 are fixed content. See the callout in Section 3.
+1. **Never tokenize a canonical role name.** Roles from [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1 are fixed content. See the callout in Section 3.
 2. **Never tokenize a Document ID.** IDs are stable identifiers. `CERG-GOV-VAR-001` is written literally, always.
 3. **Never tokenize the pillar names.** Cyber Engineering, Cyber Risk, and Cyber Governance are the framework. They are fixed.
 4. **Every token is in the catalog.** A token not in Section 4 is invalid. Add it by amendment before using it.
@@ -253,7 +253,7 @@ When CERG publishes an update upstream, the adopter pulls the new source, update
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on any change to the token scheme |
 | **Next Scheduled Review** | 2027-05-21 |
 | **Frameworks** | NIST CSF 2.0 (GOVERN); ISO/IEC 27001 A.5 |
@@ -269,7 +269,7 @@ When CERG publishes an update upstream, the adopter pulls the new source, update
 ### Review Triggers
 
 - A new token is required by a new or revised CERG artifact
-- The canonical role roster in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1 changes
+- The canonical role roster in [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1 changes
 - The corpus is tokenized in place, retiring phrase-map entries
 - Adopter feedback indicating a missing or ambiguous token
 - Direction from the CISO
@@ -280,7 +280,7 @@ Governance owns this document. The Governance Pillar Leader (Document Control) i
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Authoritative artifact inventory; source-versus-export rule |
-| Implementation and Adaptation Guide | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Consumer of the adaptation workflow defined here |
-| CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role roster; roles are never tokenized |
+| Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Authoritative artifact inventory; source-versus-export rule |
+| Implementation and Adaptation Guide | [`CERG-GOV-IMP-001`](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Consumer of the adaptation workflow defined here |
+| CERG Operating Model | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role roster; roles are never tokenized |

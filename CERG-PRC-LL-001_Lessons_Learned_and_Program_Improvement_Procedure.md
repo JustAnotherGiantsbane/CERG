@@ -12,8 +12,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [`CERG-PRC-IR-002`](CERG-PRC-IR-002_Incident_Response_Playbook_Set.md) · [`CERG-PRC-AV-001`](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) · [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) · [`CERG-PLN-BC-001`](CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md) · [`CERG-PRC-TI-001`](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) · [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) · [`CERG-GOV-IMPREG-001`](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) (Planned, V1.x) |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Documents** | [`CERG-PRC-IR-002`](procedures/CERG-PRC-IR-002_Incident_Response_Playbook_Set.md) · [`CERG-PRC-AV-001`](procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) · [`CERG-PRC-AUD-001`](procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) · [`CERG-PLN-BC-001`](plans/CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md) · [`CERG-PRC-TI-001`](procedures/CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) · [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [`CERG-GOV-MTR-001`](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) · [`CERG-GOV-IMPREG-001`](governance/CERG-GOV-IMPREG-001_Program_Improvement_Register.md) (Planned, V1.x) |
 | **Review Cycle** | Annual / After each quarterly lessons-aggregation cycle |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (ID.IM, GOVERN) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (CA, PM) · ISO/IEC 27001 A.10 |
 | **Regulations** | Cross-cutting : applies to all CERG-supported frameworks |
@@ -63,9 +63,9 @@ This procedure closes that gap. It defines how CERG collects, analyzes, and conv
 
 Principle 1 states "Every significant event produces a lesson." A "significant event" is defined as any event that meets one or more of the following criteria:
 
-- Triggers a P1 or P2 incident response per [CERG-PRC-IR-002](CERG-PRC-IR-002_Incident_Response_Playbook_Set.md) Section 3.6
-- Results in a Critical or High finding from adversarial validation per [CERG-PRC-AV-001](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md)
-- Produces a "Deficient" control rating from an audit or control test per [CERG-PRC-AUD-001](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md)
+- Triggers a P1 or P2 incident response per [CERG-PRC-IR-002](procedures/CERG-PRC-IR-002_Incident_Response_Playbook_Set.md) Section 3.6
+- Results in a Critical or High finding from adversarial validation per [CERG-PRC-AV-001](procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md)
+- Produces a "Deficient" control rating from an audit or control test per [CERG-PRC-AUD-001](procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md)
 - Involves a near-miss that could have resulted in any of the above (e.g., a control that failed silently but was caught before impact)
 - Is directed by the CISO to produce a lesson regardless of the above criteria
 
@@ -417,7 +417,7 @@ Reviewed by: [CISO]
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / After each quarterly lessons-aggregation cycle |
 | **Next Scheduled Review** | 2027-05-26 |
 | **Frameworks** | NIST CSF 2.0 (ID.IM, GOVERN); NIST 800-53r5 (CA, PM); ISO/IEC 27001 A.10 |

@@ -10,7 +10,7 @@
 | **Status** | Active |
 | **Classification** | Internal |
 | **Owner** | Governance Pillar Leader (Document Control) |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Quarterly |
 | **Frameworks** | NIST CSF 2.0 |
 | **Regulations** | Cross-cutting |
@@ -91,7 +91,7 @@ For reference when remediating the missing sections above:
 | **Classification** | [Public / Internal / Restricted] |
 | **Owner** | [Role Name] |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | [Annual / Semi-Annual / Quarterly] |
 | **Next Scheduled Review** | YYYY-MM-DD |
 | **Frameworks** | [Applicable frameworks] |

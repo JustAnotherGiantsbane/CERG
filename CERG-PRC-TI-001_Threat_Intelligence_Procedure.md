@@ -12,8 +12,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [`CERG-PRC-TM-001`](CERG-PRC-TM-001_Threat_Modeling_Procedure.md) · [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [`CERG-PRC-LL-001`](CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) · [`CERG-GOV-IMPREG-001`](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) · [`CERG-GOV-CAL-001`](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md) |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Documents** | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [`CERG-PRC-TM-001`](procedures/CERG-PRC-TM-001_Threat_Modeling_Procedure.md) · [`CERG-PRC-TPRM-001`](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [`CERG-PRC-LL-001`](procedures/CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) · [`CERG-GOV-IMPREG-001`](governance/CERG-GOV-IMPREG-001_Program_Improvement_Register.md) · [`CERG-GOV-CAL-001`](governance/CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md) |
 | **Review Cycle** | Annual / On material change to threat landscape or intelligence sources |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (RA-3, RA-5, SI-5, PM-16) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (ID.RA, DE.CM, ID.IM, GOVERN) · [MITRE ATT&CK](https://attack.mitre.org/) · [MITRE ATT&CK for ICS](https://attack.mitre.org/matrices/ics/) |
 | **Regulations** | CMMC L2 / 800-171r3 · NERC-CIP · SOX ITGC where threat intelligence affects scoped systems |
@@ -79,7 +79,7 @@ The Threat Intelligence Analyst maintains a source register. Sources are reviewe
 | Peer and trust groups | ISACs, industry groups, trusted peer exchanges | Sector targeting, early warning, practical mitigations. |
 | Regulatory and legal updates | Regulator alerts, new requirements, enforcement activity | Governance and compliance implications. |
 
-Restricted-source or sensitive intelligence is handled according to its classification under [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md).
+Restricted-source or sensitive intelligence is handled according to its classification under [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md).
 
 ---
 
@@ -113,7 +113,7 @@ Every actionable item records:
 | **Monitor** | Relevant but no immediate action. Review when conditions change. |
 | **Disseminate** | Useful context for one or more owners, but no tracked action required. |
 | **Create action** | Requires patching, configuration, detection, review, vendor follow-up, or project change. |
-| **Create risk** | Residual exposure requires tracking through [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). |
+| **Create risk** | Residual exposure requires tracking through [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). |
 
 ---
 
@@ -204,7 +204,7 @@ Priority is based on relevance, exposure, exploitation, and potential impact. A 
 | **Medium** | Plausible relevance, limited exposure, or no known exploitation. | Disseminate to relevant owner; monitor or schedule action. |
 | **Low** | General context, weak relevance, or awareness-only item. | Record if useful; no action required. |
 
-Priority does not replace vulnerability severity or risk scoring. It informs them. Vulnerability remediation still follows [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md), and residual risk still follows [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md).
+Priority does not replace vulnerability severity or risk scoring. It informs them. Vulnerability remediation still follows [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md), and residual risk still follows [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md).
 
 ---
 
@@ -235,12 +235,12 @@ Actionable intelligence is tracked to disposition. The Threat Intelligence Analy
 
 | **Action Type** | **Receiving Owner** | **Tracking Path** |
 |---|---|---|
-| Patch or mitigate vulnerability | Vulnerability Management Lead | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md). |
-| Change design or control requirement | Engineering Pillar Leader or relevant Engineering role | [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) or relevant standard. |
-| Add threat-model abuse case | Threat Intelligence Analyst | [`CERG-PRC-TM-001`](CERG-PRC-TM-001_Threat_Modeling_Procedure.md). |
-| Reassess supplier | Vendor Risk Analyst | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md). |
-| Create or tune detection | Detection Engineer | Detection backlog governed by [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md). |
-| Record residual exposure | Risk Register Owner | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). |
+| Patch or mitigate vulnerability | Vulnerability Management Lead | [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md). |
+| Change design or control requirement | Engineering Pillar Leader or relevant Engineering role | [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) or relevant standard. |
+| Add threat-model abuse case | Threat Intelligence Analyst | [`CERG-PRC-TM-001`](procedures/CERG-PRC-TM-001_Threat_Modeling_Procedure.md). |
+| Reassess supplier | Vendor Risk Analyst | [`CERG-PRC-TPRM-001`](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md). |
+| Create or tune detection | Detection Engineer | Detection backlog governed by [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md). |
+| Record residual exposure | Risk Register Owner | [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). |
 | Brief leadership | Risk Pillar Leader | CISO dashboard or executive threat brief. |
 
 An item is closed only when the receiving owner records disposition: completed, accepted risk, not applicable with reason, or superseded.
@@ -441,7 +441,7 @@ The Threat Intelligence Analyst reviews all feedback quarterly:
 
 #### Program Improvements from Feedback
 
-Feedback that identifies a systematic gap in intelligence production (e.g., "we consistently lack context on vulnerabilities affecting our tech stack" or "the weekly digest is too long to read") is routed to the improvement register per [CERG-PRC-LL-001](CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md).
+Feedback that identifies a systematic gap in intelligence production (e.g., "we consistently lack context on vulnerabilities affecting our tech stack" or "the weekly digest is too long to read") is routed to the improvement register per [CERG-PRC-LL-001](procedures/CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md).
 
 ---
 
@@ -464,7 +464,7 @@ Threat intelligence metrics measure relevance and action, not raw feed volume.
 
 ## 12. Roles and Responsibilities
 
-Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
+Roles below are canonical role names from [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
 
 | **Role** | **Threat Intelligence Responsibility** |
 |---|---|
@@ -637,7 +637,7 @@ Reviewer: [CISO]
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to threat landscape or intelligence sources |
 | **Next Scheduled Review** | 2027-05-26 |
 | **Frameworks** | NIST 800-53r5 (RA-3, RA-5, SI-5, PM-16); NIST CSF 2.0 (ID.RA, DE.CM, ID.IM, GOVERN); MITRE ATT&CK; MITRE ATT&CK for ICS |
@@ -665,14 +665,14 @@ Cyber Risk owns this document. The Risk Pillar Leader is responsible for initiat
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Defines Threat Intelligence Analyst role |
-| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Consumes vulnerability intelligence |
-| Threat Modeling Procedure | [`CERG-PRC-TM-001`](CERG-PRC-TM-001_Threat_Modeling_Procedure.md) | Consumes threat actor and abuse-case context |
-| Third-Party and Supply Chain Risk Procedure | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Consumes supplier and vendor intelligence |
-| Risk Register and Exception Process | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Tracks residual risk from intelligence-driven findings |
-| Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Receives detection leads from intelligence |
-| Lessons Learned and Program Improvement Procedure | [`CERG-PRC-LL-001`](CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) | Intelligence assessments feed the quarterly aggregation |
-| Program Improvement Register | [`CERG-GOV-IMPREG-001`](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) | Records intelligence-driven program changes |
-| Annual Security and Governance Calendar | [`CERG-GOV-CAL-001`](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md) | Aligns quarterly assessment cadence |
-| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `TI` domain |
+| Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| CERG Operating Model | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | Defines Threat Intelligence Analyst role |
+| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Consumes vulnerability intelligence |
+| Threat Modeling Procedure | [`CERG-PRC-TM-001`](procedures/CERG-PRC-TM-001_Threat_Modeling_Procedure.md) | Consumes threat actor and abuse-case context |
+| Third-Party and Supply Chain Risk Procedure | [`CERG-PRC-TPRM-001`](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Consumes supplier and vendor intelligence |
+| Risk Register and Exception Process | [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Tracks residual risk from intelligence-driven findings |
+| Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Receives detection leads from intelligence |
+| Lessons Learned and Program Improvement Procedure | [`CERG-PRC-LL-001`](procedures/CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) | Intelligence assessments feed the quarterly aggregation |
+| Program Improvement Register | [`CERG-GOV-IMPREG-001`](governance/CERG-GOV-IMPREG-001_Program_Improvement_Register.md) | Records intelligence-driven program changes |
+| Annual Security and Governance Calendar | [`CERG-GOV-CAL-001`](governance/CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md) | Aligns quarterly assessment cadence |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `TI` domain |

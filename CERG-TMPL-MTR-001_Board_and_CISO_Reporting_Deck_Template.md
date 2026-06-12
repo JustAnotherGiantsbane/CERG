@@ -13,8 +13,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
-| **Parent Document** | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) - Metrics Dashboard and Reporting |
-| **Supporting Documents** | [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) |
+| **Parent Document** | [`CERG-GOV-MTR-001`](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) - Metrics Dashboard and Reporting |
+| **Supporting Documents** | [`CERG-GOV-MAT-001`](governance/CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) · [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-GOV-RAC-001`](governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) |
 | **Review Cycle** | Annual / On process or control change |
 | **Frameworks** | NIST CSF 2.0 GOVERN · NIST 800-55 · ISO/IEC 27001 Clause 9 |
 | **Regulations** | Cross-cutting; board, executive, audit, and customer assurance reporting |
@@ -111,7 +111,7 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Approved By** | CISO |
-| **Parent Document** | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) - Metrics Dashboard and Reporting |
+| **Parent Document** | [`CERG-GOV-MTR-001`](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) - Metrics Dashboard and Reporting |
 | **Review Cycle** | Annual; and on process or control change |
 | **Next Scheduled Review** | 2027-05-22 |
 | **Frameworks** | NIST CSF 2.0 GOVERN · NIST 800-55 · ISO/IEC 27001 Clause 9 |
@@ -135,5 +135,5 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Metrics Dashboard and Reporting | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Governing metric source |
-| Maturity Self-Assessment and Scorecard | [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) | Maturity reporting input |
+| Metrics Dashboard and Reporting | [`CERG-GOV-MTR-001`](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Governing metric source |
+| Maturity Self-Assessment and Scorecard | [`CERG-GOV-MAT-001`](governance/CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) | Maturity reporting input |

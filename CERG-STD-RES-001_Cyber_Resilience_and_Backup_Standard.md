@@ -13,8 +13,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Resilience) |
-| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Standards** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-CFG-001](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+| **Parent Policy** | [CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Standards** | [CERG-STD-IT-001](standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-CFG-001](standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-CR-001](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-STD-LM-001](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
 | **Review Cycle** | Annual / On major platform change |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (CP) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (RECOVER) · NIST 800-184 · ISO/IEC 27031 |
 | **Regulations** | NERC-CIP CIP-009 · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.8 / 3.6) · SOX ITGC (Backups / Operations) |
@@ -94,7 +94,7 @@ Every backup of an in-scope asset meets the following requirements at minimum. T
 | **Requirement** | **All Tiers** | **T1 / T2 / BES / CUI** |
 |---|---|---|
 | Backups taken at the frequency in Section 3 | ✓ | ✓ |
-| Backups encrypted at rest (CMK where Restricted/CUI per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md)) | ✓ | ✓ |
+| Backups encrypted at rest (CMK where Restricted/CUI per [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md)) | ✓ | ✓ |
 | At least one copy stored on immutable storage (object-lock / WORM / air-gap) | ✓ | ✓ |
 | Backups stored in a separately-credentialled tenancy / account / domain | ✓ | ✓ |
 | Backup admin role separate from production admin role; MFA enforced | ✓ | ✓ |
@@ -116,7 +116,7 @@ Ransomware tooling routinely attacks backup systems before triggering encryption
 
 ## 5. Restoration Testing
 
-A backup that has never been restored is a hope, not a control. Restoration tests produce evidence per [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) control-to-evidence mapping.
+A backup that has never been restored is a hope, not a control. Restoration tests produce evidence per [`CERG-GOV-CB-001`](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) control-to-evidence mapping.
 
 ### 5.1 Cadence
 
@@ -135,7 +135,7 @@ Each full restoration test follows the procedure below and produces the evidence
 
 1. **Pre-test brief**, scope, success criteria, RTO/RPO targets, dependencies, business / OT owner notified.
 2. **Isolate** the recovery environment from production where applicable (no risk of overwriting production).
-3. **Restore** from immutable copy onto a clean baseline (DISH profile per [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md)).
+3. **Restore** from immutable copy onto a clean baseline (DISH profile per [`CERG-STD-CFG-001`](standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md)).
 4. **Bring up identity, logging, detection, and monitoring** before declaring the system available.
 5. **Validate** data integrity against last known-good (hash, checksum, sample query).
 6. **Measure** RTO actual and RPO actual against targets. Document deltas.
@@ -222,17 +222,17 @@ CIP-009 R1 specifies recovery plans; CERG requires that the following OT artifac
 
 CUI recovery aligns with [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r3/final) 3.8 (Media Protection, backups) and 3.6 (Incident Response, recovery from incident affecting CUI).
 
-- **Backup encryption** uses FIPS-validated cryptography per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md).
+- **Backup encryption** uses FIPS-validated cryptography per [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md).
 - **Backup storage** stays within the CUI enclave or its provider-equivalent boundary; no cross-spillage to non-CUI environments.
 - **Restoration test** validates that CUI labeling, access control, and logging are intact after recovery.
-- **Post-incident updates** to SSP and POA&M per [`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md).
+- **Post-incident updates** to SSP and POA&M per [`CERG-PLN-CUI-001`](plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md).
 - **Incident-driven recovery**: if a CUI system is recovered following an incident, the recovery itself is documented as POA&M follow-up.
 
 ---
 
 ## 9. SOX Availability Evidence
 
-SOX-relevant systems (per [`CERG-PLN-SOX-001`](CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) SOX-Relevant System Register) require evidence of backup, restoration, and availability controls reusable in the SOX cycle.
+SOX-relevant systems (per [`CERG-PLN-SOX-001`](plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) SOX-Relevant System Register) require evidence of backup, restoration, and availability controls reusable in the SOX cycle.
 
 | **SOX ITGC - Backup / Operations** | **Reused CERG Evidence** |
 |---|---|
@@ -240,7 +240,7 @@ SOX-relevant systems (per [`CERG-PLN-SOX-001`](CERG-PLN-SOX-001_SOX_ITGC_Operati
 | Backups can be restored | Restoration test evidence (this standard, Section 5.3) |
 | Restoration is timely | RTO actual against tier target |
 | Failed jobs are remediated | Backup job ticket history |
-| Availability incidents are tracked | Incident records (per [`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md)) with cyber annotation |
+| Availability incidents are tracked | Incident records (per [`CERG-PLN-IR-001`](plans/CERG-PLN-IR-001_Incident_Response_Plan.md)) with cyber annotation |
 
 SOX evidence reuses these artifacts; no duplicate "SOX-only" restoration test is performed.
 
@@ -252,7 +252,7 @@ SOX evidence reuses these artifacts; no duplicate "SOX-only" restoration test is
 |---|---|
 | **CERG - Engineering (Resilience)** | Owns this standard. Maintains the resilience register (tier per asset, last test result, next test date). Coordinates restoration tests. Maintains Recovery Plans (Section 11) for in-scope assets. Provides clean-restore preconditions to BCP. |
 | **CERG - Risk** | Tracks resilience-related risks (untested plans, expired tests, T1 gaps). Adversarial validation may include backup/recovery as an attack target. |
-| **CERG - Governance** | Tracks evidence currency (control CP-2, CP-4, CP-9, CP-10 in [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md)). Liaises with auditors. |
+| **CERG - Governance** | Tracks evidence currency (control CP-2, CP-4, CP-9, CP-10 in [`CERG-GOV-CB-001`](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md)). Liaises with auditors. |
 | **Asset / Business Owners** | Define business criticality. Participate in restoration tests. Approve Recovery Plan changes. |
 | **OT Operations** | Lead OT restoration; consume Recovery Plan; supervise restorations with operational safety authority. |
 | **Enterprise BCP** | Owns business recovery. Consumes CERG cyber readiness signals; provides recovery priority decisions during an event. |
@@ -289,7 +289,7 @@ RECOVERY PLAN - <System / Cluster Name>           PLAN-RES-YYYY-NNNN
    Immutability Mechanism    :
    Retention                 :
    Backup Credentials/Owner  :  (separately credentialled)
-   Encryption / Key Source   :  (CMK ref per [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md))
+   Encryption / Key Source   :  (CMK ref per [CERG-STD-CR-001](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md))
 
 4. RESTORATION PROCEDURE
    Pre-test brief            :  (process / template)

@@ -12,8 +12,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [`CERG-GOV-JA-001`](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) · [`CERG-GOV-CMP-001`](CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) · [`CERG-GOV-JD-001`](CERG-GOV-JD-001_CERG_Job_Descriptions.md) · [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-SUCC-001`](CERG-GOV-SUCC-001_Succession_Planning_and_Talent_Review_Framework.md) · [`CERG-GOV-TRN-001`](CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Documents** | [`CERG-GOV-JA-001`](governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) · [`CERG-GOV-CMP-001`](governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) · [`CERG-GOV-JD-001`](governance/CERG-GOV-JD-001_CERG_Job_Descriptions.md) · [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-SUCC-001`](governance/CERG-GOV-SUCC-001_Succession_Planning_and_Talent_Review_Framework.md) · [`CERG-GOV-TRN-001`](governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) |
 | **Review Cycle** | Annual / On any change to grade definitions or organizational structure |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · ISO/IEC 27001 A.7.2 |
 | **Regulations** | Cross-cutting |
@@ -106,7 +106,7 @@ Performance feedback should never be a surprise at review time. A manager who wa
 ## 4. Evaluation Dimensions
 
 
-> **Per-Role Evaluation Criteria**: Each role's evaluation criteria are now embedded in its per-role JD document under `roles/`. The dimensions below define the evaluation framework; the per-role documents define the role-specific expectations at each grade. See [JD-001](CERG-GOV-JD-001_CERG_Job_Descriptions.md) for the complete per-role index.
+> **Per-Role Evaluation Criteria**: Each role's evaluation criteria are now embedded in its per-role JD document under `roles/`. The dimensions below define the evaluation framework; the per-role documents define the role-specific expectations at each grade. See [JD-001](governance/CERG-GOV-JD-001_CERG_Job_Descriptions.md) for the complete per-role index.
 
 ### 4.1 SME Track Dimensions
 
@@ -368,7 +368,7 @@ Development plans produced through this process inform individual training needs
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on any change to grade definitions or organizational structure |
 | **Next Scheduled Review** | 2027-05-27 |
 | **Frameworks** | NIST CSF 2.0 (GOVERN); ISO/IEC 27001 A.7.2 |
@@ -393,13 +393,13 @@ Development plans produced through this process inform individual training needs
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| Job Architecture and Grade Framework | [`CERG-GOV-JA-001`](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Grade definitions and progression dimensions |
-| Competency Model | [`CERG-GOV-CMP-001`](CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) | Behavioral anchors for evaluation dimensions |
-| CERG Job Descriptions | [`CERG-GOV-JD-001`](CERG-GOV-JD-001_CERG_Job_Descriptions.md) | Success profiles and role-specific outcomes |
-| CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role roster |
-| Succession Planning Framework | [`CERG-GOV-SUCC-001`](CERG-GOV-SUCC-001_Succession_Planning_and_Talent_Review_Framework.md) | Consumes calibrated ratings |
-| Training Framework | [`CERG-GOV-TRN-001`](CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) | Development resource for gap closure |
-| Document Catalog | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact |
+| Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| Job Architecture and Grade Framework | [`CERG-GOV-JA-001`](governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Grade definitions and progression dimensions |
+| Competency Model | [`CERG-GOV-CMP-001`](governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) | Behavioral anchors for evaluation dimensions |
+| CERG Job Descriptions | [`CERG-GOV-JD-001`](governance/CERG-GOV-JD-001_CERG_Job_Descriptions.md) | Success profiles and role-specific outcomes |
+| CERG Operating Model | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role roster |
+| Succession Planning Framework | [`CERG-GOV-SUCC-001`](governance/CERG-GOV-SUCC-001_Succession_Planning_and_Talent_Review_Framework.md) | Consumes calibrated ratings |
+| Training Framework | [`CERG-GOV-TRN-001`](governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) | Development resource for gap closure |
+| Document Catalog | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact |
 
 Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO endorsement for all changes.

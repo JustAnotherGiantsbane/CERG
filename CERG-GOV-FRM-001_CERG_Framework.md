@@ -7,7 +7,7 @@
 
 > Designed for Adaptive [NIST CSF 2.0](https://www.nist.gov/cyberframework) maturity. Applicable to IT and OT environments. Calibrated for [CMMC](https://dodcio.defense.gov/CMMC/), NERC-CIP,, and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204).
 > 
-> _Examples in this document reference a large enterprise at the upper bound of what CERG is designed to support — the framework is scaled to fit organizations from 5 people to large regulated entities. Readers should scale down to their environment. Sector-specific illustrative profiles are available in [`/examples/`](examples/). See also [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) for mechanical adaptation._
+> _Examples in this document reference a large enterprise at the upper bound of what CERG is designed to support — the framework is scaled to fit organizations from 5 people to large regulated entities. Readers should scale down to their environment. Sector-specific illustrative profiles are available in [`/examples/`](examples/). See also [`CERG-GOV-VAR-001`](governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) for mechanical adaptation._
 
 ---
 
@@ -18,7 +18,7 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to framework |
 | **Frameworks** | NIST CSF 2.0; NIST 800-53r5; NIST 800-171r3; NIST RMF |
 | **Regulations** | NERC-CIP; CMMC L2; SOX ITGC |
@@ -533,7 +533,7 @@ An organization operating at Adaptive maturity will demonstrate these observable
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | CISO |
-| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to framework |
 | **Next Scheduled Review** | 2027-05-01 |
 | **Frameworks** | NIST CSF 2.0; NIST 800-53r5; NIST 800-171r3; NIST RMF |
@@ -556,10 +556,10 @@ An organization operating at Adaptive maturity will demonstrate these observable
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| CERG Operating Model | [CERG-GOV-OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) | Operating model detail |
-| Document Catalog | [CERG-GOV-CAT-001](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Master document inventory |
-| Unified Control Baseline | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control spine |
+| Cybersecurity Policy | [CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| CERG Operating Model | [CERG-GOV-OM-001](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | Operating model detail |
+| Document Catalog | [CERG-GOV-CAT-001](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Master document inventory |
+| Unified Control Baseline | [CERG-GOV-CB-001](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control spine |
 
 ---
 

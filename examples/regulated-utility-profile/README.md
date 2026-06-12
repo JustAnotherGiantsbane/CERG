@@ -4,7 +4,7 @@ This is a **sample organization profile** for a regulated electrical utility ado
 It is provided as a reference example, not the default.
 
 If your organization matches this profile, use it as a starting point for your
-[Organization Adaptation Profile](../../CERG-GOV-VAR-001_Organization_Adaptation_Profile.md).
+[Organization Adaptation Profile](../../governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md).
 
 ---
 
@@ -49,14 +49,14 @@ At this scale, the workload is substantial across all three pillars.
 
 ## Key operational packages
 
-- [NERC-CIP Operational Package](../../CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md)
-- [CUI / CMMC Operational Package](../../CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md)
-- [SOX ITGC Operational Package](../../CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md)
-- [Grid Control Systems Security Standard](../../CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md)
-- [Business Continuity & DR Plan](../../CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md)
+- [NERC-CIP Operational Package](../../plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md)
+- [CUI / CMMC Operational Package](../../plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md)
+- [SOX ITGC Operational Package](../../plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md)
+- [Grid Control Systems Security Standard](../../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md)
+- [Business Continuity & DR Plan](../../plans/CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md)
 
 ## See also
 
-- [CERG Framework §9](../../CERG-GOV-FRM-001_CERG_Framework.md) — Team Structure and Talent Model
-- [Organization Adaptation Profile](../../CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) — Token scheme and render tool
-- [Small Team Adoption Path](../../CERG-GOV-IMP-003_Small_Team_Adoption_Path.md) — Contrast with small-scale adoption
+- [CERG Framework §9](../../governance/CERG-GOV-FRM-001_CERG_Framework.md) — Team Structure and Talent Model
+- [Organization Adaptation Profile](../../governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) — Token scheme and render tool
+- [Small Team Adoption Path](../../governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md) — Contrast with small-scale adoption

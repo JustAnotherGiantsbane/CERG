@@ -12,8 +12,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) · [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) · [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) · [`CERG-PLN-CIP-001`](CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) · [`CERG-PLN-SOX-001`](CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Documents** | [`CERG-GOV-CB-001`](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-GOV-CMX-001`](governance/CERG-GOV-CMX-001_Compliance_Matrix.md) · [`CERG-GOV-MTR-001`](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) · [`CERG-GOV-RAC-001`](governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) · [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-PLN-CUI-001`](plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) · [`CERG-PLN-CIP-001`](plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) · [`CERG-PLN-SOX-001`](plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) |
 | **Review Cycle** | Annual / After major audit, assessor, or regulator feedback |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (CA, PM, AU) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · ISO/IEC 27001 A.5, A.8 · CIS Controls v8 |
 | **Regulations** | CMMC L2 / 800-171r3 · NERC-CIP · SOX ITGC · privacy and contractual audit obligations where applicable |
@@ -56,7 +56,7 @@ This procedure governs CERG's evidence library, control-testing cadence, audit i
 2. **Evidence maps to controls.** Every retained evidence item maps to at least one control, framework requirement, or audit request.
 3. **Evidence is attributable.** Evidence shows who produced it, when, from what system or process, and what period it covers.
 4. **Evidence is reproducible.** A reasonable reviewer can understand how the evidence was produced and, where possible, reproduce it.
-5. **Evidence is protected.** Evidence often contains sensitive configuration, user, asset, or vulnerability data. It is classified and handled under [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md).
+5. **Evidence is protected.** Evidence often contains sensitive configuration, user, asset, or vulnerability data. It is classified and handled under [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md).
 6. **One evidence item can serve many frameworks.** The same access-review record can support CMMC, SOX, ISO, and NIST. CERG collects once and maps many times.
 
 ---
@@ -308,7 +308,7 @@ Audit findings, control-test deficiencies, rejected evidence, and repeated evide
 | Evidence deficiency | Evidence Librarian opens corrective action with the producing owner. |
 | Policy or standard gap | Policy & Standards Manager opens document update action. |
 | Technical control gap | Relevant Engineering or Risk owner opens remediation action. |
-| Accepted residual risk | Risk Register Owner tracks through [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). |
+| Accepted residual risk | Risk Register Owner tracks through [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). |
 
 A corrective action records owner, due date, remediation plan, verification method, and closure evidence. Closure requires evidence that the condition was corrected, not merely a statement that it was.
 
@@ -359,7 +359,7 @@ A POA&M entry is required for:
 A POA&M entry may be closed when:
 
 1. The deficiency has been remediated and closure evidence is on file, OR
-2. The deficiency has been formally risk-accepted through [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) with CISO approval, OR
+2. The deficiency has been formally risk-accepted through [CERG-PRC-RM-001](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) with CISO approval, OR
 3. The affected system has been decommissioned and the deficiency is no longer applicable
 
 Closure requires sign-off by the CMMC / Federal Compliance Manager and the Governance Pillar Leader. Closure evidence is retained in the evidence library per Section 4.3.
@@ -368,7 +368,7 @@ Closure requires sign-off by the CMMC / Federal Compliance Manager and the Gover
 
 ## 9. Metrics
 
-Audit and evidence metrics are reported through [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md).
+Audit and evidence metrics are reported through [`CERG-GOV-MTR-001`](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md).
 
 | **Metric** | **Purpose** |
 |---|---|
@@ -385,7 +385,7 @@ Audit and evidence metrics are reported through [`CERG-GOV-MTR-001`](CERG-GOV-MT
 
 ## 10. Roles and Responsibilities
 
-Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
+Roles below are canonical role names from [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
 
 | **Role** | **Audit and Evidence Responsibility** |
 |---|---|
@@ -427,7 +427,7 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CE
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and after major audit, assessor, or regulator feedback |
 | **Next Scheduled Review** | 2027-05-22 |
 | **Frameworks** | NIST 800-53r5 (CA, PM, AU); NIST CSF 2.0 (GOVERN); ISO/IEC 27001 A.5 and A.8; CIS Controls v8 |
@@ -454,13 +454,13 @@ Cyber Governance owns this document. The Governance Pillar Leader is responsible
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| Unified Control Baseline | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control and evidence source |
-| Compliance Matrix | [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) | Cross-framework mapping |
-| Metrics and Reporting | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Audit and evidence metrics reporting |
-| Consolidated Roles, Responsibilities, and RACI Instrument | [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Role accountability reference |
-| Risk Register and Exception Process | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Residual risk and exception tracking |
-| CUI / CMMC Operational Package | [`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) | CMMC evidence mapping |
-| NERC-CIP Operational Package | [`CERG-PLN-CIP-001`](CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) | NERC-CIP evidence mapping |
-| SOX ITGC Operational Package | [`CERG-PLN-SOX-001`](CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) | SOX evidence mapping |
-| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `AUD` domain |
+| Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| Unified Control Baseline | [`CERG-GOV-CB-001`](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control and evidence source |
+| Compliance Matrix | [`CERG-GOV-CMX-001`](governance/CERG-GOV-CMX-001_Compliance_Matrix.md) | Cross-framework mapping |
+| Metrics and Reporting | [`CERG-GOV-MTR-001`](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Audit and evidence metrics reporting |
+| Consolidated Roles, Responsibilities, and RACI Instrument | [`CERG-GOV-RAC-001`](governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Role accountability reference |
+| Risk Register and Exception Process | [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Residual risk and exception tracking |
+| CUI / CMMC Operational Package | [`CERG-PLN-CUI-001`](plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) | CMMC evidence mapping |
+| NERC-CIP Operational Package | [`CERG-PLN-CIP-001`](plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) | NERC-CIP evidence mapping |
+| SOX ITGC Operational Package | [`CERG-PLN-SOX-001`](plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) | SOX evidence mapping |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `AUD` domain |

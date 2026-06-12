@@ -11,7 +11,7 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on framework or organizational change |
 
 ---
@@ -279,7 +279,7 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
-| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on framework or organizational change |
 | **Next Scheduled Review** | 2027-05-01 |
 
@@ -300,6 +300,6 @@
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| Risk Register and Exception Process | [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Uses taxonomy for risk categorization |
-| Document Catalog | [CERG-GOV-CAT-001](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Master document inventory |
+| Cybersecurity Policy | [CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| Risk Register and Exception Process | [CERG-PRC-RM-001](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Uses taxonomy for risk categorization |
+| Document Catalog | [CERG-GOV-CAT-001](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Master document inventory |

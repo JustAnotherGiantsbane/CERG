@@ -13,8 +13,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Platforms) |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Standards** | [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) · [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Standards** | [`CERG-STD-CFG-001`](standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [`CERG-STD-IT-001`](standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [`CERG-STD-OT-001`](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md) · [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
 | **Review Cycle** | Annual / On material change to the asset estate or inventory tooling |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (ID.AM) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (CM-8, PM-5) · [CIS Controls v8](https://www.cisecurity.org/controls) (Controls 1 and 2) · ISO/IEC 27001 A.5.9 |
 | **Regulations** | NERC-CIP (CIP-002 BES Cyber System identification) · CMMC L2 / 800-171r3 (3.4.1, 3.4.2) · SOX ITGC (in-scope system inventory) |
@@ -72,14 +72,14 @@ CERG tracks five asset classes. Each has a named authoritative inventory.
 | **Class** | **What It Covers** | **Examples** |
 |---|---|---|
 | **Hardware** | Physical computing and network devices. | Servers, workstations, laptops, network gear, mobile devices, OT field devices. |
-| **Software** | Operating systems, applications, and firmware in use. | OS images, installed applications, in-house software per [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md), firmware versions. |
+| **Software** | Operating systems, applications, and firmware in use. | OS images, installed applications, in-house software per [`CERG-STD-SDL-001`](standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md), firmware versions. |
 | **Cloud and SaaS** | Cloud infrastructure resources and subscribed SaaS services. | Cloud compute, storage, managed services, accounts and subscriptions, SaaS tenants. |
-| **Data** | Information assets, governed for classification and handling. | Datasets, databases, document repositories. Handling is governed by [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md). |
-| **Identity** | Accounts and service principals that act on the estate. | User accounts, service accounts, machine identities, API principals. Governed by [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md); inventoried here. |
+| **Data** | Information assets, governed for classification and handling. | Datasets, databases, document repositories. Handling is governed by [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md). |
+| **Identity** | Accounts and service principals that act on the estate. | User accounts, service accounts, machine identities, API principals. Governed by [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md); inventoried here. |
 
 > **OT Assets Are In Scope and Need Care**
 >
-> Operational technology assets are tracked like every other asset, but discovery against OT is constrained: active scanning can disrupt control systems. OT asset discovery uses passive and OT-safe methods per [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md). The requirement to inventory OT assets is identical to any other class. The method of discovery is not. For NERC-CIP entities, the OT hardware inventory is also the basis of BES Cyber System identification under CIP-002.
+> Operational technology assets are tracked like every other asset, but discovery against OT is constrained: active scanning can disrupt control systems. OT asset discovery uses passive and OT-safe methods per [`CERG-STD-OT-001`](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md). The requirement to inventory OT assets is identical to any other class. The method of discovery is not. For NERC-CIP entities, the OT hardware inventory is also the basis of BES Cyber System identification under CIP-002.
 
 ---
 
@@ -143,11 +143,11 @@ Every asset is assigned a criticality tier. Criticality reflects the business an
 
 ### 7.2 Data Classification
 
-Every asset carries the classification of the highest-classified data it stores or processes. The classification scheme itself is owned by [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md). Until that standard is published, assets carry the data classification used by [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md) for CUI scope and a simple internal scheme elsewhere.
+Every asset carries the classification of the highest-classified data it stores or processes. The classification scheme itself is owned by [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md). Until that standard is published, assets carry the data classification used by [`CERG-STD-CUI-001`](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) for CUI scope and a simple internal scheme elsewhere.
 
 ### 7.3 What Classification Drives
 
-The criticality tier and data classification of an asset determine, at minimum: its vulnerability remediation SLA under [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md), its access-review frequency under [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md), its logging requirements under [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md), and its backup and recovery objectives under [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md). Asset management produces the classification once; every other standard consumes it.
+The criticality tier and data classification of an asset determine, at minimum: its vulnerability remediation SLA under [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md), its access-review frequency under [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md), its logging requirements under [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md), and its backup and recovery objectives under [`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md). Asset management produces the classification once; every other standard consumes it.
 
 ---
 
@@ -157,9 +157,9 @@ Every asset moves through a defined lifecycle. The inventory records the asset's
 
 | **State** | **What Happens** | **Security Requirement** |
 |---|---|---|
-| **Requested** | Acquisition is proposed. | Intake through [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) where the asset is part of a project. |
+| **Requested** | Acquisition is proposed. | Intake through [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) where the asset is part of a project. |
 | **Acquired** | The asset enters the estate. | Inventory record created; owner assigned; criticality and classification set. |
-| **Provisioned** | The asset is configured for use. | Secure configuration baseline applied per [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md). |
+| **Provisioned** | The asset is configured for use. | Secure configuration baseline applied per [`CERG-STD-CFG-001`](standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md). |
 | **Operational** | The asset is in service. | Subject to vulnerability management, access review, logging, and backup per its classification. |
 | **Decommissioning** | The asset is being retired. | Data securely removed; access revoked; dependencies migrated. |
 | **Disposed** | The asset has left the estate. | Secure disposal completed per Section 9; record retained for audit. |
@@ -171,8 +171,8 @@ An asset record is never deleted. A disposed asset is marked Disposed and retain
 ## 9. End-of-Life and Secure Disposal
 
 1. **End-of-life is planned, not discovered.** An asset approaching the end of vendor support is identified before support ends, and a replacement or extended-support decision is made deliberately. An asset running past end-of-support with no decision recorded is a finding and a risk register entry.
-2. **Data is removed before disposal.** Before an asset leaves the estate, data on it is securely sanitized to a standard appropriate to the data's classification. Cryptographic erasure per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) is acceptable where keys can be destroyed; physical destruction is used where it cannot.
-3. **Access and identity are revoked.** Decommissioning includes revoking the asset's own credentials and any access granted to it, per [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md).
+2. **Data is removed before disposal.** Before an asset leaves the estate, data on it is securely sanitized to a standard appropriate to the data's classification. Cryptographic erasure per [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) is acceptable where keys can be destroyed; physical destruction is used where it cannot.
+3. **Access and identity are revoked.** Decommissioning includes revoking the asset's own credentials and any access granted to it, per [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md).
 4. **Disposal is evidenced.** Secure disposal produces a record: what asset, what sanitization method, when, and by whom. The record is retained as control evidence. For regulated assets, the disposal record is part of the regulatory evidence set.
 5. **Cloud and SaaS disposal counts.** Decommissioning a cloud resource or terminating a SaaS tenant is disposal. Data deletion, key destruction, and confirmation of tenant closure are required exactly as for physical hardware.
 
@@ -185,7 +185,7 @@ An inventory is only as useful as it is accurate. Accuracy is maintained, not as
 1. **Continuous discovery runs against every environment.** Automated discovery identifies assets and compares them to the inventory. An asset found by discovery but absent from the inventory is an unmanaged asset and is investigated.
 2. **Reconciliation runs on a defined cadence.** The inventory is reconciled against discovery output, against the consuming systems (vulnerability scanner, access platform, logging catalog), and against procurement records. Discrepancies are findings.
 3. **An unmanaged asset is contained.** An asset discovered outside the inventory is either brought under management (owner assigned, baseline applied, record created) or removed from the estate. It is not left in an unknown state.
-4. **Inventory completeness is a reported metric.** The percentage of the estate under management, and the count of unmanaged assets found, are reported per [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md). A program that does not measure its inventory accuracy does not know it has one.
+4. **Inventory completeness is a reported metric.** The percentage of the estate under management, and the count of unmanaged assets found, are reported per [`CERG-GOV-MTR-001`](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md). A program that does not measure its inventory accuracy does not know it has one.
 
 > **The Inventory You Do Not Reconcile Is a Guess**
 >
@@ -195,7 +195,7 @@ An inventory is only as useful as it is accurate. Accuracy is maintained, not as
 
 ## 11. Roles and Responsibilities
 
-Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
+Roles below are the canonical role names from [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
 
 | **Role** | **Asset Management Responsibility** |
 |---|---|
@@ -203,7 +203,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 | **Cloud Security Engineer** | Owns discovery and inventory accuracy for the cloud and SaaS asset class. |
 | **OT Security Engineer** | Owns OT-safe discovery and inventory accuracy for OT hardware; supports BES Cyber System identification. |
 | **Endpoint Engineer** | Owns inventory accuracy for endpoint hardware and software. |
-| **Identity Engineer** | Owns the identity asset class inventory, in coordination with [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md). |
+| **Identity Engineer** | Owns the identity asset class inventory, in coordination with [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md). |
 | **Asset Owners** | Named per asset. Accountable for their asset's posture, classification, lifecycle decisions, and end-of-life planning. |
 | **Vulnerability Management Lead** | Consumes the inventory as the scan population; reports inventory gaps found during scanning. |
 | **Governance Pillar Leader** | Tracks inventory-completeness metrics; cross-references this standard with the control baseline; tracks orphaned and end-of-life assets in the risk register. |
@@ -236,7 +236,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Platforms) |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to the asset estate or inventory tooling |
 | **Next Scheduled Review** | 2027-05-21 |
 | **Frameworks** | NIST CSF 2.0 (ID.AM); NIST 800-53r5 (CM-8, PM-5, MP-6); CIS Controls v8 (1, 2); ISO/IEC 27001 A.5 |
@@ -263,15 +263,15 @@ Cyber Engineering owns this document. The Engineering Pillar Leader (Platforms) 
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| Secure Configuration Baseline Standard (DISH) | [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | Baselines applied at the Provisioned lifecycle state |
-| IT / Cloud / SaaS Security Standard | [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | Cloud and SaaS asset controls |
-| Grid Control Systems Security Standard | [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | OT-safe discovery; BES Cyber System identification |
-| Access Management Standard | [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) | Identity asset class; access revocation at disposal |
-| Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Inventory feeds the logging source catalog |
-| Cyber Resilience and Backup Standard | [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Classification drives backup and recovery objectives |
-| Cryptography and Key Management Standard | [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Cryptographic erasure at disposal |
-| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Inventory is the scan population |
-| Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Intake at the Requested lifecycle state |
-| Metrics, Dashboard, and Reporting | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Inventory-completeness reporting |
-| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `AM` domain |
+| Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| Secure Configuration Baseline Standard (DISH) | [`CERG-STD-CFG-001`](standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | Baselines applied at the Provisioned lifecycle state |
+| IT / Cloud / SaaS Security Standard | [`CERG-STD-IT-001`](standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | Cloud and SaaS asset controls |
+| Grid Control Systems Security Standard | [`CERG-STD-OT-001`](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | OT-safe discovery; BES Cyber System identification |
+| Access Management Standard | [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md) | Identity asset class; access revocation at disposal |
+| Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Inventory feeds the logging source catalog |
+| Cyber Resilience and Backup Standard | [`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Classification drives backup and recovery objectives |
+| Cryptography and Key Management Standard | [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Cryptographic erasure at disposal |
+| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Inventory is the scan population |
+| Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Intake at the Requested lifecycle state |
+| Metrics, Dashboard, and Reporting | [`CERG-GOV-MTR-001`](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Inventory-completeness reporting |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `AM` domain |

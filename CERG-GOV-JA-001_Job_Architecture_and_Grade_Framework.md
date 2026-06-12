@@ -12,8 +12,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) · [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) · [`CERG-GOV-JD-001`](CERG-GOV-JD-001_CERG_Job_Descriptions.md) |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Documents** | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-RAC-001`](governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) · [`CERG-GOV-FRM-001`](governance/CERG-GOV-FRM-001_CERG_Framework.md) · [`CERG-GOV-JD-001`](governance/CERG-GOV-JD-001_CERG_Job_Descriptions.md) |
 | **Review Cycle** | Annual / On any change to the canonical role roster or organizational design |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · [NIST NICE Workforce Framework](https://www.nist.gov/itl/applied-cybersecurity/nice) (SP 800-181r1) · ISO/IEC 27001 A.7.2 |
 | **Regulations** | Cross-cutting |
@@ -44,7 +44,7 @@ The CERG Framework, the Operating Model, and the RACI Instrument define what wor
 
 This document answers those questions. It establishes the two-track grade structure (SME and Management), defines the expectations at each grade, maps every canonical CERG role to its grade range, and provides the leveling guide a manager uses to calibrate performance and promotion decisions.
 
-It applies to every canonical CERG role defined in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1, excluding the two Adjacent Incident Response roles (Incident Commander, Lead Investigator) which belong to the standing IR team. It does not create new roles. It layers progression structure onto the canonical roster established in the Operating Model.
+It applies to every canonical CERG role defined in [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1, excluding the two Adjacent Incident Response roles (Incident Commander, Lead Investigator) which belong to the standing IR team. It does not create new roles. It layers progression structure onto the canonical roster established in the Operating Model.
 
 > **Architecture Before Requisitions**
 >
@@ -206,7 +206,7 @@ The pillar leader or cross-functional executive. A Director is accountable for a
 | **Scope** | Full accountability for a pillar: strategy, delivery, budget, talent, and stakeholder relationships. Sets the pillar's multi-year direction. Represents the pillar to the CISO, the board (as requested), regulators, and industry peers. |
 | **People Leadership** | Accountable for the entire pillar's talent health. Owns the pillar's organizational design. Develops the next generation of CERG leaders. Builds a culture of cross-pillar collaboration and continuous improvement. |
 | **Technical Fluency** | Authoritative understanding of the pillar's domains. Can engage credibly with senior individual contributors on technical matters. Represents the organization's security posture to non-technical executives and to technically sophisticated regulators. |
-| **Operational Accountability** | Accountable for all pillar outcomes. Owns the pillar's budget. Makes or concurs on risk acceptance decisions per the authority table in [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. Accountable for the pillar's contribution to CISO and board reporting. |
+| **Operational Accountability** | Accountable for all pillar outcomes. Owns the pillar's budget. Makes or concurs on risk acceptance decisions per the authority table in [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. Accountable for the pillar's contribution to CISO and board reporting. |
 | **Typical Experience** | 15+ years in cybersecurity, including 8+ years of progressive management experience. |
 
 > **Director Is Not a Reward for Tenure**
@@ -428,7 +428,7 @@ An adopting organization may need to map CERG grades to its existing title frame
 
 ### 11.2 What Not to Change
 
-The CERG role titles from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1 are canonical and should not be altered. "Cloud Security Engineer" is a Cloud Security Engineer whether the organization's title framework calls engineers "analysts," "architects," or "specialists."
+The CERG role titles from [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1 are canonical and should not be altered. "Cloud Security Engineer" is a Cloud Security Engineer whether the organization's title framework calls engineers "analysts," "architects," or "specialists."
 
 The grade title is separate. An organization may call an S3 Cloud Security Engineer a "Staff Cloud Security Engineer" internally while the CERG role remains "Cloud Security Engineer" in all framework documents. The adaptation is cosmetic; the grade expectations do not change.
 
@@ -445,7 +445,7 @@ The grade title is separate. An organization may call an S3 Cloud Security Engin
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on any change to the canonical role roster, organizational design, or compensation philosophy |
 | **Next Scheduled Review** | 2027-05-27 |
 | **Frameworks** | NIST CSF 2.0 (GOVERN); NIST NICE SP 800-181r1; ISO/IEC 27001 A.7.2 |
@@ -460,7 +460,7 @@ The grade title is separate. An organization may call an S3 Cloud Security Engin
 
 ### Review Triggers
 
-- Change to the canonical role roster in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1
+- Change to the canonical role roster in [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1
 - Material change to the organizational design or team structure
 - Change to the compensation philosophy or market conditions warranting band revision
 - Addition or retirement of a grade or track
@@ -470,12 +470,12 @@ The grade title is separate. An organization may call an S3 Cloud Security Engin
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Authoritative canonical role roster |
-| CERG Framework | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | Organizational design and talent model |
-| Consolidated Roles and RACI Instrument | [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Role descriptions and scaling map |
-| Risk Management Framework | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk acceptance authority references |
-| CERG Job Descriptions | [`CERG-GOV-JD-001`](CERG-GOV-JD-001_CERG_Job_Descriptions.md) | Full job descriptions per role |
-| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the JA domain |
+| Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| CERG Operating Model | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | Authoritative canonical role roster |
+| CERG Framework | [`CERG-GOV-FRM-001`](governance/CERG-GOV-FRM-001_CERG_Framework.md) | Organizational design and talent model |
+| Consolidated Roles and RACI Instrument | [`CERG-GOV-RAC-001`](governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Role descriptions and scaling map |
+| Risk Management Framework | [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk acceptance authority references |
+| CERG Job Descriptions | [`CERG-GOV-JD-001`](governance/CERG-GOV-JD-001_CERG_Job_Descriptions.md) | Full job descriptions per role |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the JA domain |
 
 Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO endorsement for all changes.

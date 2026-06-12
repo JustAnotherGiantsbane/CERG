@@ -13,9 +13,9 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Parent Documents** | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) |
-| **Supporting Documents** | [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) · [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) · [`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md) · [`CERG-PRC-IR-002`](CERG-PRC-IR-002_Incident_Response_Playbook_Set.md) · [`CERG-PRC-CHG-001`](CERG-PRC-CHG-001_Security_Change_Management_Procedure.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Documents** | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-CB-001`](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) |
+| **Supporting Documents** | [`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [`CERG-STD-AM-001`](standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) · [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) · [`CERG-PLN-IR-001`](plans/CERG-PLN-IR-001_Incident_Response_Plan.md) · [`CERG-PRC-IR-002`](procedures/CERG-PRC-IR-002_Incident_Response_Playbook_Set.md) · [`CERG-PRC-CHG-001`](procedures/CERG-PRC-CHG-001_Security_Change_Management_Procedure.md) · [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
 | **Review Cycle** | Annual / After major outage, DR exercise, or business-process change |
 | **Frameworks** | [NIST 800-34r1](https://csrc.nist.gov/pubs/sp/800/34/r1/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (CP, IR) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (RECOVER) · ISO 22301 · ISO/IEC 27031 |
 | **Regulations** | SOX ITGC · CMMC L2 / 800-171r3 · NERC-CIP CIP-009 where applicable |
@@ -43,7 +43,7 @@
 
 ## 1. Purpose and Scope
 
-[`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) defines the technical recovery bar: backup protection, immutable copies, restoration testing, and cyber recovery tiers. This plan defines the operational wrapper around that bar: business impact analysis, recovery sequencing, crisis roles, recovery decisioning, exercise cadence, and evidence.
+[`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) defines the technical recovery bar: backup protection, immutable copies, restoration testing, and cyber recovery tiers. This plan defines the operational wrapper around that bar: business impact analysis, recovery sequencing, crisis roles, recovery decisioning, exercise cadence, and evidence.
 
 This plan applies to business processes and systems whose interruption could cause material operational, regulatory, customer, safety, financial, or reputational impact. It is written as a CERG-operable plan, not a full enterprise business-continuity program charter. It gives the program-in-a-box enough structure to survive an outage and to prove the recovery discipline existed before the outage.
 
@@ -95,7 +95,7 @@ BIA records are reviewed at least annually and whenever a critical process, syst
 
 ## 4. Recovery Tier Model
 
-The plan uses the recovery tiers defined in [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md). The BIA may assign a stricter business requirement than the technical recovery tier, but it may not silently assign a weaker one for a regulated or mission-critical process.
+The plan uses the recovery tiers defined in [`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md). The BIA may assign a stricter business requirement than the technical recovery tier, but it may not silently assign a weaker one for a regulated or mission-critical process.
 
 | **Tier** | **Business Meaning** | **Minimum Planning Requirement** |
 |---|---|---|
@@ -187,7 +187,7 @@ Exercise findings become risk-register entries or tracked remediation actions. A
 
 ## 9. Evidence and Records
 
-Continuity records are retained under [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md).
+Continuity records are retained under [`CERG-PRC-AUD-001`](procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md).
 
 | **Evidence Item** | **Required When** |
 |---|---|
@@ -219,7 +219,7 @@ Continuity records are retained under [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audi
 
 ## 11. Roles and Responsibilities
 
-Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
+Roles below are canonical role names from [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
 
 | **Role** | **Plan Responsibility** |
 |---|---|
@@ -265,7 +265,7 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CE
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and after major outage, DR exercise, or business-process change |
 | **Next Scheduled Review** | 2027-05-22 |
 | **Frameworks** | NIST 800-34r1; NIST 800-53r5 (CP, IR); NIST CSF 2.0 (RECOVER); ISO 22301; ISO/IEC 27031 |
@@ -293,15 +293,15 @@ Cyber Governance owns this plan. The Governance Pillar Leader is responsible for
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Defines canonical roles and CERG boundaries |
-| Unified Control Baseline | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control source for continuity and recovery obligations |
-| Cyber Resilience and Backup Standard | [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Technical recovery and backup standard |
-| Asset Management and Inventory Standard | [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) | Asset and dependency source |
-| Data Governance and Classification Standard | [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) | Data classification and regulated data support |
-| Incident Response Plan | [`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md) | Incident-driven activation interface |
-| Incident Response Playbook Set | [`CERG-PRC-IR-002`](CERG-PRC-IR-002_Incident_Response_Playbook_Set.md) | CERG incident support playbooks |
-| Security Change Management Procedure | [`CERG-PRC-CHG-001`](CERG-PRC-CHG-001_Security_Change_Management_Procedure.md) | Recovery changes and emergency changes |
-| Risk Register and Exception Process | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Residual risk and degraded-operation acceptance |
-| Audit and Evidence Management Procedure | [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) | Evidence retention |
-| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `BC` domain |
+| Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| CERG Operating Model | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | Defines canonical roles and CERG boundaries |
+| Unified Control Baseline | [`CERG-GOV-CB-001`](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control source for continuity and recovery obligations |
+| Cyber Resilience and Backup Standard | [`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Technical recovery and backup standard |
+| Asset Management and Inventory Standard | [`CERG-STD-AM-001`](standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) | Asset and dependency source |
+| Data Governance and Classification Standard | [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) | Data classification and regulated data support |
+| Incident Response Plan | [`CERG-PLN-IR-001`](plans/CERG-PLN-IR-001_Incident_Response_Plan.md) | Incident-driven activation interface |
+| Incident Response Playbook Set | [`CERG-PRC-IR-002`](procedures/CERG-PRC-IR-002_Incident_Response_Playbook_Set.md) | CERG incident support playbooks |
+| Security Change Management Procedure | [`CERG-PRC-CHG-001`](procedures/CERG-PRC-CHG-001_Security_Change_Management_Procedure.md) | Recovery changes and emergency changes |
+| Risk Register and Exception Process | [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Residual risk and degraded-operation acceptance |
+| Audit and Evidence Management Procedure | [`CERG-PRC-AUD-001`](procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) | Evidence retention |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `BC` domain |

@@ -13,8 +13,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | CMMC / Federal Compliance Manager |
-| **Parent Plan** | [`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) - CUI / CMMC Operational Package |
-| **Supporting Documents** | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-TMPL-CUI-002`](CERG-TMPL-CUI-002_POAM_Template.md) |
+| **Parent Plan** | [`CERG-PLN-CUI-001`](plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) - CUI / CMMC Operational Package |
+| **Supporting Documents** | [`CERG-GOV-CB-001`](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-STD-CUI-001`](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) · [`CERG-STD-AM-001`](standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) · [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-TMPL-CUI-002`](templates/CERG-TMPL-CUI-002_POAM_Template.md) |
 | **Review Cycle** | Annual / On system boundary, CUI scope, or authorization change |
 | **Frameworks** | NIST 800-171r3 · NIST 800-172 · CMMC L2 · NIST 800-53r5 |
 | **Regulations** | Controlled Unclassified Information / CMMC contractual obligations |
@@ -231,7 +231,7 @@ No known control gap may remain only in narrative text. Every gap must have a PO
 | **Classification** | Public |
 | **Owner** | CMMC / Federal Compliance Manager |
 | **Approved By** | CISO |
-| **Parent Plan** | [`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) - CUI / CMMC Operational Package |
+| **Parent Plan** | [`CERG-PLN-CUI-001`](plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) - CUI / CMMC Operational Package |
 | **Review Cycle** | Annual; and on system boundary, CUI scope, or authorization change |
 | **Next Scheduled Review** | 2027-05-22 |
 | **Frameworks** | NIST 800-171r3; NIST 800-172; CMMC L2; NIST 800-53r5 |

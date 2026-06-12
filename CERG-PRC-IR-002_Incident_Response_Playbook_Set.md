@@ -9,7 +9,7 @@
 |---
 > **ADJACENT FUNCTION — NOT A CERG-OWNED DOCUMENT**
 >
-> This artifact belongs to the standing Incident Response team, not to CERG. Per [OM-001 §3.4](CERG-GOV-OM-001_CERG_Operating_Model.md), CERG is not responsible for Incident Response operations, the IR plan itself, regulatory notification clocks, or exercise management. CERG provides a liaison to the IR team and maintains this document in the repository for cross-functional integration only.
+> This artifact belongs to the standing Incident Response team, not to CERG. Per [OM-001 §3.4](governance/CERG-GOV-OM-001_CERG_Operating_Model.md), CERG is not responsible for Incident Response operations, the IR plan itself, regulatory notification clocks, or exercise management. CERG provides a liaison to the IR team and maintains this document in the repository for cross-functional integration only.
 >
 > **During an incident:** the standing IR team's procedures and the Incident Commander's authority take precedence over any CERG workflow. CERG's role during incidents is supporting (evidence, reporting, lessons-learned feedback per FLOW-001 F-06), not directing.
 >
@@ -22,7 +22,7 @@
 | **Classification** | External Interface |
 | **Owner** | Standing IR Team / Incident Commander |
 | **Parent Policy** | N/A — adjacent-function artifact; cross-referenced by CERG for integration |
-| **Supporting Documents** | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md) · [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [`CERG-STD-MSG-001`](CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md) · [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
+| **Supporting Documents** | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-PLN-IR-001`](plans/CERG-PLN-IR-001_Incident_Response_Plan.md) · [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [`CERG-STD-MSG-001`](standards/CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md) · [`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) · [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
 | **Review Cycle** | Annual / After significant incident or IR plan change |
 | **Frameworks** | [NIST 800-61r2](https://csrc.nist.gov/pubs/sp/800/61/r2/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (IR, AU, SI, CP) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (RESPOND, RECOVER) |
 | **Regulations** | CMMC L2 / 800-171r3 · NERC-CIP · SOX ITGC · breach notification and contractual obligations where applicable |
@@ -57,7 +57,7 @@
 
 ## 1. Purpose and Scope
 
-[`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md) establishes the Incident Response Plan. [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4 states that incident response is owned by a standing Incident Response team, not by CERG. That boundary is correct and must remain. At the same time, CERG owns many controls, records, and technical inputs the Incident Response team needs during an incident.
+[`CERG-PLN-IR-001`](plans/CERG-PLN-IR-001_Incident_Response_Plan.md) establishes the Incident Response Plan. [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4 states that incident response is owned by a standing Incident Response team, not by CERG. That boundary is correct and must remain. At the same time, CERG owns many controls, records, and technical inputs the Incident Response team needs during an incident.
 
 This document provides CERG-facing incident playbooks: what CERG prepares, what CERG hands to the Incident Response team, what CERG supports during containment, eradication, recovery, communications, and evidence preservation, and what CERG does after the incident to turn lessons into risks, controls, and evidence.
 
@@ -84,7 +84,7 @@ CERG may author and maintain this playbook set, but scenario execution during an
 
 ### 2.1 Integration with the Incident Response Plan
 
-This playbook set operates under [CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md) (the IR Plan), which is owned by the standing Incident Response team. The following defines how the two documents connect operationally.
+This playbook set operates under [CERG-PLN-IR-001](plans/CERG-PLN-IR-001_Incident_Response_Plan.md) (the IR Plan), which is owned by the standing Incident Response team. The following defines how the two documents connect operationally.
 
 #### Activation Flow
 
@@ -137,7 +137,7 @@ Playbooks are tested to validate that they work as intended and that CERG person
 
 #### Exercise Findings
 
-Exercise findings feed into [CERG-PRC-LL-001](CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) as lesson artifacts. Playbooks are updated based on exercise findings within 30 days of the after-action review.
+Exercise findings feed into [CERG-PRC-LL-001](procedures/CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) as lesson artifacts. Playbooks are updated based on exercise findings within 30 days of the after-action review.
 
 ---
 
@@ -174,7 +174,7 @@ If none of the above match, or if the incident type is unclear, activate the pla
 
 ### 3.2 Incident Severity Classification
 
-All incidents are classified by severity to determine response priority, escalation requirements, and notification obligations. This playbook set uses the P1–P4 severity scale aligned with the Incident Response Plan ([CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md) §5, which defines the authoritative Sev 1–4 classification). The mapping is: P1 = Sev 1 (Critical), P2 = Sev 2 (Significant), P3 = Sev 3 (Moderate), P4 = Sev 4 (Minor).
+All incidents are classified by severity to determine response priority, escalation requirements, and notification obligations. This playbook set uses the P1–P4 severity scale aligned with the Incident Response Plan ([CERG-PLN-IR-001](plans/CERG-PLN-IR-001_Incident_Response_Plan.md) §5, which defines the authoritative Sev 1–4 classification). The mapping is: P1 = Sev 1 (Critical), P2 = Sev 2 (Significant), P3 = Sev 3 (Moderate), P4 = Sev 4 (Minor).
 
 | **Severity** | **Label** | **Criteria** | **CERG Activation** |
 |---|---|---|---|
@@ -199,9 +199,9 @@ All incidents are classified by severity to determine response priority, escalat
 CERG supports the Incident Response team by rapidly identifying:
 
 - affected assets and asset owners from the inventory;
-- criticality and recovery priority from [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md);
-- data classification and regulated data exposure from [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md);
-- backup status and last known good recovery point from [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md);
+- criticality and recovery priority from [`CERG-STD-AM-001`](standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md);
+- data classification and regulated data exposure from [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md);
+- backup status and last known good recovery point from [`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md);
 - identity paths and privileged sessions that may be involved;
 - relevant vulnerabilities, open risks, or exceptions.
 
@@ -231,7 +231,7 @@ CERG support may include: disabling the account, revoking sessions and tokens, r
 
 ### 5.3 Eradication and Recovery
 
-CERG validates that the mailbox, identity, OAuth grants, rules, and recovery methods are clean before returning access. Email and messaging control gaps are tracked under [`CERG-STD-MSG-001`](CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md).
+CERG validates that the mailbox, identity, OAuth grants, rules, and recovery methods are clean before returning access. Email and messaging control gaps are tracked under [`CERG-STD-MSG-001`](standards/CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md).
 
 ### 5.4 Evidence and Communications Inputs
 
@@ -267,7 +267,7 @@ CERG identifies reported messages, sender infrastructure, subject and lure, affe
 
 ### 7.2 Containment
 
-Containment may include message purge, URL or attachment blocking, credential resets, session revocation, OAuth grant removal, mailbox rule review, and user notification. Employee reporting remains blame-free under [`CERG-STD-MSG-001`](CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md).
+Containment may include message purge, URL or attachment blocking, credential resets, session revocation, OAuth grant removal, mailbox rule review, and user notification. Employee reporting remains blame-free under [`CERG-STD-MSG-001`](standards/CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md).
 
 ### 7.3 Eradication and Recovery
 
@@ -346,14 +346,14 @@ CERG preserves cloud audit logs, IAM history, key and secret rotation records, w
 CERG supports the Incident Response team by rapidly identifying:
 - affected vendor, service, or software component from the TPRM records and asset inventory;
 - data classifications and regulated data potentially exposed through the vendor;
-- vendor tier and criticality from [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md);
+- vendor tier and criticality from [CERG-PRC-TPRM-001](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md);
 - the organization's usage of the affected service (direct, embedded, transitive);
-- any IOCs or threat intelligence from [CERG-PRC-TI-001](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md);
+- any IOCs or threat intelligence from [CERG-PRC-TI-001](procedures/CERG-PRC-TI-001_Threat_Intelligence_Procedure.md);
 - affected systems, identities, or data paths that integrate with the compromised vendor.
 
 ### 11.2 Containment
 
-CERG-supported containment may include: disabling vendor access and integrations, revoking vendor API keys and service accounts, blocking vendor IP ranges, isolating systems that consume the affected service, suspending data flows to/from the vendor, and preserving evidence of the vendor relationship for investigation. If the vendor compromise is confirmed, the SCCT is activated per [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) Section 15.
+CERG-supported containment may include: disabling vendor access and integrations, revoking vendor API keys and service accounts, blocking vendor IP ranges, isolating systems that consume the affected service, suspending data flows to/from the vendor, and preserving evidence of the vendor relationship for investigation. If the vendor compromise is confirmed, the SCCT is activated per [CERG-PRC-TPRM-001](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) Section 15.
 
 ### 11.3 Eradication and Recovery
 
@@ -369,7 +369,7 @@ CERG preserves: vendor contract and security obligations, TPRM assessment record
 
 ### 12.1 Triage
 
-CERG identifies: the affected application, its data classification, authentication mechanism, hosting environment (cloud, on-prem, SaaS), whether it processes regulated data (CUI, SOX, PII), the likely attack vector (SQLi, XSS, CSRF, SSRF, IDOR, auth bypass, API abuse), and whether WAF or other protective controls were in place and functioning per [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md).
+CERG identifies: the affected application, its data classification, authentication mechanism, hosting environment (cloud, on-prem, SaaS), whether it processes regulated data (CUI, SOX, PII), the likely attack vector (SQLi, XSS, CSRF, SSRF, IDOR, auth bypass, API abuse), and whether WAF or other protective controls were in place and functioning per [CERG-GOV-CB-001](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md).
 
 ### 12.2 Containment
 
@@ -377,7 +377,7 @@ Containment may include: taking the affected application or endpoint offline, bl
 
 ### 12.3 Eradication and Recovery
 
-CERG supports the application team in identifying and fixing the vulnerability: code fix, configuration change, WAF rule, or architectural change. Recovery includes validating the fix, re-scanning per the application penetration test checklist in [CERG-PRC-AV-001](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) Section 8, and confirming detection rules are updated for the observed attack pattern.
+CERG supports the application team in identifying and fixing the vulnerability: code fix, configuration change, WAF rule, or architectural change. Recovery includes validating the fix, re-scanning per the application penetration test checklist in [CERG-PRC-AV-001](procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) Section 8, and confirming detection rules are updated for the observed attack pattern.
 
 ### 12.4 Evidence and Communications Inputs
 
@@ -409,7 +409,7 @@ CERG preserves: malware samples, C2 logs, affected system inventory, infection t
 
 ### 14.1 Triage
 
-CERG identifies: the affected software, version, vendor, and patch status; whether the vulnerability is publicly disclosed or actively exploited in the wild; which organizational assets are vulnerable; the exploit vector (remote, local, authenticated); and whether the vulnerability affects regulated systems (SOX, CUI, NERC-CIP). Threat intelligence from [CERG-PRC-TI-001](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) is consulted for IOCs and TTPs.
+CERG identifies: the affected software, version, vendor, and patch status; whether the vulnerability is publicly disclosed or actively exploited in the wild; which organizational assets are vulnerable; the exploit vector (remote, local, authenticated); and whether the vulnerability affects regulated systems (SOX, CUI, NERC-CIP). Threat intelligence from [CERG-PRC-TI-001](procedures/CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) is consulted for IOCs and TTPs.
 
 ### 14.2 Containment
 
@@ -417,7 +417,7 @@ Containment may include: disabling the affected service or feature, applying ven
 
 ### 14.3 Eradication and Recovery
 
-CERG tracks the vendor patch release and coordinates with Engineering for emergency patch deployment per [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5.2. If compromise is confirmed, eradication follows the relevant playbook for the post-exploitation activity (Data Breach, Cloud Compromise, etc.). Recovery validates that the patch is applied, the vulnerability is remediated, and compensating controls are in place for any systems that cannot be immediately patched.
+CERG tracks the vendor patch release and coordinates with Engineering for emergency patch deployment per [CERG-PRC-VM-001](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5.2. If compromise is confirmed, eradication follows the relevant playbook for the post-exploitation activity (Data Breach, Cloud Compromise, etc.). Recovery validates that the patch is applied, the vulnerability is remediated, and compensating controls are in place for any systems that cannot be immediately patched.
 
 ### 14.4 Evidence and Communications Inputs
 
@@ -433,7 +433,7 @@ CERG identifies: the compromised cryptographic material (certificate, private ke
 
 ### 15.2 Containment
 
-Containment may include: revoking the compromised certificate or key, rotating all secrets in the same scope, invalidating sessions and tokens signed with the compromised key, blocking authentication paths that relied on the compromised material, and preserving forensic evidence of the compromise for root cause analysis. Emergency rotation follows [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) Section 8.
+Containment may include: revoking the compromised certificate or key, rotating all secrets in the same scope, invalidating sessions and tokens signed with the compromised key, blocking authentication paths that relied on the compromised material, and preserving forensic evidence of the compromise for root cause analysis. Emergency rotation follows [CERG-STD-CR-001](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) Section 8.
 
 ### 15.3 Eradication and Recovery
 
@@ -483,7 +483,7 @@ After the Incident Commander closes active response, CERG completes its own post
 
 ## 18. Roles and Responsibilities
 
-Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
+Roles below are canonical role names from [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
 
 | **Role** | **Playbook Responsibility** |
 |---|---|
@@ -691,7 +691,7 @@ Reviewed by: [Incident Commander, CISO]
 ### Review Triggers
 
 - Significant incident or exercise finding
-- Change to [`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md)
+- Change to [`CERG-PLN-IR-001`](plans/CERG-PLN-IR-001_Incident_Response_Plan.md)
 - Material change to logging, resilience, data governance, email, or cloud security standards
 - Change to legal, regulatory, or contractual incident-notification obligations
 - Direction from the CISO or Incident Commander
@@ -702,13 +702,13 @@ Cyber Governance owns this CERG-facing playbook set. The Governance Pillar Leade
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Defines IR ownership boundary and adjacent roles |
-| Incident Response Plan | [`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md) | Active incident response plan owned by the IR team |
-| Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Telemetry and detection support |
-| Email and Messaging Security Standard | [`CERG-STD-MSG-001`](CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md) | Email, phishing, BEC, and messaging controls |
-| Cyber Resilience and Backup Standard | [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Recovery and backup support |
-| Data Governance and Classification Standard | [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) | Data classification and handling support |
-| Risk Register and Exception Process | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Post-incident residual risk tracking |
-| Audit and Evidence Management Procedure | [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) | Evidence preservation and audit support |
-| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact |
+| Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| CERG Operating Model | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | Defines IR ownership boundary and adjacent roles |
+| Incident Response Plan | [`CERG-PLN-IR-001`](plans/CERG-PLN-IR-001_Incident_Response_Plan.md) | Active incident response plan owned by the IR team |
+| Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Telemetry and detection support |
+| Email and Messaging Security Standard | [`CERG-STD-MSG-001`](standards/CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md) | Email, phishing, BEC, and messaging controls |
+| Cyber Resilience and Backup Standard | [`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Recovery and backup support |
+| Data Governance and Classification Standard | [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) | Data classification and handling support |
+| Risk Register and Exception Process | [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Post-incident residual risk tracking |
+| Audit and Evidence Management Procedure | [`CERG-PRC-AUD-001`](procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) | Evidence preservation and audit support |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact |

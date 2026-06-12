@@ -13,8 +13,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
-| **Parent Document** | [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) - Architecture Review and Project Intake Procedure |
-| **Supporting Documents** | [`CERG-PRC-TM-001`](CERG-PRC-TM-001_Threat_Modeling_Procedure.md) · [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) · [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) |
+| **Parent Document** | [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) - Architecture Review and Project Intake Procedure |
+| **Supporting Documents** | [`CERG-PRC-TM-001`](procedures/CERG-PRC-TM-001_Threat_Modeling_Procedure.md) · [`CERG-STD-SDL-001`](standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) · [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) |
 | **Review Cycle** | Annual / On process or control change |
 | **Frameworks** | NIST CSF 2.0 · NIST 800-53r5 SA, RA, AC, SC |
 | **Regulations** | Cross-cutting |
@@ -127,7 +127,7 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
 | **Approved By** | CISO |
-| **Parent Document** | [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) - Architecture Review and Project Intake Procedure |
+| **Parent Document** | [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) - Architecture Review and Project Intake Procedure |
 | **Review Cycle** | Annual; and on process or control change |
 | **Next Scheduled Review** | 2027-05-22 |
 | **Frameworks** | NIST CSF 2.0 · NIST 800-53r5 SA, RA, AC, SC |
@@ -151,5 +151,5 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Governing procedure |
-| Threat Modeling Procedure | [`CERG-PRC-TM-001`](CERG-PRC-TM-001_Threat_Modeling_Procedure.md) | Threat modeling trigger path |
+| Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Governing procedure |
+| Threat Modeling Procedure | [`CERG-PRC-TM-001`](procedures/CERG-PRC-TM-001_Threat_Modeling_Procedure.md) | Threat modeling trigger path |

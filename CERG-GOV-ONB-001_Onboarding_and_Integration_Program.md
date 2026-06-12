@@ -12,8 +12,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) · [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-JD-001`](CERG-GOV-JD-001_CERG_Job_Descriptions.md) · [`CERG-GOV-CMP-001`](CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) · [`CERG-GOV-PERF-001`](CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) · [`CERG-GOV-TRN-001`](CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) · [`CERG-GOV-CON-001`](CERG-GOV-CON-001_Contractor_and_Non-Employee_Staff_Integration_Guide.md) | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Documents** | [`CERG-GOV-FRM-001`](governance/CERG-GOV-FRM-001_CERG_Framework.md) · [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-JD-001`](governance/CERG-GOV-JD-001_CERG_Job_Descriptions.md) · [`CERG-GOV-CMP-001`](governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) · [`CERG-GOV-PERF-001`](governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) · [`CERG-GOV-TRN-001`](governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) · [`CERG-GOV-CON-001`](governance/CERG-GOV-CON-001_Contractor_and_Non-Employee_Staff_Integration_Guide.md) | [`CERG-GOV-IMP-001`](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) |
 | **Review Cycle** | Annual / On any change to organizational structure, tooling, or document library |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · ISO/IEC 27001 A.7.2 |
 | **Regulations** | Cross-cutting |
@@ -209,16 +209,16 @@ Every new hire, regardless of role, grade, or prior experience, completes the CE
 
 | Day | Document | Focus |
 |---|---|---|
-| 1 | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | Why CERG exists, the three pillars, the left-right knowledge model, maturity tiers |
-| 2 | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | How CERG operates: engagement models, staffing, cadence, interfaces with other functions |
-| 3 | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | The policy that governs everything. What is mandatory, who approves what |
-| 4 | [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Who does what. The RACI for the new hire's own role and adjacent roles |
-| 5 | [`CERG-GOV-JA-001`](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | The grade structure, the two tracks, the dimensions of growth |
-| 6 | [`CERG-GOV-CMP-001`](CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) | What good looks like at each grade in the new hire's role family |
-| 7 | [`CERG-GOV-JD-001`](CERG-GOV-JD-001_CERG_Job_Descriptions.md) | The new hire's own job description and those of their immediate teammates |
-| 8 | [`CERG-GOV-PERF-001`](CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) | How performance is evaluated, how promotion decisions are made |
-| 9 | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | How the document library is organized, how to find what you need |
-| 10 | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) | How CERG manages risk: taxonomy, scoring, acceptance authority, exception process |
+| 1 | [`CERG-GOV-FRM-001`](governance/CERG-GOV-FRM-001_CERG_Framework.md) | Why CERG exists, the three pillars, the left-right knowledge model, maturity tiers |
+| 2 | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | How CERG operates: engagement models, staffing, cadence, interfaces with other functions |
+| 3 | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | The policy that governs everything. What is mandatory, who approves what |
+| 4 | [`CERG-GOV-RAC-001`](governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Who does what. The RACI for the new hire's own role and adjacent roles |
+| 5 | [`CERG-GOV-JA-001`](governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | The grade structure, the two tracks, the dimensions of growth |
+| 6 | [`CERG-GOV-CMP-001`](governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) | What good looks like at each grade in the new hire's role family |
+| 7 | [`CERG-GOV-JD-001`](governance/CERG-GOV-JD-001_CERG_Job_Descriptions.md) | The new hire's own job description and those of their immediate teammates |
+| 8 | [`CERG-GOV-PERF-001`](governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) | How performance is evaluated, how promotion decisions are made |
+| 9 | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | How the document library is organized, how to find what you need |
+| 10 | [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) | How CERG manages risk: taxonomy, scoring, acceptance authority, exception process |
 
 ### 6.2 Role-Specific Reading (Days 10-30)
 
@@ -424,7 +424,7 @@ Aggregated feedback is reviewed annually by the Governance Pillar Leader as part
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on any change to organizational structure, tooling, or document library |
 | **Next Scheduled Review** | 2027-05-27 |
 | **Frameworks** | NIST CSF 2.0 (GOVERN); ISO/IEC 27001 A.7.2 |
@@ -449,15 +449,15 @@ Aggregated feedback is reviewed annually by the Governance Pillar Leader as part
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| CERG Framework | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | Left-right knowledge model; onboarding philosophy |
-| CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Pillar structure, engagement models, cadence |
-| Job Architecture | [`CERG-GOV-JA-001`](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Grade expectations that onboarding accelerates toward |
-| Competency Model | [`CERG-GOV-CMP-001`](CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) | Development priorities identified during onboarding |
-| Performance Management | [`CERG-GOV-PERF-001`](CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) | First performance review at 6 months |
-| Job Descriptions | [`CERG-GOV-JD-001`](CERG-GOV-JD-001_CERG_Job_Descriptions.md) | Success profiles inform 90-day objectives |
-| Contractor Integration | [`CERG-GOV-CON-001`](CERG-GOV-CON-001_Contractor_and_Non-Employee_Staff_Integration_Guide.md) | Condensed onboarding for non-employee staff |
-| Implementation Guide | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Organizational adoption of CERG |
-| Document Catalog | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact |
+| Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| CERG Framework | [`CERG-GOV-FRM-001`](governance/CERG-GOV-FRM-001_CERG_Framework.md) | Left-right knowledge model; onboarding philosophy |
+| CERG Operating Model | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | Pillar structure, engagement models, cadence |
+| Job Architecture | [`CERG-GOV-JA-001`](governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Grade expectations that onboarding accelerates toward |
+| Competency Model | [`CERG-GOV-CMP-001`](governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) | Development priorities identified during onboarding |
+| Performance Management | [`CERG-GOV-PERF-001`](governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) | First performance review at 6 months |
+| Job Descriptions | [`CERG-GOV-JD-001`](governance/CERG-GOV-JD-001_CERG_Job_Descriptions.md) | Success profiles inform 90-day objectives |
+| Contractor Integration | [`CERG-GOV-CON-001`](governance/CERG-GOV-CON-001_Contractor_and_Non-Employee_Staff_Integration_Guide.md) | Condensed onboarding for non-employee staff |
+| Implementation Guide | [`CERG-GOV-IMP-001`](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Organizational adoption of CERG |
+| Document Catalog | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact |
 
 Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO endorsement for all changes.

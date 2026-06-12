@@ -7,7 +7,7 @@
 | **Status** | Approved |
 | **Classification** | Internal / Restricted |
 | **Owner** | Cyber Governance (CERG Pillar) |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - CERG Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - CERG Cybersecurity Policy |
 | **Review Cycle** | Annual; triggered by significant regulatory change or organizational change |
 | **Frameworks** | NIST SP 800-37 (RMF); NIST SP 800-53r5; NIST CSF 2.0 |
 | **Regulations** | NERC-CIP (CIP-005, CIP-007, CIP-010); CMMC L2; SOX ITGC |
@@ -217,7 +217,7 @@ Assessment validates that implemented controls are working as intended. In CERG,
 
 All findings from assessment activities are assigned a severity rating and a remediation SLA. Exceptions to SLAs require documented risk acceptance per the process in [§9.4](#94-risk-acceptance-authority).
 
-The authoritative remediation-SLA table lives in [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5. The values published there govern every CERG-managed scan, pen test, and assessment finding across IT, cloud, SaaS, and (with the BES schedule overlay) OT environments. Pillar dashboards and KRIs in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) measure compliance against PRC-VM-001's SLA values, not against a separate table.
+The authoritative remediation-SLA table lives in [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5. The values published there govern every CERG-managed scan, pen test, and assessment finding across IT, cloud, SaaS, and (with the BES schedule overlay) OT environments. Pillar dashboards and KRIs in [`CERG-GOV-MTR-001`](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) measure compliance against PRC-VM-001's SLA values, not against a separate table.
 
 > **One Source of Truth**
 >
@@ -280,9 +280,9 @@ Continuous monitoring is the phase that separates Adaptive-tier programs from Re
 
 | KRI | Target | Owner | Escalation Trigger |
 |---|---|---|---|
-| Mean Time to Remediate - PPR (0-day) | ≤48 hours (Internet-facing) / ≤72 hours (internal) per [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5 | Risk | Any PPR finding past SLA |
-| Mean Time to Remediate - Critical | ≤3 days per [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5 | Risk | Any Critical past SLA without documented compensating control |
-| Mean Time to Remediate - High | ≤15 days per [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5 | Risk | Any High past SLA without approved exception |
+| Mean Time to Remediate - PPR (0-day) | ≤48 hours (Internet-facing) / ≤72 hours (internal) per [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5 | Risk | Any PPR finding past SLA |
+| Mean Time to Remediate - Critical | ≤3 days per [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5 | Risk | Any Critical past SLA without documented compensating control |
+| Mean Time to Remediate - High | ≤15 days per [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5 | Risk | Any High past SLA without approved exception |
 | Scan Coverage - IT | ≥98% of known assets | Risk | <95% coverage |
 | Scan Coverage - OT | ≥90% of known assets (passive methods) | Risk | <85% coverage |
 | Open Critical/High Findings | 0 Critical past SLA; <10 High past SLA | Risk + Governance | Any Critical past SLA; >10 High past SLA |
@@ -323,7 +323,7 @@ Risk statements that cannot be written in this form are not yet risks; they are 
 
 ### 9.3 Threat Community Reference
 
-The FAIR Threat Community is the actor or natural force that initiates a loss event. The taxonomy below is the CERG default. Subordinate documents ,  particularly [`CERG Risk Taxonomy`](CERG-GOV-TAX-001_Risk_Taxonomy.md) ,  extend it with sector-specific actors (e.g., ICS-targeted APTs for OT).
+The FAIR Threat Community is the actor or natural force that initiates a loss event. The taxonomy below is the CERG default. Subordinate documents ,  particularly [`CERG Risk Taxonomy`](governance/CERG-GOV-TAX-001_Risk_Taxonomy.md) ,  extend it with sector-specific actors (e.g., ICS-targeted APTs for OT).
 
 | Community | Examples | Primary Loss Forms |
 |---|---|---|
@@ -416,7 +416,7 @@ This table is the single source of truth for who may accept residual risk. Every
 >
 > No acceptance renews automatically. An acceptance at any tier requires a fresh approval cycle at expiration. An acceptance renewed more than twice without movement on the treatment plan escalates one tier above the original approver.
 
-> **Role names** below match the canonical roster in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1. If a role name disagrees with that roster, the roster wins.
+> **Role names** below match the canonical roster in [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1. If a role name disagrees with that roster, the roster wins.
 
 ### 9.8 Risk Appetite and Tolerance
 
@@ -649,8 +649,8 @@ Cascading changes from a risk appetite adjustment are tracked in the improvement
 | **Approved By** | CISO |
 | **Review Cycle** | Annual; triggered by significant regulatory change or organizational change |
 | **Next Scheduled Review** | 2027-05-26 |
-| **Parent Document** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - CERG Cybersecurity Policy |
-| **Related Documents** | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) · [`CERG-GOV-TAX-001`](CERG-GOV-TAX-001_Risk_Taxonomy.md) · [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) · [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) · [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) · [`CERG-GOV-IMPREG-001`](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) · [`CERG-PRC-TI-001`](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) · System Security Plans (per system) · Plan of Action and Milestones (per system) |
+| **Parent Document** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - CERG Cybersecurity Policy |
+| **Related Documents** | [`CERG-GOV-FRM-001`](governance/CERG-GOV-FRM-001_CERG_Framework.md) · [`CERG-GOV-TAX-001`](governance/CERG-GOV-TAX-001_Risk_Taxonomy.md) · [`CERG-GOV-CMX-001`](governance/CERG-GOV-CMX-001_Compliance_Matrix.md) · [`CERG-GOV-CB-001`](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-TMPL-RM-001`](templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) · [`CERG-GOV-MTR-001`](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) · [`CERG-GOV-IMPREG-001`](governance/CERG-GOV-IMPREG-001_Program_Improvement_Register.md) · [`CERG-PRC-TI-001`](procedures/CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) · System Security Plans (per system) · Plan of Action and Milestones (per system) |
 
 ### Revision History
 

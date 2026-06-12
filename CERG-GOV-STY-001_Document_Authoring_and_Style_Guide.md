@@ -13,8 +13,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) · [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) · [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Documents** | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) · [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-RAC-001`](governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) · [`CERG-GOV-VAR-001`](governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) |
 | **Review Cycle** | Annual / On material change to catalog, naming, role, or rendering conventions |
 | **Frameworks** | NIST CSF 2.0 GOVERN · ISO/IEC 27001 A.5 · NIST 800-53r5 PM |
 | **Regulations** | Cross-cutting |
@@ -204,7 +204,7 @@ The catalog's rules govern. This guide repeats the operational version for autho
 
 Good cross-reference:
 
-`See [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) for risk treatment workflow.`
+`See [CERG-PRC-RM-001](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) for risk treatment workflow.`
 
 Weak cross-reference:
 
@@ -312,7 +312,7 @@ Copy this skeleton for new substantive artifacts.
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | [Canonical role] |
-| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Supporting Documents** | [Document links] |
 | **Review Cycle** | Annual / [trigger] |
 | **Frameworks** | [Frameworks] |
@@ -359,7 +359,7 @@ Every CERG document follows a defined lifecycle from creation through retirement
 
 ### Lifecycle Workflow
 
-1. **Create**: New artifact is drafted in `Draft` status. Document ID and naming follow [CERG-GOV-CAT-001](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) conventions.
+1. **Create**: New artifact is drafted in `Draft` status. Document ID and naming follow [CERG-GOV-CAT-001](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) conventions.
 2. **Peer Review**: Draft is reviewed by a second qualified analyst from the same or adjacent pillar. Review checks structure, cross-references, role discipline, and framework alignment.
 3. **Pillar Leader Approval**: The owning pillar leader reviews and approves the document for publication.
 4. **CISO Approval**: The CISO (or CISO designee) gives final approval. Material changes to policy (CERG-POL-001) require CISO approval directly.
@@ -410,7 +410,7 @@ When a new framework revision is published (e.g., NIST 800-53 Rev 6, NIST 800-17
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to catalog, naming, role, or rendering conventions |
 | **Next Scheduled Review** | 2027-05-22 |
 | **Frameworks** | NIST CSF 2.0 GOVERN; ISO/IEC 27001 A.5; NIST 800-53r5 PM |
@@ -436,7 +436,7 @@ When a new framework revision is published (e.g., NIST 800-53 Rev 6, NIST 800-17
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Authoritative ID, catalog, status, roadmap, and cross-reference rule source |
-| CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role roster source |
-| Consolidated Roles and RACI Instrument | [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | RACI and role assignment source |
-| Organization Adaptation Profile | [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) | Org-token and rendering guidance |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Authoritative ID, catalog, status, roadmap, and cross-reference rule source |
+| CERG Operating Model | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role roster source |
+| Consolidated Roles and RACI Instrument | [`CERG-GOV-RAC-001`](governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | RACI and role assignment source |
+| Organization Adaptation Profile | [`CERG-GOV-VAR-001`](governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) | Org-token and rendering guidance |

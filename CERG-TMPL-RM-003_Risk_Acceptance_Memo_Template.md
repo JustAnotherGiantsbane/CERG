@@ -13,8 +13,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
-| **Parent Document** | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) - Risk Register and Exception Process |
-| **Supporting Documents** | [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) · [`CERG-TMPL-RM-002`](CERG-TMPL-RM-002_Security_Exception_Request_Form.md) |
+| **Parent Document** | [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) - Risk Register and Exception Process |
+| **Supporting Documents** | [`CERG-TMPL-RM-001`](templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) · [`CERG-TMPL-RM-002`](templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md) |
 | **Review Cycle** | Annual / On process or control change |
 | **Frameworks** | NIST 800-30r1 · NIST 800-39 · ISO 31000 |
 | **Regulations** | Cross-cutting |
@@ -119,7 +119,7 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
 | **Approved By** | CISO |
-| **Parent Document** | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) - Risk Register and Exception Process |
+| **Parent Document** | [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) - Risk Register and Exception Process |
 | **Review Cycle** | Annual; and on process or control change |
 | **Next Scheduled Review** | 2027-05-22 |
 | **Frameworks** | NIST 800-30r1 · NIST 800-39 · ISO 31000 |
@@ -143,4 +143,4 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Risk Register and Exception Process | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Governing risk acceptance lifecycle |
+| Risk Register and Exception Process | [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Governing risk acceptance lifecycle |

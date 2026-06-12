@@ -13,8 +13,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Platforms) |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Standards** | [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) · [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) · [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Standards** | [`CERG-STD-IT-001`](standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md) · [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) · [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
 | **Review Cycle** | Annual / On material change to the email or collaboration platform |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (SC, SI, AC families) · [NIST 800-177](https://csrc.nist.gov/pubs/sp/800/177/r1/final) (Trustworthy Email) · [CIS Controls v8](https://www.cisecurity.org/controls) (Control 9) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (PROTECT, DETECT) |
 | **Regulations** | CMMC L2 / 800-171r3 (3.13.x, 3.14.x) · SOX ITGC · privacy regimes where applicable |
@@ -45,7 +45,7 @@ Email is the most attacked surface in nearly every organization. It is how most 
 
 This standard establishes the requirements for email and messaging security across CERG-managed environments: how email is authenticated so the organization's domain cannot be trivially impersonated, how inbound email is filtered, how the organization defends against phishing, how outbound email is protected against data loss, how mailboxes are secured, and how business collaboration and messaging platforms are governed.
 
-It applies to corporate email and to the business messaging and collaboration platforms CERG-managed teams use. It does not govern incident response to a successful email-borne compromise, which is the standing Incident Response team's, per [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4; CERG provides the detections and the telemetry.
+It applies to corporate email and to the business messaging and collaboration platforms CERG-managed teams use. It does not govern incident response to a successful email-borne compromise, which is the standing Incident Response team's, per [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4; CERG provides the detections and the telemetry.
 
 > **Email Security Is Mostly About Two Directions**
 >
@@ -69,7 +69,7 @@ It applies to corporate email and to the business messaging and collaboration pl
 The organization's email domains, including domains that are owned but not used to send mail, are configured with the three standard email authentication mechanisms.
 
 1. **SPF.** A Sender Policy Framework record is published for every sending domain, listing the authorized sources of mail for that domain.
-2. **DKIM.** DomainKeys Identified Mail signing is enabled so that outbound mail carries a verifiable cryptographic signature. DKIM keys are managed per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md).
+2. **DKIM.** DomainKeys Identified Mail signing is enabled so that outbound mail carries a verifiable cryptographic signature. DKIM keys are managed per [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md).
 3. **DMARC.** A Domain-based Message Authentication, Reporting and Conformance policy is published. The DMARC policy is moved to an enforcing posture (reject, or at minimum quarantine) once SPF and DKIM are confirmed correct. A DMARC policy left permanently at "none" provides reporting but no protection and is not the end state.
 4. **Parked domains are locked down.** Owned domains that send no mail publish records that tell the world they send no mail, so they cannot be impersonated.
 5. **Inbound authentication is enforced.** The organization checks SPF, DKIM, and DMARC on inbound mail and acts on the results, so that other organizations' authentication protects the organization's people.
@@ -96,10 +96,10 @@ The organization's email domains, including domains that are owned but not used 
 Filtering reduces phishing. It does not eliminate it. This section covers what the program does about the phishing that reaches a person.
 
 1. **Reporting is one action.** Employees have a single, obvious way to report a suspicious message, and using it takes one action. A reporting mechanism that is hard to find is not used.
-2. **Reports are triaged.** Reported messages are triaged on a defined cadence. A confirmed malicious message is removed from any other inbox it reached, and its indicators feed detection per [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md).
+2. **Reports are triaged.** Reported messages are triaged on a defined cadence. A confirmed malicious message is removed from any other inbox it reached, and its indicators feed detection per [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md).
 3. **Reporting is never punished.** An employee who reports a message they also interacted with is thanked, not disciplined. Punishing the honest report teaches everyone else to stay silent, which is the opposite of the goal.
 4. **Phishing simulation is constructive, not a trap.** Where the organization runs phishing simulations, they are run to measure and improve, not to shame individuals. Results are used in aggregate. An employee who fails a simulation is offered help, not humiliation.
-5. **A click triggers response, not blame.** When an employee clicks a real phish or enters credentials, the response is immediate and procedural: contain the account, reset the credential per [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md), and hand off to the Incident Response team. The employee who reported their own mistake made the response possible.
+5. **A click triggers response, not blame.** When an employee clicks a real phish or enters credentials, the response is immediate and procedural: contain the account, reset the credential per [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md), and hand off to the Incident Response team. The employee who reported their own mistake made the response possible.
 
 > **The Organization That Punishes Clicks Goes Blind**
 >
@@ -109,9 +109,9 @@ Filtering reduces phishing. It does not eliminate it. This section covers what t
 
 ## 6. Outbound Email and Data Protection
 
-1. **Outbound email is a governed data path.** Email is one of the realistic exfiltration paths named in [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) §9, and data loss prevention covers it.
-2. **Sensitive data outbound is constrained.** Email carrying Confidential or Restricted data outside the organization is monitored and, where it is unauthorized, blocked or quarantined, per the handling table in [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) §6.
-3. **Sensitive mail is encrypted.** Email carrying Confidential or Restricted data to external recipients is encrypted, using the mechanisms approved in [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md).
+1. **Outbound email is a governed data path.** Email is one of the realistic exfiltration paths named in [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) §9, and data loss prevention covers it.
+2. **Sensitive data outbound is constrained.** Email carrying Confidential or Restricted data outside the organization is monitored and, where it is unauthorized, blocked or quarantined, per the handling table in [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) §6.
+3. **Sensitive mail is encrypted.** Email carrying Confidential or Restricted data to external recipients is encrypted, using the mechanisms approved in [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md).
 4. **Auto-forwarding to external addresses is controlled.** Automatic forwarding of mail to external addresses is disabled by default. It is a classic data-exfiltration and account-compromise technique. Exceptions are recorded.
 5. **Mass and unusual sending is detected.** A mailbox suddenly sending at volume, or sending to many external recipients, is a signal of a compromised account or an insider exfiltrating data, and is detected (Section 9).
 
@@ -119,11 +119,11 @@ Filtering reduces phishing. It does not eliminate it. This section covers what t
 
 ## 7. Mailbox and Account Security
 
-1. **Email accounts are protected by strong authentication.** Access to email requires multi-factor authentication per [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md). The email account is, for most people, the reset path to every other account, so it is protected accordingly.
+1. **Email accounts are protected by strong authentication.** Access to email requires multi-factor authentication per [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md). The email account is, for most people, the reset path to every other account, so it is protected accordingly.
 2. **Mailbox access is least-privilege.** Delegate and shared-mailbox access is granted on need, recorded, and reviewed on the access-review cadence.
 3. **Mailbox rules are monitored.** Inbox rules that hide, delete, or forward mail are a hallmark of business email compromise. The creation of suspicious rules is detected.
 4. **Legacy and weak authentication is disabled.** Email protocols that cannot enforce multi-factor authentication are disabled. They are a standing bypass of the account's protection.
-5. **Email retention follows data governance.** Mailbox content is retained and disposed of per the retention schedule in [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) §8, and preserved under legal hold when one applies.
+5. **Email retention follows data governance.** Mailbox content is retained and disposed of per the retention schedule in [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) §8, and preserved under legal hold when one applies.
 
 ---
 
@@ -131,27 +131,27 @@ Filtering reduces phishing. It does not eliminate it. This section covers what t
 
 Business chat, messaging, and collaboration platforms are governed with the same seriousness as email.
 
-1. **Messaging platforms are sanctioned and assessed.** The collaboration and messaging platforms in use are sanctioned, and assessed as SaaS per [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md). Unsanctioned messaging tools are shadow IT.
+1. **Messaging platforms are sanctioned and assessed.** The collaboration and messaging platforms in use are sanctioned, and assessed as SaaS per [`CERG-STD-IT-001`](standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md). Unsanctioned messaging tools are shadow IT.
 2. **Access and authentication apply equally.** Access to messaging platforms requires the same authentication and is governed by the same access controls as email.
-3. **Data classification applies in chat.** Confidential and Restricted data shared in messaging platforms is governed by [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md). Data loss prevention covers messaging where the platform supports it.
+3. **Data classification applies in chat.** Confidential and Restricted data shared in messaging platforms is governed by [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md). Data loss prevention covers messaging where the platform supports it.
 4. **External participation is controlled.** External guests, federated chat with other organizations, and public channels are controlled and visible. An external party in a channel is as significant as an external recipient on an email.
 5. **Phishing happens in chat too.** Malicious links and social engineering arrive through messaging platforms. The reporting mechanism and the no-blame culture of Section 5 extend to messaging.
-6. **Messaging is logged and retained.** Business messaging is logged per [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) and retained per [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md).
+6. **Messaging is logged and retained.** Business messaging is logged per [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) and retained per [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md).
 
 ---
 
 ## 9. Monitoring and Detection
 
-1. **Email and messaging telemetry reaches detection.** Email security events, authentication results, and messaging-platform logs are delivered to the platform governed by [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md).
+1. **Email and messaging telemetry reaches detection.** Email security events, authentication results, and messaging-platform logs are delivered to the platform governed by [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md).
 2. **Detection content covers the known patterns.** Detection use cases include business email compromise indicators: suspicious inbox rules, anomalous send volume, impossible-travel sign-ins to mailboxes, mass external forwarding, and lookalike-domain mail.
 3. **Reported phishing feeds detection.** Indicators from triaged user reports (Section 5) become detection content, so the next instance of the same campaign is caught by a machine.
-4. **CERG detects; the IR team responds.** Consistent with [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4, CERG owns the detection content and feeds confirmed email-borne incidents to the standing Incident Response team.
+4. **CERG detects; the IR team responds.** Consistent with [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4, CERG owns the detection content and feeds confirmed email-borne incidents to the standing Incident Response team.
 
 ---
 
 ## 10. Roles and Responsibilities
 
-Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
+Roles below are the canonical role names from [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
 
 | **Role** | **Email and Messaging Responsibility** |
 |---|---|
@@ -190,7 +190,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Platforms) |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to the email or collaboration platform |
 | **Next Scheduled Review** | 2027-05-21 |
 | **Frameworks** | NIST 800-53r5 (SC, SI, AC); NIST 800-177; CIS Controls v8 (9); NIST CSF 2.0 (PROTECT, DETECT) |
@@ -217,11 +217,11 @@ Cyber Engineering owns this document. The Engineering Pillar Leader (Platforms) 
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| IT / Cloud / SaaS Security Standard | [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | Email and messaging platforms assessed as SaaS |
-| Access Management Standard | [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) | Multi-factor authentication; credential reset on a click |
-| Data Governance and Classification Standard | [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) | Outbound data loss prevention; retention |
-| Cryptography and Key Management Standard | [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | DKIM keys; sensitive-mail encryption |
-| Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Email and messaging detection content and telemetry |
-| Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | CERG detects; the standing IR team responds |
-| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `MSG` domain |
+| Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| IT / Cloud / SaaS Security Standard | [`CERG-STD-IT-001`](standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | Email and messaging platforms assessed as SaaS |
+| Access Management Standard | [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md) | Multi-factor authentication; credential reset on a click |
+| Data Governance and Classification Standard | [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) | Outbound data loss prevention; retention |
+| Cryptography and Key Management Standard | [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | DKIM keys; sensitive-mail encryption |
+| Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Email and messaging detection content and telemetry |
+| Operating Model | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | CERG detects; the standing IR team responds |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `MSG` domain |

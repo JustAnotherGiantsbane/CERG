@@ -13,8 +13,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Evidence Librarian |
-| **Parent Document** | [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) - Audit and Evidence Management Procedure |
-| **Supporting Documents** | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) · [`CERG-PLN-ISO-001`](CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md) |
+| **Parent Document** | [`CERG-PRC-AUD-001`](procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) - Audit and Evidence Management Procedure |
+| **Supporting Documents** | [`CERG-GOV-CB-001`](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-GOV-CMX-001`](governance/CERG-GOV-CMX-001_Compliance_Matrix.md) · [`CERG-PLN-ISO-001`](plans/CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md) |
 | **Review Cycle** | Annual / On process or control change |
 | **Frameworks** | NIST 800-53r5 CA · ISO/IEC 27001 Clause 9 · SOX ITGC |
 | **Regulations** | SOX ITGC; CMMC; NERC-CIP; ISO; audit and customer assurance |
@@ -114,7 +114,7 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 | **Classification** | Public |
 | **Owner** | Evidence Librarian |
 | **Approved By** | CISO |
-| **Parent Document** | [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) - Audit and Evidence Management Procedure |
+| **Parent Document** | [`CERG-PRC-AUD-001`](procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) - Audit and Evidence Management Procedure |
 | **Review Cycle** | Annual; and on process or control change |
 | **Next Scheduled Review** | 2027-05-22 |
 | **Frameworks** | NIST 800-53r5 CA · ISO/IEC 27001 Clause 9 · SOX ITGC |
@@ -138,5 +138,5 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Audit and Evidence Management Procedure | [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) | Governing audit and evidence workflow |
-| Unified Control Baseline | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control source |
+| Audit and Evidence Management Procedure | [`CERG-PRC-AUD-001`](procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) | Governing audit and evidence workflow |
+| Unified Control Baseline | [`CERG-GOV-CB-001`](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control source |

@@ -12,8 +12,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Adversarial Testing Lead |
-| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md) · [CERG-GOV-CEF-001](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) · [CERG-GOV-IMPREG-001](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) · [CERG-PRC-LL-001](CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) |
+| **Parent Policy** | [CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Documents** | [CERG-GOV-CB-001](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-LM-001](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-OT-001](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-PRC-VM-001](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-RM-001](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-AR-001](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-TPRM-001](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [CERG-PLN-IR-001](plans/CERG-PLN-IR-001_Incident_Response_Plan.md) · [CERG-GOV-CEF-001](governance/CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) · [CERG-GOV-IMPREG-001](governance/CERG-GOV-IMPREG-001_Program_Improvement_Register.md) · [CERG-PRC-LL-001](procedures/CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) |
 | **Review Cycle** | Annual / On material program change |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (CA-8) · NIST 800-115 · PTES · MITRE ATT&CK · MITRE D3FEND · OWASP WSTG / MASTG |
 | **Regulations** | NERC-CIP CIP-007 (vulnerability assessment) · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.11.2) · SOX (indirect via control testing) |
@@ -115,7 +115,7 @@ CERG produces an annual Adversarial Validation Plan that schedules the engagemen
 Scoping inputs:
 
 - Highest-residual-score risks in the register.
-- Recently introduced systems and architectures ([`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) Phase 5 records).
+- Recently introduced systems and architectures ([`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) Phase 5 records).
 - Regulatory cadence requirements (CIP, [CMMC](https://dodcio.defense.gov/CMMC/)).
 - ATT&CK coverage gaps identified by detection engineering.
 - Threat intelligence pointing at adversary activity relevant to the organization.
@@ -241,7 +241,7 @@ Purple work is the collaboration between offensive and detection engineering. It
 3. **Observe**, did the expected detection fire? With expected priority? In expected time?
 4. **Classify**, Pass · Pass-with-Latency · Pass-with-Tuning-Needed · Fail (no detection) · Fail-Suppressed (existed but suppressed).
 5. **Action**, Pass: no change. Pass-with-Tuning: tune. Fail / Fail-Suppressed: open detection backlog item + risk register entry until restored.
-6. **Reflect**, feed result into detection inventory; update DT-002 metric in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md).
+6. **Reflect**, feed result into detection inventory; update DT-002 metric in [`CERG-GOV-MTR-001`](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md).
 
 ### 6.3 Purple-Team Outcome to Baseline
 
@@ -277,7 +277,7 @@ Application tests use OWASP WSTG (web), MASTG (mobile), and API Security Top 10 
 | Authorization | IDOR, function-level access, multi-tenant isolation, RBAC enforcement. |
 | Input handling | Injection (SQL, command, template), deserialization, file upload, SSRF. |
 | Output / data exposure | Information disclosure, sensitive data in responses, error verbosity. |
-| Configuration | Headers (HSTS, CSP, etc.), TLS conformance to [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md), exposed admin endpoints. |
+| Configuration | Headers (HSTS, CSP, etc.), TLS conformance to [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md), exposed admin endpoints. |
 | Business logic | Workflow bypass, race conditions, abuse of intended functionality. |
 | API | OWASP API Top 10: object-level, function-level, mass assignment, rate limiting, etc. |
 | Mobile | OWASP MASTG: storage, transport, platform interaction, code quality, resilience. |
@@ -374,7 +374,7 @@ Every OT engagement has a named OT Safety Officer (an operator with substation /
 
 ### 10.1 Rating
 
-Findings are rated using a uniform schema regardless of engagement type, aligning to [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) severity bands so they can co-route into vulnerability management:
+Findings are rated using a uniform schema regardless of engagement type, aligning to [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) severity bands so they can co-route into vulnerability management:
 
 | **Severity** | **Definition** |
 |---|---|
@@ -388,12 +388,12 @@ Findings are rated using a uniform schema regardless of engagement type, alignin
 
 | **Source of Finding** | **Routes To** |
 |---|---|
-| Specific software / asset vulnerability | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) finding + risk register entry per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) if Critical/High |
-| Control / design weakness | Risk register entry directly per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
+| Specific software / asset vulnerability | [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) finding + risk register entry per [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) if Critical/High |
+| Control / design weakness | Risk register entry directly per [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
 | Detection gap | Detection backlog + risk register if material |
 | Process / runbook weakness | Owning procedure (AR / IR / TPRM) + risk register if material |
-| Vendor / supply chain weakness | TPRM record per [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
-| OT-specific weakness | OT vulnerability management workflow per [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §4.3 and §6.3 + risk register |
+| Vendor / supply chain weakness | TPRM record per [`CERG-PRC-TPRM-001`](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
+| OT-specific weakness | OT vulnerability management workflow per [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §4.3 and §6.3 + risk register |
 
 ### 10.3 Retest and Closure
 
@@ -422,7 +422,7 @@ When remediation stalls beyond the retest window, the finding escalates.
 
 Adversarial Testing Lead → Risk Pillar Leader → CISO → Executive Sponsor
 
-At each level, the responsible party must either (a) produce a credible remediation plan with a committed date, (b) initiate a risk acceptance through [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md), or (c) provide a written rationale. Non-response at any level automatically escalates after 5 business days.
+At each level, the responsible party must either (a) produce a credible remediation plan with a committed date, (b) initiate a risk acceptance through [CERG-PRC-RM-001](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md), or (c) provide a written rationale. Non-response at any level automatically escalates after 5 business days.
 
 #### Risk Acceptance as the Only Alternative
 

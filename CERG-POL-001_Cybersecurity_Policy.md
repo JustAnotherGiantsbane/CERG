@@ -91,13 +91,13 @@ The following terms are used throughout this policy and all subordinate document
 |**BES Cyber System**|A grouping of BES Cyber Assets that perform one or more reliability tasks for a functional entity, as defined by NERC-CIP CIP-002.|
 |**CERG / SURGE**|The Cyber Engineering, Risk, and Governance operating model. The three-pillar security function responsible for building secure systems, managing exposure, and governing the security program.|
 |**CUI**|Controlled Unclassified Information. Information the Government creates or possesses, or that an entity creates or possesses for or on behalf of the Government, that law, regulation, or Government-wide policy requires or permits an agency to handle using safeguarding or dissemination controls (32 CFR Part 2002).|
-|**DISH**|**D**efensive **I**nfrastructure **S**ystem **H**ardening. The CERG-published set of secure configuration baselines applied to in-scope assets per asset class. Authoritative baselines are maintained in [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md).|
+|**DISH**|**D**efensive **I**nfrastructure **S**ystem **H**ardening. The CERG-published set of secure configuration baselines applied to in-scope assets per asset class. Authoritative baselines are maintained in [`CERG-STD-CFG-001`](standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md).|
 |**Environment**|The hosting and operational context of an asset: owned data center, leased data center, cloud infrastructure (IaaS/PaaS), SaaS platform, or contractor-managed facility.|
-|**Executive Sponsor**|The named business or operational executive accountable for the systems, processes, or programs within a defined scope. The Executive Sponsor concurs on Critical-severity risk acceptance decisions per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7, sits on the Cyber Oversight Group when a system in their scope is on the agenda, and is named per system in the categorization register.|
+|**Executive Sponsor**|The named business or operational executive accountable for the systems, processes, or programs within a defined scope. The Executive Sponsor concurs on Critical-severity risk acceptance decisions per [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7, sits on the Cyber Oversight Group when a system in their scope is on the agenda, and is named per system in the categorization register.|
 |**OT / ICS**|Operational Technology / Industrial Control Systems. Hardware and software that monitors and controls physical devices, processes, and events in industrial environments, including SCADA systems, energy management systems, and substation automation.|
 |**POA&M**|**P**lan of **A**ction and **M**ilestones. A documented record of open findings, their compensating controls, named owners, and target remediation dates. POA&Ms are mandatory under DFARS / CMMC for CUI scope and are produced as part of every System Security Plan; CERG also uses POA&M as the standard format for tracking open security findings outside CUI scope.|
-|**PPR**|**P**riority **P**atch **R**equest. CERG's emergency-response remediation tier, invoked for vulnerabilities listed in the CISA KEV catalog or confirmed under active exploitation. SLA values and trigger criteria live in [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5.2.|
-|**Risk Acceptance**|A documented management decision to acknowledge a risk and take no further action to reduce it. Approval authority and acceptance duration are defined in the canonical Risk Acceptance Authority table in [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7.|
+|**PPR**|**P**riority **P**atch **R**equest. CERG's emergency-response remediation tier, invoked for vulnerabilities listed in the CISA KEV catalog or confirmed under active exploitation. SLA values and trigger criteria live in [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5.2.|
+|**Risk Acceptance**|A documented management decision to acknowledge a risk and take no further action to reduce it. Approval authority and acceptance duration are defined in the canonical Risk Acceptance Authority table in [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7.|
 |**Risk Treatment**|The process of selecting and implementing controls to modify risk. Includes risk reduction (implement controls), risk transfer (insurance, contract), risk avoidance (cease activity), and risk acceptance.|
 |**SSP**|**S**ystem **S**ecurity **P**lan. The authoritative document for a system in regulated scope (most commonly CUI / CMMC) that records system boundary, categorization, control implementation status, and responsible parties. POA&M entries are tracked as an attachment to the SSP.|
 |**System Trust Level**|The classification of confidence placed in a system or connection based on its ownership, management, and verification status. Ranges from fully trusted (organization-owned, managed, and monitored) to untrusted (unmanaged third-party or external networks).|
@@ -197,9 +197,9 @@ Flat networks convert a single compromised endpoint into an enterprise-wide brea
 **Mandate**
 
 - The organization shall maintain continuous visibility into vulnerabilities affecting in-scope assets through a documented vulnerability management program operated by Cyber Risk.
-- Vulnerabilities shall be assessed for severity, exploitability, and asset criticality. Findings shall be tracked to remediation or documented risk acceptance within the SLAs published in [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5.2.
+- Vulnerabilities shall be assessed for severity, exploitability, and asset criticality. Findings shall be tracked to remediation or documented risk acceptance within the SLAs published in [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5.2.
 - OT and BES Cyber Systems shall be scanned using approved methods that do not introduce operational risk. Timelines for OT remediation shall account for vendor testing requirements and operational windows, with NERC-CIP deviation processes invoked as required.
-- Vulnerabilities identified during pre-production assessment shall be remediated or formally risk-accepted prior to production deployment per the Risk Acceptance Authority table in [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. High and Critical severity findings require documented authorization at the level named in that table before go-live.
+- Vulnerabilities identified during pre-production assessment shall be remediated or formally risk-accepted prior to production deployment per the Risk Acceptance Authority table in [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. High and Critical severity findings require documented authorization at the level named in that table before go-live.
 - The organization shall conduct periodic adversarial testing, penetration testing and red team operations, to validate that controls function under active attack conditions, not only under passive assessment.
 
 **Rationale**
@@ -275,8 +275,8 @@ The organization's security posture extends only as far as its weakest trusted t
 **Mandate**
 
 - All identified risks to organizational assets and operations shall be documented in the organizational risk register with, at minimum: risk description, affected assets, risk owner, severity, treatment decision, compensating controls, and target closure date.
-- Risk treatment decisions, including risk acceptance, require documented approval from the authority named in the canonical Risk Acceptance Authority table in [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7.
-- The risk register shall be reviewed in two cadences per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §8.2: weekly for High and Critical items, monthly in full. Overdue or deteriorating risk items shall be escalated to the CISO and the Cyber Oversight Group.
+- Risk treatment decisions, including risk acceptance, require documented approval from the authority named in the canonical Risk Acceptance Authority table in [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7.
+- The risk register shall be reviewed in two cadences per [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §8.2: weekly for High and Critical items, monthly in full. Overdue or deteriorating risk items shall be escalated to the CISO and the Cyber Oversight Group.
 - Risk management is an organizational function, not a security team function. Business unit owners bear accountability for the risks associated with their systems and processes. Cyber Governance facilitates and tracks; it does not absorb accountability on behalf of the business.
 
 **Rationale**
@@ -315,7 +315,7 @@ The following table defines accountability for this policy and the principles it
 
 |Role|Responsibility|
 |---|---|
-|**Chief Information Security Officer (CISO)**|Policy owner. Responsible for the cybersecurity program. Approves policy, standards, and risk acceptances per the canonical authority table in [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. Reports compliance posture and material risks to the Cyber Oversight Group, executive leadership, and the board.|
+|**Chief Information Security Officer (CISO)**|Policy owner. Responsible for the cybersecurity program. Approves policy, standards, and risk acceptances per the canonical authority table in [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. Reports compliance posture and material risks to the Cyber Oversight Group, executive leadership, and the board.|
 |**Cyber Engineering (CERG Pillar)**|Implements security controls through project delivery. Produces asset documentation and configuration baselines. Ensures systems are designed to conform to this policy and subordinate standards prior to production deployment.|
 |**Cyber Risk (CERG Pillar)**|Maintains continuous visibility into organizational exposure. Operates the vulnerability management, penetration testing, threat intelligence, and vendor risk programs. Identifies and communicates risk to Engineering, Governance, and leadership.|
 |**Cyber Governance (CERG Pillar)**|Develops and maintains the policy and standards library. Tracks compliance posture across all applicable frameworks. Maintains the risk register and evidence library. Coordinates regulatory examinations and audits. Operates the compliance calendar.|
@@ -354,7 +354,7 @@ Exceptions to this policy are recognized as operationally necessary in specific,
 - Any personnel may initiate an exception request through Cyber Governance using the organization's approved exception request process.
 - Exception requests shall document: the principle or requirement subject to exception, the business or operational justification, the affected systems, the proposed compensating controls, the risk owner, and the proposed exception duration.
 - Cyber Risk shall assess the risk associated with each exception and provide a written finding to support the approval decision.
-- Approval authority follows the canonical Risk Acceptance Authority table in [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. Exceptions affecting BES Cyber Systems, CUI environments, or SOX-relevant systems may require additional escalation as defined in applicable regulatory deviation procedures.
+- Approval authority follows the canonical Risk Acceptance Authority table in [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. Exceptions affecting BES Cyber Systems, CUI environments, or SOX-relevant systems may require additional escalation as defined in applicable regulatory deviation procedures.
 - Approved exceptions shall be entered into the risk register and tracked to expiration or remediation. Exceptions shall not be renewed without a new approval cycle.
 
 ### 7.2 Regulatory Deviations
@@ -403,49 +403,49 @@ Proposed updates shall be reviewed by Cyber Engineering and Cyber Risk to ensure
 
 ## 10. Related Documents
 
-The authoritative inventory, IDs, owners, status, and deferred / planned artifacts is maintained in [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) Document Catalog and Naming Convention. The summary below reflects the V1 library.
+The authoritative inventory, IDs, owners, status, and deferred / planned artifacts is maintained in [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) Document Catalog and Naming Convention. The summary below reflects the V1 library.
 
 ### 10.1 Cross-Cutting Instruments
 
 | Document | ID | Owner |
 | --- | --- | --- |
-| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Cyber Governance |
-| Unified Control Baseline | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Cyber Governance |
-| Metrics, Dashboard, and CISO/Board Reporting | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Cyber Governance |
-| CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | CISO |
-| Risk Management Framework | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) | Cyber Governance |
-| Compliance Matrix | [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) | Cyber Governance |
-| Risk Taxonomy | [`CERG-GOV-TAX-001`](CERG-GOV-TAX-001_Risk_Taxonomy.md) | Cyber Risk |
-| CERG Framework (narrative) | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | CISO |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Cyber Governance |
+| Unified Control Baseline | [`CERG-GOV-CB-001`](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) | Cyber Governance |
+| Metrics, Dashboard, and CISO/Board Reporting | [`CERG-GOV-MTR-001`](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Cyber Governance |
+| CERG Operating Model | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | CISO |
+| Risk Management Framework | [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) | Cyber Governance |
+| Compliance Matrix | [`CERG-GOV-CMX-001`](governance/CERG-GOV-CMX-001_Compliance_Matrix.md) | Cyber Governance |
+| Risk Taxonomy | [`CERG-GOV-TAX-001`](governance/CERG-GOV-TAX-001_Risk_Taxonomy.md) | Cyber Risk |
+| CERG Framework (narrative) | [`CERG-GOV-FRM-001`](governance/CERG-GOV-FRM-001_CERG_Framework.md) | CISO |
 
 ### 10.2 Standards
 
 | Document | ID | Owner |
 | --- | --- | --- |
-| IT (Hosted, Cloud, and SaaS) Security Standard | [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | Cyber Governance |
-| Grid Control Systems Security Standard | [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | Cyber Governance |
-| CUI Handling Standard | [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md) | Cyber Governance |
-| Access Management Standard | [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) | Cyber Governance |
-| Secure Configuration Baseline Standard (DISH) | [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | Cyber Engineering |
-| Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Cyber Risk |
-| Cyber Resilience and Backup Standard | [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Cyber Engineering |
-| Cryptography and Key Management Standard | [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Cyber Engineering |
+| IT (Hosted, Cloud, and SaaS) Security Standard | [`CERG-STD-IT-001`](standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | Cyber Governance |
+| Grid Control Systems Security Standard | [`CERG-STD-OT-001`](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | Cyber Governance |
+| CUI Handling Standard | [`CERG-STD-CUI-001`](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) | Cyber Governance |
+| Access Management Standard | [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md) | Cyber Governance |
+| Secure Configuration Baseline Standard (DISH) | [`CERG-STD-CFG-001`](standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | Cyber Engineering |
+| Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Cyber Risk |
+| Cyber Resilience and Backup Standard | [`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Cyber Engineering |
+| Cryptography and Key Management Standard | [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Cyber Engineering |
 
 ### 10.3 Procedures, Plans, and Templates
 
 | Document | ID | Owner |
 | --- | --- | --- |
-| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Cyber Risk |
-| Risk Register and Exception Process | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Cyber Governance |
-| Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Cyber Engineering |
-| Access Management Runbook | [`CERG-PRC-AC-002`](CERG-PRC-AC-002_Access_Management_Runbook.md) | Cyber Engineering |
-| Third-Party and Supply Chain Risk Procedure | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Cyber Risk |
-| Adversarial Validation Procedure | [`CERG-PRC-AV-001`](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) | Cyber Risk |
-| Incident Response Plan | [`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md) | Standing IR team |
-| CUI / CMMC Operational Package | [`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) | Cyber Governance |
-| NERC-CIP Operational Package | [`CERG-PLN-CIP-001`](CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) | Cyber Governance |
-| SOX ITGC Operational Package | [`CERG-PLN-SOX-001`](CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) | Cyber Governance |
-| Risk Register Templates and Reporting | [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) | Cyber Governance |
+| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Cyber Risk |
+| Risk Register and Exception Process | [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Cyber Governance |
+| Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Cyber Engineering |
+| Access Management Runbook | [`CERG-PRC-AC-002`](procedures/CERG-PRC-AC-002_Access_Management_Runbook.md) | Cyber Engineering |
+| Third-Party and Supply Chain Risk Procedure | [`CERG-PRC-TPRM-001`](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Cyber Risk |
+| Adversarial Validation Procedure | [`CERG-PRC-AV-001`](procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) | Cyber Risk |
+| Incident Response Plan | [`CERG-PLN-IR-001`](plans/CERG-PLN-IR-001_Incident_Response_Plan.md) | Standing IR team |
+| CUI / CMMC Operational Package | [`CERG-PLN-CUI-001`](plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) | Cyber Governance |
+| NERC-CIP Operational Package | [`CERG-PLN-CIP-001`](plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) | Cyber Governance |
+| SOX ITGC Operational Package | [`CERG-PLN-SOX-001`](plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) | Cyber Governance |
+| Risk Register Templates and Reporting | [`CERG-TMPL-RM-001`](templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) | Cyber Governance |
 
 ### 10.4 Workforce Architecture and Operational Flows
 
@@ -455,8 +455,8 @@ The following documents extend this policy into workforce management and cross-p
 | --- | --- | --- |
 | Job Families Overview | [`CERG-GOV-JF-001`](roles/CERG-GOV-JF-001_Job_Families_Overview.md) | Governance Pillar Leader (Policy & Standards) |
 | NICE Workforce Framework Crosswalk | [`CERG-GOV-JF-002`](roles/CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) | Governance Pillar Leader (Policy & Standards) |
-| Cross-Pillar Operational Flows | [`CERG-GOV-FLOW-001`](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) | Governance Pillar Leader |
-| Per-Role Job Descriptions (27 documents) | See [`CERG-GOV-JD-001`](CERG-GOV-JD-001_CERG_Job_Descriptions.md) for index | Pillar Leaders (delegated per family) |
+| Cross-Pillar Operational Flows | [`CERG-GOV-FLOW-001`](governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) | Governance Pillar Leader |
+| Per-Role Job Descriptions (27 documents) | See [`CERG-GOV-JD-001`](governance/CERG-GOV-JD-001_CERG_Job_Descriptions.md) for index | Pillar Leaders (delegated per family) |
 | Machine-Readable Specifications | See [`machine-readable/METADATA.yaml`](machine-readable/METADATA.yaml) | Governance Pillar Leader (Document Control) |
 
 
@@ -495,7 +495,7 @@ The following documents extend this policy into workforce management and cross-p
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| CERG Operating Model | [CERG-GOV-OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) | Operating model detail |
-| CERG Framework | [CERG-GOV-FRM-001](CERG-GOV-FRM-001_CERG_Framework.md) | Narrative framework |
-| Document Catalog | [CERG-GOV-CAT-001](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Master document inventory |
-| Risk Management Framework | [CERG-GOV-RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk lifecycle |
+| CERG Operating Model | [CERG-GOV-OM-001](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | Operating model detail |
+| CERG Framework | [CERG-GOV-FRM-001](governance/CERG-GOV-FRM-001_CERG_Framework.md) | Narrative framework |
+| Document Catalog | [CERG-GOV-CAT-001](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Master document inventory |
+| Risk Management Framework | [CERG-GOV-RMF-001](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk lifecycle |

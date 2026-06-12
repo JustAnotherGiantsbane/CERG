@@ -12,8 +12,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Identity Engineer |
-| **Parent Standard** | [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) - Access Management Standard |
-| **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-CR-001](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
+| **Parent Standard** | [CERG-STD-AC-001](standards/CERG-STD-AC-001_Access_Management_Standard.md) - Access Management Standard |
+| **Supporting Documents** | [CERG-GOV-CB-001](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-CR-001](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-STD-LM-001](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-PRC-RM-001](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-AR-001](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-TPRM-001](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
 | **Review Cycle** | Annual / On IAM tooling change |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (AC, IA, AU) · [NIST 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (PROTECT) |
 | **Regulations** | NERC-CIP CIP-004 / CIP-005 · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.1, 3.5) · SOX ITGC (Access) |
@@ -42,7 +42,7 @@
 
 ## 1. Purpose and Scope
 
-The Access Management Standard explicitly says implementation details, IdP baselines, MFA enrollment, PAM workflows, recertification runbooks, are maintained separately. This runbook is that "separately." It defines the executable workflows behind every identity decision [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) requires.
+The Access Management Standard explicitly says implementation details, IdP baselines, MFA enrollment, PAM workflows, recertification runbooks, are maintained separately. This runbook is that "separately." It defines the executable workflows behind every identity decision [CERG-STD-AC-001](standards/CERG-STD-AC-001_Access_Management_Standard.md) requires.
 
 The runbook covers every identity in the environment: human (employee, contractor), machine (system, service, agent), and vendor / third-party.
 
@@ -63,7 +63,7 @@ The runbook covers every identity in the environment: human (employee, contracto
 | Detection / monitoring | CERG (always). | CERG (always). |
 | Audit interface | CERG. | Shared. |
 
-Where IAM is outside CERG, every requirement below is either implemented by the IAM team, or a formal documented divergence is recorded in the risk register per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md).
+Where IAM is outside CERG, every requirement below is either implemented by the IAM team, or a formal documented divergence is recorded in the risk register per [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md).
 
 ---
 
@@ -193,7 +193,7 @@ Every privileged action across the in-scope estate is mediated by PAM. Specifica
 | Just-in-time (JIT) elevation | User requests; approval where required; time-bound. |
 | Session brokered | RDP / SSH / web session through PAM; session recorded; commands logged. |
 | Session ended | Credentials rotated if vaulted-and-checked-out pattern. |
-| Logs and recordings retained per [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+| Logs and recordings retained per [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
 
 ### 6.3 PAM Operating Disciplines
 
@@ -208,7 +208,7 @@ Every privileged action across the in-scope estate is mediated by PAM. Specifica
 
 ### 7.1 Definition
 
-Break-glass accounts are the credentials of last resort, used only when normal identity systems are unavailable or compromised. Misuse is a P1 detection per [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) Section 11.
+Break-glass accounts are the credentials of last resort, used only when normal identity systems are unavailable or compromised. Misuse is a P1 detection per [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) Section 11.
 
 ### 7.2 Operating Rules
 
@@ -239,10 +239,10 @@ Break-glass accounts are the credentials of last resort, used only when normal i
 | Request via service-account intake | Owner team + Identity Engineer |
 | Named human owner required | Owner team |
 | Scope and entitlements minimized | Identity Engineer |
-| Stored in PAM / secrets manager per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Identity Engineer |
+| Stored in PAM / secrets manager per [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Identity Engineer |
 | Detection on anomalous use | Detection Engineer |
 | Recertification semi-annual | Identity Engineer |
-| Rotation per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) Section 8 | Identity Engineer / Workload owner |
+| Rotation per [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) Section 8 | Identity Engineer / Workload owner |
 | Decommission on system retirement | Identity Engineer |
 
 ### 8.3 Service Account Disciplines
@@ -256,7 +256,7 @@ Break-glass accounts are the credentials of last resort, used only when normal i
 
 ## 9. Secrets, API Keys, and Tokens
 
-This section operationalizes [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) Section 7. See that standard for storage and rotation requirements.
+This section operationalizes [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) Section 7. See that standard for storage and rotation requirements.
 
 | **Action** | **Path** |
 |---|---|
@@ -279,7 +279,7 @@ This section operationalizes [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_an
 | Access scope defined - minimum required entitlements, time-bounded | Identity Engineer |
 | MFA enrolled - phishing-resistant required for privileged | Identity Engineer |
 | Sessions brokered through PAM where privileged | Identity Engineer |
-| Country-of-access validated against Country Risk Register ([`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) Section 10) | Vendor Risk Analyst |
+| Country-of-access validated against Country Risk Register ([`CERG-PRC-TPRM-001`](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) Section 10) | Vendor Risk Analyst |
 | Time-boxed: explicit expiration; renewal requires re-justification | Identity Engineer |
 
 ### 10.2 Monitoring
@@ -310,11 +310,11 @@ MFA exceptions are time-bounded and tracked.
 
 | **Exception Case** | **Treatment** |
 |---|---|
-| Legacy system unable to support phishing-resistant MFA | Time-boxed transitional exception with compensating controls (network segmentation, monitoring) per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) §7. |
-| Operational technology operator console | Engineering review required; compensating controls per [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md). |
+| Legacy system unable to support phishing-resistant MFA | Time-boxed transitional exception with compensating controls (network segmentation, monitoring) per [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) §7. |
+| Operational technology operator console | Engineering review required; compensating controls per [`CERG-STD-OT-001`](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md). |
 | Vendor unable to use phishing-resistant factor | Renegotiate; if unavoidable, time-bound exception with detection routing. |
 
-Phishing-resistant MFA coverage is reported as `ID-001` in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md).
+Phishing-resistant MFA coverage is reported as `ID-001` in [`CERG-GOV-MTR-001`](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md).
 
 ---
 
@@ -328,7 +328,7 @@ Phishing-resistant MFA coverage is reported as `ID-001` in [`CERG-GOV-MTR-001`](
 | **PAM Administrator** | Operates the PAM platform. Onboards privileged credentials, brokers sessions, manages session recording and retention. Executes credential rotation on checkout and post-use. Maintains break-glass credentials and coordinates quarterly hygiene checks. |
 | **Vendor Risk Analyst** | Owns the vendor access lifecycle from a risk perspective. Creates and maintains vendor records in TPRM. Validates country-of-access against the Country Risk Register. Ensures vendor access is time-bounded, scoped to minimum required, and terminated on project closeout. |
 | **User** | Uses only approved authentication factors. Reports MFA token loss immediately. Does not share credentials or service accounts. Completes required security awareness training before first access. Complies with access request and recertification requirements. |
-| **SOC / Detection Engineer** | Monitors identity events for anomalies per [CERG-STD-LM-001](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md). Detects and escalates break-glass misuse, service account interactive logon, credential reuse, and geographic anomalies. Tunes detection rules in coordination with the Identity Engineer. |
+| **SOC / Detection Engineer** | Monitors identity events for anomalies per [CERG-STD-LM-001](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md). Detects and escalates break-glass misuse, service account interactive logon, credential reuse, and geographic anomalies. Tunes detection rules in coordination with the Identity Engineer. |
 | **CISO** | Endorses this runbook. Resolves disputes escalated beyond the Identity Engineer and Cyber Engineering Pillar Leader. Approves risk acceptances for MFA exceptions and compensating controls beyond standard tolerance. Signs off on annual recertification program results. |
 
 ---

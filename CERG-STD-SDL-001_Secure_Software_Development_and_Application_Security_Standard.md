@@ -13,8 +13,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Application Security) |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Standards** | [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) · [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Standards** | [`CERG-STD-IT-001`](standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md) · [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [`CERG-STD-CFG-001`](standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
 | **Review Cycle** | Annual / On NIST SSDF revision · On material toolchain change |
 | **Frameworks** | [NIST SSDF 800-218](https://csrc.nist.gov/pubs/sp/800/218/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (SA, SI, CM families) · [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) · OWASP SAMM · [NIST 800-161r1](https://csrc.nist.gov/pubs/sp/800/161/r1/final) (software supply chain) · [SLSA](https://slsa.dev/) |
 | **Regulations** | CMMC L2 / 800-171r3 (3.4.x, 3.13.x, 3.14.x) · SOX ITGC (change management) · NERC-CIP (where software supports BES Cyber Systems) |
@@ -43,11 +43,11 @@
 
 ## 1. Purpose and Scope
 
-The Cyber Engineering pillar exists to build securely. Its mission statement, set in [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md), is "build securely, deploy confidently, consult continuously." Until this standard, the program had no document that said what building securely actually requires. The architecture review procedure [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) governs the engagement; this standard governs the code.
+The Cyber Engineering pillar exists to build securely. Its mission statement, set in [`CERG-GOV-FRM-001`](governance/CERG-GOV-FRM-001_CERG_Framework.md), is "build securely, deploy confidently, consult continuously." Until this standard, the program had no document that said what building securely actually requires. The architecture review procedure [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) governs the engagement; this standard governs the code.
 
 This standard establishes the requirements for secure software development across the CERG-managed estate: how software moves through a secure development lifecycle, the security gates it passes, the code review and automated testing it is subject to, how secrets and dependencies are handled, and how the build pipeline that produces it is itself secured.
 
-It applies to every piece of software CERG-managed teams write or materially modify: customer-facing and internal applications, microservices and APIs, scripts and automation, integration and glue code, and infrastructure-as-code. It does not govern the security of purchased software, which is handled by [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md), except where purchased components are embedded as dependencies (Section 8).
+It applies to every piece of software CERG-managed teams write or materially modify: customer-facing and internal applications, microservices and APIs, scripts and automation, integration and glue code, and infrastructure-as-code. It does not govern the security of purchased software, which is handled by [`CERG-PRC-TPRM-001`](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md), except where purchased components are embedded as dependencies (Section 8).
 
 > **The Standard Is a Floor, Applied by Risk Tier**
 >
@@ -62,7 +62,7 @@ Six principles govern secure development in CERG.
 1. **Shift left, but do not shift blind.** Security findings are cheapest to fix before code is written and most expensive after release. Testing, review, and threat modeling happen as early as the lifecycle allows. But early testing that no one acts on is theater; every gate has an owner and a consequence.
 2. **The pipeline is the enforcement point.** A requirement that depends on a developer remembering it will be forgotten. Security requirements are enforced by the build pipeline wherever a machine can enforce them. Human review is reserved for what a machine cannot judge.
 3. **Build securely; do not own the result.** Consistent with the Engineering pillar mission, Engineering builds software securely and hands it off. Engineering does not become the permanent operator of every application it helps build. Security posture travels with the handoff.
-4. **A finding is a risk until it is closed or accepted.** An open security finding is not a backlog item that quietly ages out. It is closed, or it is risk-accepted through [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). There is no third option.
+4. **A finding is a risk until it is closed or accepted.** An open security finding is not a backlog item that quietly ages out. It is closed, or it is risk-accepted through [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). There is no third option.
 5. **Provenance is part of the product.** Software that cannot be traced to its source, its dependencies, and its build is not trusted. Every release carries a Software Bill of Materials and a verifiable build provenance.
 6. **Secrets never live in code.** This principle is absolute and has no risk-tier exception. Section 7.
 
@@ -76,10 +76,10 @@ Secure development is not a phase bolted onto delivery. Security activity is def
 
 | **Phase** | **Security Activity** | **Primary Owner** |
 |---|---|---|
-| Requirements | Security and abuse-case requirements captured; data classification per [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) identified. | Application Security Engineer |
-| Design | Threat modeling; architecture review intake per [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). | Application Security Engineer |
+| Requirements | Security and abuse-case requirements captured; data classification per [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) identified. | Application Security Engineer |
+| Design | Threat modeling; architecture review intake per [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). | Application Security Engineer |
 | Implementation | Secure coding practice; SAST and SCA in the developer loop; secrets scanning. | Engineering Pillar Leader |
-| Verification | DAST; code review gate; pre-production review per [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). | Pre-production Reviewer |
+| Verification | DAST; code review gate; pre-production review per [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). | Pre-production Reviewer |
 | Release | Build provenance and SBOM generated; release gate cleared. | Application Security Engineer |
 | Operation and handoff | Security posture documented; dependency monitoring active; ownership transferred. | Engineering Pillar Leader |
 
@@ -115,11 +115,11 @@ A security gate is a checkpoint software must clear to advance. Gates are enforc
 | DAST clean | Required | Recommended | Not required | Any unresolved High or Critical finding |
 | SBOM generated | Required | Required | Required | Missing SBOM |
 | Build provenance attested | Required | Required | Recommended | Unverifiable build |
-| Pre-production review signed | Required | Required | Not required | Unsigned go-live readiness per [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) |
+| Pre-production review signed | Required | Required | Not required | Unsigned go-live readiness per [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) |
 
 ### 4.2 Gate Bypass
 
-A gate is bypassed only through a risk exception filed under [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). The exception names the gate, the reason, the compensating control, and an expiry. A bypassed gate without a filed exception is a control failure, and the build is not released. The secrets-scan gate is the one gate that is never bypassed.
+A gate is bypassed only through a risk exception filed under [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). The exception names the gate, the reason, the compensating control, and an expiry. A bypassed gate without a filed exception is a control failure, and the build is not released. The secrets-scan gate is the one gate that is never bypassed.
 
 ---
 
@@ -153,7 +153,7 @@ SCA inventories third-party and open-source dependencies and checks them against
 
 ### 6.4 Tooling Discipline
 
-The specific tools are an implementation choice and are not named in this standard, so the standard survives a toolchain change. What the standard fixes is that SAST, DAST, and SCA capability exists, runs in the pipeline, and gates releases. An organization adopting CERG selects tools that meet that bar; the [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) profile is the right place to record the selected toolchain.
+The specific tools are an implementation choice and are not named in this standard, so the standard survives a toolchain change. What the standard fixes is that SAST, DAST, and SCA capability exists, runs in the pipeline, and gates releases. An organization adopting CERG selects tools that meet that bar; the [`CERG-GOV-VAR-001`](governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) profile is the right place to record the selected toolchain.
 
 ---
 
@@ -163,8 +163,8 @@ This section has no risk-tier exception and no gate bypass.
 
 1. **Secrets are never committed.** Passwords, API keys, tokens, private keys, connection strings, and any other credential are never written into source code, configuration files in the repository, build scripts, or container images.
 2. **Secrets scanning is mandatory.** A secrets scanner runs on every commit and on the full repository history. A detected secret blocks the build.
-3. **A detected secret is treated as compromised.** A secret that reaches a repository, even a private one, even briefly, is considered exposed. It is rotated immediately per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md), and the exposure is logged. Removing the commit does not undo the exposure.
-4. **Secrets come from a secrets manager at runtime.** Software retrieves credentials at runtime from the secrets management platform governed by [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md). Build-time injection from a secrets manager is acceptable; hard-coding is not.
+3. **A detected secret is treated as compromised.** A secret that reaches a repository, even a private one, even briefly, is considered exposed. It is rotated immediately per [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md), and the exposure is logged. Removing the commit does not undo the exposure.
+4. **Secrets come from a secrets manager at runtime.** Software retrieves credentials at runtime from the secrets management platform governed by [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md). Build-time injection from a secrets manager is acceptable; hard-coding is not.
 
 > **A Secret in Git History Is a Secret in Production**
 >
@@ -186,12 +186,12 @@ This section has no risk-tier exception and no gate bypass.
 
 The build pipeline produces trusted software. A compromised pipeline produces compromised software that passes every other gate. The pipeline is therefore protected as a Tier 1 system regardless of what it builds.
 
-1. **Pipeline access is least-privilege and reviewed.** Access to modify pipeline configuration, build steps, or deployment credentials follows [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) and is reviewed on the access-review cadence.
+1. **Pipeline access is least-privilege and reviewed.** Access to modify pipeline configuration, build steps, or deployment credentials follows [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md) and is reviewed on the access-review cadence.
 2. **Build steps are defined as code and reviewed.** Pipeline definitions are version-controlled and subject to the code review requirements in Section 5. A change to how software is built is a security-sensitive change.
 3. **Builds are isolated.** Build jobs run in ephemeral, isolated environments. A build does not run with standing production credentials.
 4. **Build provenance is attested.** Tier 1 and Tier 2 releases carry verifiable provenance: what source commit, what build steps, what environment produced the artifact. This aligns with SLSA build-integrity levels.
 5. **Artifacts are integrity-protected.** Released artifacts are signed or hashed so the deployment target can verify it is deploying what the pipeline produced.
-6. **Pipeline activity is logged.** Build and deployment events are logged to the platform governed by [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md).
+6. **Pipeline activity is logged.** Build and deployment events are logged to the platform governed by [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md).
 
 ---
 
@@ -202,7 +202,7 @@ Infrastructure-as-code is software and is governed by this standard. Specificall
 1. IaC is subject to code review (Section 5) and to SAST-equivalent scanning for misconfiguration before apply.
 2. IaC must not contain secrets (Section 7).
 3. IaC that provisions production infrastructure is Tier 1 or Tier 2 by the same risk-tier logic in Section 3.2.
-4. IaC-provisioned configuration must satisfy the secure configuration baselines in [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md). IaC is the preferred mechanism for enforcing those baselines consistently.
+4. IaC-provisioned configuration must satisfy the secure configuration baselines in [`CERG-STD-CFG-001`](standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md). IaC is the preferred mechanism for enforcing those baselines consistently.
 
 ---
 
@@ -210,15 +210,15 @@ Infrastructure-as-code is software and is governed by this standard. Specificall
 
 A security finding in CERG-managed software, whether found by SAST, DAST, SCA, code review, adversarial validation, or post-release disclosure, is a vulnerability.
 
-1. **Pre-production findings are engineering inputs.** A finding caught before go-live is remediated before go-live, or the go-live is risk-accepted per [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). This is the pre-production versus post-production distinction from [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) §4.3.
-2. **Post-production findings follow the VM procedure.** A finding in released, operating software is a managed vulnerability and is remediated against the SLAs in [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md).
+1. **Pre-production findings are engineering inputs.** A finding caught before go-live is remediated before go-live, or the go-live is risk-accepted per [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). This is the pre-production versus post-production distinction from [`CERG-GOV-FRM-001`](governance/CERG-GOV-FRM-001_CERG_Framework.md) §4.3.
+2. **Post-production findings follow the VM procedure.** A finding in released, operating software is a managed vulnerability and is remediated against the SLAs in [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md).
 3. **No silent aging.** A software finding is closed or risk-accepted. It is never simply moved down a backlog until it is forgotten. This is Principle 4.
 
 ---
 
 ## 12. Roles and Responsibilities
 
-Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
+Roles below are the canonical role names from [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
 
 | **Role** | **Secure Development Responsibility** |
 |---|---|
@@ -227,7 +227,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 | **Pre-production Reviewer** | Owns the verification-phase pre-production review and signs go-live readiness for Tier 1 and Tier 2 software. |
 | **Cloud Security Engineer** | Owns pipeline and build security where the pipeline runs on cloud infrastructure; owns IaC misconfiguration scanning. |
 | **Cryptography Engineer** | Owns the secrets management platform that software retrieves credentials from; supports rotation of exposed secrets. |
-| **Vulnerability Management Lead** | Operates the post-production software vulnerability SLAs per [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md). |
+| **Vulnerability Management Lead** | Operates the post-production software vulnerability SLAs per [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md). |
 | **Governance Pillar Leader** | Maintains the exceptions register for gate bypasses; tracks audit-facing evidence; cross-references this standard with the control baseline. |
 | **Policy & Standards Manager** | Maintains this document, its version, and its review cycle. |
 
@@ -258,7 +258,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Application Security) |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on NIST SSDF revision or material toolchain change |
 | **Next Scheduled Review** | 2027-05-21 |
 | **Frameworks** | NIST SSDF 800-218; NIST 800-53r5 (SA, SI, CM); OWASP ASVS / SAMM; NIST 800-161r1; SLSA |
@@ -285,14 +285,14 @@ Cyber Engineering owns this document. The Engineering Pillar Leader (Application
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| CERG Framework | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | Engineering pillar mission and the pre/post-production risk distinction |
-| Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Governs the engagement; this standard governs the code |
-| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Post-production software vulnerability SLAs |
-| Risk Register and Exception Process | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Gate-bypass exceptions |
-| Cryptography and Key Management Standard | [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Secrets management platform; secret rotation |
-| Access Management Standard | [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) | Pipeline access control |
-| Secure Configuration Baseline Standard (DISH) | [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | Baselines that infrastructure-as-code must satisfy |
-| Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Pipeline activity logging |
-| Third-Party and Supply Chain Risk Procedure | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Purchased software; vendor component risk |
-| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `SDL` domain |
+| Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| CERG Framework | [`CERG-GOV-FRM-001`](governance/CERG-GOV-FRM-001_CERG_Framework.md) | Engineering pillar mission and the pre/post-production risk distinction |
+| Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Governs the engagement; this standard governs the code |
+| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Post-production software vulnerability SLAs |
+| Risk Register and Exception Process | [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Gate-bypass exceptions |
+| Cryptography and Key Management Standard | [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Secrets management platform; secret rotation |
+| Access Management Standard | [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md) | Pipeline access control |
+| Secure Configuration Baseline Standard (DISH) | [`CERG-STD-CFG-001`](standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | Baselines that infrastructure-as-code must satisfy |
+| Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Pipeline activity logging |
+| Third-Party and Supply Chain Risk Procedure | [`CERG-PRC-TPRM-001`](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Purchased software; vendor component risk |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `SDL` domain |

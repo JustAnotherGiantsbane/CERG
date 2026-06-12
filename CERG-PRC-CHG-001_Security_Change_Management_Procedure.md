@@ -12,8 +12,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-PLN-SOX-001`](CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) · [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) · [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Documents** | [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-PLN-SOX-001`](plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) · [`CERG-STD-CFG-001`](standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md) · [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [`CERG-STD-SDL-001`](standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) |
 | **Review Cycle** | Annual / On material change to enterprise change management or SOX scope |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (CM, SA, CA) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN, PROTECT) · ISO/IEC 27001 A.8.32 · CIS Controls v8 |
 | **Regulations** | SOX ITGC · CMMC L2 / 800-171r3 · NERC-CIP where changes affect scoped systems |
@@ -55,7 +55,7 @@ This procedure defines how security-relevant changes are identified, reviewed, e
 1. **CERG reviews security impact, not business priority.** The business decides whether a change is important. CERG decides whether the change weakens, bypasses, or requires controls.
 2. **Security review is proportional.** A minor baseline-preserving change does not need a full architecture review. A material change to identity, network, data, cloud, OT, or regulated scope does.
 3. **Emergency does not mean undocumented.** Emergency changes may move faster, but they still record what changed, why, who approved it, and how it was reviewed afterward.
-4. **Changes with residual risk use the risk process.** A change that introduces unresolved security risk is not waved through informally. It is remediated or accepted through [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md).
+4. **Changes with residual risk use the risk process.** A change that introduces unresolved security risk is not waved through informally. It is remediated or accepted through [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md).
 5. **SOX scope gets evidence discipline.** Financially relevant systems require stronger change evidence: request, approval, testing, implementation, and segregation of duties.
 
 ---
@@ -109,9 +109,9 @@ When classification is ambiguous, the Engineering Pillar Leader determines mater
 |---|---|---|
 | Standard security-preserving change | Pre-approved, low-risk, repeatable, and does not weaken a control. | Evidence retained; no separate CERG review unless sampled. |
 | Normal security-relevant change | Planned change with security impact. | CERG review before implementation. |
-| Material architecture change | Creates new trust boundary, data path, identity pattern, internet exposure, vendor integration, AI capability, or regulated scope. | Architecture review under [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). |
+| Material architecture change | Creates new trust boundary, data path, identity pattern, internet exposure, vendor integration, AI capability, or regulated scope. | Architecture review under [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). |
 | Emergency change | Must be implemented before normal review to restore service, contain risk, or meet urgent operational need. | Emergency approval plus post-implementation security review. |
-| Control bypass or exception | Temporarily or permanently weakens an approved control. | Risk acceptance or exception under [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). |
+| Control bypass or exception | Temporarily or permanently weakens an approved control. | Risk acceptance or exception under [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). |
 
 ### 4.1 Security Review Workflow
 
@@ -174,7 +174,7 @@ Every normal security-relevant change answers these questions before implementat
 2. What data classification is affected?
 3. Does the change affect identity, privilege, logging, encryption, backup, segmentation, endpoint posture, or vendor access?
 4. Does the change affect SOX, CUI, NERC-CIP, OT, or other regulated scope?
-5. Does the change create a new threat model trigger under [`CERG-PRC-TM-001`](CERG-PRC-TM-001_Threat_Modeling_Procedure.md)?
+5. Does the change create a new threat model trigger under [`CERG-PRC-TM-001`](procedures/CERG-PRC-TM-001_Threat_Modeling_Procedure.md)?
 6. Does the change create residual risk, and if so, is that risk recorded and approved?
 7. What evidence will prove the change was approved, tested, implemented, and verified?
 8. What rollback or recovery plan exists?
@@ -185,8 +185,8 @@ Every normal security-relevant change answers these questions before implementat
 |---|---|
 | Approved | Security review finds no unresolved issue blocking implementation. |
 | Approved with conditions | Change may proceed only if named conditions are met. |
-| Requires architecture review | Change exceeds normal change review and enters [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). |
-| Requires risk acceptance | Change introduces residual risk requiring [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). |
+| Requires architecture review | Change exceeds normal change review and enters [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). |
+| Requires risk acceptance | Change introduces residual risk requiring [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). |
 | Rejected | Change weakens control posture without sufficient mitigation or acceptance. |
 
 A change cannot be closed as security-approved until conditions, risk acceptances, or architecture-review actions are linked.
@@ -198,10 +198,10 @@ Security reviews are time-bound to prevent the review process from becoming a bo
 | **Change Category** | **SLA** | **Notes** |
 |---|---|---|
 | Emergency security review | 4 hours | Reviewer must respond within 4 hours; post-implementation review within the next business review cycle |
-| Material architecture change | 5 business days | Review may extend if the change enters the full architecture review process per [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) |
+| Material architecture change | 5 business days | Review may extend if the change enters the full architecture review process per [CERG-PRC-AR-001](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) |
 | Normal security-relevant change | 3 business days | Reviewer must provide outcome (Approved / Approved with Conditions / Rejected / Requires AR / Requires RA) within this window |
 | Standard security-preserving change | Sampled (no individual SLA) | Sampled per Section 4.6; no individual review timeline applies |
-| Control bypass or exception | 3 business days for initial assessment; full exception processing per [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Risk acceptance timeline governed by PRC-RM-001 |
+| Control bypass or exception | 3 business days for initial assessment; full exception processing per [CERG-PRC-RM-001](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Risk acceptance timeline governed by PRC-RM-001 |
 
 #### SLA Escalation
 
@@ -298,17 +298,17 @@ For SOX-scope systems, the change record must show:
 - segregation of duties or compensating control where the same person requests, approves, tests, or implements;
 - implementation evidence;
 - post-implementation validation;
-- link to the relevant SOX ITGC control in [`CERG-PLN-SOX-001`](CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md).
+- link to the relevant SOX ITGC control in [`CERG-PLN-SOX-001`](plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md).
 
 ### 7.2 CUI, NERC-CIP, and OT
 
-For CUI, NERC-CIP, and OT-scope systems, the change record must show the regulatory scope considered, the relevant compliance manager consulted, and any required evidence retained in the evidence library under [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md).
+For CUI, NERC-CIP, and OT-scope systems, the change record must show the regulatory scope considered, the relevant compliance manager consulted, and any required evidence retained in the evidence library under [`CERG-PRC-AUD-001`](procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md).
 
 ---
 
 ## 8. Evidence and Records
 
-Security change records are evidence. They are retained under [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) and include, at minimum:
+Security change records are evidence. They are retained under [`CERG-PRC-AUD-001`](procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) and include, at minimum:
 
 | **Evidence Item** | **Required For** |
 |---|---|
@@ -340,7 +340,7 @@ Security change records are evidence. They are retained under [`CERG-PRC-AUD-001
 
 ## 10. Roles and Responsibilities
 
-Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
+Roles below are canonical role names from [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
 
 | **Role** | **Security Change Responsibility** |
 |---|---|
@@ -386,7 +386,7 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CE
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to enterprise change management or SOX scope |
 | **Next Scheduled Review** | 2027-05-22 |
 | **Frameworks** | NIST 800-53r5 (CM, SA, CA); NIST CSF 2.0 (GOVERN, PROTECT); ISO/IEC 27001 A.8.32; CIS Controls v8 |
@@ -413,13 +413,13 @@ Cyber Engineering owns this document. The Engineering Pillar Leader is responsib
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Material changes enter architecture review |
-| Risk Register and Exception Process | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Residual risk and exceptions from changes |
-| SOX ITGC Operational Package | [`CERG-PLN-SOX-001`](CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) | SOX change-control evidence linkage |
-| Secure Configuration Baseline Standard | [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | Baseline-impacting changes |
-| Access Management Standard | [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) | Identity and access changes |
-| Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Logging and monitoring changes |
-| Secure Software Development and Application Security Standard | [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) | Application and SDLC changes |
-| Audit and Evidence Management Procedure | [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) | Change evidence retention |
-| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `CHG` domain |
+| Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Material changes enter architecture review |
+| Risk Register and Exception Process | [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Residual risk and exceptions from changes |
+| SOX ITGC Operational Package | [`CERG-PLN-SOX-001`](plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) | SOX change-control evidence linkage |
+| Secure Configuration Baseline Standard | [`CERG-STD-CFG-001`](standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | Baseline-impacting changes |
+| Access Management Standard | [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md) | Identity and access changes |
+| Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Logging and monitoring changes |
+| Secure Software Development and Application Security Standard | [`CERG-STD-SDL-001`](standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) | Application and SDLC changes |
+| Audit and Evidence Management Procedure | [`CERG-PRC-AUD-001`](procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) | Change evidence retention |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `CHG` domain |

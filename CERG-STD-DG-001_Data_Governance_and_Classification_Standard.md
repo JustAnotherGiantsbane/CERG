@@ -13,8 +13,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Standards** | [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) · [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) · [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Standards** | [`CERG-STD-CUI-001`](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) · [`CERG-STD-AM-001`](standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) · [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md) · [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
 | **Review Cycle** | Annual / On material change to data handling obligations |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (MP, SC-28, AC families) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (ID.AM, PR.DS) · ISO/IEC 27001 A.5.12, A.5.13 · [CIS Controls v8](https://www.cisecurity.org/controls) (Control 3) |
 | **Regulations** | CMMC L2 / 800-171r3 (CUI) · SOX ITGC (financial data) · NERC-CIP (BES Cyber System Information) · privacy regimes where applicable |
@@ -45,7 +45,7 @@ CERG protects data. Every other standard is, in the end, in service of keeping t
 
 This standard establishes the general data governance framework for CERG: the classification scheme, how data is classified and labeled, the handling requirements each classification carries, the data lifecycle, retention and disposal, and data loss prevention.
 
-It applies to all data CERG-managed systems store, process, or transmit, in every environment. It does not replace [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md); CUI is a regulated category with its own exhaustive handling rules, and where data is CUI, the CUI standard governs. This standard provides the general scheme into which CUI fits as the most restrictive category.
+It applies to all data CERG-managed systems store, process, or transmit, in every environment. It does not replace [`CERG-STD-CUI-001`](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md); CUI is a regulated category with its own exhaustive handling rules, and where data is CUI, the CUI standard governs. This standard provides the general scheme into which CUI fits as the most restrictive category.
 
 > **Classification Is Not About Labels. It Is About Treatment.**
 >
@@ -66,7 +66,7 @@ It applies to all data CERG-managed systems store, process, or transmit, in ever
 
 ## 3. The Classification Scheme
 
-CERG uses four classification levels. An organization adopting CERG may rename the levels to fit its own conventions through [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md), but the four-level structure and its meaning are fixed.
+CERG uses four classification levels. An organization adopting CERG may rename the levels to fit its own conventions through [`CERG-GOV-VAR-001`](governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md), but the four-level structure and its meaning are fixed.
 
 | **Level** | **Definition** | **Examples** |
 |---|---|---|
@@ -83,7 +83,7 @@ CERG uses four classification levels. An organization adopting CERG may rename t
 
 ## 4. Classifying Data
 
-1. **The data owner classifies.** Every data asset has an owner, per [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md). The owner assigns the classification and is accountable for it being correct.
+1. **The data owner classifies.** Every data asset has an owner, per [`CERG-STD-AM-001`](standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md). The owner assigns the classification and is accountable for it being correct.
 2. **Classify at creation.** Data is classified when it is created or acquired, not when someone later notices it is sensitive.
 3. **The default is Internal.** Data created without an explicit classification is treated as Internal. The default is deliberately not Public; data is not exposed by omission. Data is not defaulted to Confidential either, because a default that over-classifies trains people to ignore the scheme.
 4. **Regulated data is classified by its regime.** Data subject to a regulatory category, CUI, BES Cyber System Information, financial data in SOX scope, is classified at the level that regime requires, which is Confidential or Restricted, and handled additionally per the relevant standard or operational package.
@@ -106,18 +106,18 @@ This table is the operative core of the standard. It states the minimum handling
 
 | **Handling Control** | **Public** | **Internal** | **Confidential** | **Restricted** |
 |---|---|---|---|---|
-| Access model | Open | All employees | Need-to-know, per [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) | Individually justified, need-to-know |
+| Access model | Open | All employees | Need-to-know, per [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md) | Individually justified, need-to-know |
 | Encryption in transit | Recommended | Required | Required | Required |
 | Encryption at rest | Optional | Recommended | Required | Required |
 | Storage location | Any approved | Approved internal or managed cloud | Approved, access-controlled repositories only | Approved, access-controlled, and monitored repositories only |
 | External sharing | Permitted | Approved business need | Approved, with recipient agreement and controls | Prohibited unless an explicit, recorded authorization exists |
 | Removable media | Permitted | Permitted | Discouraged; encrypted if used | Prohibited unless an exception is recorded |
-| Backup | Per asset class | Per asset class | Required, per [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Required, with recovery tested |
-| Logging of access | Optional | Recommended | Required, per [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Required, access logged and reviewable |
-| Disposal | Standard | Standard | Secure disposal, evidenced | Secure disposal, evidenced, per [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) §9 |
+| Backup | Per asset class | Per asset class | Required, per [`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Required, with recovery tested |
+| Logging of access | Optional | Recommended | Required, per [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Required, access logged and reviewable |
+| Disposal | Standard | Standard | Secure disposal, evidenced | Secure disposal, evidenced, per [`CERG-STD-AM-001`](standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) §9 |
 | Data loss prevention | Not monitored | Monitored | Monitored and enforced | Monitored and enforced |
 
-Encryption requirements are met using the algorithms and key management of [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md). Where a regulated category imposes a stricter requirement than this table, the stricter requirement governs.
+Encryption requirements are met using the algorithms and key management of [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md). Where a regulated category imposes a stricter requirement than this table, the stricter requirement governs.
 
 ---
 
@@ -141,8 +141,8 @@ Data moves through a lifecycle, and a handling requirement applies at each stage
 1. **Data has a retention period.** Each category of data has a defined retention period, set by business need and by legal and regulatory obligation. The retention schedule is maintained by Governance.
 2. **Retention is enforced.** Data is kept for its retention period and is disposed of at the end of it. Keeping data indefinitely "in case" is not a retention decision; it is the absence of one, and it grows the breach surface every year.
 3. **Legal hold overrides retention.** Data subject to a legal hold is preserved regardless of its retention period until the hold is lifted. Legal hold is the one authorized reason to retain data past its schedule.
-4. **Disposal is secure and evidenced.** Disposal of Confidential and Restricted data is secure, sanitization appropriate to the medium and classification, and produces a retained disposal record. Disposal of data assets is coordinated with asset disposal per [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) §9.
-5. **Backups respect retention conceptually but follow their own cycle.** Backup copies follow the backup retention cycle in [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md). Where a regulation requires data to be provably destroyed everywhere, including backups, that requirement is handled through the relevant operational package.
+4. **Disposal is secure and evidenced.** Disposal of Confidential and Restricted data is secure, sanitization appropriate to the medium and classification, and produces a retained disposal record. Disposal of data assets is coordinated with asset disposal per [`CERG-STD-AM-001`](standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) §9.
+5. **Backups respect retention conceptually but follow their own cycle.** Backup copies follow the backup retention cycle in [`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md). Where a regulation requires data to be provably destroyed everywhere, including backups, that requirement is handled through the relevant operational package.
 
 > **Data You No Longer Need Is Pure Liability**
 >
@@ -155,26 +155,26 @@ Data moves through a lifecycle, and a handling requirement applies at each stage
 1. **DLP monitors Confidential and Restricted data.** Data loss prevention monitors for Confidential and Restricted data moving in ways its classification does not permit: leaving the organization by email, upload, or removable media.
 2. **DLP enforces, it does not only observe.** For Confidential and Restricted data, DLP blocks or quarantines unauthorized movement, not merely logs it after the fact.
 3. **DLP uses the classification labels.** DLP acts on the machine-readable labels from Section 5 and on content inspection. This is why labeling sensitive data is required, not optional.
-4. **DLP events are detection signals.** A DLP block or alert is a signal delivered to the detection platform per [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md). A pattern of DLP events involving one user or one dataset is investigated.
+4. **DLP events are detection signals.** A DLP block or alert is a signal delivered to the detection platform per [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md). A pattern of DLP events involving one user or one dataset is investigated.
 5. **DLP coverage spans the data paths.** DLP covers the realistic exfiltration paths for the estate: email, web upload, cloud storage sync, and removable media. Coverage gaps are recorded as accepted risk until closed.
 
 ---
 
 ## 10. Roles and Responsibilities
 
-Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
+Roles below are the canonical role names from [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
 
 | **Role** | **Data Governance Responsibility** |
 |---|---|
 | **Governance Pillar Leader** | Owns this standard. Owns the classification scheme, the retention schedule, and the handling-requirements table. |
 | **Policy & Standards Manager** | Maintains this document; maintains the retention schedule; coordinates labeling guidance. |
 | **Asset Owners** | Classify the data assets they own; assign and maintain the classification; make reclassification decisions. |
-| **Identity Engineer** | Implements need-to-know access for Confidential and Restricted data per [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md). |
+| **Identity Engineer** | Implements need-to-know access for Confidential and Restricted data per [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md). |
 | **Cloud Security Engineer** | Implements DLP on cloud and SaaS data paths; enforces approved storage locations. |
-| **Endpoint Engineer** | Implements DLP and removable-media control on endpoints per [`CERG-STD-EP-001`](CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md). |
+| **Endpoint Engineer** | Implements DLP and removable-media control on endpoints per [`CERG-STD-EP-001`](standards/CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md). |
 | **Cryptography Engineer** | Provides the encryption that the handling table requires. |
 | **Detection Engineer** | Owns detection content for DLP events and anomalous data access. |
-| **CMMC / Federal Compliance Manager** | Ensures CUI, as Restricted data, is also handled per [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md). |
+| **CMMC / Federal Compliance Manager** | Ensures CUI, as Restricted data, is also handled per [`CERG-STD-CUI-001`](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md). |
 | **Evidence Librarian** | Retains disposal records and classification evidence for audit. |
 
 ---
@@ -204,7 +204,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to data handling obligations |
 | **Next Scheduled Review** | 2027-05-21 |
 | **Frameworks** | NIST 800-53r5 (MP, SC-28, AC); NIST CSF 2.0 (ID.AM, PR.DS); ISO/IEC 27001 A.5; CIS Controls v8 (3) |
@@ -231,13 +231,13 @@ Cyber Governance owns this document. The Governance Pillar Leader (Policy & Stan
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| CUI Handling Standard | [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md) | CUI is Restricted data with additional regulated handling |
-| Asset Management and Inventory Standard | [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) | Assets carry the classification this standard defines; data assets and disposal |
-| Access Management Standard | [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) | Need-to-know access for Confidential and Restricted data |
-| Cryptography and Key Management Standard | [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Encryption that the handling table requires |
-| Cyber Resilience and Backup Standard | [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Backup of Confidential and Restricted data |
-| Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Access logging and DLP detection content |
-| Endpoint and Mobile Security Standard | [`CERG-STD-EP-001`](CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md) | Endpoint DLP and removable-media control |
-| Organization Adaptation Profile | [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) | Adopter may rename the classification levels |
-| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `DG` domain |
+| Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| CUI Handling Standard | [`CERG-STD-CUI-001`](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) | CUI is Restricted data with additional regulated handling |
+| Asset Management and Inventory Standard | [`CERG-STD-AM-001`](standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) | Assets carry the classification this standard defines; data assets and disposal |
+| Access Management Standard | [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md) | Need-to-know access for Confidential and Restricted data |
+| Cryptography and Key Management Standard | [`CERG-STD-CR-001`](standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Encryption that the handling table requires |
+| Cyber Resilience and Backup Standard | [`CERG-STD-RES-001`](standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Backup of Confidential and Restricted data |
+| Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Access logging and DLP detection content |
+| Endpoint and Mobile Security Standard | [`CERG-STD-EP-001`](standards/CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md) | Endpoint DLP and removable-media control |
+| Organization Adaptation Profile | [`CERG-GOV-VAR-001`](governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) | Adopter may rename the classification levels |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `DG` domain |

@@ -13,7 +13,7 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
-| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / Upon Significant Change / Material Cloud Service Adoption |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r2/final) · [NIST 800-144](https://csrc.nist.gov/pubs/sp/800/144/final) · NIST RMF · CSA CCM v4 |
 | **Regulations** | [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC · [CMMC L2](https://dodcio.defense.gov/CMMC/) (where applicable) · HIPAA (where applicable) |
@@ -40,7 +40,7 @@
 
 ## 1. Purpose and Scope
 
-This standard implements the foundational principles established in **[CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md)** for information technology assets hosted in owned data centers, leased / colocation facilities, infrastructure-as-a-service (IaaS), platform-as-a-service (PaaS), and software-as-a-service (SaaS) environments. It defines specific, measurable security requirements that apply regardless of whether the underlying infrastructure is owned, leased, rented, or consumed as a service.
+This standard implements the foundational principles established in **[CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md)** for information technology assets hosted in owned data centers, leased / colocation facilities, infrastructure-as-a-service (IaaS), platform-as-a-service (PaaS), and software-as-a-service (SaaS) environments. It defines specific, measurable security requirements that apply regardless of whether the underlying infrastructure is owned, leased, rented, or consumed as a service.
 
 The intent is durable: as the organization continues to shift workloads between owned, hybrid, and fully cloud-native models, the security obligations do not change, only the implementation specifics do. This standard makes those implementation differences explicit while keeping the underlying control intent constant.
 
@@ -58,7 +58,7 @@ This standard applies to:
 
 > **Note on OT and BES Cyber Systems**
 >
-> Grid and control system environments are governed by **[CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md)**. Where an enterprise IT system has direct or indirect connectivity to an OT environment, both standards apply, and the more stringent requirement controls.
+> Grid and control system environments are governed by **[CERG-STD-OT-001](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md)**. Where an enterprise IT system has direct or indirect connectivity to an OT environment, both standards apply, and the more stringent requirement controls.
 
 ### 1.2 The Shared Responsibility Reality
 
@@ -70,7 +70,7 @@ Cloud and SaaS providers operate under a shared responsibility model. The provid
 
 ### 1.3 Relationship to Parent Policy
 
-This standard is subordinate to **[CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md)**. It implements specific requirements; it does not limit any principle established in that policy. Where this standard is silent, the policy governs. Exceptions follow the process defined in [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) Section 7.
+This standard is subordinate to **[CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md)**. It implements specific requirements; it does not limit any principle established in that policy. Where this standard is silent, the policy governs. Exceptions follow the process defined in [CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) Section 7.
 
 ---
 
@@ -147,7 +147,7 @@ Cloud accounts and SaaS tenants are control boundaries. They are governed, not a
 | Scan all IaaS workloads (VMs, containers, serverless functions) for OS, library, and runtime vulnerabilities on a defined cadence. Container images shall be scanned in the build pipeline and before promotion to production. | IaaS / PaaS | Risk / Engineering | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) RA-5 · CIS Top 18 |
 | Detect drift from approved configuration baselines for cloud control-plane resources (e.g., security groups, IAM policies, storage bucket ACLs, encryption settings) within 24 hours. | IaaS / PaaS | Risk / Engineering | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) CM-2(7), CM-6(1) |
 | Vulnerability remediation SLAs follow CERG-PRC-VM-001: Critical (CVSS 9.0+) - 3 days; High (7.0-8.9) - 15 days; Medium (4.0-6.9) - 30 days. Internet-exposed Critical vulnerabilities require remediation within 48 hours per PPR SLA. | IaaS / PaaS | Risk / Engineering | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) SI-2 · CISA KEV |
-| Where a vulnerability cannot be remediated within SLA, document compensating controls and obtain risk acceptance per [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) Section 7. | All Cloud | Risk / Governance | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) SI-2(6) |
+| Where a vulnerability cannot be remediated within SLA, document compensating controls and obtain risk acceptance per [CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) Section 7. | All Cloud | Risk / Governance | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) SI-2(6) |
 
 ---
 
@@ -176,7 +176,7 @@ Cloud accounts and SaaS tenants are control boundaries. They are governed, not a
 | Public exposure of resources (cloud storage, databases, management endpoints) is prohibited unless explicitly justified, documented, and protected by compensating controls. CSPM shall continuously detect and alert on public exposure of in-scope resource types. | IaaS / PaaS | Engineering / Risk | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) SC-7 · CIS Benchmarks |
 | All administrative access to cloud control planes and SaaS admin consoles shall traverse the organization's secure access path (e.g., conditional access + privileged access workstation, or equivalent). | All Cloud / SaaS | Engineering | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) AC-17 · [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) 3.1.12 |
 | Where a cloud environment must interconnect with on-premises systems, the connection (VPN, ExpressRoute, Direct Connect, Cloud Interconnect) shall be terminated in a documented transit network with egress / ingress filtering and traffic logging. | Hybrid | Engineering | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) SC-7(3), SC-8 |
-| IT systems shall not establish direct routed connectivity to OT environments. All IT/OT data flows transit the OT DMZ per [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) and require Engineering approval. | Hybrid | Engineering | [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) §5.1 |
+| IT systems shall not establish direct routed connectivity to OT environments. All IT/OT data flows transit the OT DMZ per [CERG-STD-OT-001](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) and require Engineering approval. | Hybrid | Engineering | [CERG-STD-OT-001](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) §5.1 |
 
 ### 5.3 Data Protection
 
@@ -236,7 +236,7 @@ Cloud accounts and SaaS tenants are control boundaries. They are governed, not a
 | Pre-stage cloud-native isolation actions (e.g., quarantine IAM policies, account-suspend automation, network ACL templates) in approved IaC and validate quarterly. Improvisation during an incident is not acceptable for Tier 1 systems. | IaaS / PaaS | Engineering / Risk | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) IR-4(1), IR-4(2) |
 | Document forensic acquisition procedures per provider, including which artifacts are obtainable, retention windows, and the formal request channels for provider-side data. Validate annually with each Tier 1 provider. | All Cloud / SaaS | Risk / Governance | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) IR-4(6), AU-12 |
 | Confirm and document provider incident notification SLAs. Where a provider's SLA is insufficient for organizational regulatory obligations, compensating monitoring controls shall be implemented. | All Cloud / SaaS | Governance / Risk | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) IR-6 · GDPR Art 33 |
-| Integrate cloud and SaaS response into the master Incident Response Plan (**[CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md)**). Notification timelines for [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204), breach laws, contractual customer commitments, and regulator obligations shall be documented per data class. | All Cloud / SaaS | Governance | [CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md) |
+| Integrate cloud and SaaS response into the master Incident Response Plan (**[CERG-PLN-IR-001](plans/CERG-PLN-IR-001_Incident_Response_Plan.md)**). Notification timelines for [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204), breach laws, contractual customer commitments, and regulator obligations shall be documented per data class. | All Cloud / SaaS | Governance | [CERG-PLN-IR-001](plans/CERG-PLN-IR-001_Incident_Response_Plan.md) |
 
 ---
 
@@ -299,7 +299,7 @@ No control in this standard may be waived without a documented exception. Except
 |---|---|---|---|
 | Standard exception (Internal-data SaaS / non-prod IaaS) | Engineering Pillar Leader + Governance | Submit risk acceptance via risk register with compensating control documentation. | Annual |
 | Tier 1 SaaS / production IaaS | CISO | Risk register entry with compensating controls. Governance reviews shared-responsibility implications. | Annual |
-| Restricted-data placement exception | CISO + Data Owner | Risk register + data classification review. CUI placements additionally subject to [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md). | Annual |
+| Restricted-data placement exception | CISO + Data Owner | Risk register + data classification review. CUI placements additionally subject to [CERG-STD-CUI-001](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md). | Annual |
 | [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant system control gap | CISO + CFO designee | Risk register + ITGC compensating control documentation. External audit notification as required. | Quarterly until closed |
 | Emergency exception (operational necessity) | CISO (post-hoc within 24 hours) | Engineering may take emergency action; document immediately, formal exception within 24 hours. | 30 days maximum |
 
@@ -329,7 +329,7 @@ Governance owns this document. The Governance Pillar Leader (Enterprise IT/Cloud
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy - this standard is subordinate |
-| Grid and Control System Standard | [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | Peer standard - governs OT estates and IT/OT boundary |
-| CUI Handling Standard | [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) | Peer standard - applies in addition where CUI is present |
-| Access Management Standard | [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) | Pe
+| Cybersecurity Policy | [CERG-POL-001](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy - this standard is subordinate |
+| Grid and Control System Standard | [CERG-STD-OT-001](standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | Peer standard - governs OT estates and IT/OT boundary |
+| CUI Handling Standard | [CERG-STD-CUI-001](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) | Peer standard - applies in addition where CUI is present |
+| Access Management Standard | [CERG-STD-AC-001](standards/CERG-STD-AC-001_Access_Management_Standard.md) | Pe

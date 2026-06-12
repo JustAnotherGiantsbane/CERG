@@ -13,8 +13,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) · [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) · [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Documents** | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) · [`CERG-GOV-IMP-001`](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) · [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) |
 | **Review Cycle** | Annual / On any change to the canonical role roster or the artifact catalog |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (PM, PS families) · ISO/IEC 27001 A.5.2, A.5.4 |
 | **Regulations** | Cross-cutting |
@@ -39,7 +39,7 @@
 
 ## 1. Purpose and Scope
 
-[`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1 establishes the canonical role roster, the single source of truth for role names. §9 of that document gives three sample RACI patterns and states plainly that "specific RACI matrices are maintained per process." That sentence describes a document that did not exist. This is that document.
+[`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1 establishes the canonical role roster, the single source of truth for role names. §9 of that document gives three sample RACI patterns and states plainly that "specific RACI matrices are maintained per process." That sentence describes a document that did not exist. This is that document.
 
 This instrument consolidates, in one place: the canonical role reference, a master RACI covering every CERG artifact and every standing process, a normalized description for each canonical role, and the scaling map that shows how the roles consolidate onto fewer people as a team gets smaller.
 
@@ -57,7 +57,7 @@ The division of labor is deliberate and must stay clean.
 
 | **Document** | **Owns** |
 |---|---|
-| [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1 | The canonical role roster: the authoritative list of role *names* and their synonyms. |
+| [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1 | The canonical role roster: the authoritative list of role *names* and their synonyms. |
 | This instrument (`CERG-GOV-RAC-001`) | The consolidated RACI and the normalized role *descriptions*: who is Responsible, Accountable, Consulted, and Informed across every artifact and process. |
 | Each standard, procedure, and plan | Its own subject matter. It may carry a local roles table for the reader's convenience, but that table conforms to this instrument. |
 
@@ -79,14 +79,14 @@ Rules that govern every row in this instrument:
 1. **Exactly one A per row.** Accountability is never shared. A row with two A's has no owner; a row with no A is unowned work. Either is a finding.
 2. **A and R may be the same role.** On any team, and especially a small one, the role accountable for an outcome often also does the work. That is shown as **R/A**.
 3. **The A cannot be only Informed.** A role accountable for an outcome is never merely Informed of it.
-4. **Approval authority is not overridden here.** Where a row involves risk acceptance, the accountable approver is the one named in the authority table of [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. This instrument does not change who may accept risk.
-5. **Roles are canonical.** Every role in this instrument is a canonical role from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1. No synonyms.
+4. **Approval authority is not overridden here.** Where a row involves risk acceptance, the accountable approver is the one named in the authority table of [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. This instrument does not change who may accept risk.
+5. **Roles are canonical.** Every role in this instrument is a canonical role from [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1. No synonyms.
 
 ---
 
 ## 4. The Canonical Role Reference
 
-The 27 canonical roles, grouped by pillar, as established in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1. This table is a reference copy for use with the RACI below; the Operating Model remains authoritative for the roster itself.
+The 27 canonical roles, grouped by pillar, as established in [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1. This table is a reference copy for use with the RACI below; the Operating Model remains authoritative for the roster itself.
 
 | **Group** | **Canonical Roles** | **NICE Work Role Category** |
 |---|---|---|
@@ -96,13 +96,13 @@ The 27 canonical roles, grouped by pillar, as established in [`CERG-GOV-OM-001`]
 | Governance | Governance Pillar Leader; NERC-CIP Compliance Manager; CMMC / Federal Compliance Manager; SOX ITGC Lead; Policy & Standards Manager; Risk Register Owner; Evidence Librarian | OV (Oversee and Govern) |
 | Adjacent (IR team) | Incident Commander; Lead Investigator | PR (Protect and Defend), IN (Investigate) |
 
-The two Adjacent roles belong to the standing Incident Response team, not to CERG, per [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4. They appear in this instrument only where CERG work interfaces with incident response.
+The two Adjacent roles belong to the standing Incident Response team, not to CERG, per [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4. They appear in this instrument only where CERG work interfaces with incident response.
 
 ---
 
 ## 5. Master RACI: Document Ownership
 
-This RACI assigns accountability for each artifact in the CERG library: who owns it (A), who drafts and maintains it (R), and who is Consulted and Informed on its content. Approval authority by document type follows [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) §4; this table shows the working RACI underneath that authority.
+This RACI assigns accountability for each artifact in the CERG library: who owns it (A), who drafts and maintains it (R), and who is Consulted and Informed on its content. Approval authority by document type follows [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) §4; this table shows the working RACI underneath that authority.
 
 Columns are abbreviated: **ENG-L** Engineering Pillar Leader, **RISK-L** Risk Pillar Leader, **GOV-L** Governance Pillar Leader, **P&S** Policy & Standards Manager, **CISO** Chief Information Security Officer.
 
@@ -150,15 +150,15 @@ Columns are abbreviated: **ENG-L** Engineering Pillar Leader, **RISK-L** Risk Pi
 
 > **Standard Authorship Sits With Engineering; Standard Authority Sits With Governance**
 >
-> Several standards show the Engineering Pillar Leader as R/A. That is the working reality: Engineering writes and maintains the technical standards because Engineering holds the expertise. It does not change the approval authority in [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) §4, under which a standard is approved by the Governance Pillar Leader with CISO endorsement. The R/A in this table is accountability for the artifact's content and upkeep. The catalog governs who signs it into force. Both are true at once, and neither overrides the other.
+> Several standards show the Engineering Pillar Leader as R/A. That is the working reality: Engineering writes and maintains the technical standards because Engineering holds the expertise. It does not change the approval authority in [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) §4, under which a standard is approved by the Governance Pillar Leader with CISO endorsement. The R/A in this table is accountability for the artifact's content and upkeep. The catalog governs who signs it into force. Both are true at once, and neither overrides the other.
 >
-> The Incident Response Plan shows no CERG role as A, by design: per [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4 it is owned by the standing IR team. CERG roles are Consulted and Informed only.
+> The Incident Response Plan shows no CERG role as A, by design: per [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4 it is owned by the standing IR team. CERG roles are Consulted and Informed only.
 
 ---
 
 ## 6. Master RACI: Standing Processes
 
-This RACI covers the recurring processes that make up the running program. It extends the three sample patterns in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §9 into a complete set.
+This RACI covers the recurring processes that make up the running program. It extends the three sample patterns in [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §9 into a complete set.
 
 Columns: **ENG** Engineering pillar, **RISK** Risk pillar, **GOV** Governance pillar, **OWNER** Business or Asset Owner, **CISO** Chief Information Security Officer. A cell names the specific canonical role where one role within the pillar carries it.
 
@@ -183,7 +183,7 @@ Columns: **ENG** Engineering pillar, **RISK** Risk pillar, **GOV** Governance pi
 | Threat intelligence collection and dissemination | C | **R/A** Threat Intelligence Analyst | C | I | I |
 | Risk register entry and curation | I | C | **R/A** Risk Register Owner | I | I |
 | Risk treatment decision | C | C | C | **A** | I (review High+) |
-| Risk acceptance approval | per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 | per RMF §9.7 | per RMF §9.7 | C | **A** for High+ |
+| Risk acceptance approval | per [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 | per RMF §9.7 | per RMF §9.7 | C | **A** for High+ |
 | Exception request and tracking | C | C | **R/A** Risk Register Owner | C | I |
 | Third-party and supply chain risk assessment | C | **R/A** Vendor Risk Analyst | C | C | I |
 
@@ -212,7 +212,7 @@ Columns: **ENG** Engineering pillar, **RISK** Risk pillar, **GOV** Governance pi
 
 > **Incident Response Is Supported, Not Owned**
 >
-> Section 6.4 shows incident response operations with CERG roles as Consulted, never Accountable. This is the boundary set by [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4. The standing IR team owns and runs the incident. CERG detects the incident, hands it off, supplies the Engineering Lead, Lead Investigator, and Governance Lead roles when the IR team calls for them, and afterward records the post-incident risk in the register. The Incident Commander, an Adjacent role, is Accountable for the incident itself, which is why no CERG column carries the A.
+> Section 6.4 shows incident response operations with CERG roles as Consulted, never Accountable. This is the boundary set by [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4. The standing IR team owns and runs the incident. CERG detects the incident, hands it off, supplies the Engineering Lead, Lead Investigator, and Governance Lead roles when the IR team calls for them, and afterward records the post-incident risk in the register. The Incident Commander, an Adjacent role, is Accountable for the incident itself, which is why no CERG column carries the A.
 
 ---
 
@@ -222,9 +222,9 @@ A normalized one-paragraph description for each canonical role. These are the jo
 
 ### 7.1 Executive
 
-**Chief Information Security Officer (CISO).** Accountable for the cybersecurity program as a whole. Sets strategy, reports posture and material risk to executive leadership and the board, and holds final authority on High and Critical risk acceptance per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. Accountable for the Cybersecurity Policy and the CERG Framework, and for the Quarterly Cyber Oversight Group brief.
+**Chief Information Security Officer (CISO).** Accountable for the cybersecurity program as a whole. Sets strategy, reports posture and material risk to executive leadership and the board, and holds final authority on High and Critical risk acceptance per [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. Accountable for the Cybersecurity Policy and the CERG Framework, and for the Quarterly Cyber Oversight Group brief.
 
-**Executive Sponsor.** The business voice in the program. Provides concurrence for Critical risk acceptance per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7, sits on the Cyber Oversight Group, and endorses the Cybersecurity Policy on behalf of the business. On a small team, provides the independent second view on risk acceptance where roles are otherwise consolidated.
+**Executive Sponsor.** The business voice in the program. Provides concurrence for Critical risk acceptance per [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7, sits on the Cyber Oversight Group, and endorses the Cybersecurity Policy on behalf of the business. On a small team, provides the independent second view on risk acceptance where roles are otherwise consolidated.
 
 ### 7.2 Engineering
 
@@ -246,7 +246,7 @@ A normalized one-paragraph description for each canonical role. These are the jo
 
 ### 7.3 Risk
 
-**Risk Pillar Leader.** Accountable for the Cyber Risk pillar: the organization's exposure posture and the reporting of it. Holds Medium severity risk-acceptance authority per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7.
+**Risk Pillar Leader.** Accountable for the Cyber Risk pillar: the organization's exposure posture and the reporting of it. Holds Medium severity risk-acceptance authority per [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7.
 
 **Vulnerability Management Lead.** Operates the Vulnerability Management Procedure. Accountable for remediation SLAs and vulnerability posture metrics.
 
@@ -264,7 +264,7 @@ A normalized one-paragraph description for each canonical role. These are the jo
 
 ### 7.4 Governance
 
-**Governance Pillar Leader.** Accountable for the Cyber Governance pillar: policy and standards, compliance, control evidence, the risk register, and audit response. Approves standards with CISO endorsement. Holds Low and Informational severity risk-acceptance authority per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. Accountable for most governance instruments and operational packages.
+**Governance Pillar Leader.** Accountable for the Cyber Governance pillar: policy and standards, compliance, control evidence, the risk register, and audit response. Approves standards with CISO endorsement. Holds Low and Informational severity risk-acceptance authority per [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. Accountable for most governance instruments and operational packages.
 
 **NERC-CIP Compliance Manager.** Owns OT and BES Cyber System compliance posture and the NERC-CIP Operational Package.
 
@@ -288,7 +288,7 @@ A normalized one-paragraph description for each canonical role. These are the jo
 
 ## 8. The Scaling Map
 
-The canonical role roster is fixed at 27 roles. A small team does not delete roles; it assigns several roles to one person. This is the principle established in [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) §6. This section makes the consolidation concrete so a small team can see exactly who holds what.
+The canonical role roster is fixed at 27 roles. A small team does not delete roles; it assigns several roles to one person. This is the principle established in [`CERG-GOV-IMP-001`](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) §6. This section makes the consolidation concrete so a small team can see exactly who holds what.
 
 ### 8.1 The Rule
 
@@ -308,7 +308,7 @@ The Executive Sponsor is a business role, held by a business leader outside the 
 
 ### 8.3 The One Constraint That Does Not Scale Down
 
-Risk-acceptance authority does not consolidate freely. The separation of the person who assesses a risk from the person who accepts it holds at every team size, per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. Where consolidation would put assessment and acceptance of a High or Critical risk in the same person, the Executive Sponsor provides the independent acceptance. A small team consolidates work; it does not consolidate away the second set of eyes on consequential risk.
+Risk-acceptance authority does not consolidate freely. The separation of the person who assesses a risk from the person who accepts it holds at every team size, per [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. Where consolidation would put assessment and acceptance of a High or Critical risk in the same person, the Executive Sponsor provides the independent acceptance. A small team consolidates work; it does not consolidate away the second set of eyes on consequential risk.
 
 > **A Consolidated Role Is Still an Owned Role**
 >
@@ -318,9 +318,9 @@ Risk-acceptance authority does not consolidate freely. The separation of the per
 
 ## 9. Maintaining This Instrument
 
-1. **A new artifact is added to Section 5.** When an artifact is registered in [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md), a row is added to the Section 5 RACI in the same change.
+1. **A new artifact is added to Section 5.** When an artifact is registered in [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md), a row is added to the Section 5 RACI in the same change.
 2. **A new process is added to Section 6.** When a new standing process is established by a standard or procedure, its RACI row is added to Section 6.
-3. **A roster change flows from the Operating Model.** A role is never added, renamed, or retired here. That happens in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1, and this instrument is then updated to match.
+3. **A roster change flows from the Operating Model.** A role is never added, renamed, or retired here. That happens in [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1, and this instrument is then updated to match.
 4. **Subordinate documents conform to this instrument.** A standard or procedure whose local roles table disagrees with this instrument is corrected on its next revision, per the precedence rule in Section 1.
 5. **The instrument is reviewed annually.** The review confirms every row still has exactly one A, every role is still canonical, and the scaling map still reflects the role roster.
 
@@ -337,7 +337,7 @@ Risk-acceptance authority does not consolidate freely. The separation of the per
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on any change to the canonical role roster or the artifact catalog |
 | **Next Scheduled Review** | 2027-05-21 |
 | **Frameworks** | NIST CSF 2.0 (GOVERN); NIST 800-53r5 (PM, PS); ISO/IEC 27001 A.5 |
@@ -352,10 +352,10 @@ Risk-acceptance authority does not consolidate freely. The separation of the per
 
 ### Review Triggers
 
-- A new artifact registered in [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md)
+- A new artifact registered in [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md)
 - A new standing process established by a standard or procedure
-- Any change to the canonical role roster in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1
-- A change to the risk-acceptance authority table in [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7
+- Any change to the canonical role roster in [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1
+- A change to the risk-acceptance authority table in [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7
 - Direction from the CISO
 
 Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO endorsement for all changes.
@@ -364,8 +364,8 @@ Governance owns this document. The Governance Pillar Leader (Policy & Standards)
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Authoritative canonical role roster; the sample RACI this instrument completes |
-| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Artifact inventory; per-type approval authority |
-| Risk Management Framework | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk-acceptance authority that this instrument does not override |
-| Implementation and Adaptation Guide | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Role-consolidation principle that the scaling map makes concrete |
+| Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| CERG Operating Model | [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | Authoritative canonical role roster; the sample RACI this instrument completes |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Artifact inventory; per-type approval authority |
+| Risk Management Framework | [`CERG-GOV-RMF-001`](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk-acceptance authority that this instrument does not override |
+| Implementation and Adaptation Guide | [`CERG-GOV-IMP-001`](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Role-consolidation principle that the scaling map makes concrete |

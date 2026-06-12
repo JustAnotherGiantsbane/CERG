@@ -5,7 +5,7 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual |
 | **Frameworks** | NIST CSF 2.0 |
 | **Regulations** | Cross-cutting |
@@ -29,7 +29,7 @@
 
 ## 1. Purpose and Scope
 
-This document defines what qualifies as acceptable evidence in the CERG operating model. It extends the evidence quality tiers (E1/E2/E3) defined in [FLOW-001 §16](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) with specific quality rules, sampling methodology, and freshness requirements.
+This document defines what qualifies as acceptable evidence in the CERG operating model. It extends the evidence quality tiers (E1/E2/E3) defined in [FLOW-001 §16](governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) with specific quality rules, sampling methodology, and freshness requirements.
 
 This standard applies to every CERG artifact that produces or references evidence: the Unified Control Baseline (CB-001), the Audit and Evidence Management Procedure (PRC-AUD-001), the Risk Register and Exception Process (PRC-RM-001), and all standards and procedures that define evidence requirements.
 
@@ -347,7 +347,7 @@ Different controls produce different evidence. This section maps control types t
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual |
 | **Next Scheduled Review** | 2027-06-11 |
 | **Frameworks** | NIST CSF 2.0 |
@@ -371,9 +371,9 @@ Different controls produce different evidence. This section maps control types t
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| Cross-Pillar Operational Flows | [`CERG-GOV-FLOW-001`](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) | Evidence quality tiers (E1/E2/E3) |
-| Unified Control Baseline | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control definitions and evidence requirements |
-| Audit and Evidence Management Procedure | [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) | Operational evidence collection and audit response |
-| Control Effectiveness Framework | [`CERG-GOV-CEF-001`](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) | Control testing methodology |
-| Risk Register and Exception Process | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Risk acceptance evidence requirements |
+| Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| Cross-Pillar Operational Flows | [`CERG-GOV-FLOW-001`](governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) | Evidence quality tiers (E1/E2/E3) |
+| Unified Control Baseline | [`CERG-GOV-CB-001`](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control definitions and evidence requirements |
+| Audit and Evidence Management Procedure | [`CERG-PRC-AUD-001`](procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) | Operational evidence collection and audit response |
+| Control Effectiveness Framework | [`CERG-GOV-CEF-001`](governance/CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) | Control testing methodology |
+| Risk Register and Exception Process | [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Risk acceptance evidence requirements |

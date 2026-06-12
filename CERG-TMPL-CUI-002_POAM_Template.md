@@ -13,8 +13,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | CMMC / Federal Compliance Manager |
-| **Parent Plan** | [`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) - CUI / CMMC Operational Package |
-| **Supporting Documents** | [`CERG-TMPL-CUI-001`](CERG-TMPL-CUI-001_System_Security_Plan_Template.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) |
+| **Parent Plan** | [`CERG-PLN-CUI-001`](plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) - CUI / CMMC Operational Package |
+| **Supporting Documents** | [`CERG-TMPL-CUI-001`](templates/CERG-TMPL-CUI-001_System_Security_Plan_Template.md) · [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-PRC-AUD-001`](procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) |
 | **Review Cycle** | Monthly while open / Annual template review |
 | **Frameworks** | NIST 800-171r3 · NIST 800-172 · CMMC L2 · NIST 800-53r5 CA |
 | **Regulations** | Controlled Unclassified Information / CMMC contractual obligations |
@@ -162,7 +162,7 @@ POA&M review outputs:
 | **Classification** | Public |
 | **Owner** | CMMC / Federal Compliance Manager |
 | **Approved By** | CISO |
-| **Parent Plan** | [`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) - CUI / CMMC Operational Package |
+| **Parent Plan** | [`CERG-PLN-CUI-001`](plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) - CUI / CMMC Operational Package |
 | **Review Cycle** | Monthly while open; annual template review |
 | **Next Scheduled Review** | 2027-05-22 |
 | **Frameworks** | NIST 800-171r3; NIST 800-172; CMMC L2; NIST 800-53r5 CA |

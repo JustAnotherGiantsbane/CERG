@@ -13,8 +13,8 @@
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Application Security) |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Standards** | [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) · [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) · [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) · [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Supporting Standards** | [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) · [`CERG-STD-SDL-001`](standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) · [`CERG-STD-IT-001`](standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md) · [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
 | **Review Cycle** | Annual / On material change to AI use or AI regulation |
 | **Frameworks** | [NIST AI RMF 100-1](https://www.nist.gov/itl/ai-risk-management-framework) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) · ISO/IEC 42001 |
 | **Regulations** | CMMC L2 / 800-171r3 (where AI processes CUI) · SOX ITGC (where AI supports financial processes) · privacy regimes where applicable |
@@ -79,8 +79,8 @@ CERG governs three categories of AI use. The requirements differ by category.
 ## 4. Acceptable Use of AI
 
 1. **Use sanctioned AI tools.** Employees use the AI services and tools the program has assessed and approved. The list of sanctioned AI tools is maintained by Governance and is visible to staff.
-2. **Classify before you prompt.** Before data is placed into an AI tool, the user considers its classification per [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md). Section 5 governs what may go where.
-3. **Review AI output before relying on it.** AI-generated content, code, analysis, or recommendations are reviewed by a competent person before being used. AI-generated code additionally passes the gates in [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md); AI is not an exception to code review.
+2. **Classify before you prompt.** Before data is placed into an AI tool, the user considers its classification per [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md). Section 5 governs what may go where.
+3. **Review AI output before relying on it.** AI-generated content, code, analysis, or recommendations are reviewed by a competent person before being used. AI-generated code additionally passes the gates in [`CERG-STD-SDL-001`](standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md); AI is not an exception to code review.
 4. **Do not use AI to make prohibited decisions unaided.** AI does not unilaterally make decisions about employment, safety, control system operation, or anything else where Principle 4 applies.
 5. **Attribute and disclose where required.** Where a regulator, a contract, or a customer requires disclosure that AI was used, that disclosure is made.
 
@@ -90,13 +90,13 @@ CERG governs three categories of AI use. The requirements differ by category.
 
 This section applies the data classification scheme to AI use. It is the most important operational section of the standard.
 
-1. **A prompt to a third-party AI service is treated as external sharing.** Placing data into a consumed AI service is governed by the external-sharing rules of [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) §6.
+1. **A prompt to a third-party AI service is treated as external sharing.** Placing data into a consumed AI service is governed by the external-sharing rules of [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) §6.
 2. **Classification limits on AI input:**
    - **Public and Internal data** may be placed into sanctioned AI tools.
    - **Confidential data** may be placed only into AI services that have been assessed and approved for Confidential data, with contractual assurance that input is not used to train the provider's models and is handled to the program's bar.
-   - **Restricted data**, including CUI and BES Cyber System Information, is not placed into a third-party AI service unless that service is explicitly authorized for that regulated category and an authorization is recorded. For CUI this means the service satisfies [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md).
+   - **Restricted data**, including CUI and BES Cyber System Information, is not placed into a third-party AI service unless that service is explicitly authorized for that regulated category and an authorization is recorded. For CUI this means the service satisfies [`CERG-STD-CUI-001`](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md).
 3. **Training data is classified data.** Data used to train, fine-tune, or ground an in-house or embedded AI system carries its classification, and the resulting model is treated as carrying the classification of its most sensitive training data.
-4. **AI interactions are logged where they touch sensitive data.** Use of AI systems that process Confidential or Restricted data is logged per [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md).
+4. **AI interactions are logged where they touch sensitive data.** Use of AI systems that process Confidential or Restricted data is logged per [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md).
 
 > **The Prompt Is the Leak**
 >
@@ -106,10 +106,10 @@ This section applies the data classification scheme to AI use. It is the most im
 
 ## 6. In-House and Embedded AI Systems
 
-An AI application the organization builds is software and is fully governed by [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md). In addition:
+An AI application the organization builds is software and is fully governed by [`CERG-STD-SDL-001`](standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md). In addition:
 
-1. **AI applications go through architecture review.** An AI application or integration is subject to project intake and architecture review per [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md), with the AI-specific threats in Section 7 explicitly in scope of the threat model.
-2. **The model is an inventoried component.** A model, whether trained in-house or a third-party model the application depends on, is a component recorded in the asset inventory per [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) and, where applicable, in the software bill of materials per [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) §8.
+1. **AI applications go through architecture review.** An AI application or integration is subject to project intake and architecture review per [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md), with the AI-specific threats in Section 7 explicitly in scope of the threat model.
+2. **The model is an inventoried component.** A model, whether trained in-house or a third-party model the application depends on, is a component recorded in the asset inventory per [`CERG-STD-AM-001`](standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) and, where applicable, in the software bill of materials per [`CERG-STD-SDL-001`](standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) §8.
 3. **Model provenance is known.** The source of any third-party or open model used is known and trusted. A model from an unverified source is a supply chain risk.
 4. **AI applications enforce least privilege.** An AI system, and any agent or tool-using capability it has, operates with the least privilege required. An AI agent does not run with broad standing access on the assumption it will behave.
 5. **AI output that triggers action is bounded.** Where an AI system can trigger an action, send a message, change a record, call an API, the actions it can take are constrained and high-consequence actions require human confirmation.
@@ -118,7 +118,7 @@ An AI application the organization builds is software and is fully governed by [
 
 ## 7. AI-Specific Threats
 
-CERG-built and embedded AI systems are designed and tested against the AI-specific threat classes below, aligned to the OWASP Top 10 for LLM Applications. These threats are explicitly in scope of the threat model required by [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md).
+CERG-built and embedded AI systems are designed and tested against the AI-specific threat classes below, aligned to the OWASP Top 10 for LLM Applications. These threats are explicitly in scope of the threat model required by [`CERG-STD-SDL-001`](standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md).
 
 | **Threat** | **What It Is** | **Required Mitigation Direction** |
 |---|---|---|
@@ -133,8 +133,8 @@ CERG-built and embedded AI systems are designed and tested against the AI-specif
 
 ## 8. Third-Party AI Services
 
-1. **AI services are assessed before adoption.** A consumed AI service or an AI-enabled vendor feature is risk-assessed before use through [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md). The assessment covers, at minimum: what the provider does with input data, whether input trains the provider's models, data retention and location, and the provider's own security posture.
-2. **Embedded AI features are assessed when they appear.** A vendor adding an AI feature to existing software is a material change to that vendor's risk profile and triggers reassessment. AI features that arrive silently in an update are caught by the reassessment cadence in [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md).
+1. **AI services are assessed before adoption.** A consumed AI service or an AI-enabled vendor feature is risk-assessed before use through [`CERG-PRC-TPRM-001`](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md). The assessment covers, at minimum: what the provider does with input data, whether input trains the provider's models, data retention and location, and the provider's own security posture.
+2. **Embedded AI features are assessed when they appear.** A vendor adding an AI feature to existing software is a material change to that vendor's risk profile and triggers reassessment. AI features that arrive silently in an update are caught by the reassessment cadence in [`CERG-PRC-TPRM-001`](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md).
 3. **Approval is by data classification.** A service is approved for a maximum data classification per Section 5. Approval for Internal use is not approval for Confidential or Restricted use.
 4. **The sanctioned list is maintained.** The outcome of assessment is the sanctioned AI tools list, which states each tool and the maximum classification it is approved for.
 
@@ -144,10 +144,10 @@ CERG-built and embedded AI systems are designed and tested against the AI-specif
 
 Shadow AI is the use of AI services that the program has not assessed or approved. It is the dominant AI risk in most organizations.
 
-1. **Shadow AI is shadow IT.** Unsanctioned AI use is treated as unsanctioned technology under [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md). It is discovered, assessed, and then either sanctioned or stopped.
+1. **Shadow AI is shadow IT.** Unsanctioned AI use is treated as unsanctioned technology under [`CERG-STD-IT-001`](standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md). It is discovered, assessed, and then either sanctioned or stopped.
 2. **Discovery looks for it.** The program actively looks for unsanctioned AI use, through network and SaaS discovery and through expense and procurement signals. AI use that is invisible cannot be governed.
-3. **The response is a path to sanctioned use, not only a block.** When shadow AI is found, the program assesses whether the underlying need can be met by a sanctioned tool and provides one. A pure block with no sanctioned alternative drives the use further underground. This is the "yes, and..." model of [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) applied to AI: enable the need, on safe ground.
-4. **Repeated or high-risk shadow AI is a risk register entry.** A pattern of shadow AI, or a single instance involving Confidential or Restricted data, is recorded and tracked per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md).
+3. **The response is a path to sanctioned use, not only a block.** When shadow AI is found, the program assesses whether the underlying need can be met by a sanctioned tool and provides one. A pure block with no sanctioned alternative drives the use further underground. This is the "yes, and..." model of [`CERG-GOV-FRM-001`](governance/CERG-GOV-FRM-001_CERG_Framework.md) applied to AI: enable the need, on safe ground.
+4. **Repeated or high-risk shadow AI is a risk register entry.** A pattern of shadow AI, or a single instance involving Confidential or Restricted data, is recorded and tracked per [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md).
 
 > **Banning AI Does Not Work. Governing It Does.**
 >
@@ -157,18 +157,18 @@ Shadow AI is the use of AI services that the program has not assessed or approve
 
 ## 10. Roles and Responsibilities
 
-Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
+Roles below are the canonical role names from [`CERG-GOV-OM-001`](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
 
 | **Role** | **AI Security Responsibility** |
 |---|---|
 | **Application Security Engineer** | Owns this standard. Owns AI threat modeling, the security of built and embedded AI systems, and the AI-specific gate content in secure development. |
 | **Engineering Pillar Leader** | Accountable for AI security across the pillar; owns architecture review of AI applications. |
 | **Governance Pillar Leader** | Owns the sanctioned AI tools list, the acceptable-use position, and AI governance reporting. |
-| **Vendor Risk Analyst** | Assesses third-party AI services and AI-enabled vendor features per [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md). |
+| **Vendor Risk Analyst** | Assesses third-party AI services and AI-enabled vendor features per [`CERG-PRC-TPRM-001`](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md). |
 | **Cloud Security Engineer** | Owns discovery of shadow AI through SaaS and network signals. |
 | **Detection Engineer** | Owns detection content for shadow AI use and for anomalous AI-system behavior. |
 | **Policy & Standards Manager** | Maintains this document; maintains the sanctioned AI tools list as a living reference. |
-| **CMMC / Federal Compliance Manager** | Confirms AI use touching CUI satisfies [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md). |
+| **CMMC / Federal Compliance Manager** | Confirms AI use touching CUI satisfies [`CERG-STD-CUI-001`](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md). |
 | **Risk Register Owner** | Records shadow AI and AI-risk findings in the register. |
 
 ---
@@ -197,7 +197,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-00
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Application Security) |
 | **Approved By** | CISO |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to AI use or AI regulation |
 | **Next Scheduled Review** | 2027-05-21 |
 | **Frameworks** | NIST AI RMF 100-1; NIST 800-53r5; OWASP Top 10 for LLM Applications; ISO/IEC 42001 |
@@ -224,15 +224,15 @@ Cyber Engineering owns this document. The Engineering Pillar Leader (Application
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
-| Data Governance and Classification Standard | [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) | Classification scheme that governs AI input |
-| Secure Software Development and Application Security Standard | [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) | Built and embedded AI systems are governed software |
-| IT / Cloud / SaaS Security Standard | [`CERG-STD-IT-001`](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | Shadow AI treated as shadow IT |
-| Access Management Standard | [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) | Least privilege for AI systems and agents |
-| Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Logging of AI use touching sensitive data; shadow-AI detection |
-| Asset Management and Inventory Standard | [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) | Models as inventoried components |
-| CUI Handling Standard | [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md) | AI use touching CUI |
-| Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Architecture review of AI applications |
-| Third-Party and Supply Chain Risk Procedure | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Assessment of third-party AI services |
-| Risk Register and Exception Process | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Shadow AI and AI-risk findings |
-| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `AI` domain |
+| Cybersecurity Policy | [`CERG-POL-001`](governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| Data Governance and Classification Standard | [`CERG-STD-DG-001`](standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) | Classification scheme that governs AI input |
+| Secure Software Development and Application Security Standard | [`CERG-STD-SDL-001`](standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) | Built and embedded AI systems are governed software |
+| IT / Cloud / SaaS Security Standard | [`CERG-STD-IT-001`](standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | Shadow AI treated as shadow IT |
+| Access Management Standard | [`CERG-STD-AC-001`](standards/CERG-STD-AC-001_Access_Management_Standard.md) | Least privilege for AI systems and agents |
+| Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Logging of AI use touching sensitive data; shadow-AI detection |
+| Asset Management and Inventory Standard | [`CERG-STD-AM-001`](standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) | Models as inventoried components |
+| CUI Handling Standard | [`CERG-STD-CUI-001`](standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) | AI use touching CUI |
+| Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Architecture review of AI applications |
+| Third-Party and Supply Chain Risk Procedure | [`CERG-PRC-TPRM-001`](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Assessment of third-party AI services |
+| Risk Register and Exception Process | [`CERG-PRC-RM-001`](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Shadow AI and AI-risk findings |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `AI` domain |
