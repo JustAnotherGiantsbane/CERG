@@ -8,7 +8,7 @@
 | **Document ID** | CERG-GOV-STY-002 |
 | **Version** | 1.0 |
 | **Status** | Active |
-| **Classification** | Internal |
+| **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Quarterly |

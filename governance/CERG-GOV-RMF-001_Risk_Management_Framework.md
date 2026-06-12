@@ -5,7 +5,7 @@
 | **Document ID** | CERG-GOV-RMF-001 |
 | **Version** | 1.3 |
 | **Status** | Approved |
-| **Classification** | Internal / Restricted |
+| **Classification** | Public |
 | **Owner** | Cyber Governance (CERG Pillar) |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - CERG Cybersecurity Policy |
 | **Review Cycle** | Annual; triggered by significant regulatory change or organizational change |
@@ -644,7 +644,7 @@ Cascading changes from a risk appetite adjustment are tracked in the improvement
 | **Version** | 1.3 |
 | **Status** | Approved |
 | **Effective Date** | 2026-05-26 |
-| **Classification** | Internal / Restricted |
+| **Classification** | Public |
 | **Document Owner** | Cyber Governance (CERG Pillar) |
 | **Approved By** | CISO |
 | **Review Cycle** | Annual; triggered by significant regulatory change or organizational change |

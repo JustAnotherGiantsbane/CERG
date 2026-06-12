@@ -421,7 +421,7 @@ NERC-CIP creates a distinct compliance obligation for BES Cyber Systems that sit
 
 ### 9.1 Illustrative Team Structure
 
-The illustrative organization for this framework is a large enterprise with approximately 14,000 employees and a substantial contractor workforce. The total protected population — identities, devices, and access relationships — approaches 28,000. CERG for this organization is a 60-person team reporting to the CISO, operating alongside Security Awareness and Incident Response.
+The illustrative organization for this framework is a large enterprise with several thousand employees and a substantial contractor workforce. The total protected population — identities, devices, and access relationships — approaches 28,000. CERG for this organization is a 60-person team reporting to the CISO, operating alongside Security Awareness and Incident Response.
 
 This is an intentionally large example. The goal is to show what CERG looks like at full scale, with real operational velocity and complexity, so that teams of any size can see the complete model and trim to fit their environment. A 6-person CERG running this framework looks different in headcount, not in structure.
 

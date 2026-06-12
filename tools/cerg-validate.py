@@ -241,9 +241,13 @@ def main(argv: list[str] | None = None) -> int:
 # ── P1 Checks: Quality gates (warnings only — do not block CI) ──
 
 def quality_checks(root, catalog):
-    """Run P1 quality checks. Returns list of warnings."""
+    """Run quality checks. Returns (errors, warnings) tuple.
+    Errors block CI (exit code 1). Warnings are informational.
+    """
+    errors = []
     warnings = []
     
+    # Track files seen (to avoid duplicate checks)
     for filepath in sorted(root.glob("**/*.md")):
         if any(p in str(filepath) for p in [".git", "machine-readable", "README.md"]):
             continue
@@ -259,11 +263,12 @@ def quality_checks(root, catalog):
         status = None
         approver = None
         version = None
+        classification = None
         owner = None
         review_cycle = None
         
         for line in text.split('\n')[:35]:
-            m = re.match(r'\|\s*\*\*(Document ID|Status|Approved By|Version|Owner|Review Cycle)\*\*\s*\|\s*(.+?)\s*\|', line)
+            m = re.match(r'\|\s*\*\*(Document ID|Status|Approved By|Version|Classification|Owner|Review Cycle)\*\*\s*\|\s*(.+?)\s*\|', line)
             if m:
                 field = m.group(1)
                 value = m.group(2).strip()
@@ -271,30 +276,30 @@ def quality_checks(root, catalog):
                 elif field == 'Status': status = value
                 elif field == 'Approved By': approver = value
                 elif field == 'Version': version = value
+                elif field == 'Classification': classification = value
                 elif field == 'Owner': owner = value
                 elif field == 'Review Cycle': review_cycle = value
         
-        did = doc_id or rel
-        
-        # 4.1a: Approved + Pending approver
-        if status and status.lower().strip() == 'approved':
-            if approver and 'pending' in approver.lower():
-                warnings.append(f"[APPROVED_PENDING] {rel}: Status=Approved but Approved By=Pending")
-        
-        # 4.1b: TBD or placeholder in Approved doc
-        if status and status.lower().strip() == 'approved':
-            placeholders = ['TBD', 'TODO', 'placeholder', 'Placeholder', '[To be', '[TBD', 'N/A —']
-            for ph in placeholders:
-                if ph in text:
-                    # Count occurrences
-                    count = text.count(ph)
-                    if count > 0:
-                        warnings.append(f"[PLACEHOLDER_IN_APPROVED] {rel}: contains '{ph}' ({count} occurrences)")
-                        break  # one warning per doc
-        
-        # 4.2: Missing mandatory metadata fields
         doc_type = doc_id.split('-')[1] if doc_id and '-' in doc_id else None
         
+        # ── BLOCKING ERRORS ──
+        
+        # E1: DRAFT in Version field (contradicts Approved status)
+        if version and 'draft' in version.lower():
+            errors.append(f"[DRAFT_VERSION] {rel} ({doc_id}): Version contains 'DRAFT' — remove or change Status to Draft")
+        
+        # E2: Internal / Restricted classification in public reference corpus
+        if classification:
+            cl = classification.lower().strip()
+            if 'internal' in cl or 'restricted' in cl:
+                errors.append(f"[RESTRICTED_CLASSIFICATION] {rel} ({doc_id}): Classification '{classification}' not allowed in public reference corpus — use 'Public'")
+        
+        # E3: Approved status with Pending approver
+        if status and status.lower().strip() == 'approved':
+            if approver and 'pending' in approver.lower():
+                errors.append(f"[APPROVED_PENDING] {rel} ({doc_id}): Status=Approved but Approved By='{approver}'")
+        
+        # E4: Missing mandatory metadata fields
         required_fields = {
             'POL': ['Document ID', 'Version', 'Status', 'Classification', 'Owner', 'Review Cycle'],
             'STD': ['Document ID', 'Version', 'Status', 'Classification', 'Owner', 'Parent Policy', 'Review Cycle'],
@@ -312,36 +317,106 @@ def quality_checks(root, catalog):
                         found = True
                         break
                 if not found:
-                    warnings.append(f"[MISSING_METADATA] {rel} ({doc_id}): missing required field '{field}' for type {doc_type}")
+                    errors.append(f"[MISSING_METADATA] {rel} ({doc_id}): missing required field '{field}' for type {doc_type}")
+        
+        # ── WARNINGS (do not block CI) ──
+        
+        # W1: TBD or placeholder in Approved doc
+        if status and status.lower().strip() == 'approved':
+            placeholders = ['TBD', 'TODO', 'placeholder', 'Placeholder', '[To be', '[TBD', 'N/A \u2014']
+            for ph in placeholders:
+                if ph in text:
+                    count = text.count(ph)
+                    if count > 0:
+                        warnings.append(f"[PLACEHOLDER_IN_APPROVED] {rel}: contains '{ph}' ({count} occurrences)")
+                        break
+        
+        # W2: Org-specific text — utility narrative outside /examples/
+        if 'examples/' not in rel:
+            org_patterns = [
+                ('14,000 employee', 'utility-scale headcount'),
+                ('major electrical utility', 'utility sector narrative'),
+                ('electric utility', 'utility sector default'),
+                ('60-person CERG team', 'utility team size'),
+            ]
+            for pattern, desc in org_patterns:
+                if pattern in text:
+                    warnings.append(f"[ORG_SPECIFIC_TEXT] {rel}: contains '{pattern}' ({desc}) — use generic language or move to /examples/")
+                    break
+        
+        # W3: Stale website language — cerg.nexus as authoritative
+        stale_web_patterns = [
+            'The full corpus is available at [cerg.nexus]',
+            'authoritative mirror',
+        ]
+        for pat in stale_web_patterns:
+            if pat in text:
+                warnings.append(f"[STALE_WEBSITE] {rel}: contains stale website reference — GitHub is authoritative, site is convenience mirror")
+                break
     
-    return warnings
+    return errors, warnings
 
-
-def print_quality_report(warnings, root):
+def print_quality_report(errors, warnings, root):
     """Print a structured quality report."""
-    if not warnings:
-        print("\nQuality Checks: 0 warnings — PASS")
-        return
-    
     from collections import Counter
-    categories = Counter()
-    for w in warnings:
-        cat = w.split(']')[0].replace('[', '')
-        categories[cat] += 1
     
-    print(f"\nQuality Checks: {len(warnings)} warning(s)")
-    for cat, count in categories.most_common():
-        print(f"  [{cat}]: {count}")
+    if errors:
+        print(f"\nBLOCKING ERRORS: {len(errors)}")
+        err_cats = Counter()
+        for e in errors:
+            cat = e.split(']')[0].replace('[', '')
+            err_cats[cat] += 1
+        for cat, count in err_cats.most_common():
+            print(f"  [{cat}]: {count}")
+        print()
+        for e in errors[:30]:
+            print(f"  {e}")
+        if len(errors) > 30:
+            print(f"  ... and {len(errors)-30} more")
     
-    print(f"\n--- Detail ---")
-    for w in warnings[:20]:
-        print(f"  {w}")
-    if len(warnings) > 20:
-        print(f"  ... and {len(warnings)-20} more")
+    if warnings:
+        print(f"\nWARNINGS: {len(warnings)}")
+        warn_cats = Counter()
+        for w in warnings:
+            cat = w.split(']')[0].replace('[', '')
+            warn_cats[cat] += 1
+        for cat, count in warn_cats.most_common():
+            print(f"  [{cat}]: {count}")
+        print(f"\n  --- Detail ---")
+        for w in warnings[:20]:
+            print(f"  {w}")
+        if len(warnings) > 20:
+            print(f"  ... and {len(warnings)-20} more")
+    
+    if not errors and not warnings:
+        print("\nQuality Checks: 0 issues — PASS")
 
 
-# ── Integrate into main ──
-# The quality checks run after the main validation, regardless of pass/fail
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("root", nargs="?", default=".", help="Repository root to validate")
+    args = parser.parse_args(argv)
+
+    findings = validate_repository(Path(args.root))
+    if findings:
+        print("CERG validation failed:")
+        for finding in findings:
+            print(f"- {finding.path}: [{finding.code}] {finding.message}")
+        return 1
+    print("CERG validation passed: links, catalog references, and file inventory are consistent.")
+    
+    # Quality checks (errors block CI, warnings are informational)
+    root_path = Path(args.root)
+    catalog = parse_catalog(root_path)
+    errors, warnings = quality_checks(root_path, catalog)
+    print_quality_report(errors, warnings, root_path)
+    
+    if errors:
+        print(f"\nCERG CI FAILED: {len(errors)} blocking error(s)")
+        return 1
+    
+    return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())

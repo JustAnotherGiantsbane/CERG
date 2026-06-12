@@ -80,7 +80,7 @@ CERG-specific knowledge requirements for this role are defined in [OM-001 §6](.
 
 ### 7.1 Education
 
-- 7-15+ years in NERC compliance, OT cybersecurity, or electric utility operations - Bachelor's degree or equivalent experience in the electric utility industry - Relevant certifications: CISSP, CISA, NERC-specific training credentials, or equivalent
+- 7-15+ years in NERC compliance, OT cybersecurity, or regulated energy-sector organization operations - Bachelor's degree or equivalent experience in the regulated energy-sector organization industry - Relevant certifications: CISSP, CISA, NERC-specific training credentials, or equivalent
 
 ### 7.2 Certifications
 

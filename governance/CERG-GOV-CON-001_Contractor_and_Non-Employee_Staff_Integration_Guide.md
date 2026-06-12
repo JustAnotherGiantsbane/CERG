@@ -38,7 +38,7 @@
 
 ## 1. Purpose and Scope
 
-The CERG Framework (FRM-001) notes that the illustrative 60-person CERG team operates alongside "an equal population of consultants and contractors." The RACI Instrument (RAC-001) and Job Descriptions (JD-001) assume employees. The Onboarding Program (ONB-001) is built for permanent team members who will be with the organization for years, not contractors who may be engaged for a six-month audit cycle or a twelve-month platform migration.
+The CERG Framework (FRM-001) notes that the illustrative CERG team operates alongside "an equal population of consultants and contractors." The RACI Instrument (RAC-001) and Job Descriptions (JD-001) assume employees. The Onboarding Program (ONB-001) is built for permanent team members who will be with the organization for years, not contractors who may be engaged for a six-month audit cycle or a twelve-month platform migration.
 
 This document closes the gap. It defines which CERG roles can be filled by contractors and which must remain employee-only, establishes the knowledge retention requirements that prevent a departing contractor from taking the only copy of critical artifacts, defines the supervision model (every contractor has a named employee supervisor who is accountable for the contractor's work product), and provides condensed onboarding and offboarding programs for non-employee staff.
 
