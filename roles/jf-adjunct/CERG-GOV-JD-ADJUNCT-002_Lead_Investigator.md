@@ -50,7 +50,16 @@
 
 ### 4.1 Core Responsibilities (All Grades)
 
-Placeholder — extracted from JD-001 original content. See the legacy job description for full details.
+- Lead the forensic investigation of cybersecurity incidents: collect and preserve digital evidence, trace adversary activity, determine scope of compromise, and produce a documented timeline of events
+- Perform forensic analysis of systems, networks, and applications using industry-standard tools and methodologies
+- Collect forensically sound images of affected systems, maintaining chain of custody throughout the investigation
+- Analyze malware, network artifacts, logs, and memory dumps to determine the root cause and tactics, techniques, and procedures (TTPs) of the adversary
+- Produce detailed investigative reports suitable for legal, regulatory, and executive audiences
+- Support the Incident Commander with technical findings during active incidents to inform containment and eradication decisions
+- Coordinate with law enforcement as a technical expert when criminal activity is identified
+- Maintain the organization's forensic tooling, forensic workstation environment, and analysis methodologies
+- Stay current on adversary TTPs, forensic techniques, and anti-forensic countermeasures
+- Testify or provide written expert evidence in legal proceedings as required
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
@@ -60,7 +69,13 @@ Grade-level responsibility differentiation for this role is defined in [JA-001 �
 
 ### 5.1 Domain Expertise
 
-Placeholder — extracted from JD-001 original content.
+- Digital forensics: disk forensics, memory forensics, network forensics, mobile device forensics, cloud forensics
+- Malware analysis: static analysis, dynamic analysis, reverse engineering, sandboxing
+- Evidence handling: forensic imaging, chain of custody, evidence preservation, documentation standards
+- Operating system internals: Windows, Linux, macOS — file systems, registry, logs, artifacts, persistence mechanisms
+- Network analysis: packet capture (PCAP) analysis, network flow analysis, proxy and firewall log analysis
+- Log analysis: SIEM platforms, centralized logging, log correlation, timestamp normalization
+- Legal and regulatory frameworks: rules of evidence, e-discovery, witness testimony, data privacy laws
 
 ### 5.2 Technical Skills
 
@@ -98,7 +113,10 @@ The following Task, Knowledge, and Skill statements are extracted from the NIST 
 
 ### 7.1 Education
 
-Placeholder — see JD-001 original content.
+- 5-15+ years in cybersecurity, with at least 3 years in digital forensics or incident response investigation
+- Bachelor's degree in cybersecurity, computer science, or equivalent experience
+- Relevant certifications: GCFA, GCFE, GNFA, GREM, EnCE, or equivalent
+- Experience producing expert reports and providing testimony in legal proceedings preferred
 
 ### 7.2 Certifications
 

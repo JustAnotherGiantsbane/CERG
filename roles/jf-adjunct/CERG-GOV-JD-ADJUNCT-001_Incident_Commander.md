@@ -48,7 +48,15 @@
 
 ### 4.1 Core Responsibilities (All Grades)
 
-Placeholder — extracted from JD-001 original content. See the legacy job description for full details.
+- Own the incident response command structure during active cybersecurity incidents: establish command, assign roles, manage the bridge, and coordinate response actions across technical, legal, communications, and business continuity teams
+- Make containment, eradication, and recovery decisions under time pressure with incomplete information, documenting the rationale for post-incident review
+- Communicate incident status to stakeholders at all levels: technical team (actionable direction), management (business impact), legal (regulatory obligations), and executive leadership (strategic decisions)
+- Triage incoming incidents to determine severity, scope, and appropriate response tier per the Incident Response Plan
+- Coordinate with external parties: law enforcement, regulators, incident response retainers, PR/crisis communications, and affected third parties
+- Lead post-incident reviews (PIRs) and ensure action items are tracked to closure
+- Maintain incident response readiness: tabletop exercises, playbook reviews, contact list validation, and tooling readiness checks
+- Contribute to the Incident Response Plan and playbook set as a subject matter expert
+- Serve as the primary CERG liaison during incidents requiring cross-pillar coordination
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
@@ -58,7 +66,13 @@ Grade-level responsibility differentiation for this role is defined in [JA-001 �
 
 ### 5.1 Domain Expertise
 
-Placeholder — extracted from JD-001 original content.
+- Incident response command and coordination: bridge management, decision-making under uncertainty, escalation management
+- Incident handling lifecycle: preparation, detection & analysis, containment, eradication, recovery, post-incident activity
+- Cybersecurity fundamentals: network security, endpoint security, identity and access management, threat detection
+- Crisis management and emergency communications
+- Business continuity and disaster recovery principles
+- Regulatory incident notification requirements (breach notification laws, NERC-CIP, CMMC, SOX reporting)
+- Legal and evidentiary requirements for incident documentation
 
 ### 5.2 Technical Skills
 
@@ -96,7 +110,10 @@ The following Task, Knowledge, and Skill statements are extracted from the NIST 
 
 ### 7.1 Education
 
-Placeholder — see JD-001 original content.
+- 5-15+ years in cybersecurity, with at least 3 years in incident response leadership or security operations management
+- Bachelor's degree in cybersecurity, information technology, or equivalent experience
+- Relevant certifications: CISSP, GCIH, GCFE, GCFA, CISM, or equivalent
+- Demonstrated experience leading multi-team incident response efforts (tabletop or real-world)
 
 ### 7.2 Certifications
 
