@@ -7,12 +7,21 @@
 ---
 
 | | |
-|---|---|
+|---
+> **ADJACENT FUNCTION — NOT A CERG-OWNED DOCUMENT**
+>
+> This artifact belongs to the standing Incident Response team, not to CERG. Per [OM-001 §3.4](CERG-GOV-OM-001_CERG_Operating_Model.md), CERG is not responsible for Incident Response operations, the IR plan itself, regulatory notification clocks, or exercise management. CERG provides a liaison to the IR team and maintains this document in the repository for cross-functional integration only.
+>
+> **During an incident:** the standing IR team's procedures and the Incident Commander's authority take precedence over any CERG workflow. CERG's role during incidents is supporting (evidence, reporting, lessons-learned feedback per FLOW-001 F-06), not directing.
+>
+> **Ownership:** This document is maintained by the standing IR team. CERG Governance reviews it for cross-reference accuracy only. Changes to IR procedures, notification timelines, or exercise schedules are the IR team's responsibility.
+>
+|---|
 | **Document ID** | CERG-PLN-IR-001 |
 | **Version** | 1.21 |
-| **Status** | Approved |
-| **Classification** | Public |
-| **Owner** | CISO · Governance Pillar Leader |
+| **Status** | External Interface |
+| **Classification** | External Interface |
+| **Owner** | Standing IR Team / Incident Commander |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Supporting Standards** | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) · [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) |
 | **Review Cycle** | Annual / After Any Significant Incident / Regulatory Change |

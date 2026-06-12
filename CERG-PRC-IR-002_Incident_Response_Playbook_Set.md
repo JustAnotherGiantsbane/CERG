@@ -6,13 +6,22 @@
 ---
 
 | | |
-|---|---|
+|---
+> **ADJACENT FUNCTION — NOT A CERG-OWNED DOCUMENT**
+>
+> This artifact belongs to the standing Incident Response team, not to CERG. Per [OM-001 §3.4](CERG-GOV-OM-001_CERG_Operating_Model.md), CERG is not responsible for Incident Response operations, the IR plan itself, regulatory notification clocks, or exercise management. CERG provides a liaison to the IR team and maintains this document in the repository for cross-functional integration only.
+>
+> **During an incident:** the standing IR team's procedures and the Incident Commander's authority take precedence over any CERG workflow. CERG's role during incidents is supporting (evidence, reporting, lessons-learned feedback per FLOW-001 F-06), not directing.
+>
+> **Ownership:** This document is maintained by the standing IR team. CERG Governance reviews it for cross-reference accuracy only. Changes to IR procedures, notification timelines, or exercise schedules are the IR team's responsibility.
+>
+|---|
 | **Document ID** | CERG-PRC-IR-002 |
 | **Version** | 1.0 |
-| **Status** | Approved |
-| **Classification** | Public |
-| **Owner** | Governance Pillar Leader |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Status** | External Interface |
+| **Classification** | External Interface |
+| **Owner** | Standing IR Team / Incident Commander |
+| **Parent Policy** | N/A — adjacent-function artifact; cross-referenced by CERG for integration |
 | **Supporting Documents** | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md) · [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [`CERG-STD-MSG-001`](CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md) · [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
 | **Review Cycle** | Annual / After significant incident or IR plan change |
 | **Frameworks** | [NIST 800-61r2](https://csrc.nist.gov/pubs/sp/800/61/r2/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (IR, AU, SI, CP) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (RESPOND, RECOVER) |
@@ -661,12 +670,12 @@ Reviewed by: [Incident Commander, CISO]
 |---|---|
 | **Document ID** | CERG-PRC-IR-002 |
 | **Version** | 1.0 |
-| **Status** | Approved |
+| **Status** | External Interface |
 | **Effective Date** | 2026-05-22 |
-| **Classification** | Public |
-| **Owner** | Governance Pillar Leader |
+| **Classification** | External Interface |
+| **Owner** | Standing IR Team / Incident Commander |
 | **Approved By** | CISO · Incident Commander owner concurrence |
-| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | N/A — adjacent-function artifact; cross-referenced by CERG for integration |
 | **Review Cycle** | Annual; and after significant incident or IR plan change |
 | **Next Scheduled Review** | 2027-05-22 |
 | **Frameworks** | NIST 800-61r2; NIST 800-53r5 (IR, AU, SI, CP); NIST CSF 2.0 (RESPOND, RECOVER) |

@@ -23,6 +23,8 @@
 
 ## 1. Role Summary
 
+> **ADJACENT ROLE — Not a CERG position.** This role belongs to the standing Incident Response team, not to CERG. Per [OM-001 §3.4](../../CERG-GOV-OM-001_CERG_Operating_Model.md), Incident Commander and Lead Investigator are IR team roles included in CERG documentation for cross-functional clarity only. CERG provides a liaison to the IR team.
+
 **Role Summary (CERG-facing):** Single-decision authority during an active incident. The Incident Commander owns the incident response, makes time-critical containment and recovery decisions, and coordinates the response team. CERG provides the Engineering Lead, Lead Investigator, and Governance Lead roles when the Incident Commander calls for them.
 
 ## 2. NICE Workforce Framework Mapping

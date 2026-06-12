@@ -124,11 +124,9 @@ The pillars are not sequential. They run simultaneously, with structured handoff
 - [Audit & Evidence Management](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md)
 - [Threat Intelligence](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md)
 - [Threat Modeling](CERG-PRC-TM-001_Threat_Modeling_Procedure.md)
-- [Incident Response Playbook Set](CERG-PRC-IR-002_Incident_Response_Playbook_Set.md)
 - [Lessons Learned & Improvement](CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md)
 
 **Plans & Operational Packages (7 documents)**
-- [Incident Response Plan](CERG-PLN-IR-001_Incident_Response_Plan.md)
 - [Business Continuity & Disaster Recovery](CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md)
 - [NERC-CIP Operational Package](CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md)
 - [CUI / CMMC Operational Package](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md)
@@ -177,6 +175,21 @@ For LLM and automation consumption, a YAML layer is available under [`machine-re
 - 14 additional schema files covering runtime objects, evidence, metrics, crown jewels, vulnerability prioritization, and more
 
 See [`machine-readable/README.md`](machine-readable/README.md) for the complete inventory.
+
+---
+
+---
+
+## Adjacent Functions — Included for Cross-Reference
+
+These documents belong to functions that operate alongside CERG, not within it. They are included in this repository for integration clarity — so CERG adopters can see how CERG interfaces with Incident Response. **These are not CERG-owned documents.**
+
+| Document | ID | Owned By |
+|----------|-----|----------|
+| Incident Response Plan | CERG-PLN-IR-001 | Standing IR Team / Incident Commander |
+| Incident Response Playbook Set | CERG-PRC-IR-002 | Standing IR Team / Incident Commander |
+
+During an incident, the standing IR team's procedures and the Incident Commander's authority take precedence over any CERG workflow. CERG's role is supporting — evidence collection, reporting, and lessons-learned feedback per [FLOW-001 F-06](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md).
 
 ---
 

@@ -23,6 +23,8 @@
 
 ## 1. Role Summary
 
+> **ADJACENT ROLE — Not a CERG position.** This role belongs to the standing Incident Response team, not to CERG. Per [OM-001 §3.4](../../CERG-GOV-OM-001_CERG_Operating_Model.md), Incident Commander and Lead Investigator are IR team roles included in CERG documentation for cross-functional clarity only. CERG provides a liaison to the IR team.
+
 **Role Summary (CERG-facing):** The risk-side technical lead during an active incident. The Lead Investigator conducts forensic analysis, traces adversary activity, and identifies the scope of compromise. CERG supplies a qualified practitioner into this role when the IR team calls for one.
 
 ---

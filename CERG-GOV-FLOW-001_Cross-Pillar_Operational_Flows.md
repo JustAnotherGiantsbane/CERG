@@ -721,6 +721,8 @@ Not all changes carry the same security risk. The table below defines what each 
 ### Purpose
 Handle incidents consistently across environments while forcing lessons learned into engineering controls, risk posture, and governance artifacts.
 
+> **IR Ownership:** The standing Incident Response team owns incident operations, the IR plan, regulatory notification clocks, and exercise management. CERG is not responsible for IR operations. This flow defines CERG's *supporting role* during incidents — evidence collection, reporting, and ensuring lessons learned feed back into CERG controls, standards, and metrics. The Incident Commander's authority during an active incident supersedes any CERG workflow step.
+
 ### Primary Owner
 **Risk Pillar**
 

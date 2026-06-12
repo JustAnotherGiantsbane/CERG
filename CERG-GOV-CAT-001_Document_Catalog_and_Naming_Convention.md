@@ -170,6 +170,7 @@ New domains are added only by amendment to this catalog.
 | `For Review` | Out for stakeholder/CISO review. | Yes - Section 5. |
 | `Approved` | Signed off and authoritative. | Yes - Section 5. |
 | `Retired` | Replaced or no longer in force. Retained for audit. | Yes - appendix to Section 5. |
+| `External Interface` | Artifact owned by an adjacent function (e.g., IR team). Included for cross-reference only. Not a CERG-governed document. | Yes — Section 5, flagged ⚠ |
 
 Approval authority follows [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) Section 7:
 
@@ -278,7 +279,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-PRC-AC-002`](CERG-PRC-AC-002_Access_Management_Runbook.md) | Access Management Runbook | Identity Engineer (or IAM team if external) | Approved |
 | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Third-Party and Supply Chain Risk Procedure | Cyber Risk - Vendor Risk | Approved |
 | [`CERG-PRC-AV-001`](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) | Adversarial Validation Procedure | Cyber Risk - Offensive Security | Approved |
-| [`CERG-PRC-IR-002`](CERG-PRC-IR-002_Incident_Response_Playbook_Set.md) | Incident Response Playbook Set | Cyber Governance / standing IR team liaison | Published |
+| [`CERG-PRC-IR-002`](CERG-PRC-IR-002_Incident_Response_Playbook_Set.md) | Incident Response Playbook Set ⚠ ADJACENT — owned by standing IR team; included for cross-reference only | Standing IR Team / Incident Commander | External Interface |
 | [`CERG-PRC-TM-001`](CERG-PRC-TM-001_Threat_Modeling_Procedure.md) | Threat Modeling Procedure | Cyber Risk | Published |
 | [`CERG-PRC-TI-001`](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) | Threat Intelligence Procedure | Cyber Risk - Threat Intelligence | Published |
 | [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) | Audit and Evidence Management Procedure | Cyber Governance | Published |
@@ -291,7 +292,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 
 | **ID** | **Title** | **Owner** | **Status** |
 |---|---|---|---|
-| [`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md) | Incident Response Plan (owned by standing IR team; CERG provides liaison) | Standing IR team / CERG liaison | Approved |
+| [`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md) | Incident Response Plan ⚠ ADJACENT — owned by standing IR team; included for cross-reference only | Standing IR Team / Incident Commander | External Interface |
 | [`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) | CUI / CMMC Operational Package | Cyber Governance - CUI/CMMC | Approved |
 | [`CERG-PLN-CIP-001`](CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) | NERC-CIP Operational Package | Cyber Governance - OT | Approved |
 | [`CERG-PLN-SOX-001`](CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) | SOX ITGC Operational Package | Cyber Governance - SOX | Approved |
