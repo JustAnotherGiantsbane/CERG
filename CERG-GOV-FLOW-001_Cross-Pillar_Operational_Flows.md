@@ -15,7 +15,7 @@
 
 ## Table of Contents
 
-1. [Operating Principles](#1-operating-principles)
+1. [Operating Principles](#2-operating-principles)
 2. [Canonical Roles](#2-canonical-roles)
 3. [Authoritative Record Types](#3-authoritative-record-types)
 4. [Common Required Fields](#4-common-required-fields)
@@ -36,7 +36,55 @@
 
 ---
 
-## 1. Operating Principles
+
+
+## 1. Flow Structure Conventions
+
+Every flow in this document follows a consistent structure. When implementing a flow, use these conventions to ensure completeness.
+
+### Entry and Exit Criteria
+
+| Flow | Trigger (Entry) | Exit Criteria |
+|------|----------------|---------------|
+| F-01 Control Intent | Policy/standard/baseline change, audit finding, recurring incident, regulatory requirement, CISO directive | Implementation completed + Risk validated + Evidence linked + Dashboard updated |
+| F-02 Project Intake | New application/service/change, cloud/SaaS adoption, new integration, regulated/AI/OT project | Security disposition issued + pre-go-live remediation done + post-go-live risks recorded + owners confirmed + handoff delivered |
+| F-03 Asset Registration | Go-live approval, new asset, major change, ownership change, decommission | Owner confirmed + classification complete + coverage validated + gaps resolved as finding/risk |
+| F-04 Finding → Remediation | Vulnerability, adversarial test, threat intel, third-party, incident, audit, architecture review | Treatment executed + validated + exception/acceptance recorded if used + evidence linked + reporting updated |
+| F-05 Change & Release | Normal/major/emergency change, release candidate, config/identity/encryption change | Change executed + control continuity checked + SIA reviewed + emergency bypass recorded + evidence linked |
+| F-06 Incident → Recovery | Validated incident, material event, third-party incident, active exploitation, regulatory notification | Containment/recovery done + timeline/investigation produced + lessons learned recorded + corrective actions assigned + evidence delivered |
+| F-07 Metrics & Oversight | Monthly/quarterly cycle, threshold breach, missed SLA, maturity assessment, board request | Metrics collected + thresholds evaluated + actions assigned for outliers + CISO review done + report published |
+
+### Minimum Process Records
+
+After each flow executes, these records must exist. If a record is missing, the flow is incomplete.
+
+| Flow | Required Records | Minimum Fields Documented |
+|------|-----------------|--------------------------|
+| F-01 Control Intent | Control Change Record | Control ID, source reason, affected environments, implementation deadline, evidence plan, validation result |
+| F-02 Project Intake | Project Intake Record, Architecture Review Record, Threat Model Record | Project name, owners, go-live date, asset class, data classification, regulatory scope, review findings, disposition |
+| F-03 Asset Registration | Asset Record | Asset ID, type, owners, environment, classification, criticality, coverage status |
+| F-04 Finding → Remediation | Finding Record; Risk Record if promoted; Exception Record if used | Finding ID, source, severity, assets, owners, treatment, due date, validation result |
+| F-05 Change & Release | Change Record | Change ID, type, assets, SIA, implementation window, rollback plan, control continuity result |
+| F-06 Incident → Recovery | Incident Record, Improvement Record | Incident ID, severity, timeline, containment actions, investigation summary, lessons learned, corrective actions |
+| F-07 Metrics & Oversight | Reporting Metric Record | Metric name, definition, source, period, threshold, actual value, action assigned |
+
+### SLA Exception Logic
+
+The severity-tiered SLAs in each flow are the default. The following exceptions are recognized:
+
+| Exception | Applies To | Rule |
+|-----------|-----------|------|
+| **False Positive** | F-04 (Findings) | Close with rationale and evidence of false-positive determination. No SLA penalty. Document the determination method. |
+| **Compensating Control in Place** | F-04 (Findings) | Downgrade severity by one level if compensating control is documented, tested, and operating. Create Exception Record. Original SLA clock stops; compensating control review clock starts. |
+| **Vendor Patch Unavailable** | F-04 (Findings), F-01 (Control Intent) | Create Exception Record. Document vendor communication (ticket/case number). Set review date based on vendor's committed patch timeline. SLA clock pauses until vendor delivers or 90 days, whichever is shorter. |
+| **OT Maintenance Window** | F-04 (Findings), F-05 (Change) | Remediation SLA extends to next approved maintenance window. Document the window date. If the window is more than 90 days out, create Risk Record. |
+| **Business Outage Risk** | F-04 (Findings), F-05 (Change) | Create Risk Record. Business owner must acknowledge the risk of both the vulnerability AND the outage. CISO approves the deferral. Set a review date no more than 90 days out. |
+| **Emergency Remediation** | F-04 (Findings) | Execute remediation immediately. Create Change Record post-hoc per F-05 emergency change rules. Document rationale. SLA is measured from detection to execution, not to paperwork. |
+| **Reopened Finding** | F-04 (Findings) | SLA resets to the severity-tiered clock from the reopen date. Increment recurrence counter. Escalate per recurring finding rules. |
+| **Accepted Risk Expiration** | F-04 (Findings), RMF-001 | Auto-create Finding Record (severity: High) if acceptance expires without renewal. Original acceptance approver is notified. |
+| **KEV / Active Exploitation Override** | F-04 (Findings) | Override the existing severity. Treat as Critical regardless of CVSS score. Apply Critical SLA (48 hours). |
+
+## 2. Operating Principles
 
 
 ### Record Type Definitions
@@ -71,7 +119,7 @@ These terms appear throughout the flows. Consistent usage prevents confusion dur
 9. **If a required actor does not respond within SLA, the primary owner may proceed with documented rationale.** When Governance, Engineering, or Risk fails to act within the flow-defined SLA, the primary owner documents the default decision, proceeds with the next workflow step, and creates a Finding Record noting the missed SLA. No flow may stall indefinitely waiting for a single actor.
 ---
 
-## 2. Canonical Roles
+## 3. Canonical Roles
 
 Use the following canonical role names consistently across all records and flows:
 
@@ -89,7 +137,7 @@ Use the following canonical role names consistently across all records and flows
 
 ---
 
-## 3. Authoritative Record Types
+## 4. Authoritative Record Types
 
 Every material workflow must resolve to one primary system-of-record object:
 
@@ -109,7 +157,7 @@ Every material workflow must resolve to one primary system-of-record object:
 
 ---
 
-## 4. Common Required Fields
+## 5. Common Required Fields
 
 Every authoritative record should contain the following minimum fields:
 
@@ -131,7 +179,7 @@ Every authoritative record should contain the following minimum fields:
 
 ---
 
-## 5. Default SLA Policy
+## 6. Default SLA Policy
 
 | Activity | SLA |
 |----------|-----|
@@ -143,7 +191,7 @@ Every authoritative record should contain the following minimum fields:
 
 ---
 
-## 6. Allowed Decision Classes
+## 7. Allowed Decision Classes
 
 All workflows should terminate in one of the following decision classes:
 
@@ -160,7 +208,7 @@ All workflows should terminate in one of the following decision classes:
 
 ---
 
-## 7. Shared State Models
+## 8. Shared State Models
 
 ### 7.1 Project Security Review State Model
 
@@ -234,7 +282,7 @@ Allowed states:
 
 ---
 
-## 8. Flow F-01 — Control Intent to Implementation
+## 9. Flow F-01 — Control Intent to Implementation
 
 ### Purpose
 Convert governance-originated control intent into implementable technical change and risk-validated outcomes.
@@ -311,7 +359,7 @@ Convert governance-originated control intent into implementable technical change
 
 ---
 
-## 9. Flow F-02 — Project Intake, Architecture Review, and Threat Modeling
+## 10. Flow F-02 — Project Intake, Architecture Review, and Threat Modeling
 
 ### Purpose
 Ensure that new systems and major changes enter production with known scope, required controls, and explicit security disposition.
@@ -427,7 +475,7 @@ Risk participation is required when one or more of the following are true:
 
 ---
 
-## 10. Flow F-03 — Asset Registration and Coverage Validation
+## 11. Flow F-03 — Asset Registration and Coverage Validation
 
 ### Purpose
 Ensure every in-scope asset has ownership, classification, regulatory designation, and required control coverage.
@@ -520,7 +568,7 @@ Assets are classified by lifecycle to determine registration depth. Ephemeral an
 
 ---
 
-## 11. Flow F-04 — Finding to Remediation, Exception, or Residual Risk
+## 12. Flow F-04 — Finding to Remediation, Exception, or Residual Risk
 
 ### Purpose
 Convert discovered exposure into a deterministic treatment path: remediation, compensating control, exception, formal risk acceptance, or incident handling.
@@ -688,7 +736,7 @@ Recurring findings across multiple systems in the same control family trigger a 
 
 ---
 
-## 12. Flow F-05 — Change and Release Security Routing
+## 13. Flow F-05 — Change and Release Security Routing
 
 ### Purpose
 Ensure that security-significant changes receive consistent cross-pillar handling.
@@ -784,7 +832,7 @@ Not all changes carry the same security risk. The table below defines what each 
 
 ---
 
-## 13. Flow F-06 — Incident to Recovery to Standards Feedback
+## 14. Flow F-06 — Incident to Recovery to Standards Feedback
 
 ### Purpose
 Handle incidents consistently across environments while forcing lessons learned into engineering controls, risk posture, and governance artifacts.
@@ -874,7 +922,7 @@ Handle incidents consistently across environments while forcing lessons learned 
 
 ---
 
-## 14. Flow F-07 — Metrics, Oversight, and Improvement Routing
+## 15. Flow F-07 — Metrics, Oversight, and Improvement Routing
 
 ### Purpose
 Convert operational data into management action, improvement backlog, standards review, risk escalation, and board-grade reporting.
@@ -964,7 +1012,7 @@ Convert operational data into management action, improvement backlog, standards 
 
 
 
-## 15. Automation Integration Points
+## 16. Automation Integration Points
 
 The flows in this document describe human-driven steps, but automated security controls can satisfy or accelerate many of them. The table below defines where automation is accepted as valid execution and what evidence is required.
 
@@ -984,7 +1032,7 @@ The flows in this document describe human-driven steps, but automated security c
 
 ---
 
-## 16. Evidence Quality Tiers
+## 17. Evidence Quality Tiers
 
 Not all evidence proves the same thing. Flows reference evidence by tier so that operators know what level of proof is required.
 
@@ -998,7 +1046,7 @@ Flows that specify "Evidence Required" should note the minimum tier. Where E3 is
 
 ---
 
-## 17. LLM Execution Directives
+## 18. LLM Execution Directives
 
 
 These instructions tell an LLM how to execute the flows without ambiguity:
@@ -1016,7 +1064,7 @@ These instructions tell an LLM how to execute the flows without ambiguity:
 
 ---
 
-## 18. Minimum Record Templates
+## 19. Minimum Record Templates
 
 ### 16.1 Finding Record
 
@@ -1098,7 +1146,7 @@ Required fields:
 
 ---
 
-## 19. Recommended Implementation Sequence
+## 20. Recommended Implementation Sequence
 
 ### Phase 1
 Implement:
@@ -1120,7 +1168,7 @@ Implement:
 
 ---
 
-## 20. Document Control
+## 21. Document Control
 
 | Field | Value |
 |---|---|

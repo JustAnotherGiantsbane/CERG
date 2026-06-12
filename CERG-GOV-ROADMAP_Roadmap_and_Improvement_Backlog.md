@@ -140,19 +140,19 @@
 | # | Suggestion | Priority | Status |
 |---|-----------|----------|--------|
 | 10.1 | Process swimlane diagrams for core workflows | P2 | — |
-| 10.2 | Explicit entry/exit criteria per workflow | P1 | — |
-| 10.3 | Minimum viable process records per procedure | P1 | — |
-| 10.4 | SLA exception logic (false positive, vendor patch unavailable, OT maintenance) | P1 | — |
+| 10.2 | Explicit entry/exit criteria per workflow | P1 | ✓ DONE in FLOW-001 §1 |
+| 10.3 | Minimum viable process records per procedure | P1 | ✓ DONE in FLOW-001 §1 |
+| 10.4 | SLA exception logic (false positive, vendor patch unavailable, OT maintenance) | P1 | ✓ DONE in FLOW-001 §1 |
 | 10.5 | Security architecture pattern library | P2 | — |
 | 10.6 | Minimum diagrams per system type (context, data flow, trust boundary) | P2 | — |
-| 10.7 | Threat model trigger rules | P1 | — |
-| 10.8 | Threat model light vs full | P1 | — |
-| 10.9 | Secure SDLC depth tiers (Tier A-D by risk) | P1 | — |
+| 10.7 | Threat model trigger rules | P1 | ✓ DONE in PRC-AR-001 |
+| 10.8 | Threat model light vs full | P1 | ✓ DONE in PRC-AR-001 |
+| 10.9 | Secure SDLC depth tiers (Tier A-D by risk) | P1 | ✓ DONE in PRC-AR-001 |
 | 10.10 | Policy-as-code examples (OPA, Sentinel, Azure Policy) | P2 | — |
 | 10.11 | Detection-as-code examples with MITRE mapping | P2 | — |
 | 10.12 | Detection coverage matrix | P2 | — |
-| 10.13 | Identity as Tier 0 emphasis | P1 | — |
-| 10.14 | SaaS governance depth (inventory, SSO, MFA, SCIM, audit log, exit plan) | P1 | — |
+| 10.13 | Identity as Tier 0 emphasis | P1 | ✓ DONE in STD-AC-001 |
+| 10.14 | SaaS governance depth (inventory, SSO, MFA, SCIM, audit log, exit plan) | P1 | ✓ DONE in STD-IT-001 |
 | 10.15 | AI system lifecycle guidance expansion | P2 | — |
 
 ## 11. Asset & Dependency Management
