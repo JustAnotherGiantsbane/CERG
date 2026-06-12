@@ -450,21 +450,23 @@ CERG's risk appetite is expressed in two complementary ways: a qualitative postu
 | Operational disruption to enterprise IT services | Medium. Treatment chosen on a cost / business value basis. |
 | Loss of low-sensitivity, broadly available data | Higher. Acceptance is appropriate where treatment cost exceeds loss magnitude. |
 
-**Quantitative tolerance (placeholder calibration).** Annualized Loss Exposure (ALE = LEF x LM) is summed across the open risk register quarterly. CERG operates against the following exposure bands while Finance/Treasury finalizes calibrated values. The CISO updates these in coordination with the CFO at the next CERG/Finance joint review.
+**Quantitative tolerance (preliminary calibration).** Annualized Loss Exposure (ALE = LEF x LM) is summed across the open risk register quarterly. The bands below are preliminary values calibrated for a mid-market organization ($500M-2B revenue, moderate regulatory exposure). The CISO updates these in coordination with the CFO at the next CERG/Finance joint review — see §9.8.1 for the calibration workbook.
 
-| Posture Indicator | Value | Action |
-|---|---|---|
-| Total open ALE (Critical + High) | <$5M (placeholder) | Within appetite; continue normal monitoring |
-| Total open ALE (Critical + High) | $5M - $15M (placeholder) | Within tolerance; CISO briefs Cyber Oversight Group monthly |
-| Total open ALE (Critical + High) | >$15M (placeholder) | Above tolerance; CISO briefs Board at the next cycle; mandatory treatment plan within 60 days |
-| Single-risk ALE | >$2M (placeholder) | Mandatory CISO review at acceptance; auto-escalates to High at minimum |
+| Posture Indicator | Value (Preliminary) | Recommended Range by Org Size | Action |
+|---|---|---|---|
+| Total open ALE (Critical + High) | <$5M | Small (<$100M rev): <$500K · Mid: <$5M · Large: <$25M | Within appetite; continue normal monitoring |
+| Total open ALE (Critical + High) | $5M - $15M | Small: $500K-$2M · Mid: $5M-$15M · Large: $25M-$100M | Within tolerance; CISO briefs Cyber Oversight Group monthly |
+| Total open ALE (Critical + High) | >$15M | Small: >$2M · Mid: >$15M · Large: >$100M | Above tolerance; CISO briefs Board at the next cycle; mandatory treatment plan within 60 days |
+| Single-risk ALE | >$2M | Small: >$250K · Mid: >$2M · Large: >$10M | Mandatory CISO review at acceptance; auto-escalates to High at minimum |
 
-> **Calibration is the work.** Numbers above are starting placeholders; they are not approved appetites until Finance signs the calibration. The pattern - qualitative posture per category plus quantitative ALE bands - is the part that does not change.
+> **Calibration is the work.** Values above are preliminary defaults for a mid-market organization; they are not approved appetites until Finance signs the calibration. The pattern — qualitative posture per category plus quantitative ALE bands — is the part that does not change. See §9.8.1 for the full calibration workbook with revenue-gated scaling.
 
 
 #### 9.8.1 Risk Appetite Calibration Workbook
 
-The risk appetite values in §9.5 are placeholders. Calibrate them to your organization using the prompts below. Document the calibrated values in your Decision Log (IMP-002 §4).
+The risk appetite values in §9.8 are preliminary defaults calibrated to a mid-market organization ($500M-2B revenue). Calibrate them to your organization using the prompts below. Document the calibrated values in your Decision Log (IMP-002 §4).
+
+**How to read the preliminary values:** The bands are derived from a simple ratio of revenue × risk factor. A small organization ($100M revenue) would set tolerance at ~5% of revenue for single-risk ALE bands; a large enterprise ($5B+) at ~2%. The mid-market defaults below use the midpoint of this range. The Risk pillar lead recalculates these annually when revenue is updated.
 
 **Financial Calibration Inputs:**
 - Annual revenue: $_________
@@ -482,14 +484,19 @@ The risk appetite values in §9.5 are placeholders. Calibrate them to your organ
 
 **Output — Calibrated Values:**
 
-| Band | Original Placeholder | Calibrated Value |
-|------|---------------------|-----------------|
-| Single-risk ALE — Critical | $10M | $_________ |
-| Single-risk ALE — High | $5M | $_________ |
-| Single-risk ALE — Medium | $2M | $_________ |
-| Single-risk ALE — Low | <$2M | <$_________ |
+| Band | Mid-Market Preliminary | Your Calibrated Value |
+|------|-----------------------|-----------------------|
+| Total open ALE — OK | <$5M | $_________ |
+| Total open ALE — Caution | $5M - $15M | $_________ - $_________ |
+| Total open ALE — Escalate | >$15M | >$_________ |
+| Single-risk ALE — CISO review | >$2M | >$_________ |
+| Catastrophic single-event LM | >$10M | >$_________ |
+| Major single-event LM | $1M - $10M | $_________ - $_________ |
+| Medium single-event LM | $100K - $1M | $_________ - $_________ |
+| Minor single-event LM | $10K - $100K | $_________ - $_________ |
+| Negligible LM | <$10K | <$_________ |
 
-**If you cannot calibrate these values**, explicitly document in the Decision Log that risk acceptance uses qualitative judgment until calibration occurs. Do not make acceptance decisions against placeholder values.
+> **Fallback:** If you cannot calibrate these values, document in the Decision Log that risk acceptance uses qualitative judgment until calibration occurs. Do not make acceptance decisions against uncalibrated values.
 
 #### 9.8.2 Risk Acceptance Is Not Remediation
 

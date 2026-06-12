@@ -480,10 +480,10 @@ THREAT MODEL - TM-YYYY-NNNN
      - [Boundary Name]: [between X and Y]
 
 3. DATA FLOW DIAGRAM
-   [Placeholder - reference to diagram artifact]
+   [Pending — create a data flow diagram (DFD) for the system under review. The diagram should identify all system components, external entities, data stores, and data flows with direction labels. Store in the `threat-model-diagrams/` directory alongside this threat model document. Recommended formats: Draw.io (.drawio), Excalidraw (.excalidraw), or Lucidchart exported as PDF. See CERG PRC-TM-001 §3.1 for minimum diagram requirements.]
 
 4. TRUST BOUNDARY DIAGRAM
-   [Placeholder - reference to diagram artifact]
+   [Pending — create a trust boundary diagram identifying all trust boundaries between system components, processes, and external entities. Highlight boundaries where data crosses between different trust levels (e.g., Internet ↔ DMZ, DMZ ↔ Internal, Internal ↔ OT, SaaS provider ↔ On-prem). Store in the `threat-model-diagrams/` directory. See CERG PRC-TM-001 §3.2 for minimum diagram requirements.]
 
 5. ASSET INVENTORY
    | Asset | Classification | Owner | Environment |
