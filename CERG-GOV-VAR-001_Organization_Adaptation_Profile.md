@@ -105,7 +105,7 @@ This is the authoritative list of tokens. New tokens are added only by amendment
 | `{{ORG_NAME}}` | The organization's common name, as used in running prose. | `Northwind Energy` |
 | `{{ORG_LEGAL_NAME}}` | The full legal entity name, for cover pages and approvals. | `Northwind Energy Holdings, Inc.` |
 | `{{ORG_SHORT_NAME}}` | A short form or abbreviation. | `Northwind` |
-| `{{ORG_SECTOR}}` | The industry sector, used in illustrative examples. | `electric utility` |
+| `{{ORG_SECTOR}}` | The industry sector, used in illustrative examples. | `[your sector]` |
 | `{{ORG_CONTENT_REPO}}` | Where the authoritative Markdown corpus lives. | `https://git.example.com/security/cerg` |
 
 ### 4.2 Program Identity
@@ -119,13 +119,13 @@ This is the authoritative list of tokens. New tokens are added only by amendment
 
 | **Token** | **Meaning** | **Example Value** |
 |---|---|---|
-| `{{TOTAL_EMPLOYEES}}` | Headcount of the organization. | `14,000` |
-| `{{PROTECTED_POPULATION}}` | Total population of identities, devices, and access relationships managed. | `28,000` |
-| `{{CERG_TEAM_SIZE}}` | Size of the security team running the program. | `60` |
+| `{{TOTAL_EMPLOYEES}}` | Headcount of the organization. | `[your headcount]` |
+| `{{PROTECTED_POPULATION}}` | Total population of identities, devices, and access relationships managed. | `[your number]` |
+| `{{CERG_TEAM_SIZE}}` | Size of the security team running the program. | `[your team size]` |
 | `{{ENG_STAFF}}` | Headcount in the Engineering pillar. | `14` |
 | `{{RISK_STAFF}}` | Headcount in the Risk pillar. | `15` |
 | `{{GOV_STAFF}}` | Headcount in the Governance pillar. | `13` |
-| `{{SCALE_TIER}}` | The reference scale band this adopter sits in: `small`, `mid`, or `large`. | `large` |
+| `{{SCALE_TIER}}` | The reference scale band this adopter sits in: `small`, `mid`, or `large`. | `[small, mid, or large]` |
 
 ### 4.4 Oversight and Standing Teams
 
@@ -150,9 +150,9 @@ This is the authoritative list of tokens. New tokens are added only by amendment
 | `{{DOC_CONTROL_CONTACT}}` | The contact for document-control questions. | `cerg-docs@example.com` |
 | `{{ADOPTION_DATE}}` | The date the organization adopted CERG. | `2026-05-21` |
 
-> **The "14,000 / 60" Figures Are an Upper Bound**
+> **The Scale Figures Are an Upper Bound**
 >
-> The V1 corpus uses a 14,000-employee organization with a 60-person security team as a deliberate upper-bound illustration, so readers can scale down. The scale tokens in §4.3 exist precisely so an adopter can replace that upper bound with their own reality. A five-person team sets `{{CERG_TEAM_SIZE}}` to `5` and `{{SCALE_TIER}}` to `small`, and the rendered corpus stops describing a sixty-person organization back to them.
+> The V1 corpus uses a large-enterprise illustration as a deliberate upper bound, so readers can scale down. The scale tokens in §4.3 exist precisely so an adopter can replace that upper bound with their own reality. A five-person team sets `{{CERG_TEAM_SIZE}}` to `5` and `{{SCALE_TIER}}` to `small`, and the rendered corpus stops describing a large-enterprise organization back to them.
 
 ---
 

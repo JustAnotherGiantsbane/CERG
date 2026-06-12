@@ -44,7 +44,7 @@
 
 ## 1. Purpose and Scope
 
-CERG is a security program in a box. The box is full. What it has been missing is the on-ramp: a single document that tells an organization which has just forked the repository what to do on Monday morning.
+CERG is a cybersecurity operating model starter kit — the spine, artifacts, workflows, and evidence model to run a program. What it has needed is a clear on-ramp: a single document that tells an organization which has just forked the repository what to do on Monday morning.
 
 This is that document. It is the first thing a new adopter should read after the [README](README.md) and the [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) framework narrative.
 
