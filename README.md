@@ -1,10 +1,26 @@
 # CERG · Cyber Engineering, Risk & Governance
 
-**A security program in a box.**
+**An operating-model and document corpus for standing up a cybersecurity program.**
+
+CERG provides the structure, artifacts, roles, cadences, and templates. Adopters still need to supply accountable owners, asset scope, tooling, evidence, approvals, and organization-specific calibration. No framework can supply a live asset inventory, executive authority, actual evidence, system boundaries, vendor population, tooling state, or business risk appetite.
 
 Cybersecurity teams have struggled with the same structural problem for twenty years: fragmented tools, siloed teams, and a culture of "no" that slows the business without meaningfully reducing risk. CERG is a deliberate answer to that problem.
 
 Fork it. Adapt it. Run it. → **[cerg.nexus](https://cerg.nexus)**
+
+## Where to start — reader paths
+
+Different roles need different entry points. Start with the one that matches you:
+
+| Your Role | Start Here | Then Read |
+|-----------|-----------|-----------|
+| **CISO / Security Executive** | [Cybersecurity Policy](CERG-POL-001_Cybersecurity_Policy.md) | [Framework](CERG-GOV-FRM-001_CERG_Framework.md) → [Operating Model](CERG-GOV-OM-001_CERG_Operating_Model.md) → [Metrics & Reporting](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) |
+| **Governance / Compliance Lead** | [Document Catalog](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | [RACI](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) → [RMF](CERG-GOV-RMF-001_Risk_Management_Framework.md) → [Compliance Matrix](CERG-GOV-CMX-001_Compliance_Matrix.md) |
+| **Risk Lead** | [Risk Management Framework](CERG-GOV-RMF-001_Risk_Management_Framework.md) | [Vulnerability Procedure](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) → [Risk Register](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) → [Third-Party Risk](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
+| **Engineering Lead** | [Architecture Intake](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | [IT/Cloud Standard](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) → [Access Standard](CERG-STD-AC-001_Access_Management_Standard.md) → [Config Baseline](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) |
+| **Small Org Adopter (≤5 people)** | [Implementation Guide](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | [Operating Model](CERG-GOV-OM-001_CERG_Operating_Model.md) → [Job Families Overview](roles/CERG-GOV-JF-001_Job_Families_Overview.md) → [Risk Register](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
+| **Auditor / Assessor** | [Document Catalog](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | [Control Baseline](CERG-GOV-CB-001_Unified_Control_Baseline.md) → [Evidence Procedure](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) → [Compliance Matrix](CERG-GOV-CMX-001_Compliance_Matrix.md) |
+| **Automation / Tooling User** | [machine-readable/README.md](machine-readable/README.md) | [cerg-manifest.yaml](machine-readable/cerg-manifest.yaml) → [cerg-flows.yaml](machine-readable/cerg-flows.yaml) → [cerg-runtime-model.yaml](machine-readable/cerg-runtime-model.yaml) |
 
 ---
 
@@ -216,6 +232,26 @@ Every document is Markdown. The full corpus is available at [cerg.nexus](https:/
 - **[Bulk download](https://cerg.nexus/downloads/cerg-docs.zip)** — all 72 documents as a single ZIP
 
 ---
+
+
+
+## When CERG is not a good fit
+
+CERG requires organizational commitment. It may not be the right choice if:
+
+- You have no named executive sponsor or security owner
+- Your organization only wants certification paperwork, not operational security
+- You cannot name asset owners or business owners for risk acceptance
+- You want security to absorb all business risk without business accountability
+- You cannot tolerate documented exceptions or formal risk acceptance
+- You intend to hand-edit documents without version control
+- You lack a vulnerability scanner, identity provider, or asset inventory
+
+In these cases, start with a lighter framework (NIST CSF, CIS Controls) and adopt CERG when organizational readiness supports it.
+
+
+
+> **CERG is not a certification scheme.** An organization may adopt CERG and still fail a regulatory assessment if controls are not implemented and evidenced. CERG provides a framework and sample operating artifacts. It does not determine legal obligations, registered-entity status, contract scope, or certification readiness. Organizations must validate regulatory applicability with qualified counsel, compliance leadership, and assessors.
 
 ## License
 

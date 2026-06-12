@@ -38,6 +38,27 @@
 
 ## 1. Operating Principles
 
+
+### Record Type Definitions
+
+These terms appear throughout the flows. Consistent usage prevents confusion during operations and audits.
+
+| Term | Definition | Record Type | Converts To |
+|------|-----------|-------------|-------------|
+| **Finding** | An observed condition requiring disposition — discovered through scanning, testing, audit, or review | Finding Record | May promote to Risk Record if SLA exceeded, business decision required, or crown jewel affected |
+| **Risk** | A loss-event scenario with a named owner, treatment strategy, and acceptance decision | Risk Record | May create Exception Record if control deviation is involved |
+| **Exception** | An approved deviation from a control or requirement, with compensating controls, expiration, and named approver | Exception Record | Expired exceptions without renewal become Findings (severity: High) |
+| **Vulnerability** | A technical weakness in an asset — the raw input to a Finding | (fields within Finding Record) | Becomes a Finding when triaged; may be directly remediated without becoming a Risk |
+| **Control Gap** | A missing or ineffective control — a systemic condition, not a single finding | Finding Record or Risk Record | Usually becomes a Risk due to systemic impact |
+| **Incident** | A declared security event requiring active response | Incident Record | Lessons learned may create Findings, Risks, or Control Change Records |
+
+**Conversion Rules:**
+
+- A Finding promotes to a Risk Record when: SLA is exceeded, the affected asset is Tier 0/Tier 1, exploitation is active, remediation requires a business decision, or compensating controls are needed.
+- A Risk that involves a control deviation creates an Exception Record.
+- An Exception that expires without renewal auto-creates a Finding (severity: High).
+- A recurring Finding in the same control family triggers a Control Change Record (F-01).
+
 1. **One material event creates one primary record and one accountable owner.** CERG repeatedly emphasizes authoritative records and explicit ownership as the basis for mature execution.
 2. **Pre-production security work is Engineering-led unless explicitly escalated.** CERG positions Engineering as the embedded consulting and architecture-review function for projects before production.
 3. **Post-production findings are Risk-led unless they are active incident-response actions.** CERG assigns Risk responsibility for continuous exposure identification through vulnerability management, adversarial testing, vendor assessment, and monitoring.

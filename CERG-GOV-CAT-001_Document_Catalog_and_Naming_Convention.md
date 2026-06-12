@@ -65,6 +65,10 @@ Where:
 
 Files are named `<DocumentID>_<Short_Title>.md` using underscore-separated title case (e.g., `CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md`).
 
+
+
+> **Stable ID Policy**: Document IDs are never reused. A retired ID remains reserved permanently. A superseding document identifies its predecessor. The machine-readable manifest preserves artifact history. Breaking changes to IDs, statuses, or role names are documented in the revision history.
+
 > **Convention, Not Bureaucracy**
 >
 > The ID format exists so that a person reading a control reference can tell at a glance what kind of artifact they're being pointed at. A reader who sees `CERG-STD-OT-001` knows it's a standard; a reader who sees `CERG-PRC-VM-001` knows it's a procedure they can execute. Anything that obscures that signal, clever domain codes, free-form titles in the ID, is a mistake.
