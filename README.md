@@ -92,6 +92,7 @@ The pillars are not sequential. They run simultaneously, with structured handoff
 - [Style Guide](CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md) — authorship conventions for the entire corpus
 - [Consolidated Roles & RACI](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) — 27 canonical roles with full RACI
 - [Implementation & Adaptation Guide](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) — how to adopt and tailor CERG
+- [Adoption Safety Guide](CERG-GOV-IMP-002_Adoption_Safety_Guide.md) — prerequisites, anti-patterns, decision log, risk acceptance guardrails, and safe tailoring boundaries
 - [Organization Adaptation Profile](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) — variance and scoping template
 - [Maturity Self-Assessment](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) — NIST CSF-based maturity scoring
 - [Metrics & Reporting](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) — CISO and board-level dashboard

@@ -30,9 +30,9 @@
 | # | Suggestion | Priority | Status |
 |---|-----------|----------|--------|
 | 2.1 | Small-team adoption path with reduced operating rhythm | P1 | — |
-| 2.2 | "What not to adopt yet" guide — which docs to defer until spine is running | P1 | — |
-| 2.3 | Adoption anti-patterns section (forking = complete, deleting roles, etc.) | P1 | — |
-| 2.4 | Decision log template (Decision ID, date, rationale, alternatives, docs affected) | P1 | — |
+| 2.2 | "What not to adopt yet" guide — which docs to defer until spine is running | P1 | ✓ DONE in IMP-002 §2 |
+| 2.3 | Adoption anti-patterns section (forking = complete, deleting roles, etc.) | P1 | ✓ DONE in IMP-002 §3 |
+| 2.4 | Decision log template (Decision ID, date, rationale, alternatives, docs affected) | P1 | ✓ DONE in IMP-002 §4 |
 | 2.5 | Adoption diff report (tokens changed, docs deferred, placeholders, pending approvals) | P1 | — |
 | 2.6 | CERG Lite package for small teams | P1 | — |
 | 2.7 | CERG Regulated Utility package | P2 | — |
@@ -125,7 +125,7 @@
 | # | Suggestion | Priority | Status |
 |---|-----------|----------|--------|
 | 9.1 | Risk appetite calibration workbook (revenue, downtime cost, fine exposure, etc.) | P1 | — |
-| 9.2 | Risk acceptance expiration defaults (Critical 30d, High 90d, Medium 180d, Low 365d) | P1 | — |
+| 9.2 | Risk acceptance expiration defaults (Critical 30d, High 90d, Medium 180d, Low 365d) | P1 | ✓ DONE in IMP-002 §5 |
 | 9.3 | "Risk acceptance is not remediation" warning | P1 | — |
 | 9.4 | Risk appetite exception workflow | P2 | — |
 | 9.5 | Materiality guidance for board reporting | P2 | — |
@@ -194,9 +194,9 @@
 
 | # | Suggestion | Priority | Status |
 |---|-----------|----------|--------|
-| 14.1 | "Do not accidentally claim" guidance per framework | P1 | — |
-| 14.2 | CMMC realism guidance | P1 | — |
-| 14.3 | NERC-CIP caution guidance | P1 | — |
+| 14.1 | "Do not accidentally claim" guidance per framework | P1 | ✓ DONE in IMP-002 §6 |
+| 14.2 | CMMC realism guidance | P1 | ✓ DONE in IMP-002 §6 |
+| 14.3 | NERC-CIP caution guidance | P1 | ✓ DONE in IMP-002 §6 |
 | 14.4 | Mapping confidence levels (Direct, Partial, Supports, Not equivalent) | P1 | — |
 | 14.5 | Source citations for regulatory mappings | P2 | — |
 | 14.6 | Assumptions behind each mapping | P2 | — |
@@ -209,7 +209,7 @@
 
 | # | Suggestion | Priority | Status |
 |---|-----------|----------|--------|
-| 15.1 | Role collision guide for small teams (safe vs risky combinations) | P1 | — |
+| 15.1 | Role collision guide for small teams (safe vs risky combinations) | P1 | ✓ DONE in IMP-002 §7 |
 | 15.2 | Minimum separation of duties tables per process | P1 | — |
 | 15.3 | RACI conflict detection in machine-readable layer | P2 | — |
 | 15.4 | Decision rights table (who recommends, decides, consulted, informed) | P2 | — |
@@ -260,7 +260,7 @@
 |---|-----------|----------|--------|
 | 19.1 | Implementation backlog template | P2 | — |
 | 19.2 | Program improvement register examples | P2 | — |
-| 19.3 | Local tailoring boundaries (safe vs dangerous changes) | P1 | — |
+| 19.3 | Local tailoring boundaries (safe vs dangerous changes) | P1 | ✓ DONE in IMP-002 §8 |
 | 19.4 | Assumptions register | P2 | — |
 | 19.5 | Exception debt reporting | P2 | — |
 | 19.6 | Funding/investment linkage template | P2 | — |
