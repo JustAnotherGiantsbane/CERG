@@ -107,15 +107,15 @@
 
 | # | Suggestion | Priority | Status |
 |---|-----------|----------|--------|
-| 8.1 | Control status decision tree (applicable? designed? operating? evidenced?) | P1 | — |
-| 8.2 | Control inheritance examples with shared-responsibility analysis | P1 | — |
-| 8.3 | Shared-responsibility model for cloud/SaaS/MSP/OT | P1 | — |
-| 8.4 | Asset criticality model (Tier 0-4) for SLA/logging/backup/review mapping | P1 | — |
+| 8.1 | Control status decision tree (applicable? designed? operating? evidenced?) | P1 | ✓ DONE in CB-001 §7 |
+| 8.2 | Control inheritance examples with shared-responsibility analysis | P1 | ✓ DONE in CB-001 §7.1 |
+| 8.3 | Shared-responsibility model for cloud/SaaS/MSP/OT | P1 | ✓ DONE in CB-001 §7.1 |
+| 8.4 | Asset criticality model (Tier 0-4) for SLA/logging/backup/review mapping | P1 | ✓ DONE in FLOW-001 F-03 (ephemeral assets) + CB-001 §7.1 (tier mapping) |
 | 8.5 | Crown jewels workflow (identify, map dependencies, map identities, threat scenario) | P2 | — |
 | 8.6 | Finding vs risk vs issue vs exception clarity everywhere | P0 | ✓ DONE in FLOW-001 §1 |
-| 8.7 | Risk promotion rules (when does vulnerability become risk register entry?) | P1 | — |
-| 8.8 | Closure validation rules (who can close, evidence required, retest?) | P1 | — |
-| 8.9 | Recurring finding escalation rules | P1 | — |
+| 8.7 | Risk promotion rules (when does vulnerability become risk register entry?) | P1 | ✓ DONE in FLOW-001 F-04 |
+| 8.8 | Closure validation rules (who can close, evidence required, retest?) | P1 | ✓ DONE in FLOW-001 F-04 |
+| 8.9 | Recurring finding escalation rules | P1 | ✓ DONE in FLOW-001 F-04 |
 | 8.10 | Root cause taxonomy | P2 | — |
 | 8.11 | Control failure severity classification | P2 | — |
 | 8.12 | Business-owner accountability enforcement in templates | P1 | ✓ DONE in AUD-001 §7 |
@@ -124,13 +124,13 @@
 
 | # | Suggestion | Priority | Status |
 |---|-----------|----------|--------|
-| 9.1 | Risk appetite calibration workbook (revenue, downtime cost, fine exposure, etc.) | P1 | — |
+| 9.1 | Risk appetite calibration workbook (revenue, downtime cost, fine exposure, etc.) | P1 | ✓ DONE in RMF-001 §9.8.1 |
 | 9.2 | Risk acceptance expiration defaults (Critical 30d, High 90d, Medium 180d, Low 365d) | P1 | ✓ DONE in IMP-002 §5 |
-| 9.3 | "Risk acceptance is not remediation" warning | P1 | — |
+| 9.3 | "Risk acceptance is not remediation" warning | P1 | ✓ DONE in RMF-001 §9.8.2 |
 | 9.4 | Risk appetite exception workflow | P2 | — |
 | 9.5 | Materiality guidance for board reporting | P2 | — |
-| 9.6 | Metrics that should not be used alone (vanity metrics warning) | P1 | — |
-| 9.7 | Quality metrics for the program itself | P1 | — |
+| 9.6 | Metrics that should not be used alone (vanity metrics warning) | P1 | ✓ DONE in MTR-001 |
+| 9.7 | Quality metrics for the program itself | P1 | ✓ DONE in MTR-001 |
 | 9.8 | Executive briefing examples (good risk trend slide, bad vanity slide) | P2 | — |
 | 9.9 | Stoplight adoption score (Green/Yellow/Red readiness) | P2 | — |
 | 9.10 | Program maturity gates (Level 0-5) | P2 | — |

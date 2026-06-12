@@ -443,6 +443,48 @@ CERG's risk appetite is expressed in two complementary ways: a qualitative postu
 
 > **Calibration is the work.** Numbers above are starting placeholders; they are not approved appetites until Finance signs the calibration. The pattern - qualitative posture per category plus quantitative ALE bands - is the part that does not change.
 
+
+#### 9.8.1 Risk Appetite Calibration Workbook
+
+The risk appetite values in §9.5 are placeholders. Calibrate them to your organization using the prompts below. Document the calibrated values in your Decision Log (IMP-002 §4).
+
+**Financial Calibration Inputs:**
+- Annual revenue: $_________
+- Critical service downtime cost (per hour): $_________
+- Regulatory fine exposure (per incident): $_________
+- Cyber insurance retention: $_________
+- Cyber insurance coverage limit: $_________
+- Board reporting materiality threshold: $_________
+
+**Operational Calibration Inputs:**
+- Maximum tolerable downtime for Tier 1 systems: _________ hours
+- Maximum data loss tolerance (RPO): _________ hours
+- Customer notification threshold: _________ records affected
+- Operational safety threshold: [Describe safety impact that triggers Critical classification]
+
+**Output — Calibrated Values:**
+
+| Band | Original Placeholder | Calibrated Value |
+|------|---------------------|-----------------|
+| Single-risk ALE — Critical | $10M | $_________ |
+| Single-risk ALE — High | $5M | $_________ |
+| Single-risk ALE — Medium | $2M | $_________ |
+| Single-risk ALE — Low | <$2M | <$_________ |
+
+**If you cannot calibrate these values**, explicitly document in the Decision Log that risk acceptance uses qualitative judgment until calibration occurs. Do not make acceptance decisions against placeholder values.
+
+#### 9.8.2 Risk Acceptance Is Not Remediation
+
+> **Risk acceptance does not make the risk disappear.** It is a deliberate decision to tolerate a known risk under specific conditions for a defined period. It does not:
+>
+> - Make the finding disappear from the risk register
+> - Reset the remediation SLA without documented approval
+> - Transfer accountability from the business owner to security
+> - Satisfy a regulatory requirement by itself
+> - Excuse the organization from monitoring the risk
+>
+> **A risk acceptance that is not reviewed on cadence is not a treatment — it is neglect.** Every acceptance must have: a named business owner, a documented rationale, compensating controls where applicable, an expiration date, and a review commitment.
+
 ### 9.9 Worked Example: Risk Register Entry
 
 The example below shows a single register entry written in the canonical format. Fields not relevant to the scenario are marked n/a; everything else is filled in as it would appear in the live register.

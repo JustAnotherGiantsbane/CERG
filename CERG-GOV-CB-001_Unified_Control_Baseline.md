@@ -194,7 +194,73 @@ Section 6 entries below are organized by family and reference the subordinate st
 | SR-2 Supply Chain Risk Management Plan     | Make sure each vendor or service supporting your system or process is tiered, tier-specific evidence requirements are understood, contract clauses match the tier, and required SCCT information is collected. | Hardware, Software, Network, Cloud, Data, Process | Risk (TPRM)        | TPRM register, SCCT roster                | Continuous   | PRC-TPRM-001             |
 | SR-3 Supply Chain Controls and Processes   | Do not allow international access unless the country-risk exception is approved and documented.                                                                                                                | Software, Network, Cloud, Data, Process           | Risk (TPRM)        | Country-risk register, exception register | Quarterly    | PRC-TPRM-001             |
 
-## 7. Overlay Matrix
+
+## 7. Control Status Decision Tree
+
+Use this decision tree to assign honest control implementation statuses. Optimistic status inflation is the most common control failure mode — marking a control "Implemented" without evidence hides the gap from everyone, including yourself.
+
+```
+Is the control applicable to your environment?
+  ├─ No  → Not Applicable (document rationale)
+  └─ Yes → Is the control fully designed?
+              ├─ No  → Planned (design in progress) or Not Implemented (no design)
+              └─ Yes → Is it operating consistently?
+                          ├─ No  → Partially Implemented (operating gap)
+                          └─ Yes → Is there current evidence of operation?
+                                      ├─ No  → Partially Implemented (evidence gap)
+                                      └─ Yes → Implemented
+```
+
+### Status Definitions
+
+| Status | Definition | When to Use |
+|--------|-----------|-------------|
+| **Not Applicable** | The control does not apply to your environment. | Document the rationale. Example: "OT-specific controls are not applicable — no OT environment exists." |
+| **Not Implemented** | No design exists. The control is not in place. | Be honest. A gap you acknowledge is manageable. A gap you hide is not. |
+| **Planned** | Design exists or is in progress. Not yet operating. | Use when there is a committed implementation plan with a target date and owner. |
+| **Partially Implemented** | Designed and operating, but with gaps. | Specify the gap: evidence missing, inconsistent operation, incomplete scope, or inherited without verification. |
+| **Implemented** | Designed, operating, and evidenced. | Evidence must meet the tier required for this control (E2 minimum per AUD-001). |
+| **Inherited** | Relies on a provider, partner, or parent organization. | Requires provider evidence (SOC 2, ISO cert, etc.) AND organization-side complementary controls. See §7.1. |
+
+### 7.1 Control Inheritance and Shared Responsibility
+
+Cloud, SaaS, MSP, and OT vendor relationships create shared control environments. "Inherited" is not a free pass — it requires provider evidence AND your own complementary controls.
+
+| Responsibility | Who Does What | Evidence Required |
+|---------------|--------------|-------------------|
+| **Provider-Only** | The provider is fully responsible. The customer cannot influence the control. | Provider attestation (SOC 2, ISO 27001, FedRAMP). Customer verifies scope covers their environment. |
+| **Customer-Only** | The customer is fully responsible. The provider has no role. | Customer-produced evidence per this standard. |
+| **Shared** | Both provider and customer have responsibilities. Failure by either party constitutes a control gap. | Provider evidence + customer evidence for customer-side controls. Document the shared responsibility matrix. |
+
+#### Inheritance Examples
+
+| Scenario | Inherited? | What You Still Need |
+|----------|-----------|---------------------|
+| Physical security of cloud data center | Yes — provider attestation acceptable | Confirm data center scope covers your region. SOC 2 physical security control testing. |
+| Logging for SaaS application | No — platform logging capability is inherited, but you must configure, collect, and monitor | Enable audit logging in the SaaS app. Configure log export to your SIEM. Verify logs are flowing. |
+| MFA for SaaS application | Maybe — if IdP enforces and app trusts IdP | Verify IdP policy enforces MFA. Verify app is configured to require IdP authentication. Check for bypass paths (local accounts, API keys). |
+| Backup for SaaS data | Maybe — platform availability backup is inherited, but customer-level recovery may not be | Review SaaS provider's backup SLA. Export critical data to customer-controlled backup. Test restore. |
+| Encryption at rest for cloud storage | Maybe — provider manages infrastructure encryption, but key ownership and configuration vary | Confirm encryption is enabled. Determine who controls the keys. If provider-managed, document the shared responsibility. |
+| Patch management for PaaS | Yes — provider patches the platform | Verify the PaaS SLA covers patching. Monitor for CVEs in the platform. Plan for migration if the provider's patch SLA is insufficient. |
+| OT vendor remote access | No — you control the access path and monitoring | Require MFA. Log all sessions. Approve access per session. Disable when not in use. The vendor's security posture is an input, not a substitute. |
+
+#### Shared Responsibility Decision Table
+
+For every control that crosses an organizational boundary, complete this table and retain it with the control evidence:
+
+| Field | Value |
+|-------|-------|
+| Control ID | [From CB-001] |
+| Provider/Vendor | [Name] |
+| Provider Responsibility | [What the provider does] |
+| Provider Evidence | [SOC 2 report reference, contract clause, architecture doc] |
+| Customer Responsibility | [What you must do] |
+| Customer Evidence | [Your evidence of customer-side controls] |
+| Residual Risk If Provider Evidence Is Unavailable | [What risk remains] |
+| Reviewed By | [Name] |
+| Review Date | [Date] |
+
+## 8. Overlay Matrix
 
 Overlays add to the organizational baseline. They never silently relax it.
 
@@ -212,7 +278,7 @@ Overlays add to the organizational baseline. They never silently relax it.
 
 ---
 
-## 8. Control-to-Evidence Mapping
+## 9. Control-to-Evidence Mapping
 
 Every control entry in §6 names an evidence artifact in its `Evidence` column. This section consolidates those artifacts into a single mapping with the repository where the evidence lives, the refresh cadence, and the owning pillar. It is the lookup an auditor opens first.
 
@@ -265,7 +331,7 @@ Three rules apply to every entry above:
 
 ---
 
-## 9. Regulatory Crosswalks
+## 10. Regulatory Crosswalks
 
 This section translates each baseline control into the regulator-facing identifier or expectation. It is the read-once map for cross-framework audits: NERC-CIP auditors, CMMC C3PAOs, and SOX external auditors each look at the same controls under different names.
 

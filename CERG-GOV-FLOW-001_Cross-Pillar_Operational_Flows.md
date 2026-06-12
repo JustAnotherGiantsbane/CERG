@@ -576,6 +576,53 @@ Convert discovered exposure into a deterministic treatment path: remediation, co
 | **Medium** | 5 business days | 30 days | N/A |
 | **Low** | 10 business days | 90 days | N/A |
 
+
+### Risk Promotion Rules — When a Finding Becomes a Risk Register Entry
+
+Not every finding needs a risk register entry. Promote a Finding to a Risk Record when any of these conditions are met:
+
+| Condition | Action | Rationale |
+|-----------|--------|-----------|
+| SLA for remediation is exceeded | Create Risk Record with severity based on original finding | An overdue finding represents active, unmanaged exposure |
+| Affected asset is Tier 0 (Crown Jewel) or Tier 1 (Critical) | Create Risk Record regardless of severity | High-criticality assets warrant formal risk tracking |
+| Active exploitation confirmed (KEV-listed, exploit in wild) | Create Risk Record; treat as Critical | Active exploitation invalidates the original severity assessment |
+| Remediation requires a business decision (budget, outage window, vendor coordination) | Create Risk Record with business owner assigned | Business decisions require business accountability |
+| Compensating controls are needed | Create Risk Record and Exception Record | Compensating controls represent a deviation from the control baseline |
+| Repeated finding — same vulnerability class, same system, more than twice | Create Risk Record; escalate to root cause analysis | Recurrence signals a systemic issue, not a one-time miss |
+| Regulatory deviation required (CIP, CMMC, SOX) | Create Risk Record and initiate regulatory deviation process | Regulatory implications require formal tracking |
+
+A Finding that does not meet any promotion condition is closed through the standard remediation → validation → closure path.
+
+### Closure Validation Rules
+
+Who can close a finding, and what evidence is required, depends on severity and source:
+
+| Severity | Who Can Close | Minimum Evidence | Retest Required? |
+|----------|--------------|-----------------|-----------------|
+| **Critical** | Risk Pillar (must validate) | E3 evidence per AUD-001; authenticated re-scan or adversarial re-test | Yes — mandatory |
+| **High** | Risk Pillar (must validate) | E3 evidence; authenticated re-scan or equivalent validation | Yes — mandatory |
+| **Medium** | Engineering may self-close with automated validation | E2 minimum; authenticated re-scan or SAST re-scan | Yes — automated re-scan acceptable |
+| **Low** | Engineering may self-close with automated validation | E2 minimum; scan report or equivalent | At discretion of closer |
+
+**Additional closure rules:**
+
+- Engineering may not close a Critical or High finding unilaterally. Risk must validate.
+- Self-service closure (Medium/Low) requires the automated validation to reference a specific pipeline run, scan job, or test execution with a timestamp.
+- If closure validation fails (retest shows finding still present): reopen the finding, increment the recurrence counter, and escalate per the recurring finding rules below.
+- Closure must include a statement of what changed: "Patched to version X," "Parameterized query at line Y," "Added WAF rule Z." "Fixed" is insufficient.
+
+### Recurring Finding Escalation
+
+A finding that reappears after closure is different from a new finding. Escalate recurring findings as follows:
+
+| Recurrence | Action | Escalation |
+|-----------|--------|-----------|
+| 1st recurrence (same vulnerability class, same system) | Reopen with "Recurring" flag; verify original closure evidence was valid | Notify Pillar Leader |
+| 2nd recurrence | Root cause analysis required; document why the fix did not hold | Escalate to Pillar Leader; create Finding Record for the root cause |
+| 3rd recurrence | Treat as systemic control failure | Create Risk Record; escalate to CISO; consider Control Change Record (F-01) |
+
+Recurring findings across multiple systems in the same control family trigger a Control Change Record regardless of recurrence count per system.
+
 ### Allowed Treatment Paths
 - Immediate remediation
 - Planned remediation

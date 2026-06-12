@@ -1,6 +1,41 @@
 
 # SURGE: Cyber Engineering, Risk & Governance
 
+
+## N. Metrics That Should Not Be Used Alone
+
+The following metrics are commonly reported but are easily gamed, misinterpreted, or disconnected from actual risk reduction. If you report them, pair them with a companion metric that provides context.
+
+| Vanity Metric | Why It Misleads | Pair With |
+|--------------|----------------|-----------|
+| Number of vulnerabilities closed | Rewards volume over severity. A team closing 100 Low findings looks better than a team closing 3 Criticals. | Exposure age by asset criticality; % of Critical/High findings past SLA |
+| Number of phishing emails blocked | Your email gateway blocks 99% of phishing — the 1% that gets through is what matters. | Phishing simulation click rate; time from phish report to containment |
+| Number of policies published | Publishing policies is not implementing controls. | % of controls with current evidence (E2+) |
+| Number of alerts generated | Alert volume is noise. Signal is what matters. | Detection signal-to-noise ratio; % of alerts resulting in validated incidents |
+| Number of vendors reviewed | A checkbox review of 100 vendors is worse than a thorough review of 10 high-risk vendors. | % of high-risk vendors with current assessment; vendor risk concentration |
+| Percent compliant without evidence quality | "95% compliant" based on policy existence, not control operation. | % of controls with E3 evidence; % of evidence current |
+| Training completion rate | Completion proves attendance, not comprehension or behavior change. | Phishing simulation results; incident root causes tracing to human error |
+
+## N+1. Program Quality Metrics
+
+These metrics measure whether the CERG program itself is healthy — not whether individual controls are operating.
+
+| Metric | What It Measures | Target |
+|--------|-----------------|--------|
+| % of risks with named business owner (not security) | Business accountability for risk | >90% |
+| % of exceptions with expiration date | Exception discipline | 100% |
+| % of control evidence current (within freshness window) | Evidence freshness | >85% |
+| % of Tier 0/Tier 1 assets with tested recovery | Resilience readiness | >95% |
+| % of high-risk vendors reviewed on schedule | Vendor risk currency | >90% |
+| % of adopted documents reviewed on schedule | Document governance | >80% |
+| Number of "Approved" documents with "Pending" approver | Governance hygiene | 0 |
+| Number of placeholder values in approved documents | Operational readiness | 0 in adopted documents |
+| % of findings with a named owner assigned within SLA | Accountability timeliness | >90% |
+| % of accepted risks past expiration without review | Risk acceptance discipline | 0% |
+| % of recurring findings (same vulnerability, same system, >2 times) | Remediation effectiveness | <10% of total findings |
+| Average time from finding identification to owner assignment | Triage responsiveness | <SLA for severity |
+| Number of SLA breaches by pillar per month | Pillar performance | Trending down |
+
 ## METRICS, DASHBOARD, AND CISO / BOARD REPORTING
 ### Metrics Dictionary · KRI/KPI Data Source Map · CISO Dashboard · Brief and Report Templates
 
