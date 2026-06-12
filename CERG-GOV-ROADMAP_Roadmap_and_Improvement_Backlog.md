@@ -94,11 +94,11 @@
 
 | # | Suggestion | Priority | Status |
 |---|-----------|----------|--------|
-| 7.1 | Explicit evidence quality rules (who produced, when, tamper-resistant, repeatable, etc.) | P1 | — |
-| 7.2 | Bad evidence examples (screenshot no date, email "done," vendor says yes) | P1 | — |
-| 7.3 | Sampling methodology for audit/evidence work | P1 | — |
-| 7.4 | Control design vs operating effectiveness distinction | P1 | — |
-| 7.5 | Evidence freshness rules per evidence type | P1 | — |
+| 7.1 | Explicit evidence quality rules (who produced, when, tamper-resistant, repeatable, etc.) | P1 | ✓ DONE in AUD-001 §2 |
+| 7.2 | Bad evidence examples (screenshot no date, email "done," vendor says yes) | P1 | ✓ DONE in AUD-001 §3 |
+| 7.3 | Sampling methodology for audit/evidence work | P1 | ✓ DONE in AUD-001 §5 |
+| 7.4 | Control design vs operating effectiveness distinction | P1 | ✓ DONE in AUD-001 §4 |
+| 7.5 | Evidence freshness rules per evidence type | P1 | ✓ DONE in AUD-001 §6 |
 | 7.6 | Control test scripts / pseudo-tests per control | P2 | — |
 | 7.7 | Minimum viable evidence library structure | P1 | ✓ DONE in IMP-003 §8 |
 | 7.8 | Recovery evidence standards (restore test records, RTO/RPO achieved) | P2 | — |
@@ -118,7 +118,7 @@
 | 8.9 | Recurring finding escalation rules | P1 | — |
 | 8.10 | Root cause taxonomy | P2 | — |
 | 8.11 | Control failure severity classification | P2 | — |
-| 8.12 | Business-owner accountability enforcement in templates | P1 | — |
+| 8.12 | Business-owner accountability enforcement in templates | P1 | ✓ DONE in AUD-001 §7 |
 
 ## 9. Risk Appetite & Metrics
 

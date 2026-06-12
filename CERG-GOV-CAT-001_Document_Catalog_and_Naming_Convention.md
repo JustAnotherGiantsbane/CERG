@@ -242,6 +242,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-GOV-TRC-001`](CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md) | Control-to-Procedure Traceability Matrix | Governance Pillar Leader (Control Baseline) | Approved |
 | [`CERG-GOV-IMPREG-001`](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) | Program Improvement Register | Governance Pillar Leader | Published |
 | [`CERG-GOV-CEF-001`](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) | Control Effectiveness Framework | Governance Pillar Leader | Approved |
+| [`CERG-GOV-AUD-001`](CERG-GOV-AUD-001_Evidence_Quality_Standard.md) | Evidence Quality Standard | Governance Pillar Leader | Approved |
 | [`CERG-GOV-JA-001`](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Job Architecture and Grade Framework | Governance Pillar Leader (Policy & Standards) | Approved |
 | [`CERG-GOV-JD-001`](CERG-GOV-JD-001_CERG_Job_Descriptions.md) | CERG Job Descriptions | Governance Pillar Leader (Policy & Standards) | Approved |
 | [`CERG-GOV-CMP-001`](CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) | Competency Model and Behavioral Anchors | Governance Pillar Leader (Policy & Standards) | Approved |

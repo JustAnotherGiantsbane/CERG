@@ -100,6 +100,7 @@ The pillars are not sequential. They run simultaneously, with structured handoff
 - [Annual Security Calendar](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md) — annual governance cadence
 - [Traceability Matrix](CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md) — control-to-procedure cross-reference
 - [Control Effectiveness Framework](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) — how controls are tested and rated
+- [Evidence Quality Standard](CERG-GOV-AUD-001_Evidence_Quality_Standard.md) — evidence quality rules, bad evidence examples, sampling methodology, freshness, business-owner accountability
 - [Job Architecture](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) — security job family and grading
 - [Job Descriptions](CERG-GOV-JD-001_CERG_Job_Descriptions.md) — full security role descriptions
 - [Competency Model](CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) — behavioral anchors per role
