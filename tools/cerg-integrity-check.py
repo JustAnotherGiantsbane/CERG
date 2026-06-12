@@ -101,11 +101,10 @@ def check_all():
     
     issues = defaultdict(list)  # severity -> list of messages
     known_files = {}
-for f in files:
-    known_files[os.path.basename(f)] = f
-    # Also register by relative path from BASE
-    rel = os.path.relpath(f, BASE)
-    known_files[rel] = f
+    for f in files:
+        known_files[os.path.basename(f)] = f
+        rel = os.path.relpath(f, BASE)
+        known_files[rel] = f
     id_to_file = {}
     
     print(f"CERG Integrity Check")
