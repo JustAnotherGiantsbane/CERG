@@ -331,7 +331,7 @@ An exception is required whenever a system, person, or process intentionally dev
 | 1 | Requester submits exception with: control reference, business / operational justification, affected systems, proposed compensating controls, risk owner, and proposed duration. | Requester |
 | 2 | Engineering reviews proposed compensating controls. | Engineering |
 | 3 | Risk assesses likelihood and impact of the residual risk; provides a written risk finding. | Risk |
-| 4 | Governance applies the approval matrix (Section 8); routes for approval. | Governance |
+| 4 | Governance applies the approval matrix (Section 8); routes for approval. Business owner approval is required for any exception carrying residual risk above Low. | Governance |
 | 5 | Approver decides: approve, approve with conditions, deny, or return for additional information. | Approver |
 | 6 | Approved exception is entered into the risk register as a linked acceptance entry; compensating controls are tracked. | Governance |
 | 7 | At expiration, the exception is re-evaluated. Renewal requires a new approval cycle. Renewals shall not be granted by default. | Governance |
@@ -419,7 +419,7 @@ EXCEPTION REQUEST FORM - EXC-YYYY-NNNN
 8. APPROVAL
    | Role | Name | Decision | Date |
    |---|---|---|---|
-   | Risk Owner | | Approve / Deny / Conditional | |
+   | Business Owner (Risk Owner) | | Approve / Deny / Conditional | |
    | Engineering Pillar Leader | | Approve / Deny / Conditional | |
    | Governance Pillar Leader | | Approve / Deny / Conditional | |
    | CISO (if High or Critical) | | Approve / Deny / Conditional | |
@@ -439,21 +439,21 @@ EXCEPTION REQUEST FORM - EXC-YYYY-NNNN
 
 ## 8. Approval Authority
 
-Risk treatment decisions require documented approval from the authority matching the risk's severity. The canonical approval authority table is maintained in [CERG-GOV-RMF-001](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 and is the single source of truth for acceptance authority by severity tier. The table below reproduces the same authorities for convenience within this procedure, with additional detail on treatment-type distinctions and the emergency exception path.
+Risk treatment decisions require documented approval from the authority matching the risk's severity. The canonical approval authority table — including the Business role at every level — is maintained in [CERG-GOV-RMF-001](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. The table below summarizes approval authority for convenience; the RMF table is authoritative. Security assesses, recommends, and validates. The business owner owns the consequence.
 
-| **Risk Rating / Treatment** | **Approval Authority** |
-|---|---|
-| Low risk – any treatment | Risk Owner + Governance Pillar Leader |
-| Medium risk – Reduce / Transfer / Avoid | Risk Owner + Engineering or Risk Pillar Leader |
-| Medium risk – Accept | Risk Owner + CISO (or CISO designee) |
-| High risk – any treatment | Risk Owner + CISO |
-| Critical risk – any treatment | Risk Owner + CISO + Executive Sponsor |
-| Any exception affecting BES Cyber Systems | CISO + NERC-CIP deviation process |
-| Any exception affecting CUI environment posture | CISO + POA&M entry |
-| Any exception affecting [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC | CISO + CFO designee |
-| Emergency exception (operational necessity) | Risk Pillar Leader or Engineering Pillar Leader may authorize immediately; CISO must approve or deny post-hoc within 24 hours. If denied, the action must be reversed or mitigated, and the residual risk is logged to the risk register with the denial rationale. |
+| **Risk Rating / Treatment** | **Security Role** | **Business Role** | **Approval** |
+|---|---|---|---|
+| Low risk – any treatment | Governance: confirms procedural exception; Risk: confirms low residual risk | Business owner: owns local decision | Governance Pillar Leader |
+| Medium risk – Reduce / Transfer / Avoid | Risk: performs risk assessment; Engineering: validates treatment plan | Business owner: signs off on treatment | Risk or Engineering Pillar Leader |
+| Medium risk – Accept | Risk: performs risk assessment; Governance: documents conditions | Business owner: accepts residual risk | CISO (or CISO designee) |
+| High risk – any treatment | Risk: signs finding; Governance: structures package | Business owner + Executive Sponsor: accept | CISO + Executive Sponsor |
+| Critical risk – any treatment | Risk: signs finding; Governance: structures package | Business owner + Executive Sponsor: accept | CISO + Executive Sponsor; Board notified |
+| Any exception affecting BES Cyber Systems | As above per severity | As above | CISO + NERC-CIP deviation process |
+| Any exception affecting CUI environment posture | As above per severity | As above | CISO + POA&M entry |
+| Any exception affecting [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC | As above per severity | As above | CISO + CFO designee |
+| Emergency exception (operational necessity) | Risk Pillar Leader or Engineering Pillar Leader may authorize immediately | Business owner notified within 24 hours | CISO must approve or deny post-hoc within 24 hours. If denied, the action must be reversed or mitigated, and the residual risk is logged to the risk register with the denial rationale. |
 
-Approvers may delegate within their authority but shall document the delegation. The CISO retains final authority for any risk-related decision. Acceptance of residual risk at any tier follows the canonical authority table in [CERG-GOV-RMF-001](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. No acceptance expires automatically; every acceptance at every tier requires a fresh approval cycle at expiration.
+Approvers may delegate within their authority but shall document the delegation. The CISO retains final authority for any risk-related decision. Acceptance of residual risk at any tier follows the canonical authority table in [CERG-GOV-RMF-001](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. The business owner accepts the business risk — security does not accept business risk. No acceptance expires automatically; every acceptance at every tier requires a fresh approval cycle at expiration.
 
 ---
 
