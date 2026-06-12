@@ -29,12 +29,12 @@
 
 | # | Suggestion | Priority | Status |
 |---|-----------|----------|--------|
-| 2.1 | Small-team adoption path with reduced operating rhythm | P1 | — |
+| 2.1 | Small-team adoption path with reduced operating rhythm | P1 | ✓ DONE in IMP-003 §3 |
 | 2.2 | "What not to adopt yet" guide — which docs to defer until spine is running | P1 | ✓ DONE in IMP-002 §2 |
 | 2.3 | Adoption anti-patterns section (forking = complete, deleting roles, etc.) | P1 | ✓ DONE in IMP-002 §3 |
 | 2.4 | Decision log template (Decision ID, date, rationale, alternatives, docs affected) | P1 | ✓ DONE in IMP-002 §4 |
 | 2.5 | Adoption diff report (tokens changed, docs deferred, placeholders, pending approvals) | P1 | — |
-| 2.6 | CERG Lite package for small teams | P1 | — |
+| 2.6 | CERG Lite package for small teams | P1 | ✓ DONE in IMP-003 §2 |
 | 2.7 | CERG Regulated Utility package | P2 | — |
 | 2.8 | CERG CMMC starter package | P2 | — |
 | 2.9 | "When CERG is not a good fit" section | P0 | ✓ DONE |
@@ -47,8 +47,8 @@
 | 3.1 | Reader paths in README (CISO path, Engineering path, Auditor path, etc.) | P0 | ✓ DONE |
 | 3.2 | Glossary-only artifact with definitions, synonyms to avoid, source documents | P1 | — |
 | 3.3 | One-page adoption map | P2 | — |
-| 3.4 | "First 10 records to create" guide | P1 | — |
-| 3.5 | "First month success criteria" | P1 | — |
+| 3.4 | "First 10 records to create" guide | P1 | ✓ DONE in IMP-003 §5 |
+| 3.5 | "First month success criteria" | P1 | ✓ DONE in IMP-003 §6 |
 | 3.6 | FAQ for skeptical teams | P2 | — |
 | 3.7 | Plain-English policy summaries per standard | P2 | — |
 | 3.8 | Business owner quick guides (how to accept risk, request exception, etc.) | P2 | — |
@@ -84,7 +84,7 @@
 | 6.2 | Reference data model with normalized objects and relationships | P2 | — |
 | 6.3 | Implementation examples for common tooling stacks | P2 | — |
 | 6.4 | Minimum tooling capability matrix (required now, later, optional) | P2 | — |
-| 6.5 | Manual fallback schemas for spreadsheets when no GRC exists | P1 | — |
+| 6.5 | Manual fallback schemas for spreadsheets when no GRC exists | P1 | ✓ DONE in IMP-003 §7 |
 | 6.6 | Record naming convention (RISK-YYYY-NNN, FIND-YYYY-NNN, etc.) | P1 | — |
 | 6.7 | Record retention by record type | P2 | — |
 | 6.8 | Human-readable + machine-readable parity validation | P1 | — |
@@ -100,7 +100,7 @@
 | 7.4 | Control design vs operating effectiveness distinction | P1 | — |
 | 7.5 | Evidence freshness rules per evidence type | P1 | — |
 | 7.6 | Control test scripts / pseudo-tests per control | P2 | — |
-| 7.7 | Minimum viable evidence library structure | P1 | — |
+| 7.7 | Minimum viable evidence library structure | P1 | ✓ DONE in IMP-003 §8 |
 | 7.8 | Recovery evidence standards (restore test records, RTO/RPO achieved) | P2 | — |
 
 ## 8. Controls & Risk
