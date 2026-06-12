@@ -1,6 +1,6 @@
 # CERG · Cybersecurity Operating Model Starter Kit
 
-**A spine, not a shelfware purchase.**
+**A spine, not shelfware.**
 
 CERG gives you the structure, artifacts, workflows, and evidence model to run a cybersecurity program. It does not become a program until you assign owners, run the cadence, make decisions, and produce evidence from real work.
 
