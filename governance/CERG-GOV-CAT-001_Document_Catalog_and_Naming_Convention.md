@@ -279,6 +279,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Implementation and Adaptation Guide | Governance Pillar Leader | Approved |
 | [`CERG-GOV-IMP-002`](CERG-GOV-IMP-002_Adoption_Safety_Guide.md) | Adoption Safety Guide | Governance Pillar Leader | Approved |
 | [`CERG-GOV-IMP-003`](CERG-GOV-IMP-003_Small_Team_Adoption_Path.md) | Small Team Adoption Path | Governance Pillar Leader | Approved |
+| [`CERG-GOV-IMP-004`](CERG-GOV-IMP-004_Implementation_Cards.md) | Implementation Cards | Governance Pillar Leader | Approved |
 | [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) | Organization Adaptation Profile | Governance Pillar Leader | Approved |
 | [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) | Maturity Self-Assessment and Scorecard | Governance Pillar Leader | Approved |
 | [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Consolidated Roles, Responsibilities, and RACI Instrument | Governance Pillar Leader | Approved |

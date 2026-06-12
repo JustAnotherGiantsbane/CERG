@@ -518,7 +518,38 @@ The templates below are part of this procedure. The intake form (§5.1), threat 
 
 ---
 
-## 14. Document Control
+## 14. Pre-Approved Architecture Patterns
+
+Good governance makes projects faster because teams can design correctly before vendor selection. The patterns below are pre-approved for architecture review at the "Light-Touch" tier if the described conditions are met. Engineering signs off; Governance and Risk are not required to engage unless the project exceeds the pattern's boundaries.
+
+| Pattern | Required Controls | Evidence | Expected Approval | When to Escalate |
+|---------|------------------|----------|-------------------|------------------|
+| **New SaaS — no sensitive data** | SSO via IdP; OAuth app review; data classification verified as Internal or lower | IdP config, OAuth grant list, data classification record | 1 business day | Data classification changes; CUI/Restricted data discovered; vendor fails SSPM baseline |
+| **New SaaS — SSO only** | SSO enforced; no local accounts; OAuth scope review; tenant admin account secured via PAM | IdP config, PAM configuration | 2 business days | SaaS holds sensitive data; provider lacks SOC 2; tenant admin not under PAM |
+| **SaaS with Restricted / CUI data** | Full TPRM pipeline per [TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md); FedRAMP equivalency evidence; CUI flow-down; shared responsibility matrix | SSP report, FedRAMP package, contract clauses, SRM | 10 business days | FedRAMP not available; CUI stored outside authorized boundary |
+| **Public web app** | WAF; DDoS protection; TLS 1.3; authenticated scan coverage; external pen test before go-live | WAF config, TLS scan, pen test report | 5 business days | App handles authentication; app stores Restricted data; app is customer-facing Tier 1 |
+| **Internal API** | mTLS or API gateway auth; rate limiting; input validation; logging to SIEM | API gateway config, SIEM source verification | 3 business days | API is Internet-facing; API handles payments; API accesses crown-jewel data |
+| **Vendor remote access** | PAM-brokered only per [STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md); session recording; named accounts; kill-switch tested; no standing access | PAM config, session logs, kill-switch test record | 5 business days | Vendor requires standing access; vendor is OT/ICS; vendor accesses BES Cyber Systems |
+| **MSP privileged access** | Full MSP hard requirements per [TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) §6.2: PAM, named accounts, no global admin, customer-owned logs, break-glass, kill-switch | All eight MSP requirement verifications | 10 business days | Any MSP requirement cannot be met; MSP is primary IT operations provider |
+| **OT remote maintenance** | Engineering-controlled remote access; session recording; operational sign-off per maintenance window; CIP-007 alignment | Access log, session record, operational approval | Per maintenance window | Vendor requires always-on connection; BES Cyber System without CIP overlay |
+| **AI assistant with internal data** | Data classification verified; AI acceptable use policy acknowledged; prompt injection mitigations; data egress monitored per [STD-AI-001](../standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) | AI policy acknowledgment, DLP configuration, data classification | 3 business days | AI tool ingests Restricted/CUI data; AI tool is customer-facing; model training on org data |
+| **CI/CD integration** | Pipeline access control; secrets management; signed commits; SBOM generation; build-time SCA/SAST | Pipeline config, secret store audit, SBOM, scan results | 3 business days | Integration touches production deployment; integration has external contributors |
+| **Cloud workload with Internet ingress** | WAF or cloud-native equivalent; TLS 1.3; DDoS protection; authenticated external scan; CSPM continuous monitoring | WAF config, TLS scan, CSPM posture, external scan report | 5 business days | Workload handles authentication directly; workload is in regulated scope |
+
+**Common exceptions across patterns:**
+
+| Exception | Compensating Control | Review Path |
+|-----------|---------------------|-------------|
+| SSO not available (legacy SaaS) | IP restriction; session monitoring; quarterly access review | Governance exception workflow |
+| PAM not feasible (vendor tool limitation) | Session recording; named accounts; quarterly access review; kill-switch | Risk assessment + CISO approval |
+| Pen test cannot be completed pre-launch | Scheduled within 30 days of go-live; compensating monitoring active during gap | Governance exception with expiration |
+| WAF bypass required (application compatibility) | Layer-7 monitoring; IPS rule; quarterly pen test of bypass path | Engineering review + Governance exception |
+
+**Governance principle:** Pre-approved patterns reduce review time by eliminating the discovery phase. If a project fits a pattern exactly, Engineering signs off and the project proceeds. If it deviates in any material way, it escalates to the review tier specified by the deviation. Patterns are reviewed annually and updated when standards change.
+
+---
+
+## 15. Document Control
 
 | | |
 |---|---|
