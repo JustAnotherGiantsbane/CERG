@@ -4,7 +4,11 @@
 ## IMPLEMENTATION AND ADAPTATION GUIDE
 ### The On-Ramp: Fork, Adapt, Run · Talent Brand · Interview Guide
 
+
 ---
+
+> **Not Legal or Regulatory Advice.** CERG provides a framework and sample operating artifacts. It does not determine legal obligations, registered-entity status, contract scope, or certification readiness. Organizations must validate regulatory applicability with qualified counsel, compliance leadership, and assessors. References to NERC-CIP, CMMC, SOX, ISO 27001, and privacy regulations are for integration mapping — they do not constitute compliance claims.
+
 
 | | |
 |---|---|

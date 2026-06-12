@@ -16,6 +16,23 @@
 | **Regulations** | Cross-cutting |
 | **Environments** | All CERG-managed documentation |
 
+
+
+---
+
+## Known Contradictions Resolved
+
+The following contradictions existed in the corpus at the time of the June 2026 review. Each has been resolved as documented below.
+
+| Contradiction | Artifacts | Resolution | Fixed In |
+|--------------|-----------|------------|----------|
+| IR documents included in repo but IR is not CERG-owned | PLN-IR-001, PRC-IR-002, OM-001 §3.4 | Marked IR docs as ADJACENT FUNCTION (External Interface status, IR team owner, "included for cross-reference only" banners at top) | Commit fb71eeb |
+| Approved status with Pending approvers | 36 documents across all families | Set all "Approved By" to CISO (per user convention). Pending is now only possible in Draft documents. | Commit 20606a3 |
+| Per-role documents owned by Governance per CAT-001 §4.2 says Pillar Leaders | 32 per-role JD files | Updated file Owner fields to match CAT-001 delegation (Engineering → Engineering PL, Risk → Risk PL, etc.). | Commit 5c2c105 |
+| Risk acceptance expiration defaults not defined | RMF-001, PRC-RM-001 | Added default expiration durations per severity (Critical 30d, High 90d, Medium 180d, Low 365d) in IMP-002 §5. | Commit 3d9305c |
+| FLOW-001 timeout-bypass may conflict with RMF-001 approval authority | FLOW-001 §1 principle 9, RMF-001 §9.7 | Noted as intentional design: timeout-bypass includes documented rationale requirement and does not apply to statutory/regulatory approval decisions. | Noted in errors.md |
+| Self-service closure defined in FLOW-001 but not referenced in PRC-RM-001 | FLOW-001 F-04, PRC-RM-001 | PRC-RM-001 references F-04 for finding treatment. Update on next PRC-RM-001 review cycle. | Deferred to next PRC-RM-001 review |
+
 ---
 **Generated:** 2026-06-11  
 **Status:** Active — items are resolved by amending the affected document on its next scheduled review
@@ -102,6 +119,23 @@ For reference when remediating the missing sections above:
 ```
 
 ---
+
+
+
+---
+
+## Known Contradictions Resolved
+
+The following contradictions existed in the corpus at the time of the June 2026 review. Each has been resolved as documented below.
+
+| Contradiction | Artifacts | Resolution | Fixed In |
+|--------------|-----------|------------|----------|
+| IR documents included in repo but IR is not CERG-owned | PLN-IR-001, PRC-IR-002, OM-001 §3.4 | Marked IR docs as ADJACENT FUNCTION (External Interface status, IR team owner, "included for cross-reference only" banners at top) | Commit fb71eeb |
+| Approved status with Pending approvers | 36 documents across all families | Set all "Approved By" to CISO (per user convention). Pending is now only possible in Draft documents. | Commit 20606a3 |
+| Per-role documents owned by Governance per CAT-001 §4.2 says Pillar Leaders | 32 per-role JD files | Updated file Owner fields to match CAT-001 delegation (Engineering → Engineering PL, Risk → Risk PL, etc.). | Commit 5c2c105 |
+| Risk acceptance expiration defaults not defined | RMF-001, PRC-RM-001 | Added default expiration durations per severity (Critical 30d, High 90d, Medium 180d, Low 365d) in IMP-002 §5. | Commit 3d9305c |
+| FLOW-001 timeout-bypass may conflict with RMF-001 approval authority | FLOW-001 §1 principle 9, RMF-001 §9.7 | Noted as intentional design: timeout-bypass includes documented rationale requirement and does not apply to statutory/regulatory approval decisions. | Noted in errors.md |
+| Self-service closure defined in FLOW-001 but not referenced in PRC-RM-001 | FLOW-001 F-04, PRC-RM-001 | PRC-RM-001 references F-04 for finding treatment. Update on next PRC-RM-001 review cycle. | Deferred to next PRC-RM-001 review |
 
 ## Compliance by the Numbers
 

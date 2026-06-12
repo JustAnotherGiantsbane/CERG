@@ -225,8 +225,122 @@ def main(argv: list[str] | None = None) -> int:
             print(f"- {finding.path}: [{finding.code}] {finding.message}")
         return 1
     print("CERG validation passed: links, catalog references, and file inventory are consistent.")
+    
+    # P1 Quality checks (warnings only, do not block CI)
+    root_path = Path(args.root)
+    catalog = parse_catalog(root_path)
+    quality_warnings = quality_checks(root_path, catalog)
+    print_quality_report(quality_warnings, root_path)
+    
     return 0
 
+
+
+
+# ── P1 Checks: Quality gates (warnings only — do not block CI) ──
+
+def quality_checks(root, catalog):
+    """Run P1 quality checks. Returns list of warnings."""
+    warnings = []
+    
+    for filepath in sorted(root.glob("**/*.md")):
+        if any(p in str(filepath) for p in [".git", "machine-readable", "README.md"]):
+            continue
+        
+        rel = str(filepath.relative_to(root))
+        try:
+            text = filepath.read_text(encoding="utf-8")
+        except Exception:
+            continue
+        
+        # Extract metadata
+        doc_id = None
+        status = None
+        approver = None
+        version = None
+        owner = None
+        review_cycle = None
+        
+        for line in text.split('\n')[:35]:
+            m = re.match(r'\|\s*\*\*(Document ID|Status|Approved By|Version|Owner|Review Cycle)\*\*\s*\|\s*(.+?)\s*\|', line)
+            if m:
+                field = m.group(1)
+                value = m.group(2).strip()
+                if field == 'Document ID': doc_id = value
+                elif field == 'Status': status = value
+                elif field == 'Approved By': approver = value
+                elif field == 'Version': version = value
+                elif field == 'Owner': owner = value
+                elif field == 'Review Cycle': review_cycle = value
+        
+        did = doc_id or rel
+        
+        # 4.1a: Approved + Pending approver
+        if status and status.lower().strip() == 'approved':
+            if approver and 'pending' in approver.lower():
+                warnings.append(f"[APPROVED_PENDING] {rel}: Status=Approved but Approved By=Pending")
+        
+        # 4.1b: TBD or placeholder in Approved doc
+        if status and status.lower().strip() == 'approved':
+            placeholders = ['TBD', 'TODO', 'placeholder', 'Placeholder', '[To be', '[TBD', 'N/A —']
+            for ph in placeholders:
+                if ph in text:
+                    # Count occurrences
+                    count = text.count(ph)
+                    if count > 0:
+                        warnings.append(f"[PLACEHOLDER_IN_APPROVED] {rel}: contains '{ph}' ({count} occurrences)")
+                        break  # one warning per doc
+        
+        # 4.2: Missing mandatory metadata fields
+        doc_type = doc_id.split('-')[1] if doc_id and '-' in doc_id else None
+        
+        required_fields = {
+            'POL': ['Document ID', 'Version', 'Status', 'Classification', 'Owner', 'Review Cycle'],
+            'STD': ['Document ID', 'Version', 'Status', 'Classification', 'Owner', 'Parent Policy', 'Review Cycle'],
+            'PRC': ['Document ID', 'Version', 'Status', 'Classification', 'Owner', 'Parent Policy', 'Review Cycle'],
+            'PLN': ['Document ID', 'Version', 'Status', 'Classification', 'Owner', 'Parent Policy', 'Review Cycle'],
+            'TMPL': ['Document ID', 'Version', 'Status', 'Classification', 'Owner'],
+            'GOV': ['Document ID', 'Version', 'Status', 'Classification', 'Owner', 'Review Cycle'],
+        }
+        
+        if doc_type in required_fields:
+            for field in required_fields[doc_type]:
+                found = False
+                for line in text.split('\n')[:35]:
+                    if f'**{field}**' in line:
+                        found = True
+                        break
+                if not found:
+                    warnings.append(f"[MISSING_METADATA] {rel} ({doc_id}): missing required field '{field}' for type {doc_type}")
+    
+    return warnings
+
+
+def print_quality_report(warnings, root):
+    """Print a structured quality report."""
+    if not warnings:
+        print("\nQuality Checks: 0 warnings — PASS")
+        return
+    
+    from collections import Counter
+    categories = Counter()
+    for w in warnings:
+        cat = w.split(']')[0].replace('[', '')
+        categories[cat] += 1
+    
+    print(f"\nQuality Checks: {len(warnings)} warning(s)")
+    for cat, count in categories.most_common():
+        print(f"  [{cat}]: {count}")
+    
+    print(f"\n--- Detail ---")
+    for w in warnings[:20]:
+        print(f"  {w}")
+    if len(warnings) > 20:
+        print(f"  ... and {len(warnings)-20} more")
+
+
+# ── Integrate into main ──
+# The quality checks run after the main validation, regardless of pass/fail
 
 if __name__ == "__main__":
     raise SystemExit(main())

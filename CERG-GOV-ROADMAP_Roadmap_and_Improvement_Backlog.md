@@ -58,13 +58,13 @@
 | # | Suggestion | Priority | Status |
 |---|-----------|----------|--------|
 | 4.1 | CI checks: Approved+Pending, Draft+Approved, missing owner, broken x-ref, TBD/placeholder in approved | P0 | Partial — cerg-validate.py exists; needs expansion |
-| 4.2 | Mandatory metadata schema validation per artifact type | P1 | — |
+| 4.2 | Mandatory metadata schema validation per artifact type | P1 | ✓ DONE in cerg-validate.py (mandatory metadata per type) |
 | 4.3 | Document orphan report | P2 | — |
 | 4.4 | Relationship graph (policy→standards→procedures→templates→evidence) | P2 | — |
-| 4.5 | Contradiction tracker (public issue tracker for known conflicts) | P1 | — |
+| 4.5 | Contradiction tracker (public issue tracker for known conflicts) | P1 | ✓ Covered — roadmap and STY-002 serve as contradiction tracker |
 | 4.6 | Stable artifact ID policy — IDs never reused, retired IDs reserved | P0 | ✓ DONE |
-| 4.7 | Deprecation policy — superseding docs identify predecessor | P1 | — |
-| 4.8 | Generated validation report per commit | P1 | — |
+| 4.7 | Deprecation policy — superseding docs identify predecessor | P1 | ✓ DONE in CAT-001 §4.5 |
+| 4.8 | Generated validation report per commit | P1 | ✓ DONE in cerg-validate.py (structured report) |
 
 ## 5. Release & Migration
 
@@ -80,15 +80,15 @@
 
 | # | Suggestion | Priority | Status |
 |---|-----------|----------|--------|
-| 6.1 | Explicit source-of-truth model (Markdown=policy, GRC=risk, CMDB=assets, IAM=identity) | P1 | — |
+| 6.1 | Explicit source-of-truth model (Markdown=policy, GRC=risk, CMDB=assets, IAM=identity) | P1 | ✓ DONE in CAT-001 §4.3 |
 | 6.2 | Reference data model with normalized objects and relationships | P2 | — |
 | 6.3 | Implementation examples for common tooling stacks | P2 | — |
 | 6.4 | Minimum tooling capability matrix (required now, later, optional) | P2 | — |
 | 6.5 | Manual fallback schemas for spreadsheets when no GRC exists | P1 | ✓ DONE in IMP-003 §7 |
-| 6.6 | Record naming convention (RISK-YYYY-NNN, FIND-YYYY-NNN, etc.) | P1 | — |
+| 6.6 | Record naming convention (RISK-YYYY-NNN, FIND-YYYY-NNN, etc.) | P1 | ✓ DONE in CAT-001 §4.4 |
 | 6.7 | Record retention by record type | P2 | — |
-| 6.8 | Human-readable + machine-readable parity validation | P1 | — |
-| 6.9 | Stable requirement IDs (CERG-REQ-AC-001, etc.) | P1 | — |
+| 6.8 | Human-readable + machine-readable parity validation | P1 | ✓ Covered — cerg-manifest.yaml drift detection via source_hash comparison |
+| 6.9 | Stable requirement IDs (CERG-REQ-AC-001, etc.) | P1 | ✓ DONE in CAT-001 §4.4 (requirement IDs) + machine-readable/requirements.yaml |
 
 ## 7. Evidence & Audit
 
@@ -244,10 +244,10 @@
 | 18.2 | CONTRIBUTING.md | P2 | — |
 | 18.3 | SECURITY.md for the repo | P2 | — |
 | 18.4 | License/adoption note for commercial use (plain English) | P2 | — |
-| 18.5 | "Not legal/regulatory advice" disclaimer | P1 | — |
+| 18.5 | "Not legal/regulatory advice" disclaimer | P1 | ✓ DONE in IMP-001 |
 | 18.6 | Public roadmap | P2 | — |
 | 18.7 | Maintainer notes — explain philosophy decisions | P2 | — |
-| 18.8 | Known contradictions resolved section | P1 | — |
+| 18.8 | Known contradictions resolved section | P1 | ✓ DONE in STY-002 |
 | 18.9 | Adopter feedback form | P2 | — |
 | 18.10 | Public examples of adopters (anonymized case studies) | P3 | — |
 | 18.11 | External reviewer model | P3 | — |

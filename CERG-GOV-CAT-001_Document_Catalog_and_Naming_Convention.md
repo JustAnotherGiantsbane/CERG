@@ -197,6 +197,51 @@ Not all documents require the same review frequency. Documents are assigned to o
 | **Tier 2 — Active** | Semi-Annual | All Standards (STD-*), all Procedures (PRC-*), JA-001, CMP-001, TRN-001, MTR-001, CMX-001, TAX-001 | Content review; verify key cross-references; update metrics and framework references |
 | **Tier 3 — Stable** | Annual | All Plans (PLN-*), all Templates (TMPL-*), remaining Governance documents (GOV-*), all per-role JD documents, family index documents | Light review; confirm currency; update owner if role changed; verify links |
 
+
+### 4.3 CERG Source-of-Truth Model
+
+The CERG framework defines which system is authoritative for each type of operational data. If two systems disagree, the source of truth wins.
+
+| Data Type | Source of Truth | Notes |
+|-----------|----------------|-------|
+| Policy, standards, procedures, plans | CERG markdown repository | The .md files in this repo. Word/PDF exports are copies. If they disagree, the .md wins. |
+| Risk register entries, exception records | GRC system or designated spreadsheet | The risk register is the single authoritative record of organizational risk. Other systems (ticketing, spreadsheets) are views into it. |
+| Asset inventory | CMDB or asset management system | The authoritative inventory. If CERG asset-related content (e.g., F-03 evidence) disagrees with CMDB, investigate — do not assume either is correct. |
+| Access review population, identity source | IAM platform or HRIS | Identity data comes from the IdP and HRIS. Access review evidence from CERG should reference the source population. |
+| Log data | SIEM or data lake | Evidence of logging coverage comes from the SIEM, not from a policy document. |
+| Audit evidence | Evidence repository (as structured per IMP-003 §8) | The evidence library is the authoritative collection. GRC records reference files in the library. |
+| Control implementation status | CB-001 or GRC control catalog | Status is tracked near the control, not in a separate spreadsheet. |
+| Metrics and reporting | BI dashboard or reporting tool | Dashboards are views. The canonical metric definitions are in MTR-001. |
+
+### 4.4 Record Naming Convention
+
+Operational records (risk register entries, exceptions, findings, etc.) use standard ID formats. These IDs are referenced in CERG artifacts and procedures.
+
+| Record Type | ID Format | Example | Source of Truth |
+|------------|-----------|---------|-----------------|
+| Risk Register Entry | RISK-YYYY-NNN | RISK-2026-001 | GRC system or risk register spreadsheet |
+| Exception | EXC-YYYY-NNN | EXC-2026-001 | GRC system or exception register spreadsheet |
+| Finding | FIND-YYYY-NNN | FIND-2026-001 | GRC system or vulnerability backlog spreadsheet |
+| Vulnerability | VULN-YYYY-NNN | VULN-2026-001 | GRC system or vulnerability backlog |
+| Vendor Assessment | VEN-YYYY-NNN | VEN-2026-001 | GRC system or vendor inventory spreadsheet |
+| Evidence Item | EVD-YYYY-NNN | EVD-2026-001 | Evidence library (per IMP-003 §8) |
+| Incident | IR-YYYY-NNN | IR-2026-001 | IR incident tracking system |
+| Decision Log Entry | DEC-YYYY-NNN | DEC-2026-001 | Decision log (per IMP-002 §4) |
+| Audit Request | AUD-YYYY-NNN | AUD-2026-001 | GRC system or audit evidence package |
+| Improvement Item | IMPG-YYYY-NNN | IMPG-2026-001 | Program improvement register |
+| Requirement (atomic) | CERG-REQ-DOC-NNN | CERG-REQ-AC-001 | machine-readable/ requirements YAML |
+
+### 4.5 Document Deprecation Policy
+
+Documents in the CERG corpus follow these rules when they are retired or superseded:
+
+- **IDs are never reused.** A retired Document ID is permanently reserved. No new document will ever receive that ID.
+- **Superseding documents identify their predecessor.** When a document is replaced, the new version or replacement document states which document it supersedes.
+- **The machine-readable manifest preserves history.** The manifest (cerg-manifest.yaml) retains entries for retired documents with status: Retired.
+- **Breaking changes are documented.** Any change to Document IDs, statuses, role names, or workflow structures that would break cross-references is recorded in the revision history of the affected document and noted in the changelog (ROADMAP).
+- **Retired documents remain in the repository.** They are not deleted. They are retained for audit trail and cross-reference integrity.
+- **Retired artifacts may still be referenced** by older versions of documents. The referencing document should note the retirement in its next review cycle.
+
 ### 4.2 Ownership Delegation
 
 The Owner field in each document's metadata assigns accountability for review initiation and content accuracy. To prevent ownership concentration, the following delegation rules apply:
