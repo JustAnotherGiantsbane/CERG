@@ -100,7 +100,12 @@ def check_all():
     catalog = load_catalog()
     
     issues = defaultdict(list)  # severity -> list of messages
-    known_files = {os.path.basename(f): f for f in files}
+    known_files = {}
+for f in files:
+    known_files[os.path.basename(f)] = f
+    # Also register by relative path from BASE
+    rel = os.path.relpath(f, BASE)
+    known_files[rel] = f
     id_to_file = {}
     
     print(f"CERG Integrity Check")
@@ -173,7 +178,13 @@ def check_all():
         links = find_markdown_links(content)
         for link in links:
             clean_link = link.split('#')[0]  # strip anchor
-            if clean_link not in known_files:
+            # Resolve relative to the file's directory
+            file_dir = os.path.dirname(filepath)
+            resolved = os.path.normpath(os.path.join(file_dir, clean_link))
+            # Check both full path and basename
+            resolved_rel = os.path.relpath(resolved, BASE)
+            basename = os.path.basename(clean_link)
+            if clean_link not in known_files and resolved_rel not in known_files and basename not in known_files:
                 issues['P1'].append(f"[broken_cross_reference] {relpath} ({doc_id}): links to non-existent file '{link}'")
         
         # P2: Cross-reference to non-catalog IDs

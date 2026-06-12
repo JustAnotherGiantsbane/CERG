@@ -2,7 +2,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-JD-ADJUNCT-000 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Parent Policy** | [`CERG-POL-001`](../../CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -86,7 +86,7 @@ Certifications relevant to the Incident Response family are detailed in [TRN-001
 |---|---|
 | **Document ID** | CERG-GOV-JD-ADJUNCT-000 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |

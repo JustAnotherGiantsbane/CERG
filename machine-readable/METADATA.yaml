@@ -205,3 +205,17 @@ machine_readable_artifacts:
   regeneration_trigger: Change to source document(s) listed above
   generated_date: '2026-06-11'
   size_bytes: 515
+
+
+# Regeneration Cadence
+# ====================
+# All YAML artifacts in this directory are DERIVED from the CERG markdown corpus.
+# Regeneration triggers:
+#   - On every catalog change (CAT-001 update): regenerate cerg-manifest.yaml, cerg-publication-manifest.yaml
+#   - On every normative document change: regenerate cerg-requirements.yaml
+#   - On every FLOW-001 change: regenerate cerg-flows.yaml, cerg-record-schemas.yaml
+#   - On every document section change: regenerate cerg-content-tags.yaml
+#   - Schema files (cerg-runtime-model.yaml, etc.): regenerate on source document change
+#
+# Build-time check: compare source .md modification times against derived .yaml modification
+# times. Warn if any derived artifact is older than its source.

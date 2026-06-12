@@ -2,7 +2,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-JD-EXEC-000 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Parent Policy** | [`CERG-POL-001`](../../CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -85,7 +85,7 @@ Certifications relevant to the Executive Leadership family are detailed in [TRN-
 |---|---|
 | **Document ID** | CERG-GOV-JD-EXEC-000 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |

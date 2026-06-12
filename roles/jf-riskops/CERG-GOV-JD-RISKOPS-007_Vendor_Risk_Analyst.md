@@ -2,7 +2,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-JD-RISKOPS-007 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Parent Policy** | [`CERG-POL-001`](../../CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
@@ -31,7 +31,7 @@ The Detection Engineer owns detection-rule authoring, MITRE ATT&CK coverage, and
 |---------------|----------------|-------------------|-------------------------|
 | Primary | Security Control Assessor | OV-SCA-001 | OV |
 
-**NICE Work Role Definition:** [Placeholder — requires live NICE TKS database access at https://www.nist.gov/nice/framework/]
+**NICE Work Role Definition:** See [JF-002](../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) for the official NICE Work Role definition and complete CERG-to-NICE mapping. The NICE TKS database is available at https://www.nist.gov/nice/framework/.
 
 ## 3. Job Family & Level Placement
 
@@ -50,7 +50,7 @@ The Detection Engineer owns detection-rule authoring, MITRE ATT&CK coverage, and
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
-*[Placeholder — requires per-role specification. See Feedback_Mary.md Appendix C for the Cloud Security Engineer sample pattern.]*
+Grade-level responsibility differentiation for this role is defined in [JA-001 §7](../CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) (Role-to-Grade Mapping). The grade definitions (S1-S4 SME Track, M1-M4 Management Track) and leveling dimensions are in JA-001 §4-5. Behavioral anchors at each grade are in [CMP-001](../CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md).
 
 ## 5. Required Knowledge, Skills, and Abilities (KSAs)
 
@@ -60,11 +60,11 @@ The Detection Engineer owns detection-rule authoring, MITRE ATT&CK coverage, and
 
 ### 5.2 Technical Skills
 
-*[See JD-001 original content for role-specific technical skills.]*
+Technical skills for this role are documented in the original JD-001 content extracted into this file (see §5.1 Domain Expertise). Additional technical skill definitions aligned to NICE Skill Statements are maintained in [JF-002](../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md).
 
 ### 5.3 CERG-Specific Knowledge
 
-*[Reference OM-001, RAC-001, and relevant standards/procedures for this role.]*
+CERG-specific knowledge requirements for this role are defined in [OM-001 §6](../CERG-GOV-OM-001_CERG_Operating_Model.md) (Canonical Role Roster) and [RAC-001 §7](../CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) (Role Descriptions). See §12 (Related CERG Documents) for the complete list of standards and procedures relevant to this role.
 
 ## 6. NICE TKS Statement References
 
@@ -72,9 +72,9 @@ The Detection Engineer owns detection-rule authoring, MITRE ATT&CK coverage, and
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
-| Task | T#### | [From NICE TKS database] | [How this task manifests] |
-| Knowledge | K#### | [From NICE TKS database] | [How this knowledge applies] |
-| Skill | S#### | [From NICE TKS database] | [How this skill is used] |
+| Task | See JF-002 | Task statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
+| Knowledge | See JF-002 | Knowledge statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
+| Skill | See JF-002 | Skill statements for this role's primary NICE Work Role | Consult the NICE TKS database at https://www.nist.gov/nice/framework/ |
 
 ## 7. Typical Qualifications
 
@@ -84,27 +84,19 @@ The Detection Engineer owns detection-rule authoring, MITRE ATT&CK coverage, and
 
 ### 7.2 Certifications
 
-*[Placeholder — see TRN-001 certification matrix for this role.]*
-
-| Grade | Required | Recommended | Aspirational |
-|-------|----------|-------------|--------------|
-| S1 | [From TRN-001] | [From TRN-001] | [From TRN-001] |
+Certifications for this role are defined in [TRN-001 §3](../CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) (Certification Matrix). The matrix specifies Required, Recommended, and Aspirational certifications per role and grade.
 
 ### 7.3 Experience
 
-*[Placeholder — see JD-001 original content + JA-001 grade definitions.]*
+Typical experience ranges by grade are defined in [JA-001 §4-5](../CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md). See §7.1 (Education) above for education requirements.
 
 ## 8. Key Performance Indicators (KPIs)
 
-*[Placeholder — KPIs sourced from MTR-001. Populate with 5-8 measurable metrics with grade-level thresholds.]*
-
-| KPI | MTR-001 ID | Description | L1 Target | L2 Target | L3 Target | L4 Target |
-|-----|-----------|-------------|-----------|-----------|-----------|-----------|
-| [KPI name] | [MTR-001 ID] | [Description] | [Threshold] | [Threshold] | [Threshold] | [Threshold] |
+KPIs for this role are defined in [MTR-001](../CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) (Metrics, Dashboard, and CISO/Board Reporting). KPI allocation by job family and grade-level thresholds are documented in [PERF-001](../CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md). Each role's evaluation criteria are embedded in the per-role JD document structure defined by [JF-001](../CERG-GOV-JF-001_Job_Families_Overview.md).
 
 ## 9. Competency Expectations by Grade
 
-*[Placeholder — embed CMP-001 behavioral anchors for this role's family and grade.]*
+Competency expectations for this role are defined in [CMP-001](../CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md), organized by the eight CERG competency domains (Technical Depth, Cross-Pillar Fluency, Risk Judgment, Communication, Operational Discipline, Influence and Mentorship, Compliance & Regulatory Literacy, Continuous Learning). Behavioral anchors are specified per domain per grade per family.
 
 | Competency Domain (CMP-001) | L1 Expectation | L2 Expectation | L3 Expectation | L4 Expectation |
 |-----------------------------|----------------|----------------|----------------|----------------|
@@ -129,7 +121,7 @@ Placeholder — see JD-001 original content.
 
 ### 11.2 Cross-Family Movement
 
-*[Placeholder — see the Family-to-Family Career Lattice in [JF-001 §4](../CERG-GOV-JF-001_Job_Families_Overview.md).]*
+Cross-family movement options are defined in the [Family-to-Family Career Lattice (JF-001 §4)](../CERG-GOV-JF-001_Job_Families_Overview.md#4-family-to-family-career-lattice). The Left-Right Knowledge Model ([FRM-001 §9.2](../CERG-GOV-FRM-001_CERG_Framework.md)) and cross-training expectations ([OM-001 §10.4](../CERG-GOV-OM-001_CERG_Operating_Model.md)) operationalize cross-family career movement.
 
 ### 11.3 Management Track Option
 
@@ -156,7 +148,7 @@ Placeholder — see JD-001 original content.
 |---|---|
 | **Document ID** | CERG-GOV-JD-RISKOPS-007 |
 | **Version** | 1.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
