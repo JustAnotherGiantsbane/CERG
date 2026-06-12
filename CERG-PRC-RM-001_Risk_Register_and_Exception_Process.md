@@ -342,6 +342,21 @@ An exception is required whenever a system, person, or process intentionally dev
 >
 > The most common failure mode of an exception program is the silent renewal. An exception is approved with a six-month duration; six months later it is renewed with a single email; six months after that the original reviewers have left the organization, the compensating controls have drifted, and the underlying control gap has become permanent. Governance enforces re-evaluation at every renewal: confirm the compensating controls are still in place, confirm the business justification is still valid, confirm the requested duration is still reasonable.
 
+
+### 7.3.1 Exception Expiration Warning Chain
+
+Every exception carries an expiration date. The following warning chain ensures no exception expires silently:
+
+| Timing | Action | Actor |
+|--------|--------|-------|
+| **30 days before expiration** | Automated notification to Exception Owner and Risk Register Owner | Governance (Evidence Librarian or automated calendar) |
+| **14 days before expiration** | Escalation notification to Pillar Leader; Exception Owner must confirm renewal request submitted or closure planned | Risk Register Owner |
+| **7 days before expiration** | Final escalation to Governance Pillar Leader; Exception Owner must have a disposition (renew, close, or convert to finding) | Governance Pillar Leader |
+| **Post-expiration (Day 0)** | Auto-create Finding Record (severity: High); flag affected control as "gap open"; the exception is no longer valid | Risk Register Owner |
+| **Post-expiration (Day 5)** | If no disposition: escalate to CISO | Governance Pillar Leader |
+
+An exception renewed more than twice without material progress toward remediation escalates one approval tier above the original approver (per RMF-001 §9.7). The renewal justification must document what has changed since the previous acceptance and what prevents closure.
+
 ### 7.4 Regulatory Overlays
 
 For exceptions affecting regulated assets:
