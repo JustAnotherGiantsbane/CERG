@@ -2,6 +2,32 @@
 
 This directory contains machine-readable YAML specifications generated from the CERG corpus. These files are designed for consumption by LLMs, automation tools, and programmatic validation.
 
+> **⚠ These are DERIVED ARTIFACTS.** The CERG markdown corpus is authoritative. If a YAML file and its source disagree, the source wins. YAML files are regenerated when source documents change; manual edits are overwritten. See `METADATA.yaml` for per-file governance information.
+
+## Maturity Status
+
+| File | Status | Notes |
+|------|--------|-------|
+| `cerg-manifest.yaml` | Production | Full artifact inventory with hashes and flags |
+| `cerg-publication-manifest.yaml` | Production | Publication eligibility per artifact |
+| `cerg-content-tags.yaml` | Production | Section-level content tags |
+| `cerg-flows.yaml` | Production | 7 cross-pillar flow specifications |
+| `cerg-record-schemas.yaml` | Production | 5 record type schemas |
+| `cerg-runtime-model.yaml` | Stable | Core operational objects |
+| `cerg-requirements.yaml` | **Pilot** | 85 atomic requirements extracted from 8 spine docs. `owner_role` and `evidence_required` fields require population during adoption — see file header for instructions. |
+| `cerg-vulnerability-priority-model.yaml` | Stable | Priority formula references CVSS-weighting — adopters should calibrate weights to their environment |
+| All other schemas | Stable | Single-purpose schema files — adopt as-is or adapt |
+
+## Adoption Checklist
+
+For each machine-readable artifact:
+
+1. **Verify source alignment.** Confirm the YAML matches the current state of its source CERG document(s).
+2. **Populate adoption fields.** For `cerg-requirements.yaml`, assign `owner_role` and `evidence_required` for every mandatory requirement.
+3. **Calibrate models.** For `cerg-vulnerability-priority-model.yaml`, validate that weights and SLAs match organizational policy.
+4. **Test consumption.** Load the artifacts into your target system (GRC tool, SIEM, automation pipeline) and verify schema compatibility.
+5. **Set regeneration triggers.** Define what source-document changes trigger artifact regeneration in your CI/CD pipeline.
+
 ## File Inventory
 
 | File | Purpose | Source |

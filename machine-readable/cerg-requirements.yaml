@@ -3,6 +3,16 @@
 # Generated: 2026-06-11 | Owner: Governance Pillar Leader (Document Control)
 # Regenerate on any change to source documents
 # See METADATA.yaml for full governance information
+#
+# ⚠ PILOT EXTRACTION — NOT YET AUTOMATION-READY
+# This is a pilot extraction from 8 spine documents. Fields marked with empty
+# strings ('') — notably owner_role and evidence_required — require manual
+# population during adoption. CERG does not ship pre-populated owner/evidence
+# mappings because these are organization-specific. Each adopter must:
+#   1. Assign an owner_role to every mandatory requirement
+#   2. Define evidence_required for every requirement with obligation_level=mandatory
+#   3. Populate linked_controls where the source document references a control
+# Until populated, this file is a structural scaffold, not a runnable specification.
 
 - requirement_id: CERG-REQ-CERG-POL-001-4-001
   source_document_id: CERG-POL-001
