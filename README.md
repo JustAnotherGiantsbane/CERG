@@ -94,7 +94,7 @@ The full corpus is cataloged in [CAT-001](governance/CERG-GOV-CAT-001_Document_C
 - **Procedures (12 docs)** — Architecture Review, Access Runbook, Adversarial Validation, Risk Register, TPRM, Vulnerability Management, Change Management, Audit/Evidence, Threat Intelligence, Threat Modeling, Lessons Learned
 - **Operational packages (7 docs)** — Business Continuity, NERC-CIP, CUI/CMMC, SOX ITGC, ISO 27001, Privacy, IR Plan
 - **Templates (10 docs)** — Risk Register, Exception Form, Risk Acceptance Memo, Intake Form, Evidence Worksheet, SSP, POA&M, Vendor Questionnaire, Board Deck, Stakeholder Survey
-- **Workforce architecture (35 docs)** — 5 job families, 27 per-role descriptions, NICE crosswalk, Job Families Overview
+- **Workforce architecture (35 docs)** — 5 job families, 27 per-role descriptions, NICE crosswalk, Job Families Overview — all derived from 11 core capabilities (see [Operating Model](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.0)
 - **Machine-readable artifacts (14 YAML)** — Manifests, requirements, flows, record schemas, runtime model
 - **Examples** — Sample organization profiles (small team, SaaS, regulated utility, MSP-heavy)
 
@@ -125,16 +125,26 @@ Every document is Markdown. The full corpus is available:
 
 ---
 
+## Document taxonomy
+
+CERG documents fall into three categories:
+
+| Category | Label | Meaning | Examples |
+|----------|-------|---------|----------|
+| **CERG Core** | (no label — default) | Owned, maintained, and governed by CERG. Subject to CERG review cycles, validation, and CI gates. | All POL, GOV, STD, PRC, PLN (non-IR), TMPL documents |
+| **Adjacent Security Function Package** | ⚠ ADJACENT | Owned by a security function that operates alongside CERG (e.g., Incident Response, Security Awareness). Included in the CERG repository for integration clarity — so adopters can see how CERG interfaces with these functions. Not subject to CERG review cycles. | IR Plan (PLN-IR-001), IR Playbook Set (PRC-IR-002) |
+| **Reference Artifact** | 📋 REFERENCE | Informational or illustrative material that is not a governed CERG artifact. Not subject to review cycles or CI gates. | Examples directory, sample profiles |
+
 ## Adjacent functions
 
 These documents belong to functions that operate alongside CERG, not within it. They are included for integration clarity:
 
-| Document | ID | Owned By |
-|----------|-----|----------|
-| Incident Response Plan | CERG-PLN-IR-001 | Standing IR Team / Incident Commander |
-| Incident Response Playbook Set | CERG-PRC-IR-002 | Standing IR Team / Incident Commander |
+| Document | ID | Owned By | Category |
+|----------|-----|----------|----------|
+| Incident Response Plan | CERG-PLN-IR-001 | Standing IR Team / Incident Commander | ⚠ ADJACENT |
+| Incident Response Playbook Set | CERG-PRC-IR-002 | Standing IR Team / Incident Commander | ⚠ ADJACENT |
 
-During an incident, the standing IR team's procedures and the Incident Commander's authority take precedence over any CERG workflow.
+During an incident, the standing IR team's procedures and the Incident Commander's authority take precedence over any CERG workflow. CERG's role during an incident is supporting: evidence collection, reporting, and lessons-learned feedback per [FLOW-001](governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) F-06. IR team roles (Incident Commander, Lead Investigator) are included in the role catalog for cross-reference only — they are not CERG positions.
 
 ---
 
