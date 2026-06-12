@@ -114,6 +114,17 @@ These terms appear throughout the flows. Consistent usage prevents confusion dur
 5. **No issue may remain in an undefined state.** Every issue must become one of: remediation, compensating control, exception, accepted residual risk, or incident action.
 6. **Evidence must be created during execution and linked to the primary record.** CERG's annual calendar and reporting model both assume evidence-producing activities generate or refresh evidence as part of the operating rhythm.
 7. **Missed review cadence, missing ownership, or missing evidence creates a finding or risk record.** The CERG annual calendar explicitly states that missed activities are tracked as program findings or risk-register entries.
+
+8. **Routing thresholds prevent ceremony creep.** Not every workflow requires all three pillars. The default is not "all three pillars must agree." The default is: Engineering handles known patterns, Risk engages when exposure is novel or elevated, Governance owns policy and evidence, and Business owns the consequence. Handoffs are good. Endless consensus is not.
+
+| Work Type | Required Pillars | Rationale |
+|-----------|-----------------|-----------|
+| Low-risk known pattern (e.g., capacity increase, DISH-conformant config change, standard user provisioning) | Engineering only; auto-evidence | Known-safe changes do not require governance or risk review. Evidence is generated automatically. |
+| Moderate known pattern (e.g., approved SaaS with no sensitive data, pre-approved architecture pattern) | Engineering + Governance conformance check | Governance confirms the pattern is still valid; no Risk engagement unless the checklist flags a risk concentration threshold. |
+| Novel architecture (e.g., new technology stack, first-of-its-kind integration, citizen-development platform) | Engineering + Risk threat model | Risk performs threat modeling; Governance is informed but does not gate. |
+| Regulated / OT / Crown Jewel (e.g., BES Cyber System change, CUI environment modification, SOX-relevant system) | All three pillars | Regulatory, safety, or material-financial impact requires full cross-pillar engagement. |
+| High residual risk (e.g., accepted Critical risk, exception past SLA with no compensating control) | Risk-led package + Business acceptance | Risk owns the finding and treatment recommendation; Business accepts the residual risk per RMF-001. |
+| Policy deviation only, low residual risk (e.g., password length exception, SSO bypass with documented compensating control) | Governance-owned exception | Governance owns the exception workflow, confirms compensating controls, and tracks expiration. |
 8. **Every major event must produce a standards/process/metrics feedback decision.** CERG's RMF, incident plan, maturity model, and metrics apparatus all imply that mature operation requires monitoring and response to feed continuous improvement.
 
 9. **If a required actor does not respond within SLA, the primary owner may proceed with documented rationale.** When Governance, Engineering, or Risk fails to act within the flow-defined SLA, the primary owner documents the default decision, proceeds with the next workflow step, and creates a Finding Record noting the missed SLA. No flow may stall indefinitely waiting for a single actor.
