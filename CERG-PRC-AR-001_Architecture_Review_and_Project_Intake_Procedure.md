@@ -524,6 +524,6 @@ The templates below are part of this procedure. The intake form (§5.1), threat 
 |---|---|
 | **Document ID** | CERG-PRC-AR-001 |
 | **Version** | 1.0 |
-| **Approved By** | Cyber Engineering Pillar Leader · CISO endorsement |
+| **Approved By** | CISO |
 | **Next Review** | Annual / on platform or process change |
 | **Change Log** | 1.0 - Initial publication. Establishes intake, review, threat-model, build-time, pre-prod, and handoff phases with the citizen-development carve-out. |

@@ -223,7 +223,7 @@ Calendar maintenance includes:
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
-| **Approved By** | CISO (pending) |
+| **Approved By** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on major program, regulatory, or reporting cadence change |
 | **Next Scheduled Review** | 2027-05-22 |

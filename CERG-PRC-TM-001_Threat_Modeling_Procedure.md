@@ -526,7 +526,7 @@ THREAT MODEL - TM-YYYY-NNNN
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
-| **Approved By** | Governance Pillar Leader · CISO endorsement |
+| **Approved By** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to architecture review or threat modeling methods |
 | **Next Scheduled Review** | 2027-05-22 |

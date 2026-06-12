@@ -380,7 +380,7 @@ Threshold changes are recorded as improvement register entries (IMPREG-001, type
 |---|---|
 | **Document ID** | CERG-GOV-MTR-001 |
 | **Version** | 1.3 |
-| **Approved By** | Governance Pillar Leader · CISO endorsement |
+| **Approved By** | CISO |
 | **Next Review** | Annual / metrics-platform change |
 | **Change Log** | 1.0 - Initial publication. Establishes dictionary, source map, CISO dashboard, briefs, and anti-shallow guardrails. · 1.1 - Added Section 3.7 Predictive and Leading Indicators (PL-001 through PL-007). · 1.2 - Restored Section 9 Cadence and Ownership. · 1.3 - Added Section 10 Threshold Calibration: cadence, triggers, rules, change log, and improvement register integration. |
 

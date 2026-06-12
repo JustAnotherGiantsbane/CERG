@@ -604,7 +604,7 @@ Cascading changes from a risk appetite adjustment are tracked in the improvement
 | **Effective Date** | 2026-05-26 |
 | **Classification** | Internal / Restricted |
 | **Document Owner** | Cyber Governance (CERG Pillar) |
-| **Approved By** | Chief Information Security Officer |
+| **Approved By** | CISO |
 | **Review Cycle** | Annual; triggered by significant regulatory change or organizational change |
 | **Next Scheduled Review** | 2027-05-26 |
 | **Parent Document** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - CERG Cybersecurity Policy |

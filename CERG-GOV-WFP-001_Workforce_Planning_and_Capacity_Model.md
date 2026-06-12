@@ -466,7 +466,7 @@ A team of predominantly S3-S4 practitioners handles more throughput per person t
 | **Effective Date** | 2026-05-27 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
-| **Approved By** | (pending) |
+| **Approved By** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and before each budget cycle |
 | **Next Scheduled Review** | 2027-05-27 |

@@ -416,7 +416,7 @@ Reviewed by: [CISO]
 | **Effective Date** | 2026-05-26 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
-| **Approved By** | Governance Pillar Leader · CISO endorsement |
+| **Approved By** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / After each quarterly lessons-aggregation cycle |
 | **Next Scheduled Review** | 2027-05-26 |

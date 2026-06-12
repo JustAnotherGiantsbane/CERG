@@ -436,7 +436,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
-| **Approved By** | Governance Pillar Leader |
+| **Approved By** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Quarterly, or upon any artifact add or retire |
 | **Next Scheduled Review** | 2026-08-27 |

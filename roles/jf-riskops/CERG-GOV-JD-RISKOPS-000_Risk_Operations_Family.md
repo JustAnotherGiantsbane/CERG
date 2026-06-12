@@ -95,7 +95,7 @@ Certifications relevant to the Risk Operations family are detailed in [TRN-001](
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
-| **Approved By** | Risk Pillar Leader |
+| **Approved By** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](../../CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual |
 | **Next Scheduled Review** | 2027-06-11 |

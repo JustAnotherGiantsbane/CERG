@@ -292,7 +292,7 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CE
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
-| **Approved By** | CISO (pending) |
+| **Approved By** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; per ISO audit cycle; and on material ISMS scope change |
 | **Next Scheduled Review** | 2027-05-22 |

@@ -409,7 +409,7 @@ When a new framework revision is published (e.g., NIST 800-53 Rev 6, NIST 800-17
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
-| **Approved By** | CISO (pending) |
+| **Approved By** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to catalog, naming, role, or rendering conventions |
 | **Next Scheduled Review** | 2027-05-22 |

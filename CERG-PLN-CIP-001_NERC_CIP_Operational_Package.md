@@ -363,7 +363,7 @@ Operationalized in coordination with [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber
 |---|---|
 | **Document ID** | CERG-PLN-CIP-001 |
 | **Version** | 1.0 |
-| **Approved By** | Cyber Governance Manager (OT / NERC-CIP) · CISO endorsement |
+| **Approved By** | CISO |
 | **Next Review** | Annual / on CIP version or filing change |
 | **Change Log** | 1.0 - Initial publication. Evidence library, OT VM, BES access, deviation template, IT/OT convergence guideline, categorization, ESP/EAP, CIP-013, CIP-009, CIP-015 forward-looking. |
 

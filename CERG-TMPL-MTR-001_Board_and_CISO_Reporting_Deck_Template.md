@@ -110,7 +110,7 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
-| **Approved By** | CISO (pending) |
+| **Approved By** | CISO |
 | **Parent Document** | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) - Metrics Dashboard and Reporting |
 | **Review Cycle** | Annual; and on process or control change |
 | **Next Scheduled Review** | 2027-05-22 |

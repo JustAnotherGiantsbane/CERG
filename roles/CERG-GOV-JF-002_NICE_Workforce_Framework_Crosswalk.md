@@ -173,7 +173,7 @@ The seven NICE Work Role Categories (NIST SP 800-181r1) with their official desc
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
-| **Approved By** | Governance Pillar Leader (Policy & Standards) |
+| **Approved By** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](../CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; or upon NICE framework update |
 | **Next Scheduled Review** | 2027-06-11 |

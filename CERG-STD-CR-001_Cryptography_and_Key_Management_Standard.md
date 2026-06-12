@@ -188,8 +188,7 @@ CERG controls cryptography at four use cases. Each names the required algorithm 
 
 ### 5.3 Separation of Duties
 
-| **Action** | **Performed By** | **Approved By** |
-|---|---|---|
+| **Action** | **Performed By** | **Approved By** | CISO |---|---|
 | Generate root or issuing CA key | Two named operators | Engineering Pillar Leader |
 | Rotate KEK | Engineering - Platforms | Engineering Pillar Leader |
 | Generate CMK in production | Engineering - Platforms | Workload Owner + Engineering Pillar Leader |
@@ -330,7 +329,7 @@ The checklist below is the minimum for any system in CUI scope, FedRAMP Moderate
 |---|---|
 | **Document ID** | CERG-STD-CR-001 |
 | **Version** | 1.0 |
-| **Approved By** | Cloud Security Engineer · CISO endorsement |
+| **Approved By** | CISO |
 | **Next Review** | Annual / on FIPS publication change / on algorithm deprecation |
 | **Change Log** | 1.0 - Initial publication. Approved/prohibited algorithms, TLS/cert lifecycle, key management, CMK decision guide, secrets/tokens, rotation cadence, FIPS profile. |
 

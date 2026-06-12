@@ -252,7 +252,7 @@ When CERG publishes an update upstream, the adopter pulls the new source, update
 | **Effective Date** | 2026-05-21 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
-| **Approved By** | Chief Information Security Officer (pending) |
+| **Approved By** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on any change to the token scheme |
 | **Next Scheduled Review** | 2027-05-21 |

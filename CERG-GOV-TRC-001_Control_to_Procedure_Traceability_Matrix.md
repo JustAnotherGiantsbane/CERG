@@ -179,7 +179,7 @@ Maintenance steps:
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Control Baseline) |
-| **Approved By** | CISO (pending) |
+| **Approved By** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on control baseline, standard, procedure, or evidence model change |
 | **Next Scheduled Review** | 2027-05-22 |

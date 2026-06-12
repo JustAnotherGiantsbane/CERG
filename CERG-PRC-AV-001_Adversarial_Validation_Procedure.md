@@ -601,6 +601,6 @@ Final reports are distributed under the confidentiality terms in the RoE. Full r
 |---|---|
 | **Document ID** | CERG-PRC-AV-001 |
 | **Version** | 1.2 |
-| **Approved By** | Cyber Risk Pillar Leader (Offensive Security) · CISO endorsement |
+| **Approved By** | CISO |
 | **Next Review** | Annual / on material program change |
 | **Change Log** | 1.0 - Initial publication. Engagement types, RoE, charter, purple, cloud, app, OT safety, rating/routing, evidence retention. · 1.1 - Added Section 11 Systemic Analysis and Program Feedback Loop: post-engagement systemic analysis, systemic finding routing, prevention verification, and annual trend analysis. · 1.2 - Restored Section 12 Roles and Responsibilities. Renumbered Evidence Retention to Section 13, Regulatory to 14, Document Control to 15. |

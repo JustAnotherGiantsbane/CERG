@@ -289,7 +289,7 @@ To substantiate an Adaptive score in a domain, the assessor should expect to see
 | **Effective Date** | 2026-05-26 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
-| **Approved By** | (pending) |
+| **Approved By** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / On control baseline revision |
 | **Next Scheduled Review** | 2027-05-26 |

@@ -351,6 +351,6 @@ Phishing-resistant MFA coverage is reported as `ID-001` in [`CERG-GOV-MTR-001`](
 |---|---|
 | **Document ID** | CERG-PRC-AC-002 |
 | **Version** | 1.0 |
-| **Approved By** | Cyber Engineering Pillar Leader (Identity) · CISO endorsement |
+| **Approved By** | CISO |
 | **Next Review** | Annual / IAM tooling change |
 | **Change Log** | 1.0 - Initial publication. JML, access request, recertification, PAM, break-glass, service accounts, secrets, vendor access, MFA. Dual operating model preserved. |

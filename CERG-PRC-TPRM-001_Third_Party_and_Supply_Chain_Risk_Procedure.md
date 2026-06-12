@@ -538,6 +538,6 @@ Assessment results are recorded in the TPRM tool and reviewed at each re-assessm
 |---|---|
 | **Document ID** | CERG-PRC-TPRM-001 |
 | **Version** | 1.0 |
-| **Approved By** | Cyber Risk Pillar Leader (Vendor Risk) · CISO endorsement |
+| **Approved By** | CISO |
 | **Next Review** | Annual / TPRM platform change |
 | **Change Log** | 1.0 - Initial publication. Tiering, evidence by tier, shared responsibility, international access denial-by-default, SBOM, CIP-013, CUI flow-down, FedRAMP equivalency, SCCT.

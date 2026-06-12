@@ -113,7 +113,7 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | Evidence Librarian |
-| **Approved By** | CISO (pending) |
+| **Approved By** | CISO |
 | **Parent Document** | [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) - Audit and Evidence Management Procedure |
 | **Review Cycle** | Annual; and on process or control change |
 | **Next Scheduled Review** | 2027-05-22 |

@@ -444,7 +444,7 @@ The grade title is separate. An organization may call an S3 Cloud Security Engin
 | **Effective Date** | 2026-05-27 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
-| **Approved By** | Governance Pillar Leader (pending); CISO endorses |
+| **Approved By** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on any change to the canonical role roster, organizational design, or compensation philosophy |
 | **Next Scheduled Review** | 2027-05-27 |

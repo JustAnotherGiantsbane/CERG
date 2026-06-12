@@ -297,7 +297,7 @@ Additional guardrails baked into the views:
 |---|---|
 | **Document ID** | CERG-TMPL-RM-001 |
 | **Version** | 1.0 |
-| **Approved By** | Cyber Governance Manager |
+| **Approved By** | CISO |
 | **Next Review** | Annual / on tooling change |
 | **Change Log** | 1.0 - Initial publication. Schema, examples, exception template, scoring guide, CISO reporting views. |
 

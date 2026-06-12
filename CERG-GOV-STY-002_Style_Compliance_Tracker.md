@@ -73,7 +73,7 @@ For reference when remediating the missing sections above:
 | **Effective Date** | YYYY-MM-DD |
 | **Classification** | [Public / Internal / Restricted] |
 | **Owner** | [Role Name] |
-| **Approved By** | [Approver Role] |
+| **Approved By** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | [Annual / Semi-Annual / Quarterly] |
 | **Next Scheduled Review** | YYYY-MM-DD |

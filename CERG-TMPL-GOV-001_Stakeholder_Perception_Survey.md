@@ -182,7 +182,7 @@ When a perception score decline or an open-ended theme triggers a program change
 | **Effective Date** | 2026-05-26 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
-| **Approved By** | (pending) |
+| **Approved By** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / After each survey administration cycle |
 | **Next Scheduled Review** | 2027-05-26 |

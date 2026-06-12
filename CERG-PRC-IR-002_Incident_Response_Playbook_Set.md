@@ -674,7 +674,7 @@ Reviewed by: [Incident Commander, CISO]
 | **Effective Date** | 2026-05-22 |
 | **Classification** | External Interface |
 | **Owner** | Standing IR Team / Incident Commander |
-| **Approved By** | CISO · Incident Commander owner concurrence |
+| **Approved By** | CISO |
 | **Parent Policy** | N/A — adjacent-function artifact; cross-referenced by CERG for integration |
 | **Review Cycle** | Annual; and after significant incident or IR plan change |
 | **Next Scheduled Review** | 2027-05-22 |

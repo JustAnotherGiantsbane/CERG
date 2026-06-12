@@ -226,7 +226,7 @@ Specifically, the most-reused artifacts:
 |---|---|
 | **Document ID** | CERG-PLN-SOX-001 |
 | **Version** | 1.0 |
-| **Approved By** | Cyber Governance Manager (SOX Liaison) · CISO endorsement · Coordinated with Internal Audit and Finance |
+| **Approved By** | CISO |
 | **Next Review** | Annual / per SOX year |
 | **Change Log** | 1.0 - Initial publication. ITGC scoping, control library, system register, evidence reuse mapping, deficiency workflow, auditor interface. |
 

@@ -304,7 +304,7 @@ Succession information is communicated on a need-to-know basis:
 | **Effective Date** | 2026-05-27 |
 | **Classification** | Confidential - CISO and Pillar Leaders |
 | **Owner** | CISO |
-| **Approved By** | (pending) |
+| **Approved By** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual talent review; emergency succession list reviewed semi-annually |
 | **Next Scheduled Review** | 2027-05-27 |

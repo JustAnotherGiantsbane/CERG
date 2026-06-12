@@ -230,7 +230,7 @@ No known control gap may remain only in narrative text. Every gap must have a PO
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | CMMC / Federal Compliance Manager |
-| **Approved By** | CISO (pending) |
+| **Approved By** | CISO |
 | **Parent Plan** | [`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) - CUI / CMMC Operational Package |
 | **Review Cycle** | Annual; and on system boundary, CUI scope, or authorization change |
 | **Next Scheduled Review** | 2027-05-22 |

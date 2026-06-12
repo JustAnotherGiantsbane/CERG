@@ -126,7 +126,7 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
-| **Approved By** | CISO (pending) |
+| **Approved By** | CISO |
 | **Parent Document** | [`CERG-PRC-AR-001`](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) - Architecture Review and Project Intake Procedure |
 | **Review Cycle** | Annual; and on process or control change |
 | **Next Scheduled Review** | 2027-05-22 |

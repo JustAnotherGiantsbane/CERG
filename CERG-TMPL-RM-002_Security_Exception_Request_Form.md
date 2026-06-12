@@ -124,7 +124,7 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |
-| **Approved By** | CISO (pending) |
+| **Approved By** | CISO |
 | **Parent Document** | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) - Risk Register and Exception Process |
 | **Review Cycle** | Annual; and on process or control change |
 | **Next Scheduled Review** | 2027-05-22 |

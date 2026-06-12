@@ -90,7 +90,7 @@ The improvement register is a structured record. Every entry contains the follow
 | **Target State** | What will exist after the change | "Firmware versions auto-discovered by CMDB agent; STD-AM-001 requires firmware version as a tracked attribute; PRC-VM-001 adds firmware-age SLA" |
 | **Affected Artifacts** | CERG document IDs that will be modified | STD-AM-001, PRC-VM-001 |
 | **Accountable Role** | Single owner per the canonical role roster (OM-001 Section 6.1) | Engineering Pillar Leader |
-| **Approved By** | Approving authority per PRC-LL-001 Section 6.2 | CISO |
+| **Approved By** | CISO | CISO |
 | **Approval Date** | When approved | 2026-04-15 |
 | **Target Date** | When this should be operational | 2026-09-30 (Q3) |
 | **Status** | Current lifecycle state (see Section 4) | In Progress |
@@ -265,7 +265,7 @@ The improvement register is archived annually. The archived register becomes an 
 | **Effective Date** | 2026-05-26 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
-| **Approved By** | (pending) |
+| **Approved By** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual |
 | **Next Scheduled Review** | 2027-05-26 |

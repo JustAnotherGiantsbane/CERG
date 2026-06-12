@@ -161,7 +161,7 @@ POA&M review outputs:
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
 | **Owner** | CMMC / Federal Compliance Manager |
-| **Approved By** | CISO (pending) |
+| **Approved By** | CISO |
 | **Parent Plan** | [`CERG-PLN-CUI-001`](CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) - CUI / CMMC Operational Package |
 | **Review Cycle** | Monthly while open; annual template review |
 | **Next Scheduled Review** | 2027-05-22 |

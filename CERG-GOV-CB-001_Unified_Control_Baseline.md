@@ -432,7 +432,7 @@ When a control in §6 or an overlay in §7 changes, Governance issues a "ripple 
 | **Effective Date** | 2026-05-01 |
 | **Classification** | Internal - Confidential |
 | **Owner** | Governance Pillar Leader (Control Baseline) |
-| **Approved By** | Chief Information Security Officer |
+| **Approved By** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on framework version change (NIST 800-53 rev, CMMC rev, NERC-CIP version) |
 | **Next Scheduled Review** | 2027-05-01 |
