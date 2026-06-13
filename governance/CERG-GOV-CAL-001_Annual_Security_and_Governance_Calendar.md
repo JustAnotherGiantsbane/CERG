@@ -68,6 +68,7 @@ It applies to all CERG-owned governance, risk, engineering, audit, evidence, and
 | Daily / Continuous | Critical risk, vulnerability, logging, backup, identity, and monitoring signals reviewed through dashboards and queues. | Risk Pillar Leader | Dashboard snapshots, queue metrics, risk updates | `CERG-GOV-MTR-001`, `CERG-PRC-VM-001`, `CERG-STD-LM-001` |
 | Weekly | High-priority risk, exception, vulnerability, vendor, and audit blockers reviewed. | Risk Pillar Leader | Weekly action tracker | `CERG-PRC-RM-001`, `CERG-PRC-AUD-001` |
 | Monthly | CERG leadership operating review. | Governance Pillar Leader | Monthly leadership report | `CERG-GOV-MTR-001`, `CERG-TMPL-MTR-001` |
+| Monthly | CERG service-level commitment (SLC) adherence review. | CISO / Pillar Leaders | SLC adherence snapshot (SR-004) | `CERG-GOV-SLC-001`, `CERG-GOV-MTR-001` |
 | Monthly | POA&M and remediation status review. | Risk Register Owner | POA&M status report | `CERG-TMPL-CUI-002`, `CERG-PRC-RM-001` |
 | Monthly | Asset inventory reconciliation. | Engineering Pillar Leader | Inventory export, reconciliation log | `CERG-STD-AM-001`, `CERG-GOV-CB-001` |
 | Monthly | Logging and detection coverage review. | Risk Pillar Leader | SIEM source inventory, coverage gap report | `CERG-STD-LM-001`, `CERG-GOV-CB-001` |
