@@ -137,6 +137,8 @@ Files are named `<DocumentID>_<Short_Title>.md` using underscore-separated title
 | `CON` | Contractor and non-employee staff integration |
 | `JF` | Job Families and workforce architecture |
 | `FLOW` | Cross-pillar operational flows |
+| `CJ` | Crown jewels and loss-scenario library |
+| `SLC` | CERG service-level commitments (CERG-to-business) |
 
 New domains are added only by amendment to this catalog.
 
