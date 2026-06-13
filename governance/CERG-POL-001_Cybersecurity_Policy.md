@@ -77,7 +77,7 @@ These pillars operate simultaneously and continuously, not sequentially. CERG co
 
 > **The "Yes, And…" Standard**
 > 
-> Governance does not exist to block the business. The default orientation is enabling the business with guardrails, not closing doors. When a risk cannot be eliminated, it is documented, owned, treated, and monitored. Reflexive refusal is not an acceptable risk management strategy.
+> Governance does not exist to block the business. The default orientation is enabling the business with guardrails, not closing doors. When a risk cannot be eliminated, it is documented, owned, treated, and monitored. Reflexive refusal is not an acceptable risk management strategy. CERG publishes and reports against its own service-level commitments ([`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md)), so that making yes safe is an accountable, measured commitment and not only an aspiration.
 
 ---
 
