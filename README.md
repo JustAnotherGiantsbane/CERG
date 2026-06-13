@@ -62,6 +62,10 @@ CERG's strongest idea is not the document library. It is the operating philosoph
 
 ---
 
+## Architecture overview
+
+A visual map of how CERG's document categories, pillars, and cross-pillar flows connect: **[architecture.html](architecture.html)** (open in browser).
+
 ## Reader paths
 
 Different roles need different entry points:
