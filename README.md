@@ -160,6 +160,20 @@ In these cases, start with a lighter framework (NIST CSF, CIS Controls) and adop
 
 > **CERG is not a certification scheme.** An organization may adopt CERG and still fail a regulatory assessment if controls are not implemented and evidenced. CERG provides a framework and sample operating artifacts. It does not determine legal obligations, registered-entity status, contract scope, or certification readiness. Organizations must validate regulatory applicability with qualified counsel, compliance leadership, and assessors.
 
+## Contributing
+
+CERG is open source and contributions are welcome.
+
+**Ways to contribute:**
+- Improve existing documents (fix gaps, clarify language, add cross-references)
+- Propose new documents (standards, procedures, templates, example profiles)
+- Report bugs (broken links, catalog errors, validation failures)
+- Suggest structural improvements
+
+**[CONTRIBUTING.md](CONTRIBUTING.md)** has the full details: document conventions, the review process, how to register new domain codes, and what the CI checks.
+
+**[Open an issue](https://github.com/m0dernz/CERG/issues/new/choose)** — we have templates for document improvements, new document proposals, and validation errors.
+
 ## License
 
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — fork freely, adapt openly, attribute generously.
