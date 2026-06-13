@@ -111,6 +111,7 @@ The dictionary is the source-of-truth definition for every CERG metric. Each ent
 | RM-004 | Exception Backlog | Open exceptions count | Exception register | Weekly | ≤ 25 / 26–60 / > 60 | CISO Dashboard |
 | RM-005 | Exception Aging | % of open exceptions older than 12 months | Exception register | Monthly | ≤ 5% / 6–15% / > 15% | CISO Dashboard, COG Brief |
 | RM-006 | OU Risk Concentration Index | Std deviation of OU residual-score weighted sums | Risk register | Monthly | ≤ baseline / ±10% / > baseline+10% | CISO Dashboard |
+| RM-007 | Scenario Defense Coverage | % of named loss scenarios ([`CJ-001`](CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md)) where every chain-breaking control is Implemented (CB-001) AND Effective (CEF-001) | CJ-001 + CB-001 + CEF-001 | Quarterly | ≥ 90% / 75–90% / < 75% | CISO Dashboard, COG Brief, Board |
 
 ### 3.2 Exposure Management Metrics (Owner: Cyber Risk)
 
@@ -123,7 +124,7 @@ These metrics measure exposure reduction, not scanner activity. They track the p
 | EM-003 | Critical Observations Downgraded | % of Critical/High CVSS observations reclassified to Hygiene Debt or lower after context validation | Exposure pipeline | Monthly | n/a — informational | CISO Dashboard |
 | EM-004 | KEV with Reachable Path | Count of KEV-matched observations in "Exposure Confirmed" or "Material Risk" state | Exposure pipeline + KEV catalog | Daily | 0 / 1–5 / > 5 | CISO Dashboard |
 | EM-005 | KEV Blocked by Verified Control | Count of KEV-matched observations classified as "Confirmed Flaw, Not Exposed" due to verified compensating controls | Exposure pipeline + KEV catalog | Weekly | n/a — watchlist | CISO Dashboard |
-| EM-006 | Exposures on Crown Jewels | Count of confirmed exposures on crown-jewel-classified assets | Exposure pipeline + Asset tiering | Daily | 0 / 1–2 / > 2 | CISO Dashboard |
+| EM-006 | Exposures on Crown Jewels | Count of confirmed exposures on crown-jewel-classified assets | Exposure pipeline + CJ-001 crown-jewel register | Daily | 0 / 1–2 / > 2 | CISO Dashboard |
 | EM-007 | SLA Misses with Compensating Controls | Exposures past SLA where a verified compensating control exists | Exposure pipeline | Weekly | ≤ 5 / 6–15 / > 15 | CISO Dashboard |
 | EM-008 | SLA Misses with No Controls | Exposures past SLA with no compensating control | Exposure pipeline | Weekly | 0 / 1–3 / > 3 | CISO Dashboard, COG Brief |
 | EM-009 | Observation-to-Decision Time | Median days from observation intake to classification | Exposure pipeline | Monthly | ≤ 3d / 4–7d / > 7d | COG Brief |
