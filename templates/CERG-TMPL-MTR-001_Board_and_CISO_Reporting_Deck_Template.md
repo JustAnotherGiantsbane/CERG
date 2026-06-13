@@ -61,13 +61,14 @@ This template structures recurring CISO and board reporting. It converts control
 |---|---|---|
 | 1 | Executive Summary | One-page answer: better, worse, or stable, and why. |
 | 2 | Material Risk Changes | High and Critical risks added, closed, accepted, or escalated. |
-| 3 | Control Posture | Maturity, control gaps, and major remediation themes. |
-| 4 | Incident and Resilience Update | Material incidents, exercises, recovery gaps, and lessons. |
-| 5 | Regulatory and Audit Readiness | SOX, CMMC, CIP, ISO, privacy, customer assurance. |
-| 6 | Third-Party and Supply Chain Risk | Critical vendors, open findings, concentration risk. |
-| 7 | Metrics Dashboard | Small set of trend metrics from `CERG-GOV-MTR-001`. |
-| 8 | Decisions Needed | Risk acceptances, funding, staffing, scope, policy decisions. |
-| 9 | Action Tracker | Open executive actions and due dates. |
+| 3 | Scenario Defense Posture | For each named crown-jewel loss scenario (`CERG-GOV-CJ-001`), red/amber/green on whether the kill chain is fully broken (sourced from RM-007). Top-down companion to the bottom-up top risks. |
+| 4 | Control Posture | Maturity, control gaps, and major remediation themes. |
+| 5 | Incident and Resilience Update | Material incidents, exercises, recovery gaps, and lessons. |
+| 6 | Regulatory and Audit Readiness | SOX, CMMC, CIP, ISO, privacy, customer assurance. |
+| 7 | Third-Party and Supply Chain Risk | Critical vendors, open findings, concentration risk. |
+| 8 | Metrics Dashboard | Small set of trend metrics from `CERG-GOV-MTR-001`. |
+| 9 | Decisions Needed | Risk acceptances, funding, staffing, scope, policy decisions. |
+| 10 | Action Tracker | Open executive actions and due dates. |
 
 ### 3.2 Executive Summary Slide
 
