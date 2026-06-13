@@ -88,7 +88,7 @@ Different roles need different entry points:
 The full corpus is cataloged in [CAT-001](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md). Key groupings:
 
 - **Spine (8 docs)** — Policy, Framework, Operating Model, Catalog, RMF, Risk Register, Risk Templates, VM Procedure
-- **Governance instruments (30 docs)** — Control Baseline, Compliance Matrix, Risk Taxonomy, Metrics, Calendar, Style Guide, Traceability, Evidence Quality, Maturity Assessment, and workforce documents (Job Architecture, Descriptions, Competency Model, Performance, Workforce Planning, Succession, Training, Onboarding, Contractor Integration, Program Improvement)
+- **Governance instruments (31 docs)** — Control Baseline, Compliance Matrix, Risk Taxonomy, Metrics, Calendar, Style Guide, Traceability, Evidence Quality, Maturity Assessment, Crown Jewel Register and Scenario Library, and workforce documents (Job Architecture, Descriptions, Competency Model, Performance, Workforce Planning, Succession, Training, Onboarding, Contractor Integration, Program Improvement)
 - **Adoption & scaling (3 docs)** — Implementation Guide, Adoption Safety Guide, Small Team Adoption Path
 - **Standards (15 docs)** — Access, Configuration (DISH), Cryptography, CUI, IT/Cloud/SaaS, Logging/Monitoring, OT/Grid, Resilience/Backup, Asset Management, Data Governance, Network Segmentation, Endpoint/Mobile, Email/Messaging, AI Security, Secure Development
 - **Procedures (12 docs)** — Architecture Review, Access Runbook, Adversarial Validation, Risk Register, TPRM, Vulnerability Management, Change Management, Audit/Evidence, Threat Intelligence, Threat Modeling, Lessons Learned
