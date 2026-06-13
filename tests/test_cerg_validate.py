@@ -22,7 +22,7 @@ def write(path: Path, content: str) -> None:
 
 def test_valid_repository_has_no_findings(tmp_path):
     write(
-        tmp_path / "CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md",
+        tmp_path / "governance" / "CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md",
         """
         # Catalog
 
@@ -30,14 +30,14 @@ def test_valid_repository_has_no_findings(tmp_path):
 
         | **ID** | **Title** | **Owner** | **Status** |
         |---|---|---|---|
-        | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) | Cybersecurity Policy | CISO | Approved |
+        | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Cybersecurity Policy | CISO | Approved |
         | [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) | Access Management Standard | Governance Pillar Leader | Approved |
 
         ## 6. Cross-Reference Rules
         """,
     )
     write(
-        tmp_path / "CERG - Cybersecurity Policy.md",
+        tmp_path / "governance" / "CERG-POL-001_Cybersecurity_Policy.md",
         """
         | | |
         |---|---|
@@ -48,7 +48,7 @@ def test_valid_repository_has_no_findings(tmp_path):
         """,
     )
     write(
-        tmp_path / "CERG-STD-AC-001_Access_Management_Standard.md",
+        tmp_path / "governance" / "CERG-STD-AC-001_Access_Management_Standard.md",
         """
         | | |
         |---|---|
@@ -67,7 +67,7 @@ def test_valid_repository_has_no_findings(tmp_path):
 
 def test_detects_missing_link_uncataloged_id_and_status_mismatch(tmp_path):
     write(
-        tmp_path / "CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md",
+        tmp_path / "governance" / "CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md",
         """
         # Catalog
 
@@ -75,7 +75,7 @@ def test_detects_missing_link_uncataloged_id_and_status_mismatch(tmp_path):
 
         | **ID** | **Title** | **Owner** | **Status** |
         |---|---|---|---|
-        | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) | Cybersecurity Policy | CISO | Approved |
+        | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Cybersecurity Policy | CISO | Approved |
 
         ## 6. Cross-Reference Rules
         """,
@@ -104,7 +104,7 @@ def test_detects_missing_link_uncataloged_id_and_status_mismatch(tmp_path):
 
 def test_detects_catalog_filesystem_mismatches(tmp_path):
     write(
-        tmp_path / "CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md",
+        tmp_path / "governance" / "CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md",
         """
         # Catalog
 
@@ -112,7 +112,7 @@ def test_detects_catalog_filesystem_mismatches(tmp_path):
 
         | **ID** | **Title** | **Owner** | **Status** |
         |---|---|---|---|
-        | [`CERG-POL-001`](CERG%20-%20Cybersecurity%20Policy.md) | Cybersecurity Policy | CISO | Approved |
+        | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Cybersecurity Policy | CISO | Approved |
         | [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) | Access Management Standard | Governance Pillar Leader | Approved |
 
         ## 6. Cross-Reference Rules
