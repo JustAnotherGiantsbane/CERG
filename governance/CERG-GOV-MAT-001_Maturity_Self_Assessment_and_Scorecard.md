@@ -58,7 +58,7 @@ It applies program-wide. It is run at day 1 of adoption to set a baseline, at da
 
 The assessment has four moving parts.
 
-1. **Domains.** 24 assessment domains, grouped by pillar (Governance, Engineering, Risk) plus a Cross-Pillar group. Each domain is a coherent slice of the program tied to specific CERG artifacts.
+1. **Domains.** 25 assessment domains, grouped by pillar (Governance, Engineering, Risk) plus a Cross-Pillar group. Each domain is a coherent slice of the program tied to specific CERG artifacts.
 2. **The tier scale.** Each domain is scored against the four NIST CSF tiers: Partial, Informed, Repeatable, Adaptive. Section 3 defines them.
 3. **Evidence anchors.** Each domain lists what the organization must be able to show to claim each tier. Scoring is anchored to evidence, not opinion.
 4. **The scorecard.** Domain scores roll up to pillar scores and an overall score, and the lowest-scoring domains become the gap list.
@@ -138,6 +138,7 @@ Score each domain 1 to 4 against the tier scale. The evidence column names what 
 | R5 | Risk taxonomy and exposure posture | [`CERG-GOV-TAX-001`](CERG-GOV-TAX-001_Risk_Taxonomy.md) | Risks categorized to the taxonomy; exposure posture reported. | |
 | R6 | Threat intelligence | [`CERG-PRC-TI-001`](../procedures/CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) | Intelligence collected and distributed to Engineering, Detection, and Governance. | |
 | R7 | Pre-production versus post-production risk discipline | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) §4.3 | Pre-production findings handled as engineering inputs; post-production findings as managed risks. | |
+| R8 | Crown-jewel scenario defense coverage | [`CERG-GOV-CJ-001`](CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md) | Crown-jewel register maintained; named loss scenarios pressure-tested on cadence; chain-breaking controls verified Implemented and Effective; gaps generate Finding Records. | |
 
 
 ---
