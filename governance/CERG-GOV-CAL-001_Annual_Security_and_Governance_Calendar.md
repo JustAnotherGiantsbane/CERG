@@ -106,6 +106,7 @@ It applies to all CERG-owned governance, risk, engineering, audit, evidence, and
 | April | Run quarterly access review and privileged access review. | Engineering Pillar Leader | Access review evidence |
 | April | Execute evidence quality sample. | Evidence Librarian | Evidence sample worksheet |
 | May | Run tabletop exercise or scenario workshop. | Risk Pillar Leader | Tabletop after-action report |
+| May | Run crown-jewel scenario pressure-test (first half). | Risk Pillar Leader | Scenario pressure-test report; Finding Records for gaps |
 | May | Review threat modeling and architecture review throughput. | Engineering Pillar Leader | Architecture review metrics |
 | June | Prepare Q2 CISO / board posture deck. | Governance Pillar Leader | Q2 reporting deck |
 
@@ -127,6 +128,7 @@ It applies to all CERG-owned governance, risk, engineering, audit, evidence, and
 | October | Review ISO, CMMC, SOX, CIP, privacy, and customer-assurance readiness. | Governance Pillar Leader | Assurance readiness summary |
 | November | Approve next-year cyber governance plan, test plan, and budget inputs. | Chief Information Security Officer (CISO) | Next-year plan |
 | November | Review exception aging and risk acceptance renewals before year end. | Risk Register Owner | Exception renewal packet |
+| November | Run crown-jewel scenario pressure-test (second half). | Risk Pillar Leader | Scenario pressure-test report; Finding Records for gaps |
 | December | Prepare Q4 / annual CISO and board posture deck. | Governance Pillar Leader | Annual reporting deck |
 
 ---
