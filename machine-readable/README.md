@@ -8,15 +8,16 @@ This directory contains machine-readable YAML specifications generated from the 
 
 | File | Status | Notes |
 |------|--------|-------|
-| `cerg-manifest.yaml` | Production | Full artifact inventory with hashes and flags |
-| `cerg-publication-manifest.yaml` | Production | Publication eligibility per artifact |
+| `cerg-llm-index.json` | Production | Full local Markdown corpus index (131 docs, including README/meta/example files) |
+| `cerg-manifest.yaml` | Production | Governed source artifact inventory (118 artifacts) with hashes, canonical paths, and LLM flags |
+| `cerg-publication-manifest.yaml` | Production | Publication eligibility per governed artifact |
 | `cerg-content-tags.yaml` | Production | Section-level content tags |
 | `cerg-flows.yaml` | Production | 7 cross-pillar flow specifications |
-| `cerg-record-schemas.yaml` | Production | 5 record type schemas |
+| `cerg-record-schemas.yaml` | Production | Core operational record schemas |
 | `cerg-runtime-model.yaml` | Stable | Core operational objects |
-| `cerg-requirements.yaml` | **Pilot** | 85 atomic requirements extracted from 8 spine docs. `owner_role` and `evidence_required` fields require population during adoption — see file header for instructions. |
+| `cerg-requirements.yaml` | **Pilot** | 85 atomic requirements extracted from 8 normative source documents. `owner_role` and `evidence_required` fields require population during adoption — see file header for instructions. |
 | `cerg-vulnerability-priority-model.yaml` | Stable | Priority formula references CVSS-weighting — adopters should calibrate weights to their environment |
-| All other schemas | Stable | Single-purpose schema files — adopt as-is or adapt |
+| All other schemas | Stable | Single-purpose companion schema files — adopt as-is or adapt |
 
 ## Adoption Checklist
 
@@ -32,10 +33,11 @@ For each machine-readable artifact:
 
 | File | Purpose | Source |
 |------|---------|--------|
-| `cerg-manifest.yaml` | Canonical manifest of all 71 CERG artifacts with metadata, hashes, and LLM consumption flags | CAT-001 §5 |
-| `cerg-publication-manifest.yaml` | Publication eligibility for each artifact — separates "approved" from "safe to publish" | Document metadata |
+| `cerg-llm-index.json` | Full local Markdown corpus index for LLM/agent consumption | Repo-local Markdown corpus |
+| `cerg-manifest.yaml` | Canonical manifest of all 118 governed CERG source artifacts with metadata, hashes, canonical paths, and LLM consumption flags | Governed Markdown artifact metadata |
+| `cerg-publication-manifest.yaml` | Publication eligibility for each governed artifact — separates lifecycle approval from "safe to publish" | Document metadata |
 | `cerg-content-tags.yaml` | Content type tags for every section heading in the corpus | All CERG documents |
-| `cerg-requirements.yaml` | Atomic requirements extracted from 8 spine documents (pilot) | POL-001, STD-AC/IT/LM/RES/CR, CB-001, RMF-001 |
+| `cerg-requirements.yaml` | Atomic requirements extracted from 8 normative source documents (pilot; not the MVC spine) | POL-001, STD-AC/IT/LM/RES/CR, CB-001, RMF-001 |
 | `cerg-flows.yaml` | Cross-pillar operational flow specifications (7 flows) | FLOW-001 |
 | `cerg-record-schemas.yaml` | Record template schemas (5 record types) | FLOW-001 §16 |
 | `cerg-runtime-model.yaml` | Core operational objects and their relationships | CERG-ACT-006 |
@@ -55,8 +57,8 @@ For each machine-readable artifact:
 
 ## How These Are Generated
 
-All files are generated from the CERG markdown corpus during the build process. The manifest and content tags are regenerated on every catalog change. The requirement register is regenerated when normative documents change. Schema files are maintained alongside the documents they describe.
+Core indexes and manifests are generated from the repo-local CERG Markdown corpus during the build process. `cerg-manifest.yaml` and `cerg-publication-manifest.yaml` are regenerated with `python3 tools/regenerate-machine-readable.py`. `cerg-llm-index.json` is regenerated with `python3 tools/regenerate-llm-index.py`. The requirement register is regenerated when its normative source documents change. Single-purpose schema files are maintained alongside the documents they describe.
 
 ## For LLM Consumers
 
-Start with `cerg-manifest.yaml` to understand what artifacts exist and which are safe to include. Then load `cerg-content-tags.yaml` to understand what each section contains. Use `cerg-requirements.yaml` for traceable obligations. Use the individual schema files for structured field definitions.
+Start with `cerg-llm-index.json` for the complete Markdown corpus map. Use `cerg-manifest.yaml` for governed source artifacts and canonical paths, then load `cerg-content-tags.yaml` to understand what each section contains. Use `cerg-requirements.yaml` for traceable obligations after populating adoption-specific fields. Use the individual schema files for structured field definitions.
