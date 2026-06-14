@@ -48,7 +48,7 @@
   title: Document Catalog and Naming Convention
   document_type: governance_instrument
   domain: CAT
-  version: 1.34
+  version: 1.35
   status: Approved
   classification: Public
   publication_profile: public
@@ -57,7 +57,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  source_hash: 912492401eef1a63655ddf91e128bccf7363418d37e181147329744602e4e66e
+  source_hash: 0b8596088b82c516ee4ba87cedb2e74341032d85b470e5f2afc415212cc3303d
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   llm_include: true
   llm_priority: high
