@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.31 |
+| **Version** | 1.32 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -272,9 +272,11 @@ The V1 library is the set below. Every artifact listed has either an approved or
 |---|---|---|---|
 | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | CERG Operating Model | CISO / Pillar Owners | Approved |
 | `CERG-GOV-CAT-001` | Document Catalog and Naming Convention | Governance Pillar Leader | Approved (this doc) |
+| [`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md) | Record Catalog | Governance Pillar Leader (Document Control) | Approved |
 | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Unified Control Baseline | Governance Pillar Leader | Approved |
 | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Metrics, Dashboard, and CISO/Board Reporting | Governance Pillar Leader | Published |
 | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | SURGE / CERG Framework (narrative) | CISO | Approved |
+| [`CERG-GOV-FRM-002`](CERG-GOV-FRM-002_Framework_System_Map.md) | Framework System Map | Governance Pillar Leader | Approved |
 | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk Management Framework | Governance Pillar Leader | Approved |
 | [`CERG-GOV-TAX-001`](CERG-GOV-TAX-001_Risk_Taxonomy.md) | Risk Taxonomy | Cyber Risk | Approved |
 | [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) | Compliance Matrix | Governance Pillar Leader | Approved |
@@ -282,6 +284,8 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-GOV-IMP-002`](CERG-GOV-IMP-002_Adoption_Safety_Guide.md) | Adoption Safety Guide | Governance Pillar Leader | Approved |
 | [`CERG-GOV-IMP-003`](CERG-GOV-IMP-003_Small_Team_Adoption_Path.md) | Small Team Adoption Path | Governance Pillar Leader | Approved |
 | [`CERG-GOV-IMP-004`](CERG-GOV-IMP-004_Implementation_Cards.md) | Implementation Cards | Governance Pillar Leader | Approved |
+| [`CERG-GOV-IMP-005`](CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md) | Adoption Decision Tree and Dependency Matrix | Governance Pillar Leader | Approved |
+| [`CERG-GOV-IMP-006`](CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md) | Role-Based Implementation Checklists | Governance Pillar Leader | Approved |
 | [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) | Organization Adaptation Profile | Governance Pillar Leader | Approved |
 | [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) | Maturity Self-Assessment and Scorecard | Governance Pillar Leader | Approved |
 | [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Consolidated Roles, Responsibilities, and RACI Instrument | Governance Pillar Leader | Approved |
@@ -490,7 +494,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.30 |
+| **Version** | 1.32 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -507,6 +511,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.32 | 2026-06-13 | Governance Pillar Leader | Adoption usability amendment. Added FRM-002 Framework System Map, CAT-002 Record Catalog, IMP-005 Adoption Decision Tree and Dependency Matrix, and IMP-006 Role-Based Implementation Checklists to Section 5.2. |
 | 1.0 | 2026-05-01 | Cyber Governance | Initial release. Established the naming convention, document types, the authority and status lifecycle, the V1 authoritative catalog, and the cross-reference rules. |
 | 1.21 | 2026-05-01 | Cyber Governance | Catalog maintenance release aligning artifact versions across the V1 library. |
 | 1.22 | 2026-05-21 | Cyber Governance | Registered the adoption-layer domains `IMP`, `VAR`, and `MAT` in Section 2.1 and added `CERG-GOV-IMP-001`, `CERG-GOV-VAR-001`, and `CERG-GOV-MAT-001` to Section 5.2. |
