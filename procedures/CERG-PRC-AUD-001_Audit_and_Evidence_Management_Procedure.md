@@ -111,7 +111,7 @@ The control-baseline view is the source view. Framework views may link to or ref
 
 ### 4.2 Quality Bar
 
-Evidence is acceptable only if it is complete enough to support the control claim. At minimum it shows:
+Evidence quality is governed by [`CERG-GOV-AUD-001`](../governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md). Operationally, evidence is acceptable only if it is complete enough to support the control claim. At minimum it shows:
 
 - what control or request it supports;
 - what period it covers;
@@ -428,6 +428,7 @@ Cyber Governance owns this document. The Governance Pillar Leader is responsible
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
 | Cybersecurity Policy | [`CERG-POL-001`](../governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| Evidence Quality Standard | [`CERG-GOV-AUD-001`](../governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md) | Authoritative evidence quality, freshness, and sampling standard |
 | Unified Control Baseline | [`CERG-GOV-CB-001`](../governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control and evidence source |
 | Compliance Matrix | [`CERG-GOV-CMX-001`](../governance/CERG-GOV-CMX-001_Compliance_Matrix.md) | Cross-framework mapping |
 | Metrics and Reporting | [`CERG-GOV-MTR-001`](../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Audit and evidence metrics reporting |
