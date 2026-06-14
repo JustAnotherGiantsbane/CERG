@@ -134,6 +134,25 @@ Apps built on the platform are governed by these guardrails. Where an app needs 
 - Routine patching covered by [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Exposure_Management_Procedure.md).
 - Routine configuration changes within the DISH-conformant pattern that don't change trust boundaries.
 
+### 4.5 Approved Pattern Register
+
+Lightweight review depends on knowing which patterns are already approved. Engineering maintains an Approved Pattern Register as part of the architecture review record set. A pattern may be a reference architecture, IaC module, landing-zone template, CI/CD pipeline profile, SaaS configuration pattern, citizen-development guardrail set, or service-catalog template.
+
+Each approved pattern records:
+
+| **Field** | **Purpose** |
+|---|---|
+| Pattern ID and name | Stable reference used by intake and project records. |
+| Pattern owner | Engineering role accountable for keeping the pattern current. |
+| Approved use cases | What the pattern may be used for without full re-review. |
+| Approved data classifications / regulatory scopes | Maximum data and regulatory scope allowed under the pattern. |
+| Required controls and evidence | Baselines, guardrails, logging, detection, recovery, and evidence links. |
+| Known limitations | Conditions that trigger mandatory review instead of reuse. |
+| Last review / next review | Currency of the approval. |
+| Review triggers | Events that require re-review: major platform change, control failure, new regulatory scope, material finding, or threat intelligence change. |
+
+A project claiming lightweight review must cite the approved pattern it reuses and confirm it stays inside the pattern's approved scope. If the project changes the pattern, extends it to a higher data classification, crosses a new trust boundary, or disables a required guardrail, it becomes Mandatory Review.
+
 ---
 
 ## 5. Phase 1: Intake
