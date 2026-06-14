@@ -64,7 +64,7 @@ These documents form the minimum viable program. Every adopter needs them:
 | Operating Model (OM-001) | Defines roles, pillars, and handoffs. |
 | Risk Management Framework (RMF-001) | How risk is identified, scored, treated, and accepted. |
 | Risk Register and Exception Process (PRC-RM-001) | The operational risk workflow. |
-| Vulnerability Management Procedure (PRC-VM-001) | The operational vulnerability workflow. |
+| Exposure Management Procedure (PRC-VM-001) | The operational vulnerability workflow. |
 | Unified Control Baseline (CB-001) | What controls you are implementing. |
 | Document Catalog (CAT-001) | Inventory of what exists and what is planned. |
 | Architecture Review Procedure (PRC-AR-001) | How projects get security review. |
@@ -73,7 +73,7 @@ These documents form the minimum viable program. Every adopter needs them:
 
 ### Defer Until the Spine Is Running
 
-These documents add value but are not needed on day one. Adopt them after you have completed at least one full cycle of risk register review, vulnerability management, and project intake:
+These documents add value but are not needed on day one. Adopt them after you have completed at least one full cycle of risk register review, exposure management, and project intake:
 
 - Full workforce planning (WFP-001)
 - Succession planning (SUCC-001)
@@ -106,7 +106,7 @@ These are the ways CERG adoption fails. If you recognize your organization in an
 
 **Why it fails:** CERG is an operating model, not a compliance artifact. Forking the documents does not implement the controls. An auditor or assessor will ask for evidence, not a PDF of a policy.
 
-**Fix:** Adopt the spine documents first. Run one cycle of risk register review, vulnerability management, and project intake before declaring adoption.
+**Fix:** Adopt the spine documents first. Run one cycle of risk register review, exposure management, and project intake before declaring adoption.
 
 ### Anti-Pattern 2: Delete Roles Instead of Consolidating
 
@@ -326,7 +326,7 @@ For registered entities subject to NERC-CIP:
 - CERG is not a substitute for a registered entity's compliance determination. BES Cyber System classification must be entity-specific and performed by qualified personnel.
 - CIP evidence must be retained per the applicable CIP standard's retention requirements — which may exceed CERG's general evidence retention guidance.
 - Deviations from CIP requirements need formal handling per the applicable CIP standard, not just a CERG exception record. The CIP deviation process is a separate regulatory obligation.
-- OT scanning must be operationally approved. Vulnerability scanning in OT environments can disrupt operations, trigger safety systems, or violate maintenance windows. CERG's vulnerability management procedure is written for IT environments; OT scanning requires additional controls.
+- OT scanning must be operationally approved. Vulnerability scanning in OT environments can disrupt operations, trigger safety systems, or violate maintenance windows. CERG's exposure management procedure is written for IT environments; OT scanning requires additional controls.
 - EACMS, PACS, and BCSI are CIP-specific asset classifications. Do not map these to CERG asset types without understanding the CIP definitions and scoping rules.
 
 ### SOX-Specific Caution

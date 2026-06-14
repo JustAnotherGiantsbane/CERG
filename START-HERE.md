@@ -56,7 +56,7 @@ If you are still unsure where to begin, use these four helpers before diving int
 5. Risk Management Framework
 6. Risk Register & Exception Process
 7. Risk Register Templates
-8. Vulnerability Management Procedure
+8. Exposure Management Procedure
 9. Record Catalog and Role-Based Implementation Checklists as adoption aids
 
 ### What you can defer

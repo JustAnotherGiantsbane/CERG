@@ -312,7 +312,7 @@ The discipline rule is unchanged from §2: a control without a named evidence ar
 | IA-3 Device Identification and Authentication | NAC / conditional-access policy | NAC admin export; IdP conditional-access export | Annual | Engineering (Identity) |
 | IA-5 Authenticator Management | Secrets manager export; cert inventory | KMS / secrets manager; certificate inventory | Continuous | Engineering (Cryptography) |
 | RA-3 Risk Assessment | Risk register | CERG-PRC-RM-001 risk register (per CERG-TMPL-RM-001 schema) | Continuous | Risk / Governance |
-| RA-5 Vulnerability Monitoring and Scanning | Scan reports; SLA dashboard | Vulnerability scanner; MTR-001 VM-001 / VM-002 dashboard | Continuous | Risk (Vulnerability Management) |
+| RA-5 Vulnerability Monitoring and Scanning | Scan reports; SLA dashboard | Vulnerability scanner; MTR-001 VM-001 / VM-002 dashboard | Continuous | Risk (Exposure Management) |
 | SI-2 Flaw Remediation | SLA report; exception register | MTR-001 dashboard; CERG-PRC-RM-001 exception register | Continuous | Risk / Engineering |
 | SI-4 System Monitoring | Coverage report | MTR-001 DT-001 ATT&CK coverage report | Continuous | Risk (Detection) |
 | SR-2 Supply Chain Risk Management Plan | TPRM register; SCCT roster | CERG-PRC-TPRM-001 register; SCCT membership roster | Continuous | Risk (TPRM) |
@@ -524,7 +524,7 @@ When a control in §6 or an overlay in §7 changes, Governance issues a "ripple 
 | Metrics, Dashboard, and Reporting | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Hosts the dashboards cited in §8 evidence catalog |
 | Compliance Matrix | [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) | Intent-level cross-regulator map (this doc is implementation-level) |
 | Risk Taxonomy | [`CERG-GOV-TAX-001`](CERG-GOV-TAX-001_Risk_Taxonomy.md) | Risk categorization that feeds RA-3 register entries |
-| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Canonical SLAs cited by SI-2 |
+| Exposure Management Procedure | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Canonical SLAs cited by SI-2 |
 | Risk Register and Exception Process | [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Exception register cited by §6 and §8 |
 | Secure Configuration Baseline Standard (DISH) | [`CERG-STD-CFG-001`](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | Underlying baselines cited by CM-2 |
 | Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Underlying detection set cited by AU-* and SI-4 |

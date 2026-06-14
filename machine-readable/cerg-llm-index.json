@@ -1000,7 +1000,7 @@
     {
       "id": "CERG-PRC-VM-001",
       "prefix": "PRC",
-      "title": "Vulnerability Management Procedure",
+      "title": "Exposure Management Procedure",
       "type": "procedure",
       "pillar": "risk",
       "path": "procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md",

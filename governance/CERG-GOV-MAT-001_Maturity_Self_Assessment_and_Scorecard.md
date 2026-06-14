@@ -131,7 +131,7 @@ Score each domain 1 to 4 against the tier scale. The evidence column names what 
 
 | **#** | **Domain** | **Governing Artifact(s)** | **Repeatable-Tier Evidence** | **Score** |
 |---|---|---|---|---|
-| R1 | Vulnerability management | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Scanning runs on cadence; remediation SLAs tracked and met. | |
+| R1 | Exposure management | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Scanning runs on cadence; remediation SLAs tracked and met. | |
 | R2 | Adversarial validation | [`CERG-PRC-AV-001`](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) | Pen test, red team, or purple team exercises run and findings tracked. | |
 | R3 | Third-party and supply chain risk | [`CERG-PRC-TPRM-001`](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Vendors tiered and assessed; supply chain risks in the register. | |
 | R4 | Logging, monitoring, and detection | [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Log sources defined; retention enforced; detection coverage mapped. | |

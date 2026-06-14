@@ -198,7 +198,7 @@ Engineering implements controls to the following baselines, maintained as living
 
 ### 6.1 Objective
 
-Assessment validates that implemented controls are working as intended. In CERG, assessment is Cyber Risk's core function, executed continuously through vulnerability management and threat intelligence, and periodically through structured security assessments and penetration testing.
+Assessment validates that implemented controls are working as intended. In CERG, assessment is Cyber Risk's core function, executed continuously through exposure management and threat intelligence, and periodically through structured security assessments and penetration testing.
 
 ### 6.2 Assessment Portfolio
 

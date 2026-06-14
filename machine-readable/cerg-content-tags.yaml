@@ -1580,7 +1580,7 @@ CERG-PRC-VM-001:
     tags:
     - role
     - procedure
-  - heading: Inputs to the Vulnerability Management Process
+  - heading: Inputs to the Exposure Management Process
     tags:
     - procedure
     - procedure
@@ -2273,7 +2273,7 @@ CERG-PLN-CIP-001:
     tags:
     - evidence
     - plan
-  - heading: OT Vulnerability Management Procedure (`CERG-PRC-VM-001`)
+  - heading: OT Exposure Management Procedure (`CERG-PRC-VM-001`)
     tags:
     - procedure
     - plan

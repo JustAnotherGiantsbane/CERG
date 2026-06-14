@@ -244,7 +244,7 @@
   source_document_id: CERG-POL-001
   source_section: '4'
   source_section_title: Foundational Security Principles
-  requirement_text: '- The organization shall maintain continuous visibility into vulnerabilities affecting in-scope assets through a documented vulnerability management program operated by Cyber Risk.'
+  requirement_text: '- The organization shall maintain continuous visibility into vulnerabilities affecting in-scope assets through a documented exposure management program operated by Cyber Risk.'
   normative_verb: shall
   obligation_level: mandatory
   owner_role: ''

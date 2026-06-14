@@ -75,7 +75,7 @@ ENG = {
 RISK = {
     'Technical Depth': {
         'S1': 'Operates the Risk pillar\'s tools (vulnerability scanner, CSPM platform, threat intel platform, detection pipeline) under supervision. Triages alerts following established procedures. Recognizes false positives and true positives with increasing accuracy.',
-        'S2': 'Owns a Risk domain (e.g., vulnerability management for a platform class, vendor assessments for a business unit, a set of detection rules). Tunes tools to reduce noise and improve signal. Independently investigates findings and determines root cause.',
+        'S2': 'Owns a Risk domain (e.g., exposure management for a platform class, vendor assessments for a business unit, a set of detection rules). Tunes tools to reduce noise and improve signal. Independently investigates findings and determines root cause.',
         'S3': 'Shapes the Risk pillar\'s approach to exposure management. Designs assessment methodologies. Correlates findings across tools to identify systemic weaknesses that individual alerts miss.',
         'S4': 'Sets the analytical bar for the entire Risk pillar. Called upon for the hardest exposure questions. Represents the organization\'s risk posture to regulators, auditors, and industry peers.',
     },
@@ -98,7 +98,7 @@ RISK = {
         'S4': 'Communicates organizational risk posture to the board, regulators, and external stakeholders. Represents the organization\'s risk position in industry forums.',
     },
     'Operational Discipline': {
-        'S1': 'Triages findings within SLA. Documents assessment results in the designated system. Follows the vulnerability management and risk register procedures.',
+        'S1': 'Triages findings within SLA. Documents assessment results in the designated system. Follows the exposure management and risk register procedures.',
         'S2': 'Owns operational SLAs for their domain. Ensures risk register entries are current and complete. Maintains scanning schedules, detection rule lifecycles, or vendor assessment cadences without gaps.',
         'S3': 'Designs risk assessment workflows that produce consistent, auditable output. Ensures the Risk pillar\'s operational cadence is documented, measured, and improving. Identifies and automates repetitive risk assessment tasks.',
         'S4': 'Sets operational standards for the Risk pillar. Defines what "defensible" risk assessment looks like under regulatory scrutiny.',

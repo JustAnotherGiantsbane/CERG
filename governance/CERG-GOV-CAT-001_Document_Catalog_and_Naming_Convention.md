@@ -81,7 +81,7 @@ Files are named `<DocumentID>_<Short_Title>.md` using underscore-separated title
 | `OT` | Operational technology / grid control systems |
 | `CUI` | Controlled Unclassified Information / [CMMC](https://dodcio.defense.gov/CMMC/) |
 | `AC` | Access management / identity |
-| `VM` | Vulnerability management |
+| `VM` | Exposure management |
 | `RM` | Risk management (register, exceptions, scoring) |
 | `IR` | Incident response (CERG-facing artifacts only) |
 | `CIP` | NERC-CIP |

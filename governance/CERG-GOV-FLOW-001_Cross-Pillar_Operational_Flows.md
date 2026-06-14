@@ -109,7 +109,7 @@ These terms appear throughout the flows. Consistent usage prevents confusion dur
 
 1. **One material event creates one primary record and one accountable owner.** CERG repeatedly emphasizes authoritative records and explicit ownership as the basis for mature execution.
 2. **Pre-production security work is Engineering-led unless explicitly escalated.** CERG positions Engineering as the embedded consulting and architecture-review function for projects before production.
-3. **Post-production findings are Risk-led unless they are active incident-response actions.** CERG assigns Risk responsibility for continuous exposure identification through vulnerability management, adversarial testing, vendor assessment, and monitoring.
+3. **Post-production findings are Risk-led unless they are active incident-response actions.** CERG assigns Risk responsibility for continuous exposure identification through exposure management, adversarial testing, vendor assessment, and monitoring.
 4. **Governance owns control intent, conformance scope, exception authority routing, evidence rules, and reporting.** CERG's governance layer includes the control system for the program: baseline, calendar, evidence, metrics, compliance mapping, and oversight artifacts.
 5. **No issue may remain in an undefined state.** Every issue must become one of: remediation, compensating control, exception, accepted residual risk, or incident action.
 6. **Evidence must be created during execution and linked to the primary record.** CERG's annual calendar and reporting model both assume evidence-producing activities generate or refresh evidence as part of the operating rhythm.

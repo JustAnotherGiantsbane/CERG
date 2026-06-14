@@ -60,7 +60,7 @@ This standard applies to:
 >
 > Throughout this standard, requirements that apply exclusively to BES Cyber Systems are marked **[BES ONLY]**. Requirements that apply to all in-scope OT systems carry no marker. Where BES systems have a more stringent version of a common requirement, both versions are stated. Never apply only the baseline to a BES system.
 
-The NERC-CIP CIP-002 asset categorization process determines which assets carry BES Cyber System obligations. This standard does not replace that process. Governance maintains the BES Cyber System inventory. Engineering ensures controls reflect each asset's classification. Risk validates compliance against both BES and non-BES requirements during vulnerability management and assessment activities.
+The NERC-CIP CIP-002 asset categorization process determines which assets carry BES Cyber System obligations. This standard does not replace that process. Governance maintains the BES Cyber System inventory. Engineering ensures controls reflect each asset's classification. Risk validates compliance against both BES and non-BES requirements during exposure management and assessment activities.
 
 ### 1.3 Relationship to Parent Policy
 
@@ -75,7 +75,7 @@ The three CERG pillars operate in grid and control system environments with the 
 | **CERG Pillar** | **OT-Specific Responsibilities** |
 |---|---|
 | **Engineering** | Architects and validates security controls for new and modified OT systems before deployment. Conducts pre-production security reviews for all OT integrations, grid modernization projects, and IT/OT convergence initiatives. Defines and maintains secure configuration baselines for each OT platform class. Serves as the OT security SME in vendor selection and system acquisition. Ensures CIP-010 configuration management controls are embedded in project delivery. |
-| **Risk** | Operates the OT vulnerability management program using passive monitoring, vendor-provided scan tools, and approved active scanning windows that do not introduce operational risk. Tracks OT patch compliance separately from IT, with NERC-CIP deviation workflows initiated when SLAs cannot be met. Conducts OT-specific adversarial testing coordinated with operational teams. Maintains ICS/OT-specific threat intelligence from E-ISAC, ICS-CERT, and vendor security advisories. Manages the CIP-013 supply chain risk program for OT vendors and integrators. |
+| **Risk** | Operates the OT exposure management program using passive monitoring, vendor-provided scan tools, and approved active scanning windows that do not introduce operational risk. Tracks OT patch compliance separately from IT, with NERC-CIP deviation workflows initiated when SLAs cannot be met. Conducts OT-specific adversarial testing coordinated with operational teams. Maintains ICS/OT-specific threat intelligence from E-ISAC, ICS-CERT, and vendor security advisories. Manages the CIP-013 supply chain risk program for OT vendors and integrators. |
 | **Governance** | Owns the NERC-CIP compliance program including BES Cyber System inventory (CIP-002), CIP deviation and mitigation plan processes, and the NERC-CIP evidence library. Maintains this standard and all subordinate OT procedures. Coordinates regulatory examinations and self-certifications. Produces implementation guidance that translates CIP requirements into actionable technical direction for Engineering and IT/OT operations teams. Tracks all OT security findings and remediation commitments in the risk register. |
 
 > **The Operational Priority Rule**
@@ -139,7 +139,7 @@ Continuous visibility into OT network activity is essential for detecting threat
 
 ### 4.2 Vulnerability Identification
 
-OT vulnerability management operates under different constraints than IT. Scanning must be OT-safe. Patch timelines reflect vendor testing requirements and operational windows. The risk calculus weights availability alongside confidentiality and integrity.
+OT exposure management operates under different constraints than IT. Scanning must be OT-safe. Patch timelines reflect vendor testing requirements and operational windows. The risk calculus weights availability alongside confidentiality and integrity.
 
 | **Requirement** | **Applies To** | **CERG Owner** | **Regulatory Reference** |
 |---|---|---|---|
@@ -295,7 +295,7 @@ The following table maps this standard's major requirement areas to applicable r
 | Recovery Planning | CIP-009-6 | RC | CP-2, CP-9 | §6.7 | SR 7.3 |
 | Supply Chain Risk | CIP-013-2 | GV.SC | SA-9, SR-3 | §5.2 | SR 1.9 |
 | Personnel Training | CIP-004-6 | GV.RR | AT-2, AT-3 | §6.1 | SR 2.5 |
-| Vulnerability Management | CIP-007-6 R2 | ID.RA | RA-5, SI-2 | §6.4 | SR 3.2 |
+| Exposure Management | CIP-007-6 R2 | ID.RA | RA-5, SI-2 | §6.4 | SR 3.2 |
 
 ---
 
@@ -341,4 +341,4 @@ References below use the canonical IDs in [`CERG-GOV-CAT-001`](../governance/CER
 | Cybersecurity Policy | [CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy - this standard is subordinate |
 | Document Catalog and Naming Convention | [CERG-GOV-CAT-001](../governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Authoritative inventory of all CERG artifacts referenced here |
 | Unified Control Baseline | [CERG-GOV-CB-001](../governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control spine, overlay matrix, evidence mapping (BES overlay) |
-| NERC-CIP Operational Package | [CERG-PLN-CIP-001](../plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) | OT/CIP operational binder - contains the NERC-CIP Evidence Library Procedure (formerly `CERG-GOV-CIP-001`), OT Vulnerability Management Procedu
+| NERC-CIP Operational Package | [CERG-PLN-CIP-001](../plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) | OT/CIP operational binder - contains the NERC-CIP Evidence Library Procedure (formerly `CERG-GOV-CIP-001`), OT Exposure Management Procedu

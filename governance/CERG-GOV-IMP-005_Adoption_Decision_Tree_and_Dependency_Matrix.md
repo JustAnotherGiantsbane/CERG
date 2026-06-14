@@ -142,7 +142,7 @@ These changes break the model:
 
 | If adopting | Also adopt | Why |
 |---|---|---|
-| Vulnerability Management Procedure | Asset Standard, RMF, Risk Register Procedure | Findings need assets, scoring, ownership, treatment, and exceptions. |
+| Exposure Management Procedure | Asset Standard, RMF, Risk Register Procedure | Findings need assets, scoring, ownership, treatment, and exceptions. |
 | Architecture Review Procedure | Architecture Intake Template, Threat Modeling Procedure, Flow F-02 | Reviews need intake data, threat reasoning, and disposition records. |
 | Third-Party Risk Procedure | Vendor Questionnaire, Edge Register, Data Governance Standard | Vendor risk depends on data, access, external control, and assessment evidence. |
 | Security Change Management Procedure | Configuration Standard, Architecture Review Procedure | Changes need baseline impact and review routing. |
@@ -156,12 +156,12 @@ These changes break the model:
 | If adopting | Also adopt | Why |
 |---|---|---|
 | Access Standard | Access Runbook, Evidence Quality Standard, Metrics | Access controls require operational review and evidence. |
-| Asset Standard | Asset Coverage flow, Vulnerability Management Procedure | Asset data feeds scanning, logging, backup, and ownership. |
+| Asset Standard | Asset Coverage flow, Exposure Management Procedure | Asset data feeds scanning, logging, backup, and ownership. |
 | IT / Cloud / SaaS Standard | Architecture Review, TPRM, Access, Logging, Configuration | Cloud/SaaS risk crosses identity, vendor, logging, and baseline control. |
 | OT Standard | NERC-CIP package if applicable, Network, Access, Logging, Resilience | OT security depends on segmentation, privileged access, visibility, and recovery. |
 | CUI Standard | CUI Operational Package, SSP, POA&M, Access, Configuration, Logging | CUI compliance requires boundary, control, and remediation evidence. |
 | Logging and Detection Standard | Threat Intelligence, Adversarial Validation, Incident Response | Detection must be threat-informed, tested, and usable in response. |
-| Secure SDLC Standard | Architecture Review, Threat Modeling, Vulnerability Management | Application security requires design, build, test, and finding workflows. |
+| Secure SDLC Standard | Architecture Review, Threat Modeling, Exposure Management | Application security requires design, build, test, and finding workflows. |
 | AI Security Standard | Data Governance, TPRM, Secure SDLC, Access | AI risk includes data, vendor features, product development, and privilege. |
 | Resilience and Backup Standard | BCDR Plan, Incident Response Plan, Asset Coverage | Recovery controls need scope, tests, and incident integration. |
 
@@ -196,7 +196,7 @@ CERG adopters should label adopted artifacts in their local catalog using these 
 
 | Artifact group | Default label |
 |---|---|
-| Policy, Framework, Operating Model, RMF, Catalog, Risk Register, Vulnerability Management | Required-Core |
+| Policy, Framework, Operating Model, RMF, Catalog, Risk Register, Exposure Management | Required-Core |
 | Record Catalog, Framework System Map, Role-Based Checklists, Decision Tree | Recommended for all, Required-Path for first adoption projects |
 | Access, Asset, Configuration, IT/Cloud, Logging, Resilience | Required-Path for Standard and Regulated |
 | OT, CUI, SOX, ISO, Privacy packages | Conditional-Regulatory or Conditional-Environment |

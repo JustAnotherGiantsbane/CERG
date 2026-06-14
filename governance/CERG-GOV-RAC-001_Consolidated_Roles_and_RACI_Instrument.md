@@ -136,7 +136,7 @@ Columns are abbreviated: **ENG-L** Engineering Pillar Leader, **RISK-L** Risk Pi
 | `CERG-STD-DG-001` Data Governance and Classification | C | C | **R/A** | C | I |
 | `CERG-STD-AI-001` Artificial Intelligence Security | **R/A** | C | C | C | I |
 | `CERG-STD-MSG-001` Email and Messaging Security | **R/A** | C | C | C | I |
-| `CERG-PRC-VM-001` Vulnerability Management | C | **R/A** | C | C | I |
+| `CERG-PRC-VM-001` Exposure Management | C | **R/A** | C | C | I |
 | `CERG-PRC-RM-001` Risk Register and Exception Process | C | C | **R/A** | C | I |
 | `CERG-PRC-AR-001` Architecture Review and Project Intake | **R/A** | C | C | C | I |
 | `CERG-PRC-AC-002` Access Management Runbook | **R/A** | C | C | C | I |
@@ -248,7 +248,7 @@ A normalized one-paragraph description for each canonical role. These are the jo
 
 **Risk Pillar Leader.** Accountable for the Cyber Risk pillar: the organization's exposure posture and the reporting of it. Holds Medium severity risk-acceptance authority per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7.
 
-**Exposure Management Lead.** Operates the Vulnerability Management Procedure. Accountable for remediation SLAs and vulnerability posture metrics.
+**Exposure Management Lead.** Operates the Exposure Management Procedure. Accountable for remediation SLAs and vulnerability posture metrics.
 
 **Adversarial Testing Lead.** Operates the Adversarial Validation Procedure: penetration testing, red team, and purple team exercises, and the tracking of their findings.
 

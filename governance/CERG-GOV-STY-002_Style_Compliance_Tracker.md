@@ -50,7 +50,7 @@ The following Approved documents lack a Document Control section, which STY-001 
 | CERG-GOV-OM-001 | CERG Operating Model | Approved | Next annual review (2027) |
 | CERG-PLN-IR-001 | Incident Response Plan | Approved | Next annual review (2027) |
 | CERG-PRC-RM-001 | Risk Register and Exception Process | Approved | Next semi-annual review |
-| CERG-PRC-VM-001 | Vulnerability Management Procedure | Approved | Next semi-annual review |
+| CERG-PRC-VM-001 | Exposure Management Procedure | Approved | Next semi-annual review |
 | CERG-GOV-TAX-001 | Risk Taxonomy | Approved | Next annual review (2027) |
 
 **Remediation:** On the document's next scheduled review, append a Document Control section following the STY-001 §7.5 format (see §7.5 template below). Add a revision history entry noting the addition.

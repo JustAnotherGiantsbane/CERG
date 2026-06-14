@@ -75,7 +75,7 @@ Primary flow: [F-04 Finding to Remediation, Exception, or Residual Risk](../../g
 
 Supporting procedures and standards:
 
-- [Vulnerability Management Procedure](../../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md)
+- [Exposure Management Procedure](../../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md)
 - [Risk Register and Exception Process](../../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md)
 - [Security Change Management Procedure](../../procedures/CERG-PRC-CHG-001_Security_Change_Management_Procedure.md)
 - [Lessons Learned and Program Improvement Procedure](../../procedures/CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md)

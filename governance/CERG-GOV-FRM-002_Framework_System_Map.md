@@ -93,7 +93,7 @@ Cybersecurity Policy
 | 1 | Policy | Executive / CISO | Cybersecurity Policy |
 | 2 | Governance instruments | CISO / Pillar Leaders | Framework, Operating Model, RMF, Control Baseline |
 | 3 | Standards | Governance Pillar Leader | Access, Cloud, OT, CUI, Logging, Endpoint |
-| 4 | Procedures | Pillar Owner | Vulnerability Management, TPRM, Architecture Review |
+| 4 | Procedures | Pillar Owner | Exposure Management, TPRM, Architecture Review |
 | 5 | Plans and packages | Pillar Owner | IR Plan, CUI package, NERC-CIP package, SOX package |
 | 6 | Templates and records | Process Owner | Risk register, exception form, evidence worksheet |
 
@@ -150,7 +150,7 @@ CERG work should not move by informal chat alone. It should move through one of 
 | Know what records to create | [CAT-002](CERG-GOV-CAT-002_Record_Catalog.md) | Procedure-specific templates |
 | Prepare for audit | [AUD-001](CERG-GOV-AUD-001_Evidence_Quality_Standard.md) | [PRC-AUD-001](../procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md), operational package for the regulator |
 | Stand up risk management | [RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md) | [PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md), [TMPL-RM-001](../templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) |
-| Start vulnerability management | [PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | [RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md), [CAT-002](CERG-GOV-CAT-002_Record_Catalog.md) |
+| Start exposure management | [PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | [RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md), [CAT-002](CERG-GOV-CAT-002_Record_Catalog.md) |
 | Review a new system or SaaS | [PRC-AR-001](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | [TMPL-AR-001](../templates/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md), [PRC-TPRM-001](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
 
 ---
@@ -170,7 +170,7 @@ Start with:
 5. RMF
 6. Risk Register and Exception Process
 7. Risk Register Templates
-8. Vulnerability Management Procedure
+8. Exposure Management Procedure
 9. Record Catalog
 10. Role-Based Implementation Checklists
 

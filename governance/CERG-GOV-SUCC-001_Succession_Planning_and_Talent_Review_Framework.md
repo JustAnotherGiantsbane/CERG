@@ -59,7 +59,7 @@ Cybersecurity teams have a single-point-of-failure problem that is worse than mo
 
 2. **Regulatory relationships are personal.** A NERC-CIP Compliance Manager who has been the organization's face to its regional entity for a decade has a relationship with the auditors that a replacement cannot replicate on day one. The auditor who trusts the Compliance Manager's evidence because of a decade of demonstrated rigor will not extend that trust automatically to a replacement.
 
-3. **Small teams have no bench.** A 5-person CERG team cannot afford a dedicated understudy for every role. When the person who runs Vulnerability Management leaves, someone else absorbs that work on top of their own. If that person also leaves, the function stops.
+3. **Small teams have no bench.** A 5-person CERG team cannot afford a dedicated understudy for every role. When the person who runs Exposure Management leaves, someone else absorbs that work on top of their own. If that person also leaves, the function stops.
 
 ### 2.2 What the Left-Right Model Does and Does Not Solve
 

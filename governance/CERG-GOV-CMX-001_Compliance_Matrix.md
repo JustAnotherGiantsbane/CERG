@@ -370,7 +370,7 @@
 |Pillar|Control Areas Owned|Key Frameworks Satisfied|
 |---|---|---|
 |**Engineering**|Asset inventory · Least privilege · Authentication · System hardening · Encryption · Network segmentation · Logging · Config change management · Account lifecycle|NERC-CIP CIP-005/007/010/011 · [CMMC](https://dodcio.defense.gov/CMMC/) AC/IA/SC/CM domains · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC|
-|**Risk**|Vulnerability management · Vendor risk · Adversarial testing · Self-assessment · Threat monitoring|NERC-CIP CIP-007/010/013 · [CMMC](https://dodcio.defense.gov/CMMC/) RM/CA/SI domains · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) third-party|
+|**Risk**|Exposure management · Vendor risk · Adversarial testing · Self-assessment · Threat monitoring|NERC-CIP CIP-007/010/013 · [CMMC](https://dodcio.defense.gov/CMMC/) RM/CA/SI domains · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) third-party|
 |**Governance**|Policy & standards · Personnel training · Evidence management · Risk register · Physical security · IR planning · Recovery · Compliance calendar|NERC-CIP CIP-003/004/006/008/009/014 · [CMMC](https://dodcio.defense.gov/CMMC/) all documentation · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC · [CMMC](https://dodcio.defense.gov/CMMC/) SSP/POA&M|
 
 ---
@@ -383,7 +383,7 @@ These control areas produce evidence satisfying four or more frameworks simultan
 2. **Access management**, CIP-004/005/007 + [CMMC](https://dodcio.defense.gov/CMMC/) AC + [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC
 3. **Configuration change management**, CIP-010 + [CMMC](https://dodcio.defense.gov/CMMC/) CM + [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC
 4. **Audit evidence and log retention**, all CIP standards + [CMMC](https://dodcio.defense.gov/CMMC/) AU + [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)
-5. **Vulnerability management**, CIP-007/010 + [CMMC](https://dodcio.defense.gov/CMMC/) RM/SI + [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) patch risk
+5. **Exposure management**, CIP-007/010 + [CMMC](https://dodcio.defense.gov/CMMC/) RM/SI + [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) patch risk
 6. **Policy and standards**, CIP-003 + [CMMC](https://dodcio.defense.gov/CMMC/) (all 14 domains) + [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC
 
 ---

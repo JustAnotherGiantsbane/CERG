@@ -157,7 +157,7 @@ The first-line people leader. A Manager leads a small team of individual contrib
 
 | Dimension | Expectation |
 |---|---|
-| **Span of Control** | 3-8 direct reports. All reports operate within the same functional domain (e.g., a Vulnerability Management team, a Cloud Security Engineering team). |
+| **Span of Control** | 3-8 direct reports. All reports operate within the same functional domain (e.g., a Exposure Management team, a Cloud Security Engineering team). |
 | **Scope** | Accountable for the team's delivery against defined objectives. Translates pillar goals into team tasks. Runs team rituals (standups, retrospectives, 1:1s). |
 | **People Leadership** | Hires, onboards, develops, and performance-manages their team. Conducts regular 1:1s with meaningful development conversations. Manages performance issues promptly. |
 | **Technical Fluency** | Retains working knowledge of their team's domain. Can review and approve the team's technical output. Does not need to be the deepest expert on the team, but must be capable of evaluating expert work. |
@@ -173,7 +173,7 @@ The multi-team leader. A Senior Manager leads a function that may span multiple 
 | Dimension | Expectation |
 |---|---|
 | **Span of Control** | 8-20 people, typically through 1-3 Managers or team leads. |
-| **Scope** | Accountable for a function within a pillar (e.g., all of Vulnerability Management and Adversarial Testing within Risk, all Cloud and Identity Engineering within Engineering). Defines the function's strategy and roadmap. |
+| **Scope** | Accountable for a function within a pillar (e.g., all of Exposure Management and Adversarial Testing within Risk, all Cloud and Identity Engineering within Engineering). Defines the function's strategy and roadmap. |
 | **People Leadership** | Develops the Managers reporting to them. Ensures consistent people-management practices across the function. Owns workforce planning: headcount requests, role design, succession planning. |
 | **Technical Fluency** | Broad understanding across the function's domains. Can evaluate technical trade-offs between teams. Represents the function's technical position to pillar leadership and to other pillars. |
 | **Operational Accountability** | Accountable for the function's KPIs. Owns the function's budget input. Represents the function in pillar-leadership forums. Manages cross-functional dependencies. |

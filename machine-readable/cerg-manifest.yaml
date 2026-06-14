@@ -743,7 +743,7 @@
   normative_weight: authoritative
   summary: 1. [Purpose and Scope](#1-purpose-and-scope)
 - document_id: CERG-PRC-VM-001
-  title: Vulnerability Management Procedure
+  title: Exposure Management Procedure
   document_type: procedure
   domain: VM
   version: 1.0 DRAFT

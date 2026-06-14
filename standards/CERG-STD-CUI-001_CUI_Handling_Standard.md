@@ -75,7 +75,7 @@ The three CERG pillars operate in CUI environments with the same structure as el
 | **CERG Pillar** | **CUI-Specific Responsibilities** |
 |---|---|
 | **Engineering** | Architects the CUI enclave - the bounded set of systems, networks, services, and endpoints inside the assessment boundary. Designs and maintains the technical controls that satisfy each 800-171 requirement. Embeds CUI handling guardrails into endpoint, identity, collaboration, and cloud platforms. Produces the technical evidence artifacts (configurations, screenshots, exported policies) that support the SSP. |
-| **Risk** | Operates the vulnerability management program inside the CUI boundary. Conducts annual self-assessments against 800-171 and tracks SPRS scores. Manages the [CMMC](https://dodcio.defense.gov/CMMC/) pre-assessment readiness program and coordinates external C3PAO engagements. Tracks 800-171 control posture as a first-class risk register category. Assesses third parties handling CUI on the organization's behalf. |
+| **Risk** | Operates the exposure management program inside the CUI boundary. Conducts annual self-assessments against 800-171 and tracks SPRS scores. Manages the [CMMC](https://dodcio.defense.gov/CMMC/) pre-assessment readiness program and coordinates external C3PAO engagements. Tracks 800-171 control posture as a first-class risk register category. Assesses third parties handling CUI on the organization's behalf. |
 | **Governance** | Owns the **System Security Plan (SSP)**, **Plan of Action and Milestones (POA&M)**, and the **[CMMC](https://dodcio.defense.gov/CMMC/) evidence library**. Maintains this standard, the CUI Registry mapping, and the data classification authority for CUI. Manages **DFARS 252.204-7012 cyber incident reporting** to DC3 within 72 hours. Coordinates contractual flow-down to subcontractors. Maintains SPRS submissions and supports DoD assessor engagements. |
 
 > **The Evidence-as-Byproduct Rule for CUI**
@@ -375,4 +375,4 @@ Governance owns this document. The Governance Pillar Leader ([CMMC](https://dodc
 | IT (Hosted/Cloud/SaaS) Security Standard | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | Peer standard - applies in addition to this where CUI is hosted on cloud/SaaS |
 | Grid and Control System Standard | [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | Peer standard - governs OT estates |
 | Access Management Standard | [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) | Peer standard - identity/access requirements applied inside CUI boundary |
-| Vulnerability Management Procedure | [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulne
+| Exposure Management Procedure | [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulne

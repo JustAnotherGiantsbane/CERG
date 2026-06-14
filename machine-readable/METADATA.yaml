@@ -186,8 +186,8 @@ machine_readable_artifacts:
   generated_date: '2026-06-11'
   size_bytes: 860
 - artifact: cerg-vulnerability-priority-model.yaml
-  description: CERG-PRC-VM-001 (Vulnerability Management)
-  source_document: CERG-PRC-VM-001 (Vulnerability Management)
+  description: CERG-PRC-VM-001 (Exposure Management)
+  source_document: CERG-PRC-VM-001 (Exposure Management)
   status: Draft
   owner: Governance Pillar Leader (Document Control)
   governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents

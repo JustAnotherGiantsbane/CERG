@@ -119,7 +119,7 @@ Describe the system boundary in plain language.
 | Logging | `[Log sources and retention]` |
 | Backup and Recovery | `[Backup tier, RTO, RPO, restore evidence]` |
 | Encryption | `[Data-at-rest and data-in-transit controls]` |
-| Vulnerability Management | `[Scanner, cadence, SLA]` |
+| Exposure Management | `[Scanner, cadence, SLA]` |
 | Configuration Baseline | `[Baseline source and exception handling]` |
 
 ---

@@ -67,7 +67,7 @@ Cybersecurity operations are organized into three tightly coupled pillars under 
 
 | **Engineering** | **Risk** | **Governance** |
 | -------------------------------- | ------------------------ | --------------------- |
-| Security architecture and design | Vulnerability management | Policy and standards |
+| Security architecture and design | Exposure management | Policy and standards |
 | Pre-production reviews | Penetration testing | Compliance management |
 | Control implementation | Threat intelligence | Evidence and audit |
 | Configuration baselines | Vendor risk assessment | Risk register |
@@ -196,7 +196,7 @@ Flat networks convert a single compromised endpoint into an enterprise-wide brea
 
 **Mandate**
 
-- The organization shall maintain continuous visibility into vulnerabilities affecting in-scope assets through a documented vulnerability management program operated by Cyber Risk.
+- The organization shall maintain continuous visibility into vulnerabilities affecting in-scope assets through a documented exposure management program operated by Cyber Risk.
 - Vulnerabilities shall be assessed for severity, exploitability, and asset criticality. Findings shall be tracked to remediation or documented risk acceptance within the SLAs published in [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) §5.2.
 - OT and BES Cyber Systems shall be scanned using approved methods that do not introduce operational risk. Timelines for OT remediation shall account for vendor testing requirements and operational windows, with NERC-CIP deviation processes invoked as required.
 - Vulnerabilities identified during pre-production assessment shall be remediated or formally risk-accepted prior to production deployment per the Risk Acceptance Authority table in [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. High and Critical severity findings require documented authorization at the level named in that table before go-live.
@@ -317,7 +317,7 @@ The following table defines accountability for this policy and the principles it
 |---|---|
 |**Chief Information Security Officer (CISO)**|Policy owner. Responsible for the cybersecurity program. Approves policy, standards, and risk acceptances per the canonical authority table in [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. Reports compliance posture and material risks to the Cyber Oversight Group, executive leadership, and the board.|
 |**Cyber Engineering (CERG Pillar)**|Implements security controls through project delivery. Produces asset documentation and configuration baselines. Ensures systems are designed to conform to this policy and subordinate standards prior to production deployment.|
-|**Cyber Risk (CERG Pillar)**|Maintains continuous visibility into organizational exposure. Operates the vulnerability management, penetration testing, threat intelligence, and vendor risk programs. Identifies and communicates risk to Engineering, Governance, and leadership.|
+|**Cyber Risk (CERG Pillar)**|Maintains continuous visibility into organizational exposure. Operates the exposure management, penetration testing, threat intelligence, and vendor risk programs. Identifies and communicates risk to Engineering, Governance, and leadership.|
 |**Cyber Governance (CERG Pillar)**|Develops and maintains the policy and standards library. Tracks compliance posture across all applicable frameworks. Maintains the risk register and evidence library. Coordinates regulatory examinations and audits. Operates the compliance calendar.|
 |**Business Unit Leaders / Asset Owners**|Accountable for the security posture of systems within their operational scope. Authorize risk treatment decisions. Support Engineering and Risk engagement. Provide operational context for compliance and risk activities.|
 |**IT and OT Operations Teams**|Responsible for implementing and maintaining security controls on systems under their management. Participate in engineering reviews, vulnerability remediation, and change management processes.|
@@ -435,7 +435,7 @@ The authoritative inventory, IDs, owners, status, and deferred / planned artifac
 
 | Document | ID | Owner |
 | --- | --- | --- |
-| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Cyber Risk |
+| Exposure Management Procedure | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Cyber Risk |
 | Risk Register and Exception Process | [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Cyber Governance |
 | Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Cyber Engineering |
 | Access Management Runbook | [`CERG-PRC-AC-002`](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md) | Cyber Engineering |

@@ -141,7 +141,7 @@ It applies to every CERG team member. Certifications are role-dependent; the tra
 | Grade | Required | Recommended | Aspirational |
 |---|---|---|---|
 | **S1** | CompTIA Security+ | Qualys/ Tenable/ Rapid7 certified specialist (platform-dependent) | CEH |
-| **S2** | One vulnerability management platform certification | CEH or GPEN; CISSP | GCIH |
+| **S2** | One exposure management platform certification | CEH or GPEN; CISSP | GCIH |
 | **S3** | CISSP | GPEN, GCIH, or GWAPT | OSCP, OSWE |
 | **S4** | CISSP | Two or more advanced GIAC certifications | - |
 

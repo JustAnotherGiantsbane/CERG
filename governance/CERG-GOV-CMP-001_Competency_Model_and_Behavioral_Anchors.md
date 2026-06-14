@@ -180,7 +180,7 @@ The eight domains below apply to every CERG role. Their relative weight varies b
 | Grade | Anchor |
 |---|---|
 | **S1 Specialist** | Operates the Risk pillar's tools (vulnerability scanner, CSPM platform, threat intel platform, detection pipeline) under supervision. Triages alerts following established procedures. Recognizes false positives and true positives with increasing accuracy. |
-| **S2 Sr. Specialist** | Owns a Risk domain (e.g., vulnerability management for a platform class, vendor assessments for a business unit, a set of detection rules). Tunes tools to reduce noise and improve signal. Independently investigates findings and determines root cause. Authors detection rules, threat advisories, or vendor risk reports that require minimal revision. |
+| **S2 Sr. Specialist** | Owns a Risk domain (e.g., exposure management for a platform class, vendor assessments for a business unit, a set of detection rules). Tunes tools to reduce noise and improve signal. Independently investigates findings and determines root cause. Authors detection rules, threat advisories, or vendor risk reports that require minimal revision. |
 | **S3 Advisor** | Shapes the Risk pillar's approach to exposure management. Designs assessment methodologies. Correlates findings across tools to identify systemic weaknesses that individual alerts miss. Authors threat intelligence products that shape organizational decisions. Evaluates and recommends new Risk tooling. |
 | **S4 Sr. Advisor** | Sets the analytical bar for the entire Risk pillar. Called upon for the hardest exposure questions (e.g., "what is our actual risk from this newly disclosed supply chain compromise given our architecture and controls?"). Represents the organization's risk posture to regulators, auditors, and industry peers. |
 
@@ -215,7 +215,7 @@ The eight domains below apply to every CERG role. Their relative weight varies b
 
 | Grade | Anchor |
 |---|---|
-| **S1** | Triages findings within SLA. Documents assessment results in the designated system. Follows the vulnerability management and risk register procedures. |
+| **S1** | Triages findings within SLA. Documents assessment results in the designated system. Follows the exposure management and risk register procedures. |
 | **S2** | Owns operational SLAs for their domain. Ensures risk register entries are current and complete. Maintains scanning schedules, detection rule lifecycles, or vendor assessment cadences without gaps. Their assessment records are audit-ready. |
 | **S3** | Designs risk assessment workflows that produce consistent, auditable output. Ensures the Risk pillar's operational cadence is documented, measured, and improving. Identifies and automates repetitive risk assessment tasks. |
 | **S4** | Sets operational standards for the Risk pillar. Defines what "defensible" risk assessment looks like under regulatory scrutiny. Ensures the pillar's SLAs, coverage targets, and quality standards are defined, measured, and reported. |

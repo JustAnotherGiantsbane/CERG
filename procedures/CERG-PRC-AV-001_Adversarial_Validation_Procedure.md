@@ -49,7 +49,7 @@ This procedure makes it explicit. It applies to every CERG-led or CERG-overseen 
 
 > **Adversarial Validation Is the Antidote to Drift**
 >
-> A control library that exists on paper but has never been tested is a hope. Adversarial validation tests the assumption that the control library implements actual defense. CERG runs it on a cadence; documents the rules; routes findings into vulnerability management or the risk register; and uses purple-team work to upgrade detection, not just to score the team.
+> A control library that exists on paper but has never been tested is a hope. Adversarial validation tests the assumption that the control library implements actual defense. CERG runs it on a cadence; documents the rules; routes findings into exposure management or the risk register; and uses purple-team work to upgrade detection, not just to score the team.
 
 ---
 
@@ -374,7 +374,7 @@ Every OT engagement has a named OT Safety Officer (an operator with substation /
 
 ### 10.1 Rating
 
-Findings are rated using a uniform schema regardless of engagement type, aligning to [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Exposure_Management_Procedure.md) severity bands so they can co-route into vulnerability management:
+Findings are rated using a uniform schema regardless of engagement type, aligning to [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Exposure_Management_Procedure.md) severity bands so they can co-route into exposure management:
 
 | **Severity** | **Definition** |
 |---|---|
@@ -393,7 +393,7 @@ Findings are rated using a uniform schema regardless of engagement type, alignin
 | Detection gap | Detection backlog + risk register if material |
 | Process / runbook weakness | Owning procedure (AR / IR / TPRM) + risk register if material |
 | Vendor / supply chain weakness | TPRM record per [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
-| OT-specific weakness | OT vulnerability management workflow per [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Exposure_Management_Procedure.md) §4.3 and §6.3 + risk register |
+| OT-specific weakness | OT exposure management workflow per [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Exposure_Management_Procedure.md) §4.3 and §6.3 + risk register |
 
 ### 10.3 Retest and Closure
 

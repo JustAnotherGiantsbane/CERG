@@ -288,7 +288,7 @@ Cyber Engineering owns this document. The Engineering Pillar Leader (Application
 | Cybersecurity Policy | [`CERG-POL-001`](../governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
 | CERG Framework | [`CERG-GOV-FRM-001`](../governance/CERG-GOV-FRM-001_CERG_Framework.md) | Engineering pillar mission and the pre/post-production risk distinction |
 | Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Governs the engagement; this standard governs the code |
-| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Post-production software vulnerability SLAs |
+| Exposure Management Procedure | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Post-production software vulnerability SLAs |
 | Risk Register and Exception Process | [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Gate-bypass exceptions |
 | Cryptography and Key Management Standard | [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Secrets management platform; secret rotation |
 | Access Management Standard | [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) | Pipeline access control |

@@ -49,7 +49,7 @@ These are the documents you actually need. Everything else in the repo can wait.
 | Operating Model (OM-001) | Defines your 5 roles. Read §6.1, skip the 60-person examples. |
 | Risk Management Framework (RMF-001) | How you score, treat, and accept risk. |
 | Risk Register and Exception Process (PRC-RM-001) | Your operational risk workflow. |
-| Vulnerability Management Procedure (PRC-VM-001) | Your operational vulnerability workflow. |
+| Exposure Management Procedure (PRC-VM-001) | Your operational vulnerability workflow. |
 | Architecture Review Procedure (PRC-AR-001) | How projects get security review — use the lightweight tier. |
 | Unified Control Baseline (CB-001) | What controls you are implementing. Start with the 6 families you can evidence. |
 | Document Catalog (CAT-001) | Inventory of what exists. |

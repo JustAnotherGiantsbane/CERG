@@ -133,7 +133,7 @@ ROLE_KEYWORDS = {
     'Exposure Management Lead': [
         'vulnerability', 'cve', 'cwe', 'scanning', 'remediation',
         'patch', 'exposure', 'prioritization', 'risk scoring',
-        'cvss', 'epss', 'vulnerability management', 'triage',
+        'cvss', 'epss', 'exposure management', 'triage',
         'exploit', 'mitigation', 'reporting', 'metrics',
         'inventory', 'asset', 'discovery', 'reconnaissance'
     ],

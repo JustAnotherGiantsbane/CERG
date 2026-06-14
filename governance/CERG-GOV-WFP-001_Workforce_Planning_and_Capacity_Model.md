@@ -87,7 +87,7 @@ This model addresses the capacity problem by defining workload drivers that are:
 
 | Driver | Definition | Why It Matters |
 |---|---|---|
-| **Assets under management** | Number of IP-addressable assets (servers, endpoints, network devices, cloud resources, OT devices) in the vulnerability management and CSPM scope | Scanning, triage, and remediation tracking effort scales with asset count, though not linearly (automation absorbs some growth) |
+| **Assets under management** | Number of IP-addressable assets (servers, endpoints, network devices, cloud resources, OT devices) in the exposure management and CSPM scope | Scanning, triage, and remediation tracking effort scales with asset count, though not linearly (automation absorbs some growth) |
 | **Vendor portfolio size** | Number of vendors in the third-party risk assessment program, weighted by tier (Critical, High, Medium, Low) | Critical-tier vendors require annual reassessment with deeper due diligence; Low-tier vendors may be assessed once and monitored |
 | **Scan frequency** | Vulnerability scan cadence (continuous, daily, weekly) and scope (internal, external, cloud, OT) | Continuous scanning produces more findings to triage; weekly scanning produces manageable volumes with acceptable risk windows |
 | **Testing cycle requirements** | Number of penetration tests, red team exercises, and purple team engagements per year, plus any regulatory-mandated testing | A NERC-CIP entity has mandated testing cycles. A commercial entity may have an annual pen test. The difference is 4-6x in Adversarial Testing Lead workload |

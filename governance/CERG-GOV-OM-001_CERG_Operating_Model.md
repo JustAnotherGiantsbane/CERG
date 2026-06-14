@@ -102,7 +102,7 @@ CERG operates as one team. The pillars provide structure for skill development, 
 
 **Core activities.**
 
-- Vulnerability management (scanning, prioritization, remediation tracking) per **[CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md)**
+- Exposure management (scanning, prioritization, remediation tracking) per **[CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md)**
 - Adversarial validation: penetration testing, red-team operations, purple-team detection validation
 - Threat intelligence consumption and translation into detection and posture controls
 - Vendor and third-party security risk assessment
@@ -196,7 +196,7 @@ CERG commits to architecture-review intake and disposition turnaround by project
 | Design | Formal security architecture review; reference-architecture / landing-zone selection; threat-model session for novel components. | Engineering (+ Risk for threat modeling) |
 | Build | Engineering partner embedded with the project team; pipeline gates configured; identity / cryptography / monitoring requirements implemented. | Engineering |
 | Pre-production | Pre-production security review; vulnerability assessment; pen-test where warranted; risk-register entries for any acceptance sought. | Engineering + Risk |
-| Production | Handoff to operations; baselines committed; ongoing CSPM / SSPM coverage; vulnerability management onboarding. | Engineering → Risk |
+| Production | Handoff to operations; baselines committed; ongoing CSPM / SSPM coverage; exposure management onboarding. | Engineering → Risk |
 | Continuous | Continuous monitoring; periodic re-review; governance evidence integration. | Risk + Governance |
 
 ### 5.2 Continuous Service (Risk-Led)
@@ -205,7 +205,7 @@ Used for ongoing exposure management across the entire estate.
 
 CERG commits to a time-to-coverage target for bringing a new asset under vulnerability and CSPM coverage after go-live, per [`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md).
 
-- Vulnerability management operates as a standing service per [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md).
+- Exposure management operates as a standing service per [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md).
 - CSPM / SSPM operates continuously across approved cloud and SaaS.
 - Threat intelligence consumption produces standing detection and posture work.
 - Identity-threat detection operates continuously.
@@ -425,7 +425,7 @@ The following patterns illustrate how the pillars typically distribute work. Spe
 | Implement IAM, network, monitoring controls | **R** | C | I | C | I |
 | Pre-production vulnerability assessment | C | **R / A** | I | C | I |
 | Approve go-live | **R** | C | C | **A** | I |
-| Onboard to CSPM and vulnerability management | C | **R / A** | I | I | I |
+| Onboard to CSPM and exposure management | C | **R / A** | I | I | I |
 | Add to compliance evidence library | C | I | **R / A** | I | I |
 
 ### 9.2 Open High Vulnerability Past SLA
@@ -586,7 +586,7 @@ The authoritative inventory is [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Ca
 | Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Log sources, retention, detection coverage |
 | Cyber Resilience and Backup Standard | [`CERG-STD-RES-001`](../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | RTO/RPO, backup, recovery |
 | Cryptography and Key Management Standard | [`CERG-STD-CR-001`](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Cipher, key, certificate lifecycle |
-| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Canonical vulnerability remediation SLAs |
+| Exposure Management Procedure | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Canonical vulnerability remediation SLAs |
 | Risk Register and Exception Process | [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Risk register operating procedure |
 | Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Pre-production engagement |
 | Access Management Runbook | [`CERG-PRC-AC-002`](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md) | Identity lifecycle operations |

@@ -42,7 +42,7 @@
 
 ## 1. Purpose and Scope
 
-Every other control in CERG assumes the program knows what it is protecting. Vulnerability management scans an asset list. Access management governs access to systems. The control baseline maps evidence to assets. Logging collects from sources. Each of those depends on an authoritative answer to a deceptively simple question: what do we have? Until this standard, CERG had no document that owned that question.
+Every other control in CERG assumes the program knows what it is protecting. Exposure management scans an asset list. Access management governs access to systems. The control baseline maps evidence to assets. Logging collects from sources. Each of those depends on an authoritative answer to a deceptively simple question: what do we have? Until this standard, CERG had no document that owned that question.
 
 This standard establishes the requirement for an authoritative asset inventory: the asset classes that must be tracked, the inventory itself, the attributes every asset record carries, how ownership is assigned, how assets are classified by criticality, and how assets move through a lifecycle from acquisition to secure disposal.
 
@@ -50,7 +50,7 @@ It applies to every in-scope asset across every environment: owned hardware, clo
 
 > **You Cannot Protect, Detect, or Recover What You Have Not Named**
 >
-> An unknown asset is an uncontrolled asset. It is not patched, because vulnerability management does not know it exists. Its access is not reviewed, because access management has no record of it. It is not backed up, monitored, or hardened. Asset management is not paperwork; it is the precondition for every other thing CERG does. This is why NIST CSF places asset management first, in the IDENTIFY function, and why CIS makes it Control 1.
+> An unknown asset is an uncontrolled asset. It is not patched, because exposure management does not know it exists. Its access is not reviewed, because access management has no record of it. It is not backed up, monitored, or hardened. Asset management is not paperwork; it is the precondition for every other thing CERG does. This is why NIST CSF places asset management first, in the IDENTIFY function, and why CIS makes it Control 1.
 
 ---
 
@@ -88,7 +88,7 @@ CERG tracks five asset classes. Each has a named authoritative inventory.
 1. **Each asset class has one named authoritative inventory.** The authoritative inventory for each class is recorded, with its owner, in the organization profile or an organization-specific appendix to this standard.
 2. **The inventory is a system, not a document.** For any estate beyond the smallest, the inventory is a tooled system fed by automated discovery, not a hand-maintained file. A five-person team may start with a structured file; it migrates to tooling as the estate grows.
 3. **Inventories interconnect.** A software record references the hardware or cloud asset it runs on. A data asset references the system that hosts it. An identity references what it can access. The inventory is a graph, not five disconnected lists.
-4. **The inventory feeds the program.** The inventory is the source list for vulnerability management scanning, the access-review population, the logging source catalog, and the control-baseline evidence mapping. Those consumers reconcile to the inventory; they do not maintain their own.
+4. **The inventory feeds the program.** The inventory is the source list for exposure management scanning, the access-review population, the logging source catalog, and the control-baseline evidence mapping. Those consumers reconcile to the inventory; they do not maintain their own.
 
 ---
 
@@ -160,7 +160,7 @@ Every asset moves through a defined lifecycle. The inventory records the asset's
 | **Requested** | Acquisition is proposed. | Intake through [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) where the asset is part of a project. |
 | **Acquired** | The asset enters the estate. | Inventory record created; owner assigned; criticality and classification set. |
 | **Provisioned** | The asset is configured for use. | Secure configuration baseline applied per [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md). |
-| **Operational** | The asset is in service. | Subject to vulnerability management, access review, logging, and backup per its classification. |
+| **Operational** | The asset is in service. | Subject to exposure management, access review, logging, and backup per its classification. |
 | **Decommissioning** | The asset is being retired. | Data securely removed; access revoked; dependencies migrated. |
 | **Disposed** | The asset has left the estate. | Secure disposal completed per Section 9; record retained for audit. |
 
@@ -271,7 +271,7 @@ Cyber Engineering owns this document. The Engineering Pillar Leader (Platforms) 
 | Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Inventory feeds the logging source catalog |
 | Cyber Resilience and Backup Standard | [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Classification drives backup and recovery objectives |
 | Cryptography and Key Management Standard | [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Cryptographic erasure at disposal |
-| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Inventory is the scan population |
+| Exposure Management Procedure | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Inventory is the scan population |
 | Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Intake at the Requested lifecycle state |
 | Metrics, Dashboard, and Reporting | [`CERG-GOV-MTR-001`](../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Inventory-completeness reporting |
 | Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](../governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `AM` domain |

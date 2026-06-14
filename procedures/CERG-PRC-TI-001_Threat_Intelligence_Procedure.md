@@ -46,7 +46,7 @@ The README names threat intelligence as a Cyber Risk function. The Operating Mod
 
 Threat intelligence in CERG is operational. Its purpose is not to publish interesting reports. Its purpose is to help the organization make better decisions sooner: patch the right thing faster, change a design before it ships, warn the right owner, tune a detection, reassess a vendor, or record a risk.
 
-This procedure applies to all threat intelligence used by CERG to inform vulnerability management, threat modeling, architecture review, third-party risk, OT risk, detection priorities, and risk-register decisions.
+This procedure applies to all threat intelligence used by CERG to inform exposure management, threat modeling, architecture review, third-party risk, OT risk, detection priorities, and risk-register decisions.
 
 > **Intelligence That Does Not Change Action Is Trivia**
 >
@@ -255,7 +255,7 @@ Threat intelligence feeds the program through defined channels.
 |---|---|
 | Architecture review | Supplies threat context and abuse cases for design decisions. |
 | Threat modeling | Supplies actor, technique, and campaign context. |
-| Vulnerability management | Adds exploitation, weaponization, and environmental relevance to remediation priority. |
+| Exposure management | Adds exploitation, weaponization, and environmental relevance to remediation priority. |
 | Third-party risk | Identifies supplier compromise, vendor product vulnerabilities, and sector vendor campaigns. |
 | Asset management | Helps identify crown-jewel systems and technologies under active targeting. |
 | AI security | Tracks prompt-injection, model supply chain, and AI-service data-risk developments. |
@@ -656,7 +656,7 @@ Reviewer: [CISO]
 - Material change to the organization's threat landscape
 - Significant change to threat intelligence sources
 - Significant incident showing an intelligence gap
-- Change to vulnerability management, threat modeling, third-party risk, or risk-register processes
+- Change to exposure management, threat modeling, third-party risk, or risk-register processes
 - Direction from the CISO
 
 Cyber Risk owns this document. The Risk Pillar Leader is responsible for initiating reviews, managing the revision cycle, and obtaining Governance Pillar Leader approval, with CISO endorsement, for all changes.
@@ -667,7 +667,7 @@ Cyber Risk owns this document. The Risk Pillar Leader is responsible for initiat
 |---|---|---|
 | Cybersecurity Policy | [`CERG-POL-001`](../governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
 | CERG Operating Model | [`CERG-GOV-OM-001`](../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | Defines Threat Intelligence Analyst role |
-| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Consumes vulnerability intelligence |
+| Exposure Management Procedure | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Consumes vulnerability intelligence |
 | Threat Modeling Procedure | [`CERG-PRC-TM-001`](CERG-PRC-TM-001_Threat_Modeling_Procedure.md) | Consumes threat actor and abuse-case context |
 | Third-Party and Supply Chain Risk Procedure | [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Consumes supplier and vendor intelligence |
 | Risk Register and Exception Process | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Tracks residual risk from intelligence-driven findings |

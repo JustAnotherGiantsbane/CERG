@@ -413,7 +413,7 @@ CERG identifies: the affected software, version, vendor, and patch status; wheth
 
 ### 14.2 Containment
 
-Containment may include: disabling the affected service or feature, applying vendor-provided mitigation (if available before a patch), implementing network-level blocking rules, isolating vulnerable systems, increasing monitoring on vulnerable but not-yet-compromised systems, and communicating the threat to system owners per the vulnerability management procedure.
+Containment may include: disabling the affected service or feature, applying vendor-provided mitigation (if available before a patch), implementing network-level blocking rules, isolating vulnerable systems, increasing monitoring on vulnerable but not-yet-compromised systems, and communicating the threat to system owners per the exposure management procedure.
 
 ### 14.3 Eradication and Recovery
 

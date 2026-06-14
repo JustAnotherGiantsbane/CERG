@@ -132,7 +132,7 @@
 
 ---
 
-## Theme 4 - Vulnerability management: finding and fixing weaknesses before attackers do
+## Theme 4 - Exposure management: finding and fixing weaknesses before attackers do
 
 ### 4.1 Identify and remediate known vulnerabilities on a defined schedule
 
@@ -140,7 +140,7 @@
 
 **Risk prevented:** Known, exploitable vulnerabilities providing attackers a reliable entry point. The majority of successful breaches exploit known vulnerabilities for which patches exist. An unpatched CVE with a public exploit is a guaranteed entry point given sufficient attacker persistence.
 
-**Nuance vs. similar controls:** Vulnerability management in OT is categorically different from IT. A CVSS 9.x vulnerability in an enterprise server gets patched within 35 days. The same severity finding in a BES relay management workstation may require vendor testing before any patch can be applied, introducing a compliance tension between CIP-007-6 patch timelines and operational safety requirements. The risk calculus shifts: patching too fast can introduce reliability risk; patching too slow creates security and compliance exposure.
+**Nuance vs. similar controls:** Exposure management in OT is categorically different from IT. A CVSS 9.x vulnerability in an enterprise server gets patched within 35 days. The same severity finding in a BES relay management workstation may require vendor testing before any patch can be applied, introducing a compliance tension between CIP-007-6 patch timelines and operational safety requirements. The risk calculus shifts: patching too fast can introduce reliability risk; patching too slow creates security and compliance exposure.
 
 ---
 
@@ -150,7 +150,7 @@
 
 **Risk prevented:** Logic vulnerabilities, misconfigurations, and chained attack paths that automated scanning cannot find. Automated vulnerability scans find known CVEs. Penetration testing finds the things that have no CVE, overly permissive trust relationships, weak segmentation that passes a scan but fails under an active attack, authentication bypasses that require human ingenuity to construct.
 
-**Nuance vs. similar controls:** This is distinct from vulnerability management in both what it finds and what it validates. Vulnerability management confirms known weaknesses. Adversarial testing confirms that your controls actually work under adversarial conditions, that your network segmentation stops a real attacker, not just a scan. Segmentation testing validates that sensitive environments are actually isolated, not just documented.
+**Nuance vs. similar controls:** This is distinct from exposure management in both what it finds and what it validates. Exposure management confirms known weaknesses. Adversarial testing confirms that your controls actually work under adversarial conditions, that your network segmentation stops a real attacker, not just a scan. Segmentation testing validates that sensitive environments are actually isolated, not just documented.
 
 ---
 
@@ -194,7 +194,7 @@
 
 **Risk prevented:** Untracked risk accumulation and accountability gaps when controls fail. Risks that are not formally documented tend to be informally ignored. When an accepted risk materializes into an incident, the absence of a documented risk decision means no one is accountable, no compensating controls were required, and there is no audit trail to demonstrate that the risk was understood.
 
-**Nuance vs. similar controls:** Risk management is not the same as vulnerability management. Vulnerability management tracks technical findings in systems. Risk management tracks organizational decisions, the choice to accept a finding, the compensating controls committed to in exchange for that acceptance, and the timeline for eventual remediation. The regulatory exposure for unmanaged risk is the absence of documented decisions, not the existence of vulnerabilities.
+**Nuance vs. similar controls:** Risk management is not the same as exposure management. Exposure management tracks technical findings in systems. Risk management tracks organizational decisions, the choice to accept a finding, the compensating controls committed to in exchange for that acceptance, and the timeline for eventual remediation. The regulatory exposure for unmanaged risk is the absence of documented decisions, not the existence of vulnerabilities.
 
 ---
 
@@ -252,7 +252,7 @@
 
 |Severity|Control Areas|
 |---|---|
-|**Critical**|Asset inventory · Threat monitoring · Least privilege · Authentication · Network segmentation · Vulnerability management · IR planning · Recovery|
+|**Critical**|Asset inventory · Threat monitoring · Least privilege · Authentication · Network segmentation · Exposure management · IR planning · Recovery|
 |**High**|Self-assessment · Account lifecycle · Privileged access logging · System hardening · Config change management · Encryption · Adversarial testing · Vendor risk · Policy & standards · Personnel training · Risk management · Audit evidence · Physical security|
 |**Medium**|Compliance calendar|
 
@@ -263,7 +263,7 @@
 |Pillar|Control Areas Owned|
 |---|---|
 |**Engineering**|Asset inventory · Least privilege · Authentication · Account lifecycle · Privileged access logging · System hardening · Network segmentation · Config change management · Encryption|
-|**Risk**|Threat monitoring · Self-assessment · Vulnerability management · Adversarial testing · Vendor risk|
+|**Risk**|Threat monitoring · Self-assessment · Exposure management · Adversarial testing · Vendor risk|
 |**Governance**|IR planning · Recovery · Physical security · Policy & standards · Personnel training · Risk management · Audit evidence · Compliance calendar|
 
 ---
