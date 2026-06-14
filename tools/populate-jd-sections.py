@@ -12,7 +12,7 @@ import re
 import os
 import sys
 
-BASE = '/home/lupus/CERG'
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # ──────────────────────────────────────────────────
 # COMPETENCY ANCHORS — from CMP-001 §4 (Engineering), §5 (Risk), §6 (Governance)
