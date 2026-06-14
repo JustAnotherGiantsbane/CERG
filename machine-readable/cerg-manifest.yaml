@@ -1,1284 +1,2366 @@
 # cerg-manifest.yaml
 # DERIVED ARTIFACT — authoritative source is the CERG markdown corpus
-# Generated: 2026-06-11 | Owner: Governance Pillar Leader (Document Control)
+# Generated: 2026-06-14 | Owner: Governance Pillar Leader (Document Control)
 # Regenerate on any change to source documents
 # See METADATA.yaml for full governance information
 
+- document_id: CERG-GOV-AUD-001
+  title: Evidence Quality Standard
+  document_type: governance_instrument
+  domain: AUD
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md
+  source_file: CERG-GOV-AUD-001_Evidence_Quality_Standard.md
+  source_hash: d0a79ac2a881535c4335558216e323187ba00673b31eb29819410f99dbb5d4c7
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Evidence Quality Standard
+- document_id: CERG-GOV-CAL-001
+  title: Annual Security and Governance Calendar
+  document_type: governance_instrument
+  domain: CAL
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md
+  source_file: CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md
+  source_hash: 52efcff01a16e6055c0dbb4a472cae4aa84d839570feeccee27aa07b339b819e
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Annual Security and Governance Calendar
+- document_id: CERG-GOV-CAT-001
+  title: Document Catalog and Naming Convention
+  document_type: governance_instrument
+  domain: CAT
+  version: 1.34
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Document Control)'
+  approval_authority: 'Governance Pillar Leader (Document Control)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
+  source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
+  source_hash: 912492401eef1a63655ddf91e128bccf7363418d37e181147329744602e4e66e
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
+  llm_include: true
+  llm_priority: high
+  normative_weight: supporting
+  pillar: governance
+  summary: Document Catalog and Naming Convention
+- document_id: CERG-GOV-CAT-002
+  title: Record Catalog
+  document_type: governance_instrument
+  domain: CAT
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Document Control)'
+  approval_authority: 'Governance Pillar Leader (Document Control)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-CAT-002_Record_Catalog.md
+  source_file: CERG-GOV-CAT-002_Record_Catalog.md
+  source_hash: 6539c6805ec65bd68b08c3b15fc98229dced7c10d8b70b12f429431a5ec6df5a
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-002_Record_Catalog.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Record Catalog
+- document_id: CERG-GOV-CB-001
+  title: Unified Control Baseline
+  document_type: governance_instrument
+  domain: CB
+  version: 1.21
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Control Baseline)'
+  approval_authority: 'Governance Pillar Leader (Control Baseline)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-CB-001_Unified_Control_Baseline.md
+  source_file: CERG-GOV-CB-001_Unified_Control_Baseline.md
+  source_hash: eb10d0b72e76bef92c81fd1ee8f82226a980721a5654700eb6591c9b8957eae7
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CB-001_Unified_Control_Baseline.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: engineering
+  summary: Unified Control Baseline
+- document_id: CERG-GOV-CEF-001
+  title: Control Effectiveness Framework
+  document_type: governance_instrument
+  domain: CEF
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-CEF-001_Control_Effectiveness_Framework.md
+  source_file: CERG-GOV-CEF-001_Control_Effectiveness_Framework.md
+  source_hash: 3620ea567d4932654c90392a10075e91d96b993c4580bc6477b4df06e4273c4e
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CEF-001_Control_Effectiveness_Framework.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: engineering
+  summary: Control Effectiveness Framework
+- document_id: CERG-GOV-CJ-001
+  title: Crown Jewel Register and Scenario Library
+  document_type: governance_instrument
+  domain: CJ
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Risk Pillar Leader / Governance Pillar Leader
+  approval_authority: Risk Pillar Leader / Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md
+  source_file: CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md
+  source_hash: 947721708c16439fef30fe269d0af110ea43424fed399876b9eab9b91a7a5cd2
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Crown Jewel Register and Scenario Library
+- document_id: CERG-GOV-CMP-001
+  title: Competency Model and Behavioral Anchors
+  document_type: governance_instrument
+  domain: CMP
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Policy & Standards)'
+  approval_authority: 'Governance Pillar Leader (Policy & Standards)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md
+  source_file: CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md
+  source_hash: f48fc7b15ec41e4a8221959794f078d3e711459b7f9363758eac321ed1b8ddf0
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Competency Model and Behavioral Anchors
+- document_id: CERG-GOV-CMX-001
+  title: Compliance Matrix
+  document_type: governance_instrument
+  domain: CMX
+  version: 1.21
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-CMX-001_Compliance_Matrix.md
+  source_file: CERG-GOV-CMX-001_Compliance_Matrix.md
+  source_hash: 857703fcc7c6ae9158af90c6d745aef789af08e2e3b1637a662dd683ef89d771
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CMX-001_Compliance_Matrix.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Compliance Matrix
+- document_id: CERG-GOV-CON-001
+  title: Contractor and Non-Employee Staff Integration Guide
+  document_type: governance_instrument
+  domain: CON
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Policy & Standards)'
+  approval_authority: 'Governance Pillar Leader (Policy & Standards)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-CON-001_Contractor_and_Non-Employee_Staff_Integration_Guide.md
+  source_file: CERG-GOV-CON-001_Contractor_and_Non-Employee_Staff_Integration_Guide.md
+  source_hash: 9fec7c2d82234d95622162ba9960fca50f2cf60890536bfe3d73fb361a7e7a91
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CON-001_Contractor_and_Non-Employee_Staff_Integration_Guide.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Contractor and Non-Employee Staff Integration Guide
+- document_id: CERG-GOV-EDG-001
+  title: Edge Register
+  document_type: governance_instrument
+  domain: EDG
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Vendor Risk Analyst / Governance Pillar Leader
+  approval_authority: Vendor Risk Analyst / Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-EDG-001_Edge_Register.md
+  source_file: CERG-GOV-EDG-001_Edge_Register.md
+  source_hash: dd1e4a96aef837e4704817a638b23568e665b92b4aa04a209d1ca4cd26778eb7
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-EDG-001_Edge_Register.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Edge Register
+- document_id: CERG-GOV-FLOW-001
+  title: Cross-Pillar Operational Flows
+  document_type: governance_instrument
+  domain: FLOW
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md
+  source_file: CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md
+  source_hash: a886248525a280c1bf3bf96355053c6fd4d6755f7b0a809b7b87181e80a3958f
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Cross-Pillar Operational Flows
+- document_id: CERG-GOV-FRM-001
+  title: CERG Framework
+  document_type: governance_instrument
+  domain: FRM
+  version: 1.21
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: CISO
+  approval_authority: CISO
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-FRM-001_CERG_Framework.md
+  source_file: CERG-GOV-FRM-001_CERG_Framework.md
+  source_hash: 338ac6725148954b177410006d0688b7c0dfb11acea7e09234ec96e06d0cb001
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-FRM-001_CERG_Framework.md
+  llm_include: true
+  llm_priority: high
+  normative_weight: supporting
+  pillar: governance
+  summary: CERG Framework
+- document_id: CERG-GOV-FRM-002
+  title: Framework System Map
+  document_type: governance_instrument
+  domain: FRM
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-FRM-002_Framework_System_Map.md
+  source_file: CERG-GOV-FRM-002_Framework_System_Map.md
+  source_hash: acff3cfa7ced426fcc450188d9ec4db46d84ef0b5a7ff27787889065093a063f
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-FRM-002_Framework_System_Map.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Framework System Map
+- document_id: CERG-GOV-IMP-001
+  title: Implementation and Adaptation Guide
+  document_type: governance_instrument
+  domain: IMP
+  version: 1.11
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Document Control)'
+  approval_authority: 'Governance Pillar Leader (Document Control)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md
+  source_file: CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md
+  source_hash: c113dc4b4e6e3f6729ce4e2eec876aff38504665faaf26bdbef5cc33c5827e7f
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Implementation and Adaptation Guide
+- document_id: CERG-GOV-IMP-002
+  title: Adoption Safety Guide
+  document_type: governance_instrument
+  domain: IMP
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md
+  source_file: CERG-GOV-IMP-002_Adoption_Safety_Guide.md
+  source_hash: f30fd4198d1e4f09c6d8da3114a6d387990c6509d89b5714064f041c6a18ec97
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Adoption Safety Guide
+- document_id: CERG-GOV-IMP-003
+  title: Small Team Adoption Path
+  document_type: governance_instrument
+  domain: IMP
+  version: 1.01
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md
+  source_file: CERG-GOV-IMP-003_Small_Team_Adoption_Path.md
+  source_hash: 6e11f8ba867df72e35d38efd8e6cad2e78726ad6deacc718e9fabf89674fc9f3
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Small Team Adoption Path
+- document_id: CERG-GOV-IMP-004
+  title: Implementation Cards
+  document_type: governance_instrument
+  domain: IMP
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-IMP-004_Implementation_Cards.md
+  source_file: CERG-GOV-IMP-004_Implementation_Cards.md
+  source_hash: 610bd3e54cb18c5eb963c4fdc0983cc6d96c1c289dfb17610110a69a553149c2
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-004_Implementation_Cards.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Implementation Cards
+- document_id: CERG-GOV-IMP-005
+  title: Adoption Decision Tree and Dependency Matrix
+  document_type: governance_instrument
+  domain: IMP
+  version: 1.01
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md
+  source_file: CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md
+  source_hash: b80b76b32f741f6d3165906be151bc26abe53c41616412bdbbc2f6768c506bd3
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Adoption Decision Tree and Dependency Matrix
+- document_id: CERG-GOV-IMP-006
+  title: Role Based Implementation Checklists
+  document_type: governance_instrument
+  domain: IMP
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md
+  source_file: CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md
+  source_hash: eecd379ce17bbd97bbbde1435b20bd05b6ced0a52da57a9bbca90be968e45f6d
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Role Based Implementation Checklists
+- document_id: CERG-GOV-IMPREG-001
+  title: Program Improvement Register
+  document_type: governance_instrument
+  domain: IMPREG
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-IMPREG-001_Program_Improvement_Register.md
+  source_file: CERG-GOV-IMPREG-001_Program_Improvement_Register.md
+  source_hash: 2c4562fbd92223ad49fed1ed51e0fcf75bf8f22bbcc49dff2111507e68e164d7
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMPREG-001_Program_Improvement_Register.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Program Improvement Register
+- document_id: CERG-GOV-JA-001
+  title: Job Architecture and Grade Framework
+  document_type: governance_instrument
+  domain: JA
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Policy & Standards)'
+  approval_authority: 'Governance Pillar Leader (Policy & Standards)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md
+  source_file: CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md
+  source_hash: e1646532e0f6ed29d6a24a0f79c03e98ce3ad388c6468874b54f47fb7d048ba5
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Job Architecture and Grade Framework
+- document_id: CERG-GOV-JD-001
+  title: CERG Job Descriptions
+  document_type: job_description
+  domain: JD
+  version: 2.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Policy & Standards)'
+  approval_authority: 'Governance Pillar Leader (Policy & Standards)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-JD-001_CERG_Job_Descriptions.md
+  source_file: CERG-GOV-JD-001_CERG_Job_Descriptions.md
+  source_hash: becaff11496094902b5f80bb29a9b0c5380ba7130a6af2ea468c3688c626b339
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-JD-001_CERG_Job_Descriptions.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: CERG Job Descriptions
+- document_id: CERG-GOV-MAT-001
+  title: Maturity Self Assessment and Scorecard
+  document_type: governance_instrument
+  domain: MAT
+  version: 1.1
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Document Control)'
+  approval_authority: 'Governance Pillar Leader (Document Control)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md
+  source_file: CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md
+  source_hash: 7ef9a4bff5a5b90fc99038a16e9d54051b3982a039de2bd5336ed4d9dadd24a9
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Maturity Self Assessment and Scorecard
+- document_id: CERG-GOV-MTR-001
+  title: Metrics Dashboard and Reporting
+  document_type: governance_instrument
+  domain: MTR
+  version: 1.3
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Reporting)'
+  approval_authority: 'Governance Pillar Leader (Reporting)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
+  source_file: CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
+  source_hash: 912b9151d791e3f14778be6f6d552fa598aecccd86019d9bbe5ea7cc66bd0710
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Metrics Dashboard and Reporting
 - document_id: CERG-GOV-OM-001
   title: CERG Operating Model
   document_type: governance_instrument
   domain: OM
-  version: '1.22'
+  version: 1.23
   status: Approved
   classification: Public
   publication_profile: public
   owner_role: Chief Information Security Officer
   approval_authority: Chief Information Security Officer
-  parent_artifact: CERG-POL-001
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   source_file: CERG-GOV-OM-001_CERG_Operating_Model.md
-  source_hash: 3505397b9f9de2cb30e79058be1e060a43eade508303e979bc427055d13fa7f2
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-OM-001_CERG_Operating_Model.md
+  source_hash: 68663b2f03d4a6da01a77770dcdadcf7ec26ab30ede19bb7d7bbd85ef8bd1482
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   llm_include: true
   llm_priority: high
   normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-GOV-CAT-001
-  title: Document Catalog and Naming Convention
-  document_type: governance_instrument
-  domain: CAT
-  version: '1.30'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader (Document Control)
-  approval_authority: Governance Pillar Leader (Document Control)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  source_hash: ca96b9a23d13ef66d2c45e9d54b72ef249decaf871ac0f7214822c726114fb7a
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-GOV-CB-001
-  title: Unified Control Baseline
-  document_type: governance_instrument
-  domain: CB
-  version: '1.21'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader (Control Baseline)
-  approval_authority: Governance Pillar Leader (Control Baseline)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-CB-001_Unified_Control_Baseline.md
-  source_hash: ef18f57be1881104a09cd89f9f12e840efd3d977d1a8ce59f010ebb6c7b2b26d
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-CB-001_Unified_Control_Baseline.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-GOV-MTR-001
-  title: Metrics, Dashboard, and CISO/Board Reporting
-  document_type: governance_instrument
-  domain: MTR
-  version: '1.3'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader (Reporting)
-  approval_authority: Governance Pillar Leader (Reporting)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
-  source_hash: e7223931dbaee89fcc222d78d703607c591ea3a971ce405979df3cb4cb3ace07
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-GOV-FRM-001
-  title: SURGE / CERG Framework (narrative)
-  document_type: governance_instrument
-  domain: FRM
-  version: '1.21'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: CISO
-  approval_authority: CISO
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-FRM-001_CERG_Framework.md
-  source_hash: a51123f8354dbe83080ed675a0e3aa2a3e3c1544a9ce6ccd692b7e0647ff4530
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-FRM-001_CERG_Framework.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Executive Summary](#1-executive-summary)
-- document_id: CERG-GOV-RMF-001
-  title: Risk Management Framework
-  document_type: governance_instrument
-  domain: RMF
-  version: '1.3'
-  status: Approved
-  classification: Internal / Restricted
-  publication_profile: restricted
-  owner_role: Cyber Governance (CERG Pillar)
-  approval_authority: Cyber Governance (CERG Pillar)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-RMF-001_Risk_Management_Framework.md
-  source_hash: ab380526a06c4cf360231d4f3c736ae604d538a6aace3d114455a18aef6c0827
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-RMF-001_Risk_Management_Framework.md
-  llm_include: false
-  llm_priority: low
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-GOV-TAX-001
-  title: Risk Taxonomy
-  document_type: governance_instrument
-  domain: TAX
-  version: '1.21'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Risk Pillar Leader
-  approval_authority: Risk Pillar Leader
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-TAX-001_Risk_Taxonomy.md
-  source_hash: d3691a20025c57cd2c2ccb0203a31ca70539af83f4acbd5ca69173c18cf8b438
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-TAX-001_Risk_Taxonomy.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: '**Pillar:** Engineering | **Severity:** Critical'
-- document_id: CERG-GOV-CMX-001
-  title: Compliance Matrix
-  document_type: governance_instrument
-  domain: CMX
-  version: '1.21'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader
-  approval_authority: Governance Pillar Leader
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-CMX-001_Compliance_Matrix.md
-  source_hash: a505673124fea218f63c8c49f30665a3d53e4673ccf3648ddae42078adaae86e
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-CMX-001_Compliance_Matrix.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: '1. [Know what you own: maintain an authoritative asset inventory](#1-know-what-you-own-maintain-an-authoritative-asset-inventory)'
-- document_id: CERG-GOV-IMP-001
-  title: Implementation and Adaptation Guide
-  document_type: governance_instrument
-  domain: IMP
-  version: '1.1'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader (Document Control)
-  approval_authority: Governance Pillar Leader (Document Control)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md
-  source_hash: e6f196d52cdc60b6540729f96bd46c5a1819b4688a9e282be79d3353d32d3469
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-GOV-VAR-001
-  title: Organization Adaptation Profile
-  document_type: governance_instrument
-  domain: VAR
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader (Document Control)
-  approval_authority: Governance Pillar Leader (Document Control)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-VAR-001_Organization_Adaptation_Profile.md
-  source_hash: 4c4043658670d0633a532db0c7f45e6cb7b3961647c262567df20b354860f805
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-GOV-MAT-001
-  title: Maturity Self-Assessment and Scorecard
-  document_type: governance_instrument
-  domain: MAT
-  version: '1.1'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader (Document Control)
-  approval_authority: Governance Pillar Leader (Document Control)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md
-  source_hash: f1885b11f74e89bbfedbc3d43db37c98e230f6f56cb015c687b0d1f3e8de9387
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-GOV-RAC-001
-  title: Consolidated Roles, Responsibilities, and RACI Instrument
-  document_type: governance_instrument
-  domain: RAC
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader (Policy & Standards)
-  approval_authority: Governance Pillar Leader (Policy & Standards)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md
-  source_hash: 8a5a91e1cc357d66e55519163382b5499af3df56ddbc48260fe16aa4b5d01a46
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-GOV-CAL-001
-  title: Annual Security and Governance Calendar
-  document_type: governance_instrument
-  domain: CAL
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader
-  approval_authority: Governance Pillar Leader
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md
-  source_hash: f775453190a5517846bd75f7cf7863cf352b74eb00e1452198c0943f3b12ed92
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-GOV-STY-001
-  title: Document Authoring and Style Guide
-  document_type: governance_instrument
-  domain: STY
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader (Policy & Standards)
-  approval_authority: Governance Pillar Leader (Policy & Standards)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md
-  source_hash: bcde6d0cb64d05aec66fa3cfcf01c88f635c97a652a28858879ecbeb615d3afe
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-GOV-TRC-001
-  title: Control-to-Procedure Traceability Matrix
-  document_type: governance_instrument
-  domain: TRC
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader (Control Baseline)
-  approval_authority: Governance Pillar Leader (Control Baseline)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md
-  source_hash: b931ef71acba00ce9b26e9ac1154d72a12091cb0c9f11e9740669862782e0272
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-GOV-IMPREG-001
-  title: Program Improvement Register
-  document_type: governance_instrument
-  domain: IMPREG
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader
-  approval_authority: Governance Pillar Leader
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-IMPREG-001_Program_Improvement_Register.md
-  source_hash: 6dc5bf3ef68b5fa787f6cf63940a931c72e3795b74e321e5caa15b62f4a9905e
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-IMPREG-001_Program_Improvement_Register.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-GOV-CEF-001
-  title: Control Effectiveness Framework
-  document_type: governance_instrument
-  domain: CEF
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader
-  approval_authority: Governance Pillar Leader
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-CEF-001_Control_Effectiveness_Framework.md
-  source_hash: 3e91987a9840ccdcb21606808bc0fbcadfba8e4d1521594bee569c8832bba3db
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-CEF-001_Control_Effectiveness_Framework.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-GOV-JA-001
-  title: Job Architecture and Grade Framework
-  document_type: governance_instrument
-  domain: JA
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader (Policy & Standards)
-  approval_authority: Governance Pillar Leader (Policy & Standards)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md
-  source_hash: 888890ebecb6724d8542c1570aa7ece942cb85dc0da274acf15fc600a8424497
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-GOV-JD-001
-  title: CERG Job Descriptions
-  document_type: governance_instrument
-  domain: JD
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader (Policy & Standards)
-  approval_authority: Governance Pillar Leader (Policy & Standards)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-JD-001_CERG_Job_Descriptions.md
-  source_hash: 1e2afb742ec2885060ba76fc4572e624ff9ebab85c4c9349e2fc69778e26d6f8
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-JD-001_CERG_Job_Descriptions.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-GOV-CMP-001
-  title: Competency Model and Behavioral Anchors
-  document_type: governance_instrument
-  domain: CMP
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader (Policy & Standards)
-  approval_authority: Governance Pillar Leader (Policy & Standards)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md
-  source_hash: 4efb16e65079543b4a4d91cf641ecc8b048a84e7be3421aaa575005620bc0999
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-GOV-PERF-001
-  title: Performance Management and Promotion Framework
-  document_type: governance_instrument
-  domain: PERF
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader (Policy & Standards)
-  approval_authority: Governance Pillar Leader (Policy & Standards)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md
-  source_hash: b61444a698ceaf5055075ccfe15b47e3d2877ff060568864dede095c394a7b68
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
+  pillar: governance
+  summary: CERG Operating Model
 - document_id: CERG-GOV-ONB-001
   title: Onboarding and Integration Program
   document_type: governance_instrument
   domain: ONB
-  version: '1.0'
+  version: 1.0
   status: Approved
   classification: Public
   publication_profile: public
-  owner_role: Governance Pillar Leader (Policy & Standards)
-  approval_authority: Governance Pillar Leader (Policy & Standards)
-  parent_artifact: CERG-POL-001
+  owner_role: 'Governance Pillar Leader (Policy & Standards)'
+  approval_authority: 'Governance Pillar Leader (Policy & Standards)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-ONB-001_Onboarding_and_Integration_Program.md
   source_file: CERG-GOV-ONB-001_Onboarding_and_Integration_Program.md
-  source_hash: ae3725e832b03d8a8fc1563adb066bd56012c59f1c16d46b40c25a99f0ad90f3
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-ONB-001_Onboarding_and_Integration_Program.md
+  source_hash: 083e903af517425fcad4d0dc2c23922d05e2e5fc6ac4def3cbcdde9511740e6b
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-ONB-001_Onboarding_and_Integration_Program.md
   llm_include: true
-  llm_priority: high
+  llm_priority: medium
   normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-GOV-WFP-001
-  title: Workforce Planning and Capacity Model
+  pillar: governance
+  summary: Onboarding and Integration Program
+- document_id: CERG-GOV-PERF-001
+  title: Performance Management and Promotion Framework
   document_type: governance_instrument
-  domain: WFP
-  version: '1.0'
+  domain: PERF
+  version: 1.0
   status: Approved
   classification: Public
   publication_profile: public
-  owner_role: Governance Pillar Leader (Policy & Standards)
-  approval_authority: Governance Pillar Leader (Policy & Standards)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-WFP-001_Workforce_Planning_and_Capacity_Model.md
-  source_hash: b67a03a49423e225b4d12656d863a530617f0673b973b8749a539faf091d3582
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-WFP-001_Workforce_Planning_and_Capacity_Model.md
+  owner_role: 'Governance Pillar Leader (Policy & Standards)'
+  approval_authority: 'Governance Pillar Leader (Policy & Standards)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md
+  source_file: CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md
+  source_hash: 0d6b4d73da61818895d79caa24753f75dcda8d720eef12995158d23a57c06b5e
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md
   llm_include: true
-  llm_priority: high
+  llm_priority: medium
   normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-GOV-TRN-001
-  title: Training, Development, and Certification Framework
+  pillar: governance
+  summary: Performance Management and Promotion Framework
+- document_id: CERG-GOV-RAC-001
+  title: Consolidated Roles and RACI Instrument
   document_type: governance_instrument
-  domain: TRN
-  version: '1.0'
+  domain: RAC
+  version: 1.0
   status: Approved
   classification: Public
   publication_profile: public
-  owner_role: Governance Pillar Leader (Policy & Standards)
-  approval_authority: Governance Pillar Leader (Policy & Standards)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md
-  source_hash: be6f005f4d329cda2bffeedfb477fb3393d7b6d720f3712b8b8db7434be72e94
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md
+  owner_role: 'Governance Pillar Leader (Policy & Standards)'
+  approval_authority: 'Governance Pillar Leader (Policy & Standards)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md
+  source_file: CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md
+  source_hash: fa307dfdad52e4ebb68b9c880334896961d3a6f63126d5fc498215be8d2f6daf
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Consolidated Roles and RACI Instrument
+- document_id: CERG-GOV-RMF-001
+  title: Risk Management Framework
+  document_type: governance_instrument
+  domain: RMF
+  version: 1.31
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Cyber Governance (CERG Pillar)'
+  approval_authority: 'Cyber Governance (CERG Pillar)'
+  parent_artifact: 'CERG-POL-001 — CERG Cybersecurity Policy'
+  source_path: governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
+  source_file: CERG-GOV-RMF-001_Risk_Management_Framework.md
+  source_hash: 018db0bd2039027c4e49304a91d7b024a94a0dfe7b463d3a1f81cf6356c634a6
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
   llm_include: true
   llm_priority: high
   normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
+  pillar: risk
+  summary: Risk Management Framework
+- document_id: CERG-GOV-SLC-001
+  title: CERG Service Level Commitments
+  document_type: governance_instrument
+  domain: SLC
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Chief Information Security Officer
+  approval_authority: Chief Information Security Officer
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md
+  source_file: CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md
+  source_hash: 5eb8815a4dd65cb5d3f08714521c75149b205fa319c52f09390634042e3c5f84
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: CERG Service Level Commitments
+- document_id: CERG-GOV-STY-001
+  title: Document Authoring and Style Guide
+  document_type: governance_instrument
+  domain: STY
+  version: 1.01
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Policy & Standards)'
+  approval_authority: 'Governance Pillar Leader (Policy & Standards)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md
+  source_file: CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md
+  source_hash: af9114356128234f52a330f1e1c78f2f95c28611153245b83756523f95349424
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Document Authoring and Style Guide
+- document_id: CERG-GOV-STY-002
+  title: Style Compliance Tracker
+  document_type: governance_instrument
+  domain: STY
+  version: 1.01
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Document Control)'
+  approval_authority: 'Governance Pillar Leader (Document Control)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-STY-002_Style_Compliance_Tracker.md
+  source_file: CERG-GOV-STY-002_Style_Compliance_Tracker.md
+  source_hash: 9186e28135a65c3d20c0603785466c1fa6858ba23f3c393b6830840e4941366f
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-STY-002_Style_Compliance_Tracker.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Style Compliance Tracker
 - document_id: CERG-GOV-SUCC-001
   title: Succession Planning and Talent Review Framework
   document_type: governance_instrument
   domain: SUCC
-  version: '1.0'
+  version: 1.0
   status: Approved
-  classification: Confidential - CISO and Pillar Leaders
+  classification: 'Confidential — CISO and Pillar Leaders'
   publication_profile: restricted
   owner_role: CISO
   approval_authority: CISO
-  parent_artifact: CERG-POL-001
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-SUCC-001_Succession_Planning_and_Talent_Review_Framework.md
   source_file: CERG-GOV-SUCC-001_Succession_Planning_and_Talent_Review_Framework.md
-  source_hash: 3b9b6f726c7f2722089a2044a5706f29fc29be8c2260818c6cb7bef1d1c6bc5c
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-SUCC-001_Succession_Planning_and_Talent_Review_Framework.md
+  source_hash: c079c321ec41b4bead0247dae5746e539c27223fc4ebf2b13d227b33278b6e17
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-SUCC-001_Succession_Planning_and_Talent_Review_Framework.md
   llm_include: false
-  llm_priority: low
+  llm_priority: medium
   normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-GOV-CON-001
-  title: Contractor and Non-Employee Staff Integration Guide
+  pillar: governance
+  summary: Succession Planning and Talent Review Framework
+- document_id: CERG-GOV-TAX-001
+  title: Risk Taxonomy
   document_type: governance_instrument
-  domain: CON
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader (Policy & Standards)
-  approval_authority: Governance Pillar Leader (Policy & Standards)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-CON-001_Contractor_and_Non-Employee_Staff_Integration_Guide.md
-  source_hash: abd22f3d07c35488f99c3183b0c6754bb964d49218224d7828e853645e92d4fc
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-CON-001_Contractor_and_Non-Employee_Staff_Integration_Guide.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-STD-IT-001
-  title: IT / Cloud / SaaS Security Standard
-  document_type: standard
-  domain: IT
-  version: '1.21'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader
-  approval_authority: Governance Pillar Leader
-  parent_artifact: CERG-POL-001
-  source_file: CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md
-  source_hash: 55720f0a61f1ecac6687ac13f2bedf5f777fd1f73cf1e844d7eb760228c98ecc
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: authoritative
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-STD-OT-001
-  title: Grid Control Systems Security Standard
-  document_type: standard
-  domain: OT
-  version: '1.21'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader (OT/NERC-CIP)
-  approval_authority: Governance Pillar Leader (OT/NERC-CIP)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md
-  source_hash: 38afe43710268aff8a5b3a478516891df9b1ae8251fed84b9abc965d10a050a2
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: authoritative
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-STD-CUI-001
-  title: CUI Handling Standard
-  document_type: standard
-  domain: CUI
-  version: '1.21'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: CMMC / Federal Compliance Manager
-  approval_authority: CMMC / Federal Compliance Manager
-  parent_artifact: CERG-POL-001
-  source_file: CERG-STD-CUI-001_CUI_Handling_Standard.md
-  source_hash: 9fb2473a2aa73adb3aaf5a2b1792d938e2a508c0171b99deefb54a85fca87ea6
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-STD-CUI-001_CUI_Handling_Standard.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: authoritative
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-STD-AC-001
-  title: Access Management Standard
-  document_type: standard
-  domain: AC
-  version: '1.21'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader
-  approval_authority: Governance Pillar Leader
-  parent_artifact: CERG-POL-001
-  source_file: CERG-STD-AC-001_Access_Management_Standard.md
-  source_hash: cbd563f2b411e3b8ddf858142c33b84cba2fe44b05ba959922d188eaf6d066b7
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-STD-AC-001_Access_Management_Standard.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: authoritative
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-STD-CFG-001
-  title: Secure Configuration Baseline Standard (DISH)
-  document_type: standard
-  domain: CFG
-  version: '1.21'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Engineering Pillar Leader (Platforms)
-  approval_authority: Engineering Pillar Leader (Platforms)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md
-  source_hash: e64a414956d9c3d753d4a387262922f5bb73ffeaa0767fb4e089eaaba1285131
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: authoritative
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-STD-LM-001
-  title: Logging, Monitoring, and Detection Standard
-  document_type: standard
-  domain: LM
-  version: '1.21'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Risk Pillar Leader (Detection Engineering)
-  approval_authority: Risk Pillar Leader (Detection Engineering)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md
-  source_hash: b158f1ae20518775919d52298666376c7187564048aabd55b98bb99d658be872
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: authoritative
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-STD-RES-001
-  title: Cyber Resilience and Backup Standard
-  document_type: standard
-  domain: RES
-  version: '1.21'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Engineering Pillar Leader (Resilience)
-  approval_authority: Engineering Pillar Leader (Resilience)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md
-  source_hash: 3270253bb46916f55108a971742e8740afb58f3b670f32e5d0272d70ba80d8f4
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: authoritative
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-STD-CR-001
-  title: Cryptography and Key Management Standard
-  document_type: standard
-  domain: CR
-  version: '1.21'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Engineering Pillar Leader (Platforms)
-  approval_authority: Engineering Pillar Leader (Platforms)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md
-  source_hash: a08f7883ea519de1dc6d2cfdba8209720cbb11ea59b8d7e074ab9e5f88e6a15b
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: authoritative
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-STD-SDL-001
-  title: Secure Software Development and Application Security Standard
-  document_type: standard
-  domain: SDL
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Engineering Pillar Leader (Application Security)
-  approval_authority: Engineering Pillar Leader (Application Security)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md
-  source_hash: 11e5e20236cfaeaf51c1e89a57667e1f06b32eb72325f2652c6bed6bcd886a2b
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: authoritative
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-STD-AM-001
-  title: Asset Management and Inventory Standard
-  document_type: standard
-  domain: AM
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Engineering Pillar Leader (Platforms)
-  approval_authority: Engineering Pillar Leader (Platforms)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md
-  source_hash: 2beedcb174b6775a625ba49d6cceb324dc8fb701bc59a82626904528ea5dac6b
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: authoritative
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-STD-NET-001
-  title: Network Security and Segmentation Standard
-  document_type: standard
-  domain: NET
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Engineering Pillar Leader (Platforms)
-  approval_authority: Engineering Pillar Leader (Platforms)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md
-  source_hash: 0203bde6f3a224a09e48acf18c82bc6b3e67a4426d6dd75dbe217553526e6d1f
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: authoritative
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-STD-EP-001
-  title: Endpoint and Mobile Security Standard
-  document_type: standard
-  domain: EP
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Engineering Pillar Leader (Endpoint)
-  approval_authority: Engineering Pillar Leader (Endpoint)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md
-  source_hash: 565e8b0007e2778f99cc6122a99d30c3c986a83f93192c55c1a05874f0219488
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: authoritative
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-STD-DG-001
-  title: Data Governance and Classification Standard
-  document_type: standard
-  domain: DG
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader (Policy & Standards)
-  approval_authority: Governance Pillar Leader (Policy & Standards)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md
-  source_hash: a76d8ad8a6fdbaf198ac5e8847dcc9bb9b925d71fd74a50bce2d08c47f67e3aa
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: authoritative
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-STD-AI-001
-  title: Artificial Intelligence Security Standard
-  document_type: standard
-  domain: AI
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Engineering Pillar Leader (Application Security)
-  approval_authority: Engineering Pillar Leader (Application Security)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md
-  source_hash: 71cb86bfae1a1dc8a7913dbe6cbee193a9a5a1dec9d67ed16ae48cb04fda1c16
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: authoritative
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-STD-MSG-001
-  title: Email and Messaging Security Standard
-  document_type: standard
-  domain: MSG
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Engineering Pillar Leader (Platforms)
-  approval_authority: Engineering Pillar Leader (Platforms)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md
-  source_hash: cbf2720d5d8222b7c8f0ec1dc8ce25952083593ac077fd75979be2c098b284d8
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: authoritative
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-PRC-VM-001
-  title: Exposure Management Procedure
-  document_type: procedure
-  domain: VM
-  version: 1.0 DRAFT
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Exposure Management Lead
-  approval_authority: Exposure Management Lead
-  parent_artifact: CERG-POL-001
-  source_file: CERG-PRC-VM-001_Exposure_Management_Procedure.md
-  source_hash: f28b18170580c8b9ca78f780744d88a66373acef3fbaaa6f7f98c2562e12bf45
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-PRC-VM-001_Exposure_Management_Procedure.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-PRC-RM-001
-  title: Risk Register and Exception Process
-  document_type: procedure
-  domain: RM
-  version: 1.0 DRAFT
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Risk Register Owner
-  approval_authority: Risk Register Owner
-  parent_artifact: CERG-POL-001
-  source_file: CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
-  source_hash: 092c6c4c0a2e8216e155e5a0024bfdad375adc9fefff52f8936a0911015d61e0
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-PRC-AR-001
-  title: Architecture Review and Project Intake Procedure
-  document_type: procedure
-  domain: AR
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Engineering Pillar Leader
-  approval_authority: Engineering Pillar Leader
-  parent_artifact: CERG-POL-001
-  source_file: CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
-  source_hash: c84f9b74cec3e19c98b6cdc3ff9d4ceba083823e1be2ad431982a479ceb39c5e
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-PRC-AC-002
-  title: Access Management Runbook
-  document_type: procedure
-  domain: AC
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Identity Engineer
-  approval_authority: Identity Engineer
-  parent_artifact: CERG-POL-001
-  source_file: CERG-PRC-AC-002_Access_Management_Runbook.md
-  source_hash: e5896b5322624b07a816ffb198e71890a27a8008d93d5ecc93739737eb1ef255
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-PRC-AC-002_Access_Management_Runbook.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-PRC-TPRM-001
-  title: Third-Party and Supply Chain Risk Procedure
-  document_type: procedure
-  domain: TPRM
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Vendor Risk Analyst
-  approval_authority: Vendor Risk Analyst
-  parent_artifact: CERG-POL-001
-  source_file: CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
-  source_hash: 72dde3578a844e2f6ca7568bc8078390481d9bdd6b5b024ac45ef56165a703e2
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-PRC-AV-001
-  title: Adversarial Validation Procedure
-  document_type: procedure
-  domain: AV
-  version: '1.2'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Adversarial Testing Lead
-  approval_authority: Adversarial Testing Lead
-  parent_artifact: CERG-POL-001
-  source_file: CERG-PRC-AV-001_Adversarial_Validation_Procedure.md
-  source_hash: aa560ab990899b003f6a0628386f9328483b6d7d99accd21db2e0ef0880bdb06
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-PRC-IR-002
-  title: Incident Response Playbook Set
-  document_type: procedure
-  domain: IR
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader
-  approval_authority: Governance Pillar Leader
-  parent_artifact: CERG-POL-001
-  source_file: CERG-PRC-IR-002_Incident_Response_Playbook_Set.md
-  source_hash: 903c039b147ac034d604853cea742efec5052db030f21a1e282e8f2933b3fd1b
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-PRC-IR-002_Incident_Response_Playbook_Set.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-PRC-TM-001
-  title: Threat Modeling Procedure
-  document_type: procedure
-  domain: TM
-  version: '1.0'
+  domain: TAX
+  version: 1.21
   status: Approved
   classification: Public
   publication_profile: public
   owner_role: Risk Pillar Leader
   approval_authority: Risk Pillar Leader
-  parent_artifact: CERG-POL-001
-  source_file: CERG-PRC-TM-001_Threat_Modeling_Procedure.md
-  source_hash: beb9a2e612d22a39a8db1fa308a1fba6a8dc947aea530b39c0e5bf9ec2d06d61
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-PRC-TM-001_Threat_Modeling_Procedure.md
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-TAX-001_Risk_Taxonomy.md
+  source_file: CERG-GOV-TAX-001_Risk_Taxonomy.md
+  source_hash: 4066d4d1b95d26759a7958e1af72f011d3e985976ea3faaf53d1444c574708a1
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-TAX-001_Risk_Taxonomy.md
   llm_include: true
-  llm_priority: high
+  llm_priority: medium
   normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-PRC-TI-001
-  title: Threat Intelligence Procedure
-  document_type: procedure
-  domain: TI
-  version: '1.1'
+  pillar: risk
+  summary: Risk Taxonomy
+- document_id: CERG-GOV-TRC-001
+  title: Control to Procedure Traceability Matrix
+  document_type: governance_instrument
+  domain: TRC
+  version: 1.0
   status: Approved
   classification: Public
   publication_profile: public
-  owner_role: Risk Pillar Leader
-  approval_authority: Risk Pillar Leader
-  parent_artifact: CERG-POL-001
-  source_file: CERG-PRC-TI-001_Threat_Intelligence_Procedure.md
-  source_hash: 6808d48f4886764dc72205c60bd55bf708baa537f03165be3b8c027b7ca878ac
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-PRC-TI-001_Threat_Intelligence_Procedure.md
+  owner_role: 'Governance Pillar Leader (Control Baseline)'
+  approval_authority: 'Governance Pillar Leader (Control Baseline)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md
+  source_file: CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md
+  source_hash: 8637a1c644469acb8ad849e975e5f655e7a0e6a7f864c7fac0af4c4e688f3bab
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: engineering
+  summary: Control to Procedure Traceability Matrix
+- document_id: CERG-GOV-TRN-001
+  title: Training Development and Certification Framework
+  document_type: governance_instrument
+  domain: TRN
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Policy & Standards)'
+  approval_authority: 'Governance Pillar Leader (Policy & Standards)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md
+  source_file: CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md
+  source_hash: 3d7e6c87b6baf3c0241960b06b22a5d260dbe1dea10bbddaba8629c53e723f5d
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Training Development and Certification Framework
+- document_id: CERG-GOV-VAR-001
+  title: Organization Adaptation Profile
+  document_type: governance_instrument
+  domain: VAR
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Document Control)'
+  approval_authority: 'Governance Pillar Leader (Document Control)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md
+  source_file: CERG-GOV-VAR-001_Organization_Adaptation_Profile.md
+  source_hash: 08e7f13f7e0ba6fb4f2a433d2bbe3389451f31567b9d4a2b4f55d21ca5803b66
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Organization Adaptation Profile
+- document_id: CERG-GOV-WFP-001
+  title: Workforce Planning and Capacity Model
+  document_type: governance_instrument
+  domain: WFP
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Policy & Standards)'
+  approval_authority: 'Governance Pillar Leader (Policy & Standards)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-WFP-001_Workforce_Planning_and_Capacity_Model.md
+  source_file: CERG-GOV-WFP-001_Workforce_Planning_and_Capacity_Model.md
+  source_hash: 308ff86c56b5eabcc9d669affb9ab60da9b5a7f72c6201fc5647139b4857342f
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-WFP-001_Workforce_Planning_and_Capacity_Model.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Workforce Planning and Capacity Model
+- document_id: CERG-POL-001
+  title: Cybersecurity Policy
+  document_type: policy
+  domain: POL
+  version: 1.21
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Chief Information Security Officer
+  approval_authority: Chief Information Security Officer
+  parent_artifact: 'N/A — this is the parent policy'
+  source_path: governance/CERG-POL-001_Cybersecurity_Policy.md
+  source_file: CERG-POL-001_Cybersecurity_Policy.md
+  source_hash: 7d3411e50594d6f1b5ae15f1772130112704905cafb52d97a74a5b693c10e707
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-POL-001_Cybersecurity_Policy.md
   llm_include: true
   llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-PRC-AUD-001
-  title: Audit and Evidence Management Procedure
-  document_type: procedure
-  domain: AUD
-  version: '1.0'
+  normative_weight: primary
+  pillar: governance
+  summary: Cybersecurity Policy
+- document_id: CERG-PLN-BC-001
+  title: Business Continuity and Disaster Recovery Plan
+  document_type: plan
+  domain: BC
+  version: 1.0
   status: Approved
   classification: Public
   publication_profile: public
   owner_role: Governance Pillar Leader
   approval_authority: Governance Pillar Leader
-  parent_artifact: CERG-POL-001
-  source_file: CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md
-  source_hash: bada299e5a1ff43e5d8765acfd7487b50a0fd60a6bac9f4c4d38146db29e1895
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: plans/CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md
+  source_file: CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md
+  source_hash: 53b7c74d355c87f6f44de1367dc122b517d9f97c3abf3ee97dce93f921ebfaa4
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/plans/CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md
   llm_include: true
-  llm_priority: high
+  llm_priority: medium
   normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-PRC-CHG-001
-  title: Security Change Management Procedure
-  document_type: procedure
-  domain: CHG
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Engineering Pillar Leader
-  approval_authority: Engineering Pillar Leader
-  parent_artifact: CERG-POL-001
-  source_file: CERG-PRC-CHG-001_Security_Change_Management_Procedure.md
-  source_hash: 0978e0e3a9d8787b0db4aced98af6e93e87e4ec620ec17482faf870e7a4528f8
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-PRC-CHG-001_Security_Change_Management_Procedure.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-PRC-LL-001
-  title: Lessons Learned and Program Improvement Procedure
-  document_type: procedure
-  domain: LL
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader
-  approval_authority: Governance Pillar Leader
-  parent_artifact: CERG-POL-001
-  source_file: CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md
-  source_hash: 25ba061408c714bd1e8ffad1716cca06cbf361370796cc2ead24ab81f26684c5
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-PLN-IR-001
-  title: Incident Response Plan (owned by standing IR team; CERG provides liaison)
-  document_type: plan
-  domain: IR
-  version: '1.21'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: CISO · Governance Pillar Leader
-  approval_authority: CISO · Governance Pillar Leader
-  parent_artifact: CERG-POL-001
-  source_file: CERG-PLN-IR-001_Incident_Response_Plan.md
-  source_hash: 19b2cdc28edc11fa507d2dc0203386d226c9e8e446ae053c870809926c9b4654
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-PLN-IR-001_Incident_Response_Plan.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-PLN-CUI-001
-  title: CUI / CMMC Operational Package
-  document_type: plan
-  domain: CUI
-  version: '1.21'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: CMMC / Federal Compliance Manager
-  approval_authority: CMMC / Federal Compliance Manager
-  parent_artifact: CERG-POL-001
-  source_file: CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md
-  source_hash: 55c189ce15c3e63d235bf67e7d0a5e189abb15a9e3c75232e7e1c4531da0854c
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
+  pillar: governance
+  summary: Business Continuity and Disaster Recovery Plan
 - document_id: CERG-PLN-CIP-001
-  title: NERC-CIP Operational Package
+  title: NERC CIP Operational Package
   document_type: plan
   domain: CIP
-  version: '1.21'
+  version: 1.21
   status: Approved
   classification: Public
   publication_profile: public
   owner_role: NERC-CIP Compliance Manager
   approval_authority: NERC-CIP Compliance Manager
-  parent_artifact: CERG-POL-001
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md
   source_file: CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md
-  source_hash: cd37a1422b53b4f28e767e189a0584e66a69d678d57837b51d4a7b593eabec60
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md
+  source_hash: 1ccc6ed6469c86ba7b3a904ca1c63cfe2677c46e959dc800d8dfc6af5ed1e746
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md
   llm_include: true
-  llm_priority: high
+  llm_priority: medium
   normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-PLN-SOX-001
-  title: SOX ITGC Operational Package
+  pillar: governance
+  summary: NERC CIP Operational Package
+- document_id: CERG-PLN-CUI-001
+  title: CUI CMMC Operational Package
   document_type: plan
-  domain: SOX
-  version: '1.21'
+  domain: CUI
+  version: 1.21
   status: Approved
   classification: Public
   publication_profile: public
-  owner_role: Governance Pillar Leader (SOX Liaison)
-  approval_authority: Governance Pillar Leader (SOX Liaison)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md
-  source_hash: f6eba874baae6f727dbdd004dfc021f463b8d42d05a16424d07e8b245f07e474
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md
+  owner_role: CMMC / Federal Compliance Manager
+  approval_authority: CMMC / Federal Compliance Manager
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md
+  source_file: CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md
+  source_hash: 1d60022ac8c0200a4588c9a0f135ef649ae04fe3519771f045a5399a79f96c9e
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md
   llm_include: true
-  llm_priority: high
+  llm_priority: medium
   normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-PLN-BC-001
-  title: Business Continuity and Disaster Recovery Plan
+  pillar: governance
+  summary: CUI CMMC Operational Package
+- document_id: CERG-PLN-IR-001
+  title: Incident Response Plan
   document_type: plan
-  domain: BC
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Governance Pillar Leader
-  approval_authority: Governance Pillar Leader
-  parent_artifact: CERG-POL-001
-  source_file: CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md
-  source_hash: d5af887ec848229c32aed72dcc8dbdac0e49b167171b228f282f00f526f28d51
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md
-  llm_include: true
-  llm_priority: high
+  domain: IR
+  version: 1.21
+  status: External Interface
+  classification: External Interface
+  publication_profile: external_interface
+  owner_role: Standing IR Team / Incident Commander
+  approval_authority: Standing IR Team / Incident Commander
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: plans/CERG-PLN-IR-001_Incident_Response_Plan.md
+  source_file: CERG-PLN-IR-001_Incident_Response_Plan.md
+  source_hash: c2f30a3e2ad49ddf7ff1373b4e4ebe342bf27d1330a2693e80556d1d71e2104b
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/plans/CERG-PLN-IR-001_Incident_Response_Plan.md
+  llm_include: false
+  llm_priority: medium
   normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
+  pillar: governance
+  summary: Incident Response Plan
 - document_id: CERG-PLN-ISO-001
-  title: ISO/IEC 27001 Operational Package
+  title: ISO IEC 27001 Operational Package
   document_type: plan
   domain: ISO
-  version: '1.0'
+  version: 1.0
   status: Approved
   classification: Public
   publication_profile: public
   owner_role: Governance Pillar Leader
   approval_authority: Governance Pillar Leader
-  parent_artifact: CERG-POL-001
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: plans/CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md
   source_file: CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md
-  source_hash: 00d83b28c4fa0d7e787d3473f88726fc20961d4a4caca918fa26ad28597cd019
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md
+  source_hash: 817791a4a0310daa0bd6c8f80d5f12d14b9c9bc5a637ca8e77fd5cd11e3c0525
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/plans/CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md
   llm_include: true
-  llm_priority: high
+  llm_priority: medium
   normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
+  pillar: governance
+  summary: ISO IEC 27001 Operational Package
 - document_id: CERG-PLN-PRIV-001
   title: Privacy and Data Protection Operational Package
   document_type: plan
   domain: PRIV
-  version: '1.0'
+  version: 1.0
   status: Approved
   classification: Public
   publication_profile: public
   owner_role: Governance Pillar Leader
   approval_authority: Governance Pillar Leader
-  parent_artifact: CERG-POL-001
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: plans/CERG-PLN-PRIV-001_Privacy_and_Data_Protection_Operational_Package.md
   source_file: CERG-PLN-PRIV-001_Privacy_and_Data_Protection_Operational_Package.md
-  source_hash: d76dd7dcf6de647ed4f8a94ef227790ae9c274d709f034d94d12cd1d8e505f27
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-PLN-PRIV-001_Privacy_and_Data_Protection_Operational_Package.md
+  source_hash: 08ee539688f73f8c23b1dc5c2538aaab4709053d3cb901a2e8602f038fcd7ee7
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/plans/CERG-PLN-PRIV-001_Privacy_and_Data_Protection_Operational_Package.md
   llm_include: true
-  llm_priority: high
+  llm_priority: medium
   normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-TMPL-RM-001
-  title: Risk Register Templates and Reporting
-  document_type: template
-  domain: RM
-  version: '1.21'
+  pillar: governance
+  summary: Privacy and Data Protection Operational Package
+- document_id: CERG-PLN-SOX-001
+  title: SOX ITGC Operational Package
+  document_type: plan
+  domain: SOX
+  version: 1.21
   status: Approved
   classification: Public
   publication_profile: public
-  owner_role: Governance Pillar Leader (Risk Register)
-  approval_authority: Governance Pillar Leader (Risk Register)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md
-  source_hash: 3394bbe694eafc0d3271c019e759004b4962db47b5ea1dc2a84b5f59165d3c80
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md
+  owner_role: 'Governance Pillar Leader (SOX Liaison)'
+  approval_authority: 'Governance Pillar Leader (SOX Liaison)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md
+  source_file: CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md
+  source_hash: 8b0936a6caaca6786226e9cbd7788b0416e4d81ff8bf6a82d240d865809a0e9f
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md
   llm_include: true
-  llm_priority: high
+  llm_priority: medium
   normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-TMPL-CUI-001
-  title: System Security Plan Template
-  document_type: template
-  domain: CUI
-  version: '1.0'
+  pillar: governance
+  summary: SOX ITGC Operational Package
+- document_id: CERG-PRC-AC-002
+  title: Access Management Runbook
+  document_type: procedure
+  domain: AC
+  version: 1.0
   status: Approved
   classification: Public
   publication_profile: public
-  owner_role: CMMC / Federal Compliance Manager
-  approval_authority: CMMC / Federal Compliance Manager
-  parent_artifact: CERG-POL-001
-  source_file: CERG-TMPL-CUI-001_System_Security_Plan_Template.md
-  source_hash: c74fb96c58a97df72055f170777c96cda72a22babc080186c209f49f16d32729
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-TMPL-CUI-001_System_Security_Plan_Template.md
+  owner_role: Identity Engineer
+  approval_authority: Identity Engineer
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: procedures/CERG-PRC-AC-002_Access_Management_Runbook.md
+  source_file: CERG-PRC-AC-002_Access_Management_Runbook.md
+  source_hash: 182242841534ece6d123a2e3475d8e5954b9841f8c7a45c05b288d681273f21b
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-AC-002_Access_Management_Runbook.md
   llm_include: true
-  llm_priority: high
+  llm_priority: medium
   normative_weight: supporting
-  summary: 1. [Purpose and Use](#1-purpose-and-use)
-- document_id: CERG-TMPL-CUI-002
-  title: Plan of Action and Milestones Template
-  document_type: template
-  domain: CUI
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: CMMC / Federal Compliance Manager
-  approval_authority: CMMC / Federal Compliance Manager
-  parent_artifact: CERG-POL-001
-  source_file: CERG-TMPL-CUI-002_POAM_Template.md
-  source_hash: dd4275c5844e5c589853b04c7e01210e2b080c22e624acecd453c71ae4fff680
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-TMPL-CUI-002_POAM_Template.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Use](#1-purpose-and-use)
-- document_id: CERG-TMPL-RM-002
-  title: Security Exception Request Form
-  document_type: template
-  domain: RM
-  version: '1.0'
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: Risk Register Owner
-  approval_authority: Risk Register Owner
-  parent_artifact: CERG-POL-001
-  source_file: CERG-TMPL-RM-002_Security_Exception_Request_Form.md
-  source_hash: a26c92754f02e61564c945f316c70f7399ce49f4b6e9cee1335fcbe6d313087b
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-TMPL-RM-002_Security_Exception_Request_Form.md
-  llm_include: true
-  llm_priority: high
-  normative_weight: supporting
-  summary: 1. [Purpose and Use](#1-purpose-and-use)
-- document_id: CERG-TMPL-AR-001
-  title: Architecture and Project Intake Form
-  document_type: template
+  pillar: risk
+  summary: Access Management Runbook
+- document_id: CERG-PRC-AR-001
+  title: Architecture Review and Project Intake Procedure
+  document_type: procedure
   domain: AR
-  version: '1.0'
+  version: 1.0
   status: Approved
   classification: Public
   publication_profile: public
   owner_role: Engineering Pillar Leader
   approval_authority: Engineering Pillar Leader
-  parent_artifact: CERG-POL-001
-  source_file: CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md
-  source_hash: f1a3e309552449cbcbcbc0163ad017bc5bab340a4f8891dc191a8db9ee2271ac
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
+  source_file: CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
+  source_hash: 26cec5183c962cd2bf24804fef66373f7a8d934dca307ae16387023463aa591b
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
   llm_include: true
-  llm_priority: high
+  llm_priority: medium
   normative_weight: supporting
-  summary: 1. [Purpose and Use](#1-purpose-and-use)
-- document_id: CERG-TMPL-TPRM-001
-  title: Vendor Security Questionnaire and TPRM Assessment Template
-  document_type: template
-  domain: TPRM
-  version: '1.0'
+  pillar: risk
+  summary: Architecture Review and Project Intake Procedure
+- document_id: CERG-PRC-AUD-001
+  title: Audit and Evidence Management Procedure
+  document_type: procedure
+  domain: AUD
+  version: 1.0
   status: Approved
   classification: Public
   publication_profile: public
-  owner_role: Vendor Risk Analyst
-  approval_authority: Vendor Risk Analyst
-  parent_artifact: CERG-POL-001
-  source_file: CERG-TMPL-TPRM-001_Vendor_Security_Questionnaire_and_Assessment_Template.md
-  source_hash: 5edce72bb5a925c5561f00183c82a24650762436d010040bfcde9d08a9755e78
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-TMPL-TPRM-001_Vendor_Security_Questionnaire_and_Assessment_Template.md
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md
+  source_file: CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md
+  source_hash: 2aecc8a5f442237d6fed89c6d15a0a1d78f2eb938b0777ca5bb678d568cf6a1d
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: risk
+  summary: Audit and Evidence Management Procedure
+- document_id: CERG-PRC-AV-001
+  title: Adversarial Validation Procedure
+  document_type: procedure
+  domain: AV
+  version: 1.2
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Adversarial Testing Lead
+  approval_authority: Adversarial Testing Lead
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md
+  source_file: CERG-PRC-AV-001_Adversarial_Validation_Procedure.md
+  source_hash: 0f6f3b09aef09fc307e289719f83678cfedc4b21eb829677117170dd8646d7f0
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: risk
+  summary: Adversarial Validation Procedure
+- document_id: CERG-PRC-CHG-001
+  title: Security Change Management Procedure
+  document_type: procedure
+  domain: CHG
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Engineering Pillar Leader
+  approval_authority: Engineering Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: procedures/CERG-PRC-CHG-001_Security_Change_Management_Procedure.md
+  source_file: CERG-PRC-CHG-001_Security_Change_Management_Procedure.md
+  source_hash: 6637cd8366c9104f0bd6d80a89f4f3e05735f499b2de6614786a8fbede8a1cb7
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-CHG-001_Security_Change_Management_Procedure.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: risk
+  summary: Security Change Management Procedure
+- document_id: CERG-PRC-IR-002
+  title: Incident Response Playbook Set
+  document_type: procedure
+  domain: IR
+  version: 1.0
+  status: External Interface
+  classification: External Interface
+  publication_profile: external_interface
+  owner_role: Standing IR Team / Incident Commander
+  approval_authority: Standing IR Team / Incident Commander
+  parent_artifact: 'N/A — adjacent-function artifact; cross-referenced by CERG for integration'
+  source_path: procedures/CERG-PRC-IR-002_Incident_Response_Playbook_Set.md
+  source_file: CERG-PRC-IR-002_Incident_Response_Playbook_Set.md
+  source_hash: 8c3e4a6f189ccee4d0214f1ed10502dac26aedf3e2a383e2db246d0e26b8f800
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-IR-002_Incident_Response_Playbook_Set.md
+  llm_include: false
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: risk
+  summary: Incident Response Playbook Set
+- document_id: CERG-PRC-LL-001
+  title: Lessons Learned and Program Improvement Procedure
+  document_type: procedure
+  domain: LL
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: procedures/CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md
+  source_file: CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md
+  source_hash: 21b47b7cfacfbae57a20295f1d3bdcc2c0070b3d12e2ecdb6876ea95e3fa9834
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: risk
+  summary: Lessons Learned and Program Improvement Procedure
+- document_id: CERG-PRC-RM-001
+  title: Risk Register and Exception Process
+  document_type: procedure
+  domain: RM
+  version: 1.01
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Risk Register Owner
+  approval_authority: Risk Register Owner
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
+  source_file: CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
+  source_hash: 6dc510ae347527a8dee2d09241cf85ce53adc24a61c4591c58009bc3de1f7618
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
   llm_include: true
   llm_priority: high
   normative_weight: supporting
-  summary: 1. [Purpose and Use](#1-purpose-and-use)
-- document_id: CERG-TMPL-RM-003
-  title: Risk Acceptance Memo Template
-  document_type: template
-  domain: RM
-  version: '1.0'
+  pillar: risk
+  summary: Risk Register and Exception Process
+- document_id: CERG-PRC-TI-001
+  title: Threat Intelligence Procedure
+  document_type: procedure
+  domain: TI
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
   owner_role: Risk Pillar Leader
   approval_authority: Risk Pillar Leader
-  parent_artifact: CERG-POL-001
-  source_file: CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md
-  source_hash: 0d5664d0efa45c84833afae977653b7c6ef2e8f50973f9cb8c6713f327a0ca92
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: procedures/CERG-PRC-TI-001_Threat_Intelligence_Procedure.md
+  source_file: CERG-PRC-TI-001_Threat_Intelligence_Procedure.md
+  source_hash: ffd8364f29b31c7054bae60845acc0d16b8f55c83a60efce2042c0bad67834a4
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-TI-001_Threat_Intelligence_Procedure.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: risk
+  summary: Threat Intelligence Procedure
+- document_id: CERG-PRC-TM-001
+  title: Threat Modeling Procedure
+  document_type: procedure
+  domain: TM
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Risk Pillar Leader
+  approval_authority: Risk Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: procedures/CERG-PRC-TM-001_Threat_Modeling_Procedure.md
+  source_file: CERG-PRC-TM-001_Threat_Modeling_Procedure.md
+  source_hash: 9a2418614239b43abb824493f1fce9a9669ed01d0890ac3b78f87bfbe8b6020e
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-TM-001_Threat_Modeling_Procedure.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: risk
+  summary: Threat Modeling Procedure
+- document_id: CERG-PRC-TPRM-001
+  title: Third Party and Supply Chain Risk Procedure
+  document_type: procedure
+  domain: TPRM
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Vendor Risk Analyst
+  approval_authority: Vendor Risk Analyst
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
+  source_file: CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
+  source_hash: 89259c7e5673ffeb13611f9f0bd4d6dc734744273ca28f4f42f202f69d5f2e17
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: risk
+  summary: Third Party and Supply Chain Risk Procedure
+- document_id: CERG-PRC-VM-001
+  title: Exposure Management Procedure
+  document_type: procedure
+  domain: VM
+  version: 2.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Exposure Management Lead
+  approval_authority: Exposure Management Lead
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md
+  source_file: CERG-PRC-VM-001_Exposure_Management_Procedure.md
+  source_hash: 18edd1fd67e6b5a736fefdbc75ff7d8a8fbb60a2c7b9a6e434e5511375a6179c
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md
   llm_include: true
   llm_priority: high
   normative_weight: supporting
-  summary: 1. [Purpose and Use](#1-purpose-and-use)
+  pillar: risk
+  summary: Exposure Management Procedure
+- document_id: CERG-GOV-JF-001
+  title: Job Families Overview
+  document_type: job_family
+  domain: JF
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Policy & Standards)'
+  approval_authority: 'Governance Pillar Leader (Policy & Standards)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/CERG-GOV-JF-001_Job_Families_Overview.md
+  source_file: CERG-GOV-JF-001_Job_Families_Overview.md
+  source_hash: 9b41944d8e04c783e0ed84ce10645f22a0a64f8c1acd5d00d36cb444615a1ca7
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/CERG-GOV-JF-001_Job_Families_Overview.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: governance
+  summary: Job Families Overview
+- document_id: CERG-GOV-JF-002
+  title: NICE Workforce Framework Crosswalk
+  document_type: job_family
+  domain: JF
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Policy & Standards)'
+  approval_authority: 'Governance Pillar Leader (Policy & Standards)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md
+  source_file: CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md
+  source_hash: c06b2912fbba16ef2b2d5f4f5271e3c074d010c73bc29c0d03ce25ccf5844703
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: governance
+  summary: NICE Workforce Framework Crosswalk
+- document_id: CERG-GOV-JD-ADJUNCT-000
+  title: Incident Response Family
+  document_type: job_description
+  domain: JD-ADJUNCT
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-000_Incident_Response_Family.md
+  source_file: CERG-GOV-JD-ADJUNCT-000_Incident_Response_Family.md
+  source_hash: 3398d77ad24bf5f54f0ef8a16f1189291100bccb61e6ab8350d5bee0e53116f9
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-000_Incident_Response_Family.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: adjacent
+  summary: Incident Response Family
+- document_id: CERG-GOV-JD-ADJUNCT-001
+  title: Incident Commander
+  document_type: job_description
+  domain: JD-ADJUNCT
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-001_Incident_Commander.md
+  source_file: CERG-GOV-JD-ADJUNCT-001_Incident_Commander.md
+  source_hash: 075246c5a9fa6c6326a08cf84e9b3211e5b96c794b94ebee11c11029c801d328
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-001_Incident_Commander.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: adjacent
+  summary: Incident Commander
+- document_id: CERG-GOV-JD-ADJUNCT-002
+  title: Lead Investigator
+  document_type: job_description
+  domain: JD-ADJUNCT
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-002_Lead_Investigator.md
+  source_file: CERG-GOV-JD-ADJUNCT-002_Lead_Investigator.md
+  source_hash: 77a0f2973f98a2a3e0898cb4c6ce550382cbd361e85ecd38fd44332dfe9de5d6
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-002_Lead_Investigator.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: adjacent
+  summary: Lead Investigator
+- document_id: CERG-GOV-JD-EXEC-000
+  title: Executive Leadership Family
+  document_type: job_description
+  domain: JD-EXEC
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: CISO
+  approval_authority: CISO
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-exec/CERG-GOV-JD-EXEC-000_Executive_Leadership_Family.md
+  source_file: CERG-GOV-JD-EXEC-000_Executive_Leadership_Family.md
+  source_hash: 36662154783ecdcba667d4c63f9b96e2c60f193d7be06149508a0266c22a95bc
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-exec/CERG-GOV-JD-EXEC-000_Executive_Leadership_Family.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: executive
+  summary: Executive Leadership Family
+- document_id: CERG-GOV-JD-EXEC-001
+  title: Chief Information Security Officer
+  document_type: job_description
+  domain: JD-EXEC
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: CISO
+  approval_authority: CISO
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-exec/CERG-GOV-JD-EXEC-001_Chief_Information_Security_Officer.md
+  source_file: CERG-GOV-JD-EXEC-001_Chief_Information_Security_Officer.md
+  source_hash: e4fe5e7a72eded4b4308a336bd780cc02fca3fa4fd097e85c41ccb9021060d2f
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-exec/CERG-GOV-JD-EXEC-001_Chief_Information_Security_Officer.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: executive
+  summary: Chief Information Security Officer
+- document_id: CERG-GOV-JD-EXEC-002
+  title: Executive Sponsor
+  document_type: job_description
+  domain: JD-EXEC
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: CISO
+  approval_authority: CISO
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-exec/CERG-GOV-JD-EXEC-002_Executive_Sponsor.md
+  source_file: CERG-GOV-JD-EXEC-002_Executive_Sponsor.md
+  source_hash: a13b726a9ba42b9caed9f3d1a46e77cd8c579c6e9b60f369bf14c312dd02c3b5
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-exec/CERG-GOV-JD-EXEC-002_Executive_Sponsor.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: executive
+  summary: Executive Sponsor
+- document_id: CERG-GOV-JD-GOVCOMP-000
+  title: Governance Compliance Family
+  document_type: job_description
+  domain: JD-GOVCOMP
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-000_Governance_Compliance_Family.md
+  source_file: CERG-GOV-JD-GOVCOMP-000_Governance_Compliance_Family.md
+  source_hash: 4c24b918df00f8ae6c2e672b4d8484b722c603ca2fcd21c1dcbd8fafbf006a8e
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-000_Governance_Compliance_Family.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: governance
+  summary: Governance Compliance Family
+- document_id: CERG-GOV-JD-GOVCOMP-001
+  title: NERC-CIP Compliance Manager
+  document_type: job_description
+  domain: JD-GOVCOMP
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-001_NERC-CIP_Compliance_Manager.md
+  source_file: CERG-GOV-JD-GOVCOMP-001_NERC-CIP_Compliance_Manager.md
+  source_hash: 82b5604afe50122a425cc5053877b94f2450c1147eda063d358171514e2d8ffc
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-001_NERC-CIP_Compliance_Manager.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: governance
+  summary: NERC-CIP Compliance Manager
+- document_id: CERG-GOV-JD-GOVCOMP-002
+  title: CMMC Federal Compliance Manager
+  document_type: job_description
+  domain: JD-GOVCOMP
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-002_CMMC_Federal_Compliance_Manager.md
+  source_file: CERG-GOV-JD-GOVCOMP-002_CMMC_Federal_Compliance_Manager.md
+  source_hash: b81206e06378608eafa46b10cd01d327750417d7e89c2e6aa24cffcbdc851e0a
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-002_CMMC_Federal_Compliance_Manager.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: governance
+  summary: CMMC Federal Compliance Manager
+- document_id: CERG-GOV-JD-GOVCOMP-003
+  title: SOX ITGC Lead
+  document_type: job_description
+  domain: JD-GOVCOMP
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-003_SOX_ITGC_Lead.md
+  source_file: CERG-GOV-JD-GOVCOMP-003_SOX_ITGC_Lead.md
+  source_hash: 3966b2f9dcadd8369943dd120e23c4f4006199deeff197f201c8ac4f2dcc4896
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-003_SOX_ITGC_Lead.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: governance
+  summary: SOX ITGC Lead
+- document_id: CERG-GOV-JD-GOVCOMP-004
+  title: Policy and Standards Manager
+  document_type: job_description
+  domain: JD-GOVCOMP
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-004_Policy_and_Standards_Manager.md
+  source_file: CERG-GOV-JD-GOVCOMP-004_Policy_and_Standards_Manager.md
+  source_hash: cfb06ed84cc44d59f7003244729ac5ef62e6bb5f2336b1a24a2c3470b7199753
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-004_Policy_and_Standards_Manager.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: governance
+  summary: Policy and Standards Manager
+- document_id: CERG-GOV-JD-GOVCOMP-005
+  title: Risk Register Owner
+  document_type: job_description
+  domain: JD-GOVCOMP
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-005_Risk_Register_Owner.md
+  source_file: CERG-GOV-JD-GOVCOMP-005_Risk_Register_Owner.md
+  source_hash: 5f2d396ffbb1d57e29c1603c08d18625622290d4289483c60c04c3af98dcd0ce
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-005_Risk_Register_Owner.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: governance
+  summary: Risk Register Owner
+- document_id: CERG-GOV-JD-GOVCOMP-006
+  title: Evidence Librarian
+  document_type: job_description
+  domain: JD-GOVCOMP
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-006_Evidence_Librarian.md
+  source_file: CERG-GOV-JD-GOVCOMP-006_Evidence_Librarian.md
+  source_hash: 6feb0ccc0211252b16f1896b2976db8a4fb74a320f0ec313848d02fa1365670e
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-006_Evidence_Librarian.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: governance
+  summary: Evidence Librarian
+- document_id: CERG-GOV-JD-GOVCOMP-007
+  title: Governance Pillar Leader
+  document_type: job_description
+  domain: JD-GOVCOMP
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-007_Governance_Pillar_Leader.md
+  source_file: CERG-GOV-JD-GOVCOMP-007_Governance_Pillar_Leader.md
+  source_hash: 7ac63faf069e5e0163ec7a878b224b20d028ae23d8cb17b4c9cd6175d6292131
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-007_Governance_Pillar_Leader.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: governance
+  summary: Governance Pillar Leader
+- document_id: CERG-GOV-JD-RISKOPS-000
+  title: Risk Operations Family
+  document_type: job_description
+  domain: JD-RISKOPS
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Risk Pillar Leader
+  approval_authority: Risk Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-000_Risk_Operations_Family.md
+  source_file: CERG-GOV-JD-RISKOPS-000_Risk_Operations_Family.md
+  source_hash: 4c337d18b497bdc3e40b7a4afc315d64a0d905038d8670416286dd945fecd719
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-000_Risk_Operations_Family.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: risk
+  summary: Risk Operations Family
+- document_id: CERG-GOV-JD-RISKOPS-001
+  title: Exposure Management Lead
+  document_type: job_description
+  domain: JD-RISKOPS
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Risk Pillar Leader
+  approval_authority: Risk Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md
+  source_file: CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md
+  source_hash: 42d73785e2c9e2e6f86d8a05331a9e77d2a1c7ad7a22b44b3f1a48e9de332e5a
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: risk
+  summary: Exposure Management Lead
+- document_id: CERG-GOV-JD-RISKOPS-002
+  title: Adversarial Testing Lead
+  document_type: job_description
+  domain: JD-RISKOPS
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Risk Pillar Leader
+  approval_authority: Risk Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-002_Adversarial_Testing_Lead.md
+  source_file: CERG-GOV-JD-RISKOPS-002_Adversarial_Testing_Lead.md
+  source_hash: fe1d38f5e584c68658f606445bc17da71b2cbc5b7e00ce7cde8affd7eab9b6f8
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-002_Adversarial_Testing_Lead.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: risk
+  summary: Adversarial Testing Lead
+- document_id: CERG-GOV-JD-RISKOPS-003
+  title: Threat Intelligence Analyst
+  document_type: job_description
+  domain: JD-RISKOPS
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Risk Pillar Leader
+  approval_authority: Risk Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-003_Threat_Intelligence_Analyst.md
+  source_file: CERG-GOV-JD-RISKOPS-003_Threat_Intelligence_Analyst.md
+  source_hash: 05d3ffde73a8969a88b962693eaca8b16e14c3ee151547afa382ed6dff391c71
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-003_Threat_Intelligence_Analyst.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: risk
+  summary: Threat Intelligence Analyst
+- document_id: CERG-GOV-JD-RISKOPS-004
+  title: Detection Engineer
+  document_type: job_description
+  domain: JD-RISKOPS
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Risk Pillar Leader
+  approval_authority: Risk Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md
+  source_file: CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md
+  source_hash: 991a1233efdeccbfe36b885a7261b4aa945a284a3c1e8f05ca599b365ff9ca8b
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: risk
+  summary: Detection Engineer
+- document_id: CERG-GOV-JD-RISKOPS-005
+  title: OT Risk Analyst
+  document_type: job_description
+  domain: JD-RISKOPS
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Risk Pillar Leader
+  approval_authority: Risk Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-005_OT_Risk_Analyst.md
+  source_file: CERG-GOV-JD-RISKOPS-005_OT_Risk_Analyst.md
+  source_hash: de6b48bc1462178636be0f05e5b7c32a741ca62e7f3b3aa27dd8c4d81401e7ad
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-005_OT_Risk_Analyst.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: risk
+  summary: OT Risk Analyst
+- document_id: CERG-GOV-JD-RISKOPS-006
+  title: Identity Risk Analyst
+  document_type: job_description
+  domain: JD-RISKOPS
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Risk Pillar Leader
+  approval_authority: Risk Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-006_Identity_Risk_Analyst.md
+  source_file: CERG-GOV-JD-RISKOPS-006_Identity_Risk_Analyst.md
+  source_hash: 6f428081ff3492eb93c3abe8308f64aedaae51c48bd0e5c433ccfdfb2ccda52b
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-006_Identity_Risk_Analyst.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: risk
+  summary: Identity Risk Analyst
+- document_id: CERG-GOV-JD-RISKOPS-007
+  title: Vendor Risk Analyst
+  document_type: job_description
+  domain: JD-RISKOPS
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Risk Pillar Leader
+  approval_authority: Risk Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-007_Vendor_Risk_Analyst.md
+  source_file: CERG-GOV-JD-RISKOPS-007_Vendor_Risk_Analyst.md
+  source_hash: d4639569a806b924a9cd6177a1d3f2f11574d4e59ff0b6fd8e87cc1bde6c799c
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-007_Vendor_Risk_Analyst.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: risk
+  summary: Vendor Risk Analyst
+- document_id: CERG-GOV-JD-RISKOPS-008
+  title: Risk Pillar Leader
+  document_type: job_description
+  domain: JD-RISKOPS
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Risk Pillar Leader
+  approval_authority: Risk Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-008_Risk_Pillar_Leader.md
+  source_file: CERG-GOV-JD-RISKOPS-008_Risk_Pillar_Leader.md
+  source_hash: 5f3166e8ec63838d8cbf0aaed574bde24fbe55b75fab247b5e235d17d287d62b
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-008_Risk_Pillar_Leader.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: risk
+  summary: Risk Pillar Leader
+- document_id: CERG-GOV-JD-SECENG-000
+  title: Security Engineering Family
+  document_type: job_description
+  domain: JD-SECENG
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Engineering Pillar Leader
+  approval_authority: Engineering Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-000_Security_Engineering_Family.md
+  source_file: CERG-GOV-JD-SECENG-000_Security_Engineering_Family.md
+  source_hash: 735fec27adaf89d062b615f5457772962aca57c16d8b03885e37de9adc7098ee
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-000_Security_Engineering_Family.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: engineering
+  summary: Security Engineering Family
+- document_id: CERG-GOV-JD-SECENG-001
+  title: Cloud Security Engineer
+  document_type: job_description
+  domain: JD-SECENG
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Engineering Pillar Leader
+  approval_authority: Engineering Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-001_Cloud_Security_Engineer.md
+  source_file: CERG-GOV-JD-SECENG-001_Cloud_Security_Engineer.md
+  source_hash: c846f3261cb10afd0f818da6e0873fb1eae1c7b3085c345784266514a1090cf4
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-001_Cloud_Security_Engineer.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: engineering
+  summary: Cloud Security Engineer
+- document_id: CERG-GOV-JD-SECENG-002
+  title: Identity Engineer
+  document_type: job_description
+  domain: JD-SECENG
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Engineering Pillar Leader
+  approval_authority: Engineering Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-002_Identity_Engineer.md
+  source_file: CERG-GOV-JD-SECENG-002_Identity_Engineer.md
+  source_hash: 4a45e442231c5b57a1399146b15244d066550156c0256b24976e7172f0a493d7
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-002_Identity_Engineer.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: engineering
+  summary: Identity Engineer
+- document_id: CERG-GOV-JD-SECENG-003
+  title: OT Security Engineer
+  document_type: job_description
+  domain: JD-SECENG
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Engineering Pillar Leader
+  approval_authority: Engineering Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-003_OT_Security_Engineer.md
+  source_file: CERG-GOV-JD-SECENG-003_OT_Security_Engineer.md
+  source_hash: 1c4f64083e8df91947cc6cbc08c83aa5dfad8415d3378c00612e1afc6283baf4
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-003_OT_Security_Engineer.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: engineering
+  summary: OT Security Engineer
+- document_id: CERG-GOV-JD-SECENG-004
+  title: Application Security Engineer
+  document_type: job_description
+  domain: JD-SECENG
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Engineering Pillar Leader
+  approval_authority: Engineering Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-004_Application_Security_Engineer.md
+  source_file: CERG-GOV-JD-SECENG-004_Application_Security_Engineer.md
+  source_hash: 62dc970c6ec81e573fea16811324eceb9253e2f563f37925332999cabfd9df20
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-004_Application_Security_Engineer.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: engineering
+  summary: Application Security Engineer
+- document_id: CERG-GOV-JD-SECENG-005
+  title: Endpoint Engineer
+  document_type: job_description
+  domain: JD-SECENG
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Engineering Pillar Leader
+  approval_authority: Engineering Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md
+  source_file: CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md
+  source_hash: c821e07a9f27d306eb2b669d64617a6bb70010d2c432c08fd766b8e9434ed5c7
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: engineering
+  summary: Endpoint Engineer
+- document_id: CERG-GOV-JD-SECENG-006
+  title: Cryptography Engineer
+  document_type: job_description
+  domain: JD-SECENG
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Engineering Pillar Leader
+  approval_authority: Engineering Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-006_Cryptography_Engineer.md
+  source_file: CERG-GOV-JD-SECENG-006_Cryptography_Engineer.md
+  source_hash: 3c2e2ec7d07ff5b76744b65eb29ca9ac22d5131802341c9f0df6e89b50ecf955
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-006_Cryptography_Engineer.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: engineering
+  summary: Cryptography Engineer
+- document_id: CERG-GOV-JD-SECENG-007
+  title: Engineering Pillar Leader
+  document_type: job_description
+  domain: JD-SECENG
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Engineering Pillar Leader
+  approval_authority: Engineering Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-007_Engineering_Pillar_Leader.md
+  source_file: CERG-GOV-JD-SECENG-007_Engineering_Pillar_Leader.md
+  source_hash: 2be01207190a574e9014f76aaa0af6d56d9ba7935e202033540a17ea37da5372
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-007_Engineering_Pillar_Leader.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: engineering
+  summary: Engineering Pillar Leader
+- document_id: CERG-GOV-JD-SECENG-008
+  title: Pre-production Reviewer
+  document_type: job_description
+  domain: JD-SECENG
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Engineering Pillar Leader
+  approval_authority: Engineering Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-008_Pre-production_Reviewer.md
+  source_file: CERG-GOV-JD-SECENG-008_Pre-production_Reviewer.md
+  source_hash: e636e498cce2cf3eb826f2f084d56832f819380bba24ffe5d768f62f6dfa092e
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-008_Pre-production_Reviewer.md
+  llm_include: true
+  llm_priority: low
+  normative_weight: supporting
+  pillar: engineering
+  summary: Pre-production Reviewer
+- document_id: CERG-STD-AC-001
+  title: Access Management Standard
+  document_type: standard
+  domain: AC
+  version: 1.21
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: standards/CERG-STD-AC-001_Access_Management_Standard.md
+  source_file: CERG-STD-AC-001_Access_Management_Standard.md
+  source_hash: 9366a6ad85f3c16e6a691c5f1736a722c15762b418f36a93d664588e2c01f2f6
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-AC-001_Access_Management_Standard.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: engineering
+  summary: Access Management Standard
+- document_id: CERG-STD-AI-001
+  title: Artificial Intelligence Security Standard
+  document_type: standard
+  domain: AI
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Engineering Pillar Leader (Application Security)'
+  approval_authority: 'Engineering Pillar Leader (Application Security)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md
+  source_file: CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md
+  source_hash: 6b110ab9e70b8ac7dc18eba4a912bc6a64595a9a8b0f330c9ec2364e74c863c0
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: engineering
+  summary: Artificial Intelligence Security Standard
+- document_id: CERG-STD-AM-001
+  title: Asset Management and Inventory Standard
+  document_type: standard
+  domain: AM
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Engineering Pillar Leader (Platforms)'
+  approval_authority: 'Engineering Pillar Leader (Platforms)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md
+  source_file: CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md
+  source_hash: bb67ee68a9571e64dadfc46b3c4d4702325e34f9234b522ca45a5ac867488c08
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: engineering
+  summary: Asset Management and Inventory Standard
+- document_id: CERG-STD-CFG-001
+  title: Secure Configuration Baseline Standard DISH
+  document_type: standard
+  domain: CFG
+  version: 1.21
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Engineering Pillar Leader (Platforms)'
+  approval_authority: 'Engineering Pillar Leader (Platforms)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md
+  source_file: CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md
+  source_hash: 30e8f7480dc94a0cb8bc208f232a97a52afdaddb304c33b765f7ca3b7d3fad2e
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: engineering
+  summary: Secure Configuration Baseline Standard DISH
+- document_id: CERG-STD-CR-001
+  title: Cryptography and Key Management Standard
+  document_type: standard
+  domain: CR
+  version: 1.21
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Engineering Pillar Leader (Platforms)'
+  approval_authority: 'Engineering Pillar Leader (Platforms)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md
+  source_file: CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md
+  source_hash: 2123fe8c934a575e739cd4e9db567a17d32413ec8f0d0b48b89cb24075d71bc1
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: engineering
+  summary: Cryptography and Key Management Standard
+- document_id: CERG-STD-CUI-001
+  title: CUI Handling Standard
+  document_type: standard
+  domain: CUI
+  version: 1.21
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: CMMC / Federal Compliance Manager
+  approval_authority: CMMC / Federal Compliance Manager
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: standards/CERG-STD-CUI-001_CUI_Handling_Standard.md
+  source_file: CERG-STD-CUI-001_CUI_Handling_Standard.md
+  source_hash: d165992c06b912898a4f15e24fde54f87bff3770bde1507179f4929d73da2d95
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-CUI-001_CUI_Handling_Standard.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: engineering
+  summary: CUI Handling Standard
+- document_id: CERG-STD-DG-001
+  title: Data Governance and Classification Standard
+  document_type: standard
+  domain: DG
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Policy & Standards)'
+  approval_authority: 'Governance Pillar Leader (Policy & Standards)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md
+  source_file: CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md
+  source_hash: e8b8b19ad6788bfb6e6315a7c0923b6ca809cfed510e5ffb6ad4f34e092e34ec
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: engineering
+  summary: Data Governance and Classification Standard
+- document_id: CERG-STD-EP-001
+  title: Endpoint and Mobile Security Standard
+  document_type: standard
+  domain: EP
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Engineering Pillar Leader (Endpoint)'
+  approval_authority: 'Engineering Pillar Leader (Endpoint)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: standards/CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md
+  source_file: CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md
+  source_hash: e8ed2dea197c70ee6e55a5742b9cad3100c60e5457e0cb10cfa1c2c5e6760c09
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: engineering
+  summary: Endpoint and Mobile Security Standard
+- document_id: CERG-STD-IT-001
+  title: IT Cloud SaaS Security Standard
+  document_type: standard
+  domain: IT
+  version: 1.21
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md
+  source_file: CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md
+  source_hash: 2f52cd46bb877304a53011b1d81cf33c592ab7611a87c8fe27a9fea80a960aee
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: engineering
+  summary: IT Cloud SaaS Security Standard
+- document_id: CERG-STD-LM-001
+  title: Logging Monitoring and Detection Standard
+  document_type: standard
+  domain: LM
+  version: 1.21
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Risk Pillar Leader (Detection Engineering)'
+  approval_authority: 'Risk Pillar Leader (Detection Engineering)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md
+  source_file: CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md
+  source_hash: 29d9b2d5b9159fcb56beb1bff8fb9d2fa1da3cae899caa57b6d6f70b86666c06
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: engineering
+  summary: Logging Monitoring and Detection Standard
+- document_id: CERG-STD-MSG-001
+  title: Email and Messaging Security Standard
+  document_type: standard
+  domain: MSG
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Engineering Pillar Leader (Platforms)'
+  approval_authority: 'Engineering Pillar Leader (Platforms)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: standards/CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md
+  source_file: CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md
+  source_hash: cd7e810f1b1329ab95ef34560150b084e84d49d8cf9691aef66dae0f6e3830db
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: engineering
+  summary: Email and Messaging Security Standard
+- document_id: CERG-STD-NET-001
+  title: Network Security and Segmentation Standard
+  document_type: standard
+  domain: NET
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Engineering Pillar Leader (Platforms)'
+  approval_authority: 'Engineering Pillar Leader (Platforms)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: standards/CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md
+  source_file: CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md
+  source_hash: 66e7fc4240aaafb2b7757f1ac08c6dd6fadb86f4b0a3b36e1cc676357139cf3a
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: engineering
+  summary: Network Security and Segmentation Standard
+- document_id: CERG-STD-OT-001
+  title: Grid Control Systems Security Standard
+  document_type: standard
+  domain: OT
+  version: 1.21
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (OT/NERC-CIP)'
+  approval_authority: 'Governance Pillar Leader (OT/NERC-CIP)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md
+  source_file: CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md
+  source_hash: 42efad2b7a503a3932813140e4d922ca6d9816e18c92b9bf55ab647cea12ff62
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: engineering
+  summary: Grid Control Systems Security Standard
+- document_id: CERG-STD-RES-001
+  title: Cyber Resilience and Backup Standard
+  document_type: standard
+  domain: RES
+  version: 1.21
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Engineering Pillar Leader (Resilience)'
+  approval_authority: 'Engineering Pillar Leader (Resilience)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md
+  source_file: CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md
+  source_hash: d6ea1e94e1651a417a884023e8daf06b3432faf4ba35e1fc72fc502c0d6feb03
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: engineering
+  summary: Cyber Resilience and Backup Standard
+- document_id: CERG-STD-SDL-001
+  title: Secure Software Development and Application Security Standard
+  document_type: standard
+  domain: SDL
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Engineering Pillar Leader (Application Security)'
+  approval_authority: 'Engineering Pillar Leader (Application Security)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md
+  source_file: CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md
+  source_hash: a0bbe44d17a3a7af493ed1667bb35b2132bff3ff2aeff946b164f9cecc5c86ce
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: engineering
+  summary: Secure Software Development and Application Security Standard
+- document_id: CERG-TMPL-AR-001
+  title: Architecture and Project Intake Form
+  document_type: template
+  domain: AR
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Engineering Pillar Leader
+  approval_authority: Engineering Pillar Leader
+  parent_artifact: 'CERG-PRC-AR-001 — Architecture Review and Project Intake Procedure'
+  source_path: templates/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md
+  source_file: CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md
+  source_hash: b661d0eab2788f88a675f643da31ef2c82898646d06f919e609d3f80f16045a1
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Architecture and Project Intake Form
 - document_id: CERG-TMPL-AUD-001
   title: Control Evidence and Test Worksheet
   document_type: template
   domain: AUD
-  version: '1.0'
+  version: 1.0
   status: Approved
   classification: Public
   publication_profile: public
   owner_role: Evidence Librarian
   approval_authority: Evidence Librarian
-  parent_artifact: CERG-POL-001
+  parent_artifact: 'CERG-PRC-AUD-001 — Audit and Evidence Management Procedure'
+  source_path: templates/CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md
   source_file: CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md
-  source_hash: 9f7976f30604580a4fe62fc5320bb9175863c5becf43cd25a834468b0c0577b2
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md
+  source_hash: c0db840b26dcd7d2baad5a7e437a06f96ed9aef200ec4554e8f4ae4e042a2abb
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md
   llm_include: true
-  llm_priority: high
+  llm_priority: medium
   normative_weight: supporting
-  summary: 1. [Purpose and Use](#1-purpose-and-use)
-- document_id: CERG-TMPL-MTR-001
-  title: Board and CISO Reporting Deck Template
+  pillar: governance
+  summary: Control Evidence and Test Worksheet
+- document_id: CERG-TMPL-CUI-001
+  title: System Security Plan Template
   document_type: template
-  domain: MTR
-  version: '1.0'
+  domain: CUI
+  version: 1.0
   status: Approved
   classification: Public
   publication_profile: public
-  owner_role: Governance Pillar Leader
-  approval_authority: Governance Pillar Leader
-  parent_artifact: CERG-POL-001
-  source_file: CERG-TMPL-MTR-001_Board_and_CISO_Reporting_Deck_Template.md
-  source_hash: 8e7b3f393d7fe60bf4866166974f948213cfa1dd94a221c1b57d67ae6a59b656
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-TMPL-MTR-001_Board_and_CISO_Reporting_Deck_Template.md
+  owner_role: CMMC / Federal Compliance Manager
+  approval_authority: CMMC / Federal Compliance Manager
+  parent_artifact: 'CERG-PLN-CUI-001 — CUI / CMMC Operational Package'
+  source_path: templates/CERG-TMPL-CUI-001_System_Security_Plan_Template.md
+  source_file: CERG-TMPL-CUI-001_System_Security_Plan_Template.md
+  source_hash: 66028cce486be3793e08a75a89693c37da043e428e670c0d3cc8f77d97d56b36
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-CUI-001_System_Security_Plan_Template.md
   llm_include: true
-  llm_priority: high
+  llm_priority: medium
   normative_weight: supporting
-  summary: 1. [Purpose and Use](#1-purpose-and-use)
+  pillar: governance
+  summary: System Security Plan Template
+- document_id: CERG-TMPL-CUI-002
+  title: POAM Template
+  document_type: template
+  domain: CUI
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: CMMC / Federal Compliance Manager
+  approval_authority: CMMC / Federal Compliance Manager
+  parent_artifact: 'CERG-PLN-CUI-001 — CUI / CMMC Operational Package'
+  source_path: templates/CERG-TMPL-CUI-002_POAM_Template.md
+  source_file: CERG-TMPL-CUI-002_POAM_Template.md
+  source_hash: 7a2f07a0829a118353768584ae366a4802e53b8397a6c15c2215d16106b1bdfc
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-CUI-002_POAM_Template.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: POAM Template
 - document_id: CERG-TMPL-GOV-001
   title: Stakeholder Perception Survey
   document_type: template
   domain: GOV
-  version: '1.0'
+  version: 1.0
   status: Approved
   classification: Public
   publication_profile: public
   owner_role: Governance Pillar Leader
   approval_authority: Governance Pillar Leader
-  parent_artifact: CERG-POL-001
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: templates/CERG-TMPL-GOV-001_Stakeholder_Perception_Survey.md
   source_file: CERG-TMPL-GOV-001_Stakeholder_Perception_Survey.md
-  source_hash: 98ccace2cde466d9ff7b2cad0a96b74d4a1f32c853a9a47ecb89a98b0c3cb3cd
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-TMPL-GOV-001_Stakeholder_Perception_Survey.md
+  source_hash: 53950b597fcc08138d951455276ad576f8d31ff899a9f7a78b60a62c909d2150
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-GOV-001_Stakeholder_Perception_Survey.md
   llm_include: true
-  llm_priority: high
+  llm_priority: medium
   normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
-- document_id: CERG-GOV-CAT-001
-  title: Document Catalog and Naming Convention
-  document_type: governance_instrument
-  domain: CAT
-  version: '1.30'
+  pillar: governance
+  summary: Stakeholder Perception Survey
+- document_id: CERG-TMPL-MTR-001
+  title: Board and CISO Reporting Deck Template
+  document_type: template
+  domain: MTR
+  version: 1.0
   status: Approved
   classification: Public
   publication_profile: public
-  owner_role: Governance Pillar Leader (Document Control)
-  approval_authority: Governance Pillar Leader (Document Control)
-  parent_artifact: CERG-POL-001
-  source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  source_hash: ca96b9a23d13ef66d2c45e9d54b72ef249decaf871ac0f7214822c726114fb7a
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-GOV-MTR-001 — Metrics Dashboard and Reporting'
+  source_path: templates/CERG-TMPL-MTR-001_Board_and_CISO_Reporting_Deck_Template.md
+  source_file: CERG-TMPL-MTR-001_Board_and_CISO_Reporting_Deck_Template.md
+  source_hash: 2b20eee3306907d54eb24d2ac44faa2348185698a808c38b891fc3b215586904
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-MTR-001_Board_and_CISO_Reporting_Deck_Template.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Board and CISO Reporting Deck Template
+- document_id: CERG-TMPL-RM-001
+  title: Risk Register Templates and Reporting
+  document_type: template
+  domain: RM
+  version: 1.21
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Risk Register)'
+  approval_authority: 'Governance Pillar Leader (Risk Register)'
+  parent_artifact: ''
+  source_path: templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md
+  source_file: CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md
+  source_hash: 58ee1329bc1471d8a04e655a55241af8e5d9d51e4de13eef6ad7238a47429fde
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md
   llm_include: true
   llm_priority: high
   normative_weight: supporting
-  summary: 1. [Purpose and Scope](#1-purpose-and-scope)
+  pillar: governance
+  summary: Risk Register Templates and Reporting
+- document_id: CERG-TMPL-RM-002
+  title: Security Exception Request Form
+  document_type: template
+  domain: RM
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Risk Register Owner
+  approval_authority: Risk Register Owner
+  parent_artifact: 'CERG-PRC-RM-001 — Risk Register and Exception Process'
+  source_path: templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md
+  source_file: CERG-TMPL-RM-002_Security_Exception_Request_Form.md
+  source_hash: 976ed4e0eb7e43f78ee97e99824296816008bd5f711f4906f380a292a4bb3bc8
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Security Exception Request Form
+- document_id: CERG-TMPL-RM-003
+  title: Risk Acceptance Memo Template
+  document_type: template
+  domain: RM
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Risk Pillar Leader
+  approval_authority: Risk Pillar Leader
+  parent_artifact: 'CERG-PRC-RM-001 — Risk Register and Exception Process'
+  source_path: templates/CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md
+  source_file: CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md
+  source_hash: e103409c6f8cd46045dd1a9e1463754ffc54004b892ca09db5eab98e39d7ac6f
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Risk Acceptance Memo Template
+- document_id: CERG-TMPL-TPRM-001
+  title: Vendor Security Questionnaire and Assessment Template
+  document_type: template
+  domain: TPRM
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Vendor Risk Analyst
+  approval_authority: Vendor Risk Analyst
+  parent_artifact: 'CERG-PRC-TPRM-001 — Third-Party and Supply Chain Risk Procedure'
+  source_path: templates/CERG-TMPL-TPRM-001_Vendor_Security_Questionnaire_and_Assessment_Template.md
+  source_file: CERG-TMPL-TPRM-001_Vendor_Security_Questionnaire_and_Assessment_Template.md
+  source_hash: 81bd6590ad5b222b46a831a3e069e02a5960d1f7b2ee57e52d853971ac45c854
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-TPRM-001_Vendor_Security_Questionnaire_and_Assessment_Template.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Vendor Security Questionnaire and Assessment Template
