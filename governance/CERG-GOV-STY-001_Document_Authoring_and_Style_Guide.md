@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-STY-001 |
-| **Version** | 1.0 |
+| **Version** | 1.01 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
@@ -157,9 +157,12 @@ Do not rename existing files casually. Links, catalog rows, and references depen
 | **Status** | **Use** |
 |---|---|
 | Draft | New artifact awaiting formal approval. |
-| Approved | Human owner has approved the artifact for use. |
-| Published | Catalog or public-facing instrument formally maintained as active. |
+| For Review | Draft artifact out for stakeholder or CISO review. |
+| Approved | Human owner has approved the artifact for use; authoritative for operations and audit. |
+| External Interface | Adjacent-function artifact included for cross-reference only; not CERG-governed. |
 | Retired | Artifact no longer authoritative but retained for history. |
+
+Publication is not a lifecycle status. Public-release eligibility is tracked separately in the publication manifest.
 
 Do not self-approve new artifacts. If approval is pending, write `CISO (pending)` or the appropriate pending approver.
 
@@ -354,8 +357,10 @@ Every CERG document follows a defined lifecycle from creation through retirement
 |---|---|---|
 | Planned | Artifact has an ID and owner but no draft yet | Governance Pillar Leader |
 | Draft | Work in progress; not authoritative | Any author |
-| Published | Approved and active; authoritative for operations and audit | CISO |
-| Retired | No longer authoritative but retained for history | CISO |
+| For Review | Stakeholder or CISO review in progress | Governance Pillar Leader or document owner |
+| Approved | Approved and active; authoritative for operations and audit | Approval authority defined in CAT-001 §4 |
+| External Interface | Adjacent-function artifact included for cross-reference only | Adjacent-function owner, recorded by Governance |
+| Retired | No longer authoritative but retained for history | CISO or Governance Pillar Leader |
 
 ### Lifecycle Workflow
 
@@ -363,8 +368,8 @@ Every CERG document follows a defined lifecycle from creation through retirement
 2. **Peer Review**: Draft is reviewed by a second qualified analyst from the same or adjacent pillar. Review checks structure, cross-references, role discipline, and framework alignment.
 3. **Pillar Leader Approval**: The owning pillar leader reviews and approves the document for publication.
 4. **CISO Approval**: The CISO (or CISO designee) gives final approval. Material changes to policy (CERG-POL-001) require CISO approval directly.
-5. **Publish**: Status is set to `Published` in both the header and Document Control section. The document is added to the catalog if new, or the catalog entry is updated if revised.
-6. **Annual Review**: Each Published document is reviewed at least annually. The review is triggered by the review cycle defined in the document's front matter or by material changes to referenced frameworks, regulations, or organizational structure.
+5. **Approve / Release**: Status is set to `Approved` in both the header and Document Control section. The document is added to the catalog if new, or the catalog entry is updated if revised. Public-release eligibility is recorded separately in the publication manifest.
+6. **Scheduled Review**: Each Approved document is reviewed on its assigned review cadence. The review is triggered by the review cycle defined in the document's front matter or by material changes to referenced frameworks, regulations, or organizational structure.
 7. **Retire**: Documents that are superseded or no longer applicable are set to `Retired` status. The document is not deleted; it remains in the repository for historical reference.
 
 ### Emergency Fast-Track
@@ -381,7 +386,7 @@ When a document is needed urgently (e.g., to address a new regulatory requiremen
 
 ### Change Log Requirements
 
-Every edit to a Published document must include a Revision History entry with:
+Every edit to an Approved document must include a Revision History entry with:
 - Version number
 - Date
 - Author
@@ -404,9 +409,9 @@ When a new framework revision is published (e.g., NIST 800-53 Rev 6, NIST 800-17
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-STY-001 |
-| **Version** | 1.0 |
+| **Version** | 1.01 |
 | **Status** | Approved |
-| **Effective Date** | 2026-05-22 |
+| **Effective Date** | 2026-06-14 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
 | **Approved By** | CISO |
@@ -421,7 +426,8 @@ When a new framework revision is published (e.g., NIST 800-53 Rev 6, NIST 800-17
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.0 Draft | 2026-05-22 | Cyber Governance | Initial release. Establishes the CERG house style, metadata and skeleton rules, role and cross-reference discipline, language rules, org-adaptation guidance, and pre-commit quality gates. |
+| 1.01 | 2026-06-14 | Governance Pillar Leader | Aligned status lifecycle language to CAT-001 by using Approved as the authoritative status and treating publication eligibility as separate metadata. |
+| 1.0 | 2026-05-22 | Cyber Governance | Initial release. Establishes the CERG house style, metadata and skeleton rules, role and cross-reference discipline, language rules, org-adaptation guidance, and pre-commit quality gates. |
 
 ### Review Triggers
 
