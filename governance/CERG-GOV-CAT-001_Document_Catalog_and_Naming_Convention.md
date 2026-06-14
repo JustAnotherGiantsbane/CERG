@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.33 |
+| **Version** | 1.34 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -425,11 +425,13 @@ Other templates remain embedded as appendices of their parent procedure or plan 
 The `machine-readable/` directory contains YAML specifications generated from the CERG corpus for LLM and automation consumption. These are derived artifacts, not independently authored documents. See `machine-readable/README.md` for the complete inventory.
 
 Key artifacts include:
-- `cerg-manifest.yaml` — Canonical manifest of all 71 artifacts
-- `cerg-requirements.yaml` — Atomic requirements extracted from 8 spine documents
+- `cerg-llm-index.json` — Full local Markdown corpus index for LLM/agent consumption
+- `cerg-manifest.yaml` — Canonical manifest of all 118 governed source artifacts
+- `cerg-publication-manifest.yaml` — Publication eligibility separate from lifecycle approval status
+- `cerg-requirements.yaml` — Pilot atomic requirements extracted from 8 normative source documents
 - `cerg-flows.yaml` — Cross-pillar operational flow specifications (7 flows)
-- `cerg-record-schemas.yaml` — Record template schemas (5 record types)
-- Plus 14 additional schema files (runtime model, evidence, metrics, etc.)
+- `cerg-record-schemas.yaml` — Core operational record schemas
+- Companion schema files for runtime model, evidence, metrics, crown jewels, vulnerability priority, IR interface, vendor kill switch, identity, segmentation, AI intake, workforce capacity, and decision logging
 
 ## 6. Cross-Reference Rules
 
@@ -494,7 +496,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.33 |
+| **Version** | 1.34 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-14 |
 | **Classification** | Public |
@@ -511,6 +513,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.34 | 2026-06-14 | Governance Pillar Leader | Updated machine-readable artifact inventory language to reflect regenerated local manifests, canonical paths, and the full LLM index. |
 | 1.33 | 2026-06-14 | Governance Pillar Leader | Status taxonomy cleanup. Replaced Published and Active catalog statuses with Approved; publication eligibility remains tracked separately in the publication manifest. |
 | 1.32 | 2026-06-13 | Governance Pillar Leader | Adoption usability amendment. Added FRM-002 Framework System Map, CAT-002 Record Catalog, IMP-005 Adoption Decision Tree and Dependency Matrix, and IMP-006 Role-Based Implementation Checklists to Section 5.2. |
 | 1.0 | 2026-05-01 | Cyber Governance | Initial release. Established the naming convention, document types, the authority and status lifecycle, the V1 authoritative catalog, and the cross-reference rules. |
