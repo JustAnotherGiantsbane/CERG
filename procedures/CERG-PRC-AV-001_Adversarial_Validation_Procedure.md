@@ -13,7 +13,7 @@
 | **Classification** | Public |
 | **Owner** | Adversarial Testing Lead |
 | **Parent Policy** | [CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [CERG-GOV-CB-001](../governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-OT-001](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](../standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [CERG-PLN-IR-001](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md) · [CERG-GOV-CEF-001](../governance/CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) · [CERG-GOV-IMPREG-001](../governance/CERG-GOV-IMPREG-001_Program_Improvement_Register.md) · [CERG-PRC-LL-001](CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) |
+| **Supporting Documents** | [CERG-GOV-CB-001](../governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-OT-001](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) · [CERG-STD-CUI-001](../standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) · [CERG-PRC-VM-001](CERG-PRC-VM-001_Exposure_Management_Procedure.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [CERG-PLN-IR-001](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md) · [CERG-GOV-CEF-001](../governance/CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) · [CERG-GOV-IMPREG-001](../governance/CERG-GOV-IMPREG-001_Program_Improvement_Register.md) · [CERG-PRC-LL-001](CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) |
 | **Review Cycle** | Annual / On material program change |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (CA-8) · NIST 800-115 · PTES · MITRE ATT&CK · MITRE D3FEND · OWASP WSTG / MASTG |
 | **Regulations** | NERC-CIP CIP-007 (vulnerability assessment) · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.11.2) · SOX (indirect via control testing) |
@@ -374,7 +374,7 @@ Every OT engagement has a named OT Safety Officer (an operator with substation /
 
 ### 10.1 Rating
 
-Findings are rated using a uniform schema regardless of engagement type, aligning to [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) severity bands so they can co-route into vulnerability management:
+Findings are rated using a uniform schema regardless of engagement type, aligning to [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Exposure_Management_Procedure.md) severity bands so they can co-route into vulnerability management:
 
 | **Severity** | **Definition** |
 |---|---|
@@ -388,12 +388,12 @@ Findings are rated using a uniform schema regardless of engagement type, alignin
 
 | **Source of Finding** | **Routes To** |
 |---|---|
-| Specific software / asset vulnerability | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) finding + risk register entry per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) if Critical/High |
+| Specific software / asset vulnerability | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Exposure_Management_Procedure.md) finding + risk register entry per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) if Critical/High |
 | Control / design weakness | Risk register entry directly per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
 | Detection gap | Detection backlog + risk register if material |
 | Process / runbook weakness | Owning procedure (AR / IR / TPRM) + risk register if material |
 | Vendor / supply chain weakness | TPRM record per [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
-| OT-specific weakness | OT vulnerability management workflow per [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §4.3 and §6.3 + risk register |
+| OT-specific weakness | OT vulnerability management workflow per [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Exposure_Management_Procedure.md) §4.3 and §6.3 + risk register |
 
 ### 10.3 Retest and Closure
 

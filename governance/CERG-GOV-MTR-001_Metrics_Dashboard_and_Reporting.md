@@ -49,7 +49,7 @@ These metrics measure whether the CERG program itself is healthy — not whether
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Reporting) |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-TMPL-RM-001](../templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) · [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-GOV-OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) · [CERG-GOV-RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md) · [CERG-PRC-LL-001](../procedures/CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) · [CERG-GOV-IMPREG-001](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) · [CERG-GOV-CEF-001](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) |
+| **Supporting Documents** | [CERG-GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-TMPL-RM-001](../templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) · [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) · [CERG-PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-GOV-OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) · [CERG-GOV-RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md) · [CERG-PRC-LL-001](../procedures/CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) · [CERG-GOV-IMPREG-001](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) · [CERG-GOV-CEF-001](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) |
 | **Review Cycle** | Annual / On metrics-platform change |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · NIST 800-55 · ISO/IEC 27004 |
 | **Regulations** | All - board reporting |
@@ -136,7 +136,7 @@ Patch hygiene is a maintenance function distinct from exposure reduction. These 
 
 | **ID** | **Name** | **Formula** | **Source** | **Refresh** | **G / A / R** | **Reported In** |
 |---|---|---|---|---|---|---|
-| PH-001 | Patch Currency Rate | % of assets within their platform-class patch cadence window per [VM-001](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §10 | Patch management tool | Weekly | ≥ 95% / 85–95% / < 85% | COG Brief |
+| PH-001 | Patch Currency Rate | % of assets within their platform-class patch cadence window per [VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) §10 | Patch management tool | Weekly | ≥ 95% / 85–95% / < 85% | COG Brief |
 | PH-002 | Hygiene Debt by Platform | Count of Hygiene Debt observations, grouped by platform class | Exposure pipeline | Monthly | n/a — trend | COG Brief |
 | PH-003 | End-of-Support Count | Assets running software past vendor end-of-support date | Asset inventory | Monthly | 0 / 1–10 / > 10 | COG Brief |
 

@@ -257,7 +257,7 @@
   source_section: '4'
   source_section_title: Foundational Security Principles
   requirement_text: '- Vulnerabilities shall be assessed for severity, exploitability, and asset criticality. Findings shall be tracked to remediation or documented risk acceptance within the SLAs published
-    in [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5.2.'
+    in [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Exposure_Management_Procedure.md) §5.2.'
   normative_verb: shall
   obligation_level: mandatory
   owner_role: ''

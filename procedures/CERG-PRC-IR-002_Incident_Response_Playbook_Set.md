@@ -417,7 +417,7 @@ Containment may include: disabling the affected service or feature, applying ven
 
 ### 14.3 Eradication and Recovery
 
-CERG tracks the vendor patch release and coordinates with Engineering for emergency patch deployment per [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5.2. If compromise is confirmed, eradication follows the relevant playbook for the post-exploitation activity (Data Breach, Cloud Compromise, etc.). Recovery validates that the patch is applied, the vulnerability is remediated, and compensating controls are in place for any systems that cannot be immediately patched.
+CERG tracks the vendor patch release and coordinates with Engineering for emergency patch deployment per [CERG-PRC-VM-001](CERG-PRC-VM-001_Exposure_Management_Procedure.md) §5.2. If compromise is confirmed, eradication follows the relevant playbook for the post-exploitation activity (Data Breach, Cloud Compromise, etc.). Recovery validates that the patch is applied, the vulnerability is remediated, and compensating controls are in place for any systems that cannot be immediately patched.
 
 ### 14.4 Evidence and Communications Inputs
 

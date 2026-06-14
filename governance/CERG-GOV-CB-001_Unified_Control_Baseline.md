@@ -396,7 +396,7 @@ The §7 overlays carry additional crosswalks. Subordinate operational packages o
 | **CMX Intent** | **Title** | **CB-001 §6 Controls** | **Where Else Implementation Lives** |
 |---|---|---|---|
 | 1 | Know what you own: authoritative asset inventory | CM-8 | [`CERG-STD-IT-001`](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md); [`CERG-STD-OT-001`](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) (CIP-002 categorization) |
-| 2 | Identify and remediate vulnerabilities on schedule | RA-5, SI-2 | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5.2 (canonical SLAs) |
+| 2 | Identify and remediate vulnerabilities on schedule | RA-5, SI-2 | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) §5.2 (canonical SLAs) |
 | 3 | Control who can access what: least privilege | AC-3, AC-6 | [`CERG-STD-AC-001`](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
 | 4 | Authenticate users and systems | IA-2, IA-3, IA-5 | [`CERG-STD-AC-001`](../standards/CERG-STD-AC-001_Access_Management_Standard.md); [`CERG-STD-CR-001`](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) (authenticators) |
 | 5 | Harden systems | CM-2, CM-6, CM-7 | [`CERG-STD-CFG-001`](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) (DISH baselines) |
@@ -524,7 +524,7 @@ When a control in §6 or an overlay in §7 changes, Governance issues a "ripple 
 | Metrics, Dashboard, and Reporting | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Hosts the dashboards cited in §8 evidence catalog |
 | Compliance Matrix | [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) | Intent-level cross-regulator map (this doc is implementation-level) |
 | Risk Taxonomy | [`CERG-GOV-TAX-001`](CERG-GOV-TAX-001_Risk_Taxonomy.md) | Risk categorization that feeds RA-3 register entries |
-| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Canonical SLAs cited by SI-2 |
+| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Canonical SLAs cited by SI-2 |
 | Risk Register and Exception Process | [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Exception register cited by §6 and §8 |
 | Secure Configuration Baseline Standard (DISH) | [`CERG-STD-CFG-001`](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | Underlying baselines cited by CM-2 |
 | Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Underlying detection set cited by AU-* and SI-4 |

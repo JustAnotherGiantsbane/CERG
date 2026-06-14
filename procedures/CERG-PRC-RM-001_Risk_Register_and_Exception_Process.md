@@ -513,7 +513,7 @@ The risk register is the integration point for several other programs. Risk-regi
 
 | **Program** | **Integration** |
 |---|---|
-| Vulnerability Management ([CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md)) | Out-of-SLA findings and aggregate exposure feed risk entries; large remediation campaigns are tracked as treatments. |
+| Vulnerability Management ([CERG-PRC-VM-001](CERG-PRC-VM-001_Exposure_Management_Procedure.md)) | Out-of-SLA findings and aggregate exposure feed risk entries; large remediation campaigns are tracked as treatments. |
 | Incident Response ([CERG-PLN-IR-001](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md)) | Post-incident corrective actions are recorded as risks or risk-acceptance closures. |
 | Vendor / Third-Party Risk | Vendor assessment findings open risks; vendor reassessment cadence reviews them. |
 | Compliance - NERC-CIP, [CMMC](https://dodcio.defense.gov/CMMC/), [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) | Open compliance gaps map to risk entries; POA&M and CIP deviations link to register entries. |
@@ -569,7 +569,7 @@ Governance owns this procedure. The Risk Register Owner is responsible for revis
 | CUI Handling Standard | [CERG-STD-CUI-001](../standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) | CUI risk scope, POA&M tracking |
 | Access Management Standard | [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) | Identity-related risk and access exception handling |
 | Unified Control Baseline | [CERG-GOV-CB-001](../governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) | Control framework that risk entries reference |
-| Vulnerability Management Procedure | [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Vulnerability risk acceptance path |
+| Vulnerability Management Procedure | [CERG-PRC-VM-001](CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Vulnerability risk acceptance path |
 | Adversarial Validation Procedure | [CERG-PRC-AV-001](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) | Adversarial testing finding risk acceptance |
 | Third Party and Supply Chain Risk Procedure | [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Vendor risk register entries and tier-based acceptance authority |
 | Architecture Review and Project Intake Procedure | [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Project review findings flow to risk register |

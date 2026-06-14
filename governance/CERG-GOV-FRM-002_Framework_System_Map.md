@@ -150,7 +150,7 @@ CERG work should not move by informal chat alone. It should move through one of 
 | Know what records to create | [CAT-002](CERG-GOV-CAT-002_Record_Catalog.md) | Procedure-specific templates |
 | Prepare for audit | [AUD-001](CERG-GOV-AUD-001_Evidence_Quality_Standard.md) | [PRC-AUD-001](../procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md), operational package for the regulator |
 | Stand up risk management | [RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md) | [PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md), [TMPL-RM-001](../templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) |
-| Start vulnerability management | [PRC-VM-001](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | [RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md), [CAT-002](CERG-GOV-CAT-002_Record_Catalog.md) |
+| Start vulnerability management | [PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | [RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md), [CAT-002](CERG-GOV-CAT-002_Record_Catalog.md) |
 | Review a new system or SaaS | [PRC-AR-001](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | [TMPL-AR-001](../templates/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md), [PRC-TPRM-001](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
 
 ---

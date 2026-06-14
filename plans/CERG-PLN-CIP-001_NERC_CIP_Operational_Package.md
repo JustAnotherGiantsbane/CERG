@@ -15,7 +15,7 @@
 | **Owner** | NERC-CIP Compliance Manager |
 | **Parent Policy** | [`CERG-POL-001`](../governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Parent Standard** | [CERG-STD-OT-001](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) - Grid Control Systems Security Standard |
-| **Supporting Documents** | [CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) · [CERG-GOV-CB-001](../governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-CFG-001](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-RES-001](../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [CERG-STD-CR-001](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-PRC-AR-001](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-TPRM-001](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [CERG-PRC-AV-001](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) · [CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md) |
+| **Supporting Documents** | [CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) · [CERG-GOV-CB-001](../governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) · [CERG-STD-CFG-001](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) · [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-STD-RES-001](../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [CERG-STD-CR-001](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-PRC-AR-001](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) · [CERG-PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-TPRM-001](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) · [CERG-PRC-AV-001](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) · [CERG-PLN-IR-001](CERG-PLN-IR-001_Incident_Response_Plan.md) |
 | **Review Cycle** | Annual / Continuous tracking - evidence currency monthly |
 | **Frameworks** | [NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/final) · IEC 62443-3-3 / 4-2 |
 | **Regulations** | NERC-CIP v7 (CIP-002 through CIP-014) · CIP-015 (draft, forward-looking) · CIP-013-2 |
@@ -142,7 +142,7 @@ CIP evidence reuses the broader CERG evidence catalog wherever possible (per [`C
 
 ## 7. OT Vulnerability Management Procedure (`CERG-PRC-VM-001`)
 
-The enterprise vulnerability procedure ([`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md)) governs IT scopes; this OT-specific procedure overlays it with OT-safe practices.
+The enterprise vulnerability procedure ([`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md)) governs IT scopes; this OT-specific procedure overlays it with OT-safe practices.
 
 ### 7.1 Identification
 
@@ -165,7 +165,7 @@ The enterprise vulnerability procedure ([`CERG-PRC-VM-001`](../procedures/CERG-P
 
 ### 7.4 Documentation
 
-- Per the procedure in [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) Section 6 with OT-specific fields: applicability to BES, CIP-007 R2 timing, CIP-010 R1 change record.
+- Per the procedure in [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) Section 6 with OT-specific fields: applicability to BES, CIP-007 R2 timing, CIP-010 R1 change record.
 
 ---
 

@@ -1003,7 +1003,7 @@
       "title": "Vulnerability Management Procedure",
       "type": "procedure",
       "pillar": "risk",
-      "path": "procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md",
+      "path": "procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md",
       "lines": [
         22464,
         22938

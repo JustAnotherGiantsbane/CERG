@@ -292,7 +292,7 @@ International access to in-scope systems and data is **denied by default**. Wher
 - Required for T1/T2 software vendors and Tier 1 commercial software products.
 - Minimum elements: NTIA minimum elements (supplier name, component name, version, dependency relationship, author, timestamp, unique identifier).
 - SBOM submitted at delivery and at every material update.
-- SBOMs scanned for known vulnerabilities; findings flow to [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md).
+- SBOMs scanned for known vulnerabilities; findings flow to [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Exposure_Management_Procedure.md).
 - SBOMs reviewed at architecture review for embedded secrets, suspect packages, and license risk.
 
 ### 11.2 Software Integrity

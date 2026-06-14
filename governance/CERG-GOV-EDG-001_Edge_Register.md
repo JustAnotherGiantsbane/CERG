@@ -181,7 +181,7 @@ The Edge Register is maintained as a living document. The Vendor Risk Analyst (o
 | Procedure | Edge Type | Integration |
 |-----------|-----------|-------------|
 | [TPRM-001](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Vendor, SaaS, Software supply | Primary operational procedure for third-party edges |
-| [VM-001](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Network, Software supply | Exposure management feeds edge assessment |
+| [VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Network, Software supply | Exposure management feeds edge assessment |
 | [AC-002](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md) | Identity, Vendor | Access reviews and privileged access management |
 | [AR-001](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | All | New services trigger edge registration during architecture review |
 | [IR Plan](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md) | All | SCCT activation when a vendor edge is compromised |

@@ -137,7 +137,7 @@ The three CERG pillars operate in CUI environments with the same structure as el
 |---|---|---|---|
 | Periodically assess risk to CUI confidentiality, integrity, and availability. Document threat sources, vulnerabilities, likelihood, and impact. Output feeds the risk register and POA&M. | All CUI | Risk | [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) 3.11.1 · [CMMC](https://dodcio.defense.gov/CMMC/) RA.L2-3.11.1 |
 | Scan CUI environment systems for vulnerabilities at least monthly, and upon advisory of new significant vulnerabilities. Authenticated scans are required where technically feasible. | All CUI | Risk | [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) 3.11.2 · [CMMC](https://dodcio.defense.gov/CMMC/) RA.L2-3.11.2 |
-| Remediate vulnerabilities in the CUI environment per the SLAs defined in **[CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md)**. Where remediation cannot meet SLA, open a POA&M entry. | All CUI | Risk / Engineering | [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) 3.11.3 · [CMMC](https://dodcio.defense.gov/CMMC/) RA.L2-3.11.3 |
+| Remediate vulnerabilities in the CUI environment per the SLAs defined in **[CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md)**. Where remediation cannot meet SLA, open a POA&M entry. | All CUI | Risk / Engineering | [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) 3.11.3 · [CMMC](https://dodcio.defense.gov/CMMC/) RA.L2-3.11.3 |
 
 ---
 

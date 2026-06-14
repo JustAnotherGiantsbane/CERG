@@ -211,7 +211,7 @@ Infrastructure-as-code is software and is governed by this standard. Specificall
 A security finding in CERG-managed software, whether found by SAST, DAST, SCA, code review, adversarial validation, or post-release disclosure, is a vulnerability.
 
 1. **Pre-production findings are engineering inputs.** A finding caught before go-live is remediated before go-live, or the go-live is risk-accepted per [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). This is the pre-production versus post-production distinction from [`CERG-GOV-FRM-001`](../governance/CERG-GOV-FRM-001_CERG_Framework.md) §4.3.
-2. **Post-production findings follow the VM procedure.** A finding in released, operating software is a managed vulnerability and is remediated against the SLAs in [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md).
+2. **Post-production findings follow the VM procedure.** A finding in released, operating software is a managed vulnerability and is remediated against the SLAs in [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md).
 3. **No silent aging.** A software finding is closed or risk-accepted. It is never simply moved down a backlog until it is forgotten. This is Principle 4.
 
 ---
@@ -227,7 +227,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](../governance/
 | **Pre-production Reviewer** | Owns the verification-phase pre-production review and signs go-live readiness for Tier 1 and Tier 2 software. |
 | **Cloud Security Engineer** | Owns pipeline and build security where the pipeline runs on cloud infrastructure; owns IaC misconfiguration scanning. |
 | **Cryptography Engineer** | Owns the secrets management platform that software retrieves credentials from; supports rotation of exposed secrets. |
-| **Vulnerability Management Lead** | Operates the post-production software vulnerability SLAs per [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md). |
+| **Vulnerability Management Lead** | Operates the post-production software vulnerability SLAs per [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md). |
 | **Governance Pillar Leader** | Maintains the exceptions register for gate bypasses; tracks audit-facing evidence; cross-references this standard with the control baseline. |
 | **Policy & Standards Manager** | Maintains this document, its version, and its review cycle. |
 
@@ -288,7 +288,7 @@ Cyber Engineering owns this document. The Engineering Pillar Leader (Application
 | Cybersecurity Policy | [`CERG-POL-001`](../governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
 | CERG Framework | [`CERG-GOV-FRM-001`](../governance/CERG-GOV-FRM-001_CERG_Framework.md) | Engineering pillar mission and the pre/post-production risk distinction |
 | Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Governs the engagement; this standard governs the code |
-| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Post-production software vulnerability SLAs |
+| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Post-production software vulnerability SLAs |
 | Risk Register and Exception Process | [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Gate-bypass exceptions |
 | Cryptography and Key Management Standard | [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Secrets management platform; secret rotation |
 | Access Management Standard | [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) | Pipeline access control |

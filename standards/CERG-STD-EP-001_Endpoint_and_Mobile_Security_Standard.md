@@ -84,7 +84,7 @@ Every managed endpoint carries the following at minimum.
 
 1. **Secure configuration baseline.** The endpoint is configured to the applicable baseline in [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md), and configuration drift is detected and corrected.
 2. **Disk encryption.** Endpoint storage is encrypted at rest per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md). Encryption is enforced by management, not left to the user.
-3. **Patching.** The operating system and installed software are patched against the SLAs in [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md). The endpoint reports its patch state to management.
+3. **Patching.** The operating system and installed software are patched against the SLAs in [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md). The endpoint reports its patch state to management.
 4. **Malware protection.** The endpoint runs current malware protection.
 5. **Host firewall.** A host-based firewall is enabled and configured to default-deny inbound, consistent with [`CERG-STD-NET-001`](CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md).
 6. **Application control.** Tier-appropriate control over what software may execute. Privileged-access endpoints (Section 4.5) and endpoints handling regulated data enforce allowlisting; standard workstations enforce at minimum a block on known-bad and unsigned execution.
@@ -235,7 +235,7 @@ Cyber Engineering owns this document. The Engineering Pillar Leader (Endpoint) i
 | Cryptography and Key Management Standard | [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Endpoint disk encryption |
 | Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | EDR telemetry and endpoint detection content |
 | Grid Control Systems Security Standard | [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | OT devices and transient cyber assets |
-| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Endpoint patching SLAs |
+| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Endpoint patching SLAs |
 | Third-Party and Supply Chain Risk Procedure | [`CERG-PRC-TPRM-001`](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Contractor transient devices |
 | Operating Model | [`CERG-GOV-OM-001`](../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | CERG feeds EDR telemetry; the IR team responds |
 | Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](../governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `EP` domain |

@@ -13,7 +13,7 @@
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader / Governance Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) · [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [`CERG-GOV-FLOW-001`](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) · [`CERG-GOV-CEF-001`](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) · [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) · [`CERG-PLN-BC-001`](../plans/CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md) · [`CERG-GOV-EDG-001`](CERG-GOV-EDG-001_Edge_Register.md) · `machine-readable/cerg-crown-jewel-schema.yaml` |
+| **Supporting Documents** | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) · [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) · [`CERG-GOV-FLOW-001`](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) · [`CERG-GOV-CEF-001`](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) · [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) · [`CERG-PLN-BC-001`](../plans/CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md) · [`CERG-GOV-EDG-001`](CERG-GOV-EDG-001_Edge_Register.md) · `machine-readable/cerg-crown-jewel-schema.yaml` |
 | **Review Cycle** | Annual / On material change to crown-jewel population or threat landscape |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (IDENTIFY, GOVERN) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (RA, CP, CA) · NIST 800-37 RMF |
 | **Regulations** | NERC-CIP CIP-002 · [CMMC L2](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC |
@@ -36,7 +36,7 @@
 
 ## 1. Purpose and Scope
 
-CERG's operational pipeline is bottom-up. A scanner, a penetration test, an audit, or a review produces an observation; Risk validates its reachability, scores it, and tracks it to closure through [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) and the risk register in [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) Section 9. This pipeline is disciplined and measurable, and it is necessary. It is not sufficient.
+CERG's operational pipeline is bottom-up. A scanner, a penetration test, an audit, or a review produces an observation; Risk validates its reachability, scores it, and tracks it to closure through [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) and the risk register in [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) Section 9. This pipeline is disciplined and measurable, and it is necessary. It is not sufficient.
 
 A program can be green on every finding metric and still have an undefended path to a catastrophic loss, because nothing in the bottom-up pipeline asks the top-down question: **what is the small set of events that would actually end this organization, and is anyone defending each of those chains end-to-end?** A bottom-up pipeline sees individual findings. It does not see a chain that crosses four assets and three control families, where each link looks acceptable in isolation but the chain as a whole is fatal.
 
@@ -62,7 +62,7 @@ The two layers are complementary and must reconcile. Neither replaces the other.
 | **Starting point** | An observation: scan, test, audit, intel, review | A crown jewel and a named loss scenario |
 | **Question asked** | "Is this finding reachable, and how bad is it?" | "What would end us, and is the chain broken?" |
 | **Primary owner** | Vulnerability Management Lead / Risk Register Owner | Risk Pillar Leader (scenarios) / Governance (register) |
-| **Authoritative home** | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md), RMF-001 Section 9 | This document |
+| **Authoritative home** | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md), RMF-001 Section 9 | This document |
 | **Failure it catches** | Individual exploitable exposures | Cross-asset, cross-control kill chains |
 | **Cadence** | Continuous | Scheduled pressure-test (Section 5) |
 

@@ -147,7 +147,7 @@ Every asset carries the classification of the highest-classified data it stores 
 
 ### 7.3 What Classification Drives
 
-The criticality tier and data classification of an asset determine, at minimum: its vulnerability remediation SLA under [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md), its access-review frequency under [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md), its logging requirements under [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md), and its backup and recovery objectives under [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md). Asset management produces the classification once; every other standard consumes it.
+The criticality tier and data classification of an asset determine, at minimum: its vulnerability remediation SLA under [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md), its access-review frequency under [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md), its logging requirements under [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md), and its backup and recovery objectives under [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md). Asset management produces the classification once; every other standard consumes it.
 
 ---
 
@@ -271,7 +271,7 @@ Cyber Engineering owns this document. The Engineering Pillar Leader (Platforms) 
 | Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Inventory feeds the logging source catalog |
 | Cyber Resilience and Backup Standard | [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Classification drives backup and recovery objectives |
 | Cryptography and Key Management Standard | [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Cryptographic erasure at disposal |
-| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Inventory is the scan population |
+| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Inventory is the scan population |
 | Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Intake at the Requested lifecycle state |
 | Metrics, Dashboard, and Reporting | [`CERG-GOV-MTR-001`](../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Inventory-completeness reporting |
 | Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](../governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact and the `AM` domain |

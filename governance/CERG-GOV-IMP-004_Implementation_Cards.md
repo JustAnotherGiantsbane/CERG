@@ -13,7 +13,7 @@
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [CERG-GOV-CMX-001](CERG-GOV-CMX-001_Compliance_Matrix.md) · [CERG-PRC-AR-001](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) · [CERG-PRC-TPRM-001](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
+| **Supporting Documents** | [CERG-GOV-CMX-001](CERG-GOV-CMX-001_Compliance_Matrix.md) · [CERG-PRC-AR-001](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) · [CERG-PRC-TPRM-001](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
 | **Review Cycle** | Annual / On material change to control baseline |
 | **Frameworks** | NIST CSF 2.0 · NIST 800-53r5 · NIST 800-171r3 |
 | **Regulations** | NERC-CIP · CMMC L2 · SOX ITGC |
@@ -75,7 +75,7 @@
 
 | | Minimum Viable | Good Implementation |
 |---|---|---|
-| **Implementation** | Authenticated scan of production systems; CVSS-based SLA for Critical/High | Exposure management pipeline: observe → validate → assess reachability → classify → treat → verify (per [VM-001](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md)) |
+| **Implementation** | Authenticated scan of production systems; CVSS-based SLA for Critical/High | Exposure management pipeline: observe → validate → assess reachability → classify → treat → verify (per [VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md)) |
 | **Evidence** | Scan reports, remediation tickets, SLA tracking | Exposure pipeline state log, KEV triage records, compensating control validation |
 | **Failure Mode** | Scanner report treated as the vulnerability program; CVSS 9.9 on a service that isn't running; "false positive" used as catch-all |
 | **Exception Path** | Risk acceptance per [RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7; compensating controls documented and verified |

@@ -96,7 +96,7 @@ The following terms are used throughout this policy and all subordinate document
 |**Executive Sponsor**|The named business or operational executive accountable for the systems, processes, or programs within a defined scope. The Executive Sponsor concurs on Critical-severity risk acceptance decisions per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7, sits on the Cyber Oversight Group when a system in their scope is on the agenda, and is named per system in the categorization register.|
 |**OT / ICS**|Operational Technology / Industrial Control Systems. Hardware and software that monitors and controls physical devices, processes, and events in industrial environments, including SCADA systems, energy management systems, and substation automation.|
 |**POA&M**|**P**lan of **A**ction and **M**ilestones. A documented record of open findings, their compensating controls, named owners, and target remediation dates. POA&Ms are mandatory under DFARS / CMMC for CUI scope and are produced as part of every System Security Plan; CERG also uses POA&M as the standard format for tracking open security findings outside CUI scope.|
-|**PPR**|**P**riority **P**atch **R**equest. CERG's emergency-response remediation tier, invoked for vulnerabilities listed in the CISA KEV catalog or confirmed under active exploitation. SLA values and trigger criteria live in [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5.2.|
+|**PPR**|**P**riority **P**atch **R**equest. CERG's emergency-response remediation tier, invoked for vulnerabilities listed in the CISA KEV catalog or confirmed under active exploitation. SLA values and trigger criteria live in [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) §5.2.|
 |**Risk Acceptance**|A documented management decision to acknowledge a risk and take no further action to reduce it. Approval authority and acceptance duration are defined in the canonical Risk Acceptance Authority table in [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7.|
 |**Risk Treatment**|The process of selecting and implementing controls to modify risk. Includes risk reduction (implement controls), risk transfer (insurance, contract), risk avoidance (cease activity), and risk acceptance.|
 |**SSP**|**S**ystem **S**ecurity **P**lan. The authoritative document for a system in regulated scope (most commonly CUI / CMMC) that records system boundary, categorization, control implementation status, and responsible parties. POA&M entries are tracked as an attachment to the SSP.|
@@ -197,7 +197,7 @@ Flat networks convert a single compromised endpoint into an enterprise-wide brea
 **Mandate**
 
 - The organization shall maintain continuous visibility into vulnerabilities affecting in-scope assets through a documented vulnerability management program operated by Cyber Risk.
-- Vulnerabilities shall be assessed for severity, exploitability, and asset criticality. Findings shall be tracked to remediation or documented risk acceptance within the SLAs published in [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5.2.
+- Vulnerabilities shall be assessed for severity, exploitability, and asset criticality. Findings shall be tracked to remediation or documented risk acceptance within the SLAs published in [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) §5.2.
 - OT and BES Cyber Systems shall be scanned using approved methods that do not introduce operational risk. Timelines for OT remediation shall account for vendor testing requirements and operational windows, with NERC-CIP deviation processes invoked as required.
 - Vulnerabilities identified during pre-production assessment shall be remediated or formally risk-accepted prior to production deployment per the Risk Acceptance Authority table in [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. High and Critical severity findings require documented authorization at the level named in that table before go-live.
 - The organization shall conduct periodic adversarial testing, penetration testing and red team operations, to validate that controls function under active attack conditions, not only under passive assessment.
@@ -435,7 +435,7 @@ The authoritative inventory, IDs, owners, status, and deferred / planned artifac
 
 | Document | ID | Owner |
 | --- | --- | --- |
-| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Cyber Risk |
+| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Cyber Risk |
 | Risk Register and Exception Process | [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Cyber Governance |
 | Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Cyber Engineering |
 | Access Management Runbook | [`CERG-PRC-AC-002`](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md) | Cyber Engineering |

@@ -753,9 +753,9 @@
   owner_role: Vulnerability Management Lead
   approval_authority: Vulnerability Management Lead
   parent_artifact: CERG-POL-001
-  source_file: CERG-PRC-VM-001_Vulnerability_Management_Procedure.md
+  source_file: CERG-PRC-VM-001_Exposure_Management_Procedure.md
   source_hash: f28b18170580c8b9ca78f780744d88a66373acef3fbaaa6f7f98c2562e12bf45
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/CERG-PRC-VM-001_Exposure_Management_Procedure.md
   llm_include: true
   llm_priority: high
   normative_weight: supporting

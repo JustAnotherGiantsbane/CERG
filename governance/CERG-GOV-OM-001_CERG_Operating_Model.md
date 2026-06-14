@@ -102,7 +102,7 @@ CERG operates as one team. The pillars provide structure for skill development, 
 
 **Core activities.**
 
-- Vulnerability management (scanning, prioritization, remediation tracking) per **[CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md)**
+- Vulnerability management (scanning, prioritization, remediation tracking) per **[CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md)**
 - Adversarial validation: penetration testing, red-team operations, purple-team detection validation
 - Threat intelligence consumption and translation into detection and posture controls
 - Vendor and third-party security risk assessment
@@ -205,7 +205,7 @@ Used for ongoing exposure management across the entire estate.
 
 CERG commits to a time-to-coverage target for bringing a new asset under vulnerability and CSPM coverage after go-live, per [`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md).
 
-- Vulnerability management operates as a standing service per [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md).
+- Vulnerability management operates as a standing service per [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md).
 - CSPM / SSPM operates continuously across approved cloud and SaaS.
 - Threat intelligence consumption produces standing detection and posture work.
 - Identity-threat detection operates continuously.
@@ -299,7 +299,7 @@ Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leade
 | **Cryptography Engineer** | Engineering | "Cryptography Engineer" | Key management, CA hierarchy, TLS posture, FIPS compliance. |
 | **Pre-production Reviewer** | Engineering (rotated) | - | Owns the pre-production checklist; signs off on go-live readiness. |
 | **Risk Pillar Leader** | Risk | "Risk Pillar Leader" (when speaking of the lead), "Risk Manager" | Pillar accountability; exposure posture reporting; Medium severity risk-acceptance authority per RMF §9.7. |
-| **Vulnerability Management Lead** | Risk | "Vulnerability Management Lead" | Operates [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md); owns SLAs and posture metrics. |
+| **Vulnerability Management Lead** | Risk | "Vulnerability Management Lead" | Operates [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md); owns SLAs and posture metrics. |
 | **Adversarial Testing Lead** | Risk | "Adversarial Testing Lead," "Adversarial Testing Lead" | Operates [`CERG-PRC-AV-001`](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md); pen test, red team, purple team. |
 | **Threat Intelligence Analyst** | Risk | "Threat Intelligence Analyst" | Threat-actor tracking; advisories; intel-to-detection translation. |
 | **Vendor Risk Analyst** | Risk | "Vendor Risk Analyst," "Vendor Risk Analyst" | Operates [`CERG-PRC-TPRM-001`](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md); SCCT participation. |
@@ -338,7 +338,7 @@ Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leade
 | **Role** | **Focus** |
 |---|---|
 | Risk Pillar Leader | Pillar accountability; exposure posture reporting. |
-| Vulnerability Management Lead | Operates [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md); owns the SLAs and posture metrics. |
+| Vulnerability Management Lead | Operates [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md); owns the SLAs and posture metrics. |
 | Detection Engineer | CSPM / SSPM operations and detection rules. |
 | Threat Intelligence Analyst | Source curation, internal advisories, detection translation. |
 | Adversarial Testing Lead (Red Team) | Internal or partner-managed offensive validation. |
@@ -379,7 +379,7 @@ CERG operates as one team because it talks like one team. The standing cadence b
 | Risk Posture Review (High / Critical items) | Weekly | Risk + Engineering + Governance | Top-of-list High and Critical risks, treatment progress, SLA breaches. Aligns with [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §8.2 weekly cadence for High and Critical items. |
 | Monthly Risk Register Review (full register) | Monthly | Risk Register Owner + Risk + Engineering + Governance | Full register pass, POA&M status, treatment closures, exception renewals. Aligns with [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §8.2 monthly full cadence. |
 | Pre-production Review Board | Twice weekly | Engineering + Risk + Governance | Pre-production go/no-go for in-scope projects. |
-| Vulnerability Triage | Daily / standing | Risk team + Engineering rep | PPR / Critical / Internet-exposed findings per [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) §5.2. |
+| Vulnerability Triage | Daily / standing | Risk team + Engineering rep | PPR / Critical / Internet-exposed findings per [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) §5.2. |
 | Threat Intelligence Brief | Weekly | Risk + Engineering + Governance | Relevant intel, posture implications. |
 | Compliance Pulse | Bi-weekly | Governance + Engineering + Risk | Open compliance items, evidence gaps, regulator calendar. |
 | CERG All-Hands | Monthly | All CERG | Program updates, recognition, knowledge sharing. |
@@ -586,7 +586,7 @@ The authoritative inventory is [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Ca
 | Logging, Monitoring, and Detection Standard | [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Log sources, retention, detection coverage |
 | Cyber Resilience and Backup Standard | [`CERG-STD-RES-001`](../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | RTO/RPO, backup, recovery |
 | Cryptography and Key Management Standard | [`CERG-STD-CR-001`](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Cipher, key, certificate lifecycle |
-| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) | Canonical vulnerability remediation SLAs |
+| Vulnerability Management Procedure | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Canonical vulnerability remediation SLAs |
 | Risk Register and Exception Process | [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Risk register operating procedure |
 | Architecture Review and Project Intake Procedure | [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Pre-production engagement |
 | Access Management Runbook | [`CERG-PRC-AC-002`](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md) | Identity lifecycle operations |

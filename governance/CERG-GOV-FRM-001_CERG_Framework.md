@@ -573,7 +573,7 @@ Regulatory alignment is a byproduct of running the program well. Evidence is pro
 | Operational Work | Evidence Produced | Compliance Consumers |
 |-----------------|-------------------|---------------------|
 | Architecture review ([AR-001](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md)) | Design decision, data flow, control scope, pre-approved pattern match | NIST 800-53 (SA/PL), CMMC (SC), SOX ITGC, NERC-CIP CIP-005/010 |
-| Exposure management ([VM-001](../procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md)) | Finding state, exposure classification, treatment, verification | NIST 800-53 (RA/SI), CMMC (RA), NERC-CIP CIP-007, SOX ITGC |
+| Exposure management ([VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md)) | Finding state, exposure classification, treatment, verification | NIST 800-53 (RA/SI), CMMC (RA), NERC-CIP CIP-007, SOX ITGC |
 | SaaS onboarding ([TPRM-001](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md)) | Shared responsibility matrix, vendor evidence, contract clauses, SSPM posture | CMMC (SR), SOX ITGC, privacy regulations, NERC-CIP CIP-013 |
 | Access review ([AC-002](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md)) | Population reviewed, reviewer, exceptions, recertification status | SOX ITGC, CMMC (AC), NERC-CIP CIP-004 |
 | Change security routing ([FLOW-001](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) F-05) | Impact analysis, approval, test result, CAB record | SOX ITGC, NERC-CIP CIP-010, NIST 800-53 (CM) |

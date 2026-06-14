@@ -129,7 +129,7 @@ Apps built on the platform are governed by these guardrails. Where an app needs 
 ### 4.4 What Does Not Need CERG Review
 
 - Pure UX or visual changes to an existing system that don't touch authentication, data classification, scope, or interfaces.
-- Routine patching covered by [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Vulnerability_Management_Procedure.md).
+- Routine patching covered by [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Exposure_Management_Procedure.md).
 - Routine configuration changes within the DISH-conformant pattern that don't change trust boundaries.
 
 ---
