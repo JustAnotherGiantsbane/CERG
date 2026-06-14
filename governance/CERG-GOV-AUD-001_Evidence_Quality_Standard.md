@@ -33,6 +33,8 @@ This document defines what qualifies as acceptable evidence in the CERG operatin
 
 This standard applies to every CERG artifact that produces or references evidence: the Unified Control Baseline (CB-001), the Audit and Evidence Management Procedure (PRC-AUD-001), the Risk Register and Exception Process (PRC-RM-001), and all standards and procedures that define evidence requirements.
 
+`CERG-GOV-AUD-001` is authoritative for evidence quality, freshness, and sampling expectations. `CERG-PRC-AUD-001` governs how evidence is collected, stored, tested, and produced during audit response. Where the procedure needs to determine whether evidence is acceptable, this standard governs.
+
 > **Evidence proves the control works.** A document that says a control exists is not evidence that it operates. An email that says "done" is not evidence. A screenshot with no date is not evidence. This standard defines what is.
 
 ---
@@ -194,7 +196,7 @@ For Tier 1 controls (Critical systems, regulated environments), test both:
 
 ## 5. Sampling Methodology
 
-When testing a control across a population, sampling is acceptable. The sampling methodology must be documented and defensible.
+This section is the canonical CERG sampling standard for evidence review and control testing. When testing a control across a population, sampling is acceptable if the methodology is documented and defensible. Regulatory, assessor, or auditor-specific sampling requirements override these CERG defaults for that engagement and must be documented in the test plan.
 
 ### When Sampling Is Acceptable
 
@@ -213,8 +215,8 @@ When testing a control across a population, sampling is acceptable. The sampling
 
 ### Sample Size Guidelines
 
-| Population Size | Minimum Sample (95% confidence, ±10% precision) | For High-Risk Controls |
-|----------------|------------------------------------------------|----------------------|
+| Population Size | CERG Baseline Minimum Sample | For High-Risk Controls |
+|----------------|------------------------------|----------------------|
 | <30 | Full population | Full population |
 | 30-100 | 25 | 30 |
 | 101-500 | 50 | 80 |
@@ -222,7 +224,7 @@ When testing a control across a population, sampling is acceptable. The sampling
 | 1,001-5,000 | 100 | 200 |
 | >5,000 | 150 | 300 |
 
-These are guidelines, not mandates. Adjust based on control risk, prior test results, and regulatory requirements. Document the rationale for any deviation.
+These are baseline defaults, not statistical guarantees. Adjust based on control risk, prior test results, regulatory requirements, assessor direction, and whether the evidence supports an E2 or E3 claim. Document the rationale for any deviation.
 
 ### Sampling Method
 
