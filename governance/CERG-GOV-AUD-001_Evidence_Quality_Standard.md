@@ -258,7 +258,7 @@ Evidence ages. An access review from 2024 does not prove the control operated in
 |--------------|-----------------|-----------------|-------------|
 | Access review output | Current review cycle + 30 days | Next scheduled review | Review date + 90 days |
 | Joiners/movers/leavers (JML) log | Current month | Monthly | 60 days |
-| Vulnerability scan report | Current scan cycle | Next scheduled scan | Scan date + 30 days (IT) / 90 days (OT with approval) |
+| Exposure scan report | Current scan cycle | Next scheduled scan | Scan date + 30 days (IT) / 90 days (OT with approval) |
 | MFA/enforcement configuration | Current quarter | Configuration change | 90 days or on change |
 | Firewall rule review | Current quarter | Next scheduled review | 120 days |
 | Backup restore test | Current test cycle | Next scheduled test | Test date + 180 days |

@@ -266,7 +266,7 @@ Continuous monitoring is the phase that separates Adaptive-tier programs from Re
 
 | Component | Pillar Owner | Frequency | Output / Deliverable |
 |---|---|---|---|
-| Vulnerability scan coverage | Risk | Continuous | Updated finding register; SLA tracking dashboard; escalation alerts for Critical findings. |
+| Exposure scan coverage | Risk | Continuous | Updated finding register; SLA tracking dashboard; escalation alerts for Critical findings. |
 | Configuration drift detection | Risk + Engineering | Continuous (automated) | Drift alerts to Engineering; deviation from baseline triggers change management review. |
 | Threat intelligence ingestion | Risk | Continuous; structured analysis weekly | Tactical threat products (IOCs); operational advisories; strategic threat briefings for CISO. |
 | Risk register review | Governance | Monthly (full); weekly (high/critical items) | Updated risk register with treatment status; escalation to CISO for items approaching SLA. |

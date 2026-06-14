@@ -76,7 +76,7 @@ Completion means there is an artifact, record, decision, or evidence link. A ver
 | [ ] | Approve the first 10 risks. | Initial risk register reviewed. |
 | [ ] | Approve risk appetite defaults or schedule calibration. | Risk appetite decision or meeting scheduled. |
 | [ ] | Establish Cyber Oversight Group or equivalent. | Meeting cadence and membership recorded. |
-| [ ] | Review first vulnerability backlog. | Backlog triage decision record. |
+| [ ] | Review first exposure backlog. | Backlog triage decision record. |
 | [ ] | Confirm exception and risk acceptance authority. | Authority map recorded. |
 | [ ] | Approve 30-day improvement backlog. | Program Improvement Register seeded. |
 
@@ -144,7 +144,7 @@ Completion means there is an artifact, record, decision, or evidence link. A ver
 
 | Done | Action | Output |
 |---|---|---|
-| [ ] | Run or ingest first vulnerability scan cycle. | Vulnerability backlog. |
+| [ ] | Run or ingest first exposure scan cycle. | Exposure backlog. |
 | [ ] | Triage vulnerabilities against asset criticality and reachability. | Validated finding records. |
 | [ ] | Route remediation to Engineering. | Assigned remediation records. |
 | [ ] | Establish exception workflow. | Exception intake and approval path. |
@@ -216,7 +216,7 @@ For CERG Lite, one person may act as Security Lead, Governance Lead, Risk Lead, 
 6. Create evidence index.
 7. Export asset inventory.
 8. Seed initial top 10 risks.
-9. Create vulnerability backlog.
+9. Create exposure backlog.
 10. Record regulatory applicability decision.
 
 ### Weeks 2 to 4

@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The Exposure Management Lead operates the Exposure Management Procedure. They own the vulnerability scanning program, the finding prioritization and triage process, the remediation SLAs, and the vulnerability posture metrics that feed the CISO dashboard. They ensure that every vulnerability in the environment is known, prioritized, tracked to remediation, and reported.
+The Exposure Management Lead operates the Exposure Management Procedure. They own the vulnerability scanning program, the finding prioritization and triage process, the remediation SLAs, and the exposure posture metrics that feed the CISO dashboard. They ensure that every vulnerability in the environment is known, prioritized, tracked to remediation, and reported.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -46,7 +46,7 @@ The Exposure Management Lead operates the Exposure Management Procedure. They ow
 
 ### 4.1 Core Responsibilities (All Grades)
 
-- Operate and maintain the vulnerability scanning infrastructure across IT, cloud, and OT environments - Define and enforce vulnerability triage criteria: severity, exploitability, asset criticality, exposure - Own remediation SLAs and track compliance, escalating overdue findings per the defined process - Report vulnerability posture metrics: open findings by severity and age, SLA compliance, mean time to remediate, coverage gaps - Coordinate with IT, OT, and Engineering teams to drive remediation - Manage false-positive triage and scanner tuning to maintain scan hygiene - Govern OT-safe scanning procedures, ensuring scan techniques do not introduce operational risk - Contribute to exposure management tooling selection, configuration, and optimization - Support incident response with vulnerability context for compromised systems
+- Operate and maintain the vulnerability scanning infrastructure across IT, cloud, and OT environments - Define and enforce vulnerability triage criteria: severity, exploitability, asset criticality, exposure - Own remediation SLAs and track compliance, escalating overdue findings per the defined process - Report exposure posture metrics: open findings by severity and age, SLA compliance, mean time to remediate, coverage gaps - Coordinate with IT, OT, and Engineering teams to drive remediation - Manage false-positive triage and scanner tuning to maintain scan hygiene - Govern OT-safe scanning procedures, ensuring scan techniques do not introduce operational risk - Contribute to exposure management tooling selection, configuration, and optimization - Support incident response with vulnerability context for compromised systems
 
 ### 4.2 Grade-Level Responsibility Differentiation
 

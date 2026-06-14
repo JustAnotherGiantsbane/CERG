@@ -210,7 +210,7 @@ Do not try to build a complete risk register in week one. Identify the 10 risks 
 |---------|---------------|----------|----------|-------|-----------|-----|
 | RISK-2026-001 | Unpatched internet-facing systems could enable ransomware | High | Medium | Alex Chen | Remediate — patch cycle | 2026-07-15 |
 
-### Record 5: Vulnerability Backlog
+### Record 5: Exposure Backlog
 
 Export your vulnerability scanner results. Prioritize by severity and asset criticality. Assign the top 20 to owners.
 
@@ -278,7 +278,7 @@ After 30 days of operating CERG with a small team, you should be able to answer 
 
 - [ ] Top 10 risks identified, scored, and assigned to owners
 - [ ] First risk register review held — decisions documented
-- [ ] Vulnerability backlog triaged — criticals assigned, highs prioritized
+- [ ] Exposure backlog triaged — criticals assigned, highs prioritized
 - [ ] Exception process tested — at least one exception created or the register confirmed empty with rationale
 - [ ] Vendor list compiled — high-risk vendors flagged for assessment
 
@@ -370,7 +370,7 @@ If you do not have a GRC platform, ticketing system, or evidence management tool
 | Quality Status | Accepted | Pending / Accepted / Rejected / Stale |
 | Reviewed By | Governance Lead | |
 
-### Vulnerability Backlog Spreadsheet
+### Exposure Backlog Spreadsheet
 
 | Column | Example | Notes |
 |--------|---------|-------|

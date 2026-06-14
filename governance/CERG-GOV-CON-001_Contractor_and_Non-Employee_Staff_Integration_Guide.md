@@ -46,7 +46,7 @@ It applies to all non-employee staff performing CERG work: independent contracto
 
 > **Contractors Are a Force Multiplier, Not a Replacement for Capability**
 >
-> A contractor can accelerate a cloud migration, clear a vulnerability backlog, or run a CMMC assessment readiness program. A contractor cannot be the organization's institutional memory, its regulatory relationship, or its leadership bench. The Framework envisions a CERG team where contractors supplement, not substitute for, the employee core. This document ensures that distinction does not blur in practice.
+> A contractor can accelerate a cloud migration, clear a exposure backlog, or run a CMMC assessment readiness program. A contractor cannot be the organization's institutional memory, its regulatory relationship, or its leadership bench. The Framework envisions a CERG team where contractors supplement, not substitute for, the employee core. This document ensures that distinction does not blur in practice.
 
 ---
 
@@ -133,7 +133,7 @@ The contractor operates as an embedded team member under the day-to-day directio
 
 The contractor or consulting firm delivers a defined scope of work against a statement of work with milestones, deliverables, and acceptance criteria. The contractor operates with a degree of independence, providing updates at defined intervals rather than participating in daily team operations.
 
-**Best for:** Specialized, time-bounded initiatives (PKI migration, CMMC assessment readiness, SIEM deployment, vulnerability backlog clearance).
+**Best for:** Specialized, time-bounded initiatives (PKI migration, CMMC assessment readiness, SIEM deployment, exposure backlog clearance).
 
 **Supervision:** The CERG employee who owns the project outcome is accountable for the contractor's deliverables. The contractor manages their own day-to-day work within the SOW boundaries.
 

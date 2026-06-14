@@ -224,8 +224,8 @@ Operational records (risk register entries, exceptions, findings, etc.) use stan
 |------------|-----------|---------|-----------------|
 | Risk Register Entry | RISK-YYYY-NNN | RISK-2026-001 | GRC system or risk register spreadsheet |
 | Exception | EXC-YYYY-NNN | EXC-2026-001 | GRC system or exception register spreadsheet |
-| Finding | FIND-YYYY-NNN | FIND-2026-001 | GRC system or vulnerability backlog spreadsheet |
-| Vulnerability | VULN-YYYY-NNN | VULN-2026-001 | GRC system or vulnerability backlog |
+| Finding | FIND-YYYY-NNN | FIND-2026-001 | GRC system or exposure backlog spreadsheet |
+| Vulnerability | VULN-YYYY-NNN | VULN-2026-001 | GRC system or exposure backlog |
 | Vendor Assessment | VEN-YYYY-NNN | VEN-2026-001 | GRC system or vendor inventory spreadsheet |
 | Evidence Item | EVD-YYYY-NNN | EVD-2026-001 | Evidence library (per IMP-003 §8) |
 | Incident | IR-YYYY-NNN | IR-2026-001 | IR incident tracking system |

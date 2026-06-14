@@ -103,7 +103,7 @@ For legacy systems where full threat modeling is infeasible (e.g., undocumented 
 
 - **Scope**: Document known boundaries, data flows, and integrations rather than attempting to reconstruct the entire architecture.
 - **Focus**: Concentrate on trust boundaries, external interfaces, and data classification paths rather than internal component detail.
-- **Output**: A reduced threat model covering abuse cases for the top 5 risks identified from the risk register, vulnerability backlog, and incident history.
+- **Output**: A reduced threat model covering abuse cases for the top 5 risks identified from the risk register, exposure backlog, and incident history.
 - **Acceptance**: The lightweight model is accepted as "sufficient for current risk posture" with a note that a full model will be produced at the next material change or system redesign.
 
 ---

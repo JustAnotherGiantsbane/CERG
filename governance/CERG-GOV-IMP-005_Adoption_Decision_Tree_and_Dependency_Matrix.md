@@ -228,7 +228,7 @@ Exit criteria:
 - Organization Adaptation Profile completed.
 - Role Assignment Map completed.
 - Initial risk register created.
-- Initial vulnerability backlog created.
+- Initial exposure backlog created.
 - Document catalog updated.
 
 ### Gate 2: Operating

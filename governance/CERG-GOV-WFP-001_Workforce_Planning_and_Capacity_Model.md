@@ -443,7 +443,7 @@ Organizations with mature security automation should apply the Automation Discou
 | Policy-as-code for cloud security (OPA, Terraform Sentinel, AWS SCPs) | Cloud Security Engineer throughput improves 15-25% |
 | Detection-as-code pipeline with automated testing and deployment | Detection Engineer throughput improves 20-30% |
 | Automated evidence collection from security tools to evidence library | Evidence Librarian throughput improves 30-50% |
-| Vulnerability scanner to ticketing system bi-directional integration with auto-triage rules | VM Lead throughput improves 15-25% |
+| Vulnerability scanner to ticketing system bi-directional integration with auto-triage rules | Exposure Management Lead throughput improves 15-25% |
 | Automated vendor risk scoring from security rating services | Vendor Risk Analyst throughput improves 20-30% |
 
 ### 9.3 The Experience Adjustment

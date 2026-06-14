@@ -177,7 +177,7 @@ Columns: **ENG** Engineering pillar, **RISK** Risk pillar, **GOV** Governance pi
 
 | **Process** | **ENG** | **RISK** | **GOV** | **OWNER** | **CISO** |
 |---|---|---|---|---|---|
-| Vulnerability scanning and SLA tracking | C | **R/A** Exposure Management Lead | I | I | I |
+| Exposure scanning and SLA tracking | C | **R/A** Exposure Management Lead | I | I | I |
 | Vulnerability remediation | **R** | C | I | **A** | I |
 | Adversarial validation (pen test, red team) | C | **R/A** Adversarial Testing Lead | I | I | I |
 | Threat intelligence collection and dissemination | C | **R/A** Threat Intelligence Analyst | C | I | I |
@@ -248,7 +248,7 @@ A normalized one-paragraph description for each canonical role. These are the jo
 
 **Risk Pillar Leader.** Accountable for the Cyber Risk pillar: the organization's exposure posture and the reporting of it. Holds Medium severity risk-acceptance authority per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7.
 
-**Exposure Management Lead.** Operates the Exposure Management Procedure. Accountable for remediation SLAs and vulnerability posture metrics.
+**Exposure Management Lead.** Operates the Exposure Management Procedure. Accountable for remediation SLAs and exposure posture metrics.
 
 **Adversarial Testing Lead.** Operates the Adversarial Validation Procedure: penetration testing, red team, and purple team exercises, and the tracking of their findings.
 
