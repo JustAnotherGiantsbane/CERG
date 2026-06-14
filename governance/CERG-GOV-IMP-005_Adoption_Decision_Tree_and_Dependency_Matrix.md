@@ -8,7 +8,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-005 |
-| **Version** | 1.0 |
+| **Version** | 1.01 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -65,8 +65,12 @@ If all answers are yes, continue.
 ### 2.2 Path selection
 
 ```text
-Security team size <= 5 or first security hire?
+Security team size 2-8 people?
   yes -> CERG Lite
+  no -> continue
+
+One-person security function?
+  yes -> use CERG as a planning reference; adopt MVC only after an Executive Sponsor and independent High/Critical risk approver are named
   no -> continue
 
 Existing security team with multiple functions but limited formal governance?
@@ -198,7 +202,8 @@ CERG adopters should label adopted artifacts in their local catalog using these 
 |---|---|
 | Policy, Framework, Operating Model, RMF, Catalog, Risk Register, Exposure Management | Required-Core |
 | Record Catalog, Framework System Map, Role-Based Checklists, Decision Tree | Recommended for all, Required-Path for first adoption projects |
-| Access, Asset, Configuration, IT/Cloud, Logging, Resilience | Required-Path for Standard and Regulated |
+| Access, Asset, Configuration, IT/Cloud where applicable, Logging, Resilience | Required-Path for Standard and Regulated |
+| Cryptography and Key Management | Recommended for Standard; Required-Path where managed keys, certificates, encryption controls, CUI, OT, SOX, or other regulated scope applies |
 | OT, CUI, SOX, ISO, Privacy packages | Conditional-Regulatory or Conditional-Environment |
 | Workforce architecture documents | Recommended for Standard, Required-Path for large teams or formal hiring model |
 | Example profiles | Example |
@@ -275,7 +280,7 @@ Exit criteria:
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-005 |
-| **Version** | 1.0 |
+| **Version** | 1.01 |
 | **Status** | Approved |
 | **Approved By** | CISO |
 | **Owner** | Governance Pillar Leader |
@@ -285,6 +290,7 @@ Exit criteria:
 
 | **Version** | **Date** | **Author** | **Change** |
 |---|---|---|---|
+| 1.01 | 2026-06-14 | Governance Pillar Leader | Aligned Lite path sizing and core-standard labels with README, START-HERE, IMP-001, and IMP-003. |
 | 1.0 | 2026-06-13 | Governance Pillar Leader | Initial publication. Adds adoption decision tree, safe tailoring rules, dependency matrix, artifact labels, and adoption gates. |
 
 ### Review Triggers
