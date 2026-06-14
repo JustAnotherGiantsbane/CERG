@@ -1,634 +1,1301 @@
 # CERG Publication Eligibility Manifest
-# Generated from document metadata | 70 artifacts
-# Separates "approved" status from "safe to publish"
+# Generated from document metadata | 118 artifacts
+# Separates lifecycle approval from public-release eligibility
+
+- document_id: CERG-GOV-AUD-001
+  source_path: governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-CAL-001
+  source_path: governance/CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-CAT-001
+  source_path: governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Governance Pillar Leader (Document Control)'
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-CAT-002
+  source_path: governance/CERG-GOV-CAT-002_Record_Catalog.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Governance Pillar Leader (Document Control)'
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-CB-001
+  source_path: governance/CERG-GOV-CB-001_Unified_Control_Baseline.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Governance Pillar Leader (Control Baseline)'
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-CEF-001
+  source_path: governance/CERG-GOV-CEF-001_Control_Effectiveness_Framework.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-CJ-001
+  source_path: governance/CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Risk Pillar Leader / Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-CMP-001
+  source_path: governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Governance Pillar Leader (Policy & Standards)'
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-CMX-001
+  source_path: governance/CERG-GOV-CMX-001_Compliance_Matrix.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-CON-001
+  source_path: governance/CERG-GOV-CON-001_Contractor_and_Non-Employee_Staff_Integration_Guide.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Governance Pillar Leader (Policy & Standards)'
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-EDG-001
+  source_path: governance/CERG-GOV-EDG-001_Edge_Register.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Vendor Risk Analyst / Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-FLOW-001
+  source_path: governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-FRM-001
+  source_path: governance/CERG-GOV-FRM-001_CERG_Framework.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: CISO
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-FRM-002
+  source_path: governance/CERG-GOV-FRM-002_Framework_System_Map.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-IMP-001
+  source_path: governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Governance Pillar Leader (Document Control)'
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-IMP-002
+  source_path: governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-IMP-003
+  source_path: governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-IMP-004
+  source_path: governance/CERG-GOV-IMP-004_Implementation_Cards.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-IMP-005
+  source_path: governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-IMP-006
+  source_path: governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-IMPREG-001
+  source_path: governance/CERG-GOV-IMPREG-001_Program_Improvement_Register.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JA-001
+  source_path: governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Governance Pillar Leader (Policy & Standards)'
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-001
+  source_path: governance/CERG-GOV-JD-001_CERG_Job_Descriptions.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Governance Pillar Leader (Policy & Standards)'
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-MAT-001
+  source_path: governance/CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Governance Pillar Leader (Document Control)'
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-MTR-001
+  source_path: governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Governance Pillar Leader (Reporting)'
+  release_date: 2026-06-14
 
 - document_id: CERG-GOV-OM-001
+  source_path: governance/CERG-GOV-OM-001_CERG_Operating_Model.md
+  status: Approved
   classification: Public
   publication_profile: public
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-GOV-CB-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader (Control Baseline)
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-GOV-MTR-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-GOV-FRM-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: CISO
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-GOV-RMF-001
-  classification: Internal / Restricted
-  publication_profile: public
-  public_summary_allowed: false
-  full_text_public_allowed: false
-  redaction_required: true
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-GOV-TAX-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-GOV-CMX-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-GOV-IMP-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader (Document Control)
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-GOV-VAR-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader (Document Control)
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-GOV-MAT-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader (Document Control)
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-GOV-RAC-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader (Policy & Standards)
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-GOV-CAL-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-GOV-STY-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader (Policy & Standards)
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-GOV-TRC-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader (Control Baseline)
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-GOV-IMPREG-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-GOV-CEF-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-GOV-JA-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader (Policy & Standards)
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-GOV-JD-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader (Policy & Standards)
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-GOV-CMP-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader (Policy & Standards)
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-GOV-PERF-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader (Policy & Standards)
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
+  approved_public_release_by: Chief Information Security Officer
+  release_date: 2026-06-14
+
 - document_id: CERG-GOV-ONB-001
+  source_path: governance/CERG-GOV-ONB-001_Onboarding_and_Integration_Program.md
+  status: Approved
   classification: Public
   publication_profile: public
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
-  approved_public_release_by: Governance Pillar Leader (Policy & Standards)
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-GOV-WFP-001
+  approved_public_release_by: 'Governance Pillar Leader (Policy & Standards)'
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-PERF-001
+  source_path: governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md
+  status: Approved
   classification: Public
   publication_profile: public
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
-  approved_public_release_by: Governance Pillar Leader (Policy & Standards)
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-GOV-TRN-001
+  approved_public_release_by: 'Governance Pillar Leader (Policy & Standards)'
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-RAC-001
+  source_path: governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md
+  status: Approved
   classification: Public
   publication_profile: public
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
-  approved_public_release_by: Governance Pillar Leader (Policy & Standards)
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
+  approved_public_release_by: 'Governance Pillar Leader (Policy & Standards)'
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-RMF-001
+  source_path: governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Cyber Governance (CERG Pillar)'
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-SLC-001
+  source_path: governance/CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Chief Information Security Officer
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-STY-001
+  source_path: governance/CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Governance Pillar Leader (Policy & Standards)'
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-STY-002
+  source_path: governance/CERG-GOV-STY-002_Style_Compliance_Tracker.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Governance Pillar Leader (Document Control)'
+  release_date: 2026-06-14
+
 - document_id: CERG-GOV-SUCC-001
-  classification: Confidential - CISO and Pillar Leaders
-  publication_profile: public
+  source_path: governance/CERG-GOV-SUCC-001_Succession_Planning_and_Talent_Review_Framework.md
+  status: Approved
+  classification: 'Confidential — CISO and Pillar Leaders'
+  publication_profile: restricted
   public_summary_allowed: false
   full_text_public_allowed: false
   redaction_required: true
   approved_public_release_by: CISO
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-GOV-CON-001
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-TAX-001
+  source_path: governance/CERG-GOV-TAX-001_Risk_Taxonomy.md
+  status: Approved
   classification: Public
   publication_profile: public
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
-  approved_public_release_by: Governance Pillar Leader (Policy & Standards)
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-STD-IT-001
+  approved_public_release_by: Risk Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-TRC-001
+  source_path: governance/CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md
+  status: Approved
   classification: Public
   publication_profile: public
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-STD-OT-001
+  approved_public_release_by: 'Governance Pillar Leader (Control Baseline)'
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-TRN-001
+  source_path: governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md
+  status: Approved
   classification: Public
   publication_profile: public
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-STD-CUI-001
+  approved_public_release_by: 'Governance Pillar Leader (Policy & Standards)'
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-VAR-001
+  source_path: governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md
+  status: Approved
   classification: Public
   publication_profile: public
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-STD-AC-001
+  approved_public_release_by: 'Governance Pillar Leader (Document Control)'
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-WFP-001
+  source_path: governance/CERG-GOV-WFP-001_Workforce_Planning_and_Capacity_Model.md
+  status: Approved
   classification: Public
   publication_profile: public
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-STD-CFG-001
+  approved_public_release_by: 'Governance Pillar Leader (Policy & Standards)'
+  release_date: 2026-06-14
+
+- document_id: CERG-POL-001
+  source_path: governance/CERG-POL-001_Cybersecurity_Policy.md
+  status: Approved
   classification: Public
   publication_profile: public
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-STD-LM-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-STD-RES-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-STD-CR-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-STD-SDL-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Engineering Pillar Leader (Application Security)
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-STD-AM-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Engineering Pillar Leader (Platforms)
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-STD-NET-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Engineering Pillar Leader (Platforms)
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-STD-EP-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Engineering Pillar Leader (Endpoint)
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-STD-DG-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader (Policy & Standards)
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-STD-AI-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Engineering Pillar Leader (Application Security)
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-STD-MSG-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Engineering Pillar Leader (Platforms)
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-PRC-VM-001
+  approved_public_release_by: Chief Information Security Officer
+  release_date: 2026-06-14
+
+- document_id: CERG-PLN-BC-001
+  source_path: plans/CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md
+  status: Approved
   classification: Public
   publication_profile: public
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
   approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-PRC-RM-001
+  release_date: 2026-06-14
+
+- document_id: CERG-PLN-CIP-001
+  source_path: plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: NERC-CIP Compliance Manager
+  release_date: 2026-06-14
+
+- document_id: CERG-PLN-CUI-001
+  source_path: plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: CMMC / Federal Compliance Manager
+  release_date: 2026-06-14
+
+- document_id: CERG-PLN-IR-001
+  source_path: plans/CERG-PLN-IR-001_Incident_Response_Plan.md
+  status: External Interface
+  classification: External Interface
+  publication_profile: external_interface
+  public_summary_allowed: false
+  full_text_public_allowed: false
+  redaction_required: true
+  approved_public_release_by: Standing IR Team / Incident Commander
+  release_date: 2026-06-14
+
+- document_id: CERG-PLN-ISO-001
+  source_path: plans/CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md
+  status: Approved
   classification: Public
   publication_profile: public
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
   approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-PRC-AR-001
+  release_date: 2026-06-14
+
+- document_id: CERG-PLN-PRIV-001
+  source_path: plans/CERG-PLN-PRIV-001_Privacy_and_Data_Protection_Operational_Package.md
+  status: Approved
   classification: Public
   publication_profile: public
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
   approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
+  release_date: 2026-06-14
+
+- document_id: CERG-PLN-SOX-001
+  source_path: plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Governance Pillar Leader (SOX Liaison)'
+  release_date: 2026-06-14
+
 - document_id: CERG-PRC-AC-002
+  source_path: procedures/CERG-PRC-AC-002_Access_Management_Runbook.md
+  status: Approved
   classification: Public
   publication_profile: public
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-PRC-TPRM-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-PRC-AV-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-PRC-IR-002
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-PRC-TM-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Risk Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-PRC-TI-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Risk Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-PRC-AUD-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-PRC-CHG-001
+  approved_public_release_by: Identity Engineer
+  release_date: 2026-06-14
+
+- document_id: CERG-PRC-AR-001
+  source_path: procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
+  status: Approved
   classification: Public
   publication_profile: public
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
   approved_public_release_by: Engineering Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
+  release_date: 2026-06-14
+
+- document_id: CERG-PRC-AUD-001
+  source_path: procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-PRC-AV-001
+  source_path: procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Adversarial Testing Lead
+  release_date: 2026-06-14
+
+- document_id: CERG-PRC-CHG-001
+  source_path: procedures/CERG-PRC-CHG-001_Security_Change_Management_Procedure.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Engineering Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-PRC-IR-002
+  source_path: procedures/CERG-PRC-IR-002_Incident_Response_Playbook_Set.md
+  status: External Interface
+  classification: External Interface
+  publication_profile: external_interface
+  public_summary_allowed: false
+  full_text_public_allowed: false
+  redaction_required: true
+  approved_public_release_by: Standing IR Team / Incident Commander
+  release_date: 2026-06-14
+
 - document_id: CERG-PRC-LL-001
+  source_path: procedures/CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md
+  status: Approved
   classification: Public
   publication_profile: public
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
   approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-PLN-IR-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-PLN-CUI-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-PLN-CIP-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-PLN-SOX-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-PLN-BC-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-PLN-ISO-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-PLN-PRIV-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-TMPL-RM-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-TMPL-CUI-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: CMMC / Federal Compliance Manager
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-TMPL-CUI-002
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: CMMC / Federal Compliance Manager
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-TMPL-RM-002
+  release_date: 2026-06-14
+
+- document_id: CERG-PRC-RM-001
+  source_path: procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
+  status: Approved
   classification: Public
   publication_profile: public
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
   approved_public_release_by: Risk Register Owner
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-TMPL-AR-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Engineering Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-TMPL-TPRM-001
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Vendor Risk Analyst
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-TMPL-RM-003
+  release_date: 2026-06-14
+
+- document_id: CERG-PRC-TI-001
+  source_path: procedures/CERG-PRC-TI-001_Threat_Intelligence_Procedure.md
+  status: Approved
   classification: Public
   publication_profile: public
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
   approved_public_release_by: Risk Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
+  release_date: 2026-06-14
+
+- document_id: CERG-PRC-TM-001
+  source_path: procedures/CERG-PRC-TM-001_Threat_Modeling_Procedure.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Risk Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-PRC-TPRM-001
+  source_path: procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Vendor Risk Analyst
+  release_date: 2026-06-14
+
+- document_id: CERG-PRC-VM-001
+  source_path: procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Exposure Management Lead
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JF-001
+  source_path: roles/CERG-GOV-JF-001_Job_Families_Overview.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Governance Pillar Leader (Policy & Standards)'
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JF-002
+  source_path: roles/CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Governance Pillar Leader (Policy & Standards)'
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-ADJUNCT-000
+  source_path: roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-000_Incident_Response_Family.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-ADJUNCT-001
+  source_path: roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-001_Incident_Commander.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-ADJUNCT-002
+  source_path: roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-002_Lead_Investigator.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-EXEC-000
+  source_path: roles/jf-exec/CERG-GOV-JD-EXEC-000_Executive_Leadership_Family.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: CISO
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-EXEC-001
+  source_path: roles/jf-exec/CERG-GOV-JD-EXEC-001_Chief_Information_Security_Officer.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: CISO
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-EXEC-002
+  source_path: roles/jf-exec/CERG-GOV-JD-EXEC-002_Executive_Sponsor.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: CISO
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-GOVCOMP-000
+  source_path: roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-000_Governance_Compliance_Family.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-GOVCOMP-001
+  source_path: roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-001_NERC-CIP_Compliance_Manager.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-GOVCOMP-002
+  source_path: roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-002_CMMC_Federal_Compliance_Manager.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-GOVCOMP-003
+  source_path: roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-003_SOX_ITGC_Lead.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-GOVCOMP-004
+  source_path: roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-004_Policy_and_Standards_Manager.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-GOVCOMP-005
+  source_path: roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-005_Risk_Register_Owner.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-GOVCOMP-006
+  source_path: roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-006_Evidence_Librarian.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-GOVCOMP-007
+  source_path: roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-007_Governance_Pillar_Leader.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-RISKOPS-000
+  source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-000_Risk_Operations_Family.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Risk Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-RISKOPS-001
+  source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Risk Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-RISKOPS-002
+  source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-002_Adversarial_Testing_Lead.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Risk Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-RISKOPS-003
+  source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-003_Threat_Intelligence_Analyst.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Risk Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-RISKOPS-004
+  source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Risk Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-RISKOPS-005
+  source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-005_OT_Risk_Analyst.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Risk Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-RISKOPS-006
+  source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-006_Identity_Risk_Analyst.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Risk Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-RISKOPS-007
+  source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-007_Vendor_Risk_Analyst.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Risk Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-RISKOPS-008
+  source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-008_Risk_Pillar_Leader.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Risk Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-SECENG-000
+  source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-000_Security_Engineering_Family.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Engineering Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-SECENG-001
+  source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-001_Cloud_Security_Engineer.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Engineering Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-SECENG-002
+  source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-002_Identity_Engineer.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Engineering Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-SECENG-003
+  source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-003_OT_Security_Engineer.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Engineering Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-SECENG-004
+  source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-004_Application_Security_Engineer.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Engineering Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-SECENG-005
+  source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Engineering Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-SECENG-006
+  source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-006_Cryptography_Engineer.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Engineering Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-SECENG-007
+  source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-007_Engineering_Pillar_Leader.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Engineering Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-GOV-JD-SECENG-008
+  source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-008_Pre-production_Reviewer.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Engineering Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-STD-AC-001
+  source_path: standards/CERG-STD-AC-001_Access_Management_Standard.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-STD-AI-001
+  source_path: standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Engineering Pillar Leader (Application Security)'
+  release_date: 2026-06-14
+
+- document_id: CERG-STD-AM-001
+  source_path: standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Engineering Pillar Leader (Platforms)'
+  release_date: 2026-06-14
+
+- document_id: CERG-STD-CFG-001
+  source_path: standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Engineering Pillar Leader (Platforms)'
+  release_date: 2026-06-14
+
+- document_id: CERG-STD-CR-001
+  source_path: standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Engineering Pillar Leader (Platforms)'
+  release_date: 2026-06-14
+
+- document_id: CERG-STD-CUI-001
+  source_path: standards/CERG-STD-CUI-001_CUI_Handling_Standard.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: CMMC / Federal Compliance Manager
+  release_date: 2026-06-14
+
+- document_id: CERG-STD-DG-001
+  source_path: standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Governance Pillar Leader (Policy & Standards)'
+  release_date: 2026-06-14
+
+- document_id: CERG-STD-EP-001
+  source_path: standards/CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Engineering Pillar Leader (Endpoint)'
+  release_date: 2026-06-14
+
+- document_id: CERG-STD-IT-001
+  source_path: standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-STD-LM-001
+  source_path: standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Risk Pillar Leader (Detection Engineering)'
+  release_date: 2026-06-14
+
+- document_id: CERG-STD-MSG-001
+  source_path: standards/CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Engineering Pillar Leader (Platforms)'
+  release_date: 2026-06-14
+
+- document_id: CERG-STD-NET-001
+  source_path: standards/CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Engineering Pillar Leader (Platforms)'
+  release_date: 2026-06-14
+
+- document_id: CERG-STD-OT-001
+  source_path: standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Governance Pillar Leader (OT/NERC-CIP)'
+  release_date: 2026-06-14
+
+- document_id: CERG-STD-RES-001
+  source_path: standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Engineering Pillar Leader (Resilience)'
+  release_date: 2026-06-14
+
+- document_id: CERG-STD-SDL-001
+  source_path: standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Engineering Pillar Leader (Application Security)'
+  release_date: 2026-06-14
+
+- document_id: CERG-TMPL-AR-001
+  source_path: templates/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Engineering Pillar Leader
+  release_date: 2026-06-14
+
 - document_id: CERG-TMPL-AUD-001
+  source_path: templates/CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md
+  status: Approved
   classification: Public
   publication_profile: public
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
   approved_public_release_by: Evidence Librarian
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-TMPL-MTR-001
+  release_date: 2026-06-14
+
+- document_id: CERG-TMPL-CUI-001
+  source_path: templates/CERG-TMPL-CUI-001_System_Security_Plan_Template.md
+  status: Approved
   classification: Public
   publication_profile: public
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
+  approved_public_release_by: CMMC / Federal Compliance Manager
+  release_date: 2026-06-14
+
+- document_id: CERG-TMPL-CUI-002
+  source_path: templates/CERG-TMPL-CUI-002_POAM_Template.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: CMMC / Federal Compliance Manager
+  release_date: 2026-06-14
+
 - document_id: CERG-TMPL-GOV-001
+  source_path: templates/CERG-TMPL-GOV-001_Stakeholder_Perception_Survey.md
+  status: Approved
   classification: Public
   publication_profile: public
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
   approved_public_release_by: Governance Pillar Leader
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
-- document_id: CERG-GOV-CAT-001
+  release_date: 2026-06-14
+
+- document_id: CERG-TMPL-MTR-001
+  source_path: templates/CERG-TMPL-MTR-001_Board_and_CISO_Reporting_Deck_Template.md
+  status: Approved
   classification: Public
   publication_profile: public
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
-  approved_public_release_by: Governance Pillar Leader (Document Control)
-  release_date: '2026-05-27'
-  review_date: '2026-08-27'
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-TMPL-RM-001
+  source_path: templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Governance Pillar Leader (Risk Register)'
+  release_date: 2026-06-14
+
+- document_id: CERG-TMPL-RM-002
+  source_path: templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Risk Register Owner
+  release_date: 2026-06-14
+
+- document_id: CERG-TMPL-RM-003
+  source_path: templates/CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Risk Pillar Leader
+  release_date: 2026-06-14
+
+- document_id: CERG-TMPL-TPRM-001
+  source_path: templates/CERG-TMPL-TPRM-001_Vendor_Security_Questionnaire_and_Assessment_Template.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Vendor Risk Analyst
+  release_date: 2026-06-14
