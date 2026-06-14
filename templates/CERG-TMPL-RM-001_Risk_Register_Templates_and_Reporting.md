@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-TMPL-RM-001 |
-| **Version** | 1.21 |
+| **Version** | 1.22 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Risk Register) |
@@ -173,7 +173,7 @@ Requestor              :
 Business Sponsor       :
 Date Submitted         :
 Requested Effective    :
-Requested Expiration   :   (max 12 months per PRC-RM-001 §7)
+Requested Expiration   :   (per RMF §9.7 default durations; shortest applicable regulatory or procedural duration wins)
 
 Affected Asset(s)      :   (inventory ID + name)
 Operating Unit         :
@@ -244,12 +244,13 @@ Residual cannot fall below 1. Step-downs are applied to inherent, never to resid
 
 ### 6.4 Heat Map Bands
 
-| **Residual Score** | **Band** | **Approval Authority (per PRC-RM-001 §8)** |
+| **Residual Score** | **Band** | **Approval Authority (per RMF §9.7 / PRC-RM-001 §8)** |
 |---|---|---|
-| 17 – 25 | Critical | CISO + Executive Sponsor |
-| 12 – 16 | High | CISO |
-| 6 – 11 | Medium | Engineering Pillar Leader |
-| 1 – 5 | Low | Risk Register Owner |
+| 20–25 | Critical | CISO + Executive Sponsor; Board notified |
+| 12–19 | High | CISO + Business Owner |
+| 6–11 | Medium | Business Owner + Pillar Leader or Governance Pillar Leader |
+| 2–5 | Low | Business Owner + Risk Register Owner |
+| 1 | Informational | Risk Register Owner tracks; no formal acceptance required |
 
 ---
 
@@ -296,8 +297,8 @@ Additional guardrails baked into the views:
 | | |
 |---|---|
 | **Document ID** | CERG-TMPL-RM-001 |
-| **Version** | 1.0 |
+| **Version** | 1.22 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / on tooling change |
-| **Change Log** | 1.0 - Initial publication. Schema, examples, exception template, scoring guide, CISO reporting views. |
+| **Change Log** | 1.22 - Aligned scoring bands, approval authorities, and expiration guidance to RMF §9.7 / PRC-RM-001 §8. 1.0 - Initial publication. Schema, examples, exception template, scoring guide, CISO reporting views. |
 
