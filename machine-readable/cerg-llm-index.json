@@ -3,7 +3,7 @@
   "generated": "2026-06-14",
   "source": "local markdown corpus",
   "total_documents": 131,
-  "total_tokens_estimate": 827366,
+  "total_tokens_estimate": 827369,
   "by_type": {
     "readme": 12,
     "governance-instrument": 38,
@@ -658,8 +658,8 @@
         11076
       ],
       "lines_count": 456,
-      "chars": 36506,
-      "tokens": 10430,
+      "chars": 36514,
+      "tokens": 10433,
       "summary": "Metrics, Dashboard, and Reporting: KPIs, dashboards, CISO/Board reporting."
     },
     {
