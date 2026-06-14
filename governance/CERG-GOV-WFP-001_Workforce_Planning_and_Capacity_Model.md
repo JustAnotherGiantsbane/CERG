@@ -266,7 +266,7 @@ Where Scan_Freq_Factor = 0.8 (weekly), 1.0 (daily), 1.3 (continuous). OT_Assets 
 
 | Scope | Staff Required |
 |---|---|
-| **Annual external pen test (outsourced)** | 0.0 (the outsourced test is managed by the Risk Pillar Leader or VM Lead) |
+| **Annual external pen test (outsourced)** | 0.0 (the outsourced test is managed by the Risk Pillar Leader or Exposure Management Lead) |
 | **Annual pen test (internal or co-sourced) + one purple team exercise** | 1.0 |
 | **Semi-annual pen test + quarterly purple team + annual red team** | 2.0-3.0 |
 | **Continuous testing program + red team operations + purple team + regulatory-mandated cycles** | 3.0-6.0 |
@@ -277,7 +277,7 @@ Where Scan_Freq_Factor = 0.8 (weekly), 1.0 (daily), 1.3 (continuous). OT_Assets 
 
 | Scope | Staff Required |
 |---|---|
-| **Consuming third-party threat feeds, no production** | 0.5 (consolidate with Detection Engineer or VM Lead) |
+| **Consuming third-party threat feeds, no production** | 0.5 (consolidate with Detection Engineer or Exposure Management Lead) |
 | **Weekly threat briefings, 2-3 intelligence sources, basic actor tracking** | 1.0 |
 | **Daily threat briefings, 5+ intelligence sources, sector-specific ISAC participation** | 1.5-2.5 |
 | **Full threat intelligence program: strategic/operational/tactical, dedicated platforms, external collaboration** | 2.5-5.0 |
@@ -304,7 +304,7 @@ VRA = ⌈(Critical_Vendors / 30) + (High_Vendors / 60) + (Medium_Vendors / 100) 
 
 | Scope | Staff Required |
 |---|---|
-| **<10 log sources, SIEM managed by external SOC or MSSP** | 0.5 (consolidate with VM Lead or Threat Intel Analyst) |
+| **<10 log sources, SIEM managed by external SOC or MSSP** | 0.5 (consolidate with Exposure Management Lead or Threat Intel Analyst) |
 | **10-50 log sources, in-house SIEM, basic use case library** | 1.0-2.0 |
 | **50-200 log sources, detection-as-code, ATT&CK coverage mapping** | 2.0-5.0 |
 | **200+ log sources, multi-SIEM, detection engineering pipeline, 90%+ ATT&CK technique coverage target** | 5.0-10.0 |

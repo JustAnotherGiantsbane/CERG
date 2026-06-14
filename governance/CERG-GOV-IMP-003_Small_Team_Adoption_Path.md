@@ -190,7 +190,7 @@ A simple table mapping your actual people to canonical roles. Example:
 | Person | Canonical Roles | Email |
 |--------|----------------|-------|
 | Jane Smith | CISO, Governance Pillar Leader | jane@example.com |
-| Alex Chen | Risk Pillar Leader, VM Lead, Threat Intel | alex@example.com |
+| Alex Chen | Risk Pillar Leader, Exposure Management Lead, Threat Intel | alex@example.com |
 
 ### Record 3: Asset Inventory Extract
 
