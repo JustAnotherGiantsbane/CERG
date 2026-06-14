@@ -273,7 +273,7 @@ ROLE_KEYWORDS = {
 }
 
 # ── Role-to-file mapping ──
-BASE = '/home/lupus/CERG'
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 ROLE_FILES = [
     # JF-SECENG
