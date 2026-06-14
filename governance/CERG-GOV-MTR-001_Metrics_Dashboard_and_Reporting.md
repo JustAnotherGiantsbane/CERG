@@ -353,7 +353,7 @@ These metrics measure whether the CERG program itself is healthy — not whether
 | % of high-risk vendors reviewed on schedule | Vendor risk currency | >90% |
 | % of adopted documents reviewed on schedule | Document governance | >80% |
 | Number of "Approved" documents with "Pending" approver | Governance hygiene | 0 |
-| Number of placeholder values in approved documents | Operational readiness | 0 in adopted documents |
+| Number of unresolved template values in approved documents | Operational readiness | 0 in adopted documents |
 | % of findings with a named owner assigned within SLA | Accountability timeliness | >90% |
 | % of accepted risks past expiration without review | Risk acceptance discipline | 0% |
 | % of recurring findings (same vulnerability, same system, >2 times) | Remediation effectiveness | <10% of total findings |
