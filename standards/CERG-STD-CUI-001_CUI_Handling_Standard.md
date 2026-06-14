@@ -137,7 +137,7 @@ The three CERG pillars operate in CUI environments with the same structure as el
 |---|---|---|---|
 | Periodically assess risk to CUI confidentiality, integrity, and availability. Document threat sources, vulnerabilities, likelihood, and impact. Output feeds the risk register and POA&M. | All CUI | Risk | [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) 3.11.1 · [CMMC](https://dodcio.defense.gov/CMMC/) RA.L2-3.11.1 |
 | Scan CUI environment systems for vulnerabilities at least monthly, and upon advisory of new significant vulnerabilities. Authenticated scans are required where technically feasible. | All CUI | Risk | [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) 3.11.2 · [CMMC](https://dodcio.defense.gov/CMMC/) RA.L2-3.11.2 |
-| Remediate vulnerabilities in the CUI environment per the SLAs defined in **[CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md)**. Where remediation cannot meet SLA, open a POA&M entry. | All CUI | Risk / Engineering | [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) 3.11.3 · [CMMC](https://dodcio.defense.gov/CMMC/) RA.L2-3.11.3 |
+| Treat confirmed exposures in the CUI environment per the SLAs defined in **[CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md)**. Where treatment cannot meet SLA, open a POA&M entry. | All CUI | Risk / Engineering | [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) 3.11.3 · [CMMC](https://dodcio.defense.gov/CMMC/) RA.L2-3.11.3 |
 
 ---
 
@@ -375,4 +375,6 @@ Governance owns this document. The Governance Pillar Leader ([CMMC](https://dodc
 | IT (Hosted/Cloud/SaaS) Security Standard | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | Peer standard - applies in addition to this where CUI is hosted on cloud/SaaS |
 | Grid and Control System Standard | [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | Peer standard - governs OT estates |
 | Access Management Standard | [CERG-STD-AC-001](CERG-STD-AC-001_Access_Management_Standard.md) | Peer standard - identity/access requirements applied inside CUI boundary |
-| Exposure Management Procedure | [CERG-PRC-VM-001](CERG-PRC-VM-001_Vulne
+| Exposure Management Procedure | [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Exposure classification, treatment, patch hygiene, and remediation SLA source |
+| Risk Register and Exception Process | [CERG-PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Risk acceptance and exception workflow for CUI-related residual risk |
+| CUI / CMMC Operational Package | [CERG-PLN-CUI-001](../plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md) | SSP, POA&M, SPRS, and assessment-readiness package |
