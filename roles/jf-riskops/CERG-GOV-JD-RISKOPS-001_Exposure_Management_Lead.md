@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The Exposure Management Lead operates the Exposure Management Procedure. They own the vulnerability scanning program, the finding prioritization and triage process, the remediation SLAs, and the exposure posture metrics that feed the CISO dashboard. They ensure that every vulnerability in the environment is known, prioritized, tracked to remediation, and reported.
+The Exposure Management Lead operates the Exposure Management Procedure. They own the observation intake, scanner integration, exposure validation, finding triage, remediation SLAs, and exposure posture metrics that feed the CISO dashboard. They ensure that every material exposure is known, prioritized, assigned, tracked to treatment, and reported.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -46,7 +46,7 @@ The Exposure Management Lead operates the Exposure Management Procedure. They ow
 
 ### 4.1 Core Responsibilities (All Grades)
 
-- Operate and maintain the vulnerability scanning infrastructure across IT, cloud, and OT environments - Define and enforce vulnerability triage criteria: severity, exploitability, asset criticality, exposure - Own remediation SLAs and track compliance, escalating overdue findings per the defined process - Report exposure posture metrics: open findings by severity and age, SLA compliance, mean time to remediate, coverage gaps - Coordinate with IT, OT, and Engineering teams to drive remediation - Manage false-positive triage and scanner tuning to maintain scan hygiene - Govern OT-safe scanning procedures, ensuring scan techniques do not introduce operational risk - Contribute to exposure management tooling selection, configuration, and optimization - Support incident response with vulnerability context for compromised systems
+- Operate and maintain exposure observation sources across IT, cloud, and OT environments, including vulnerability scanners, CSPM, SSPM, SCA, and OT passive monitoring - Define and enforce triage criteria: validation state, reachability, exploitability, asset criticality, and exposure classification - Own remediation SLAs and track compliance, escalating overdue findings per the defined process - Report exposure posture metrics: open findings by severity and age, SLA compliance, mean time to remediate, coverage gaps - Coordinate with IT, OT, and Engineering teams to drive remediation - Manage scanner-artifact triage and tuning to maintain signal quality - Govern OT-safe scanning procedures, ensuring scan techniques do not introduce operational risk - Contribute to exposure management tooling selection, configuration, and optimization - Support incident response with vulnerability and exposure context for compromised systems
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
@@ -127,7 +127,7 @@ Competency expectations for this role follow the Risk pillar behavioral anchors 
 
 ## 10. Success Profile
 
-A Exposure Management Lead is successful when the organization knows its exposure posture in real time and is actively reducing it. Key indicators: scanning coverage is complete across all in-scope assets; vulnerability age is trending down, not up; remediation SLAs are met for each severity tier; the vulnerability register is the authoritative source of truth for exposure decisions. The lead ensures that every Critical and High finding has an owner, a plan, and a due date — and that the CISO can report exposure status to the board in under an hour.
+An Exposure Management Lead is successful when the organization knows its exposure posture in real time and is actively reducing it. Key indicators: observation coverage is complete across all in-scope assets; confirmed exposure age is trending down, not up; remediation SLAs are met for each severity tier; the exposure backlog is the authoritative source of truth for exposure decisions. The lead ensures that every Critical and High finding has an owner, a plan, and a due date — and that the CISO can report exposure status to the board in under an hour.
 
 ## 11. Career Path
 

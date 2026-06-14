@@ -45,7 +45,7 @@ If you are still unsure where to begin, use these four helpers before diving int
 7. **Fill in the [Organization Adaptation Profile](governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md).** Set your headcount, sector, and regulators. Do NOT leave the default values.
 8. **Start the Risk Register.** Open [the template](templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md). Create your first entry. It can be simple.
 9. **Create the first records from the [Record Catalog](governance/CERG-GOV-CAT-002_Record_Catalog.md).** Start with role assignment, evidence index, asset extract, top risks, exposure backlog, and exception register.
-10. **Run the first Exposure scan cycle.** Even if it's one Nessus scan on your production subnet. Open [PRC-VM-001](procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) and follow the triage flow.
+10. **Run the first exposure management cycle.** Even if it starts with one Nessus scan on your production subnet, open [PRC-VM-001](procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) and follow the observe → validate → assess reachability → classify → treat → verify flow.
 
 ### Your MVC set
 
