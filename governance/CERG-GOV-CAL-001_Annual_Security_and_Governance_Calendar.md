@@ -65,7 +65,7 @@ It applies to all CERG-owned governance, risk, engineering, audit, evidence, and
 
 | **Cadence** | **Activity** | **Accountable Role** | **Primary Evidence** | **Source** |
 |---|---|---|---|---|
-| Daily / Continuous | Critical risk, vulnerability, logging, backup, identity, and monitoring signals reviewed through dashboards and queues. | Risk Pillar Leader | Dashboard snapshots, queue metrics, risk updates | `CERG-GOV-MTR-001`, `CERG-PRC-VM-001`, `CERG-STD-LM-001` |
+| Daily / Continuous | Critical risk, exposure, logging, backup, identity, and monitoring signals reviewed through dashboards and queues. | Risk Pillar Leader | Dashboard snapshots, queue metrics, risk updates | `CERG-GOV-MTR-001`, `CERG-PRC-VM-001`, `CERG-STD-LM-001` |
 | Weekly | High-priority risk, exception, vulnerability, vendor, and audit blockers reviewed. | Risk Pillar Leader | Weekly action tracker | `CERG-PRC-RM-001`, `CERG-PRC-AUD-001` |
 | Monthly | CERG leadership operating review. | Governance Pillar Leader | Monthly leadership report | `CERG-GOV-MTR-001`, `CERG-TMPL-MTR-001` |
 | Monthly | CERG service-level commitment (SLC) adherence review. | CISO / Pillar Leaders | SLC adherence snapshot (SR-004) | `CERG-GOV-SLC-001`, `CERG-GOV-MTR-001` |
@@ -141,7 +141,7 @@ The monthly operating review uses a standard agenda:
 1. material risk changes;
 2. open Critical and High residual risks;
 3. exception aging and upcoming expirations;
-4. vulnerability and remediation SLA posture;
+4. exposure and remediation SLA posture;
 5. audit findings and evidence blockers;
 6. vendor risk escalations;
 7. project intake and threat modeling throughput;

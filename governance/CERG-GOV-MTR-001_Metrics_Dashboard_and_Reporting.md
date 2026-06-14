@@ -187,12 +187,12 @@ The metrics above are lagging indicators : they tell you what already happened. 
 
 | **ID** | **Name** | **Formula** | **Why Predictive** | **Source** | **Refresh** | **G / A / R** | **Reported In** |
 |---|---|---|---|---|---|---|---|
-| PL-001 | Mean Time to Exploit vs. Patch Velocity | (Avg days from CVE publication to known exploit) / (Avg days from CVE publication to patch deployment) | When ratio > 1.0, attackers are faster than patching. Trend direction predicts incident probability. | VM tool + threat intelligence | Monthly | <= 0.5 / 0.5-1.0 / > 1.0 | CISO Dashboard, COG Brief |
+| PL-001 | Mean Time to Exploit vs. Patch Velocity | (Avg days from CVE publication to known exploit) / (Avg days from CVE publication to patch deployment) | When ratio > 1.0, attackers are faster than patching. Trend direction predicts incident probability. | Exposure pipeline + threat intelligence | Monthly | <= 0.5 / 0.5-1.0 / > 1.0 | CISO Dashboard, COG Brief |
 | PL-002 | Attack Surface Change Rate | (New externally-facing assets + decommissioned assets + changed services this month) / total externally-facing assets | Rapid surface expansion without corresponding review capacity predicts exposure gaps. | Asset inventory + CMDB | Monthly | <= 5% / 5-15% / > 15% | CISO Dashboard |
 | PL-003 | Near-Miss Rate (Trailing Quarter) | Count of events that met detection thresholds but were contained before impact, per quarter | Rising near-miss rate can predict an incident when controls fatigue or coverage gaps align. A flat or falling rate after mitigations confirms effectiveness. | Near-miss log (PRC-LL-001) | Quarterly | n/a: informational; trend is the signal | COG Brief |
 | PL-004 | Threat-Intelligence-Tilted Risk Score | Sum of (risk score x TI confidence x sector targeting relevance) for top 20 risks | Incorporates whether threat actors are actively targeting the sector with TTPs relevant to each risk. Higher tilt = stronger alignment between risk register and threat landscape. | Risk register + TI assessment | Quarterly | n/a: informational; rising tilt demands attention | COG Brief |
 | PL-005 | Control Coverage vs. Threat Coverage | % of top 10 MITRE ATT&CK techniques for the sector that map to an operational CERG control | A falling percentage means threat evolution is outpacing control evolution : a predictive gap signal. | TRC-001 + ATT&CK mapping | Quarterly | >= 80% / 60-80% / < 60% | COG Brief |
-| PL-006 | Unpatched Vulns with Known Exploit | Count of open vulns where CISA KEV or vendor confirms active exploitation, regardless of CVSS score | More predictive than raw vuln count : these are the vulns attackers are actually using in the wild. | VM tool + CISA KEV | Daily | 0 / 1-5 / > 5 | CISO Dashboard |
+| PL-006 | Unpatched Vulns with Known Exploit | Count of open vulnerabilities where CISA KEV or vendor confirms active exploitation, regardless of CVSS score | More predictive than raw vulnerability count: these are the vulnerabilities attackers are actually using in the wild. | Exposure pipeline + CISA KEV | Daily | 0 / 1-5 / > 5 | CISO Dashboard |
 | PL-007 | Privileged Account Anomaly Rate | % of privileged sessions flagged as anomalous by UEBA or behavioral rules | Rising anomaly rate without corresponding investigation capacity predicts credential misuse incidents. | PAM / UEBA tool | Weekly | <= 2% / 2-5% / > 5% | CISO Dashboard |
 
 > **Leading Indicators Are Early Warning, Not Precision Instruments**
@@ -219,7 +219,7 @@ These metrics hold CERG accountable to its own service-level commitments ([`CERG
 | SR-002 | Advisory Response Time | Median business days from advisory request to substantive written response | Intake system | Monthly | <= 3d / 4-7d / > 7d | CISO Dashboard |
 | SR-003 | Intake Disposition Time | Median business days from project / SaaS intake to security disposition | Intake system | Monthly | <= SLC target / 1-2x target / > 2x target | CISO Dashboard, COG Brief |
 | SR-004 | SLC Commitment Adherence | % of CERG requests answered within the published SLC-001 commitment | Intake system | Monthly | >= 90% / 75-90% / < 75% | CISO Dashboard, COG Brief, Board |
-| SR-005 | Time-to-Coverage | Median days from asset go-live to vulnerability / CSPM coverage | Exposure pipeline + asset inventory | Monthly | <= 5d / 6-15d / > 15d | COG Brief |
+| SR-005 | Time-to-Coverage | Median days from asset go-live to exposure-management / CSPM coverage | Exposure pipeline + asset inventory | Monthly | <= 5d / 6-15d / > 15d | COG Brief |
 
 ---
 
@@ -230,7 +230,7 @@ The data source map tells the reporting team where each metric's underlying data
 | **Metric IDs** | **Primary System of Record** | **Owning Role** | **Refresh Path** | **Failure Mode** |
 |---|---|---|---|---|
 | RM-001 – RM-006 | Risk register tool | Risk Register Owner | Nightly extract → metrics platform | Stale ETL: hold the day's CISO Dashboard, raise an Amber data-quality flag. |
-| VM-001 – VM-004 | VM tool (e.g., Tenable) | Cyber Risk - VM | Hourly API → metrics platform | Tool outage: fall back to last-known-good snapshot with timestamp banner. |
+| EM-001 – EM-010 | Exposure pipeline (scanner, CSPM, SSPM, SCA, KEV, reachability context) | Exposure Management Lead | Hourly API / pipeline export → metrics platform | Source outage: fall back to last-known-good snapshot with timestamp banner. |
 | DT-001 – DT-003 | SIEM + detection coverage tool | Cyber Risk - Detection | Nightly source inventory + detection registry export | Missing source: detection coverage shown as Red. |
 | CM-001 – CM-005 | Configuration / VM / Backup tools | Cyber Engineering - Platforms / Resilience | Nightly aggregation | Backup tool outage: pull from job log; flag as Amber. |
 | ID-001 – ID-004 | IdP / IGA / PAM | Identity Engineer | Nightly export | Source change: re-baseline before publishing. |
@@ -362,7 +362,7 @@ The guardrails baked into the metric definitions and reporting views above:
 1. **Score sum first, count second.** Headline figures are residual-score weighted (RM-002), not raw count.
 2. **Partial = 0.5, not 1.** Regulatory implementation percentages count Partially Implemented as half. (Forces honesty.)
 3. **Age weighting on regulatory openness.** POA&M items report mean age, not just count.
-4. **Closure velocity, not closure count.** VM-003 reports closed/opened ratio so closing 200 lows doesn't mask 4 critical opens.
+4. **Decision and treatment velocity, not closure count.** EM-009 and EM-010 show whether exposure work is moving through the pipeline, so closing 200 Lows doesn't mask 4 Criticals stalled before treatment.
 5. **Concentration over volume.** OU heat map colors on Critical+High concentration, not total findings.
 6. **No "scanned X assets" headlines.** Activity metrics are operational, never on the CISO dashboard.
 7. **Trend direction is the headline.** Every CISO-facing metric carries a 13-month spark or arrow.
@@ -378,7 +378,7 @@ The guardrails baked into the metric definitions and reporting views above:
 | **Metric Group** | **Owner** | **Cadence** | **Audience** |
 |---|---|---|---|
 | RM-001 through RM-006 (Risk) | Risk Register Owner | Risk posture review: weekly for High/Critical; monthly for full register | CISO, Risk Pillar Leader |
-| VM-001 through VM-004 (Vulnerability) | Exposure Management Lead | Daily dashboard update; monthly trend report | CISO, Risk Pillar Leader |
+| EM-001 through EM-010 (Exposure Management) | Exposure Management Lead | Daily dashboard update; monthly trend report | CISO, Risk Pillar Leader |
 | DT-001 through DT-003 (Detection) | Detection Engineer | Monthly | Risk Pillar Leader, CISO |
 | CM-001 through CM-005 (Engineering) | Engineering Pillar Leader | Daily for CM-001, CM-004; monthly for others; quarterly for CM-003, CM-005 | CISO, Engineering Pillar Leader |
 | ID-001 through ID-004 (Identity) | Identity Engineer | Daily for ID-001; weekly for ID-003; monthly for ID-002, ID-004 | CISO, Identity Engineer |
@@ -423,7 +423,7 @@ The Governance Pillar Leader maintains a threshold change log. Every change reco
 
 | Field | Example |
 |---|---|
-| Metric ID | VM-001 |
+| Metric ID | EM-001 |
 | Date changed | 2026-09-01 |
 | Old threshold (Red) | > 5 |
 | New threshold (Red) | > 2 |

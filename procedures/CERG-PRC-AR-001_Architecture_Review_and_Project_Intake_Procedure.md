@@ -246,7 +246,7 @@ The reviewer works through the checklist below; findings are recorded with sever
 | Configuration | DISH tier; baseline applied; drift detection | STD-CFG-001 |
 | Logging | Mandatory sources onboarded; retention; immutability | STD-LM-001 |
 | Detection | Day-one detection set committed for environment | STD-LM-001 |
-| Vulnerability mgmt | Authenticated scanning in scope; SLA targets agreed | PRC-VM-001 |
+| Exposure management | Observation sources and authenticated scanning in scope; classification and treatment SLAs agreed | PRC-VM-001 |
 | Resilience | RTO/RPO tier; backup; restoration test plan | STD-RES-001 |
 | Third party | Vendor tier; evidence by tier; SCCT in workflow; international access guardrail | PRC-TPRM-001 |
 | OT (if applicable) | Active scan rules; passive monitoring; safety review; CIP applicability | STD-OT-001 / PLN-CIP-001 |
@@ -311,14 +311,14 @@ The Engineering Pillar Leader determines whether a build is routine or novel bas
 | Secrets scanning | No secrets detected in repository, build artifacts, or container images; secrets manager integration is wired and tested | Secrets scan output |
 | SBOM generated | Software Bill of Materials is produced for every build; SBOM is stored with the build artifact | SBOM artifact |
 | Image signing | Container images are signed per [CERG-STD-CR-001](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) | Image signature verification |
-| Vulnerability scan gate | Build fails if Critical or High vulnerabilities are detected; Medium and below are flagged for tracking | Pipeline scan output |
+| Exposure scan gate | Build fails if Critical or High application or dependency exposures are detected; Medium and below are flagged for tracking | Pipeline scan output |
 
 ### 7.3 Acceptance Criteria for Build-Time Gates
 
 | **Gate** | **Blocking** | **Non-Blocking** |
 |---|---|---|
 | DISH baseline conformance | Non-conformance on Critical or High severity settings | Low severity or informational deviations (flagged) |
-| Vulnerability scan | Critical or High vulnerabilities in application dependencies | Medium or Low vulnerabilities (tracked in backlog) |
+| Exposure scan | Critical or High application dependency exposures | Medium or Low findings (tracked in exposure backlog) |
 | Secrets scanning | Any confirmed secret detected | False positive (documented and suppressed) |
 | Image signing | Unsigned image in a pipeline that requires signing | - |
 
@@ -336,7 +336,7 @@ Build-time findings are escalated within the development team first, then to CER
 
 CERG completes novel-build review within 3 business days of notification. If the review cannot be completed within SLA, Engineering documents the delay, schedules the follow-up review, and notifies the project team. A build may proceed only if no blocking security gate has failed; any residual risk created by proceeding is routed through the risk acceptance process. Engineering does not accept business risk on behalf of the owner.
 
-The artifacts produced during build include: IaC review for new modules and patterns; pipeline gates enforcing DISH baseline conformance, container image signing, SBOM generation, and vulnerability scanning; secrets checking; and conditional re-review if material design changes happen between Phase 2 and Phase 4.
+The artifacts produced during build include: IaC review for new modules and patterns; pipeline gates enforcing DISH baseline conformance, container image signing, SBOM generation, and exposure scanning; secrets checking; and conditional re-review if material design changes happen between Phase 2 and Phase 4.
 
 ---
 
@@ -349,7 +349,7 @@ Pre-Production review is a focused, time-boxed readiness check. It produces a Pr
 | **Check** | **Pass Criteria** | **Evidence** |
 |---|---|---|
 | DISH baseline applied | Pass against the asset's tier in [`CERG-STD-CFG-001`](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) | DISH scan output |
-| Vulnerability posture | No un-remediated, un-accepted Critical findings (risk-accepted Critical per CERG-PRC-RM-001 §8 is acceptable); High open ≤ exception count from Phase 2 | VM tool report |
+| Exposure posture | No unremediated, unaccepted Critical exposures; High open ≤ approved exception count from Phase 2 | Exposure pipeline report |
 | Identity wired | SSO + MFA enforced; PAM model in place; service accounts via approved pattern | IdP / PAM policy export |
 | Logging | Mandatory sources onboarded; SIEM ingest verified; retention configured | SIEM source inventory |
 | Detection | Day-one detection set enabled in the environment | Detection coverage report |
@@ -399,7 +399,7 @@ PRODUCTION HANDOFF PACKAGE - <System Name>     AR-YYYY-NNNN - PHP-001
 
 4. EVIDENCE POINTERS
    DISH scan output (latest)
-   VM scan output (latest)
+   Exposure scan / pipeline output (latest)
    Identity / detection / logging configuration
    Backup configuration and first restoration test plan
 

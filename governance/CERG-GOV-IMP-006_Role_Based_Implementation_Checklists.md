@@ -174,7 +174,7 @@ Completion means there is an artifact, record, decision, or evidence link. A ver
 | [ ] | Identify authoritative asset inventory source. | Asset source decision. |
 | [ ] | Identify highest-risk systems and owners. | Critical asset owner list. |
 | [ ] | Identify identity provider and privileged access owners. | Identity ownership record. |
-| [ ] | Identify logging, endpoint, backup, and vulnerability tooling. | Coverage source list. |
+| [ ] | Identify logging, endpoint, backup, and exposure-management tooling. | Coverage source list. |
 | [ ] | Name intake path for new projects and changes. | Project intake path recorded. |
 
 ### 6.2 First 30 days
@@ -221,7 +221,7 @@ For CERG Lite, one person may act as Security Lead, Governance Lead, Risk Lead, 
 
 ### Weeks 2 to 4
 
-1. Run vulnerability triage.
+1. Run exposure triage.
 2. Assign remediation owners.
 3. Start exception register.
 4. Identify critical systems.

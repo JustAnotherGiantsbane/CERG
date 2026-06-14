@@ -147,7 +147,7 @@ Every asset carries the classification of the highest-classified data it stores 
 
 ### 7.3 What Classification Drives
 
-The criticality tier and data classification of an asset determine, at minimum: its vulnerability remediation SLA under [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md), its access-review frequency under [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md), its logging requirements under [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md), and its backup and recovery objectives under [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md). Asset management produces the classification once; every other standard consumes it.
+The criticality tier and data classification of an asset determine, at minimum: its exposure remediation SLA under [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md), its access-review frequency under [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md), its logging requirements under [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md), and its backup and recovery objectives under [`CERG-STD-RES-001`](CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md). Asset management produces the classification once; every other standard consumes it.
 
 ---
 
