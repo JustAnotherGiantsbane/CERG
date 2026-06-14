@@ -5,8 +5,8 @@
 # See METADATA.yaml for full governance information
 #
 # ⚠ PILOT EXTRACTION — NOT YET AUTOMATION-READY
-# This is a pilot extraction from 8 spine documents. Fields marked with empty
-# strings ('') — notably owner_role and evidence_required — require manual
+# This is a pilot extraction from 8 normative source documents, not the MVC spine.
+# Fields marked with empty strings ('') — notably owner_role and evidence_required — require manual
 # population during adoption. CERG does not ship pre-populated owner/evidence
 # mappings because these are organization-specific. Each adopter must:
 #   1. Assign an owner_role to every mandatory requirement
