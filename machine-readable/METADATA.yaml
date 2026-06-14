@@ -1,221 +1,180 @@
 # CERG Machine-Readable Artifact Governance
-# This file governs all YAML artifacts in this directory.
-# Every artifact listed below is a DERIVED artifact.
-# Authoritative source: CERG markdown corpus.
-# DO NOT manually edit derived artifacts — regenerate from source.
+# This file governs YAML/JSON artifacts in this directory.
+# Markdown corpus is authoritative where a Markdown source exists.
+# Companion schema files are maintained as machine-readable artifacts and should be
+# synchronized with the Markdown corpus when related source documents change.
+
+artifact_governance_defaults:
+  owner: Governance Pillar Leader (Document Control)
+  generated_date: '2026-06-14'
+  governance_note: If a machine-readable artifact and an authoritative Markdown source disagree, the Markdown source wins. Regenerated files should not be hand-edited except through their generator or source schema.
 
 machine_readable_artifacts:
 - artifact: cerg-ai-system-intake.yaml
-  description: CERG-ACT-017 (AI System Intake)
-  source_document: CERG-ACT-017 (AI System Intake)
-  status: Draft
+  description: AI/ML system security intake schema
+  source_document: CERG-STD-AI-001 (Artificial Intelligence Security Standard)
+  status: Stable
   owner: Governance Pillar Leader (Document Control)
-  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
-    change; manual edits are overwritten.
-  regeneration_trigger: Change to source document(s) listed above
-  generated_date: '2026-06-11'
+  regeneration_trigger: Change to AI security standard, TPRM procedure, or data governance standard
+  generated_date: '2026-06-14'
   size_bytes: 478
 - artifact: cerg-content-tags.yaml
-  description: All CERG markdown documents
-  source_document: All CERG markdown documents
-  status: Draft
+  description: Section-level content tags for CERG Markdown documents
+  source_document: All CERG Markdown documents
+  status: Production
   owner: Governance Pillar Leader (Document Control)
-  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
-    change; manual edits are overwritten.
-  regeneration_trigger: Change to source document(s) listed above
-  generated_date: '2026-06-11'
-  size_bytes: 57554
+  regeneration_trigger: Change to Markdown corpus headings or document inventory
+  generated_date: '2026-06-14'
+  size_bytes: 57544
 - artifact: cerg-control-evidence-map.yaml
-  description: CERG-GOV-CB-001 (Unified Control Baseline)
+  description: Control-to-evidence traceability map
   source_document: CERG-GOV-CB-001 (Unified Control Baseline)
-  status: Draft
+  status: Stable
   owner: Governance Pillar Leader (Document Control)
-  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
-    change; manual edits are overwritten.
-  regeneration_trigger: Change to source document(s) listed above
-  generated_date: '2026-06-11'
+  regeneration_trigger: Change to CB-001, AUD-001, or TRC-001
+  generated_date: '2026-06-14'
   size_bytes: 733
 - artifact: cerg-control-test-plan.yaml
-  description: CERG-ACT-012 (Control Efficacy Test Plan)
-  source_document: CERG-ACT-012 (Control Efficacy Test Plan)
-  status: Draft
+  description: Control efficacy test plan schema
+  source_document: CERG-GOV-CEF-001 (Control Effectiveness Framework)
+  status: Stable
   owner: Governance Pillar Leader (Document Control)
-  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
-    change; manual edits are overwritten.
-  regeneration_trigger: Change to source document(s) listed above
-  generated_date: '2026-06-11'
+  regeneration_trigger: Change to CEF-001 or AUD-001
+  generated_date: '2026-06-14'
   size_bytes: 415
 - artifact: cerg-crown-jewel-schema.yaml
-  description: Crown Jewel Register and loss-scenario criticality tiers and fields
+  description: Crown Jewel register and loss-scenario criticality schema
   source_document: CERG-GOV-CJ-001 (Crown Jewel Register and Loss Scenario Library)
-  status: Approved
+  status: Stable
   owner: Governance Pillar Leader (Document Control)
-  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
-    change; manual edits are overwritten.
-  regeneration_trigger: Change to CERG-GOV-CJ-001 (authoritative source; this schema is the derived form)
-  generated_date: '2026-06-11'
+  regeneration_trigger: Change to CJ-001
+  generated_date: '2026-06-14'
   size_bytes: 1205
 - artifact: cerg-decision-log.yaml
-  description: CERG-ACT-019 (Decision Log Schema)
-  source_document: CERG-ACT-019 (Decision Log Schema)
-  status: Draft
+  description: Governance decision log schema
+  source_document: CERG-GOV-IMP-002 (Adoption Safety Guide) and CERG-GOV-FLOW-001 (Cross-Pillar Operational Flows)
+  status: Stable
   owner: Governance Pillar Leader (Document Control)
-  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
-    change; manual edits are overwritten.
-  regeneration_trigger: Change to source document(s) listed above
-  generated_date: '2026-06-11'
+  regeneration_trigger: Change to decision logging guidance or flow record schemas
+  generated_date: '2026-06-14'
   size_bytes: 382
 - artifact: cerg-evidence-schema.yaml
-  description: CERG-ACT-008 (Evidence Supply Chain)
-  source_document: CERG-ACT-008 (Evidence Supply Chain)
-  status: Draft
+  description: Evidence lifecycle and object schema
+  source_document: CERG-GOV-AUD-001 (Evidence Quality Standard) and CERG-PRC-AUD-001 (Audit and Evidence Management Procedure)
+  status: Stable
   owner: Governance Pillar Leader (Document Control)
-  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
-    change; manual edits are overwritten.
-  regeneration_trigger: Change to source document(s) listed above
-  generated_date: '2026-06-11'
+  regeneration_trigger: Change to evidence quality or audit procedure
+  generated_date: '2026-06-14'
   size_bytes: 866
 - artifact: cerg-flows.yaml
-  description: CERG-GOV-FLOW-001 (Cross-Pillar Operational Flows)
+  description: Cross-pillar operational flow specifications
   source_document: CERG-GOV-FLOW-001 (Cross-Pillar Operational Flows)
-  status: Draft
+  status: Production
   owner: Governance Pillar Leader (Document Control)
-  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
-    change; manual edits are overwritten.
-  regeneration_trigger: Change to source document(s) listed above
-  generated_date: '2026-06-11'
-  size_bytes: 10761
+  regeneration_trigger: Change to FLOW-001
+  generated_date: '2026-06-14'
+  size_bytes: 10918
 - artifact: cerg-ir-interface.yaml
-  description: CERG-PLN-IR-001 (Incident Response Plan)
-  source_document: CERG-PLN-IR-001 (Incident Response Plan)
-  status: Draft
+  description: CERG-to-IR interface contract
+  source_document: CERG-GOV-FLOW-001 F-06, CERG-PLN-IR-001, and CERG-PRC-IR-002
+  status: Stable
   owner: Governance Pillar Leader (Document Control)
-  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
-    change; manual edits are overwritten.
-  regeneration_trigger: Change to source document(s) listed above
-  generated_date: '2026-06-11'
+  regeneration_trigger: Change to IR interface, IR plan, or IR playbook set
+  generated_date: '2026-06-14'
   size_bytes: 842
+- artifact: cerg-llm-index.json
+  description: Full local Markdown corpus index for LLM/agent consumption
+  source_document: All repo-local Markdown documents excluding ignored directories
+  status: Production
+  owner: Governance Pillar Leader (Document Control)
+  regeneration_trigger: Any Markdown file add/remove/rename or material metadata change
+  generated_date: '2026-06-14'
+  size_bytes: 82385
 - artifact: cerg-manifest.yaml
-  description: CERG-GOV-CAT-001 (Document Catalog)
-  source_document: CERG-GOV-CAT-001 (Document Catalog)
-  status: Draft
+  description: Governed source artifact manifest with metadata, hashes, and canonical paths
+  source_document: Governed Markdown artifacts in governance, standards, procedures, plans, templates, and roles
+  status: Production
   owner: Governance Pillar Leader (Document Control)
-  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
-    change; manual edits are overwritten.
-  regeneration_trigger: Change to source document(s) listed above
-  generated_date: '2026-06-11'
-  size_bytes: 52859
+  regeneration_trigger: Any governed Markdown artifact add/remove/rename or metadata change
+  generated_date: '2026-06-14'
+  size_bytes: 101115
 - artifact: cerg-metrics-model.yaml
-  description: CERG-GOV-MTR-001 (Metrics and Reporting)
-  source_document: CERG-GOV-MTR-001 (Metrics and Reporting)
-  status: Draft
+  description: Decision-grade metrics model and dashboard sections
+  source_document: CERG-GOV-MTR-001 (Metrics, Dashboard, and Reporting)
+  status: Stable
   owner: Governance Pillar Leader (Document Control)
-  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
-    change; manual edits are overwritten.
-  regeneration_trigger: Change to source document(s) listed above
-  generated_date: '2026-06-11'
+  regeneration_trigger: Change to MTR-001
+  generated_date: '2026-06-14'
   size_bytes: 981
 - artifact: cerg-publication-manifest.yaml
-  description: CERG-GOV-CAT-001 (Document Catalog)
-  source_document: CERG-GOV-CAT-001 (Document Catalog)
-  status: Draft
+  description: Publication eligibility manifest separate from lifecycle status
+  source_document: Governed Markdown artifact metadata
+  status: Production
   owner: Governance Pillar Leader (Document Control)
-  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
-    change; manual edits are overwritten.
-  regeneration_trigger: Change to source document(s) listed above
-  generated_date: '2026-06-11'
-  size_bytes: 20943
+  regeneration_trigger: Any governed artifact status, classification, path, or owner change
+  generated_date: '2026-06-14'
+  size_bytes: 43653
 - artifact: cerg-record-schemas.yaml
-  description: CERG-GOV-FLOW-001 §16 (Minimum Record Templates)
-  source_document: CERG-GOV-FLOW-001 §16 (Minimum Record Templates)
-  status: Draft
+  description: Minimum record schemas for core CERG operational records
+  source_document: CERG-GOV-FLOW-001 §16 (Minimum Record Templates) and CERG-GOV-CAT-002 (Record Catalog)
+  status: Production
   owner: Governance Pillar Leader (Document Control)
-  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
-    change; manual edits are overwritten.
-  regeneration_trigger: Change to source document(s) listed above
-  generated_date: '2026-06-11'
-  size_bytes: 3606
+  regeneration_trigger: Change to FLOW-001 record templates or CAT-002
+  generated_date: '2026-06-14'
+  size_bytes: 3781
 - artifact: cerg-requirements.yaml
-  description: CERG-POL-001, CERG-STD-AC-001, CERG-STD-IT-001, CERG-STD-LM-001, CERG-STD-RES-001, CERG-STD-CR-001, CERG-GOV-CB-001, CERG-GOV-RMF-001
+  description: Pilot atomic requirement extraction from eight normative source documents
   source_document: CERG-POL-001, CERG-STD-AC-001, CERG-STD-IT-001, CERG-STD-LM-001, CERG-STD-RES-001, CERG-STD-CR-001, CERG-GOV-CB-001, CERG-GOV-RMF-001
-  status: Draft
+  status: Pilot
   owner: Governance Pillar Leader (Document Control)
-  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
-    change; manual edits are overwritten.
-  regeneration_trigger: Change to source document(s) listed above
-  generated_date: '2026-06-11'
-  size_bytes: 47769
+  regeneration_trigger: Change to listed source documents or extraction rules
+  generated_date: '2026-06-14'
+  size_bytes: 48402
 - artifact: cerg-runtime-model.yaml
-  description: CERG-ACT-006 (Runtime Object Model)
-  source_document: CERG-ACT-006 (Runtime Object Model)
-  status: Draft
+  description: Core operational object model and relationships
+  source_document: CERG-GOV-FLOW-001 and CERG-GOV-CAT-002
+  status: Stable
   owner: Governance Pillar Leader (Document Control)
-  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
-    change; manual edits are overwritten.
-  regeneration_trigger: Change to source document(s) listed above
-  generated_date: '2026-06-11'
+  regeneration_trigger: Change to operational flows, record catalog, or runtime object definitions
+  generated_date: '2026-06-14'
   size_bytes: 4353
 - artifact: cerg-segmentation-schema.yaml
-  description: CERG-ACT-016 (Segmentation Verification)
-  source_document: CERG-ACT-016 (Segmentation Verification)
-  status: Draft
+  description: Network segmentation verification schema
+  source_document: CERG-STD-NET-001 and CERG-STD-OT-001
+  status: Stable
   owner: Governance Pillar Leader (Document Control)
-  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
-    change; manual edits are overwritten.
-  regeneration_trigger: Change to source document(s) listed above
-  generated_date: '2026-06-11'
+  regeneration_trigger: Change to network or OT segmentation requirements
+  generated_date: '2026-06-14'
   size_bytes: 426
 - artifact: cerg-tier-0-identity-profile.yaml
-  description: CERG-ACT-015 (Tier 0 Identity Profile)
-  source_document: CERG-ACT-015 (Tier 0 Identity Profile)
-  status: Draft
+  description: Tier 0 identity controls for Crown Jewel systems
+  source_document: CERG-STD-AC-001 and CERG-GOV-CJ-001
+  status: Stable
   owner: Governance Pillar Leader (Document Control)
-  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
-    change; manual edits are overwritten.
-  regeneration_trigger: Change to source document(s) listed above
-  generated_date: '2026-06-11'
+  regeneration_trigger: Change to access management standard or crown jewel profile
+  generated_date: '2026-06-14'
   size_bytes: 720
 - artifact: cerg-vendor-kill-switch.yaml
-  description: CERG-ACT-014 (Vendor Kill Switch)
-  source_document: CERG-ACT-014 (Vendor Kill Switch)
-  status: Draft
+  description: Vendor access disablement / kill-switch schema
+  source_document: CERG-PRC-TPRM-001 and CERG-PRC-AC-002
+  status: Stable
   owner: Governance Pillar Leader (Document Control)
-  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
-    change; manual edits are overwritten.
-  regeneration_trigger: Change to source document(s) listed above
-  generated_date: '2026-06-11'
+  regeneration_trigger: Change to TPRM or access runbook vendor access requirements
+  generated_date: '2026-06-14'
   size_bytes: 860
 - artifact: cerg-vulnerability-priority-model.yaml
-  description: CERG-PRC-VM-001 (Exposure Management)
-  source_document: CERG-PRC-VM-001 (Exposure Management)
-  status: Draft
+  description: Risk-weighted vulnerability prioritization model
+  source_document: CERG-PRC-VM-001 (Exposure Management Procedure)
+  status: Stable
   owner: Governance Pillar Leader (Document Control)
-  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
-    change; manual edits are overwritten.
-  regeneration_trigger: Change to source document(s) listed above
-  generated_date: '2026-06-11'
+  regeneration_trigger: Change to exposure classification, priority, or SLA rules
+  generated_date: '2026-06-14'
   size_bytes: 805
 - artifact: cerg-workforce-capacity-model.yaml
-  description: CERG-ACT-018 (Workforce Capacity Model)
-  source_document: CERG-ACT-018 (Workforce Capacity Model)
-  status: Draft
+  description: Workforce capacity model schema
+  source_document: CERG-GOV-WFP-001 (Workforce Planning and Capacity Model)
+  status: Stable
   owner: Governance Pillar Leader (Document Control)
-  governance_note: This is a DERIVED artifact. The authoritative source is the CERG markdown corpus. If this file and its source disagree, the source wins. This file is regenerated when source documents
-    change; manual edits are overwritten.
-  regeneration_trigger: Change to source document(s) listed above
-  generated_date: '2026-06-11'
-  size_bytes: 515
-
-
-# Regeneration Cadence
-# ====================
-# All YAML artifacts in this directory are DERIVED from the CERG markdown corpus.
-# Regeneration triggers:
-#   - On every catalog change (CAT-001 update): regenerate cerg-manifest.yaml, cerg-publication-manifest.yaml
-#   - On every normative document change: regenerate cerg-requirements.yaml
-#   - On every FLOW-001 change: regenerate cerg-flows.yaml, cerg-record-schemas.yaml
-#   - On every document section change: regenerate cerg-content-tags.yaml
-#   - Schema files (cerg-runtime-model.yaml, etc.): regenerate on source document change
-#
-# Build-time check: compare source .md modification times against derived .yaml modification
-# times. Warn if any derived artifact is older than its source.
+  regeneration_trigger: Change to WFP-001
+  generated_date: '2026-06-14'
+  size_bytes: 510
