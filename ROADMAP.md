@@ -15,6 +15,10 @@ This is a living document. Items move from "Exploring" to "In Progress" to "Done
 - [x] Implementation and adaptation guide (IMP-001)
 - [x] Adoption safety guide (IMP-002) — anti-patterns, tailoring boundaries, regulatory honesty
 - [x] Organization adaptation profile template (VAR-001)
+- [x] Framework system map (FRM-002) for document and operating-loop navigation
+- [x] Adoption decision tree and dependency matrix (IMP-005)
+- [x] Role-based implementation checklists (IMP-006)
+- [x] Record catalog and minimum viable evidence library (CAT-002)
 - [x] Five example organization profiles in `/examples/`
 - [x] Contributing guide, issue templates, code of conduct
 

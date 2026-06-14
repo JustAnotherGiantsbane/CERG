@@ -19,6 +19,13 @@ If you answered **no** to any of these, start with NIST CSF or CIS Controls. Com
 
 If you answered **yes** to all four, pick your path below.
 
+If you are still unsure where to begin, use these four helpers before diving into the full library:
+
+- [Framework System Map](governance/CERG-GOV-FRM-002_Framework_System_Map.md) - how the documents, pillars, records, evidence, and improvement loops fit together.
+- [Adoption Decision Tree and Dependency Matrix](governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md) - which path and overlays apply, plus what must be adopted together.
+- [Role-Based Implementation Checklists](governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md) - what the CISO, Governance, Risk, and Engineering leads do first.
+- [Record Catalog](governance/CERG-GOV-CAT-002_Record_Catalog.md) - the records and minimum evidence that prove the program is operating.
+
 ---
 
 ## Path 1: CERG Lite (small team, ≤5 people, first security hire)
@@ -32,11 +39,13 @@ If you answered **yes** to all four, pick your path below.
 1. **Read the [Cybersecurity Policy](governance/CERG-POL-001_Cybersecurity_Policy.md).** This is the spine. Nothing is authoritative until an Executive Sponsor signs this.
 2. **Read the [CERG Framework](governance/CERG-GOV-FRM-001_CERG_Framework.md)** — the three-pillar model. You'll consolidate roles heavily; that's expected.
 3. **Read the [Small Team Adoption Path](governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md).** This is your primary guide. It covers the CERG Lite package, 5-person operating rhythm, role consolidation map, first 10 records, and spreadsheet schemas.
-4. **Read the [Implementation Guide](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md)** §4 (MVC). Follow the Minimum Viable CERG sequence.
-5. **Fork the repo.** Do not cherry-pick individual files. The documents are interconnected.
-6. **Fill in the [Organization Adaptation Profile](governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md).** Set your headcount, sector, and regulators. Do NOT leave the default values.
-7. **Start the Risk Register.** Open [the template](templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md). Create your first entry. It can be simple.
-8. **Run the first Vulnerability scan cycle.** Even if it's one Nessus scan on your production subnet. Open [PRC-VM-001](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) and follow the triage flow.
+4. **Read the [Role-Based Implementation Checklists](governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md).** Use the small-team consolidated checklist if one person holds multiple roles.
+5. **Read the [Implementation Guide](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md)** §4 (MVC). Follow the Minimum Viable CERG sequence.
+6. **Fork the repo.** Do not cherry-pick individual files. The documents are interconnected.
+7. **Fill in the [Organization Adaptation Profile](governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md).** Set your headcount, sector, and regulators. Do NOT leave the default values.
+8. **Start the Risk Register.** Open [the template](templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md). Create your first entry. It can be simple.
+9. **Create the first records from the [Record Catalog](governance/CERG-GOV-CAT-002_Record_Catalog.md).** Start with role assignment, evidence index, asset extract, top risks, vulnerability backlog, and exception register.
+10. **Run the first Vulnerability scan cycle.** Even if it's one Nessus scan on your production subnet. Open [PRC-VM-001](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) and follow the triage flow.
 
 ### Your MVC set
 
@@ -48,6 +57,7 @@ If you answered **yes** to all four, pick your path below.
 6. Risk Register & Exception Process
 7. Risk Register Templates
 8. Vulnerability Management Procedure
+9. Record Catalog and Role-Based Implementation Checklists as adoption aids
 
 ### What you can defer
 

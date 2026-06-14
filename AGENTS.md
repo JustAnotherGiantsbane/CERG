@@ -40,7 +40,7 @@ Every CERG document follows STY‑001 conventions:
 ```
 | | |
 |---|---|
-| **Document ID** | CERG-XXX-YYY-NNN |
+| **Identifier field** | document identifier value |
 | **Version** | X.X |
 | **Status** | Approved |
 | **Classification** | Public / Internal / Confidential |
@@ -69,7 +69,7 @@ Every CERG document follows STY‑001 conventions:
 
 ### Cross‑References
 
-Format: `[CERG‑XXX‑YYY‑NNN](FILENAME.md)` — always include the filename link, not just the ID.
+Format: link the CERG document ID to the source Markdown file, not just the ID.
 
 ### Document Control Section (last section before appendices)
 

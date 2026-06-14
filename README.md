@@ -35,6 +35,17 @@ These eight documents constitute a real program. Everything else layers on after
 
 **[START-HERE.md](START-HERE.md)** walks through the first 48 hours for each path.
 
+### Adoption usability aids
+
+If you are deciding what to adopt, what to defer, or what records to create, use these companion guides:
+
+| Need | Artifact |
+|------|----------|
+| Understand how the whole library fits together | [Framework System Map](governance/CERG-GOV-FRM-002_Framework_System_Map.md) |
+| Choose Lite, Standard, Regulated, and required overlays | [Adoption Decision Tree and Dependency Matrix](governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md) |
+| Know what each role should do first | [Role-Based Implementation Checklists](governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md) |
+| Know which records and evidence to create | [Record Catalog](governance/CERG-GOV-CAT-002_Record_Catalog.md) |
+
 ---
 
 ## What CERG is
@@ -72,12 +83,12 @@ Different roles need different entry points:
 
 | Your Role | Start Here | Then Read |
 |-----------|-----------|-----------|
-| **CISO / Security Executive** | [Cybersecurity Policy](governance/CERG-POL-001_Cybersecurity_Policy.md) | [Framework](governance/CERG-GOV-FRM-001_CERG_Framework.md) → [Operating Model](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) → [Metrics & Reporting](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) |
-| **Governance / Compliance Lead** | [Document Catalog](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | [RACI](governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) → [RMF](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) → [Compliance Matrix](governance/CERG-GOV-CMX-001_Compliance_Matrix.md) |
+| **CISO / Security Executive** | [Cybersecurity Policy](governance/CERG-POL-001_Cybersecurity_Policy.md) | [Framework System Map](governance/CERG-GOV-FRM-002_Framework_System_Map.md) → [Framework](governance/CERG-GOV-FRM-001_CERG_Framework.md) → [Operating Model](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) → [Metrics & Reporting](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) |
+| **Governance / Compliance Lead** | [Document Catalog](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | [Record Catalog](governance/CERG-GOV-CAT-002_Record_Catalog.md) → [RACI](governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) → [RMF](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) → [Compliance Matrix](governance/CERG-GOV-CMX-001_Compliance_Matrix.md) |
 | **Risk Lead** | [Risk Management Framework](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) | [Vulnerability Procedure](procedures/CERG-PRC-VM-001_Vulnerability_Management_Procedure.md) → [Risk Register](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) → [Third-Party Risk](procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
 | **Engineering Lead** | [Architecture Intake](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | [IT/Cloud Standard](standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) → [Access Standard](standards/CERG-STD-AC-001_Access_Management_Standard.md) → [Config Baseline](standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) |
-| **Small Org Adopter (≤5 people)** | [Implementation Guide](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | [Operating Model](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) → [Small Team Adoption Path](governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md) |
-| **Auditor / Assessor** | [Document Catalog](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | [Control Baseline](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) → [Evidence Procedure](procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) → [Compliance Matrix](governance/CERG-GOV-CMX-001_Compliance_Matrix.md) |
+| **Small Org Adopter (≤5 people)** | [Implementation Guide](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | [Decision Tree](governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md) → [Role Checklists](governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md) → [Small Team Adoption Path](governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md) |
+| **Auditor / Assessor** | [Document Catalog](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | [Record Catalog](governance/CERG-GOV-CAT-002_Record_Catalog.md) → [Control Baseline](governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) → [Evidence Procedure](procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) → [Compliance Matrix](governance/CERG-GOV-CMX-001_Compliance_Matrix.md) |
 
 ---
 
