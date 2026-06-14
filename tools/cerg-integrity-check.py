@@ -12,6 +12,9 @@ from datetime import datetime, timedelta
 from collections import defaultdict
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DOC_ID_PATTERN = r"CERG-(?:POL-\d{3}|(?:STD|PRC|PLN|GL|TMPL|GOV)-[A-Z]{2,8}(?:-[A-Z]{2,8})?-\d{3})"
+DOC_ID_RE = re.compile(rf"\b{DOC_ID_PATTERN}\b")
+GOVERNED_DIRS = ('governance', 'standards', 'procedures', 'plans', 'templates', 'roles')
 
 # ── Helpers ──────────────────────────────────────────────
 
@@ -19,57 +22,70 @@ def find_md_files():
     """Find all .md files in the CERG repository."""
     files = []
     for root, dirs, filenames in os.walk(BASE):
-        dirs[:] = [d for d in dirs if not d.startswith('.') and d not in ('machine-readable', 'flows')]
+        dirs[:] = [d for d in dirs if not d.startswith('.') and d not in ('__pycache__', 'node_modules', 'rendered')]
+        if any(part in ('.github', '.pytest_cache') for part in os.path.relpath(root, BASE).split(os.sep)):
+            continue
         for f in filenames:
-            if f.endswith('.md') and not f.startswith('.') and not os.path.basename(f) in ('README.md',):
+            if f.endswith('.md') and not f.startswith('.'):
                 files.append(os.path.join(root, f))
     return files
 
 
 def parse_metadata(filepath):
-    """Extract metadata from the first ~30 lines of a CERG document."""
-    meta = {'document_id': None, 'version': None, 'status': None, 
+    """Extract metadata from the first metadata table in a CERG document."""
+    meta = {'document_id': None, 'version': None, 'status': None,
             'classification': None, 'owner': None, 'next_review_date': None}
-    
-    with open(filepath) as f:
-        lines = f.readlines()
-    
-    content = ''.join(lines)
-    
-    for line in lines[:30]:
-        m_id = re.match(r'\|\s*\*\*Document ID\*\*\s*\|\s*(CERG-[A-Z]+-[A-Z]+(?:-[A-Z]+)?-\d+)\s*\|', line)
-        m_ver = re.match(r'\|\s*\*\*Version\*\*\s*\|\s*(.+?)\s*\|', line)
-        m_status = re.match(r'\|\s*\*\*Status\*\*\s*\|\s*(.+?)\s*\|', line)
-        m_class = re.match(r'\|\s*\*\*Classification\*\*\s*\|\s*(.+?)\s*\|', line)
-        m_owner = re.match(r'\|\s*\*\*Owner\*\*\s*\|\s*(.+?)\s*\|', line)
-        
-        if m_id: meta['document_id'] = m_id.group(1)
-        if m_ver: meta['version'] = m_ver.group(1).strip()
-        if m_status: meta['status'] = m_status.group(1).strip()
-        if m_class: meta['classification'] = m_class.group(1).strip()
-        if m_owner: meta['owner'] = m_owner.group(1).strip()
-    
-    # Check for next review date in Document Control section
+
+    with open(filepath, encoding='utf-8', errors='ignore') as f:
+        content = f.read()
+    lines = content[:6000].splitlines()
+
+    for idx, line in enumerate(lines):
+        if line.strip() != '| | |':
+            continue
+        for row in lines[idx + 1:]:
+            if not row.startswith('|'):
+                if any(meta.values()):
+                    break
+                continue
+            if row.strip() == '|---|---|':
+                continue
+            m = re.match(r'\|\s*\*\*(?P<key>Document ID|Version|Status|Classification|Owner|Document Owner)\*\*\s*\|\s*(?P<value>.+?)\s*\|', row, re.IGNORECASE)
+            if not m:
+                if any(meta.values()):
+                    break
+                continue
+            key = m.group('key').lower().replace(' ', '_')
+            value = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', m.group('value')).replace('`', '').strip()
+            if key == 'document_owner':
+                key = 'owner'
+            meta[key] = value
+        break
+
     m_review = re.search(r'\|\s*\*\*Next Scheduled Review\*\*\s*\|\s*(.+?)\s*\|', content)
     if m_review:
         meta['next_review_date'] = m_review.group(1).strip()
-    
+
     return meta, content
 
 
+def strip_code_fences(content):
+    return re.sub(r'```.*?```', '', content, flags=re.DOTALL)
+
+
 def find_markdown_links(content):
-    """Find all markdown links pointing to .md files."""
-    return re.findall(r'\]\(([^)]+\.md)\)', content)
+    """Find all markdown links pointing to .md files outside fenced examples."""
+    return re.findall(r'\]\(([^)]+\.md(?:#[^)]+)?)\)', strip_code_fences(content))
 
 
 def find_cross_refs(content):
-    """Find Document ID references like CERG-XXX-XXX-XXX."""
-    return set(re.findall(r'CERG-[A-Z]+-[A-Z]+-\d+', content))
+    """Find CERG Document ID references outside fenced examples."""
+    return set(DOC_ID_RE.findall(strip_code_fences(content)))
 
 
 def load_catalog():
     """Parse CAT-001 to get the authoritative catalog entries."""
-    cat_path = os.path.join(BASE, 'CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md')
+    cat_path = os.path.join(BASE, 'governance', 'CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md')
     if not os.path.exists(cat_path):
         return {}
     
@@ -78,18 +94,20 @@ def load_catalog():
     
     catalog = {}
     for line in cat_content.split('\n'):
-        # Try linked format: | [`ID`](file.md) | Title | Owner | Status |
-        m = re.match(r'\|\s*\[?`?(CERG-[A-Z]+-[A-Z]+-\d+)`?\]?\(.+?\.md\)?\s*\|\s*(.+?)\s*\|\s*(.+?)\s*\|\s*(.+?)\s*\|', line)
-        if not m:
-            # Try unlinked format: | `ID` | Title | Owner | Status |
-            m = re.match(r'\|\s*`?(CERG-[A-Z]+-[A-Z]+-\d+)`?\s*\|\s*(.+?)\s*\|\s*(.+?)\s*\|\s*(.+?)\s*\|', line)
-        if m:
-            doc_id = m.group(1)
-            catalog[doc_id] = {
-                'title': m.group(2).strip(),
-                'owner': m.group(3).strip(),
-                'status': m.group(4).strip()
-            }
+        if not line.startswith('|'):
+            continue
+        m_id = DOC_ID_RE.search(line)
+        if not m_id:
+            continue
+        cells = [c.strip() for c in line.strip().strip('|').split('|')]
+        if len(cells) < 4 or not DOC_ID_RE.search(cells[0]):
+            continue
+        doc_id = m_id.group(0)
+        catalog[doc_id] = {
+            'title': re.sub(r'\[|\]|`|\([^)]*\)', '', cells[1]).strip(),
+            'owner': cells[2].strip(),
+            'status': re.sub(r'\s*\(.*?\)\s*$', '', cells[3]).strip()
+        }
     return catalog
 
 
@@ -105,6 +123,7 @@ def check_all():
         known_files[os.path.basename(f)] = f
         rel = os.path.relpath(f, BASE)
         known_files[rel] = f
+        known_files[rel.replace(os.sep, '/')] = f
     id_to_file = {}
     
     print(f"CERG Integrity Check")
@@ -129,9 +148,11 @@ def check_all():
         doc_id = meta['document_id']
         filename = os.path.basename(filepath)
         
-        # P0: Missing Document ID
+        # P0: Missing Document ID only applies to governed source artifacts.
         if not doc_id:
-            issues['P0'].append(f"[missing_document_id] {relpath}: No Document ID found in metadata")
+            rel_norm = relpath.replace(os.sep, '/')
+            if rel_norm.startswith(GOVERNED_DIRS) and not rel_norm.endswith('/README.md'):
+                issues['P0'].append(f"[missing_document_id] {relpath}: No Document ID found in metadata")
             continue
         
         # P0: Duplicate Document ID
@@ -154,14 +175,10 @@ def check_all():
         if doc_id in catalog:
             cat_status = catalog[doc_id]['status']
             file_status = meta['status']
-            # Normalize - treat Published and Approved as equivalent
             cat_norm = cat_status.lower().strip()
             file_norm = file_status.lower().strip() if file_status else ''
-            # Published and Approved are equivalent in this corpus
-            equivalent = {'approved', 'published', 'for review'}
             if file_norm and cat_norm and file_norm != cat_norm:
-                if not (cat_norm in equivalent and file_norm in equivalent):
-                    issues['P0'].append(f"[status_mismatch] {relpath} ({doc_id}): file='{file_status}' vs catalog='{cat_status}'")
+                issues['P0'].append(f"[status_mismatch] {relpath} ({doc_id}): file='{file_status}' vs catalog='{cat_status}'")
         
         # P2: Stale review date
         review_date = meta.get('next_review_date')
@@ -171,7 +188,8 @@ def check_all():
                 if rd < datetime.now():
                     issues['P2'].append(f"[stale_review_date] {relpath} ({doc_id}): Next review {review_date} is in the past")
             except ValueError:
-                issues['P2'].append(f"[stale_review_date] {relpath} ({doc_id}): Unparseable date '{review_date}'")
+                if review_date != 'YYYY-MM-DD':
+                    issues['P2'].append(f"[stale_review_date] {relpath} ({doc_id}): Unparseable date '{review_date}'")
         
         # P1: Broken cross-references (markdown links)
         links = find_markdown_links(content)
@@ -194,7 +212,7 @@ def check_all():
     
     # P0: Check catalog entries that have no corresponding file
     for cat_id, cat_data in catalog.items():
-        if cat_id not in id_to_file:
+        if cat_id not in id_to_file and not cat_data.get('status', '').lower().startswith('planned'):
             issues['P0'].append(f"[file_not_found] catalog entry {cat_id} ({cat_data['title']}) has no corresponding .md file")
     
     # ── Report ──────────────────────────────────────────────
