@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.34 |
+| **Version** | 1.35 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -27,8 +27,6 @@
 2. [Naming Convention](#2-naming-convention)
 3. [Document Types](#3-document-types)
 4. [Authority and Status Lifecycle](#4-authority-and-status-lifecycle)
-5. [Authoritative Catalog (V1)](#5-authoritative-catalog-v1)
-6. [Cross-Reference Rules](#6-cross-reference-rules)
 5. [Authoritative Catalog (V1)](#5-authoritative-catalog-v1)
 6. [Cross-Reference Rules](#6-cross-reference-rules)
 7. [Artifact Roadmap (V1.x → V2)](#7-artifact-roadmap-v1x--v2)
@@ -496,7 +494,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.34 |
+| **Version** | 1.35 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-14 |
 | **Classification** | Public |
@@ -513,6 +511,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.35 | 2026-06-14 | Governance Pillar Leader | Removed duplicate Table of Contents entries after the machine-readable artifact update. |
 | 1.34 | 2026-06-14 | Governance Pillar Leader | Updated machine-readable artifact inventory language to reflect regenerated local manifests, canonical paths, and the full LLM index. |
 | 1.33 | 2026-06-14 | Governance Pillar Leader | Status taxonomy cleanup. Replaced Published and Active catalog statuses with Approved; publication eligibility remains tracked separately in the publication manifest. |
 | 1.32 | 2026-06-13 | Governance Pillar Leader | Adoption usability amendment. Added FRM-002 Framework System Map, CAT-002 Record Catalog, IMP-005 Adoption Decision Tree and Dependency Matrix, and IMP-006 Role-Based Implementation Checklists to Section 5.2. |
