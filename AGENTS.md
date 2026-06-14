@@ -79,12 +79,12 @@ Contains Revision History (a table), Review Triggers, Related Documents.
 
 `machine-readable/cerg-llm-index.json` contains:
 
-- Per‑document metadata (id, title, type, pillar, status, version, owner, path, line range in llms‑full.txt, token estimate, summary)
+- Per‑document metadata (id, title, type, pillar, status, version, owner, repo-relative path, virtual local-corpus line range, token estimate, summary)
 - Prefix registry (POL, STD, PRC, GOV, PLN, TMPL, JF, JD meanings)
 - Pillar breakdowns
 - Document counts
 
-**Load this first** — it gives you the complete map of the framework in ~200 lines.
+**Load this first** — it gives you the complete local corpus map. If context is tight, load only the top-level counts and the `documents[].id/path/summary` fields you need.
 
 ## Validation
 
@@ -108,11 +108,7 @@ This is the authoritative CI check — requires 0 errors. Common error classes:
 python3 tools/cerg-integrity-check.py
 ```
 
-Broader scan — finds metadata issues, catalog drift, orphan files. May have pre‑existing false positives (~1,250 `unknown_id_reference` from 4‑part IDs, 3 pre‑existing `missing_document_id`).
-
-### Validator Config
-
-The `cerg-validate.py` `DOC_ID_PATTERN` in the regex may need extension for 4‑part IDs like `CERG-GOV-JD-SECENG-001` (hyphenated subdomains). Current pattern: `[A-Z]{2,6}` — may need `[A-Z]{2,6}(?:-[A-Z]{1,6})?`.
+Broader scan — finds metadata issues, catalog drift, orphan files. It is useful for discovery but is not currently a release gate; prefer `cerg-validate.py` for pass/fail decisions. The validator already supports 4-part workforce IDs such as `CERG-GOV-JD-SECENG-001`.
 
 ## Git Workflow for Agents
 
@@ -142,11 +138,7 @@ git push origin main
 
 ### Git Config
 
-If not already set:
-```bash
-git config user.name "m0dernz"
-git config user.email "m0dernz@users.noreply.github.com"
-```
+Use the repository's existing Git identity unless the human owner instructs otherwise. Do not overwrite user.name or user.email just because an example in this file differs.
 
 ## Editing Rules
 
@@ -156,10 +148,10 @@ The `patch` tool's fuzzy matching fails catastrophically on CERG docs because `-
 
 Also: `**Version**`, `**Status**`, `**Document ID**` appear in BOTH the front‑matter metadata table AND the Document Control section AND Revision History column headers. String replacement hits all occurrences.
 
-**Safe approach:** Line‑targeted Python edits via `execute_code`:
+**Safe approach:** use exact, uniquely matched replacements or line-targeted scripts. Keep replacement blocks small and verify the diff before committing.
 
 ```python
-path = '/home/lupus/CERG/governance/CERG-GOV-XXXXX_Title.md'
+path = 'governance/CERG-GOV-XXXXX_Title.md'
 with open(path) as f:
     lines = f.read().split('\n')
 
@@ -167,13 +159,14 @@ with open(path) as f:
 # e.g. lines[12] = '| **Status** | Approved |'
 lines[target_line] = new_value
 
-write_file(path, '\n'.join(lines))
+with open(path, 'w') as f:
+    f.write('\n'.join(lines))
 ```
 
 ### Verify After Every Edit
 
 ```bash
-cd /home/lupus/CERG
+cd /workspace/CERG
 git diff --stat        # Check changed-line count — should match expected
 python3 tools/cerg-validate.py  # Must pass with 0 errors
 ```
@@ -189,9 +182,10 @@ When inserting or deleting sections:
 
 ### Document Status Rules
 
-- All CERG‑owned documents pushed to `main` must have Status: `Approved` and Approved By: `CISO`
-- Exception: IR documents (PLN‑IR‑001, PRC‑IR‑002) — these are "External Interface" status, owned by "Standing IR Team / Incident Commander", with an ADJACENT FUNCTION banner
-- Status + Approved By must be consistent in both the metadata table AND the Document Control section AND the CAT‑001 catalog entry
+- CERG-owned documents pushed to `main` should use lifecycle status `Approved` unless they are intentionally Draft, For Review, Retired, or roadmap Planned.
+- Publication eligibility is not a lifecycle status; use the publication manifest for public-release decisions.
+- Exception: IR documents (PLN‑IR‑001, PRC‑IR‑002) use `External Interface` status, are owned by `Standing IR Team / Incident Commander`, and carry an ADJACENT FUNCTION banner.
+- Status, owner, and approval authority must be consistent across the metadata table, Document Control section, and CAT‑001 catalog entry.
 
 ### Stale Placeholders
 
@@ -224,6 +218,14 @@ Supplementary metadata and cross‑reference scanner. Broader than the validator
 
 Renders CERG markdown with {{TOKEN}} placeholder substitution from an org profile YAML. For adopters customizing the framework for their organization.
 
+### `tools/regenerate-machine-readable.py`
+
+Regenerates `machine-readable/cerg-manifest.yaml` and `machine-readable/cerg-publication-manifest.yaml` from repo-local governed Markdown artifacts. Run after governed document metadata, paths, or inventory changes.
+
+### `tools/regenerate-llm-index.py`
+
+Regenerates `machine-readable/cerg-llm-index.json` from repo-local Markdown. Run after any Markdown document is added, removed, renamed, or materially reclassified.
+
 ### `tools/populate-nice-tks.py`
 
 Populates §6 (NICE TKS Statement References) in per‑role JD files from NIST NICE Framework v2.2.0 dataset.
@@ -238,29 +240,28 @@ Populates §9 (Competency Anchors from CMP‑001), §10 (Success Profiles), and 
 2. **Anchor collision on `**Version**`, `**Status**`, `**Document ID**`** — appears 3+ times in every file (metadata table, DC section, Revision History). Target by line number, not string match.
 3. **Section renumbering cascade** — `replace("## 2. ", "## 3. ")` then `replace("## 3. ", "## 4. ")` hits the REPLACED §2 too. Renumber HIGHEST→LOWEST.
 4. **Link prefix depth** — files in `roles/jf-seceng/` need `../../` for root docs, `../` for `roles/` files, bare name for same‑subdir.
-5. **Validator DOC_ID_PATTERN too narrow** — 4‑part IDs like `CERG-GOV-JD-SECENG-001` may fail silently. Extend `[A-Z]{2,6}` to `[A-Z]{2,6}(?:-[A-Z]{1,6})?` in the regex.
-6. **Status in both places** — change metadata table Status AND DC section "Approved By" AND CAT‑001 catalog entry. All three must agree.
-7. **Approval rule applies to ALL docs** — Status: Approved + Approved By: CISO, regardless of per‑role delegation in CAT‑001 §4.2.
-8. **`read_file` dedup trap** — `hermes_tools.read_file()` returns a dedup stub if same file was already read. Always use `open(path).read()` in `execute_code`.
-9. **CI runs committed code only** — `git stash` → test → `git stash pop` to distinguish local fixes from committed state.
+5. **Status in multiple places** — change metadata table Status, Document Control status/approval fields, and CAT‑001 catalog entry together. They must agree.
+6. **Lifecycle vs publication** — do not set document status to Published. Lifecycle status is `Approved`; public-release eligibility lives in `cerg-publication-manifest.yaml`.
+7. **Generated artifact drift** — after governed metadata or inventory changes, run `python3 tools/regenerate-machine-readable.py` and `python3 tools/regenerate-llm-index.py`.
+8. **CI runs committed code only** — `git stash` → test → `git stash pop` to distinguish local fixes from committed state.
 
 ## Quick‑Start Checklist (First Visit)
 
-1. `cd /home/lupus/CERG` — set working directory
+1. `cd /workspace/CERG` — set working directory
 2. Read `machine-readable/cerg-llm-index.json` — understand the document landscape
 3. Read `README.md` — understand CERG's purpose and adoption paths
 4. Read `CONTRIBUTING.md` — contribution guidelines
 5. Read a spine document: `governance/CERG-POL-001_Cybersecurity_Policy.md` — understand document structure
 6. Run `python3 tools/cerg-validate.py` — confirm current state
-7. For editing, use `open(path).read()` + line‑targeted Python — never the `patch` tool
-8. After each file edit: commit + push with short message
+7. For editing, use exact replacements or line-targeted Python — never fuzzy patching against repeated separators
+8. After each file edit: commit with a short message; push only when the environment and human owner expect it
 
 ## CERG in Context Windows
 
 For briefings where CERG content must fit in a small context window (e.g., instructing a separate LLM about the framework):
 
-- **Full index (~5 KB, ~1,300 tokens):** `machine-readable/cerg-llm-index.json` — complete document map
-- **Regeneration script:** `tools/regenerate-llm-index.py` — regenerates the JSON index from the latest `llms-full.txt`. Run from repo root after any document is added or removed.
+- **Full index:** `machine-readable/cerg-llm-index.json` — complete local document map with repo-relative paths and summaries
+- **Regeneration scripts:** `tools/regenerate-machine-readable.py` and `tools/regenerate-llm-index.py` — regenerate core manifests and the JSON index from local Markdown.
 - **Condensed reference (optional):** A ~5,000‑token summary of core principles, pillar model, document taxonomy, key rules, and risk framework. Generate on demand.
 
 The full concatenated corpus is at `https://cerg.nexus/llms-full.txt` (2.9 MB, ~800K tokens) — too large for most context windows.
