@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-RMF-001 |
-| **Version** | 1.3 |
+| **Version** | 1.31 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Cyber Governance (CERG Pillar) |
@@ -404,15 +404,19 @@ CERG uses a 5x5 model: likelihood and impact are each rated 1-5, scored, and map
 
 This table is the single source of truth for who may accept residual risk. Every other CERG document that references acceptance authority points at this section.
 
-Security can assess, recommend, document, validate compensating controls, and escalate. But the business owner owns the consequence. Risk acceptance requires a business risk owner at every level where business impact exists. The CISO and Executive Sponsor are security leaders who accept on behalf of the security function; the business owner accepts on behalf of the business unit that bears the operational impact.
+Security can assess, recommend, document, validate compensating controls, and escalate. But the business owner owns the consequence. Risk acceptance requires a business risk owner at every level where business impact exists. The CISO approves on behalf of the cybersecurity program; the Business Owner or Executive Sponsor accepts on behalf of the business unit that bears the operational impact.
 
-| Residual Risk | Risk Role | Governance Role | Business Role | Acceptance By | Documentation | Max Duration |
-|---|---|---|---|---|---|---|---|
-| **Critical** | Signs finding; validates compensating controls; provides written risk assessment | Structures acceptance package; ensures regulatory notification; tracks conditions | **Executive Sponsor + CISO** accept; Board notified at next cycle | Security + Business jointly | Risk assessment, compensating controls, business justification, target remediation date | 12 months; renewal requires fresh approval |
-| **High** | Signs finding; validates compensating controls; provides written risk assessment | Structures acceptance package; ensures conditions documented | **Executive Sponsor (business owner) + CISO** accept | Security + Business jointly | Risk assessment, compensating controls, business justification, target remediation date | 12 months; renewal requires fresh approval |
-| **Medium** | Performs risk assessment; confirms residual risk level | Confirms exception conditions; documents acceptance in register | **Business owner** accepts | Business owner | Risk assessment, compensating controls, target remediation date | 12 months |
-| **Low** | Confirms low residual risk (if needed) | Approves procedural exception; tracks in risk register | **Business owner** owns local decision | Governance (for exception); Business (for risk) | Brief justification; tracked in risk register | 12 months |
+| Residual Risk | Risk Role | Governance Role | Business Role | Acceptance By | Documentation | Default Max Duration |
+|---|---|---|---|---|---|---|
+| **Critical** | Signs finding; validates compensating controls; provides written risk assessment | Structures acceptance package; ensures regulatory notification; tracks conditions | **Executive Sponsor** accepts business consequence; Board notified at next cycle | **CISO + Executive Sponsor** | Risk assessment, compensating controls, business justification, target remediation date | **30 days**; renewal requires material change in treatment plan |
+| **High** | Signs finding; validates compensating controls; provides written risk assessment | Structures acceptance package; ensures conditions documented | **Business Owner** accepts business consequence | **CISO + Business Owner** | Risk assessment, compensating controls, business justification, target remediation date | **90 days**; renewal requires documented progress toward remediation |
+| **Medium** | Performs risk assessment; confirms residual risk level | Confirms exception conditions; documents acceptance in register | **Business Owner** accepts business consequence | **Business Owner + Pillar Leader or Governance Pillar Leader** | Risk assessment, compensating controls, target remediation date | **180 days**; renewal requires confirmation that conditions have not worsened |
+| **Low** | Confirms low residual risk (if needed) | Approves procedural exception; tracks in risk register | **Business Owner** owns local decision | **Business Owner + Risk Register Owner** | Brief justification; tracked in risk register | **365 days**; annual review at minimum |
 | **Informational** | N/A | Tracks in register; reports in quarterly trending | **No formal acceptance required** | Risk Register Owner | Tracked in risk register | Reviewed annually |
+
+> **Duration rule**
+>
+> The durations above are CERG defaults. If an environment-specific rule, regulatory package, POA&M, CIP deviation, contract, or procedure sets a shorter duration, the shortest applicable duration wins.
 
 > **Renewals**
 >
@@ -667,9 +671,9 @@ Cascading changes from a risk appetite adjustment are tracked in the improvement
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-RMF-001 |
-| **Version** | 1.3 |
+| **Version** | 1.31 |
 | **Status** | Approved |
-| **Effective Date** | 2026-05-26 |
+| **Effective Date** | 2026-06-14 |
 | **Classification** | Public |
 | **Document Owner** | Cyber Governance (CERG Pillar) |
 | **Approved By** | CISO |
@@ -682,5 +686,6 @@ Cascading changes from a risk appetite adjustment are tracked in the improvement
 
 | Version | Date | Author | Change Description |
 |---|---|---|---|
+| 1.31 | 2026-06-14 | Governance Pillar Leader | Clarified canonical risk-acceptance authority, default acceptance durations, and the shortest-applicable-duration rule. |
 | 1.0 | 2026-05-01 | Cyber Governance | Initial release. Establishes the CERG-RMF cycle, the FAIR-aligned risk statement format, the 5x5 likelihood/impact model, the canonical risk acceptance authority table, and the risk appetite and tolerance posture. Retires the parallel SLA table in favor of the single source of truth in CERG-PRC-VM-001. Adopts canonical ID CERG-GOV-RMF-001 per CERG-GOV-CAT-001 §5.2. |
 | 1.3 | 2026-05-26 | Cyber Governance | Added Section 12 Risk Appetite Calibration: annual and triggered review cadence, structured input package, calibration decision framework with cascading changes (metric thresholds, control priorities, exception authority, investment signals), approval workflow, and cascade tracking through the improvement register. Renumbered Document Control to Section 13. |
