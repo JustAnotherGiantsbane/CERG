@@ -136,7 +136,7 @@ Patch hygiene is a maintenance function distinct from exposure reduction. These 
 
 | **ID** | **Name** | **Formula** | **Source** | **Refresh** | **G / A / R** | **Reported In** |
 |---|---|---|---|---|---|---|
-| PH-001 | Patch Currency Rate | % of assets within their platform-class patch cadence window per [VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) §10 | Patch management tool | Weekly | ≥ 95% / 85–95% / < 85% | COG Brief |
+| PH-001 | Patch Currency Rate | % of assets within their platform-class patch cadence window per [PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) §10 | Patch management tool | Weekly | ≥ 95% / 85–95% / < 85% | COG Brief |
 | PH-002 | Hygiene Debt by Platform | Count of Hygiene Debt observations, grouped by platform class | Exposure pipeline | Monthly | n/a — trend | COG Brief |
 | PH-003 | End-of-Support Count | Assets running software past vendor end-of-support date | Asset inventory | Monthly | 0 / 1–10 / > 10 | COG Brief |
 
