@@ -2,40 +2,6 @@
 # SURGE: Cyber Engineering, Risk & Governance
 
 
-## N. Metrics That Should Not Be Used Alone
-
-The following metrics are commonly reported but are easily gamed, misinterpreted, or disconnected from actual risk reduction. If you report them, pair them with a companion metric that provides context.
-
-| Vanity Metric | Why It Misleads | Pair With |
-|--------------|----------------|-----------|
-| Number of vulnerabilities closed | Rewards volume over severity. A team closing 100 Low findings looks better than a team closing 3 Criticals. | Exposure age by asset criticality; % of Critical/High findings past SLA |
-| Number of phishing emails blocked | Your email gateway blocks 99% of phishing — the 1% that gets through is what matters. | Phishing simulation click rate; time from phish report to containment |
-| Number of policies published | Publishing policies is not implementing controls. | % of controls with current evidence (E2+) |
-| Number of alerts generated | Alert volume is noise. Signal is what matters. | Detection signal-to-noise ratio; % of alerts resulting in validated incidents |
-| Number of vendors reviewed | A checkbox review of 100 vendors is worse than a thorough review of 10 high-risk vendors. | % of high-risk vendors with current assessment; vendor risk concentration |
-| Percent compliant without evidence quality | "95% compliant" based on policy existence, not control operation. | % of controls with E3 evidence; % of evidence current |
-| Training completion rate | Completion proves attendance, not comprehension or behavior change. | Phishing simulation results; incident root causes tracing to human error |
-
-## N+1. Program Quality Metrics
-
-These metrics measure whether the CERG program itself is healthy — not whether individual controls are operating.
-
-| Metric | What It Measures | Target |
-|--------|-----------------|--------|
-| % of risks with named business owner (not security) | Business accountability for risk | >90% |
-| % of exceptions with expiration date | Exception discipline | 100% |
-| % of control evidence current (within freshness window) | Evidence freshness | >85% |
-| % of Tier 0/Tier 1 assets with tested recovery | Resilience readiness | >95% |
-| % of high-risk vendors reviewed on schedule | Vendor risk currency | >90% |
-| % of adopted documents reviewed on schedule | Document governance | >80% |
-| Number of "Approved" documents with "Pending" approver | Governance hygiene | 0 |
-| Number of placeholder values in approved documents | Operational readiness | 0 in adopted documents |
-| % of findings with a named owner assigned within SLA | Accountability timeliness | >90% |
-| % of accepted risks past expiration without review | Risk acceptance discipline | 0% |
-| % of recurring findings (same vulnerability, same system, >2 times) | Remediation effectiveness | <10% of total findings |
-| Average time from finding identification to owner assignment | Triage responsiveness | <SLA for severity |
-| Number of SLA breaches by pillar per month | Pillar performance | Trending down |
-
 ## METRICS, DASHBOARD, AND CISO / BOARD REPORTING
 ### Metrics Dictionary · KRI/KPI Data Source Map · CISO Dashboard · Brief and Report Templates
 
@@ -44,7 +10,7 @@ These metrics measure whether the CERG program itself is healthy — not whether
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-MTR-001 |
-| **Version** | 1.3 |
+| **Version** | 1.31 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Reporting) |
@@ -105,6 +71,7 @@ The dictionary is the source-of-truth definition for every CERG metric. Each ent
 
 | **ID** | **Name** | **Formula** | **Source** | **Refresh** | **G / A / R** | **Reported In** |
 |---|---|---|---|---|---|---|
+| 1.31 | 2026-06-14 | Governance Pillar Leader | Moved orphan anti-vanity and program-quality metric sections under §8 so metadata remains at the top of the document and section numbering is deterministic. |
 | RM-001 | Open Critical+High Residual Risks | Count of `Status ∈ {Open, In Treatment}` with residual band ≥ High | Risk register | Daily | ≤ 10 / 11–25 / > 25 | CISO Dashboard, COG Brief |
 | RM-002 | Residual Risk Score (Sum) | Σ residual score over open risks | Risk register | Daily | ≤ baseline−10% / ±10% / > baseline+10% | CISO Dashboard, Trend Lines |
 | RM-003 | Mean Time to Close (High+) | Mean days from `Open` → `Closed/Accepted` for High and Critical | Risk register | Monthly | ≤ 60d / 61–120d / > 120d | CISO Dashboard |
@@ -357,6 +324,44 @@ E. NEXT MONTH
 
 ## 8. Anti-Shallow-Metrics Guardrails
 
+The guardrails below define how CERG avoids vanity metrics and program-health blind spots.
+
+### 8.1 Metrics That Should Not Be Used Alone
+
+The following metrics are commonly reported but are easily gamed, misinterpreted, or disconnected from actual risk reduction. If you report them, pair them with a companion metric that provides context.
+
+| Vanity Metric | Why It Misleads | Pair With |
+|--------------|----------------|-----------|
+| Number of vulnerabilities closed | Rewards volume over severity. A team closing 100 Low findings looks better than a team closing 3 Criticals. | Exposure age by asset criticality; % of Critical/High findings past SLA |
+| Number of phishing emails blocked | Your email gateway blocks 99% of phishing — the 1% that gets through is what matters. | Phishing simulation click rate; time from phish report to containment |
+| Number of policies published | Publishing policies is not implementing controls. | % of controls with current evidence (E2+) |
+| Number of alerts generated | Alert volume is noise. Signal is what matters. | Detection signal-to-noise ratio; % of alerts resulting in validated incidents |
+| Number of vendors reviewed | A checkbox review of 100 vendors is worse than a thorough review of 10 high-risk vendors. | % of high-risk vendors with current assessment; vendor risk concentration |
+| Percent compliant without evidence quality | "95% compliant" based on policy existence, not control operation. | % of controls with E3 evidence; % of evidence current |
+| Training completion rate | Completion proves attendance, not comprehension or behavior change. | Phishing simulation results; incident root causes tracing to human error |
+
+### 8.2 Program Quality Metrics
+
+These metrics measure whether the CERG program itself is healthy — not whether individual controls are operating.
+
+| Metric | What It Measures | Target |
+|--------|-----------------|--------|
+| % of risks with named business owner (not security) | Business accountability for risk | >90% |
+| % of exceptions with expiration date | Exception discipline | 100% |
+| % of control evidence current (within freshness window) | Evidence freshness | >85% |
+| % of Tier 0/Tier 1 assets with tested recovery | Resilience readiness | >95% |
+| % of high-risk vendors reviewed on schedule | Vendor risk currency | >90% |
+| % of adopted documents reviewed on schedule | Document governance | >80% |
+| Number of "Approved" documents with "Pending" approver | Governance hygiene | 0 |
+| Number of placeholder values in approved documents | Operational readiness | 0 in adopted documents |
+| % of findings with a named owner assigned within SLA | Accountability timeliness | >90% |
+| % of accepted risks past expiration without review | Risk acceptance discipline | 0% |
+| % of recurring findings (same vulnerability, same system, >2 times) | Remediation effectiveness | <10% of total findings |
+| Average time from finding identification to owner assignment | Triage responsiveness | <SLA for severity |
+| Number of SLA breaches by pillar per month | Pillar performance | Trending down |
+
+### 8.3 Guardrail Rules
+
 The guardrails baked into the metric definitions and reporting views above:
 
 1. **Score sum first, count second.** Headline figures are residual-score weighted (RM-002), not raw count.
@@ -444,7 +449,7 @@ Threshold changes are recorded as improvement register entries (IMPREG-001, type
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-MTR-001 |
-| **Version** | 1.3 |
+| **Version** | 1.31 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / metrics-platform change |
 | **Change Log** | 1.0 - Initial publication. Establishes dictionary, source map, CISO dashboard, briefs, and anti-shallow guardrails. · 1.1 - Added Section 3.7 Predictive and Leading Indicators (PL-001 through PL-007). · 1.2 - Restored Section 9 Cadence and Ownership. · 1.3 - Added Section 10 Threshold Calibration: cadence, triggers, rules, change log, and improvement register integration. |
