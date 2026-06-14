@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-003 |
-| **Version** | 1.0 |
+| **Version** | 1.01 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -39,37 +39,43 @@ The full CERG corpus describes what a 60-person security team looks like at NIST
 
 ## 2. The CERG Lite Package
 
-These are the documents you actually need. Everything else in the repo can wait.
+These are the documents you actually need first. Everything else in the repo can wait.
 
-### Adopt Immediately (13 documents)
+### Adopt Immediately: MVC (8 documents)
 
 | Document | Why |
 |----------|-----|
 | Cybersecurity Policy (POL-001) | Board/CISO must approve. One page. |
-| Operating Model (OM-001) | Defines your 5 roles. Read §6.1, skip the 60-person examples. |
+| CERG Framework (FRM-001) | Explains the three-pillar model every other document assumes. |
+| Operating Model (OM-001) | Defines your consolidated roles. Read §6.1, skip the 60-person examples. |
+| Document Catalog (CAT-001) | Inventory of what exists and what you have adopted. |
 | Risk Management Framework (RMF-001) | How you score, treat, and accept risk. |
 | Risk Register and Exception Process (PRC-RM-001) | Your operational risk workflow. |
+| Risk Register Templates (TMPL-RM-001) | The spreadsheet/template layer that makes the register real. |
 | Exposure Management Procedure (PRC-VM-001) | Your operational vulnerability workflow. |
-| Architecture Review Procedure (PRC-AR-001) | How projects get security review — use the lightweight tier. |
-| Unified Control Baseline (CB-001) | What controls you are implementing. Start with the 6 families you can evidence. |
-| Document Catalog (CAT-001) | Inventory of what exists. |
-| Implementation Guide (IMP-001) | How to adapt. Fill in your org profile. |
+
+### Use as adoption aids, not additional MVC requirements
+
+| Document | Use |
+|----------|-----|
+| Implementation Guide (IMP-001) | How to adapt the corpus. Fill in your org profile. |
 | Adoption Safety Guide (IMP-002) | How to avoid failure modes. |
-| **This document** (IMP-003) | How to run CERG with 5 people. |
-| Job Families Overview (JF-001) | Understand the 5 families. You will consolidate across them. |
-| NICE Crosswalk (JF-002) | Optional — helpful for hiring and skills-gap analysis. |
+| **This document** (IMP-003) | How to run CERG with a small team. |
+| Role-Based Implementation Checklists (IMP-006) | What each consolidated role should do first. |
+| Job Families Overview (JF-001) | Useful for hiring and consolidation, not required to run MVC. |
+| NICE Crosswalk (JF-002) | Optional skills-gap and hiring reference. |
 
 ### Adopt When Ready (layered on as the team grows)
 
 | When | Add These |
 |------|-----------|
-| You have a dedicated cloud engineer | IT/Cloud/SaaS Standard (STD-IT-001), Access Management Standard (STD-AC-001) |
-| You have a compliance requirement | The applicable regulatory package (CIP, CUI, SOX, ISO) |
-| You are onboarding vendors | Third-Party Risk Procedure (PRC-TPRM-001) |
-| You have a detection capability | Logging Standard (STD-LM-001) |
-| You are doing pen tests | Adversarial Validation Procedure (PRC-AV-001) |
-| You have an incident response function | Cross-Pillar Flows (FLOW-001) for F-06 integration |
-| Team grows beyond 8 people | Per-role JD documents for hiring; full workforce planning |
+| You are ready to formalize controls | Unified Control Baseline (CB-001); start with the 6 families you can evidence. |
+| You have cloud, SaaS, or managed infrastructure | Access, Asset, Configuration, IT/Cloud/SaaS, Logging, and Resilience standards as applicable. |
+| You have a compliance requirement | The applicable regulatory package (CIP, CUI, SOX, ISO, Privacy). |
+| You are onboarding vendors | Third-Party Risk Procedure (PRC-TPRM-001). |
+| You have a detection capability | Threat Intelligence Procedure (PRC-TI-001) and Adversarial Validation Procedure (PRC-AV-001). |
+| You have an incident response function | Cross-Pillar Flows (FLOW-001) for F-06 integration; IR remains owned by the standing IR team. |
+| Team grows beyond 8 people | Per-role JD documents for hiring; full workforce planning. |
 
 ### Do Not Adopt Yet
 
@@ -234,7 +240,7 @@ Create the folder structure (see §8). Add one entry for each piece of evidence 
 
 ### Record 8: Control Implementation Snapshot
 
-For each control in the spine (AC, IA, CM, CP, RA, SI families from CB-001), record its current status honestly.
+If CB-001 is not yet adopted, start with a preliminary snapshot for the obvious control families (AC, IA, CM, CP, RA, SI) and mark it preliminary. Once CB-001 is adopted, convert the snapshot to CB-001 control IDs and record its current status honestly.
 
 | Control ID | Status | Evidence? | Notes |
 |-----------|--------|-----------|-------|
@@ -516,9 +522,9 @@ Create this folder structure in your shared drive, document management system, o
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-003 |
-| **Version** | 1.0 |
+| **Version** | 1.01 |
 | **Status** | Approved |
-| **Effective Date** | 2026-06-11 |
+| **Effective Date** | 2026-06-14 |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Approved By** | CISO |
@@ -533,6 +539,7 @@ Create this folder structure in your shared drive, document management system, o
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.01 | 2026-06-14 | Governance Pillar Leader | Aligned the CERG Lite package to the eight-document MVC and separated adoption aids from immediate requirements. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. CERG Lite package, reduced operating rhythm for 5-person teams, role consolidation map, first 10 records, first month criteria, spreadsheet schemas for 7 record types, minimum viable evidence library structure. |
 
 ### Review Triggers
