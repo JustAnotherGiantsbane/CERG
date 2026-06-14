@@ -8,7 +8,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-RM-001 |
-| **Version** | 1.0 |
+| **Version** | 1.01 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |
@@ -71,7 +71,9 @@ The organization accepts residual risk only where (a) the cost or operational im
 
 #### Quantitative Tolerance Thresholds
 
-| **Tier / Scope** | **Maximum Acceptable Residual Risk Score** | **Maximum Acceptable Duration** | **Notes** |
+The durations below are scope-specific treatment horizons. They do not extend risk-acceptance authority or duration beyond the canonical limits in [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7; when more than one rule applies, the shortest applicable duration wins.
+
+| **Tier / Scope** | **Maximum Acceptable Residual Risk Score** | **Maximum Acceptable Treatment Horizon** | **Notes** |
 |---|---|---|---|
 | BES Cyber Systems (NERC-CIP) | 6 (Medium-Low) | 90 days | Aligned to CIP mitigation plan timelines |
 | CUI Environments (CMMC) | 6 (Medium-Low) | 90 days | Aligned to POA&M timelines; Critical not acceptable |
@@ -170,11 +172,11 @@ Risks are scored using a 5×5 matrix of **Likelihood** and **Impact**. The matri
 
 | **Score Product** | **Rating** | **Default Treatment Expectation** |
 |---|---|---|
-| 1–4 | **Low** | Track; treat as resources allow. |
-| 5–9 | **Medium** | Treat within a defined plan; review at standing cadence. |
-| 10–14 | **High** | Treat with priority; CISO approves risk acceptance. |
-| 15–20 | **Critical** | Treat urgently; CISO + executive sponsor approval for any acceptance. |
-| 21–25 | **Critical** | Immediate treatment required; executive / board awareness. |
+| 1 | **Informational** | Track for trend analysis; no formal acceptance required. |
+| 2–5 | **Low** | Track; treat as resources allow. |
+| 6–11 | **Medium** | Treat within a defined plan; review at standing cadence. |
+| 12–19 | **High** | Treat with priority; acceptance requires CISO + Business Owner approval. |
+| 20–25 | **Critical** | Immediate treatment required; acceptance requires CISO + Executive Sponsor approval and board notification. |
 
 ### 4.3 Quantitative Calibration Guide
 
@@ -443,15 +445,15 @@ Risk treatment decisions require documented approval from the authority matching
 
 | **Risk Rating / Treatment** | **Security Role** | **Business Role** | **Approval** |
 |---|---|---|---|
-| Low risk – any treatment | Governance: confirms procedural exception; Risk: confirms low residual risk | Business owner: owns local decision | Governance Pillar Leader |
-| Medium risk – Reduce / Transfer / Avoid | Risk: performs risk assessment; Engineering: validates treatment plan | Business owner: signs off on treatment | Risk or Engineering Pillar Leader |
-| Medium risk – Accept | Risk: performs risk assessment; Governance: documents conditions | Business owner: accepts residual risk | CISO (or CISO designee) |
-| High risk – any treatment | Risk: signs finding; Governance: structures package | Business owner + Executive Sponsor: accept | CISO + Executive Sponsor |
-| Critical risk – any treatment | Risk: signs finding; Governance: structures package | Business owner + Executive Sponsor: accept | CISO + Executive Sponsor; Board notified |
-| Any exception affecting BES Cyber Systems | As above per severity | As above | CISO + NERC-CIP deviation process |
-| Any exception affecting CUI environment posture | As above per severity | As above | CISO + POA&M entry |
-| Any exception affecting [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC | As above per severity | As above | CISO + CFO designee |
-| Emergency exception (operational necessity) | Risk Pillar Leader or Engineering Pillar Leader may authorize immediately | Business owner notified within 24 hours | CISO must approve or deny post-hoc within 24 hours. If denied, the action must be reversed or mitigated, and the residual risk is logged to the risk register with the denial rationale. |
+| Low risk – Accept or exception | Governance: confirms procedural exception; Risk: confirms low residual risk if needed | Business Owner: owns local decision | Business Owner + Risk Register Owner |
+| Medium risk – Reduce / Transfer / Avoid | Risk: performs risk assessment; Engineering: validates treatment plan | Business Owner: signs off on treatment | Risk or Engineering Pillar Leader |
+| Medium risk – Accept | Risk: performs risk assessment; Governance: documents conditions | Business Owner: accepts residual risk | Business Owner + Pillar Leader or Governance Pillar Leader |
+| High risk – Accept | Risk: signs finding; Governance: structures package | Business Owner: accepts business consequence | CISO + Business Owner |
+| Critical risk – Accept | Risk: signs finding; Governance: structures package | Executive Sponsor: accepts business consequence | CISO + Executive Sponsor; Board notified |
+| Any exception affecting BES Cyber Systems | As above per severity | As above | As above + NERC-CIP deviation process |
+| Any exception affecting CUI environment posture | As above per severity | As above | As above + POA&M entry |
+| Any exception affecting [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC | As above per severity | As above | As above + CFO designee notification or approval where required by SOX governance |
+| Emergency exception (operational necessity) | Risk Pillar Leader or Engineering Pillar Leader may authorize immediately | Business Owner notified within 24 hours | CISO must approve or deny post-hoc within 24 hours. If denied, the action must be reversed or mitigated, and the residual risk is logged to the risk register with the denial rationale. |
 
 Approvers may delegate within their authority but shall document the delegation. The CISO retains final authority for any risk-related decision. Acceptance of residual risk at any tier follows the canonical authority table in [CERG-GOV-RMF-001](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. The business owner accepts the business risk — security does not accept business risk. No acceptance expires automatically; every acceptance at every tier requires a fresh approval cycle at expiration.
 
@@ -545,7 +547,8 @@ The register is not a parallel system to these programs. It is the connective ti
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.0 DRAFT | 2026 | CERG Governance | Initial release |
+| 1.01 | 2026-06-14 | Governance Pillar Leader | Aligned scoring bands, approval summaries, and duration guidance to the canonical RMF authority table. |
+| 1.0 | 2026-05-01 | CERG Governance | Initial release |
 
 ### Review Triggers
 
@@ -583,4 +586,4 @@ Governance owns this procedure. The Risk Register Owner is responsible for revis
 
 ---
 
-_CERG-PRC-RM-001 · Version 1.0 DRAFT · CONFIDENTIAL · Internal Use Only_
+_CERG-PRC-RM-001 · Version 1.01 · Public_
