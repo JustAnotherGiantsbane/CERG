@@ -63,8 +63,8 @@ This procedure defines how a project enters CERG attention, how Engineering revi
 | **Risk Pillar Leader / assigned Risk reviewer** | Leads threat modeling per [`CERG-PRC-TM-001`](CERG-PRC-TM-001_Threat_Modeling_Procedure.md), contributes adversary context, and ensures threat-model findings receive a disposition. |
 | **Vendor Risk Analyst** | Performs third-party and supply-chain assessment per [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) when vendors, SaaS providers, MSPs, software suppliers, or external integrations are involved. |
 | **Governance Pillar Leader** | Maps the project into the regulatory scope (CUI / BES / SOX) and triggers the relevant overlay reviewers. |
-| **Engineering Pillar Leader** | Approves Standard findings. Approves Medium risk acceptances per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) §8. |
-| **CISO** | Approves High / Critical risk acceptances at go-live. |
+| **Engineering Pillar Leader** | Approves Engineering disposition, validates proposed compensating controls, and routes any residual-risk acceptance to the authority named in [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) §8 and [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. |
+| **CISO** | Approves High / Critical risk acceptances at go-live where required by the canonical authority table. |
 | **IT Change Advisory Board (CAB)** | Hosts the go-live conversation; CERG review status is a CAB input, not a substitute for change management. |
 
 ---
@@ -302,7 +302,7 @@ Build-time findings are escalated within the development team first, then to CER
 
 ### 7.5 SLA for Build-Time Review
 
-CERG completes novel-build review within 3 business days of notification. If the review cannot be completed within SLA, the build may proceed with CERG acknowledgment and a scheduled follow-up review; risk is accepted by the Engineering Pillar Leader.
+CERG completes novel-build review within 3 business days of notification. If the review cannot be completed within SLA, Engineering documents the delay, schedules the follow-up review, and notifies the project team. A build may proceed only if no blocking security gate has failed; any residual risk created by proceeding is routed through the risk acceptance process. Engineering does not accept business risk on behalf of the owner.
 
 The artifacts produced during build include: IaC review for new modules and patterns; pipeline gates enforcing DISH baseline conformance, container image signing, SBOM generation, and vulnerability scanning; secrets checking; and conditional re-review if material design changes happen between Phase 2 and Phase 4.
 
@@ -325,7 +325,7 @@ Pre-Production review is a focused, time-boxed readiness check. It produces a Pr
 | Resilience | Backups configured per tier; first restoration test scheduled | Backup config; resilience register entry |
 | Vendor / TPRM | Vendor records current; evidence-by-tier complete; SCCT in workflow | TPRM tool entries |
 | Regulatory overlay artifacts | CUI / BES / SOX artifacts populated per relevant package | Per overlay |
-| Phase 2 conditions cleared | All conditions either met or risk-accepted | Phase 2 record annotations |
+| Phase 2 conditions cleared | All conditions either met or accepted through the risk process | Phase 2 record annotations |
 | Asset inventory | System added; ownership recorded | Asset inventory |
 | Run-book / on-call | Service has documented on-call and run-book | Run-book reference |
 | Change management | Go-live aligned with CAB cadence | Change record |
@@ -393,7 +393,7 @@ PRODUCTION HANDOFF PACKAGE - <System Name>     AR-YYYY-NNNN - PHP-001
 
 ### 9.2 Go-Live Risk Acceptance Packet
 
-A separate packet is produced only if go-live ships with one or more risk acceptances. It is the document the CISO and Business Owner sign.
+A separate packet is produced only if go-live ships with one or more risk acceptances. It is the document the Business Owner and required approvers sign per the canonical authority table.
 
 ```
 GO-LIVE RISK ACCEPTANCE PACKET - <System Name>     AR-YYYY-NNNN - GLR-001
