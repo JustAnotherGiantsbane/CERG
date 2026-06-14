@@ -1,19 +1,20 @@
 {
-  "cerg_version": "1.22",
-  "generated": "2026-06-12",
-  "total_documents": 130,
-  "total_tokens_estimate": 801023,
+  "cerg_version": "1.34",
+  "generated": "2026-06-14",
+  "source": "local markdown corpus",
+  "total_documents": 131,
+  "total_tokens_estimate": 826902,
   "by_type": {
+    "readme": 12,
+    "governance-instrument": 38,
+    "meta": 1,
     "policy": 1,
-    "governance-instrument": 34,
-    "job-description": 33,
-    "template": 10,
     "standard": 15,
     "procedure": 12,
     "plan": 7,
-    "job-family": 3,
-    "readme": 7,
-    "meta": 8
+    "template": 10,
+    "job-family": 2,
+    "job-description": 33
   },
   "by_prefix": {
     "POL": {
@@ -24,7 +25,7 @@
     "GOV": {
       "type": "Governance Instrument",
       "pillar": "governance",
-      "count": 34
+      "count": 38
     },
     "STD": {
       "type": "Standard",
@@ -54,12 +55,12 @@
     "JD": {
       "type": "Job Description",
       "pillar": "workforce",
-      "count": 34
+      "count": 33
     },
     "META": {
       "type": "Repository Metadata",
       "pillar": "cross-cutting",
-      "count": 15
+      "count": 13
     }
   },
   "prefixes": {
@@ -102,84 +103,84 @@
   },
   "documents": [
     {
-      "id": "CERG-POL-001",
-      "prefix": "POL",
-      "title": "CERG-POL-001 Cybersecurity Policy",
-      "type": "policy",
+      "id": "README",
+      "prefix": "META",
+      "title": "README",
+      "type": "readme",
+      "pillar": "cross-cutting",
+      "status": null,
+      "version": null,
+      "classification": null,
+      "owner": null,
+      "path": "README.md",
+      "lines": [
+        1,
+        195
+      ],
+      "lines_count": 194,
+      "chars": 15204,
+      "tokens": 4344,
+      "summary": "CERG repository root \u2014 project overview, adoption paths, architecture, reader guides for different roles."
+    },
+    {
+      "id": "START-HERE",
+      "prefix": "META",
+      "title": "START-HERE",
+      "type": "readme",
+      "pillar": "cross-cutting",
+      "status": null,
+      "version": null,
+      "classification": null,
+      "owner": null,
+      "path": "START-HERE.md",
+      "lines": [
+        197,
+        344
+      ],
+      "lines_count": 147,
+      "chars": 9160,
+      "tokens": 2617,
+      "summary": "First 48 hours adoption guide \u2014 Lite, Standard, and Regulated paths."
+    },
+    {
+      "id": "AGENTS",
+      "prefix": "META",
+      "title": "AGENTS",
+      "type": "readme",
+      "pillar": "cross-cutting",
+      "status": null,
+      "version": null,
+      "classification": null,
+      "owner": null,
+      "path": "AGENTS.md",
+      "lines": [
+        346,
+        612
+      ],
+      "lines_count": 266,
+      "chars": 11102,
+      "tokens": 3172,
+      "summary": "Guide for AI agents working on CERG \u2014 conventions, pitfalls, tools, git workflow, validation."
+    },
+    {
+      "id": "CERG-GOV-AUD-001",
+      "prefix": "GOV",
+      "title": "Evidence Quality Standard",
+      "type": "governance-instrument",
       "pillar": "governance",
-      "path": "governance/CERG-POL-001_Cybersecurity_Policy.md",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
+      "path": "governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md",
       "lines": [
-        10,
-        519
+        614,
+        995
       ],
-      "lines_count": 510,
-      "chars": 43482,
-      "tokens": 12423,
-      "summary": "Foundational cybersecurity policy: 10 durable principles governing all systems, environments, and trust levels."
-    },
-    {
-      "id": "CERG-GOV-RMF-001",
-      "prefix": "GOV",
-      "title": "Risk Management Framework",
-      "type": "governance-instrument",
-      "pillar": "risk",
-      "path": "governance/CERG-GOV-RMF-001_Risk_Management_Framework.md",
-      "lines": [
-        520,
-        1214
-      ],
-      "lines_count": 695,
-      "chars": 61061,
-      "tokens": 17446,
-      "summary": "Risk Management Framework: 6-phase model, 5x5 risk scoring, business-owned acceptance, organizational scaling."
-    },
-    {
-      "id": "CERG-GOV-FLOW-001",
-      "prefix": "GOV",
-      "title": "Cross-Pillar Operational Flows",
-      "type": "governance-instrument",
-      "pillar": "governance",
-      "path": "governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md",
-      "lines": [
-        1215,
-        2455
-      ],
-      "lines_count": 1241,
-      "chars": 59356,
-      "tokens": 16959,
-      "summary": "Cross-Pillar Operational Flows: 7 flows, 5 state models, 16 record templates, evidence tiers, severity SLAs."
-    },
-    {
-      "id": "CERG-GOV-CMX-001",
-      "prefix": "GOV",
-      "title": "Compliance Matrix",
-      "type": "governance-instrument",
-      "pillar": "risk",
-      "path": "governance/CERG-GOV-CMX-001_Compliance_Matrix.md",
-      "lines": [
-        2456,
-        2893
-      ],
-      "lines_count": 438,
-      "chars": 25192,
-      "tokens": 7198,
-      "summary": "Compliance Matrix: 22 compliance intents mapped to NERC-CIP, CMMC, SOX, NIST controls."
-    },
-    {
-      "id": "CERG-GOV-TAX-001",
-      "prefix": "GOV",
-      "title": "Risk Taxonomy",
-      "type": "governance-instrument",
-      "pillar": "risk",
-      "path": "governance/CERG-GOV-TAX-001_Risk_Taxonomy.md",
-      "lines": [
-        2894,
-        3207
-      ],
-      "lines_count": 314,
-      "chars": 23991,
-      "tokens": 6855,
-      "summary": "Risk Taxonomy: 22 risk themes across Engineering, Risk, Governance pillars with severity ratings."
+      "lines_count": 381,
+      "chars": 23188,
+      "tokens": 6625,
+      "summary": "Evidence Quality Standard: E1/E2/E3 evidence tier definitions."
     },
     {
       "id": "CERG-GOV-CAL-001",
@@ -187,79 +188,19 @@
       "title": "Annual Security and Governance Calendar",
       "type": "governance-instrument",
       "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
       "path": "governance/CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md",
       "lines": [
-        3208,
-        3474
+        997,
+        1255
       ],
-      "lines_count": 267,
-      "chars": 15499,
-      "tokens": 4428,
+      "lines_count": 258,
+      "chars": 15386,
+      "tokens": 4396,
       "summary": "Annual Security and Governance Calendar: scheduled activities and reviews."
-    },
-    {
-      "id": "CERG-GOV-OM-001",
-      "prefix": "GOV",
-      "title": "CERG Operating Model",
-      "type": "governance-instrument",
-      "pillar": "governance",
-      "path": "governance/CERG-GOV-OM-001_CERG_Operating_Model.md",
-      "lines": [
-        3475,
-        4082
-      ],
-      "lines_count": 608,
-      "chars": 48212,
-      "tokens": 13775,
-      "summary": "Operating Model: 3 pillars, decision rights, 27 canonical roles, 5-person scaling, RACI."
-    },
-    {
-      "id": "CERG-GOV-RAC-001",
-      "prefix": "GOV",
-      "title": "Consolidated Roles and RACI Instrument",
-      "type": "governance-instrument",
-      "pillar": "governance",
-      "path": "governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md",
-      "lines": [
-        4083,
-        4462
-      ],
-      "lines_count": 380,
-      "chars": 29116,
-      "tokens": 8319,
-      "summary": "Consolidated RACI: comprehensive RACI for 27 canonical CERG roles."
-    },
-    {
-      "id": "CERG-GOV-CEF-001",
-      "prefix": "GOV",
-      "title": "Control Effectiveness Framework",
-      "type": "governance-instrument",
-      "pillar": "engineering",
-      "path": "governance/CERG-GOV-CEF-001_Control_Effectiveness_Framework.md",
-      "lines": [
-        4463,
-        4774
-      ],
-      "lines_count": 312,
-      "chars": 23154,
-      "tokens": 6615,
-      "summary": "Control Effectiveness Framework: evaluation criteria, testing methodology."
-    },
-    {
-      "id": "CERG-GOV-TRC-001",
-      "prefix": "GOV",
-      "title": "Control to Procedure Traceability Matrix",
-      "type": "governance-instrument",
-      "pillar": "engineering",
-      "path": "governance/CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md",
-      "lines": [
-        4775,
-        4995
-      ],
-      "lines_count": 221,
-      "chars": 22309,
-      "tokens": 6374,
-      "summary": "Control-to-Procedure Traceability Matrix: control to procedure to evidence."
     },
     {
       "id": "CERG-GOV-CAT-001",
@@ -267,47 +208,39 @@
       "title": "Document Catalog and Naming Convention",
       "type": "governance-instrument",
       "pillar": "governance",
+      "status": "Approved",
+      "version": "1.34",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Document Control)",
       "path": "governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md",
       "lines": [
-        4996,
-        5544
+        1257,
+        1806
       ],
       "lines_count": 549,
-      "chars": 46334,
-      "tokens": 13238,
+      "chars": 47810,
+      "tokens": 13660,
       "summary": "Document Catalog: authoritative inventory of all CERG documents, domain codes, review tiers."
     },
     {
-      "id": "CERG-GOV-MAT-001",
+      "id": "CERG-GOV-CAT-002",
       "prefix": "GOV",
-      "title": "Maturity Self Assessment and Scorecard",
+      "title": "Record Catalog",
       "type": "governance-instrument",
       "pillar": "governance",
-      "path": "governance/CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Document Control)",
+      "path": "governance/CERG-GOV-CAT-002_Record_Catalog.md",
       "lines": [
-        5545,
-        5899
+        1808,
+        2066
       ],
-      "lines_count": 355,
-      "chars": 25791,
-      "tokens": 7369,
-      "summary": "Maturity Self-Assessment: CERG maturity model, scorecard."
-    },
-    {
-      "id": "CERG-GOV-MTR-001",
-      "prefix": "GOV",
-      "title": "Metrics Dashboard and Reporting",
-      "type": "governance-instrument",
-      "pillar": "governance",
-      "path": "governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md",
-      "lines": [
-        5900,
-        6359
-      ],
-      "lines_count": 460,
-      "chars": 36069,
-      "tokens": 10305,
-      "summary": "Metrics, Dashboard, and Reporting: KPIs, dashboards, CISO/Board reporting."
+      "lines_count": 258,
+      "chars": 18991,
+      "tokens": 5426,
+      "summary": "CERG GOV document: Record Catalog"
     },
     {
       "id": "CERG-GOV-CB-001",
@@ -315,47 +248,219 @@
       "title": "Unified Control Baseline",
       "type": "governance-instrument",
       "pillar": "engineering",
+      "status": "Approved",
+      "version": "1.21",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Control Baseline)",
       "path": "governance/CERG-GOV-CB-001_Unified_Control_Baseline.md",
       "lines": [
-        6360,
-        6901
+        2068,
+        2601
       ],
-      "lines_count": 542,
-      "chars": 62277,
-      "tokens": 17793,
+      "lines_count": 533,
+      "chars": 62170,
+      "tokens": 17763,
       "summary": "Unified Control Baseline: NIST 800-53r5 controls mapped to CERG implementation standards."
     },
     {
-      "id": "CERG-GOV-STY-002",
+      "id": "CERG-GOV-CEF-001",
       "prefix": "GOV",
-      "title": "Style Compliance Tracker",
+      "title": "Control Effectiveness Framework",
       "type": "governance-instrument",
-      "pillar": "governance",
-      "path": "governance/CERG-GOV-STY-002_Style_Compliance_Tracker.md",
+      "pillar": "engineering",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
+      "path": "governance/CERG-GOV-CEF-001_Control_Effectiveness_Framework.md",
       "lines": [
-        6902,
-        7058
+        2603,
+        2907
       ],
-      "lines_count": 157,
-      "chars": 8282,
-      "tokens": 2366,
-      "summary": "Style Compliance Tracker: STY-001 violation tracker with scheduled fixes."
+      "lines_count": 304,
+      "chars": 23059,
+      "tokens": 6588,
+      "summary": "Control Effectiveness Framework: evaluation criteria, testing methodology."
     },
     {
-      "id": "CERG-GOV-STY-001",
+      "id": "CERG-GOV-CJ-001",
       "prefix": "GOV",
-      "title": "Document Authoring and Style Guide",
+      "title": "Crown Jewel Register and Scenario Library",
       "type": "governance-instrument",
       "pillar": "governance",
-      "path": "governance/CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Risk Pillar Leader / Governance Pillar Leader",
+      "path": "governance/CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md",
       "lines": [
-        7059,
-        7509
+        2909,
+        3170
       ],
-      "lines_count": 451,
-      "chars": 17888,
-      "tokens": 5111,
-      "summary": "Document Authoring and Style Guide: metadata format, section numbering, link rules."
+      "lines_count": 261,
+      "chars": 24650,
+      "tokens": 7043,
+      "summary": "Crown Jewel Register: critical assets, loss scenarios, criticality tiers."
+    },
+    {
+      "id": "CERG-GOV-CMP-001",
+      "prefix": "GOV",
+      "title": "Competency Model and Behavioral Anchors",
+      "type": "governance-instrument",
+      "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Policy & Standards)",
+      "path": "governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md",
+      "lines": [
+        3172,
+        3698
+      ],
+      "lines_count": 526,
+      "chars": 52026,
+      "tokens": 14865,
+      "summary": "Competency Model: behavioral anchors per pillar (Eng, Risk, Gov, Mgmt)."
+    },
+    {
+      "id": "CERG-GOV-CMX-001",
+      "prefix": "GOV",
+      "title": "Compliance Matrix",
+      "type": "governance-instrument",
+      "pillar": "governance",
+      "status": "Approved",
+      "version": "1.21",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
+      "path": "governance/CERG-GOV-CMX-001_Compliance_Matrix.md",
+      "lines": [
+        3700,
+        4130
+      ],
+      "lines_count": 430,
+      "chars": 25101,
+      "tokens": 7172,
+      "summary": "Compliance Matrix: 22 compliance intents mapped to NERC-CIP, CMMC, SOX, NIST controls."
+    },
+    {
+      "id": "CERG-GOV-CON-001",
+      "prefix": "GOV",
+      "title": "Contractor and Non-Employee Staff Integration Guide",
+      "type": "governance-instrument",
+      "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Policy & Standards)",
+      "path": "governance/CERG-GOV-CON-001_Contractor_and_Non-Employee_Staff_Integration_Guide.md",
+      "lines": [
+        4132,
+        4475
+      ],
+      "lines_count": 343,
+      "chars": 27693,
+      "tokens": 7912,
+      "summary": "Contractor Integration Guide: non-employee onboarding, access, oversight."
+    },
+    {
+      "id": "CERG-GOV-EDG-001",
+      "prefix": "GOV",
+      "title": "Edge Register",
+      "type": "governance-instrument",
+      "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Vendor Risk Analyst / Governance Pillar Leader",
+      "path": "governance/CERG-GOV-EDG-001_Edge_Register.md",
+      "lines": [
+        4477,
+        4706
+      ],
+      "lines_count": 229,
+      "chars": 14260,
+      "tokens": 4074,
+      "summary": "Edge Register: register for edge cases and exceptional operating conditions."
+    },
+    {
+      "id": "CERG-GOV-FLOW-001",
+      "prefix": "GOV",
+      "title": "Cross-Pillar Operational Flows",
+      "type": "governance-instrument",
+      "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
+      "path": "governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md",
+      "lines": [
+        4708,
+        5940
+      ],
+      "lines_count": 1232,
+      "chars": 59256,
+      "tokens": 16930,
+      "summary": "Cross-Pillar Operational Flows: 7 flows, 5 state models, 16 record templates, evidence tiers, severity SLAs."
+    },
+    {
+      "id": "CERG-GOV-FRM-001",
+      "prefix": "GOV",
+      "title": "CERG Framework",
+      "type": "governance-instrument",
+      "pillar": "governance",
+      "status": "Approved",
+      "version": "1.21",
+      "classification": "Public",
+      "owner": "CISO",
+      "path": "governance/CERG-GOV-FRM-001_CERG_Framework.md",
+      "lines": [
+        5942,
+        6532
+      ],
+      "lines_count": 590,
+      "chars": 56375,
+      "tokens": 16107,
+      "summary": "CERG Framework narrative: three-pillar SURGE model, adoption paths, evidence-first philosophy."
+    },
+    {
+      "id": "CERG-GOV-FRM-002",
+      "prefix": "GOV",
+      "title": "Framework System Map",
+      "type": "governance-instrument",
+      "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
+      "path": "governance/CERG-GOV-FRM-002_Framework_System_Map.md",
+      "lines": [
+        6534,
+        6781
+      ],
+      "lines_count": 247,
+      "chars": 12264,
+      "tokens": 3504,
+      "summary": "CERG GOV document: Framework System Map"
+    },
+    {
+      "id": "CERG-GOV-IMP-001",
+      "prefix": "GOV",
+      "title": "Implementation and Adaptation Guide",
+      "type": "governance-instrument",
+      "pillar": "governance",
+      "status": "Approved",
+      "version": "1.11",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Document Control)",
+      "path": "governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md",
+      "lines": [
+        6783,
+        7248
+      ],
+      "lines_count": 465,
+      "chars": 37005,
+      "tokens": 10573,
+      "summary": "Implementation and Adaptation Guide: adoption methodology from assessment to maturity."
     },
     {
       "id": "CERG-GOV-IMP-002",
@@ -363,14 +468,18 @@
       "title": "Adoption Safety Guide",
       "type": "governance-instrument",
       "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
       "path": "governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md",
       "lines": [
-        7510,
-        7993
+        7250,
+        7725
       ],
-      "lines_count": 484,
-      "chars": 30273,
-      "tokens": 8649,
+      "lines_count": 475,
+      "chars": 30163,
+      "tokens": 8618,
       "summary": "Adoption Safety Guide: prerequisites, anti-patterns, safe tailoring boundaries."
     },
     {
@@ -379,31 +488,19 @@
       "title": "Small Team Adoption Path",
       "type": "governance-instrument",
       "pillar": "governance",
+      "status": "Approved",
+      "version": "1.01",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
       "path": "governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md",
       "lines": [
-        7994,
-        8556
+        7727,
+        8288
       ],
-      "lines_count": 563,
-      "chars": 23916,
-      "tokens": 6833,
+      "lines_count": 561,
+      "chars": 24534,
+      "tokens": 7010,
       "summary": "Small Team Adoption Path: CERG Lite, role consolidation, spreadsheet schemas."
-    },
-    {
-      "id": "CERG-GOV-IMP-001",
-      "prefix": "GOV",
-      "title": "Implementation and Adaptation Guide",
-      "type": "governance-instrument",
-      "pillar": "governance",
-      "path": "governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md",
-      "lines": [
-        8557,
-        9028
-      ],
-      "lines_count": 472,
-      "chars": 36362,
-      "tokens": 10389,
-      "summary": "Implementation and Adaptation Guide: adoption methodology from assessment to maturity."
     },
     {
       "id": "CERG-GOV-IMP-004",
@@ -411,31 +508,59 @@
       "title": "Implementation Cards",
       "type": "governance-instrument",
       "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
       "path": "governance/CERG-GOV-IMP-004_Implementation_Cards.md",
       "lines": [
-        9029,
-        9477
+        8290,
+        8730
       ],
-      "lines_count": 449,
-      "chars": 30409,
-      "tokens": 8688,
+      "lines_count": 440,
+      "chars": 30315,
+      "tokens": 8661,
       "summary": "Implementation Cards: reusable patterns for common adoption scenarios."
     },
     {
-      "id": "CERG-GOV-VAR-001",
+      "id": "CERG-GOV-IMP-005",
       "prefix": "GOV",
-      "title": "Organization Adaptation Profile",
+      "title": "Adoption Decision Tree and Dependency Matrix",
       "type": "governance-instrument",
       "pillar": "governance",
-      "path": "governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md",
+      "status": "Approved",
+      "version": "1.01",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
+      "path": "governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md",
       "lines": [
-        9478,
-        9772
+        8732,
+        9043
       ],
-      "lines_count": 295,
-      "chars": 17090,
-      "tokens": 4883,
-      "summary": "Organization Adaptation Profile: document CERG tailoring decisions."
+      "lines_count": 311,
+      "chars": 14769,
+      "tokens": 4220,
+      "summary": "CERG GOV document: Adoption Decision Tree and Dependency Matrix"
+    },
+    {
+      "id": "CERG-GOV-IMP-006",
+      "prefix": "GOV",
+      "title": "Role Based Implementation Checklists",
+      "type": "governance-instrument",
+      "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
+      "path": "governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md",
+      "lines": [
+        9045,
+        9347
+      ],
+      "lines_count": 302,
+      "chars": 13496,
+      "tokens": 3856,
+      "summary": "CERG GOV document: Role Based Implementation Checklists"
     },
     {
       "id": "CERG-GOV-IMPREG-001",
@@ -443,63 +568,19 @@
       "title": "Program Improvement Register",
       "type": "governance-instrument",
       "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
       "path": "governance/CERG-GOV-IMPREG-001_Program_Improvement_Register.md",
       "lines": [
-        9773,
-        10060
+        9349,
+        9629
       ],
-      "lines_count": 288,
-      "chars": 19261,
-      "tokens": 5503,
+      "lines_count": 280,
+      "chars": 19166,
+      "tokens": 5476,
       "summary": "Program Improvement Register: tracking improvements from lessons-learned."
-    },
-    {
-      "id": "CERG-GOV-JD-001",
-      "prefix": "JD",
-      "title": "CERG Job Descriptions",
-      "type": "job-description",
-      "pillar": "workforce",
-      "path": "governance/CERG-GOV-JD-001_CERG_Job_Descriptions.md",
-      "lines": [
-        10061,
-        10225
-      ],
-      "lines_count": 165,
-      "chars": 9885,
-      "tokens": 2824,
-      "summary": "Legacy monolithic Job Descriptions (per-role files in roles/ supersede)."
-    },
-    {
-      "id": "CERG-GOV-CMP-001",
-      "prefix": "GOV",
-      "title": "Competency Model and Behavioral Anchors",
-      "type": "governance-instrument",
-      "pillar": "governance",
-      "path": "governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md",
-      "lines": [
-        10226,
-        10759
-      ],
-      "lines_count": 534,
-      "chars": 52144,
-      "tokens": 14898,
-      "summary": "Competency Model: behavioral anchors per pillar (Eng, Risk, Gov, Mgmt)."
-    },
-    {
-      "id": "CERG-GOV-CON-001",
-      "prefix": "GOV",
-      "title": "Contractor and Non-Employee Staff Integration Guide",
-      "type": "governance-instrument",
-      "pillar": "governance",
-      "path": "governance/CERG-GOV-CON-001_Contractor_and_Non-Employee_Staff_Integration_Guide.md",
-      "lines": [
-        10760,
-        11110
-      ],
-      "lines_count": 351,
-      "chars": 27823,
-      "tokens": 7949,
-      "summary": "Contractor Integration Guide: non-employee onboarding, access, oversight."
     },
     {
       "id": "CERG-GOV-JA-001",
@@ -507,15 +588,99 @@
       "title": "Job Architecture and Grade Framework",
       "type": "governance-instrument",
       "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md",
       "lines": [
-        11111,
-        11599
+        9631,
+        10112
       ],
-      "lines_count": 489,
-      "chars": 42005,
-      "tokens": 12001,
+      "lines_count": 481,
+      "chars": 41891,
+      "tokens": 11969,
       "summary": "Job Architecture and Grade Framework: grade levels, career tracks."
+    },
+    {
+      "id": "CERG-GOV-JD-001",
+      "prefix": "META",
+      "title": "CERG Job Descriptions",
+      "type": "meta",
+      "pillar": "cross-cutting",
+      "status": "Approved",
+      "version": "2.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Policy & Standards)",
+      "path": "governance/CERG-GOV-JD-001_CERG_Job_Descriptions.md",
+      "lines": [
+        10114,
+        10270
+      ],
+      "lines_count": 156,
+      "chars": 9791,
+      "tokens": 2797,
+      "summary": "Legacy monolithic Job Descriptions (per-role files in roles/ supersede)."
+    },
+    {
+      "id": "CERG-GOV-MAT-001",
+      "prefix": "GOV",
+      "title": "Maturity Self Assessment and Scorecard",
+      "type": "governance-instrument",
+      "pillar": "governance",
+      "status": "Approved",
+      "version": "1.1",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Document Control)",
+      "path": "governance/CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md",
+      "lines": [
+        10272,
+        10618
+      ],
+      "lines_count": 346,
+      "chars": 25679,
+      "tokens": 7337,
+      "summary": "Maturity Self-Assessment: CERG maturity model, scorecard."
+    },
+    {
+      "id": "CERG-GOV-MTR-001",
+      "prefix": "GOV",
+      "title": "Metrics Dashboard and Reporting",
+      "type": "governance-instrument",
+      "pillar": "governance",
+      "status": "Approved",
+      "version": "1.3",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Reporting)",
+      "path": "governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md",
+      "lines": [
+        10620,
+        11071
+      ],
+      "lines_count": 451,
+      "chars": 36177,
+      "tokens": 10336,
+      "summary": "Metrics, Dashboard, and Reporting: KPIs, dashboards, CISO/Board reporting."
+    },
+    {
+      "id": "CERG-GOV-OM-001",
+      "prefix": "GOV",
+      "title": "CERG Operating Model",
+      "type": "governance-instrument",
+      "pillar": "governance",
+      "status": "Approved",
+      "version": "1.23",
+      "classification": "Public",
+      "owner": "Chief Information Security Officer",
+      "path": "governance/CERG-GOV-OM-001_CERG_Operating_Model.md",
+      "lines": [
+        11073,
+        11673
+      ],
+      "lines_count": 600,
+      "chars": 48513,
+      "tokens": 13861,
+      "summary": "Operating Model: 3 pillars, decision rights, 27 canonical roles, 5-person scaling, RACI."
     },
     {
       "id": "CERG-GOV-ONB-001",
@@ -523,14 +688,18 @@
       "title": "Onboarding and Integration Program",
       "type": "governance-instrument",
       "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "governance/CERG-GOV-ONB-001_Onboarding_and_Integration_Program.md",
       "lines": [
-        11600,
-        12070
+        11675,
+        12138
       ],
-      "lines_count": 471,
-      "chars": 34451,
-      "tokens": 9843,
+      "lines_count": 463,
+      "chars": 34353,
+      "tokens": 9815,
       "summary": "Onboarding Program: structured new-hire onboarding for all pillars."
     },
     {
@@ -539,79 +708,59 @@
       "title": "Performance Management and Promotion Framework",
       "type": "governance-instrument",
       "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md",
       "lines": [
-        12071,
-        12483
+        12140,
+        12545
       ],
-      "lines_count": 413,
-      "chars": 29652,
-      "tokens": 8472,
+      "lines_count": 405,
+      "chars": 29541,
+      "tokens": 8440,
       "summary": "Performance Management: evaluation, review cadence, promotions."
     },
     {
-      "id": "CERG-GOV-SUCC-001",
+      "id": "CERG-GOV-RAC-001",
       "prefix": "GOV",
-      "title": "Succession Planning and Talent Review Framework",
+      "title": "Consolidated Roles and RACI Instrument",
       "type": "governance-instrument",
       "pillar": "governance",
-      "path": "governance/CERG-GOV-SUCC-001_Succession_Planning_and_Talent_Review_Framework.md",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Policy & Standards)",
+      "path": "governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md",
       "lines": [
-        12484,
-        12832
+        12547,
+        12918
       ],
-      "lines_count": 349,
-      "chars": 25490,
-      "tokens": 7283,
-      "summary": "Succession Planning: talent review, readiness, pipeline development."
+      "lines_count": 371,
+      "chars": 28969,
+      "tokens": 8277,
+      "summary": "Consolidated RACI: comprehensive RACI for 27 canonical CERG roles."
     },
     {
-      "id": "CERG-GOV-TRN-001",
+      "id": "CERG-GOV-RMF-001",
       "prefix": "GOV",
-      "title": "Training Development and Certification Framework",
+      "title": "Risk Management Framework",
       "type": "governance-instrument",
-      "pillar": "governance",
-      "path": "governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md",
+      "pillar": "risk",
+      "status": "Approved",
+      "version": "1.31",
+      "classification": "Public",
+      "owner": "Cyber Governance (CERG Pillar)",
+      "path": "governance/CERG-GOV-RMF-001_Risk_Management_Framework.md",
       "lines": [
-        12833,
-        13369
+        12920,
+        13611
       ],
-      "lines_count": 537,
-      "chars": 32224,
-      "tokens": 9207,
-      "summary": "Training and Certification Framework: training paths, certifications."
-    },
-    {
-      "id": "CERG-GOV-WFP-001",
-      "prefix": "GOV",
-      "title": "Workforce Planning and Capacity Model",
-      "type": "governance-instrument",
-      "pillar": "governance",
-      "path": "governance/CERG-GOV-WFP-001_Workforce_Planning_and_Capacity_Model.md",
-      "lines": [
-        13370,
-        13880
-      ],
-      "lines_count": 511,
-      "chars": 31226,
-      "tokens": 8922,
-      "summary": "Workforce Planning and Capacity Model: staffing and capacity planning."
-    },
-    {
-      "id": "CERG-GOV-AUD-001",
-      "prefix": "GOV",
-      "title": "Evidence Quality Standard",
-      "type": "governance-instrument",
-      "pillar": "governance",
-      "path": "governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md",
-      "lines": [
-        13881,
-        14268
-      ],
-      "lines_count": 388,
-      "chars": 22696,
-      "tokens": 6485,
-      "summary": "Evidence Quality Standard: E1/E2/E3 evidence tier definitions."
+      "lines_count": 691,
+      "chars": 61535,
+      "tokens": 17581,
+      "summary": "Risk Management Framework: 6-phase model, 5x5 risk scoring, business-owned acceptance, organizational scaling."
     },
     {
       "id": "CERG-GOV-SLC-001",
@@ -619,79 +768,199 @@
       "title": "CERG Service Level Commitments",
       "type": "governance-instrument",
       "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Chief Information Security Officer",
       "path": "governance/CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md",
       "lines": [
-        14269,
-        14445
+        13613,
+        13781
       ],
-      "lines_count": 177,
-      "chars": 12091,
-      "tokens": 3455,
+      "lines_count": 168,
+      "chars": 11997,
+      "tokens": 3428,
       "summary": "Service Level Commitments: SLAs for CERG internal customer relationships."
     },
     {
-      "id": "CERG-GOV-CJ-001",
+      "id": "CERG-GOV-STY-001",
       "prefix": "GOV",
-      "title": "Crown Jewel Register and Scenario Library",
+      "title": "Document Authoring and Style Guide",
       "type": "governance-instrument",
       "pillar": "governance",
-      "path": "governance/CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md",
+      "status": "Approved",
+      "version": "1.01",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Policy & Standards)",
+      "path": "governance/CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md",
       "lines": [
-        14446,
-        14715
+        13783,
+        14231
       ],
-      "lines_count": 270,
-      "chars": 24774,
-      "tokens": 7078,
-      "summary": "Crown Jewel Register: critical assets, loss scenarios, criticality tiers."
+      "lines_count": 448,
+      "chars": 18639,
+      "tokens": 5325,
+      "summary": "Document Authoring and Style Guide: metadata format, section numbering, link rules."
     },
     {
-      "id": "CERG-GOV-EDG-001",
+      "id": "CERG-GOV-STY-002",
       "prefix": "GOV",
-      "title": "Edge Register",
+      "title": "Style Compliance Tracker",
       "type": "governance-instrument",
       "pillar": "governance",
-      "path": "governance/CERG-GOV-EDG-001_Edge_Register.md",
+      "status": "Approved",
+      "version": "1.01",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Document Control)",
+      "path": "governance/CERG-GOV-STY-002_Style_Compliance_Tracker.md",
       "lines": [
-        14716,
-        14953
+        14233,
+        14381
       ],
-      "lines_count": 238,
-      "chars": 14342,
-      "tokens": 4098,
-      "summary": "Edge Register: register for edge cases and exceptional operating conditions."
+      "lines_count": 148,
+      "chars": 8224,
+      "tokens": 2350,
+      "summary": "CERG GOV document: Style Compliance Tracker"
     },
     {
-      "id": "CERG-TMPL-GOV-001",
-      "prefix": "TMPL",
-      "title": "Stakeholder Perception Survey",
-      "type": "template",
-      "pillar": "governance",
-      "path": "templates/CERG-TMPL-GOV-001_Stakeholder_Perception_Survey.md",
-      "lines": [
-        14954,
-        15160
-      ],
-      "lines_count": 207,
-      "chars": 11425,
-      "tokens": 3264,
-      "summary": "Template: Stakeholder Perception Survey \u2014 fill-in artifact for routine security work."
-    },
-    {
-      "id": "CERG-GOV-FRM-001",
+      "id": "CERG-GOV-SUCC-001",
       "prefix": "GOV",
-      "title": "CERG Framework",
+      "title": "Succession Planning and Talent Review Framework",
       "type": "governance-instrument",
       "pillar": "governance",
-      "path": "governance/CERG-GOV-FRM-001_CERG_Framework.md",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Confidential - CISO and Pillar Leaders",
+      "owner": "CISO",
+      "path": "governance/CERG-GOV-SUCC-001_Succession_Planning_and_Talent_Review_Framework.md",
       "lines": [
-        15161,
-        15759
+        14383,
+        14724
       ],
-      "lines_count": 599,
-      "chars": 56488,
-      "tokens": 16139,
-      "summary": "CERG Framework narrative: three-pillar SURGE model, adoption paths, evidence-first philosophy."
+      "lines_count": 341,
+      "chars": 25363,
+      "tokens": 7247,
+      "summary": "Succession Planning: talent review, readiness, pipeline development."
+    },
+    {
+      "id": "CERG-GOV-TAX-001",
+      "prefix": "GOV",
+      "title": "Risk Taxonomy",
+      "type": "governance-instrument",
+      "pillar": "risk",
+      "status": "Approved",
+      "version": "1.21",
+      "classification": "Public",
+      "owner": "Risk Pillar Leader",
+      "path": "governance/CERG-GOV-TAX-001_Risk_Taxonomy.md",
+      "lines": [
+        14726,
+        15031
+      ],
+      "lines_count": 305,
+      "chars": 23874,
+      "tokens": 6821,
+      "summary": "Risk Taxonomy: 22 risk themes across Engineering, Risk, Governance pillars with severity ratings."
+    },
+    {
+      "id": "CERG-GOV-TRC-001",
+      "prefix": "GOV",
+      "title": "Control to Procedure Traceability Matrix",
+      "type": "governance-instrument",
+      "pillar": "engineering",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Control Baseline)",
+      "path": "governance/CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md",
+      "lines": [
+        15033,
+        15245
+      ],
+      "lines_count": 212,
+      "chars": 22195,
+      "tokens": 6341,
+      "summary": "Control-to-Procedure Traceability Matrix: control to procedure to evidence."
+    },
+    {
+      "id": "CERG-GOV-TRN-001",
+      "prefix": "GOV",
+      "title": "Training Development and Certification Framework",
+      "type": "governance-instrument",
+      "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Policy & Standards)",
+      "path": "governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md",
+      "lines": [
+        15247,
+        15776
+      ],
+      "lines_count": 529,
+      "chars": 32102,
+      "tokens": 9172,
+      "summary": "Training and Certification Framework: training paths, certifications."
+    },
+    {
+      "id": "CERG-GOV-VAR-001",
+      "prefix": "GOV",
+      "title": "Organization Adaptation Profile",
+      "type": "governance-instrument",
+      "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Document Control)",
+      "path": "governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md",
+      "lines": [
+        15778,
+        16064
+      ],
+      "lines_count": 286,
+      "chars": 16995,
+      "tokens": 4856,
+      "summary": "Organization Adaptation Profile: document CERG tailoring decisions."
+    },
+    {
+      "id": "CERG-GOV-WFP-001",
+      "prefix": "GOV",
+      "title": "Workforce Planning and Capacity Model",
+      "type": "governance-instrument",
+      "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Policy & Standards)",
+      "path": "governance/CERG-GOV-WFP-001_Workforce_Planning_and_Capacity_Model.md",
+      "lines": [
+        16066,
+        16569
+      ],
+      "lines_count": 503,
+      "chars": 31179,
+      "tokens": 8908,
+      "summary": "Workforce Planning and Capacity Model: staffing and capacity planning."
+    },
+    {
+      "id": "CERG-POL-001",
+      "prefix": "POL",
+      "title": "Cybersecurity Policy",
+      "type": "policy",
+      "pillar": "governance",
+      "status": "Approved",
+      "version": "1.21",
+      "classification": "Public",
+      "owner": "Chief Information Security Officer",
+      "path": "governance/CERG-POL-001_Cybersecurity_Policy.md",
+      "lines": [
+        16571,
+        17072
+      ],
+      "lines_count": 501,
+      "chars": 43367,
+      "tokens": 12391,
+      "summary": "Foundational cybersecurity policy: 10 durable principles governing all systems, environments, and trust levels."
     },
     {
       "id": "CERG-STD-AC-001",
@@ -699,14 +968,18 @@
       "title": "Access Management Standard",
       "type": "standard",
       "pillar": "engineering",
+      "status": "Approved",
+      "version": "1.21",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
       "path": "standards/CERG-STD-AC-001_Access_Management_Standard.md",
       "lines": [
-        15760,
-        16120
+        17074,
+        17427
       ],
-      "lines_count": 361,
-      "chars": 37801,
-      "tokens": 10800,
+      "lines_count": 353,
+      "chars": 37713,
+      "tokens": 10775,
       "summary": "Security standard: Access Management Standard \u2014 technical requirements and implementation guidance."
     },
     {
@@ -715,14 +988,18 @@
       "title": "Artificial Intelligence Security Standard",
       "type": "standard",
       "pillar": "engineering",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Engineering Pillar Leader (Application Security)",
       "path": "standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md",
       "lines": [
-        16121,
-        16367
+        17429,
+        17667
       ],
-      "lines_count": 247,
-      "chars": 21606,
-      "tokens": 6173,
+      "lines_count": 238,
+      "chars": 21503,
+      "tokens": 6144,
       "summary": "Security standard: Artificial Intelligence Security Standard \u2014 technical requirements and implementation guidance."
     },
     {
@@ -731,15 +1008,39 @@
       "title": "Asset Management and Inventory Standard",
       "type": "standard",
       "pillar": "engineering",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Engineering Pillar Leader (Platforms)",
       "path": "standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md",
       "lines": [
-        16368,
-        16653
+        17669,
+        17946
       ],
-      "lines_count": 286,
-      "chars": 22753,
-      "tokens": 6501,
+      "lines_count": 277,
+      "chars": 22607,
+      "tokens": 6459,
       "summary": "Security standard: Asset Management and Inventory Standard \u2014 technical requirements and implementation guidance."
+    },
+    {
+      "id": "CERG-STD-CFG-001",
+      "prefix": "STD",
+      "title": "Secure Configuration Baseline Standard DISH",
+      "type": "standard",
+      "pillar": "engineering",
+      "status": "Approved",
+      "version": "1.21",
+      "classification": "Public",
+      "owner": "Engineering Pillar Leader (Platforms)",
+      "path": "standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md",
+      "lines": [
+        17948,
+        18311
+      ],
+      "lines_count": 363,
+      "chars": 22395,
+      "tokens": 6399,
+      "summary": "Security standard: Secure Configuration Baseline Standard DISH \u2014 technical requirements and implementation guidance."
     },
     {
       "id": "CERG-STD-CR-001",
@@ -747,14 +1048,18 @@
       "title": "Cryptography and Key Management Standard",
       "type": "standard",
       "pillar": "engineering",
+      "status": "Approved",
+      "version": "1.21",
+      "classification": "Public",
+      "owner": "Engineering Pillar Leader (Platforms)",
       "path": "standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md",
       "lines": [
-        16654,
-        16997
+        18313,
+        18648
       ],
-      "lines_count": 344,
-      "chars": 20046,
-      "tokens": 5727,
+      "lines_count": 335,
+      "chars": 19944,
+      "tokens": 5698,
       "summary": "Security standard: Cryptography and Key Management Standard \u2014 technical requirements and implementation guidance."
     },
     {
@@ -763,31 +1068,19 @@
       "title": "CUI Handling Standard",
       "type": "standard",
       "pillar": "engineering",
+      "status": "Approved",
+      "version": "1.21",
+      "classification": "Public",
+      "owner": "CMMC / Federal Compliance Manager",
       "path": "standards/CERG-STD-CUI-001_CUI_Handling_Standard.md",
       "lines": [
-        16998,
-        17383
+        18650,
+        19030
       ],
-      "lines_count": 386,
-      "chars": 38621,
-      "tokens": 11035,
+      "lines_count": 380,
+      "chars": 39014,
+      "tokens": 11147,
       "summary": "Security standard: CUI Handling Standard \u2014 technical requirements and implementation guidance."
-    },
-    {
-      "id": "CERG-STD-RES-001",
-      "prefix": "STD",
-      "title": "Cyber Resilience and Backup Standard",
-      "type": "standard",
-      "pillar": "engineering",
-      "path": "standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md",
-      "lines": [
-        17384,
-        17723
-      ],
-      "lines_count": 340,
-      "chars": 18470,
-      "tokens": 5277,
-      "summary": "Security standard: Cyber Resilience and Backup Standard \u2014 technical requirements and implementation guidance."
     },
     {
       "id": "CERG-STD-DG-001",
@@ -795,31 +1088,19 @@
       "title": "Data Governance and Classification Standard",
       "type": "standard",
       "pillar": "engineering",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md",
       "lines": [
-        17724,
-        17975
+        19032,
+        19275
       ],
-      "lines_count": 252,
-      "chars": 21151,
-      "tokens": 6043,
+      "lines_count": 243,
+      "chars": 21046,
+      "tokens": 6013,
       "summary": "Security standard: Data Governance and Classification Standard \u2014 technical requirements and implementation guidance."
-    },
-    {
-      "id": "CERG-STD-MSG-001",
-      "prefix": "STD",
-      "title": "Email and Messaging Security Standard",
-      "type": "standard",
-      "pillar": "engineering",
-      "path": "standards/CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md",
-      "lines": [
-        17976,
-        18211
-      ],
-      "lines_count": 236,
-      "chars": 20510,
-      "tokens": 5860,
-      "summary": "Security standard: Email and Messaging Security Standard \u2014 technical requirements and implementation guidance."
     },
     {
       "id": "CERG-STD-EP-001",
@@ -827,31 +1108,19 @@
       "title": "Endpoint and Mobile Security Standard",
       "type": "standard",
       "pillar": "engineering",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Engineering Pillar Leader (Endpoint)",
       "path": "standards/CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md",
       "lines": [
-        18212,
-        18461
+        19277,
+        19518
       ],
-      "lines_count": 250,
-      "chars": 21568,
-      "tokens": 6162,
+      "lines_count": 241,
+      "chars": 21449,
+      "tokens": 6128,
       "summary": "Security standard: Endpoint and Mobile Security Standard \u2014 technical requirements and implementation guidance."
-    },
-    {
-      "id": "CERG-STD-OT-001",
-      "prefix": "STD",
-      "title": "Grid Control Systems Security Standard",
-      "type": "standard",
-      "pillar": "engineering",
-      "path": "standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md",
-      "lines": [
-        18462,
-        18813
-      ],
-      "lines_count": 352,
-      "chars": 37037,
-      "tokens": 10582,
-      "summary": "Security standard: Grid Control Systems Security Standard \u2014 technical requirements and implementation guidance."
     },
     {
       "id": "CERG-STD-IT-001",
@@ -859,14 +1128,18 @@
       "title": "IT Cloud SaaS Security Standard",
       "type": "standard",
       "pillar": "engineering",
+      "status": "Approved",
+      "version": "1.21",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
       "path": "standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md",
       "lines": [
-        18814,
-        19156
+        19520,
+        19855
       ],
-      "lines_count": 343,
-      "chars": 39371,
-      "tokens": 11249,
+      "lines_count": 335,
+      "chars": 39347,
+      "tokens": 11242,
       "summary": "Security standard: IT Cloud SaaS Security Standard \u2014 technical requirements and implementation guidance."
     },
     {
@@ -875,15 +1148,39 @@
       "title": "Logging Monitoring and Detection Standard",
       "type": "standard",
       "pillar": "engineering",
+      "status": "Approved",
+      "version": "1.21",
+      "classification": "Public",
+      "owner": "Risk Pillar Leader (Detection Engineering)",
       "path": "standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md",
       "lines": [
-        19157,
-        19525
+        19857,
+        20217
       ],
-      "lines_count": 369,
-      "chars": 21390,
-      "tokens": 6111,
+      "lines_count": 360,
+      "chars": 21282,
+      "tokens": 6081,
       "summary": "Security standard: Logging Monitoring and Detection Standard \u2014 technical requirements and implementation guidance."
+    },
+    {
+      "id": "CERG-STD-MSG-001",
+      "prefix": "STD",
+      "title": "Email and Messaging Security Standard",
+      "type": "standard",
+      "pillar": "engineering",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Engineering Pillar Leader (Platforms)",
+      "path": "standards/CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md",
+      "lines": [
+        20219,
+        20446
+      ],
+      "lines_count": 227,
+      "chars": 20405,
+      "tokens": 5830,
+      "summary": "Security standard: Email and Messaging Security Standard \u2014 technical requirements and implementation guidance."
     },
     {
       "id": "CERG-STD-NET-001",
@@ -891,31 +1188,59 @@
       "title": "Network Security and Segmentation Standard",
       "type": "standard",
       "pillar": "engineering",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Engineering Pillar Leader (Platforms)",
       "path": "standards/CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md",
       "lines": [
-        19526,
-        19763
+        20448,
+        20677
       ],
-      "lines_count": 238,
-      "chars": 21334,
-      "tokens": 6095,
+      "lines_count": 229,
+      "chars": 21224,
+      "tokens": 6064,
       "summary": "Security standard: Network Security and Segmentation Standard \u2014 technical requirements and implementation guidance."
     },
     {
-      "id": "CERG-STD-CFG-001",
+      "id": "CERG-STD-OT-001",
       "prefix": "STD",
-      "title": "Secure Configuration Baseline Standard DISH",
+      "title": "Grid Control Systems Security Standard",
       "type": "standard",
       "pillar": "engineering",
-      "path": "standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md",
+      "status": "Approved",
+      "version": "1.21",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (OT/NERC-CIP)",
+      "path": "standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md",
       "lines": [
-        19764,
-        20135
+        20679,
+        21023
       ],
-      "lines_count": 372,
-      "chars": 22501,
-      "tokens": 6429,
-      "summary": "Security standard: Secure Configuration Baseline Standard DISH \u2014 technical requirements and implementation guidance."
+      "lines_count": 344,
+      "chars": 36930,
+      "tokens": 10551,
+      "summary": "Security standard: Grid Control Systems Security Standard \u2014 technical requirements and implementation guidance."
+    },
+    {
+      "id": "CERG-STD-RES-001",
+      "prefix": "STD",
+      "title": "Cyber Resilience and Backup Standard",
+      "type": "standard",
+      "pillar": "engineering",
+      "status": "Approved",
+      "version": "1.21",
+      "classification": "Public",
+      "owner": "Engineering Pillar Leader (Resilience)",
+      "path": "standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md",
+      "lines": [
+        21025,
+        21356
+      ],
+      "lines_count": 331,
+      "chars": 18371,
+      "tokens": 5249,
+      "summary": "Security standard: Cyber Resilience and Backup Standard \u2014 technical requirements and implementation guidance."
     },
     {
       "id": "CERG-STD-SDL-001",
@@ -923,14 +1248,18 @@
       "title": "Secure Software Development and Application Security Standard",
       "type": "standard",
       "pillar": "engineering",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Engineering Pillar Leader (Application Security)",
       "path": "standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md",
       "lines": [
-        20136,
-        20442
+        21358,
+        21656
       ],
-      "lines_count": 307,
-      "chars": 25202,
-      "tokens": 7201,
+      "lines_count": 298,
+      "chars": 25053,
+      "tokens": 7158,
       "summary": "Security standard: Secure Software Development and Application Security Standard \u2014 technical requirements and implementation guidance."
     },
     {
@@ -939,31 +1268,19 @@
       "title": "Access Management Runbook",
       "type": "procedure",
       "pillar": "risk",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Identity Engineer",
       "path": "procedures/CERG-PRC-AC-002_Access_Management_Runbook.md",
       "lines": [
-        20443,
-        20807
+        21658,
+        22015
       ],
-      "lines_count": 365,
-      "chars": 18987,
-      "tokens": 5425,
+      "lines_count": 357,
+      "chars": 18899,
+      "tokens": 5400,
       "summary": "Operational procedure: Access Management Runbook \u2014 step-by-step guidance."
-    },
-    {
-      "id": "CERG-PRC-AV-001",
-      "prefix": "PRC",
-      "title": "Adversarial Validation Procedure",
-      "type": "procedure",
-      "pillar": "risk",
-      "path": "procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md",
-      "lines": [
-        20808,
-        21421
-      ],
-      "lines_count": 614,
-      "chars": 36934,
-      "tokens": 10553,
-      "summary": "Operational procedure: Adversarial Validation Procedure \u2014 step-by-step guidance."
     },
     {
       "id": "CERG-PRC-AR-001",
@@ -971,14 +1288,18 @@
       "title": "Architecture Review and Project Intake Procedure",
       "type": "procedure",
       "pillar": "risk",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Engineering Pillar Leader",
       "path": "procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md",
       "lines": [
-        21422,
-        21989
+        22017,
+        22611
       ],
-      "lines_count": 568,
-      "chars": 36937,
-      "tokens": 10553,
+      "lines_count": 594,
+      "chars": 40911,
+      "tokens": 11689,
       "summary": "Architecture Review and Project Intake: security review pipeline for new projects."
     },
     {
@@ -987,31 +1308,59 @@
       "title": "Audit and Evidence Management Procedure",
       "type": "procedure",
       "pillar": "risk",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
       "path": "procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md",
       "lines": [
-        21990,
-        22463
+        22613,
+        23053
       ],
-      "lines_count": 474,
-      "chars": 27196,
-      "tokens": 7770,
+      "lines_count": 440,
+      "chars": 26543,
+      "tokens": 7584,
       "summary": "Operational procedure: Audit and Evidence Management Procedure \u2014 step-by-step guidance."
     },
     {
-      "id": "CERG-PRC-VM-001",
+      "id": "CERG-PRC-AV-001",
       "prefix": "PRC",
-      "title": "Exposure Management Procedure",
+      "title": "Adversarial Validation Procedure",
       "type": "procedure",
       "pillar": "risk",
-      "path": "procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md",
+      "status": "Approved",
+      "version": "1.2",
+      "classification": "Public",
+      "owner": "Adversarial Testing Lead",
+      "path": "procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md",
       "lines": [
-        22464,
-        22938
+        23055,
+        23661
       ],
-      "lines_count": 475,
-      "chars": 27085,
-      "tokens": 7739,
-      "summary": "Exposure Management Procedure: 6-step state model, classification taxonomy, exposure metrics."
+      "lines_count": 606,
+      "chars": 36805,
+      "tokens": 10516,
+      "summary": "Operational procedure: Adversarial Validation Procedure \u2014 step-by-step guidance."
+    },
+    {
+      "id": "CERG-PRC-CHG-001",
+      "prefix": "PRC",
+      "title": "Security Change Management Procedure",
+      "type": "procedure",
+      "pillar": "risk",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Engineering Pillar Leader",
+      "path": "procedures/CERG-PRC-CHG-001_Security_Change_Management_Procedure.md",
+      "lines": [
+        23663,
+        24088
+      ],
+      "lines_count": 425,
+      "chars": 26868,
+      "tokens": 7677,
+      "summary": "Operational procedure: Security Change Management Procedure \u2014 step-by-step guidance."
     },
     {
       "id": "CERG-PRC-IR-002",
@@ -1019,14 +1368,18 @@
       "title": "Incident Response Playbook Set",
       "type": "procedure",
       "pillar": "risk",
+      "status": "External Interface",
+      "version": "1.0",
+      "classification": "External Interface",
+      "owner": "Standing IR Team / Incident Commander",
       "path": "procedures/CERG-PRC-IR-002_Incident_Response_Playbook_Set.md",
       "lines": [
-        22939,
-        23660
+        24090,
+        24804
       ],
-      "lines_count": 722,
-      "chars": 45989,
-      "tokens": 13140,
+      "lines_count": 714,
+      "chars": 45886,
+      "tokens": 13110,
       "summary": "Incident Response Playbook Set. Adjacent function document."
     },
     {
@@ -1035,14 +1388,18 @@
       "title": "Lessons Learned and Program Improvement Procedure",
       "type": "procedure",
       "pillar": "risk",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
       "path": "procedures/CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md",
       "lines": [
-        23661,
-        24099
+        24806,
+        25237
       ],
-      "lines_count": 439,
-      "chars": 28074,
-      "tokens": 8021,
+      "lines_count": 431,
+      "chars": 27952,
+      "tokens": 7986,
       "summary": "Operational procedure: Lessons Learned and Program Improvement Procedure \u2014 step-by-step guidance."
     },
     {
@@ -1051,47 +1408,19 @@
       "title": "Risk Register and Exception Process",
       "type": "procedure",
       "pillar": "risk",
+      "status": "Approved",
+      "version": "1.01",
+      "classification": "Public",
+      "owner": "Risk Register Owner",
       "path": "procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md",
       "lines": [
-        24100,
-        24693
+        25239,
+        25828
       ],
-      "lines_count": 594,
-      "chars": 40043,
-      "tokens": 11441,
+      "lines_count": 589,
+      "chars": 40538,
+      "tokens": 11582,
       "summary": "Risk Register and Exception Process: managing risk register, exceptions, acceptance tracking."
-    },
-    {
-      "id": "CERG-PRC-CHG-001",
-      "prefix": "PRC",
-      "title": "Security Change Management Procedure",
-      "type": "procedure",
-      "pillar": "risk",
-      "path": "procedures/CERG-PRC-CHG-001_Security_Change_Management_Procedure.md",
-      "lines": [
-        24694,
-        25126
-      ],
-      "lines_count": 433,
-      "chars": 26968,
-      "tokens": 7705,
-      "summary": "Operational procedure: Security Change Management Procedure \u2014 step-by-step guidance."
-    },
-    {
-      "id": "CERG-PRC-TPRM-001",
-      "prefix": "PRC",
-      "title": "Third Party and Supply Chain Risk Procedure",
-      "type": "procedure",
-      "pillar": "risk",
-      "path": "procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md",
-      "lines": [
-        25127,
-        25713
-      ],
-      "lines_count": 587,
-      "chars": 42315,
-      "tokens": 12090,
-      "summary": "Operational procedure: Third Party and Supply Chain Risk Procedure \u2014 step-by-step guidance."
     },
     {
       "id": "CERG-PRC-TI-001",
@@ -1099,14 +1428,18 @@
       "title": "Threat Intelligence Procedure",
       "type": "procedure",
       "pillar": "risk",
+      "status": "Approved",
+      "version": "1.1",
+      "classification": "Public",
+      "owner": "Risk Pillar Leader",
       "path": "procedures/CERG-PRC-TI-001_Threat_Intelligence_Procedure.md",
       "lines": [
-        25714,
-        26399
+        25830,
+        26508
       ],
-      "lines_count": 686,
-      "chars": 40617,
-      "tokens": 11605,
+      "lines_count": 678,
+      "chars": 40465,
+      "tokens": 11561,
       "summary": "Operational procedure: Threat Intelligence Procedure \u2014 step-by-step guidance."
     },
     {
@@ -1115,15 +1448,59 @@
       "title": "Threat Modeling Procedure",
       "type": "procedure",
       "pillar": "risk",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Risk Pillar Leader",
       "path": "procedures/CERG-PRC-TM-001_Threat_Modeling_Procedure.md",
       "lines": [
-        26400,
-        26974
+        26510,
+        27077
       ],
-      "lines_count": 575,
-      "chars": 36524,
-      "tokens": 10435,
+      "lines_count": 567,
+      "chars": 36426,
+      "tokens": 10407,
       "summary": "Operational procedure: Threat Modeling Procedure \u2014 step-by-step guidance."
+    },
+    {
+      "id": "CERG-PRC-TPRM-001",
+      "prefix": "PRC",
+      "title": "Third Party and Supply Chain Risk Procedure",
+      "type": "procedure",
+      "pillar": "risk",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Vendor Risk Analyst",
+      "path": "procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md",
+      "lines": [
+        27079,
+        27658
+      ],
+      "lines_count": 579,
+      "chars": 42202,
+      "tokens": 12058,
+      "summary": "Operational procedure: Third Party and Supply Chain Risk Procedure \u2014 step-by-step guidance."
+    },
+    {
+      "id": "CERG-PRC-VM-001",
+      "prefix": "PRC",
+      "title": "Exposure Management Procedure",
+      "type": "procedure",
+      "pillar": "risk",
+      "status": "Approved",
+      "version": "2.0",
+      "classification": "Public",
+      "owner": "Exposure Management Lead",
+      "path": "procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md",
+      "lines": [
+        27660,
+        28126
+      ],
+      "lines_count": 466,
+      "chars": 26913,
+      "tokens": 7689,
+      "summary": "Exposure Management Procedure: 6-step state model, classification taxonomy, exposure metrics."
     },
     {
       "id": "CERG-PLN-BC-001",
@@ -1131,15 +1508,39 @@
       "title": "Business Continuity and Disaster Recovery Plan",
       "type": "plan",
       "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
       "path": "plans/CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md",
       "lines": [
-        26975,
-        27290
+        28128,
+        28435
       ],
-      "lines_count": 316,
-      "chars": 19555,
-      "tokens": 5587,
+      "lines_count": 307,
+      "chars": 19451,
+      "tokens": 5557,
       "summary": "Plan/Package: Business Continuity and Disaster Recovery Plan."
+    },
+    {
+      "id": "CERG-PLN-CIP-001",
+      "prefix": "PLN",
+      "title": "NERC CIP Operational Package",
+      "type": "plan",
+      "pillar": "governance",
+      "status": "Approved",
+      "version": "1.21",
+      "classification": "Public",
+      "owner": "NERC-CIP Compliance Manager",
+      "path": "plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md",
+      "lines": [
+        28437,
+        28807
+      ],
+      "lines_count": 370,
+      "chars": 21117,
+      "tokens": 6033,
+      "summary": "Plan/Package: NERC CIP Operational Package."
     },
     {
       "id": "CERG-PLN-CUI-001",
@@ -1147,14 +1548,18 @@
       "title": "CUI CMMC Operational Package",
       "type": "plan",
       "pillar": "governance",
+      "status": "Approved",
+      "version": "1.21",
+      "classification": "Public",
+      "owner": "CMMC / Federal Compliance Manager",
       "path": "plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md",
       "lines": [
-        27291,
-        27673
+        28809,
+        29183
       ],
-      "lines_count": 383,
-      "chars": 19868,
-      "tokens": 5677,
+      "lines_count": 374,
+      "chars": 19781,
+      "tokens": 5652,
       "summary": "Plan/Package: CUI CMMC Operational Package."
     },
     {
@@ -1163,14 +1568,18 @@
       "title": "Incident Response Plan",
       "type": "plan",
       "pillar": "governance",
+      "status": "External Interface",
+      "version": "1.21",
+      "classification": "External Interface",
+      "owner": "Standing IR Team / Incident Commander",
       "path": "plans/CERG-PLN-IR-001_Incident_Response_Plan.md",
       "lines": [
-        27674,
-        28122
+        29185,
+        29626
       ],
-      "lines_count": 449,
-      "chars": 31149,
-      "tokens": 8900,
+      "lines_count": 441,
+      "chars": 31069,
+      "tokens": 8877,
       "summary": "Incident Response Plan. Adjacent function \u2014 owned by Standing IR Team."
     },
     {
@@ -1179,31 +1588,19 @@
       "title": "ISO IEC 27001 Operational Package",
       "type": "plan",
       "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
       "path": "plans/CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md",
       "lines": [
-        28123,
-        28464
+        29628,
+        29961
       ],
-      "lines_count": 342,
-      "chars": 17801,
-      "tokens": 5086,
+      "lines_count": 333,
+      "chars": 17709,
+      "tokens": 5060,
       "summary": "Plan/Package: ISO IEC 27001 Operational Package."
-    },
-    {
-      "id": "CERG-PLN-CIP-001",
-      "prefix": "PLN",
-      "title": "NERC CIP Operational Package",
-      "type": "plan",
-      "pillar": "governance",
-      "path": "plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md",
-      "lines": [
-        28465,
-        28843
-      ],
-      "lines_count": 379,
-      "chars": 21223,
-      "tokens": 6064,
-      "summary": "Plan/Package: NERC CIP Operational Package."
     },
     {
       "id": "CERG-PLN-PRIV-001",
@@ -1211,14 +1608,18 @@
       "title": "Privacy and Data Protection Operational Package",
       "type": "plan",
       "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
       "path": "plans/CERG-PLN-PRIV-001_Privacy_and_Data_Protection_Operational_Package.md",
       "lines": [
-        28844,
-        29175
+        29963,
+        30286
       ],
-      "lines_count": 332,
-      "chars": 18580,
-      "tokens": 5309,
+      "lines_count": 323,
+      "chars": 18473,
+      "tokens": 5278,
       "summary": "Plan/Package: Privacy and Data Protection Operational Package."
     },
     {
@@ -1227,14 +1628,18 @@
       "title": "SOX ITGC Operational Package",
       "type": "plan",
       "pillar": "governance",
+      "status": "Approved",
+      "version": "1.21",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (SOX Liaison)",
       "path": "plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md",
       "lines": [
-        29176,
-        29417
+        30288,
+        30521
       ],
-      "lines_count": 242,
-      "chars": 15518,
-      "tokens": 4434,
+      "lines_count": 233,
+      "chars": 15426,
+      "tokens": 4407,
       "summary": "Plan/Package: SOX ITGC Operational Package."
     },
     {
@@ -1243,31 +1648,19 @@
       "title": "Architecture and Project Intake Form",
       "type": "template",
       "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Engineering Pillar Leader",
       "path": "templates/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md",
       "lines": [
-        29418,
-        29581
+        30523,
+        30678
       ],
-      "lines_count": 164,
-      "chars": 6500,
-      "tokens": 1857,
+      "lines_count": 155,
+      "chars": 6401,
+      "tokens": 1829,
       "summary": "Template: Architecture and Project Intake Form \u2014 fill-in artifact for routine security work."
-    },
-    {
-      "id": "CERG-TMPL-MTR-001",
-      "prefix": "TMPL",
-      "title": "Board and CISO Reporting Deck Template",
-      "type": "template",
-      "pillar": "governance",
-      "path": "templates/CERG-TMPL-MTR-001_Board_and_CISO_Reporting_Deck_Template.md",
-      "lines": [
-        29582,
-        29730
-      ],
-      "lines_count": 149,
-      "chars": 6368,
-      "tokens": 1819,
-      "summary": "Template: Board and CISO Reporting Deck Template \u2014 fill-in artifact for routine security work."
     },
     {
       "id": "CERG-TMPL-AUD-001",
@@ -1275,15 +1668,39 @@
       "title": "Control Evidence and Test Worksheet",
       "type": "template",
       "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Evidence Librarian",
       "path": "templates/CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md",
       "lines": [
-        29731,
-        29881
+        30680,
+        30822
       ],
-      "lines_count": 151,
-      "chars": 5662,
-      "tokens": 1618,
+      "lines_count": 142,
+      "chars": 5563,
+      "tokens": 1589,
       "summary": "Template: Control Evidence and Test Worksheet \u2014 fill-in artifact for routine security work."
+    },
+    {
+      "id": "CERG-TMPL-CUI-001",
+      "prefix": "TMPL",
+      "title": "System Security Plan Template",
+      "type": "template",
+      "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "CMMC / Federal Compliance Manager",
+      "path": "templates/CERG-TMPL-CUI-001_System_Security_Plan_Template.md",
+      "lines": [
+        30824,
+        31078
+      ],
+      "lines_count": 254,
+      "chars": 10952,
+      "tokens": 3129,
+      "summary": "Template: System Security Plan Template \u2014 fill-in artifact for routine security work."
     },
     {
       "id": "CERG-TMPL-CUI-002",
@@ -1291,31 +1708,59 @@
       "title": "POAM Template",
       "type": "template",
       "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "CMMC / Federal Compliance Manager",
       "path": "templates/CERG-TMPL-CUI-002_POAM_Template.md",
       "lines": [
-        29882,
-        30074
+        31080,
+        31264
       ],
-      "lines_count": 193,
-      "chars": 8239,
-      "tokens": 2354,
+      "lines_count": 184,
+      "chars": 8162,
+      "tokens": 2332,
       "summary": "Template: POAM Template \u2014 fill-in artifact for routine security work."
     },
     {
-      "id": "CERG-TMPL-RM-003",
+      "id": "CERG-TMPL-GOV-001",
       "prefix": "TMPL",
-      "title": "Risk Acceptance Memo Template",
+      "title": "Stakeholder Perception Survey",
       "type": "template",
       "pillar": "governance",
-      "path": "templates/CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
+      "path": "templates/CERG-TMPL-GOV-001_Stakeholder_Perception_Survey.md",
       "lines": [
-        30075,
-        30229
+        31266,
+        31465
       ],
-      "lines_count": 155,
-      "chars": 5453,
-      "tokens": 1558,
-      "summary": "Template: Risk Acceptance Memo Template \u2014 fill-in artifact for routine security work."
+      "lines_count": 199,
+      "chars": 11332,
+      "tokens": 3238,
+      "summary": "Template: Stakeholder Perception Survey \u2014 fill-in artifact for routine security work."
+    },
+    {
+      "id": "CERG-TMPL-MTR-001",
+      "prefix": "TMPL",
+      "title": "Board and CISO Reporting Deck Template",
+      "type": "template",
+      "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
+      "path": "templates/CERG-TMPL-MTR-001_Board_and_CISO_Reporting_Deck_Template.md",
+      "lines": [
+        31467,
+        31607
+      ],
+      "lines_count": 140,
+      "chars": 6266,
+      "tokens": 1790,
+      "summary": "Template: Board and CISO Reporting Deck Template \u2014 fill-in artifact for routine security work."
     },
     {
       "id": "CERG-TMPL-RM-001",
@@ -1323,14 +1768,18 @@
       "title": "Risk Register Templates and Reporting",
       "type": "template",
       "pillar": "governance",
+      "status": "Approved",
+      "version": "1.21",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Risk Register)",
       "path": "templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md",
       "lines": [
-        30230,
-        30541
+        31609,
+        31912
       ],
-      "lines_count": 312,
-      "chars": 15687,
-      "tokens": 4482,
+      "lines_count": 303,
+      "chars": 15587,
+      "tokens": 4453,
       "summary": "Template: Risk Register Templates and Reporting \u2014 fill-in artifact for routine security work."
     },
     {
@@ -1339,31 +1788,39 @@
       "title": "Security Exception Request Form",
       "type": "template",
       "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Risk Register Owner",
       "path": "templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md",
       "lines": [
-        30542,
-        30703
+        31914,
+        32067
       ],
-      "lines_count": 162,
-      "chars": 6039,
-      "tokens": 1725,
+      "lines_count": 153,
+      "chars": 5945,
+      "tokens": 1699,
       "summary": "Template: Security Exception Request Form \u2014 fill-in artifact for routine security work."
     },
     {
-      "id": "CERG-TMPL-CUI-001",
+      "id": "CERG-TMPL-RM-003",
       "prefix": "TMPL",
-      "title": "System Security Plan Template",
+      "title": "Risk Acceptance Memo Template",
       "type": "template",
       "pillar": "governance",
-      "path": "templates/CERG-TMPL-CUI-001_System_Security_Plan_Template.md",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Risk Pillar Leader",
+      "path": "templates/CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md",
       "lines": [
-        30704,
-        30966
+        32069,
+        32215
       ],
-      "lines_count": 263,
-      "chars": 11050,
-      "tokens": 3157,
-      "summary": "Template: System Security Plan Template \u2014 fill-in artifact for routine security work."
+      "lines_count": 146,
+      "chars": 5361,
+      "tokens": 1532,
+      "summary": "Template: Risk Acceptance Memo Template \u2014 fill-in artifact for routine security work."
     },
     {
       "id": "CERG-TMPL-TPRM-001",
@@ -1371,95 +1828,19 @@
       "title": "Vendor Security Questionnaire and Assessment Template",
       "type": "template",
       "pillar": "governance",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Vendor Risk Analyst",
       "path": "templates/CERG-TMPL-TPRM-001_Vendor_Security_Questionnaire_and_Assessment_Template.md",
       "lines": [
-        30967,
-        31119
+        32217,
+        32361
       ],
-      "lines_count": 153,
-      "chars": 6609,
-      "tokens": 1888,
+      "lines_count": 144,
+      "chars": 6491,
+      "tokens": 1855,
       "summary": "Template: Vendor Security Questionnaire and Assessment Template \u2014 fill-in artifact for routine security work."
-    },
-    {
-      "id": "CERG-GOV-JD-ADJUNCT-000",
-      "prefix": "JD",
-      "title": "Incident Response Family",
-      "type": "job-description",
-      "pillar": "workforce",
-      "path": "roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-000_Incident_Response_Family.md",
-      "lines": [
-        31120,
-        31250
-      ],
-      "lines_count": 131,
-      "chars": 5990,
-      "tokens": 1711,
-      "summary": "Job Description: Incident Response Family \u2014 responsibilities, KSAs, NICE competencies."
-    },
-    {
-      "id": "CERG-GOV-JD-EXEC-000",
-      "prefix": "JD",
-      "title": "Executive Leadership Family",
-      "type": "job-description",
-      "pillar": "workforce",
-      "path": "roles/jf-exec/CERG-GOV-JD-EXEC-000_Executive_Leadership_Family.md",
-      "lines": [
-        31251,
-        31380
-      ],
-      "lines_count": 130,
-      "chars": 5741,
-      "tokens": 1640,
-      "summary": "Job Description: Executive Leadership Family \u2014 responsibilities, KSAs, NICE competencies."
-    },
-    {
-      "id": "CERG-GOV-JD-GOVCOMP-000",
-      "prefix": "JD",
-      "title": "Governance Compliance Family",
-      "type": "job-description",
-      "pillar": "workforce",
-      "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-000_Governance_Compliance_Family.md",
-      "lines": [
-        31381,
-        31515
-      ],
-      "lines_count": 135,
-      "chars": 6939,
-      "tokens": 1983,
-      "summary": "Job Description: Governance Compliance Family \u2014 responsibilities, KSAs, NICE competencies."
-    },
-    {
-      "id": "CERG-GOV-JD-RISKOPS-000",
-      "prefix": "JD",
-      "title": "Risk Operations Family",
-      "type": "job-description",
-      "pillar": "workforce",
-      "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-000_Risk_Operations_Family.md",
-      "lines": [
-        31516,
-        31651
-      ],
-      "lines_count": 136,
-      "chars": 7027,
-      "tokens": 2008,
-      "summary": "Job Description: Risk Operations Family \u2014 responsibilities, KSAs, NICE competencies."
-    },
-    {
-      "id": "CERG-GOV-JD-SECENG-000",
-      "prefix": "JD",
-      "title": "Security Engineering Family",
-      "type": "job-description",
-      "pillar": "workforce",
-      "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-000_Security_Engineering_Family.md",
-      "lines": [
-        31652,
-        31786
-      ],
-      "lines_count": 135,
-      "chars": 6849,
-      "tokens": 1957,
-      "summary": "Job Description: Security Engineering Family \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
       "id": "CERG-GOV-JF-001",
@@ -1467,14 +1848,18 @@
       "title": "Job Families Overview",
       "type": "job-family",
       "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "roles/CERG-GOV-JF-001_Job_Families_Overview.md",
       "lines": [
-        31787,
-        32048
+        32363,
+        32616
       ],
-      "lines_count": 262,
-      "chars": 16866,
-      "tokens": 4819,
+      "lines_count": 253,
+      "chars": 16777,
+      "tokens": 4793,
       "summary": "Job Families Overview: 5 families (Executive, SecEng, RiskOps, GovComp, Adjunct)."
     },
     {
@@ -1483,239 +1868,59 @@
       "title": "NICE Workforce Framework Crosswalk",
       "type": "job-family",
       "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "roles/CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md",
       "lines": [
-        32049,
-        32263
+        32618,
+        32824
       ],
-      "lines_count": 215,
-      "chars": 14790,
-      "tokens": 4226,
+      "lines_count": 206,
+      "chars": 14688,
+      "tokens": 4197,
       "summary": "NICE Workforce Framework Crosswalk: per-role TKS to NIST NICE v2.2.0."
     },
     {
-      "id": "CERG-GOV-JD-RISKOPS-002",
+      "id": "README-roles",
       "prefix": "JD",
-      "title": "Adversarial Testing Lead",
+      "title": "README",
       "type": "job-description",
       "pillar": "workforce",
-      "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-002_Adversarial_Testing_Lead.md",
+      "status": null,
+      "version": null,
+      "classification": null,
+      "owner": null,
+      "path": "roles/README.md",
       "lines": [
-        32264,
-        32472
+        32826,
+        32873
       ],
-      "lines_count": 209,
-      "chars": 20091,
-      "tokens": 5740,
-      "summary": "Job Description: Adversarial Testing Lead \u2014 responsibilities, KSAs, NICE competencies."
+      "lines_count": 47,
+      "chars": 1853,
+      "tokens": 529,
+      "summary": "Workforce architecture overview \u2014 roles/ directory, 5 job families, hiring path."
     },
     {
-      "id": "CERG-GOV-JD-SECENG-004",
+      "id": "CERG-GOV-JD-ADJUNCT-000",
       "prefix": "JD",
-      "title": "Application Security Engineer",
+      "title": "Incident Response Family",
       "type": "job-description",
       "pillar": "workforce",
-      "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-004_Application_Security_Engineer.md",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
+      "path": "roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-000_Incident_Response_Family.md",
       "lines": [
-        32473,
-        32681
+        32875,
+        32997
       ],
-      "lines_count": 209,
-      "chars": 21292,
-      "tokens": 6083,
-      "summary": "Job Description: Application Security Engineer \u2014 responsibilities, KSAs, NICE competencies."
-    },
-    {
-      "id": "CERG-GOV-JD-GOVCOMP-002",
-      "prefix": "JD",
-      "title": "CMMC Federal Compliance Manager",
-      "type": "job-description",
-      "pillar": "workforce",
-      "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-002_CMMC_Federal_Compliance_Manager.md",
-      "lines": [
-        32682,
-        32890
-      ],
-      "lines_count": 209,
-      "chars": 19887,
-      "tokens": 5682,
-      "summary": "Job Description: CMMC Federal Compliance Manager \u2014 responsibilities, KSAs, NICE competencies."
-    },
-    {
-      "id": "CERG-GOV-JD-EXEC-001",
-      "prefix": "JD",
-      "title": "Chief Information Security Officer",
-      "type": "job-description",
-      "pillar": "workforce",
-      "path": "roles/jf-exec/CERG-GOV-JD-EXEC-001_Chief_Information_Security_Officer.md",
-      "lines": [
-        32891,
-        33096
-      ],
-      "lines_count": 206,
-      "chars": 16489,
-      "tokens": 4711,
-      "summary": "Job Description: Chief Information Security Officer \u2014 responsibilities, KSAs, NICE competencies."
-    },
-    {
-      "id": "CERG-GOV-JD-SECENG-001",
-      "prefix": "JD",
-      "title": "Cloud Security Engineer",
-      "type": "job-description",
-      "pillar": "workforce",
-      "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-001_Cloud_Security_Engineer.md",
-      "lines": [
-        33097,
-        33305
-      ],
-      "lines_count": 209,
-      "chars": 21230,
-      "tokens": 6066,
-      "summary": "Job Description: Cloud Security Engineer \u2014 responsibilities, KSAs, NICE competencies."
-    },
-    {
-      "id": "CERG-GOV-JD-SECENG-006",
-      "prefix": "JD",
-      "title": "Cryptography Engineer",
-      "type": "job-description",
-      "pillar": "workforce",
-      "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-006_Cryptography_Engineer.md",
-      "lines": [
-        33306,
-        33514
-      ],
-      "lines_count": 209,
-      "chars": 20926,
-      "tokens": 5979,
-      "summary": "Job Description: Cryptography Engineer \u2014 responsibilities, KSAs, NICE competencies."
-    },
-    {
-      "id": "CERG-GOV-JD-RISKOPS-004",
-      "prefix": "JD",
-      "title": "Detection Engineer",
-      "type": "job-description",
-      "pillar": "workforce",
-      "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md",
-      "lines": [
-        33515,
-        33723
-      ],
-      "lines_count": 209,
-      "chars": 20150,
-      "tokens": 5757,
-      "summary": "Job Description: Detection Engineer \u2014 responsibilities, KSAs, NICE competencies."
-    },
-    {
-      "id": "CERG-GOV-JD-SECENG-005",
-      "prefix": "JD",
-      "title": "Endpoint Engineer",
-      "type": "job-description",
-      "pillar": "workforce",
-      "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md",
-      "lines": [
-        33724,
-        33932
-      ],
-      "lines_count": 209,
-      "chars": 21125,
-      "tokens": 6036,
-      "summary": "Job Description: Endpoint Engineer \u2014 responsibilities, KSAs, NICE competencies."
-    },
-    {
-      "id": "CERG-GOV-JD-SECENG-007",
-      "prefix": "JD",
-      "title": "Engineering Pillar Leader",
-      "type": "job-description",
-      "pillar": "workforce",
-      "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-007_Engineering_Pillar_Leader.md",
-      "lines": [
-        33933,
-        34141
-      ],
-      "lines_count": 209,
-      "chars": 21587,
-      "tokens": 6168,
-      "summary": "Job Description: Engineering Pillar Leader \u2014 responsibilities, KSAs, NICE competencies."
-    },
-    {
-      "id": "CERG-GOV-JD-GOVCOMP-006",
-      "prefix": "JD",
-      "title": "Evidence Librarian",
-      "type": "job-description",
-      "pillar": "workforce",
-      "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-006_Evidence_Librarian.md",
-      "lines": [
-        34142,
-        34350
-      ],
-      "lines_count": 209,
-      "chars": 20187,
-      "tokens": 5768,
-      "summary": "Job Description: Evidence Librarian \u2014 responsibilities, KSAs, NICE competencies."
-    },
-    {
-      "id": "CERG-GOV-JD-EXEC-002",
-      "prefix": "JD",
-      "title": "Executive Sponsor",
-      "type": "job-description",
-      "pillar": "workforce",
-      "path": "roles/jf-exec/CERG-GOV-JD-EXEC-002_Executive_Sponsor.md",
-      "lines": [
-        34351,
-        34556
-      ],
-      "lines_count": 206,
-      "chars": 15210,
-      "tokens": 4346,
-      "summary": "Job Description: Executive Sponsor \u2014 responsibilities, KSAs, NICE competencies."
-    },
-    {
-      "id": "CERG-GOV-JD-GOVCOMP-007",
-      "prefix": "JD",
-      "title": "Governance Pillar Leader",
-      "type": "job-description",
-      "pillar": "workforce",
-      "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-007_Governance_Pillar_Leader.md",
-      "lines": [
-        34557,
-        34765
-      ],
-      "lines_count": 209,
-      "chars": 20167,
-      "tokens": 5762,
-      "summary": "Job Description: Governance Pillar Leader \u2014 responsibilities, KSAs, NICE competencies."
-    },
-    {
-      "id": "CERG-GOV-JD-SECENG-002",
-      "prefix": "JD",
-      "title": "Identity Engineer",
-      "type": "job-description",
-      "pillar": "workforce",
-      "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-002_Identity_Engineer.md",
-      "lines": [
-        34766,
-        34974
-      ],
-      "lines_count": 209,
-      "chars": 21121,
-      "tokens": 6035,
-      "summary": "Job Description: Identity Engineer \u2014 responsibilities, KSAs, NICE competencies."
-    },
-    {
-      "id": "CERG-GOV-JD-RISKOPS-006",
-      "prefix": "JD",
-      "title": "Identity Risk Analyst",
-      "type": "job-description",
-      "pillar": "workforce",
-      "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-006_Identity_Risk_Analyst.md",
-      "lines": [
-        34975,
-        35183
-      ],
-      "lines_count": 209,
-      "chars": 19922,
-      "tokens": 5692,
-      "summary": "Job Description: Identity Risk Analyst \u2014 responsibilities, KSAs, NICE competencies."
+      "lines_count": 122,
+      "chars": 5889,
+      "tokens": 1683,
+      "summary": "Job Description: Incident Response Family \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
       "id": "CERG-GOV-JD-ADJUNCT-001",
@@ -1723,14 +1928,18 @@
       "title": "Incident Commander",
       "type": "job-description",
       "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
       "path": "roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-001_Incident_Commander.md",
       "lines": [
-        35184,
-        35411
+        32999,
+        33218
       ],
-      "lines_count": 228,
-      "chars": 15978,
-      "tokens": 4565,
+      "lines_count": 219,
+      "chars": 15883,
+      "tokens": 4538,
       "summary": "Job Description: Incident Commander \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -1739,15 +1948,99 @@
       "title": "Lead Investigator",
       "type": "job-description",
       "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
       "path": "roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-002_Lead_Investigator.md",
       "lines": [
-        35412,
-        35642
+        33220,
+        33442
       ],
-      "lines_count": 231,
-      "chars": 15944,
-      "tokens": 4555,
+      "lines_count": 222,
+      "chars": 15850,
+      "tokens": 4529,
       "summary": "Job Description: Lead Investigator \u2014 responsibilities, KSAs, NICE competencies."
+    },
+    {
+      "id": "CERG-GOV-JD-EXEC-000",
+      "prefix": "JD",
+      "title": "Executive Leadership Family",
+      "type": "job-description",
+      "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "CISO",
+      "path": "roles/jf-exec/CERG-GOV-JD-EXEC-000_Executive_Leadership_Family.md",
+      "lines": [
+        33444,
+        33565
+      ],
+      "lines_count": 121,
+      "chars": 5643,
+      "tokens": 1612,
+      "summary": "Job Description: Executive Leadership Family \u2014 responsibilities, KSAs, NICE competencies."
+    },
+    {
+      "id": "CERG-GOV-JD-EXEC-001",
+      "prefix": "JD",
+      "title": "Chief Information Security Officer",
+      "type": "job-description",
+      "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "CISO",
+      "path": "roles/jf-exec/CERG-GOV-JD-EXEC-001_Chief_Information_Security_Officer.md",
+      "lines": [
+        33567,
+        33764
+      ],
+      "lines_count": 197,
+      "chars": 16384,
+      "tokens": 4681,
+      "summary": "Job Description: Chief Information Security Officer \u2014 responsibilities, KSAs, NICE competencies."
+    },
+    {
+      "id": "CERG-GOV-JD-EXEC-002",
+      "prefix": "JD",
+      "title": "Executive Sponsor",
+      "type": "job-description",
+      "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "CISO",
+      "path": "roles/jf-exec/CERG-GOV-JD-EXEC-002_Executive_Sponsor.md",
+      "lines": [
+        33766,
+        33963
+      ],
+      "lines_count": 197,
+      "chars": 15122,
+      "tokens": 4321,
+      "summary": "Job Description: Executive Sponsor \u2014 responsibilities, KSAs, NICE competencies."
+    },
+    {
+      "id": "CERG-GOV-JD-GOVCOMP-000",
+      "prefix": "JD",
+      "title": "Governance Compliance Family",
+      "type": "job-description",
+      "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
+      "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-000_Governance_Compliance_Family.md",
+      "lines": [
+        33965,
+        34091
+      ],
+      "lines_count": 126,
+      "chars": 6834,
+      "tokens": 1953,
+      "summary": "Job Description: Governance Compliance Family \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
       "id": "CERG-GOV-JD-GOVCOMP-001",
@@ -1755,111 +2048,39 @@
       "title": "NERC-CIP Compliance Manager",
       "type": "job-description",
       "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
       "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-001_NERC-CIP_Compliance_Manager.md",
       "lines": [
-        35643,
-        35851
+        34093,
+        34293
       ],
-      "lines_count": 209,
-      "chars": 20212,
-      "tokens": 5775,
+      "lines_count": 200,
+      "chars": 20108,
+      "tokens": 5745,
       "summary": "Job Description: NERC-CIP Compliance Manager \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
-      "id": "CERG-GOV-JD-RISKOPS-005",
+      "id": "CERG-GOV-JD-GOVCOMP-002",
       "prefix": "JD",
-      "title": "OT Risk Analyst",
+      "title": "CMMC Federal Compliance Manager",
       "type": "job-description",
       "pillar": "workforce",
-      "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-005_OT_Risk_Analyst.md",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
+      "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-002_CMMC_Federal_Compliance_Manager.md",
       "lines": [
-        35852,
-        36060
+        34295,
+        34495
       ],
-      "lines_count": 209,
-      "chars": 19806,
-      "tokens": 5659,
-      "summary": "Job Description: OT Risk Analyst \u2014 responsibilities, KSAs, NICE competencies."
-    },
-    {
-      "id": "CERG-GOV-JD-SECENG-003",
-      "prefix": "JD",
-      "title": "OT Security Engineer",
-      "type": "job-description",
-      "pillar": "workforce",
-      "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-003_OT_Security_Engineer.md",
-      "lines": [
-        36061,
-        36269
-      ],
-      "lines_count": 209,
-      "chars": 21289,
-      "tokens": 6083,
-      "summary": "Job Description: OT Security Engineer \u2014 responsibilities, KSAs, NICE competencies."
-    },
-    {
-      "id": "CERG-GOV-JD-GOVCOMP-004",
-      "prefix": "JD",
-      "title": "Policy and Standards Manager",
-      "type": "job-description",
-      "pillar": "workforce",
-      "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-004_Policy_and_Standards_Manager.md",
-      "lines": [
-        36270,
-        36478
-      ],
-      "lines_count": 209,
-      "chars": 19969,
-      "tokens": 5705,
-      "summary": "Job Description: Policy and Standards Manager \u2014 responsibilities, KSAs, NICE competencies."
-    },
-    {
-      "id": "CERG-GOV-JD-SECENG-008",
-      "prefix": "JD",
-      "title": "Pre-production Reviewer",
-      "type": "job-description",
-      "pillar": "workforce",
-      "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-008_Pre-production_Reviewer.md",
-      "lines": [
-        36479,
-        36687
-      ],
-      "lines_count": 209,
-      "chars": 21164,
-      "tokens": 6047,
-      "summary": "Job Description: Pre-production Reviewer \u2014 responsibilities, KSAs, NICE competencies."
-    },
-    {
-      "id": "CERG-GOV-JD-RISKOPS-008",
-      "prefix": "JD",
-      "title": "Risk Pillar Leader",
-      "type": "job-description",
-      "pillar": "workforce",
-      "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-008_Risk_Pillar_Leader.md",
-      "lines": [
-        36688,
-        36896
-      ],
-      "lines_count": 209,
-      "chars": 20615,
-      "tokens": 5890,
-      "summary": "Job Description: Risk Pillar Leader \u2014 responsibilities, KSAs, NICE competencies."
-    },
-    {
-      "id": "CERG-GOV-JD-GOVCOMP-005",
-      "prefix": "JD",
-      "title": "Risk Register Owner",
-      "type": "job-description",
-      "pillar": "workforce",
-      "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-005_Risk_Register_Owner.md",
-      "lines": [
-        36897,
-        37105
-      ],
-      "lines_count": 209,
-      "chars": 19827,
-      "tokens": 5665,
-      "summary": "Job Description: Risk Register Owner \u2014 responsibilities, KSAs, NICE competencies."
+      "lines_count": 200,
+      "chars": 19779,
+      "tokens": 5651,
+      "summary": "Job Description: CMMC Federal Compliance Manager \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
       "id": "CERG-GOV-JD-GOVCOMP-003",
@@ -1867,47 +2088,119 @@
       "title": "SOX ITGC Lead",
       "type": "job-description",
       "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
       "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-003_SOX_ITGC_Lead.md",
       "lines": [
-        37106,
-        37314
+        34497,
+        34697
       ],
-      "lines_count": 209,
-      "chars": 19764,
-      "tokens": 5647,
+      "lines_count": 200,
+      "chars": 19674,
+      "tokens": 5621,
       "summary": "Job Description: SOX ITGC Lead \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
-      "id": "CERG-GOV-JD-RISKOPS-003",
+      "id": "CERG-GOV-JD-GOVCOMP-004",
       "prefix": "JD",
-      "title": "Threat Intelligence Analyst",
+      "title": "Policy and Standards Manager",
       "type": "job-description",
       "pillar": "workforce",
-      "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-003_Threat_Intelligence_Analyst.md",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
+      "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-004_Policy_and_Standards_Manager.md",
       "lines": [
-        37315,
-        37523
+        34699,
+        34899
       ],
-      "lines_count": 209,
-      "chars": 20231,
-      "tokens": 5780,
-      "summary": "Job Description: Threat Intelligence Analyst \u2014 responsibilities, KSAs, NICE competencies."
+      "lines_count": 200,
+      "chars": 19864,
+      "tokens": 5675,
+      "summary": "Job Description: Policy and Standards Manager \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
-      "id": "CERG-GOV-JD-RISKOPS-007",
+      "id": "CERG-GOV-JD-GOVCOMP-005",
       "prefix": "JD",
-      "title": "Vendor Risk Analyst",
+      "title": "Risk Register Owner",
       "type": "job-description",
       "pillar": "workforce",
-      "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-007_Vendor_Risk_Analyst.md",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
+      "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-005_Risk_Register_Owner.md",
       "lines": [
-        37524,
-        37732
+        34901,
+        35101
       ],
-      "lines_count": 209,
-      "chars": 20020,
-      "tokens": 5720,
-      "summary": "Job Description: Vendor Risk Analyst \u2014 responsibilities, KSAs, NICE competencies."
+      "lines_count": 200,
+      "chars": 19731,
+      "tokens": 5637,
+      "summary": "Job Description: Risk Register Owner \u2014 responsibilities, KSAs, NICE competencies."
+    },
+    {
+      "id": "CERG-GOV-JD-GOVCOMP-006",
+      "prefix": "JD",
+      "title": "Evidence Librarian",
+      "type": "job-description",
+      "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
+      "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-006_Evidence_Librarian.md",
+      "lines": [
+        35103,
+        35303
+      ],
+      "lines_count": 200,
+      "chars": 20092,
+      "tokens": 5741,
+      "summary": "Job Description: Evidence Librarian \u2014 responsibilities, KSAs, NICE competencies."
+    },
+    {
+      "id": "CERG-GOV-JD-GOVCOMP-007",
+      "prefix": "JD",
+      "title": "Governance Pillar Leader",
+      "type": "job-description",
+      "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Governance Pillar Leader",
+      "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-007_Governance_Pillar_Leader.md",
+      "lines": [
+        35305,
+        35505
+      ],
+      "lines_count": 200,
+      "chars": 20066,
+      "tokens": 5733,
+      "summary": "Job Description: Governance Pillar Leader \u2014 responsibilities, KSAs, NICE competencies."
+    },
+    {
+      "id": "CERG-GOV-JD-RISKOPS-000",
+      "prefix": "JD",
+      "title": "Risk Operations Family",
+      "type": "job-description",
+      "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Risk Pillar Leader",
+      "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-000_Risk_Operations_Family.md",
+      "lines": [
+        35507,
+        35634
+      ],
+      "lines_count": 127,
+      "chars": 6913,
+      "tokens": 1975,
+      "summary": "Job Description: Risk Operations Family \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
       "id": "CERG-GOV-JD-RISKOPS-001",
@@ -1915,15 +2208,339 @@
       "title": "Exposure Management Lead",
       "type": "job-description",
       "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Risk Pillar Leader",
       "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md",
       "lines": [
-        37733,
-        37941
+        35636,
+        35836
       ],
-      "lines_count": 209,
-      "chars": 19997,
-      "tokens": 5713,
+      "lines_count": 200,
+      "chars": 19909,
+      "tokens": 5688,
       "summary": "Job Description: Exposure Management Lead \u2014 responsibilities, KSAs, NICE competencies."
+    },
+    {
+      "id": "CERG-GOV-JD-RISKOPS-002",
+      "prefix": "JD",
+      "title": "Adversarial Testing Lead",
+      "type": "job-description",
+      "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Risk Pillar Leader",
+      "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-002_Adversarial_Testing_Lead.md",
+      "lines": [
+        35838,
+        36038
+      ],
+      "lines_count": 200,
+      "chars": 19980,
+      "tokens": 5709,
+      "summary": "Job Description: Adversarial Testing Lead \u2014 responsibilities, KSAs, NICE competencies."
+    },
+    {
+      "id": "CERG-GOV-JD-RISKOPS-003",
+      "prefix": "JD",
+      "title": "Threat Intelligence Analyst",
+      "type": "job-description",
+      "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Risk Pillar Leader",
+      "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-003_Threat_Intelligence_Analyst.md",
+      "lines": [
+        36040,
+        36240
+      ],
+      "lines_count": 200,
+      "chars": 20107,
+      "tokens": 5745,
+      "summary": "Job Description: Threat Intelligence Analyst \u2014 responsibilities, KSAs, NICE competencies."
+    },
+    {
+      "id": "CERG-GOV-JD-RISKOPS-004",
+      "prefix": "JD",
+      "title": "Detection Engineer",
+      "type": "job-description",
+      "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Risk Pillar Leader",
+      "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md",
+      "lines": [
+        36242,
+        36442
+      ],
+      "lines_count": 200,
+      "chars": 20045,
+      "tokens": 5727,
+      "summary": "Job Description: Detection Engineer \u2014 responsibilities, KSAs, NICE competencies."
+    },
+    {
+      "id": "CERG-GOV-JD-RISKOPS-005",
+      "prefix": "JD",
+      "title": "OT Risk Analyst",
+      "type": "job-description",
+      "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Risk Pillar Leader",
+      "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-005_OT_Risk_Analyst.md",
+      "lines": [
+        36444,
+        36644
+      ],
+      "lines_count": 200,
+      "chars": 19704,
+      "tokens": 5630,
+      "summary": "Job Description: OT Risk Analyst \u2014 responsibilities, KSAs, NICE competencies."
+    },
+    {
+      "id": "CERG-GOV-JD-RISKOPS-006",
+      "prefix": "JD",
+      "title": "Identity Risk Analyst",
+      "type": "job-description",
+      "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Risk Pillar Leader",
+      "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-006_Identity_Risk_Analyst.md",
+      "lines": [
+        36646,
+        36846
+      ],
+      "lines_count": 200,
+      "chars": 19814,
+      "tokens": 5661,
+      "summary": "Job Description: Identity Risk Analyst \u2014 responsibilities, KSAs, NICE competencies."
+    },
+    {
+      "id": "CERG-GOV-JD-RISKOPS-007",
+      "prefix": "JD",
+      "title": "Vendor Risk Analyst",
+      "type": "job-description",
+      "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Risk Pillar Leader",
+      "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-007_Vendor_Risk_Analyst.md",
+      "lines": [
+        36848,
+        37048
+      ],
+      "lines_count": 200,
+      "chars": 19914,
+      "tokens": 5690,
+      "summary": "Job Description: Vendor Risk Analyst \u2014 responsibilities, KSAs, NICE competencies."
+    },
+    {
+      "id": "CERG-GOV-JD-RISKOPS-008",
+      "prefix": "JD",
+      "title": "Risk Pillar Leader",
+      "type": "job-description",
+      "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Risk Pillar Leader",
+      "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-008_Risk_Pillar_Leader.md",
+      "lines": [
+        37050,
+        37250
+      ],
+      "lines_count": 200,
+      "chars": 20490,
+      "tokens": 5854,
+      "summary": "Job Description: Risk Pillar Leader \u2014 responsibilities, KSAs, NICE competencies."
+    },
+    {
+      "id": "CERG-GOV-JD-SECENG-000",
+      "prefix": "JD",
+      "title": "Security Engineering Family",
+      "type": "job-description",
+      "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Engineering Pillar Leader",
+      "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-000_Security_Engineering_Family.md",
+      "lines": [
+        37252,
+        37378
+      ],
+      "lines_count": 126,
+      "chars": 6747,
+      "tokens": 1928,
+      "summary": "Job Description: Security Engineering Family \u2014 responsibilities, KSAs, NICE competencies."
+    },
+    {
+      "id": "CERG-GOV-JD-SECENG-001",
+      "prefix": "JD",
+      "title": "Cloud Security Engineer",
+      "type": "job-description",
+      "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Engineering Pillar Leader",
+      "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-001_Cloud_Security_Engineer.md",
+      "lines": [
+        37380,
+        37580
+      ],
+      "lines_count": 200,
+      "chars": 21132,
+      "tokens": 6038,
+      "summary": "Job Description: Cloud Security Engineer \u2014 responsibilities, KSAs, NICE competencies."
+    },
+    {
+      "id": "CERG-GOV-JD-SECENG-002",
+      "prefix": "JD",
+      "title": "Identity Engineer",
+      "type": "job-description",
+      "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Engineering Pillar Leader",
+      "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-002_Identity_Engineer.md",
+      "lines": [
+        37582,
+        37782
+      ],
+      "lines_count": 200,
+      "chars": 21029,
+      "tokens": 6008,
+      "summary": "Job Description: Identity Engineer \u2014 responsibilities, KSAs, NICE competencies."
+    },
+    {
+      "id": "CERG-GOV-JD-SECENG-003",
+      "prefix": "JD",
+      "title": "OT Security Engineer",
+      "type": "job-description",
+      "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Engineering Pillar Leader",
+      "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-003_OT_Security_Engineer.md",
+      "lines": [
+        37784,
+        37984
+      ],
+      "lines_count": 200,
+      "chars": 21194,
+      "tokens": 6055,
+      "summary": "Job Description: OT Security Engineer \u2014 responsibilities, KSAs, NICE competencies."
+    },
+    {
+      "id": "CERG-GOV-JD-SECENG-004",
+      "prefix": "JD",
+      "title": "Application Security Engineer",
+      "type": "job-description",
+      "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Engineering Pillar Leader",
+      "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-004_Application_Security_Engineer.md",
+      "lines": [
+        37986,
+        38186
+      ],
+      "lines_count": 200,
+      "chars": 21188,
+      "tokens": 6054,
+      "summary": "Job Description: Application Security Engineer \u2014 responsibilities, KSAs, NICE competencies."
+    },
+    {
+      "id": "CERG-GOV-JD-SECENG-005",
+      "prefix": "JD",
+      "title": "Endpoint Engineer",
+      "type": "job-description",
+      "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Engineering Pillar Leader",
+      "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md",
+      "lines": [
+        38188,
+        38388
+      ],
+      "lines_count": 200,
+      "chars": 21033,
+      "tokens": 6009,
+      "summary": "Job Description: Endpoint Engineer \u2014 responsibilities, KSAs, NICE competencies."
+    },
+    {
+      "id": "CERG-GOV-JD-SECENG-006",
+      "prefix": "JD",
+      "title": "Cryptography Engineer",
+      "type": "job-description",
+      "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Engineering Pillar Leader",
+      "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-006_Cryptography_Engineer.md",
+      "lines": [
+        38390,
+        38590
+      ],
+      "lines_count": 200,
+      "chars": 20830,
+      "tokens": 5951,
+      "summary": "Job Description: Cryptography Engineer \u2014 responsibilities, KSAs, NICE competencies."
+    },
+    {
+      "id": "CERG-GOV-JD-SECENG-007",
+      "prefix": "JD",
+      "title": "Engineering Pillar Leader",
+      "type": "job-description",
+      "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Engineering Pillar Leader",
+      "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-007_Engineering_Pillar_Leader.md",
+      "lines": [
+        38592,
+        38792
+      ],
+      "lines_count": 200,
+      "chars": 21487,
+      "tokens": 6139,
+      "summary": "Job Description: Engineering Pillar Leader \u2014 responsibilities, KSAs, NICE competencies."
+    },
+    {
+      "id": "CERG-GOV-JD-SECENG-008",
+      "prefix": "JD",
+      "title": "Pre-production Reviewer",
+      "type": "job-description",
+      "pillar": "workforce",
+      "status": "Approved",
+      "version": "1.0",
+      "classification": "Public",
+      "owner": "Engineering Pillar Leader",
+      "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-008_Pre-production_Reviewer.md",
+      "lines": [
+        38794,
+        38994
+      ],
+      "lines_count": 200,
+      "chars": 21066,
+      "tokens": 6019,
+      "summary": "Job Description: Pre-production Reviewer \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
       "id": "README-machine-readable",
@@ -1931,95 +2548,19 @@
       "title": "README",
       "type": "readme",
       "pillar": "cross-cutting",
+      "status": null,
+      "version": null,
+      "classification": null,
+      "owner": null,
       "path": "machine-readable/README.md",
       "lines": [
-        37942,
-        38012
+        38996,
+        39060
       ],
-      "lines_count": 71,
-      "chars": 4966,
-      "tokens": 1419,
+      "lines_count": 64,
+      "chars": 5629,
+      "tokens": 1608,
       "summary": "Machine-readable artifact governance \u2014 derived YAML/JSON artifacts, regeneration rules."
-    },
-    {
-      "id": "validation-error",
-      "prefix": "META",
-      "title": "validation-error",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "path": ".github/ISSUE_TEMPLATE/validation-error.md",
-      "lines": [
-        38013,
-        38045
-      ],
-      "lines_count": 33,
-      "chars": 598,
-      "tokens": 171,
-      "summary": "validation-error"
-    },
-    {
-      "id": "document-improvement",
-      "prefix": "META",
-      "title": "document-improvement",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "path": ".github/ISSUE_TEMPLATE/document-improvement.md",
-      "lines": [
-        38046,
-        38090
-      ],
-      "lines_count": 45,
-      "chars": 1137,
-      "tokens": 325,
-      "summary": "document-improvement"
-    },
-    {
-      "id": "new-document-proposal",
-      "prefix": "META",
-      "title": "new-document-proposal",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "path": ".github/ISSUE_TEMPLATE/new-document-proposal.md",
-      "lines": [
-        38091,
-        38127
-      ],
-      "lines_count": 37,
-      "chars": 1196,
-      "tokens": 342,
-      "summary": "new-document-proposal"
-    },
-    {
-      "id": "README",
-      "prefix": "META",
-      "title": "README",
-      "type": "readme",
-      "pillar": "cross-cutting",
-      "path": "README.md",
-      "lines": [
-        38128,
-        38319
-      ],
-      "lines_count": 192,
-      "chars": 13943,
-      "tokens": 3984,
-      "summary": "CERG repository root \u2014 project overview, adoption paths, architecture, reader guides for different roles."
-    },
-    {
-      "id": "README-flows",
-      "prefix": "META",
-      "title": "README",
-      "type": "readme",
-      "pillar": "cross-cutting",
-      "path": "flows/README.md",
-      "lines": [
-        38320,
-        38338
-      ],
-      "lines_count": 19,
-      "chars": 764,
-      "tokens": 218,
-      "summary": "Cross-Pillar Operational Flows overview \u2014 FLOW-001 and the 7 flows."
     },
     {
       "id": "README-examples",
@@ -2027,15 +2568,39 @@
       "title": "README",
       "type": "readme",
       "pillar": "cross-cutting",
+      "status": null,
+      "version": null,
+      "classification": null,
+      "owner": null,
       "path": "examples/README.md",
       "lines": [
-        38339,
-        38368
+        39062,
+        39089
       ],
-      "lines_count": 30,
-      "chars": 1044,
-      "tokens": 298,
+      "lines_count": 27,
+      "chars": 1182,
+      "tokens": 338,
       "summary": "Example adoption profiles and CERG tailoring demonstrations."
+    },
+    {
+      "id": "README-examples-day-in-the-life",
+      "prefix": "META",
+      "title": "README",
+      "type": "readme",
+      "pillar": "cross-cutting",
+      "status": null,
+      "version": null,
+      "classification": null,
+      "owner": null,
+      "path": "examples/day-in-the-life/README.md",
+      "lines": [
+        39091,
+        39460
+      ],
+      "lines_count": 369,
+      "chars": 32163,
+      "tokens": 9189,
+      "summary": "CERG META document: README"
     },
     {
       "id": "README-examples-regulated-utility-profile",
@@ -2043,143 +2608,119 @@
       "title": "README",
       "type": "readme",
       "pillar": "cross-cutting",
+      "status": null,
+      "version": null,
+      "classification": null,
+      "owner": null,
       "path": "examples/regulated-utility-profile/README.md",
       "lines": [
-        38369,
-        38439
+        39462,
+        39524
       ],
-      "lines_count": 71,
-      "chars": 3995,
-      "tokens": 1141,
+      "lines_count": 62,
+      "chars": 3913,
+      "tokens": 1118,
       "summary": "Example adoption profile for a regulated utility \u2014 CERG adaptation demonstration."
-    },
-    {
-      "id": "ROADMAP",
-      "prefix": "META",
-      "title": "ROADMAP",
-      "type": "meta",
-      "pillar": "cross-cutting",
-      "path": "ROADMAP.md",
-      "lines": [
-        38440,
-        38561
-      ],
-      "lines_count": 122,
-      "chars": 5627,
-      "tokens": 1608,
-      "summary": "CERG development roadmap and planned improvement workstreams."
-    },
-    {
-      "id": "README-roles",
-      "prefix": "JD",
-      "title": "README",
-      "type": "job-family",
-      "pillar": "workforce",
-      "path": "roles/README.md",
-      "lines": [
-        38562,
-        38617
-      ],
-      "lines_count": 56,
-      "chars": 1901,
-      "tokens": 543,
-      "summary": "Workforce architecture overview \u2014 roles/ directory, 5 job families, hiring path."
     },
     {
       "id": "CODE_OF_CONDUCT",
       "prefix": "META",
       "title": "CODE OF CONDUCT",
-      "type": "meta",
+      "type": "readme",
       "pillar": "cross-cutting",
+      "status": null,
+      "version": null,
+      "classification": null,
+      "owner": null,
       "path": "CODE_OF_CONDUCT.md",
       "lines": [
-        38618,
-        38664
+        39526,
+        39564
       ],
-      "lines_count": 47,
-      "chars": 2074,
-      "tokens": 593,
+      "lines_count": 38,
+      "chars": 2023,
+      "tokens": 578,
       "summary": "Community code of conduct for CERG contributors."
     },
     {
       "id": "CONTRIBUTING",
       "prefix": "META",
       "title": "CONTRIBUTING",
-      "type": "meta",
+      "type": "readme",
       "pillar": "cross-cutting",
+      "status": null,
+      "version": null,
+      "classification": null,
+      "owner": null,
       "path": "CONTRIBUTING.md",
       "lines": [
-        38665,
-        38721
+        39566,
+        39614
       ],
-      "lines_count": 57,
-      "chars": 3780,
-      "tokens": 1080,
+      "lines_count": 48,
+      "chars": 3732,
+      "tokens": 1066,
       "summary": "Contributing guide \u2014 validation requirements, conventions, PR workflow."
     },
     {
-      "id": "START-HERE",
+      "id": "ROADMAP",
       "prefix": "META",
-      "title": "START-HERE",
-      "type": "meta",
+      "title": "ROADMAP",
+      "type": "readme",
       "pillar": "cross-cutting",
-      "path": "START-HERE.md",
+      "status": null,
+      "version": null,
+      "classification": null,
+      "owner": null,
+      "path": "ROADMAP.md",
       "lines": [
-        38722,
-        38862
+        39616,
+        39733
       ],
-      "lines_count": 141,
-      "chars": 7358,
-      "tokens": 2102,
-      "summary": "First 48 hours adoption guide \u2014 Lite, Standard, and Regulated paths."
+      "lines_count": 117,
+      "chars": 5845,
+      "tokens": 1670,
+      "summary": "CERG development roadmap and planned improvement workstreams."
     },
     {
       "id": "SECURITY",
       "prefix": "META",
       "title": "SECURITY",
-      "type": "meta",
+      "type": "readme",
       "pillar": "cross-cutting",
+      "status": null,
+      "version": null,
+      "classification": null,
+      "owner": null,
       "path": "SECURITY.md",
       "lines": [
-        38863,
-        38886
+        39735,
+        39750
       ],
-      "lines_count": 24,
-      "chars": 883,
-      "tokens": 252,
+      "lines_count": 15,
+      "chars": 839,
+      "tokens": 240,
       "summary": "Security policy and vulnerability disclosure for the CERG repository."
     },
     {
-      "id": "README-.pytest_cache",
+      "id": "README-flows",
       "prefix": "META",
       "title": "README",
       "type": "readme",
       "pillar": "cross-cutting",
-      "path": ".pytest_cache/README.md",
+      "status": null,
+      "version": null,
+      "classification": null,
+      "owner": null,
+      "path": "flows/README.md",
       "lines": [
-        38887,
-        38901
+        39752,
+        39762
       ],
-      "lines_count": 15,
-      "chars": 356,
-      "tokens": 102,
-      "summary": "Pytest cache directory (not a CERG document)."
-    },
-    {
-      "id": "AGENTS",
-      "prefix": "META",
-      "title": "AI Agent Guide",
-      "type": "readme",
-      "pillar": "cross-cutting",
-      "path": "AGENTS.md",
-      "lines": [
-        0,
-        0
-      ],
-      "lines_count": 0,
-      "chars": 11193,
-      "tokens": 3198,
-      "summary": "Guide for AI agents working on CERG \u2014 conventions, pitfalls, tools, git workflow, validation."
+      "lines_count": 10,
+      "chars": 716,
+      "tokens": 205,
+      "summary": "Cross-Pillar Operational Flows overview \u2014 FLOW-001 and the 7 flows."
     }
   ]
 }
