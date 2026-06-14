@@ -1168,7 +1168,7 @@
   title: Exposure Management Procedure
   document_type: procedure
   domain: VM
-  version: 2.0
+  version: 2.01
   status: Approved
   classification: Public
   publication_profile: public
@@ -1177,7 +1177,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md
   source_file: CERG-PRC-VM-001_Exposure_Management_Procedure.md
-  source_hash: 18edd1fd67e6b5a736fefdbc75ff7d8a8fbb60a2c7b9a6e434e5511375a6179c
+  source_hash: 3a5ea7c15c5f9b4fab4e7e5d04689141eccbe27d04f2dfeead2f9a35a5bf5b71
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md
   llm_include: true
   llm_priority: high
@@ -2288,7 +2288,7 @@
   title: Risk Register Templates and Reporting
   document_type: template
   domain: RM
-  version: 1.21
+  version: 1.22
   status: Approved
   classification: Public
   publication_profile: public
@@ -2297,7 +2297,7 @@
   parent_artifact: ''
   source_path: templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md
   source_file: CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md
-  source_hash: 58ee1329bc1471d8a04e655a55241af8e5d9d51e4de13eef6ad7238a47429fde
+  source_hash: c724a5e32382802d30ab52821080771c851ac95e8d05cc615925d56434ad9c59
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md
   llm_include: true
   llm_priority: high
