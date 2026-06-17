@@ -30,9 +30,9 @@
 - **Job Family and Level placement** — family designation and grade range per [JF-001](../roles/CERG-GOV-JF-001_Job_Families_Overview.md)
 - **Key Responsibilities** — extracted from the original JD-001 content, organized by core vs. grade-level differentiation
 - **Required KSAs** — domain expertise, technical skills, and CERG-specific knowledge
-- **NICE TKS Statement References** — placeholder sections for Task, Knowledge, and Skill statement IDs
-- **KPIs** — placeholder sections for MTR-001 canonical metrics with grade-level thresholds
-- **Competency Expectations** — placeholder sections for CMP-001 behavioral anchors
+- **NICE TKS Statement References** — populated sections for Task, Knowledge, and Skill statement IDs
+- **KPIs** — mapped sections for MTR-001 canonical metrics with grade-level thresholds
+- **Competency Expectations** — populated sections with CMP-001 behavioral anchors
 - **Career Path** — within-family progression, cross-family movement, and management track options
 
 > **The original JD-001 content is preserved in the per-role files.** This index file replaces the monolithic structure to enable modular use: a hiring manager can attach a single role description to a requisition; an auditor can pull the specific role evidence they need; a team member can see their career options.
@@ -134,7 +134,7 @@ The 27 canonical CERG roles are organized into five Job Families. See [JF-001](.
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
 | 1.0 | 2026-05-27 | Cyber Governance | Initial release. Monolithic file with full job descriptions for all 25 canonical CERG roles. |
-| 2.0 | 2026-06-11 | Governance Pillar Leader | Restructured as family-level index. Extracted per-role content into 27 standalone documents under `roles/`. Added NICE Work Role mapping, KPI placeholders, and competency anchor placeholders to each per-role file. Added NICE SP 800-181r1 framework reference. |
+| 2.0 | 2026-06-11 | Governance Pillar Leader | Restructured as family-level index. Extracted per-role content into standalone documents under `roles/`. Added NICE Work Role mapping, KPI sections, and competency anchor sections to each per-role file. Added NICE SP 800-181r1 framework reference. |
 
 ### Review Triggers
 
