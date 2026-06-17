@@ -156,11 +156,11 @@ These are the ways CERG adoption fails. If you recognize your organization in an
 
 **Fix:** Integrate Engineering into project intake at concept stage, not at go-live. The Architecture Review Procedure (PRC-AR-001) defines this. A review that consistently surfaces "we have to redo the data flow now" came too late.
 
-### Anti-Pattern 8: Placeholder Values Become Operational
+### Anti-Pattern 8: Uncalibrated Starter Values Become Operational
 
-**What it looks like:** The risk appetite uses placeholder dollar bands ($2M, $5M, $10M). Nobody calibrates them. Risk acceptance decisions are made against placeholder thresholds.
+**What it looks like:** The risk appetite uses preliminary default dollar bands requiring organizational calibration ($2M, $5M, $10M). Nobody calibrates them. Risk acceptance decisions are made against uncalibrated thresholds.
 
-**Why it fails:** Placeholder values are not your organization's actual risk tolerance. Accepting a $1.9M risk because "the placeholder says $2M" is an arbitrary decision dressed as a framework.
+**Why it fails:** Starter values are not your organization's actual risk tolerance. Accepting a $1.9M risk because "the uncalibrated default says $2M" is an arbitrary decision dressed as a framework.
 
 **Fix:** Calibrate risk appetite values to your organization's actual revenue, downtime cost, regulatory exposure, and insurance retention. If you cannot calibrate, explicitly document that risk acceptance uses qualitative judgment until calibration occurs.
 
@@ -238,7 +238,7 @@ Every tailoring decision — every document deferred, every role consolidated, e
 | Date | 2026-07-01 |
 | Decision | Set single-risk ALE threshold at $500K based on annual revenue of $50M and cyber insurance retention of $250K. |
 | Rationale | Board requested a materiality threshold aligned to financial reporting. Finance confirmed $500K as the threshold above which a single cyber event would be material to quarterly earnings. |
-| Alternatives Considered | (1) Keep placeholder $2M — rejected as not calibrated to organization. (2) Set at $250K (insurance retention) — rejected as too conservative for a non-regulated entity. |
+| Alternatives Considered | (1) Keep the uncalibrated $2M default - rejected as not calibrated to organization. (2) Set at $250K (insurance retention) - rejected as too conservative for a non-regulated entity. |
 | Risk Created | Risks between $250K-$500K ALE will be accepted below the materiality threshold. Mitigated by quarterly review of all accepted High risks. |
 | Documents Affected | RMF-001 §9.5 (risk appetite values). MTR-001 board reporting thresholds. |
 | Approver | CISO with CFO concurrence |
