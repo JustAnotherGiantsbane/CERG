@@ -200,6 +200,7 @@ Do NOT leave bare "Placeholder", "TBD", or "N/A —" in Approved documents. Use 
 | STD | Standard | engineering |
 | PRC | Procedure | risk |
 | PLN | Plan / Operational Package | governance |
+| GL | Guideline | governance |
 | TMPL | Template | governance |
 | JF | Job Family | workforce |
 | JD | Job Description | workforce |
