@@ -370,9 +370,9 @@ These metrics measure exposure reduction, not scanner activity.
 |----|--------|-----------|-----------|
 | EM-001 | Confirmed Reachable Critical Exposure | Count of exposures in state "Exposure Confirmed" with Critical/PPR classification AND Internet-facing reachability | 0 / 1–3 / > 3 |
 | EM-002 | Scanner Observations Not Yet Triaged | Count of observations in "Observed" state past validation SLA | ≤ 5% / 6–15% / > 15% |
-| EM-003 | Observations Downgraded After Context | % of Critical/High CVSS observations reclassified to Hygiene Debt or lower after Steps 2-3 | n/a — informational |
+| EM-003 | Observations Downgraded After Context | % of Critical/High CVSS observations reclassified to Hygiene Debt or lower after Steps 2-3 | Informational; no control target |
 | EM-004 | KEV with Reachable Path | Count of KEV-matched observations in "Exposure Confirmed" or "Material Risk" state | 0 / 1–5 / > 5 |
-| EM-005 | KEV Blocked by Verified Control | Count of KEV-matched observations classified as "Confirmed Flaw, Not Exposed" due to verified compensating controls | n/a — watchlist |
+| EM-005 | KEV Blocked by Verified Control | Count of KEV-matched observations classified as "Confirmed Flaw, Not Exposed" due to verified compensating controls | Watchlist; no control target |
 | EM-006 | Exposures on Crown Jewels | Count of confirmed exposures on crown-jewel-classified assets | 0 / 1–2 / > 2 |
 | EM-007 | SLA Misses with Compensating Controls | Exposures past SLA where a verified compensating control exists | ≤ 5 / 6–15 / > 15 |
 | EM-008 | SLA Misses with No Controls | Exposures past SLA with no compensating control | 0 / 1–3 / > 3 |
@@ -384,7 +384,7 @@ These metrics measure exposure reduction, not scanner activity.
 | ID | Metric | Definition | G / A / R |
 |----|--------|-----------|-----------|
 | PH-001 | Patch Currency Rate | % of assets within platform-class patch cadence window | ≥ 95% / 85–95% / < 85% |
-| PH-002 | Hygiene Debt by Platform | Count of Hygiene Debt observations, grouped by platform class | n/a — trend |
+| PH-002 | Hygiene Debt by Platform | Count of Hygiene Debt observations, grouped by platform class | Trend-only; no control target |
 | PH-003 | End-of-Support Count | Assets on software past vendor end-of-support date | 0 / 1–10 / > 10 |
 
 ### 13.3 Reporting Cadence
