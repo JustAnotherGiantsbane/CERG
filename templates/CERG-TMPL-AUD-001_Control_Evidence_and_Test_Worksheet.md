@@ -45,7 +45,7 @@ This worksheet standardizes control testing and evidence review. It records the 
 ## 2. Template Instructions
 
 1. Copy this template before use.
-2. Replace every bracketed placeholder with case-specific information.
+2. Replace every bracketed field with case-specific information.
 3. Do not delete fields that appear not applicable. Mark them `Not Applicable` and explain why.
 4. Use canonical CERG role names from `CERG-GOV-OM-001`.
 5. Link risks, findings, exceptions, evidence, and approvals to the system of record.
