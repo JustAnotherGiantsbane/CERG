@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.39 |
+| **Version** | 1.40 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -499,7 +499,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.39 |
+| **Version** | 1.40 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-17 |
 | **Classification** | Public |
@@ -507,7 +507,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | **Approved By** | CISO |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Review Cycle** | Quarterly, or upon any artifact add or retire |
-| **Next Scheduled Review** | 2026-06-17 |
+| **Next Scheduled Review** | 2026-09-17 |
 | **Frameworks** | NIST CSF 2.0 (GOVERN); ISO/IEC 27001 A.5 |
 | **Regulations** | Cross-cutting |
 | **Environments** | All CERG-managed documentation |
@@ -516,12 +516,12 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.40 | 2026-06-17 | Governance Pillar Leader | Reconciled concurrent catalog revision history and updated the next scheduled review date after AI and SaaS/SBOM additions. |
 | 1.39 | 2026-06-17 | Governance Pillar Leader | Removed the hardcoded machine-readable manifest artifact count so the catalog does not drift when templates are added. |
 | 1.38 | 2026-06-17 | Governance Pillar Leader | Registered CERG-TMPL-AI-003 as the AI system and model register template. |
 | 1.37 | 2026-06-17 | Governance Pillar Leader | Registered CERG-TMPL-AI-002 as the sanctioned AI tools register template. |
 | 1.36 | 2026-06-17 | Governance Pillar Leader | Registered CERG-TMPL-AI-001 as the standalone AI intake and sanctioning template. |
 | 1.35 | 2026-06-14 | Governance Pillar Leader | Removed duplicate Table of Contents entries after the machine-readable artifact update. |
-| 1.36 | 2026-06-17 | Governance Pillar Leader | Added CERG-TMPL-SAAS-001 (SaaS Evidence Collection Checklist) and CERG-TMPL-SBOM-001 (SBOM Evidence Collection Checklist) to Section 5.6. Updated TPRM procedure §11 with tiered SBOM requirements and internal CI/CD generation. Extended STD-AC-001 §11 with NHI/ITDR requirements. Extended STD-IT-001 §5.4-5.5 with tiered SaaS controls and tenant baselines. Added machine-readable/cerg-sbom-schema.yaml and tools/sbom-generate.sh. Fixed cerg-validate.py duplicate main(). |
 | 1.34 | 2026-06-14 | Governance Pillar Leader | Updated machine-readable artifact inventory language to reflect regenerated local manifests, canonical paths, and the full LLM index. |
 | 1.33 | 2026-06-14 | Governance Pillar Leader | Status taxonomy cleanup. Replaced Published and Active catalog statuses with Approved; publication eligibility remains tracked separately in the publication manifest. |
 | 1.32 | 2026-06-13 | Governance Pillar Leader | Adoption usability amendment. Added FRM-002 Framework System Map, CAT-002 Record Catalog, IMP-005 Adoption Decision Tree and Dependency Matrix, and IMP-006 Role-Based Implementation Checklists to Section 5.2. |
