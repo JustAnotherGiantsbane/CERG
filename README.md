@@ -104,24 +104,6 @@ Every CERG document is Markdown. Automation-oriented artifacts are available her
 
 ---
 
-## Reference notes
-
-### Document taxonomy
-
-CERG documents fall into three categories:
-
-| Category | Label | Meaning |
-|----------|-------|---------|
-| **CERG Core** | none | Owned, maintained, and governed by CERG. Subject to CERG review cycles, validation, and CI gates. |
-| **Adjacent Security Function Package** | ⚠ ADJACENT | Owned by a security function that operates alongside CERG. Included for integration clarity, not governed as CERG Core. |
-| **Reference Artifact** | 📋 REFERENCE | Informational or illustrative material that is not a governed CERG artifact. |
-
-See the [Document Catalog](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) for the authoritative classification.
-
-### Adjacent functions
-
-Incident Response artifacts are included for integration clarity, but the standing IR team's procedures and the Incident Commander's authority take precedence during an incident. CERG's role during an incident is supporting: evidence collection, reporting, and lessons-learned feedback.
-
 ### When CERG is not a good fit
 
 CERG requires organizational commitment. It may not be the right choice if you have no named executive sponsor or security owner, only want certification paperwork, cannot identify business owners for risk acceptance, cannot tolerate documented exceptions, or intend to manage documents without version control.
