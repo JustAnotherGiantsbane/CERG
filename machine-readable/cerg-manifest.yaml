@@ -48,7 +48,7 @@
   title: Document Catalog and Naming Convention
   document_type: governance_instrument
   domain: CAT
-  version: 1.38
+  version: 1.40
   status: Approved
   classification: Public
   publication_profile: public
@@ -57,7 +57,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  source_hash: ade7b03b24ce4fd6ad6cfd00897cbfe57a8104077d420f4fdf07fc10d6eebbea
+  source_hash: 14f49226f37a853772da832a64951ded3d621dee435fee058f28a833b21c1681
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   llm_include: true
   llm_priority: high
@@ -1157,7 +1157,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
   source_file: CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
-  source_hash: eed4b759e72198ef48ef175d4755c26d60189de0b017c005eac65615d3697c59
+  source_hash: 7caa00a933d28c6a1dcb1693d5390d2654f462549b7e9c019ccfe118e1a15787
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
   llm_include: true
   llm_priority: medium
@@ -1877,7 +1877,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: standards/CERG-STD-AC-001_Access_Management_Standard.md
   source_file: CERG-STD-AC-001_Access_Management_Standard.md
-  source_hash: 8b6724bca19ef7656f146fd8d28a83b52fd8ef6dd841e2acda086f313e7b7f6a
+  source_hash: 41131379549c42ce4477c2a6e95dcce8003161e51f71aa29da017025e8a22b48
   canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-AC-001_Access_Management_Standard.md
   llm_include: true
   llm_priority: medium
@@ -2037,7 +2037,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md
   source_file: CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md
-  source_hash: 06937fae30db3ab5fe2550ebfacfe5ac21cabb199f4bd9d4cf67aaf164598632
+  source_hash: ccb6219e69d838d67fd1ae39aba1b9e387cb45259532e154cea6a283be31b69f
   canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md
   llm_include: true
   llm_priority: medium
@@ -2404,6 +2404,46 @@
   normative_weight: supporting
   pillar: governance
   summary: Risk Acceptance Memo Template
+- document_id: CERG-TMPL-SAAS-001
+  title: SaaS Evidence Collection Checklist
+  document_type: template
+  domain: SAAS
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: CERG-STD-IT-001
+  source_path: templates/CERG-TMPL-SAAS-001_SaaS_Evidence_Collection_Checklist.md
+  source_file: CERG-TMPL-SAAS-001_SaaS_Evidence_Collection_Checklist.md
+  source_hash: 9ba33b8af8cad4ac50d8b87314b77b0f5b9d0d9d6395a1e75451239ccb163907
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-SAAS-001_SaaS_Evidence_Collection_Checklist.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: SaaS Evidence Collection Checklist
+- document_id: CERG-TMPL-SBOM-001
+  title: SBOM Evidence Collection Checklist
+  document_type: template
+  domain: SBOM
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Vendor Risk Analyst
+  approval_authority: Vendor Risk Analyst
+  parent_artifact: 'CERG-PRC-TPRM-001 §11'
+  source_path: templates/CERG-TMPL-SBOM-001_SBOM_Evidence_Collection_Checklist.md
+  source_file: CERG-TMPL-SBOM-001_SBOM_Evidence_Collection_Checklist.md
+  source_hash: 7d337fa6a274ead690c0e7f13190711cb0ee7b7d9ce40ec6e4e91aaa5eea2d92
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-SBOM-001_SBOM_Evidence_Collection_Checklist.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: SBOM Evidence Collection Checklist
 - document_id: CERG-TMPL-TPRM-001
   title: Vendor Security Questionnaire and Assessment Template
   document_type: template
