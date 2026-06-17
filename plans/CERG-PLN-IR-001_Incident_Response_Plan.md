@@ -7,16 +7,7 @@
 ---
 
 | | |
-|---
-> **ADJACENT FUNCTION — NOT A CERG-OWNED DOCUMENT**
->
-> This artifact belongs to the standing Incident Response team, not to CERG. Per [OM-001 §3.4](../governance/CERG-GOV-OM-001_CERG_Operating_Model.md), CERG is not responsible for Incident Response operations, the IR plan itself, regulatory notification clocks, or exercise management. CERG provides a liaison to the IR team and maintains this document in the repository for cross-functional integration only.
->
-> **During an incident:** the standing IR team's procedures and the Incident Commander's authority take precedence over any CERG workflow. CERG's role during incidents is supporting (evidence, reporting, lessons-learned feedback per FLOW-001 F-06), not directing.
->
-> **Ownership:** This document is maintained by the standing IR team. CERG Governance reviews it for cross-reference accuracy only. Changes to IR procedures, notification timelines, or exercise schedules are the IR team's responsibility.
->
-|---|
+|---|---|
 | **Document ID** | CERG-PLN-IR-001 |
 | **Version** | 1.21 |
 | **Status** | External Interface |
@@ -28,6 +19,17 @@
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (RS, RC) · [NIST 800-61r2](https://csrc.nist.gov/pubs/sp/800/61/r2/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) · [NIST 800-171r3](https://csrc.nist.gov/pubs/sp/800/171/r2/final) · NIST RMF |
 | **Regulations** | NERC-CIP CIP-008 · [CMMC](https://dodcio.defense.gov/CMMC/) IR.L2 · DFARS 252.204-7012 · SEC 8-K Item 1.05 (where applicable) · State breach laws · GDPR (where applicable) |
 | **Environments** | All in-scope assets - owned, hybrid, cloud, SaaS, OT |
+
+---
+
+> **ADJACENT FUNCTION — NOT A CERG-OWNED DOCUMENT**
+>
+> This artifact belongs to the standing Incident Response team, not to CERG. Per [OM-001 §3.4](../governance/CERG-GOV-OM-001_CERG_Operating_Model.md), CERG is not responsible for Incident Response operations, the IR plan itself, regulatory notification clocks, or exercise management. CERG provides a liaison to the IR team and maintains this document in the repository for cross-functional integration only.
+>
+> **During an incident:** the standing IR team's procedures and the Incident Commander's authority take precedence over any CERG workflow. CERG's role during incidents is supporting (evidence, reporting, lessons-learned feedback per FLOW-001 F-06), not directing.
+>
+> **Ownership:** This document is maintained by the standing IR team. CERG Governance reviews it for cross-reference accuracy only. Changes to IR procedures, notification timelines, or exercise schedules are the IR team's responsibility.
+>
 
 ---
 
@@ -438,4 +440,7 @@ Cyber Governance owns the plan as a document. The CISO owns the operational capa
 | Cybersecurity Policy | [CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy - Principle 10 |
 | Grid and Control System Standard | [CERG-STD-OT-001](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | OT IR overlay, CIP-008 obligations |
 | IT (Hosted/Cloud/SaaS) Security Standard | [CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | Cloud / SaaS IR overlay |
-| CUI Handling Standard | [CERG-STD-C
+| CUI Handling Standard | [CERG-STD-CUI-001](../standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) | CUI-specific incident handling and DFARS notification interface |
+| Logging, Monitoring, and Detection Standard | [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Detection, telemetry, and evidence support |
+| Cyber Resilience and Backup Standard | [CERG-STD-RES-001](../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) | Recovery and restoration interface |
+| Incident Response Playbook Set | [CERG-PRC-IR-002](../procedures/CERG-PRC-IR-002_Incident_Response_Playbook_Set.md) | Scenario playbooks and CERG handoff checklists |
