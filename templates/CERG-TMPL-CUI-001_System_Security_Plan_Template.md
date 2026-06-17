@@ -56,7 +56,7 @@ The SSP explains the system boundary, CUI data flow, implemented security contro
 ## 2. Template Instructions
 
 1. Copy this template and rename the copy for the specific system.
-2. Replace bracketed placeholders such as `[System Name]` with system-specific content.
+2. Replace bracketed fields such as `[System Name]` with system-specific content.
 3. Do not delete sections that are not applicable. Mark them `Not Applicable` and explain why.
 4. Use asset IDs from `CERG-STD-AM-001` wherever possible.
 5. Link all open control gaps to `CERG-TMPL-CUI-002` POA&M entries.
