@@ -41,8 +41,8 @@
 16. [Continuous Monitoring and Re-Assessment](#16-continuous-monitoring-and-re-assessment)
 17. [Regulatory and Framework Alignment Summary](#17-regulatory-and-framework-alignment-summary)
 18. [Document Control](#18-document-control)
-|
-|---
+
+---
 
 ## 1. Purpose and Scope
 
@@ -576,4 +576,4 @@ Assessment results are recorded in the TPRM tool and reviewed at each re-assessm
 | **Version** | 1.0 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / TPRM platform change |
-| **Change Log** | 1.0 - Initial publication. Tiering, evidence by tier, shared responsibility, international access denial-by-default, SBOM, CIP-013, CUI flow-down, FedRAMP equivalency, SCCT.
+| **Change Log** | 1.0 - Initial publication. Tiering, evidence by tier, shared responsibility, international access denial-by-default, SBOM, CIP-013, CUI flow-down, FedRAMP equivalency, SCCT. |
