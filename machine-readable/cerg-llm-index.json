@@ -3,7 +3,7 @@
   "generated": "2026-06-17",
   "source": "local markdown corpus",
   "total_documents": 131,
-  "total_tokens_estimate": 830236,
+  "total_tokens_estimate": 836207,
   "by_type": {
     "readme": 12,
     "governance-instrument": 38,
@@ -898,8 +898,8 @@
         15718
       ],
       "lines_count": 529,
-      "chars": 32102,
-      "tokens": 9172,
+      "chars": 32105,
+      "tokens": 9173,
       "summary": "Training and Certification Framework: training paths, certifications."
     },
     {
@@ -918,8 +918,8 @@
         16006
       ],
       "lines_count": 286,
-      "chars": 16998,
-      "tokens": 4857,
+      "chars": 16978,
+      "tokens": 4851,
       "summary": "Organization Adaptation Profile: document CERG tailoring decisions."
     },
     {
@@ -1018,8 +1018,8 @@
         17888
       ],
       "lines_count": 277,
-      "chars": 22607,
-      "tokens": 6459,
+      "chars": 22546,
+      "tokens": 6442,
       "summary": "Security standard: Asset Management and Inventory Standard \u2014 technical requirements and implementation guidance."
     },
     {
@@ -1858,8 +1858,8 @@
         32560
       ],
       "lines_count": 253,
-      "chars": 16777,
-      "tokens": 4793,
+      "chars": 16909,
+      "tokens": 4831,
       "summary": "Job Families Overview: 5 families (Executive, SecEng, RiskOps, GovComp, Adjunct)."
     },
     {
@@ -1878,8 +1878,8 @@
         32768
       ],
       "lines_count": 206,
-      "chars": 14688,
-      "tokens": 4197,
+      "chars": 14886,
+      "tokens": 4253,
       "summary": "NICE Workforce Framework Crosswalk: per-role TKS to NIST NICE v2.2.0."
     },
     {
@@ -1938,8 +1938,8 @@
         33162
       ],
       "lines_count": 219,
-      "chars": 15875,
-      "tokens": 4536,
+      "chars": 16489,
+      "tokens": 4711,
       "summary": "Job Description: Incident Commander \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -1958,8 +1958,8 @@
         33386
       ],
       "lines_count": 222,
-      "chars": 15842,
-      "tokens": 4526,
+      "chars": 16456,
+      "tokens": 4702,
       "summary": "Job Description: Lead Investigator \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -1998,8 +1998,8 @@
         33710
       ],
       "lines_count": 199,
-      "chars": 16979,
-      "tokens": 4851,
+      "chars": 18070,
+      "tokens": 5163,
       "summary": "Job Description: Chief Information Security Officer \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2018,8 +2018,8 @@
         33911
       ],
       "lines_count": 199,
-      "chars": 15497,
-      "tokens": 4428,
+      "chars": 16655,
+      "tokens": 4759,
       "summary": "Job Description: Executive Sponsor \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2058,8 +2058,8 @@
         34243
       ],
       "lines_count": 202,
-      "chars": 20834,
-      "tokens": 5953,
+      "chars": 21569,
+      "tokens": 6163,
       "summary": "Job Description: NERC-CIP Compliance Manager \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2078,8 +2078,8 @@
         34447
       ],
       "lines_count": 202,
-      "chars": 20505,
-      "tokens": 5859,
+      "chars": 21240,
+      "tokens": 6069,
       "summary": "Job Description: CMMC Federal Compliance Manager \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2098,8 +2098,8 @@
         34651
       ],
       "lines_count": 202,
-      "chars": 20400,
-      "tokens": 5829,
+      "chars": 21135,
+      "tokens": 6039,
       "summary": "Job Description: SOX ITGC Lead \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2118,8 +2118,8 @@
         34855
       ],
       "lines_count": 202,
-      "chars": 20590,
-      "tokens": 5883,
+      "chars": 21325,
+      "tokens": 6093,
       "summary": "Job Description: Policy and Standards Manager \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2138,8 +2138,8 @@
         35059
       ],
       "lines_count": 202,
-      "chars": 20457,
-      "tokens": 5845,
+      "chars": 21192,
+      "tokens": 6055,
       "summary": "Job Description: Risk Register Owner \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2158,8 +2158,8 @@
         35263
       ],
       "lines_count": 202,
-      "chars": 20480,
-      "tokens": 5851,
+      "chars": 21215,
+      "tokens": 6061,
       "summary": "Job Description: Evidence Librarian \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2178,8 +2178,8 @@
         35467
       ],
       "lines_count": 202,
-      "chars": 20682,
-      "tokens": 5909,
+      "chars": 21504,
+      "tokens": 6144,
       "summary": "Job Description: Governance Pillar Leader \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2218,8 +2218,8 @@
         35800
       ],
       "lines_count": 202,
-      "chars": 20654,
-      "tokens": 5901,
+      "chars": 21389,
+      "tokens": 6111,
       "summary": "Job Description: Exposure Management Lead \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2238,8 +2238,8 @@
         36004
       ],
       "lines_count": 202,
-      "chars": 20725,
-      "tokens": 5921,
+      "chars": 21460,
+      "tokens": 6131,
       "summary": "Job Description: Adversarial Testing Lead \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2258,8 +2258,8 @@
         36208
       ],
       "lines_count": 202,
-      "chars": 20833,
-      "tokens": 5952,
+      "chars": 21568,
+      "tokens": 6162,
       "summary": "Job Description: Threat Intelligence Analyst \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2278,8 +2278,8 @@
         36412
       ],
       "lines_count": 202,
-      "chars": 20771,
-      "tokens": 5935,
+      "chars": 21506,
+      "tokens": 6145,
       "summary": "Job Description: Detection Engineer \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2298,8 +2298,8 @@
         36616
       ],
       "lines_count": 202,
-      "chars": 20430,
-      "tokens": 5837,
+      "chars": 21165,
+      "tokens": 6047,
       "summary": "Job Description: OT Risk Analyst \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2318,8 +2318,8 @@
         36820
       ],
       "lines_count": 202,
-      "chars": 20540,
-      "tokens": 5869,
+      "chars": 21275,
+      "tokens": 6079,
       "summary": "Job Description: Identity Risk Analyst \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2338,8 +2338,8 @@
         37024
       ],
       "lines_count": 202,
-      "chars": 20609,
-      "tokens": 5888,
+      "chars": 21344,
+      "tokens": 6098,
       "summary": "Job Description: Vendor Risk Analyst \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2358,8 +2358,8 @@
         37228
       ],
       "lines_count": 202,
-      "chars": 21062,
-      "tokens": 6018,
+      "chars": 21884,
+      "tokens": 6253,
       "summary": "Job Description: Risk Pillar Leader \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2398,8 +2398,8 @@
         37560
       ],
       "lines_count": 202,
-      "chars": 21864,
-      "tokens": 6247,
+      "chars": 22599,
+      "tokens": 6457,
       "summary": "Job Description: Cloud Security Engineer \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2418,8 +2418,8 @@
         37764
       ],
       "lines_count": 202,
-      "chars": 21761,
-      "tokens": 6217,
+      "chars": 22496,
+      "tokens": 6427,
       "summary": "Job Description: Identity Engineer \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2438,8 +2438,8 @@
         37968
       ],
       "lines_count": 202,
-      "chars": 21926,
-      "tokens": 6265,
+      "chars": 22661,
+      "tokens": 6475,
       "summary": "Job Description: OT Security Engineer \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2458,8 +2458,8 @@
         38172
       ],
       "lines_count": 202,
-      "chars": 21920,
-      "tokens": 6263,
+      "chars": 22655,
+      "tokens": 6473,
       "summary": "Job Description: Application Security Engineer \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2478,8 +2478,8 @@
         38376
       ],
       "lines_count": 202,
-      "chars": 21822,
-      "tokens": 6235,
+      "chars": 22557,
+      "tokens": 6445,
       "summary": "Job Description: Endpoint Engineer \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2498,8 +2498,8 @@
         38580
       ],
       "lines_count": 202,
-      "chars": 21562,
-      "tokens": 6161,
+      "chars": 22297,
+      "tokens": 6371,
       "summary": "Job Description: Cryptography Engineer \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2518,8 +2518,8 @@
         38784
       ],
       "lines_count": 202,
-      "chars": 22079,
-      "tokens": 6308,
+      "chars": 22901,
+      "tokens": 6543,
       "summary": "Job Description: Engineering Pillar Leader \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
@@ -2538,8 +2538,8 @@
         38988
       ],
       "lines_count": 202,
-      "chars": 21672,
-      "tokens": 6192,
+      "chars": 22407,
+      "tokens": 6402,
       "summary": "Job Description: Pre-production Reviewer \u2014 responsibilities, KSAs, NICE competencies."
     },
     {
