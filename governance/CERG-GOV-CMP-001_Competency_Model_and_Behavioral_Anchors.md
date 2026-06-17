@@ -421,7 +421,6 @@ A promotion case addresses every competency domain. The standard is not "checks 
 ## 9. Mapping to NICE and Industry Frameworks
 
 ### 9.1 NIST NICE Workforce Framework (SP 800-181r1)
-### 9.1 NIST NICE Workforce Framework (SP 800-181r1)
 
 The NICE Framework defines cybersecurity work through Task, Knowledge, and Skill (TKS) statements organized into Work Roles and Competency Areas. This section maps CERG's eight competency domains to NICE Competency Areas and provides sample TKS references for skills-gap analysis.
 
