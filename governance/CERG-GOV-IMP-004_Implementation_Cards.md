@@ -350,7 +350,7 @@
 | **Implementation** | IR plan with roles, contact list, and escalation path; annual tabletop exercise | Full IR playbooks by incident type; quarterly tabletop; annual live-fire exercise; SCCT activation path per [TPRM-001](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
 | **Evidence** | IR plan, tabletop results, after-action reports | Exercise schedule, improvement tracking, playbook version history, SCCT test records |
 | **Failure Mode** | IR plan exists as PDF, never exercised; contact list stale; "the IR team will handle it" without defined handoff |
-| **Exception Path** | N/A — incident response capability is not optional; gaps are treated as Critical findings |
+| **Exception Path** | No exception path; incident response capability is mandatory and gaps are treated as Critical findings |
 | **Engineering Role** | IR tooling; forensic capability; containment automation |
 | **Risk Role** | Detection-to-IR handoff; threat intelligence during incidents |
 | **Governance Role** | IR plan maintenance; exercise schedule; after-action improvement tracking |
