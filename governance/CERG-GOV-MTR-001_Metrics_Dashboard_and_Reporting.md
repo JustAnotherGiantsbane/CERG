@@ -88,9 +88,9 @@ These metrics measure exposure reduction, not scanner activity. They track the p
 |---|---|---|---|---|---|---|
 | EM-001 | Confirmed Reachable Critical Exposure | Count of exposures in "Confirmed Exposure" or "Material Risk" state with Internet-facing reachability | Exposure pipeline | Daily | 0 / 1–3 / > 3 | CISO Dashboard |
 | EM-002 | Observations Awaiting Triage | Count of observations in "Observed" state past their validation SLA | Exposure pipeline | Daily | ≤ 5% / 6–15% / > 15% | CISO Dashboard |
-| EM-003 | Critical Observations Downgraded | % of Critical/High CVSS observations reclassified to Hygiene Debt or lower after context validation | Exposure pipeline | Monthly | n/a — informational | CISO Dashboard |
+| EM-003 | Critical Observations Downgraded | % of Critical/High CVSS observations reclassified to Hygiene Debt or lower after context validation | Exposure pipeline | Monthly | Informational; no control target | CISO Dashboard |
 | EM-004 | KEV with Reachable Path | Count of KEV-matched observations in "Exposure Confirmed" or "Material Risk" state | Exposure pipeline + KEV catalog | Daily | 0 / 1–5 / > 5 | CISO Dashboard |
-| EM-005 | KEV Blocked by Verified Control | Count of KEV-matched observations classified as "Confirmed Flaw, Not Exposed" due to verified compensating controls | Exposure pipeline + KEV catalog | Weekly | n/a — watchlist | CISO Dashboard |
+| EM-005 | KEV Blocked by Verified Control | Count of KEV-matched observations classified as "Confirmed Flaw, Not Exposed" due to verified compensating controls | Exposure pipeline + KEV catalog | Weekly | Watchlist; no control target | CISO Dashboard |
 | EM-006 | Exposures on Crown Jewels | Count of confirmed exposures on crown-jewel-classified assets | Exposure pipeline + CJ-001 crown-jewel register | Daily | 0 / 1–2 / > 2 | CISO Dashboard |
 | EM-007 | SLA Misses with Compensating Controls | Exposures past SLA where a verified compensating control exists | Exposure pipeline | Weekly | ≤ 5 / 6–15 / > 15 | CISO Dashboard |
 | EM-008 | SLA Misses with No Controls | Exposures past SLA with no compensating control | Exposure pipeline | Weekly | 0 / 1–3 / > 3 | CISO Dashboard, COG Brief |
@@ -104,7 +104,7 @@ Patch hygiene is a maintenance function distinct from exposure reduction. These 
 | **ID** | **Name** | **Formula** | **Source** | **Refresh** | **G / A / R** | **Reported In** |
 |---|---|---|---|---|---|---|
 | PH-001 | Patch Currency Rate | % of assets within their platform-class patch cadence window per [PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) §10 | Patch management tool | Weekly | ≥ 95% / 85–95% / < 85% | COG Brief |
-| PH-002 | Hygiene Debt by Platform | Count of Hygiene Debt observations, grouped by platform class | Exposure pipeline | Monthly | n/a — trend | COG Brief |
+| PH-002 | Hygiene Debt by Platform | Count of Hygiene Debt observations, grouped by platform class | Exposure pipeline | Monthly | Trend-only; no control target | COG Brief |
 | PH-003 | End-of-Support Count | Assets running software past vendor end-of-support date | Asset inventory | Monthly | 0 / 1–10 / > 10 | COG Brief |
 
 ### 3.2b Detection Metrics (Owner: Cyber Risk)
