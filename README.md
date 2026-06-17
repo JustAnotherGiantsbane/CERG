@@ -104,6 +104,12 @@ Every CERG document is Markdown. Automation-oriented artifacts are available her
 
 ---
 
+## Scope notes
+
+Most CERG documents are core operating-model artifacts. A small number are included only to clarify handoffs with adjacent security functions, such as Incident Response. During an incident, the standing IR team and Incident Commander retain authority; CERG supports evidence collection, reporting, and lessons-learned feedback.
+
+The [Document Catalog](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) is authoritative for document classification and ownership.
+
 ### When CERG is not a good fit
 
 CERG requires organizational commitment. It may not be the right choice if you have no named executive sponsor or security owner, only want certification paperwork, cannot identify business owners for risk acceptance, cannot tolerate documented exceptions, or intend to manage documents without version control.
