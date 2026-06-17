@@ -214,27 +214,6 @@ def validate_repository(root: Path) -> list[Finding]:
     return sorted(findings, key=lambda item: (item.path, item.code, item.message))
 
 
-def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("root", nargs="?", default=".", help="Repository root to validate")
-    args = parser.parse_args(argv)
-
-    findings = validate_repository(Path(args.root))
-    if findings:
-        print("CERG validation failed:")
-        for finding in findings:
-            print(f"- {finding.path}: [{finding.code}] {finding.message}")
-        return 1
-    print("CERG validation passed: links, catalog references, and file inventory are consistent.")
-    
-    # P1 Quality checks (warnings only, do not block CI)
-    root_path = Path(args.root)
-    catalog = parse_catalog(root_path)
-    quality_warnings = quality_checks(root_path, catalog)
-    print_quality_report(quality_warnings, root_path)
-    
-    return 0
-
 
 
 

@@ -198,7 +198,26 @@ Cloud accounts and SaaS tenants are control boundaries. They are governed, not a
 | Secrets (API keys, database credentials, signing keys) shall be stored in a dedicated secrets manager and consumed at runtime. Plaintext secrets in source repositories, configuration files, or IaC are prohibited and shall be detected by automated scanning. | IaaS / PaaS / SaaS | Engineering | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) IA-5 · OWASP ASVS |
 | Tier 1 SaaS applications shall be configured against documented hardening baselines (e.g., M365 Secure Score, Salesforce Health Check, Google Workspace baseline). Baseline drift is detected by SSPM and remediated within SLA. | Tier 1 SaaS | Engineering / Risk | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) CM-6 · CIS Benchmarks |
 
+| Tier 2 SaaS (Restricted/CUI data) shall enforce: SSO via IdP, phishing-resistant MFA for admin, DLP policies, audit log export to SIEM, admin role review quarterly, tenant baseline scan (CIS / vendor). | Tier 2 SaaS | Engineering / Risk | NIST 800-53 IA-2, AC-2, CM-6, AU-2 · CIS SaaS Benchmarks |
+| Tier 3 SaaS (Internal data, narrow access) shall enforce: SSO via IdP, MFA for admin, admin role review semi-annually, tenant baseline scan annually. | Tier 3 SaaS | Engineering / Governance | NIST 800-53 IA-2, AC-2 · CIS SaaS Benchmarks |
+| Shadow IT discovery: SSPM / CASB / IdP log analysis shall run continuously. Unapproved SaaS with organizational data triggers 30-day remediation or block. | All SaaS | Risk / Governance | NIST 800-53 CM-8, CA-7 |
+| OAuth / third-party app grants in Tier 1/2 SaaS shall be inventoried, risk-ranked, and reviewed quarterly. High-risk grants (broad scopes, external publishers) require CISO approval. | Tier 1/2 SaaS | Engineering / Risk | NIST 800-53 AC-21 · CSA CCM IAM-13 |
 ---
+
+
+### 5.5 SaaS Tenant Hardening Baselines
+
+Each Tier 1 SaaS tenant shall maintain a documented baseline covering:
+
+| **Tenant** | **Baseline Source** | **Key Controls** | **Drift SLA** |
+|---|---|---|---|
+| Microsoft 365 | CIS M365 Foundations L1/L2 + CERG overrides | Secure Score ≥ 80%, Conditional Access policies, Defender for Office P2, Audit log retention ≥ 1 yr, Phishing-resistant MFA for all admin | 30 days |
+| Salesforce | CIS Salesforce / Salesforce Health Check + CERG | SSO mandatory, MFA phishing-resistant, Field-level security, Event Monitoring → SIEM, Permission set review quarterly | 30 days |
+| ServiceNow | CERG baseline (no CIS) | SSO mandatory, OAuth client secret rotation, Admin role review quarterly, Audit/log export → SIEM, Domain separation documented | 30 days |
+| GitHub / GitLab | CERG baseline | SSO, MFA, Branch protection, Dependabot/secret scanning, Runner isolation, Audit log → SIEM | 30 days |
+| Google Workspace | CIS Google Workspace + CERG | SSO, MFA, Admin activity alerts, Drive DLP, Audit log retention | 30 days |
+
+Baseline drift detected by SSPM → finding in PRC-VM-001 pipeline → remediation per SLA. Baseline changes require Engineering approval and evidence update.
 
 ## 6. DETECT: Cloud-Native and Cross-Estate Monitoring
 

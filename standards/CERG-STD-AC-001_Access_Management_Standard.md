@@ -294,7 +294,36 @@ The following access types shall be treated as privileged and subject to the con
 
 ---
 
-## 11. Regulatory and Framework Alignment Summary
+---
+
+## 11. Non-Human Identity and Identity Threat Detection
+
+### 11.1 Non-Human Identity (NHI) Management
+
+> **Service Accounts, API Keys, OAuth Tokens, Workload Identities, and Machine Credentials Are Identities Too**  
+> NHIs frequently outnumber human identities 10:1 in modern estates. They authenticate to systems, access data, and can be abused for lateral movement. CERG treats NHI management with equivalent rigor to workforce identity.
+
+| **Requirement** | **CERG Owner** | **Regulatory Reference** |
+|---|---|---|
+| All NHIs shall be inventoried in a central registry with: owner, purpose, scope, authentication method, rotation cadence, and expiration / review date. | Engineering / Governance | NIST 800-53 IA-2, AC-2 · NIST 800-171 3.5.10 |
+| NHI credentials (API keys, tokens, certificates, client secrets) shall be vaulted in an approved secrets manager. Plaintext NHI credentials in source repos, IaC, container images, CI variables, or chat tools are prohibited. | Engineering | NIST 800-53 IA-5(7) · OWASP ASVS |
+| NHIs shall use least-privilege, scoped permissions. Wildcard or admin-scoped NHIs require documented exception with compensating controls. | Engineering / Governance | NIST 800-53 AC-6 · NIST 800-171 3.1.5 |
+| NHI rotation: service-account keys ≤ 90 days; OAuth client secrets ≤ 180 days; workload identities (cloud managed) per platform rotation; certificates per CERG-STD-CR-001. Expired NHIs are auto-disabled. | Engineering | NIST 800-53 IA-5 · CIS Controls 4.5 |
+| NHIs shall not be used for interactive login. Vendor software requiring interactive NHI use shall be documented as exception with session monitoring. | Engineering / Risk | NIST 800-53 AC-2, AU-2 |
+| Cross-environment NHI federation (e.g., GitHub Actions → AWS workload identity, SaaS OAuth grants) shall be mapped in the NHI registry with trust boundaries documented. | Engineering | NIST 800-53 IA-8 · CSA CCM IAM-13 |
+
+### 11.2 Identity Threat Detection & Response (ITDR)
+
+| **Requirement** | **CERG Owner** | **Regulatory Reference** |
+|---|---|---|
+| Deploy ITDR capabilities covering: impossible travel for NHIs, token replay/anomalous use, OAuth grant anomalies, privilege escalation via NHI, dormant NHI activation, and MFA bypass on service principals. | Risk | NIST 800-53 SI-4(5), AU-6 · MITRE ATT&CK T1078, T1550 |
+| Identity telemetry (IdP, MFA, PAM, cloud IAM, Tier 1 SaaS audit logs) shall be normalized and correlated in the SIEM. NHI activity shall be distinguishable from human activity in alerts. | Risk / Engineering | NIST 800-53 AU-2, AU-6, SI-4 |
+| Containment playbooks for NHI compromise: auto-revoke token, rotate secret, disable NHI, force re-authentication of dependent workloads, notify NHI owner. Mean time to containment target: ≤ 30 min for Critical NHI paths. | Risk | NIST 800-53 IR-4(1), IR-4(2) |
+| NHI risk posture reported quarterly to CISO: NHI count by type, rotation compliance, stale NHI count, ITDR alert volume and false-positive rate. | Risk / Governance | NIST CSF 2.0 DE.CM, GV.RR |
+
+---
+
+## 12. Regulatory and Framework Alignment Summary
 
 | **Requirement Area** | **[NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final)** | **[NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)** | **[NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final)** | **NERC-CIP** | **[CMMC L2](https://dodcio.defense.gov/CMMC/)** | **[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC** |
 |---|---|---|---|---|---|---|
@@ -307,10 +336,12 @@ The following access types shall be treated as privileged and subject to the con
 | Joiner / Mover / Leaver | PR.AA | AC-2(1)(2)(3) | 3.5.6 | CIP-004 R4 | AC.L2-3.5.6 | Access |
 | Access Review / Recert | GV.RR | AC-2(7) | 3.1.5 | CIP-004 R4.2 | AC.L2-3.1.5 | Access |
 | Monitoring & Detection | DE.CM | AU-6, SI-4 | 3.3.5 | CIP-007 R4 | AU.L2-3.3.5 | Logging |
+| Non-Human Identity Mgmt | PR.AA | IA-2, IA-5, AC-2 | 3.5.10 | CIP-007 R5 | IA.L2-3.5.7 | Access |
+| ITDR | DE.CM | AU-6, SI-4, IR-4 | 3.3.5 | CIP-007 R4 | AU.L2-3.3.5 | Logging |
 
 ---
 
-## 12. Exceptions and Escalation
+## 13. Exceptions and Escalation
 
 | **Exception Type** | **Approval Required** | **Process** | **Review Cycle** |
 |---|---|---|---|
@@ -325,7 +356,7 @@ The following access types shall be treated as privileged and subject to the con
 
 ---
 
-## 13. Document Control
+## 14. Document Control
 
 ### Revision History
 
