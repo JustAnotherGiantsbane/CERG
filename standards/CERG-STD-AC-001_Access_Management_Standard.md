@@ -350,4 +350,5 @@ Governance owns this document. The Governance Pillar Leader is responsible for i
 | Cybersecurity Policy | [CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) | Parent policy - this standard is subordinate |
 | Grid and Control System Standard | [CERG-STD-OT-001](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) | Peer standard - BES Cyber System access provisions apply in addition |
 | IT (Hosted/Cloud/SaaS) Security Standard | [CERG-STD-IT-001](CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) | Peer standard - cloud/SaaS-specific provisions apply in addition |
-| CUI Handling Standard | [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handli
+| CUI Handling Standard | [CERG-STD-CUI-001](CERG-STD-CUI-001_CUI_Handling_Standard.md) | Peer standard - CUI-specific access requirements apply in addition |
+| Access Management Runbook | [CERG-PRC-AC-002](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md) | Operating procedure implementing this standard |
