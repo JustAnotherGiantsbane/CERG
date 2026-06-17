@@ -199,7 +199,7 @@ Not all documents require the same review frequency. Documents are assigned to o
 | **Tier 3 — Stable** | Annual | All Plans (PLN-*), all Templates (TMPL-*), remaining Governance documents (GOV-*), all per-role JD documents, family index documents | Light review; confirm currency; update owner if role changed; verify links |
 
 
-### 4.3 CERG Source-of-Truth Model
+### 4.2 CERG Source-of-Truth Model
 
 The CERG framework defines which system is authoritative for each type of operational data. If two systems disagree, the source of truth wins.
 
@@ -214,7 +214,7 @@ The CERG framework defines which system is authoritative for each type of operat
 | Control implementation status | CB-001 or GRC control catalog | Status is tracked near the control, not in a separate spreadsheet. |
 | Metrics and reporting | BI dashboard or reporting tool | Dashboards are views. The canonical metric definitions are in MTR-001. |
 
-### 4.4 Record Naming Convention
+### 4.3 Record Naming Convention
 
 Operational records (risk register entries, exceptions, findings, etc.) use standard ID formats. These IDs are referenced in CERG artifacts and procedures.
 
@@ -232,7 +232,7 @@ Operational records (risk register entries, exceptions, findings, etc.) use stan
 | Improvement Item | IMPG-YYYY-NNN | IMPG-2026-001 | Program improvement register |
 | Requirement (atomic) | CERG-REQ-DOC-NNN | CERG-REQ-AC-001 | machine-readable/ requirements YAML |
 
-### 4.5 Document Deprecation Policy
+### 4.4 Document Deprecation Policy
 
 Documents in the CERG corpus follow these rules when they are retired or superseded:
 
@@ -243,7 +243,7 @@ Documents in the CERG corpus follow these rules when they are retired or superse
 - **Retired documents remain in the repository.** They are not deleted. They are retained for audit trail and cross-reference integrity.
 - **Retired artifacts may still be referenced** by older versions of documents. The referencing document should note the retirement in its next review cycle.
 
-### 4.2 Ownership Delegation
+### 4.5 Ownership Delegation
 
 The Owner field in each document's metadata assigns accountability for review initiation and content accuracy. To prevent ownership concentration, the following delegation rules apply:
 
