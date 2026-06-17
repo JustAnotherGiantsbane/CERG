@@ -545,6 +545,21 @@ This ensures that "no single point of failure" is not just a claim about org-cha
 
 ## 11. Operating Model Control
 
+| | |
+|---|---|
+| **Document ID** | CERG-GOV-OM-001 |
+| **Version** | 1.23 |
+| **Status** | Approved |
+| **Classification** | Public |
+| **Owner** | Chief Information Security Officer |
+| **Approved By** | CISO |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Review Cycle** | Annual / Upon Organizational Change |
+| **Next Scheduled Review** | 2027-06-14 |
+| **Frameworks** | NIST CSF 2.0 · NIST 800-53r5 · NIST RMF · ISO 27001 |
+| **Environments** | All in-scope environments |
+
+
 ### Revision History
 
 | **Version** | **Date** | **Author** | **Change Summary** |
