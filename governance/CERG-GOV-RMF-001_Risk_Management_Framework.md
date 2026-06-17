@@ -371,9 +371,9 @@ CERG uses a 5x5 model: likelihood and impact are each rated 1-5, scored, and map
 | 2 | Low | 1 event / 10 - 100 years |
 | 1 | Very Low | <1 event / 100 years |
 
-**Impact (LM) bands.** Calibrated against organizational loss-magnitude reference points. Placeholder dollar bands are provided as starting calibration; the Risk pillar lead refreshes annually with Finance.
+**Impact (LM) bands.** Calibrated against organizational loss-magnitude reference points. The dollar bands below are preliminary defaults requiring organizational calibration; the Risk pillar lead refreshes them annually with Finance using revenue, insurance retention, downtime cost, and regulatory exposure as the basis.
 
-| Score | Label | Loss Magnitude (Placeholder) |
+| Score | Label | Loss Magnitude (preliminary default requiring organizational calibration) |
 |---|---|---|
 | 5 | Catastrophic | >$10M single-event loss; material to financial statements; sustained reputation damage |
 | 4 | Major | $1M - $10M single-event loss; regulatory enforcement action; significant reputation damage |
