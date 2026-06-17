@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.38 |
+| **Version** | 1.39 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -429,7 +429,7 @@ The `machine-readable/` directory contains YAML specifications generated from th
 
 Key artifacts include:
 - `cerg-llm-index.json` — Full local Markdown corpus index for LLM/agent consumption
-- `cerg-manifest.yaml` — Canonical manifest of all 118 governed source artifacts
+- `cerg-manifest.yaml` — Canonical manifest of governed source artifacts
 - `cerg-publication-manifest.yaml` — Publication eligibility separate from lifecycle approval status
 - `cerg-requirements.yaml` — Pilot atomic requirements extracted from 8 normative source documents
 - `cerg-flows.yaml` — Cross-pillar operational flow specifications (7 flows)
@@ -499,7 +499,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.38 |
+| **Version** | 1.39 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-17 |
 | **Classification** | Public |
@@ -516,6 +516,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.39 | 2026-06-17 | Governance Pillar Leader | Removed the hardcoded machine-readable manifest artifact count so the catalog does not drift when templates are added. |
 | 1.38 | 2026-06-17 | Governance Pillar Leader | Registered CERG-TMPL-AI-003 as the AI system and model register template. |
 | 1.37 | 2026-06-17 | Governance Pillar Leader | Registered CERG-TMPL-AI-002 as the sanctioned AI tools register template. |
 | 1.36 | 2026-06-17 | Governance Pillar Leader | Registered CERG-TMPL-AI-001 as the standalone AI intake and sanctioning template. |
