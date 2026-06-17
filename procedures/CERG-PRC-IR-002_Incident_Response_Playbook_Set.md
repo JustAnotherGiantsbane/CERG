@@ -21,7 +21,7 @@
 | **Status** | External Interface |
 | **Classification** | External Interface |
 | **Owner** | Standing IR Team / Incident Commander |
-| **Parent Policy** | N/A — adjacent-function artifact; cross-referenced by CERG for integration |
+| **Parent Policy** | Not applicable; adjacent-function artifact cross-referenced by CERG for integration |
 | **Supporting Documents** | [`CERG-GOV-OM-001`](../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-PLN-IR-001`](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md) · [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [`CERG-STD-MSG-001`](../standards/CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md) · [`CERG-STD-RES-001`](../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) · [`CERG-STD-DG-001`](../standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) · [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
 | **Review Cycle** | Annual / After significant incident or IR plan change |
 | **Frameworks** | [NIST 800-61r2](https://csrc.nist.gov/pubs/sp/800/61/r2/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (IR, AU, SI, CP) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (RESPOND, RECOVER) |
@@ -675,7 +675,7 @@ Reviewed by: [Incident Commander, CISO]
 | **Classification** | External Interface |
 | **Owner** | Standing IR Team / Incident Commander |
 | **Approved By** | CISO |
-| **Parent Policy** | N/A — adjacent-function artifact; cross-referenced by CERG for integration |
+| **Parent Policy** | Not applicable; adjacent-function artifact cross-referenced by CERG for integration |
 | **Review Cycle** | Annual; and after significant incident or IR plan change |
 | **Next Scheduled Review** | 2027-05-22 |
 | **Frameworks** | NIST 800-61r2; NIST 800-53r5 (IR, AU, SI, CP); NIST CSF 2.0 (RESPOND, RECOVER) |
