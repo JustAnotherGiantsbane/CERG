@@ -543,6 +543,22 @@ The register is not a parallel system to these programs. It is the connective ti
 
 ## 12. Procedure Control
 
+| | |
+|---|---|
+| **Document ID** | CERG-PRC-RM-001 |
+| **Version** | 1.01 |
+| **Status** | Approved |
+| **Classification** | Public |
+| **Owner** | Risk Register Owner |
+| **Approved By** | CISO |
+| **Parent Policy** | [CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Review Cycle** | Annual |
+| **Next Scheduled Review** | 2027-06-14 |
+| **Frameworks** | NIST CSF 2.0 · NIST 800-53r5 · NIST RMF |
+| **Regulations** | NERC-CIP · CMMC L2 · SOX ITGC |
+| **Environments** | All in-scope environments |
+
+
 ### Revision History
 
 | **Version** | **Date** | **Author** | **Change Summary** |
