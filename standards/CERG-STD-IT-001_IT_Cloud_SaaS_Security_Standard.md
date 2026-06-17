@@ -307,6 +307,15 @@ No control in this standard may be waived without a documented exception. Except
 
 ## 12. Document Control
 
+| | |
+|---|---|
+| **Document ID** | CERG-STD-IT-001 |
+| **Version** | 1.21 |
+| **Approved By** | CISO |
+| **Next Review** | Annual / Upon Significant Change / Material Cloud Service Adoption |
+| **Change Log** | 1.0 - Initial publication. Owned data center, leased, IaaS, PaaS, SaaS. |
+
+
 ### Revision History
 
 | **Version** | **Date** | **Author** | **Change Summary** |
