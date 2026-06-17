@@ -31,16 +31,16 @@
 4. [BES Cyber System Categorization Procedure](#4-bes-cyber-system-categorization-procedure)
 5. [ESP / EAP Topology Documentation](#5-esp--eap-topology-documentation)
 6. [NERC-CIP Evidence Library Procedure (`CERG-GOV-CIP-001`)](#6-nerc-cip-evidence-library-procedure-cerg-gov-cip-001)
-7. [OT Exposure Management Procedure (`CERG-PRC-VM-001`)](#7-ot-vulnerability-management-procedure-cerg-proc-vm-002)
-8. [BES Cyber System Access Management Procedure (`CERG-PRC-AC-002-BES`)](#8-bes-cyber-system-access-management-procedure-cerg-proc-ac-002-bes)
+7. [OT Exposure Management Procedure (`CERG-PRC-VM-001`)](#7-ot-exposure-management-procedure-cerg-prc-vm-001)
+8. [BES Cyber System Access Management Overlay](#8-bes-cyber-system-access-management-overlay)
 9. [CIP Deviation and Mitigation Plan Template (`CERG-TMPL-CIP-001`)](#9-cip-deviation-and-mitigation-plan-template-cerg-tmpl-cip-001)
-10. [IT/OT Convergence Security Architecture Guideline (`CERG-STD-OT-001 (planned IT/OT convergence architecture guideline to be registered as CERG-GL-OT-001 in future catalog amendment)`)](#10-itot-convergence-security-architecture-guideline-cerg-gl-ot-001)
+10. [IT/OT Convergence Security Architecture Guideline](#10-itot-convergence-security-architecture-guideline)
 11. [CIP-013 Supply Chain Risk Management Plan](#11-cip-013-supply-chain-risk-management-plan)
 12. [CIP-009 Recovery Plan Package](#12-cip-009-recovery-plan-package)
-13. [CIP-015 INSM, Forward-Looking Integration](#13-cip-015-insm--forward-looking-integration)
-13. [Operating Cadence and Reporting](#13-operating-cadence-and-reporting)
-14. [Regulatory and Framework Alignment Summary](#14-regulatory-and-framework-alignment-summary)
-15. [Document Control](#15-document-control)
+13. [CIP-015 INSM, Forward-Looking Integration](#13-cip-015-insm-forward-looking-integration)
+14. [Operating Cadence and Reporting](#14-operating-cadence-and-reporting)
+15. [Regulatory and Framework Alignment Summary](#15-regulatory-and-framework-alignment-summary)
+16. [Document Control](#16-document-control)
 
 ---
 
@@ -169,9 +169,9 @@ The enterprise exposure management procedure ([`CERG-PRC-VM-001`](../procedures/
 
 ---
 
-## 8. BES Cyber System Access Management Procedure (`CERG-PRC-AC-002-BES`)
+## 8. BES Cyber System Access Management Overlay
 
-CIP-004 R4 / R5 obligations operationalized as an overlay on [`CERG-PRC-AC-002`](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md).
+CIP-004 R4 / R5 obligations are operationalized as an embedded BES overlay on [`CERG-PRC-AC-002`](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md).
 
 ### 8.1 Authorization
 
@@ -242,9 +242,9 @@ G. RECORD
 
 ---
 
-## 10. IT/OT Convergence Security Architecture Guideline (`CERG-STD-OT-001 (planned IT/OT convergence architecture guideline to be registered as CERG-GL-OT-001 in future catalog amendment)`)
+## 10. IT/OT Convergence Security Architecture Guideline
 
-The convergence guideline informs architecture decisions where IT systems touch OT systems. It is referenced by [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) for any project crossing the IT/OT boundary.
+This embedded convergence guideline informs architecture decisions where IT systems touch OT systems. It is the V1 authoritative location for the planned standalone `CERG-GL-OT-001` guideline until that reserved artifact is promoted in a future catalog amendment. It is referenced by [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) for any project crossing the IT/OT boundary.
 
 ### 10.1 Foundational Patterns
 
@@ -317,7 +317,24 @@ Operationalized in coordination with [`CERG-STD-RES-001`](../standards/CERG-STD-
 | R3 Lessons learned and plan update within 90 days | [`CERG-STD-RES-001`](../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) Section 5.2 step 8 |
 
 ---
-## 13. Operating Cadence and Reporting
+
+## 13. CIP-015 INSM, Forward-Looking Integration
+
+CIP-015 is tracked as a forward-looking internal network security monitoring (INSM) obligation. Until it becomes enforceable for the organization, CERG treats it as a readiness overlay rather than an audit assertion.
+
+### 13.1 Readiness Activities
+
+- Map existing OT telemetry sources to expected INSM coverage objectives.
+- Identify ESP / EAP monitoring gaps that would affect Medium or High Impact BES Cyber Systems.
+- Route monitoring backlog items through [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) and the risk register when coverage cannot be implemented immediately.
+- Preserve evidence of readiness decisions in the Evidence Library (Section 6).
+
+### 13.2 Cutover Trigger
+
+When CIP-015 becomes applicable, Governance updates this package, the OT standard, the logging and monitoring standard, and the compliance calendar with enforceable evidence requirements and cadence.
+
+---
+## 14. Operating Cadence and Reporting
 
 | **Activity** | **Cadence** |
 |---|---|
@@ -336,7 +353,7 @@ Operationalized in coordination with [`CERG-STD-RES-001`](../standards/CERG-STD-
 
 ---
 
-## 14. Regulatory and Framework Alignment Summary
+## 15. Regulatory and Framework Alignment Summary
 
 | **Regulation / Framework** | **Where in This Package** |
 |---|---|
@@ -358,7 +375,7 @@ Operationalized in coordination with [`CERG-STD-RES-001`](../standards/CERG-STD-
 
 ---
 
-## 15. Document Control
+## 16. Document Control
 
 | | |
 |---|---|
