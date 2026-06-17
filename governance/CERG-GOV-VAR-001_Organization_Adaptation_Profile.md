@@ -66,9 +66,9 @@ Adaptation is the act of replacing variable content with an organization's own v
 
 The published corpus is left intact and generic. The render tool produces a separate, organization-specific output. The source stays the master; the output is an export, exactly as [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) requires.
 
-> **Why Not Just Edit the 28 Documents**
+> **Why Not Just Edit the Source Documents**
 >
-> Tokenizing all 28 published, approved documents in place is a corpus-wide normalization pass that touches every artifact and changes every revision history. That is its own scoped piece of work, not a side effect of adoption. Until it is done, the phrase map carries the load: it adapts the existing corpus at render time without mutating a single approved source file. New documents use tokens natively from day one.
+> Tokenizing the approved source corpus in place is a corpus-wide normalization pass that touches many artifacts and changes revision history. That is its own scoped piece of work, not a side effect of adoption. Until it is done, the phrase map carries the load: it adapts the existing corpus at render time without mutating approved source files. New documents use tokens natively from day one.
 
 ---
 
