@@ -17,7 +17,7 @@
 
 **Job Family:** JF-GOVCOMP — Governance & Compliance
 **Job Level Range:** L1-L4 (CERG Grade S1-S4/M3)
-**CERG Canonical Role:** Evidence Librarian (OM-001 §6.1)
+**CERG Canonical Role:** Evidence Librarian ([CERG-GOV-OM-001](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1)
 
 ---
 
@@ -50,7 +50,7 @@ The Evidence Librarian owns the cross-framework evidence library. They collect, 
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
-Grade-level responsibility differentiation for this role is defined in [JA-001 §7](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) (Role-to-Grade Mapping). The grade definitions (S1-S4 SME Track, M1-M4 Management Track) and leveling dimensions are in JA-001 §4-5. Behavioral anchors at each grade are in [CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md).
+Grade-level responsibility differentiation for this role is defined in [JA-001 §7](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) (Role-to-Grade Mapping). The grade definitions (S1-S4 SME Track, M1-M4 Management Track) and leveling dimensions are in [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §4-5. Behavioral anchors at each grade are in [CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md).
 
 ## 5. Required Knowledge, Skills, and Abilities (KSAs)
 
@@ -110,7 +110,7 @@ KPIs for this role are defined in [MTR-001](../../governance/CERG-GOV-MTR-001_Me
 
 ## 9. Competency Expectations by Grade
 
-Competency expectations for this role follow the Governance pillar behavioral anchors from [CMP-001]. Each cell describes observable behavior demonstrating the competency at that grade. Anchors are cumulative: an L3 expectation includes the L1 and L2 anchors.
+Competency expectations for this role follow the Governance pillar behavioral anchors from [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md). Each cell describes observable behavior demonstrating the competency at that grade. Anchors are cumulative: an L3 expectation includes the L1 and L2 anchors.
 
 | Competency Domain (CMP-001) | L1 Expectation | L2 Expectation | L3 Expectation | L4 Expectation |
 |-----------------------------|----------------|----------------|----------------|----------------|
@@ -123,7 +123,7 @@ Competency expectations for this role follow the Governance pillar behavioral an
 | Compliance and Regulatory Literacy | Knows the regulatory frameworks in the organization's scope. Can describe the structure and key requirements of each. Correctly applies framework terminology. | Deep knowledge of the regulatory frameworks in their domain. Independently interprets regulatory requirements and maps them to organizational controls. | Authority on their regulatory domain. Interprets ambiguous regulatory guidance and produces defensible positions. Anticipates regulatory changes. | Shapes the organization's regulatory strategy. Engages directly with regulators and industry bodies on regulatory development. |
 | Continuous Learning | Completes assigned training. Pursues foundational certifications. Learns the organization's regulatory landscape. | Maintains current certifications. Tracks regulatory developments and framework updates relevant to their domain. | Pursues advanced certifications. Contributes to the Governance body of knowledge through documented regulatory analysis. | Recognized externally for regulatory or compliance expertise. Contributes to regulatory development, industry standards, or professional certification bodies. |
 
-> **Full Reference:** See [CMP-001] for the complete competency model, including the Management Track addendum (§7) and guidance on using the model for hiring, development, and promotion (§8).
+> **Full Reference:** See [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) for the complete competency model, including the Management Track addendum (§7) and guidance on using the model for hiring, development, and promotion (§8).
 
 ## 10. Success Profile
 
@@ -143,7 +143,7 @@ Cross-family movement options are defined in the [Family-to-Family Career Lattic
 
 ### 11.3 Management Track Option
 
-At L3+ (SME track), a Management track option may be available per [JA-001 §8.1] (SME to Management Transition). Readiness indicators include: consistently sought out for guidance by junior team members, leading cross-functional initiatives without formal authority, and communicating clearly with non-technical stakeholders. The transition is a track change, not a grade promotion — an S3 Advisor moving to M1 Manager carries their technical credibility into the management role. Management competencies are defined in [CMP-001 §7]. See [JA-001 §5] for Management grade definitions (M1-M4) and §9 (Span of Control and Team Design) for when to create a management role.
+At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §8.1 (SME to Management Transition). Readiness indicators include: consistently sought out for guidance by junior team members, leading cross-functional initiatives without formal authority, and communicating clearly with non-technical stakeholders. The transition is a track change, not a grade promotion — an S3 Advisor moving to M1 Manager carries their technical credibility into the management role. Management competencies are defined in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §7. See [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §5 for Management grade definitions (M1-M4) and §9 (Span of Control and Team Design) for when to create a management role.
 
 ## 12. Related CERG Documents
 
@@ -186,9 +186,9 @@ At L3+ (SME track), a Management track option may be available per [JA-001 §8.1
 
 ### Review Triggers
 
-- Change to this role's definition in OM-001 §6.1
+- Change to this role's definition in [CERG-GOV-OM-001](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1
 - Change to this role's NICE Work Role mapping in JF-002
-- Change to this role's grade range in JA-001 §7
+- Change to this role's grade range in [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §7
 - Direction from the CISO
 
 Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining approval for all changes.

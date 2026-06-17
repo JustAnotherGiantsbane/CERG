@@ -96,7 +96,7 @@ The current three-pillar structure (Engineering, Risk, Governance) works well fo
 - **Risk Pillar** contains two distinct functional families: JF-RISKOPS (exposure management, threat intel, detection — operations work) and adjacent roles that are more incident-response-oriented (JF-ADJUNCT). The current structure puts Detection Engineer and Threat Intelligence Analyst in the same pillar as Vendor Risk Analyst, but their day-to-day work, certifications, and career paths differ significantly. This proposal keeps them in the same pillar operationally but gives them distinct family designations for career development.
 - **Governance Pillar** maps cleanly to JF-GOVCOMP (one family = one pillar). No change needed.
 
-The distinction between JF-RISKOPS and JF-ADJUNCT is important: Incident Commander and Lead Investigator are NOT CERG roles (they belong to the standing IR team per OM-001 §3.4). They appear in CERG documents only for cross-functional clarity. Giving them their own family makes this boundary explicit in the career architecture.
+The distinction between JF-RISKOPS and JF-ADJUNCT is important: Incident Commander and Lead Investigator are NOT CERG roles (they belong to the standing IR team per [CERG-GOV-OM-001](../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4). They appear in CERG documents only for cross-functional clarity. Giving them their own family makes this boundary explicit in the career architecture.
 
 ---
 
@@ -235,7 +235,7 @@ Progression from one level to the next requires demonstration of capabilities. T
 
 ### Review Triggers
 
-- Addition or retirement of a canonical role in OM-001 §6.1
+- Addition or retirement of a canonical role in [CERG-GOV-OM-001](../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1
 - Change to the NICE Workforce Framework affecting CERG role mappings
 - Revision to JA-001 grade definitions
 - Direction from the CISO

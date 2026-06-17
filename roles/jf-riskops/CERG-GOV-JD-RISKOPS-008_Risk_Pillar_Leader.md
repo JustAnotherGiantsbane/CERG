@@ -17,7 +17,7 @@
 
 **Job Family:** JF-RISKOPS — Risk Operations
 **Job Level Range:** L1-L4 (CERG Grade S1-S4/M3)
-**CERG Canonical Role:** Risk Pillar Leader (OM-001 §6.1)
+**CERG Canonical Role:** Risk Pillar Leader ([CERG-GOV-OM-001](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1)
 
 ---
 
@@ -50,7 +50,7 @@ The Risk Pillar Leader is accountable for the Cyber Risk pillar: the continuous 
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
-Grade-level responsibility differentiation for this role is defined in [JA-001 §7](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) (Role-to-Grade Mapping). The grade definitions (S1-S4 SME Track, M1-M4 Management Track) and leveling dimensions are in JA-001 §4-5. Behavioral anchors at each grade are in [CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md).
+Grade-level responsibility differentiation for this role is defined in [JA-001 §7](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) (Role-to-Grade Mapping). The grade definitions (S1-S4 SME Track, M1-M4 Management Track) and leveling dimensions are in [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §4-5. Behavioral anchors at each grade are in [CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md).
 
 ## 5. Required Knowledge, Skills, and Abilities (KSAs)
 
@@ -110,7 +110,7 @@ KPIs for this role are defined in [MTR-001](../../governance/CERG-GOV-MTR-001_Me
 
 ## 9. Competency Expectations by Grade
 
-Competency expectations for this role follow the Risk pillar behavioral anchors from [CMP-001] with the addition of the Management Track Competency Addendum ([CMP-001 §7]) for leadership-specific domains: People Leadership, Strategic Thinking, Resource and Budget Management, Stakeholder Management, and Organizational Development.
+Competency expectations for this role follow the Risk pillar behavioral anchors from [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) with the addition of the Management Track Competency Addendum ([CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §7) for leadership-specific domains: People Leadership, Strategic Thinking, Resource and Budget Management, Stakeholder Management, and Organizational Development.
 
 | Competency Domain (CMP-001) | L1 Expectation | L2 Expectation | L3 Expectation | L4 Expectation |
 |-----------------------------|----------------|----------------|----------------|----------------|
@@ -123,7 +123,7 @@ Competency expectations for this role follow the Risk pillar behavioral anchors 
 | Compliance and Regulatory Literacy | Knows which regulatory frameworks apply and can describe how Risk assessments support compliance. | Understands the specific regulatory requirements that govern their Risk domain. Produces risk assessments that meet the evidence standards of the relevant frameworks. | Anticipates how regulatory changes will affect the Risk program's scope and cadence. Advises Governance on the risk implications of compliance findings. | Contributes to the organization's regulatory strategy from a risk perspective. Engages with regulators on risk methodology. |
 | Continuous Learning | Completes assigned training. Pursues foundational certifications. Learns the organization's threat landscape. | Maintains current certifications. Tracks the threat actors, TTPs, and vulnerabilities relevant to the organization's industry. | Pursues advanced certifications. Contributes threat research or methodology improvements adopted by the team. Represents the organization in threat-sharing communities. | Recognized externally for risk or threat expertise. Contributes to industry threat intelligence, risk methodology, or detection frameworks. |
 
-> **Full Reference:** See [CMP-001] for the complete competency model, including the Management Track addendum (§7) and guidance on using the model for hiring, development, and promotion (§8).
+> **Full Reference:** See [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) for the complete competency model, including the Management Track addendum (§7) and guidance on using the model for hiring, development, and promotion (§8).
 
 ## 10. Success Profile
 
@@ -143,7 +143,7 @@ Cross-family movement options are defined in the [Family-to-Family Career Lattic
 
 ### 11.3 Management Track Option
 
-At L3+ (SME track), a Management track option may be available per [JA-001 §8.1] (SME to Management Transition). Readiness indicators include: consistently sought out for guidance by junior team members, leading cross-functional initiatives without formal authority, and communicating clearly with non-technical stakeholders. The transition is a track change, not a grade promotion — an S3 Advisor moving to M1 Manager carries their technical credibility into the management role. Management competencies are defined in [CMP-001 §7]. See [JA-001 §5] for Management grade definitions (M1-M4) and §9 (Span of Control and Team Design) for when to create a management role.
+At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §8.1 (SME to Management Transition). Readiness indicators include: consistently sought out for guidance by junior team members, leading cross-functional initiatives without formal authority, and communicating clearly with non-technical stakeholders. The transition is a track change, not a grade promotion — an S3 Advisor moving to M1 Manager carries their technical credibility into the management role. Management competencies are defined in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §7. See [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §5 for Management grade definitions (M1-M4) and §9 (Span of Control and Team Design) for when to create a management role.
 
 ## 12. Related CERG Documents
 
@@ -186,9 +186,9 @@ At L3+ (SME track), a Management track option may be available per [JA-001 §8.1
 
 ### Review Triggers
 
-- Change to this role's definition in OM-001 §6.1
+- Change to this role's definition in [CERG-GOV-OM-001](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1
 - Change to this role's NICE Work Role mapping in JF-002
-- Change to this role's grade range in JA-001 §7
+- Change to this role's grade range in [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §7
 - Direction from the CISO
 
 Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining approval for all changes.

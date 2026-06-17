@@ -17,7 +17,7 @@
 
 **Job Family:** JF-EXEC — Executive Leadership
 **Job Level Range:** L1-L4 (CERG Grade Executive)
-**CERG Canonical Role:** Chief Information Security Officer (CISO) (OM-001 §6.1)
+**CERG Canonical Role:** Chief Information Security Officer (CISO) ([CERG-GOV-OM-001](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1)
 
 ---
 
@@ -50,7 +50,7 @@ The CISO is the senior-most cybersecurity executive, accountable for the organiz
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
-Grade-level responsibility differentiation for this role is defined in [JA-001 §7](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) (Role-to-Grade Mapping). The grade definitions (S1-S4 SME Track, M1-M4 Management Track) and leveling dimensions are in JA-001 §4-5. Behavioral anchors at each grade are in [CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md).
+Grade-level responsibility differentiation for this role is defined in [JA-001 §7](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) (Role-to-Grade Mapping). The grade definitions (S1-S4 SME Track, M1-M4 Management Track) and leveling dimensions are in [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §4-5. Behavioral anchors at each grade are in [CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md).
 
 ## 5. Required Knowledge, Skills, and Abilities (KSAs)
 
@@ -110,9 +110,9 @@ KPIs for this role are defined in [MTR-001](../../governance/CERG-GOV-MTR-001_Me
 
 ## 9. Competency Expectations by Grade
 
-Competency expectations for this role follow the Management Track Competency Addendum ([CMP-001 §7]). The five management-specific domains are: People Leadership, Strategic Thinking, Resource and Budget Management, Stakeholder Management, and Organizational Development. Grade-level expectations (M1-M4) for each domain are in CMP-001 §7. This role is also expected to demonstrate SME competencies in the relevant home pillar at or above S2 level, as defined in CMP-001 §1.
+Competency expectations for this role follow the Management Track Competency Addendum ([CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §7). The five management-specific domains are: People Leadership, Strategic Thinking, Resource and Budget Management, Stakeholder Management, and Organizational Development. Grade-level expectations (M1-M4) for each domain are in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §7. This role is also expected to demonstrate SME competencies in the relevant home pillar at or above S2 level, as defined in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §1.
 
-| CMP-001 §7 Domain | M1 Expectation | M2 Expectation | M3 Expectation | M4 Expectation |
+| [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §7 Domain | M1 Expectation | M2 Expectation | M3 Expectation | M4 Expectation |
 |-------------------|----------------|----------------|----------------|----------------|
 | People Leadership | Conducts regular, meaningful 1:1s. Sets clear expectations. Delivers honest performance feedback promptly. | Develops the Managers reporting to them. Ensures consistent people-management practices. | Builds a leadership bench. Shapes the people strategy. | Accountable for the entire pillar's talent health. Develops next generation of leaders. |
 | Strategic Thinking | Translates pillar goals into actionable team tasks. Prioritizes team work against organizational objectives. | Defines a function strategy and roadmap. Anticipates changes affecting priorities. | Shapes pillar strategy. Identifies emerging organizational needs. | Sets multi-year strategic direction. Aligns pillar with org strategy. |
@@ -120,7 +120,7 @@ Competency expectations for this role follow the Management Track Competency Add
 | Stakeholder Management | Represents the team effectively. Manages stakeholder expectations honestly. | Manages complex stakeholder relationships across functions. | Manages executive stakeholder relationships. Represents CERG externally. | Manages the organization's most critical stakeholder relationships. |
 | Organizational Development | Contributes to team culture and morale. Recognizes contributions publicly. | Builds a positive, high-performance culture within the function. | Shapes organizational culture across the pillar. Leads change initiatives. | Shapes organizational culture across CERG. Designs org model. |
 
-> **Full Reference:** See [CMP-001 §7] for the complete Management Track Competency Addendum. Grade definitions (M1-M4) are in [JA-001 §5]. The role-specific SME competency matrix from the home pillar is available in CMP-001 §4-6 as applicable.
+> **Full Reference:** See [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §7 for the complete Management Track Competency Addendum. Grade definitions (M1-M4) are in [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §5. The role-specific SME competency matrix from the home pillar is available in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §4-6 as applicable.
 
 ## 10. Success Profile
 
@@ -140,7 +140,7 @@ Cross-family movement options are defined in the [Family-to-Family Career Lattic
 
 ### 11.3 Management Track Option
 
-The CISO is an organizational leadership role that sits above the standard SME/Management track duality. See [JA-001 §5.4] (Director Grade M4) for the CISO level definition. Management competencies for leaders are documented in [CMP-001 §7] (Management Track Competency Addendum), including People Leadership, Strategic Thinking, Resource and Budget Management, Stakeholder Management, and Organizational Development.
+The CISO is an organizational leadership role that sits above the standard SME/Management track duality. See [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §5.4 (Director Grade M4) for the CISO level definition. Management competencies for leaders are documented in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §7 (Management Track Competency Addendum), including People Leadership, Strategic Thinking, Resource and Budget Management, Stakeholder Management, and Organizational Development.
 
 ## 12. Related CERG Documents
 
@@ -183,9 +183,9 @@ The CISO is an organizational leadership role that sits above the standard SME/M
 
 ### Review Triggers
 
-- Change to this role's definition in OM-001 §6.1
+- Change to this role's definition in [CERG-GOV-OM-001](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1
 - Change to this role's NICE Work Role mapping in JF-002
-- Change to this role's grade range in JA-001 §7
+- Change to this role's grade range in [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §7
 - Direction from the CISO
 
 Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining approval for all changes.

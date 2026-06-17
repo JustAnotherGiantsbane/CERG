@@ -17,7 +17,7 @@
 
 **Job Family:** JF-ADJUNCT — Incident Response & Investigation
 **Job Level Range:** L1-L4 (CERG Grade S2-S4/M4)
-**CERG Canonical Role:** Incident Commander (OM-001 §6.1)
+**CERG Canonical Role:** Incident Commander ([CERG-GOV-OM-001](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1)
 
 ---
 
@@ -60,7 +60,7 @@
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
-Grade-level responsibility differentiation for this role is defined in [JA-001 §7](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) (Role-to-Grade Mapping). The grade definitions (S1-S4 SME Track, M1-M4 Management Track) and leveling dimensions are in JA-001 §4-5. Behavioral anchors at each grade are in [CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md).
+Grade-level responsibility differentiation for this role is defined in [JA-001 §7](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) (Role-to-Grade Mapping). The grade definitions (S1-S4 SME Track, M1-M4 Management Track) and leveling dimensions are in [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §4-5. Behavioral anchors at each grade are in [CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md).
 
 ## 5. Required Knowledge, Skills, and Abilities (KSAs)
 
@@ -129,7 +129,7 @@ KPIs for this role are defined in [MTR-001](../../governance/CERG-GOV-MTR-001_Me
 
 ## 9. Competency Expectations by Grade
 
-The two Adjacent Incident Response roles are out of scope for the CERG Competency Model ([CMP-001 §1]). Behavioral anchors for these roles follow the Incident Response team's competency framework. For reference, the eight CERG competency domains are listed below; contact the Incident Response team for domain-specific anchors.
+The two Adjacent Incident Response roles are out of scope for the CERG Competency Model ([CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §1). Behavioral anchors for these roles follow the Incident Response team's competency framework. For reference, the eight CERG competency domains are listed below; contact the Incident Response team for domain-specific anchors.
 
 | Competency Domain (CMP-001) | L1 Expectation | L2 Expectation | L3 Expectation | L4 Expectation |
 |-----------------------------|----------------|----------------|----------------|----------------|
@@ -142,7 +142,7 @@ The two Adjacent Incident Response roles are out of scope for the CERG Competenc
 | Compliance and Regulatory Literacy | See IR team framework | See IR team framework | See IR team framework | See IR team framework |
 | Continuous Learning | See IR team framework | See IR team framework | See IR team framework | See IR team framework |
 
-> **Note:** CMP-001 competency domains provide the organizing structure; actual anchor text must be sourced from the Incident Response team's competency framework per OM-001 §3.4.
+> **Note:** CMP-001 competency domains provide the organizing structure; actual anchor text must be sourced from the Incident Response team's competency framework per [CERG-GOV-OM-001](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4.
 
 ## 10. Success Profile
 
@@ -160,7 +160,7 @@ Cross-family movement options are defined in the [Family-to-Family Career Lattic
 
 ### 11.3 Management Track Option
 
-Management track progression for Adjacent roles follows the Incident Response team's career framework, not CERG's. See [OM-001 §3.4] for the Adjacent Function boundary definition. CERG's Management track is documented in [JA-001 §5] (Management Progression: Grade Definitions) and §8.1 (SME to Management Transition).
+Management track progression for Adjacent roles follows the Incident Response team's career framework, not CERG's. See [CERG-GOV-OM-001](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4 for the Adjacent Function boundary definition. CERG's Management track is documented in [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §5 (Management Progression: Grade Definitions) and §8.1 (SME to Management Transition).
 
 ## 12. Related CERG Documents
 
@@ -203,9 +203,9 @@ Management track progression for Adjacent roles follows the Incident Response te
 
 ### Review Triggers
 
-- Change to this role's definition in OM-001 §6.1
+- Change to this role's definition in [CERG-GOV-OM-001](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1
 - Change to this role's NICE Work Role mapping in JF-002
-- Change to this role's grade range in JA-001 §7
+- Change to this role's grade range in [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §7
 - Direction from the CISO
 
 Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining approval for all changes.

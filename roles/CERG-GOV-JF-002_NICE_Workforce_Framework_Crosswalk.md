@@ -104,8 +104,8 @@ Each CERG canonical role is mapped to 1–3 NICE Work Roles. The mapping follows
 
 | CERG Canonical Role | Primary NICE Work Role | Primary NICE Code | NICE Category | Notes |
 |---------------------|----------------------|-------------------|---------------|-------|
-| **Incident Commander** | Cyber Defense Incident Responder | PR-CIR-001 | PR | Not a CERG role per OM-001 §3.4; mapped for cross-reference |
-| **Lead Investigator** | Cyber Defense Incident Responder | PR-CIR-001 | PR | Not a CERG role per OM-001 §3.4; mapped for cross-reference |
+| **Incident Commander** | Cyber Defense Incident Responder | PR-CIR-001 | PR | Not a CERG role per [CERG-GOV-OM-001](../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4; mapped for cross-reference |
+| **Lead Investigator** | Cyber Defense Incident Responder | PR-CIR-001 | PR | Not a CERG role per [CERG-GOV-OM-001](../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4; mapped for cross-reference |
 
 ---
 
@@ -190,7 +190,7 @@ The seven NICE Work Role Categories (NIST SP 800-181r1) with their official desc
 ### Review Triggers
 
 - Update to NIST SP 800-181r1 (NICE Framework)
-- Addition or retirement of a canonical role in OM-001 §6.1
+- Addition or retirement of a canonical role in [CERG-GOV-OM-001](../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1
 - Change in NICE Work Role codes or categories
 - Direction from the CISO
 
