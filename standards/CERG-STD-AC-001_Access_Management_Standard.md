@@ -327,6 +327,15 @@ The following access types shall be treated as privileged and subject to the con
 
 ## 13. Document Control
 
+| | |
+|---|---|
+| **Document ID** | CERG-STD-AC-001 |
+| **Version** | 1.21 |
+| **Approved By** | CISO |
+| **Next Review** | Annual / Upon Significant Change |
+| **Change Log** | 1.0 - Initial publication. Identity, authentication, authorization, lifecycle. |
+
+
 ### Revision History
 
 | **Version** | **Date** | **Author** | **Change Summary** |
