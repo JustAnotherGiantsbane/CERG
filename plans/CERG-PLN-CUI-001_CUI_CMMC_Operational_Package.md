@@ -367,7 +367,7 @@ For cloud / SaaS providers handling CUI that are not FedRAMP-authorized, the equ
 | | |
 |---|---|
 | **Document ID** | CERG-PLN-CUI-001 |
-| **Version** | 1.0 |
+| **Version** | 1.21 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / on regulatory change |
 | **Change Log** | 1.0 - Initial publication. SSP, POA&M, SPRS, boundary, flow map, category register, evidence matrix, readiness, C3PAO logistics, subcontractor register, FedRAMP equivalency. |
