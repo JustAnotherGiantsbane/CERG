@@ -44,4 +44,4 @@ Each per-role document follows this structure:
 
 ## Status
 
-All 27 per-role files are in Draft status (v1.0, 2026-06-11). The sections marked "Placeholder" require manual population with live data from the NICE TKS database (https://www.nist.gov/nice/framework/), MTR-001 canonical metrics, and CMP-001 behavioral anchors.
+All 32 per-role and role-family job description files are Approved. NICE TKS references, KPI alignment, and competency anchors are populated from the NICE Framework dataset, MTR-001 canonical metrics, and CMP-001 behavioral anchors.
