@@ -33,6 +33,7 @@ TYPE_LABELS = {
     "STD": "standard",
     "PRC": "procedure",
     "PLN": "plan",
+    "GL": "guideline",
     "TMPL": "template",
 }
 
