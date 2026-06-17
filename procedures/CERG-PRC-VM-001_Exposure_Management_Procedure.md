@@ -428,6 +428,22 @@ Immediate escalation to CISO:
 
 ## 15. Procedure Control
 
+| | |
+|---|---|
+| **Document ID** | CERG-PRC-VM-001 |
+| **Version** | 2.01 |
+| **Status** | Approved |
+| **Classification** | Public |
+| **Owner** | Exposure Management Lead |
+| **Approved By** | CISO |
+| **Parent Policy** | [CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Review Cycle** | Semi-Annual |
+| **Next Scheduled Review** | 2026-12-17 |
+| **Frameworks** | NIST CSF 2.0 · NIST 800-53r5 |
+| **Regulations** | NERC-CIP · CMMC L2 · SOX ITGC |
+| **Environments** | All in-scope environments |
+
+
 ### Revision History
 
 | Version | Date | Author | Change Summary |
