@@ -6,16 +6,7 @@
 ---
 
 | | |
-|---
-> **ADJACENT FUNCTION — NOT A CERG-OWNED DOCUMENT**
->
-> This artifact belongs to the standing Incident Response team, not to CERG. Per [OM-001 §3.4](../governance/CERG-GOV-OM-001_CERG_Operating_Model.md), CERG is not responsible for Incident Response operations, the IR plan itself, regulatory notification clocks, or exercise management. CERG provides a liaison to the IR team and maintains this document in the repository for cross-functional integration only.
->
-> **During an incident:** the standing IR team's procedures and the Incident Commander's authority take precedence over any CERG workflow. CERG's role during incidents is supporting (evidence, reporting, lessons-learned feedback per FLOW-001 F-06), not directing.
->
-> **Ownership:** This document is maintained by the standing IR team. CERG Governance reviews it for cross-reference accuracy only. Changes to IR procedures, notification timelines, or exercise schedules are the IR team's responsibility.
->
-|---|
+|---|---|
 | **Document ID** | CERG-PRC-IR-002 |
 | **Version** | 1.0 |
 | **Status** | External Interface |
@@ -27,6 +18,17 @@
 | **Frameworks** | [NIST 800-61r2](https://csrc.nist.gov/pubs/sp/800/61/r2/final) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (IR, AU, SI, CP) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (RESPOND, RECOVER) |
 | **Regulations** | CMMC L2 / 800-171r3 · NERC-CIP · SOX ITGC · breach notification and contractual obligations where applicable |
 | **Environments** | CERG-facing support to incidents affecting CERG-managed systems, controls, data, and evidence |
+
+---
+
+> **ADJACENT FUNCTION — NOT A CERG-OWNED DOCUMENT**
+>
+> This artifact belongs to the standing Incident Response team, not to CERG. Per [OM-001 §3.4](../governance/CERG-GOV-OM-001_CERG_Operating_Model.md), CERG is not responsible for Incident Response operations, the IR plan itself, regulatory notification clocks, or exercise management. CERG provides a liaison to the IR team and maintains this document in the repository for cross-functional integration only.
+>
+> **During an incident:** the standing IR team's procedures and the Incident Commander's authority take precedence over any CERG workflow. CERG's role during incidents is supporting (evidence, reporting, lessons-learned feedback per FLOW-001 F-06), not directing.
+>
+> **Ownership:** This document is maintained by the standing IR team. CERG Governance reviews it for cross-reference accuracy only. Changes to IR procedures, notification timelines, or exercise schedules are the IR team's responsibility.
+>
 
 ---
 
