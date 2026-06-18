@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## EXPOSURE MANAGEMENT PROCEDURE
 ### From Scanner Observation to Managed Risk · Six-Step Model · Patch Hygiene
 
@@ -473,8 +471,6 @@ Annual review or upon: material tooling change, regulatory SLA change, internal 
 | Metrics Dashboard | CERG-GOV-MTR-001 | EM and PH metrics |
 
 ---
-
-> **SURGE, Cyber Engineering, Risk & Governance**
 >
 > _A scanner report is inventory data. Confirmed exposure is what matters._
 

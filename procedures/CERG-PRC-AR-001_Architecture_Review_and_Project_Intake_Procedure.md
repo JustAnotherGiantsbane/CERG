@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## ARCHITECTURE REVIEW AND PROJECT INTAKE PROCEDURE
 ### Intake · Review · Threat Model · Pre-Production · Handoff · Go-Live Risk Acceptance
 
@@ -514,7 +512,7 @@ Where a diagram is implicit (e.g., a pure SaaS service has no on-prem network), 
 
 ## 11. Templates
 
-The templates below are part of this procedure. The intake form (§5.1), threat model (§6.2), handoff package (§9.1), and go-live risk acceptance (§9.2) above are the authoritative templates. Promotion of any of these to a standalone `CERG-TMPL-AR-*` artifact is tracked in [`CERG-GOV-CAT-001`](../governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) Section 7 as a V1.x roadmap item.
+The templates below are part of this procedure. The intake form (§5.1), threat model (§6.2), handoff package (§9.1), and go-live risk acceptance (§9.2) above are the authoritative templates. Promotion of any of these to a standalone `CERG-TMPL-AR-*` artifact is tracked in [`CERG-GOV-CAT-001`](../governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) as a V1.x planned item.
 
 ---
 

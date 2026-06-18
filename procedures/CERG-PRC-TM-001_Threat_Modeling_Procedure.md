@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## THREAT MODELING PROCEDURE
 ### Design Review · ATT&CK Mapping · Abuse Cases · Control Decisions · Architecture Review Input
 

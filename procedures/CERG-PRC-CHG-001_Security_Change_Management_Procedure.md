@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## SECURITY CHANGE MANAGEMENT PROCEDURE
 ### Change Security Review · Emergency Changes · Control Impact · SOX ITGC Linkage
 

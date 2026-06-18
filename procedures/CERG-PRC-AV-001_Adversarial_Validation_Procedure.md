@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## ADVERSARIAL VALIDATION PROCEDURE
 ### Pen Test · Red Team · Purple Team · Cloud Attack Sim · App Test · OT Safety · Finding-to-Closure
 

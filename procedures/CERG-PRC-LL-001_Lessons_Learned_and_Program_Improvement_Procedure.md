@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## LESSONS LEARNED AND PROGRAM IMPROVEMENT PROCEDURE
 ### After-Action Intake · Quarterly Aggregation · Improvement Pipeline · Verification · Improvement Register
 

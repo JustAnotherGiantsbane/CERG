@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## THREAT INTELLIGENCE PROCEDURE
 ### Sources · Intake · Relevance · Dissemination · Action Tracking · Program Reprioritization · External Collaboration
 
