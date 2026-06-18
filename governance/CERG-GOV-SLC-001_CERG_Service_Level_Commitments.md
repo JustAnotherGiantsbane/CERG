@@ -89,11 +89,23 @@ The turnaround values below are **preliminary defaults requiring organizational 
 
 ### 3.4 Program Oversight and Risk Decisions (Governance-Led, OM-001 §5.4)
 
-| Request type | Tier / trigger | CERG commitment (preliminary default) | Escalation if missed | Metric |
-|---|---|---|---|---|
-| Exception / risk-acceptance request intake | All | Acknowledge and route to the correct approver within 3 business days | Risk Register Owner | SR-004 |
+|| Request type | Tier / trigger | CERG commitment (preliminary default) | Escalation if missed | Metric |
+|---|---|---|---|---|---|
+|| Exception / risk-acceptance request intake | All | Acknowledge and route to the correct approver within 3 business days | Risk Register Owner | SR-004 |
 
 > **Intake clock, not decision clock.** The commitment in §3.4 is to acknowledge and route the request promptly. The decision authority and the substantive risk judgment remain with the approver named in [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. SLC commitments govern CERG's responsiveness; they never compress or override a risk decision.
+
+### 3.5 Adoption-Phase SLA Targets
+
+The commitment values in §3.1–§3.4 are mature-program targets. New adopters progress through adoption gates; SR metrics use the phase-adjusted targets below until the program reaches Gate 3. Phase context is reported on the CISO Dashboard.
+
+| Phase | Architecture Review (SR-001) | Advisory Response (SR-002) | Intake Disposition (SR-003) | Time-to-Coverage (SR-005) |
+|-------|----------------------------|---------------------------|----------------------------|--------------------------|
+| **Gate 1 (Spine, 0–90 days)** | 15 business days | 10 business days | 15 business days | 15 business days |
+| **Gate 2 (Operating, 90–180 days)** | 10 business days | 5 business days | 10 business days | 10 business days |
+| **Gate 3+ (Governed / Adaptive)** | Per §3.1 (10 / 7 / 5 business days by tier) | Per §3.3 (3 business days) | Per §3.1 / §3.3 | Per §3.2 (5 business days) |
+
+> **Phase Advancement.** Advancement from one gate to the next is recorded in the adoption gates document ([`CERG-GOV-IMP-005`](CERG-GOV-IMP-005_Adoption_Gates.md)) and communicated to the Cyber Oversight Group. SR metric reporting switches to the next phase target upon confirmation of gate transition.
 
 ---
 
