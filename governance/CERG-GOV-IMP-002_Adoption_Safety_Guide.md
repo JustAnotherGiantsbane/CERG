@@ -48,6 +48,8 @@ Before you fork, edit, or adopt any CERG artifact as authoritative, you must hav
 
 If any of these are missing, do not adopt CERG as your authoritative operating model. Use it as a planning reference until they exist. Adopting CERG without these prerequisites will produce approved documents that nobody can actually operate.
 
+Before adopting, read at least one [Day in the Life story](../examples/day-in-the-life/README.md). Stories are illustrative, not normative, but they show what the spine actually looks like when two or three people run it under real pressure. If the story's rhythm does not fit your organization, the spine will not either.
+
 ---
 
 ## 2. What Not to Adopt Yet
