@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## EDGE REGISTER
 ### The Organizational Edge Is No Longer Only IP Space · Six Edge Types · Defend What's Actually Reachable
 
@@ -219,8 +217,6 @@ Annual review or upon: material change to vendor population, SaaS portfolio, net
 | Exposure Management Procedure | CERG-PRC-VM-001 | Exposure discovery feeds network and software supply edge assessment |
 
 ---
-
-> **SURGE, Cyber Engineering, Risk & Governance**
 >
 > _Know your edge. Manage it deliberately. Never be surprised._
 

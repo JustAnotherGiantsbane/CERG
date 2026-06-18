@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## DOCUMENT AUTHORING AND STYLE GUIDE
 ### House Voice · Metadata · Structure · Cross-References · Skeleton · Quality Gates
 
@@ -114,7 +111,7 @@ Use this field set unless a sibling document of the same type uses a clearly est
 | Classification | Use `Public` unless the artifact contains sensitive operational detail. |
 | Owner | Use a canonical role from `CERG-GOV-OM-001` or an already established artifact owner. |
 | Parent Policy / Parent Document / Parent Plan | Link to the governing artifact. |
-| Supporting Documents | Link only to cataloged or roadmap-reserved artifacts. |
+| Supporting Documents | Link only to cataloged or planned artifacts. |
 | Review Cycle | Use concrete cadence and trigger conditions. |
 | Frameworks | Cite major frameworks that shape the artifact. |
 | Regulations | List applicable regulatory drivers or `Cross-cutting`. |
@@ -197,11 +194,11 @@ Examples of role discipline:
 
 The catalog's rules govern. This guide repeats the operational version for authors:
 
-1. Link only to artifacts in the catalog or roadmap.
+1. Link only to artifacts in the catalog (approved or planned).
 2. Prefer Document ID over title in prose.
 3. Use relative Markdown links to repo files.
 4. Mark planned artifacts as `(Planned, V1.x)` or `(Planned, V2)`.
-5. Do not cite a file that does not exist unless it is in the roadmap.
+5. Do not cite a file that does not exist unless it is in the catalog as a planned artifact.
 6. If an artifact is newly created, amend the catalog in the same batch.
 7. If a related document is out of scope, state the boundary instead of inventing a fake artifact.
 
@@ -301,7 +298,6 @@ Rules:
 Copy this skeleton for new substantive artifacts.
 
 ```markdown
-# SURGE: Cyber Engineering, Risk & Governance
 
 ## [DOCUMENT TITLE]
 ### [Subtitle: Topic · Topic · Topic]
@@ -442,7 +438,7 @@ When a new framework revision is published (e.g., NIST 800-53 Rev 6, NIST 800-17
 
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
-| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Authoritative ID, catalog, status, roadmap, and cross-reference rule source |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Authoritative ID, catalog, status, and cross-reference rule source |
 | CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role roster source |
 | Consolidated Roles and RACI Instrument | [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | RACI and role assignment source |
 | Organization Adaptation Profile | [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) | Org-token and rendering guidance |

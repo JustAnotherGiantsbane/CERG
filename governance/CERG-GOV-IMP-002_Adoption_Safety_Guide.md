@@ -403,7 +403,7 @@ When you tailor CERG, some changes are safe. Some are dangerous. This section de
 
 You can (and should) change these without compromising the framework's integrity:
 
-- **Organization name and branding** — replace "SURGE" or the utility example with your organization
+- **Organization name and branding** — replace "CERG" or the utility example with your organization
 - **Role assignments** — assign canonical roles to actual people or job titles
 - **Tool names** — replace generic references with your actual tools
 - **Regulatory scope** — adopt only the regulatory packages that apply; defer or remove the rest

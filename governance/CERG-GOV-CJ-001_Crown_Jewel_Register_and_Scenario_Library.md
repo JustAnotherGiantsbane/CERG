@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## CROWN JEWEL REGISTER AND LOSS SCENARIO LIBRARY
 ### What Would End Us, and Who Defends Each Chain End-to-End
 

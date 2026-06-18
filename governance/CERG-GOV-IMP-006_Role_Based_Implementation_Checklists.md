@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## ROLE-BASED IMPLEMENTATION CHECKLISTS
 ### First 48 Hours · First 30 Days · First 90 Days
 

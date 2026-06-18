@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## TRAINING, DEVELOPMENT, AND CERTIFICATION FRAMEWORK
 ### Certification Matrix · Development Curriculum · Budget Guidance · Cross-Training
 

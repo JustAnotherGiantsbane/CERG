@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## WORKFORCE PLANNING AND CAPACITY MODEL
 ### Staffing Methodology · Workload Drivers · Scaling Guidance
 

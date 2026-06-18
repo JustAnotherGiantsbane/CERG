@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## ANNUAL SECURITY AND GOVERNANCE CALENDAR
 ### Program Cadence · Control Reviews · Audit Readiness · Exercises · Board Reporting
 
@@ -179,7 +176,7 @@ The annual rhythm resets the program. It includes:
 - annual assurance plan;
 - annual tabletop and recovery exercises;
 - annual review of regulated-scope requirements;
-- budget, staffing, and roadmap input;
+- budget, staffing, and program planning input;
 - board / executive annual summary.
 
 Annual work should not wait until Q4. Q4 is for closeout and next-year planning, not for discovering that the year's required evidence was never collected.
@@ -210,7 +207,7 @@ Calendar maintenance includes:
 
 - annual confirmation of all recurring activities;
 - monthly review of upcoming activities due in the next 60 days;
-- quarterly reconciliation against the document catalog and roadmap;
+- quarterly reconciliation against the document catalog and planned artifacts;
 - update after any new artifact introduces a review cycle or evidence cadence;
 - removal of activities that are retired by approved catalog amendment.
 

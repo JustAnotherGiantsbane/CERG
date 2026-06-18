@@ -63,7 +63,7 @@ This policy sits at the top of the cybersecurity governance hierarchy. Subordina
 
 ## 2. The CERG Operating Model
 
-Cybersecurity operations are organized into three tightly coupled pillars under the Cyber Engineering, Risk, and Governance (CERG) framework, collectively known as SURGE. This model consolidates the core security work of the organization, eliminates structural silos, and produces Adaptive-tier maturity as defined by the NIST Cybersecurity Framework.
+Cybersecurity operations are organized into three tightly coupled pillars under the Cyber Engineering, Risk, and Governance (CERG) framework. This model consolidates the core security work of the organization, eliminates structural silos, and produces Adaptive-tier maturity as defined by the NIST Cybersecurity Framework.
 
 | **Engineering** | **Risk** | **Governance** |
 | -------------------------------- | ------------------------ | --------------------- |
@@ -89,7 +89,7 @@ The following terms are used throughout this policy and all subordinate document
 |---|---|
 |**Asset**|Any information system, operational technology device, application, data repository, or network component owned, operated, leased, or contracted by the organization. Includes physical and virtual instances across all environments.|
 |**BES Cyber System**|A grouping of BES Cyber Assets that perform one or more reliability tasks for a functional entity, as defined by NERC-CIP CIP-002.|
-|**CERG / SURGE**|The Cyber Engineering, Risk, and Governance operating model. The three-pillar security function responsible for building secure systems, managing exposure, and governing the security program.|
+|**CERG**|The Cyber Engineering, Risk, and Governance operating model. The three-pillar security function responsible for building secure systems, managing exposure, and governing the security program.|
 |**CUI**|Controlled Unclassified Information. Information the Government creates or possesses, or that an entity creates or possesses for or on behalf of the Government, that law, regulation, or Government-wide policy requires or permits an agency to handle using safeguarding or dissemination controls (32 CFR Part 2002).|
 |**DISH**|**D**efensive **I**nfrastructure **S**ystem **H**ardening. The CERG-published set of secure configuration baselines applied to in-scope assets per asset class. Authoritative baselines are maintained in [`CERG-STD-CFG-001`](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md).|
 |**Environment**|The hosting and operational context of an asset: owned data center, leased data center, cloud infrastructure (IaaS/PaaS), SaaS platform, or contractor-managed facility.|

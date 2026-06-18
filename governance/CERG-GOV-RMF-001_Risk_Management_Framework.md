@@ -1,4 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
 ## CERG Risk Management Framework
 | | |
 |---|---|
@@ -37,7 +36,7 @@
 
 ## 1. Purpose and Scope
 
-The CERG Risk Management Framework (CERG-RMF) defines how SURGE, the Cyber Engineering, Risk, and Governance function, identifies, assesses, treats, and monitors cybersecurity risk across the enterprise. It is the connective tissue between the three CERG pillars and the foundational document that gives every risk decision a shared vocabulary, a shared process, and a clear owner.
+The CERG Risk Management Framework (CERG-RMF) defines how CERG, the Cyber Engineering, Risk, and Governance function, identifies, assesses, treats, and monitors cybersecurity risk across the enterprise. It is the connective tissue between the three CERG pillars and the foundational document that gives every risk decision a shared vocabulary, a shared process, and a clear owner.
 
 This framework is purpose-built to:
 

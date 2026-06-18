@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## PROGRAM IMPROVEMENT REGISTER
 ### Register Schema · Lifecycle · Integration · Reporting · Operating Procedure
 

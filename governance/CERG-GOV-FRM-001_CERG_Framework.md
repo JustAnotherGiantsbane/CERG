@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## The CERG Framework
 
 ### A Scalable, Adaptive Cybersecurity Operating Model
@@ -78,7 +75,7 @@ CERG operates as one of three functional groups within the Cybersecurity departm
 
 |Function|Teams / Scope|
 |---|---|
-|**SURGE (CERG)**|Engineering · Risk · Governance|
+|**CERG**|Engineering · Risk · Governance|
 |**Security Awareness**|Training programs · Phishing simulations · Culture campaigns|
 |**Incident Response**|SOC / detection · Threat hunting · IR planning & execution|
 |**CISO**|Strategy & vision · Executive & board reporting · Budget & resource authority|

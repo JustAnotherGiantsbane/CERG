@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## JOB ARCHITECTURE AND GRADE FRAMEWORK
 ### Grade Definitions · Progression Ladders · Leveling Guide · Career Pathing
 

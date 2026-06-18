@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## PERFORMANCE MANAGEMENT AND PROMOTION FRAMEWORK
 ### Evaluation Cadence · Calibration · Promotion Process · Documentation Standards
 

@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## CERG OPERATING MODEL
 ### Pillar Structure · Engagement Models · Staffing · Interaction Patterns
 

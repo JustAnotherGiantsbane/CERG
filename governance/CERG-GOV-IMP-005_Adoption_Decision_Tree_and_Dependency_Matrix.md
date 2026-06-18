@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## ADOPTION DECISION TREE AND DEPENDENCY MATRIX
 ### Scope Selection · Safe Tailoring · Required Companion Artifacts
 
@@ -271,7 +269,7 @@ Exit criteria:
 - Control effectiveness tested.
 - Threat intelligence changes detection or priorities.
 - Lessons learned produce control or procedure updates.
-- Maturity assessment drives roadmap.
+- Maturity assessment drives program priorities.
 - Board or executive reporting influences risk and resourcing decisions.
 
 ---

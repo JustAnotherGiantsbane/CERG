@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## CONTRACTOR AND NON-EMPLOYEE STAFF INTEGRATION GUIDE
 ### Role Eligibility · Knowledge Retention · Supervision · Onboarding and Offboarding
 

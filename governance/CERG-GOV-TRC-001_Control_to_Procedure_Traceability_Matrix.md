@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## CONTROL-TO-PROCEDURE TRACEABILITY MATRIX
 ### Control Baseline · Operational Procedure · Evidence · Gap Detection · Audit Routing
 
@@ -139,7 +136,7 @@ Traceability gaps are routed as follows:
 
 | **Gap Type** | **Route To** | **Required Action** |
 |---|---|---|
-| Missing standard or procedure | Governance Pillar Leader | Create roadmap item or amend artifact. |
+| Missing standard or procedure | Governance Pillar Leader | Create planned artifact entry or amend artifact. |
 | Missing evidence owner | Evidence Librarian | Assign owner and evidence location. |
 | Missing risk or exception link | Risk Register Owner | Create or update risk, exception, or acceptance record. |
 | Missing implementation evidence | Responsible control owner | Produce evidence or open POA&M. |
