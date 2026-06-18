@@ -174,6 +174,10 @@ By day 90 every pillar is producing work, the CISO is reporting on a cadence, an
 >
 > At day 90, ask one question: if an auditor walked in, could you show them a signed policy, a current risk register, vulnerability SLAs being met, and a CISO report with a trend line? If yes, CERG is running. If no, find the step that did not happen and finish it before adopting anything new.
 
+> **Gate 2→3 Transition Criteria**
+>
+> Day-90 readiness is a necessary condition for full adoption but not sufficient. Before layering on standards, operational packages, and remaining procedures, the organization should demonstrate stable operating cadence defined in [`CERG-GOV-IMP-005`](CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md) §6 Gate 2→3 Transition Test: consistent risk register reviews, measurable vulnerability SLA performance, at least one completed architecture or project intake disposition, and a standard-layer adoption plan with owners and target dates.
+
 ---
 
 ## 6. Scaling the Model: 5 People to 60
@@ -437,6 +441,7 @@ Organizations adopting CERG should consider adding a "Working in Our CERG Team" 
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.12 | 2026-06-18 | Governance Pillar Leader | Added Gate 2→3 transition criteria reference at §5.3 linking to CERG-GOV-IMP-005 §6 Gate 2→3 Transition Test as prerequisite before standard-layer adoption. |
 | 1.11 | 2026-06-14 | Governance Pillar Leader | Aligned core-standard guidance with the adoption decision tree and clarified that the IR plan is an adjacent-function requirement, not a CERG-owned package. |
 | 1.1 | 2026-05-27 | Cyber Governance | Added §10 Employer Brand and Talent Attraction: CERG employee value proposition, role-specific candidate messaging, structured interview guide aligned to CMP-001 competency domains, candidate evaluation rubric, and careers page guidance. Updated supporting documents to reference JA-001, CMP-001, and JD-001. |
 | 1.0 Draft | 2026-05-21 | Cyber Governance | Initial release. Establishes the adoption model (fork, adapt, run), the Minimum Viable CERG spine, the 30/60/90-day rollout, the role-consolidation approach to scaling, document-adaptation guidance, the first-adoption sign-off workflow, and the adoption pitfalls register. |
