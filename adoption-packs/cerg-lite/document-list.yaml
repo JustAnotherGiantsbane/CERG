@@ -1,0 +1,83 @@
+pack_id: cerg-lite
+name: CERG Lite Adoption Pack
+purpose: Minimum viable CERG adoption for small or early security functions
+status: recommended
+last_updated: '2026-06-18'
+
+adoption_assumptions:
+  team_size: 2-8 active participants
+  required_conditions:
+    - named security owner
+    - executive sponsor or business risk approver
+    - willingness to track records, decisions, evidence, and exceptions
+  caution: One-person teams should use CERG as a planning reference until independent risk approval exists.
+
+mvc_spine:
+  - id: CERG-POL-001
+    path: ../../governance/CERG-POL-001_Cybersecurity_Policy.md
+    role: policy authority
+    first_action: confirm sponsor and local approval path
+  - id: CERG-GOV-FRM-001
+    path: ../../governance/CERG-GOV-FRM-001_CERG_Framework.md
+    role: three-pillar model
+    first_action: map local accountabilities to Engineering, Risk, and Governance
+  - id: CERG-GOV-OM-001
+    path: ../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md
+    role: operating roles and cadence
+    first_action: consolidate roles for the small team
+  - id: CERG-GOV-CAT-001
+    path: ../../governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
+    role: document inventory and naming
+    first_action: mark MVC documents adopted and other documents deferred
+  - id: CERG-GOV-RMF-001
+    path: ../../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
+    role: risk model and acceptance authority
+    first_action: calibrate severity and acceptance authority
+  - id: CERG-PRC-RM-001
+    path: ../../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
+    role: executable risk workflow
+    first_action: open the first risk and define review cadence
+  - id: CERG-TMPL-RM-001
+    path: ../../templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md
+    role: risk register schema and reporting views
+    first_action: create initial register columns and one entry
+  - id: CERG-PRC-VM-001
+    path: ../../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md
+    role: exposure management loop
+    first_action: create the first exposure backlog item
+
+adoption_aids:
+  - id: CERG-GOV-VAR-001
+    path: ../../governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md
+    use: capture local scope, owners, regulators, and tailoring assumptions
+  - id: CERG-GOV-IMP-003
+    path: ../../governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md
+    use: small-team role consolidation and first records
+  - id: CERG-GOV-IMP-006
+    path: ../../governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md
+    use: role-specific first actions
+  - id: CERG-GOV-CAT-002
+    path: ../../governance/CERG-GOV-CAT-002_Record_Catalog.md
+    use: minimum record definitions
+
+first_records:
+  - role assignment record
+  - initial scope statement
+  - evidence index
+  - first risk register entry
+  - first exposure backlog item
+  - decision or exception log entry if needed
+
+safe_deferrals:
+  - detailed job descriptions
+  - workforce planning and succession artifacts
+  - most standards until the matching environment or risk exists
+  - regulated packages until regulatory scope is confirmed
+  - advanced machine-readable schemas
+
+unsafe_deferrals:
+  - risk register
+  - exception process
+  - owner assignment
+  - exposure management procedure
+  - risk acceptance authority
