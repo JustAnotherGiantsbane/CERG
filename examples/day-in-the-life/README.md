@@ -2,7 +2,36 @@
 
 These examples show how CERG flows, roles, records, and evidence come together during normal operations. They are not new requirements. They are narrative walkthroughs that help a reader see how existing CERG artifacts are used in real work.
 
-Use these examples after reading the [Cross-Pillar Operational Flows](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md), [Operating Model](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md), and [Consolidated Roles and RACI Instrument](../../governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md).
+**If you are a leader or SME new to CERG, read Story 2 or Story 3 first.** They show the program producing outcomes under pressure without requiring prior knowledge of every artifact.
+
+**If you are adopting CERG Lite (2-8 people), read [Story 8](#story-8-cerg-lite-maria-and-the-tuesday-scanner-report) first.** It is the only story written for a small team that owns everything.
+
+**If you are running CERG Standard or Regulated, any story applies directly.** Each one names the primary flow, supporting procedures and standards, the pillar that owns each step, and the records and evidence produced.
+
+---
+
+## How to use these stories
+
+- **Onboarding.** Use them to explain how the three pillars interact without requiring every pillar to own every task.
+- **Tabletop exercises.** Run the walkthrough as a scenario. Test whether your local records, evidence stores, and dashboards can support the steps.
+- **Implementation planning.** Use them to identify missing integrations between intake, ticketing, GRC, evidence storage, identity, vulnerability, and reporting systems.
+- **Adoption storytelling.** Adapt the roles, systems, and timing to your [Organization Adaptation Profile](../../governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) without changing the underlying accountability model.
+
+These stories are illustrative, not normative. They may reference documents or stories that are planned for a future V1.x release. Where they do, the link or marker says so.
+
+## Stories at a glance
+
+| # | Story | Primary flow | Best for |
+|---|---|---|---|
+| 1 | New SaaS application | F-02 Project Intake, Architecture Review, and Threat Modeling | Intake and Architecture Review procedure walkthrough |
+| 2 | Critical vulnerability | F-04 Finding to Remediation, Exception, or Residual Risk | Exposure Management and SLA discipline under pressure |
+| 3 | Audit request | F-07 Metrics, Oversight, and Improvement Routing | Evidence quality and audit response |
+| 4 | Major cloud workload launch | F-02 + F-03 + F-05 | Architecture, asset registration, and release routing together |
+| 5 | Privileged access review finds excessive access | F-04 + F-07 | Access reviews and recurring-finding program improvement |
+| 6 | Third-party security incident notification | F-06 + F-04 | Vendor incidents and handoff to IR |
+| 7 | Enterprise AI assistant rollout | F-02 | AI standard application and controlled pilot pattern |
+
+Stories 8, 9, and 10 (CERG Lite, F-01 Control Intent, and the new CISO's first 90 days) live in [Story 8](#story-8-cerg-lite-maria-and-the-tuesday-scanner-report), [Story 9](#story-9-f-01-control-intent-when-the-regulator-changes-the-rule), and [Story 10](#story-10-the-new-cisos-first-90-days).
 
 ---
 
@@ -360,10 +389,3 @@ The pilot launches with user guidance, logging, and a named Business Owner. Afte
 - Metrics updated for AI governance and adoption oversight.
 
 ---
-
-## How to use these stories
-
-- Use them in onboarding to explain how the three pillars interact without requiring every pillar to own every task.
-- Use them in tabletop exercises to test whether local records, evidence stores, and dashboards can support the walkthrough.
-- Use them during implementation planning to identify missing integrations between intake, ticketing, GRC, evidence storage, identity, vulnerability, and reporting systems.
-- Adapt the roles, systems, and timing to your [Organization Adaptation Profile](../../governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) without changing the underlying accountability model.
