@@ -44,26 +44,6 @@
   normative_weight: supporting
   pillar: governance
   summary: Annual Security and Governance Calendar
-- document_id: CERG-GOV-CAL-002
-  title: Calibration Checklist
-  document_type: governance_instrument
-  domain: CAL
-  version: 1.0
-  status: Approved
-  classification: Public
-  publication_profile: public
-  owner_role: 'Governance Pillar Leader (Policy & Standards)'
-  approval_authority: 'Governance Pillar Leader (Policy & Standards)'
-  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
-  source_path: governance/CERG-GOV-CAL-002_Calibration_Checklist.md
-  source_file: CERG-GOV-CAL-002_Calibration_Checklist.md
-  source_hash: b36cf7e13b9f4ef0248be42896074fdcf03592c89081db59c7ef4608c00a1509
-  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAL-002_Calibration_Checklist.md
-  llm_include: true
-  llm_priority: medium
-  normative_weight: supporting
-  pillar: governance
-  summary: Calibration Checklist
 - document_id: CERG-GOV-CAT-001
   title: Document Catalog and Naming Convention
   document_type: governance_instrument
@@ -77,7 +57,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  source_hash: 5acd0efb62e14faa2f31d24fdb9fa579671a43580177f8dce795b29f6e96690f
+  source_hash: 651e0d6296df633b200ffc88b7e761163876e860622eeee05f3be52295a8cf67
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   llm_include: true
   llm_priority: high
@@ -388,7 +368,7 @@
   title: Adoption Decision Tree and Dependency Matrix
   document_type: governance_instrument
   domain: IMP
-  version: 1.03
+  version: 1.02
   status: Approved
   classification: Public
   publication_profile: public
@@ -397,7 +377,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md
   source_file: CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md
-  source_hash: 7c833f7a85ca3876112751bc9b92d4fcd7d52d417fdaabd69d5d9b3e9bb15372
+  source_hash: e88638c860de1bf11166e988f203949fe54e9060690607ee85840e4a784665da
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md
   llm_include: true
   llm_priority: medium
@@ -537,7 +517,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   source_file: CERG-GOV-OM-001_CERG_Operating_Model.md
-  source_hash: 36702dd2fbd32ffb908b428bbec2e70b1e2ad4b5990056b81b9bdb9394665010
+  source_hash: dd7e5df67a19a7a5c8316e851faa7c05d7b8b3283734a7c545d628806bd037a3
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   llm_include: true
   llm_priority: high
@@ -577,7 +557,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md
   source_file: CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md
-  source_hash: ca34f6993fddb2a64ae8faf804b7efbcda2320e03bea5c337a4df486b0c8c3e1
+  source_hash: c3b5a90a642fbff47be803351c48ad57fd1231b8ae0f46aeb9a324e918b853f4
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md
   llm_include: true
   llm_priority: medium
@@ -877,7 +857,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md
   source_file: CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md
-  source_hash: 7a61768aeb4252a2f2571ba88bc07555f579dd61f8f26f084d92054e73ecc09e
+  source_hash: 11529afe860c259e54cd893bf626943b0a18d2a82ada33e001aefd538adbf23c
   canonical_url: https://github.com/m0dernz/CERG/blob/main/plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md
   llm_include: true
   llm_priority: medium
