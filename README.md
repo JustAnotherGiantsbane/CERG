@@ -38,6 +38,7 @@ CERG's core philosophy is that Engineering builds security in early, Risk unders
 | See the authoritative document inventory | [Document Catalog](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) |
 | Find required records and evidence | [Record Catalog](governance/CERG-GOV-CAT-002_Record_Catalog.md) |
 | Understand roles and decision rights | [Operating Model](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) and [RACI](governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) |
+| See CERG in action with operational stories | [Day in the Life examples](examples/day-in-the-life/README.md) |
 | Use CERG with automation or LLMs | [`machine-readable/`](machine-readable/), [llms.txt](https://cerg.nexus/llms.txt), and [llms-full.txt](https://cerg.nexus/llms-full.txt) |
 | Contribute | [CONTRIBUTING.md](CONTRIBUTING.md) |
 
