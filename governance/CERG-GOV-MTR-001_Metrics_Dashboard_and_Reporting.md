@@ -145,6 +145,18 @@ Patch hygiene is a maintenance function distinct from exposure reduction. These 
 | GV-005 | SOX ITGC Control Pass Rate | % of in-scope SOX ITGC tests passed in cycle | SOX program | Quarterly | 100% / 95–100% / < 95% | Reg Posture |
 | GV-006 | Policy/Standard Currency | % of CERG-managed artifacts within review cycle | Document Catalog | Monthly | >= 95% / 85-95% / < 85% | CISO Dashboard |
 
+### 3.6a Control Effectiveness Metrics (Owner: Risk + Governance)
+
+These metrics measure whether controls are actually effective, not just present. They bridge the Control Effectiveness Framework ([`CERG-GOV-CEF-001`](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md)) to the metrics dashboard. All three reference the control baseline ([`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md)) statuses and CEF-001 testing cadence.
+
+| **ID** | **Name** | **Formula** | **Source** | **Refresh** | **G / A / R** | **Reported In** |
+|---|---|---|---|---|---|---|
+| CE-001 | Controls with Current Operating Effectiveness Test | % of `Implemented` controls with a current operating effectiveness test per CEF-001 cadence | CEF-001 testing schedule + CB-001 status | Monthly | >= 90% / 75-90% / < 75% | CISO Dashboard, COG Brief |
+| CE-002 | Critical/High Overlay Controls with E3 Evidence | % of Critical/High overlay controls (§8 of CB-001) that have E3 evidence (independent verification per AUD-001) | CB-001 overlay matrix + AUD-001 evidence tier mapping | Monthly | 100% / 90-100% / < 90% | CISO Dashboard, Reg Posture |
+| CE-003 | Control Testing Completion vs. Annual Plan | % of planned control tests completed within the current testing cycle per CEF-001 annual plan | CEF-001 testing plan + execution log | Quarterly | >= 95% / 80-95% / < 80% | COG Brief |
+
+> **CE Metrics Depend on CB-001 Status Accuracy.** CE-001 and CE-002 are only as meaningful as the control statuses recorded in CB-001 §4. A control marked `Implemented` without current evidence (or marked `Partially Implemented` when it should be `Implemented`) produces misleading CE scores. The annual Security Control Assessment (SCA) and the quarterly control effectiveness review serve as cross-checks on status accuracy.
+
 ### 3.7 Predictive and Leading Indicators (Owner: Governance Pillar Leader, with Risk and Engineering inputs)
 
 The metrics above are lagging indicators : they tell you what already happened. An Adaptive program also tracks predictive indicators that warn of trouble before it materializes. The following leading indicators complement the lagging dictionary. When any leading indicator breaches its defined threshold, it triggers a review at the quarterly Lessons Aggregation Review (PRC-LL-001 Section 5).
@@ -162,6 +174,22 @@ The metrics above are lagging indicators : they tell you what already happened. 
 > **Leading Indicators Are Early Warning, Not Precision Instruments**
 >
 > A leading indicator does not need to be precise to be useful. It needs to change direction before the lagging indicator it predicts, and it needs to produce a signal the program can act on. PL-003 (near-miss rate) rising over three consecutive quarters is a signal even if the exact incident probability is unknown. The program that waits for precision misses the window to act.
+
+#### Minimum Viable Data Pipelines for PL Metrics
+
+Each predictive indicator requires correlation across multiple data sources. The following MVP pipelines define the automated data path that makes each metric continuously producible, not reliant on manual quarterly analysis:
+
+| Metric | MVP Pipeline | Automation Level | Manual Fallback |
+|--------|-------------|-----------------|-----------------|
+| **PL-001** (MTTE vs Patch Velocity) | CISA KEV feed → vulnerability scanner API → patch management API → daily ratio calculation | Full (API-driven) | Monthly CISA KEV download + manual spreadsheet ratio |
+| **PL-002** (Attack Surface Change Rate) | CMDB/asset API → daily snapshot → delta comparison vs prior day | Full (API-driven) | Monthly manual asset export + spreadsheet delta |
+| **PL-003** (Near-Miss Rate) | Near-miss log (PRC-LL-001) → metrics platform → quarterly aggregation | Partial (log capture automated; classification manual) | Quarterly manual review of incident log |
+| **PL-004** (TI-Tilted Risk Score) | Risk register API + TI platform feed → weighted score calculation | Partial (risk data automated; TI confidence manual) | Quarterly Risk + TI lead workshop |
+| **PL-005** (Control vs Threat Coverage) | ATT&CK mapping file (maintained by Detection Engineer) + detection rule registry → quarterly coverage % | Partial (registry automated; mapping manual) | Quarterly ATT&CK mapping review |
+| **PL-006** (Unpatched Vulns with Known Exploit) | CISA KEV feed + vulnerability scanner API → daily intersection (KEV ∩ open vulns) | Full (API-driven) | Weekly CISA KEV check + manual scanner query |
+| **PL-007** (Privileged Account Anomaly Rate) | PAM/UEBA tool API → weekly anomaly % calculation | Full (API-driven) | Monthly PAM report export + manual percentage |
+
+> **MVP Pipeline Priority.** Implement PL-006 (CISA KEV intersection) first — it has the highest automation potential and the clearest operational value. PL-001 and PL-004 follow. PL-003 and PL-005 can remain partially manual until maturity warrants automation investment.
 
 ### 3.8 Knowledge Management Metrics (Owner: Governance Pillar Leader)
 
@@ -185,6 +213,18 @@ These metrics hold CERG accountable to its own service-level commitments ([`CERG
 | SR-004 | SLC Commitment Adherence | % of CERG requests answered within the published SLC-001 commitment | Intake system | Monthly | >= 90% / 75-90% / < 75% | CISO Dashboard, COG Brief, Board |
 | SR-005 | Time-to-Coverage | Median days from asset go-live to exposure-management / CSPM coverage | Exposure pipeline + asset inventory | Monthly | <= 5d / 6-15d / > 15d | COG Brief |
 
+#### Adoption-Phase SLA Targets
+
+New adopters have no baseline. SR metrics are reported with phase context so that Red during initial adoption is understood as transitional, not program failure. SR-004 (SLC Commitment Adherence) uses the phase-adjusted target, not the mature target, for its G/A/R band.
+
+| Phase | Architecture Review (SR-001) | Advisory Response (SR-002) | Intake Disposition (SR-003) | Time-to-Coverage (SR-005) |
+|-------|----------------------------|---------------------------|----------------------------|--------------------------|
+| **Gate 1 (Spine, 0–90 days)** | 15 business days | 10 business days | 15 business days | 15 business days |
+| **Gate 2 (Operating, 90–180 days)** | 10 business days | 5 business days | 10 business days | 10 business days |
+| **Gate 3+ (Governed / Adaptive)** | Per SLC-001 §3.1 | Per SLC-001 §3.3 (3 business days) | Per SLC-001 §3.1 / §3.3 | Per SLC-001 §3.2 (5 business days) |
+
+> **Phase-Context Reporting.** The CISO Dashboard reports SR metrics with a phase-context indicator (e.g., "Gate 1 — transitional target"). The COG Brief includes the phase label in the SR-001 through SR-005 tiles. Phase advancement is recorded in the adoption gates document ([`CERG-GOV-IMP-005`](CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md)).
+
 ---
 
 ## 4. KRI / KPI Data Source Map
@@ -199,7 +239,8 @@ The data source map tells the reporting team where each metric's underlying data
 | CM-001 – CM-005 | Configuration / VM / Backup tools | Cyber Engineering - Platforms / Resilience | Nightly aggregation | Backup tool outage: pull from job log; flag as Amber. |
 | ID-001 – ID-004 | IdP / IGA / PAM | Identity Engineer | Nightly export | Source change: re-baseline before publishing. |
 | TP-001 – TP-004 | TPRM tool | Cyber Risk - TPRM | Daily/weekly export | - |
-| GV-001 – GV-006 | CUI register / OT GRC / SOX program / Document Catalog | Cyber Governance - domain owners | Monthly publish | - |
+|| GV-001 – GV-006 | CUI register / OT GRC / SOX program / Document Catalog | Cyber Governance - domain owners | Monthly publish | - |
+|| PL-001 – PL-007 | See §3.7 MVP pipelines: CISA KEV feed, vulnerability scanner API, patch management API, CMDB, near-miss log, risk register, TI platform, ATT&CK mapping, PAM/UEBA | Governance Pillar Leader (aggregation) + Risk (data sources) | Daily (PL-001, PL-006); Weekly (PL-002, PL-007); Quarterly (PL-003, PL-004, PL-005) | Source API outage: fall back to manual fallback per §3.7 MVP table; flag as Amber data-quality |
 
 > **One Source per Metric**
 >
@@ -386,7 +427,8 @@ The guardrails baked into the metric definitions and reporting views above:
 | ID-001 through ID-004 (Identity) | Identity Engineer | Daily for ID-001; weekly for ID-003; monthly for ID-002, ID-004 | CISO, Identity Engineer |
 | TP-001 through TP-004 (Third-Party) | Vendor Risk Analyst | Monthly; quarterly for TP-004 | Risk Pillar Leader, CISO |
 | GV-001 through GV-006 (Governance) | Governance Pillar Leader | Monthly; quarterly for GV-005 | CISO, Governance Pillar Leader |
-| PL-001 through PL-007 (Predictive) | Governance Pillar Leader, with Risk and Engineering inputs | Monthly for PL-001, PL-002, PL-006; weekly for PL-007; quarterly for PL-003, PL-004, PL-005 | CISO, COG Brief |
+|| PL-001 – PL-007 (Predictive) | Governance Pillar Leader, with Risk and Engineering inputs | Monthly for PL-001, PL-002, PL-006; weekly for PL-007; quarterly for PL-003, PL-004, PL-005 | CISO, COG Brief |
+|| CE-001 – CE-003 (Control Effectiveness) | Risk Pillar Leader + Governance Pillar Leader | Monthly for CE-001, CE-002; quarterly for CE-003 | CISO, COG Brief |
 
 The Governance Pillar Leader owns the metrics program overall and is accountable for dashboard accuracy, timely publication, and threshold governance.
 

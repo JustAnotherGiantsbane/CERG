@@ -1,5 +1,5 @@
 # CERG Publication Eligibility Manifest
-# Generated from document metadata | 121 artifacts
+# Generated from document metadata | 125 artifacts
 # Separates lifecycle approval from public-release eligibility
 
 - document_id: CERG-GOV-AUD-001
@@ -22,6 +22,17 @@
   full_text_public_allowed: true
   redaction_required: false
   approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-18
+
+- document_id: CERG-GOV-CAL-002
+  source_path: governance/CERG-GOV-CAL-002_Calibration_Checklist.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Governance Pillar Leader (Policy & Standards)'
   release_date: 2026-06-18
 
 - document_id: CERG-GOV-CAT-001
@@ -1320,6 +1331,39 @@
   full_text_public_allowed: true
   redaction_required: false
   approved_public_release_by: Risk Pillar Leader
+  release_date: 2026-06-18
+
+- document_id: CERG-TMPL-RM-004
+  source_path: templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Risk Register Owner
+  release_date: 2026-06-18
+
+- document_id: CERG-TMPL-SAAS-001
+  source_path: templates/CERG-TMPL-SAAS-001_SaaS_Evidence_Collection_Checklist.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-18
+
+- document_id: CERG-TMPL-SBOM-001
+  source_path: templates/CERG-TMPL-SBOM-001_SBOM_Evidence_Collection_Checklist.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Vendor Risk Analyst
   release_date: 2026-06-18
 
 - document_id: CERG-TMPL-TPRM-001

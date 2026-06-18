@@ -120,6 +120,205 @@ def parse_catalog(root: Path) -> dict[str, CatalogEntry]:
     return entries
 
 
+ANCHOR_LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)]*#([^)\s]+))\)")
+SECTION_NUM_REF_RE = re.compile(r"§(\d+(?:\.\d+)*)")
+
+
+def heading_to_anchor_id(heading_text: str) -> str:
+    """Convert a markdown heading line to its auto-generated anchor ID.
+
+    GitHub-style anchors use visible link text, lowercase text, removed
+    punctuation, spaces as hyphens, and collapsed consecutive hyphens.
+    """
+    anchor = strip_markdown_links(heading_text).lower().strip()
+    anchor = re.sub(r"[^a-z0-9\s-]", "", anchor)
+    anchor = re.sub(r"\s+", "-", anchor)
+    anchor = re.sub(r"-{2,}", "-", anchor)
+    anchor = anchor.strip("-")
+    return anchor
+
+
+def normalize_anchor(anchor: str) -> str:
+    """Normalize an anchor reference for comparison.
+
+    Collapses consecutive hyphens and strips leading/trailing hyphens
+    so that #1--know-what-you-own and #1-know-what-you-own are treated
+    as equivalent.
+    """
+    a = anchor.lower().strip()
+    a = re.sub(r"-{2,}", "-", a)
+    a = a.strip("-")
+    return a
+
+
+def extract_file_headings(path: Path) -> dict[str, str]:
+    """Extract all section headings from a markdown file.
+
+    Returns dict mapping anchor_id -> original heading text.
+    Also stores normalized versions of each anchor for fuzzy matching.
+    Only top-level (##) and sub-section (###) headings.
+    """
+    headings: dict[str, str] = {}
+    try:
+        text = path.read_text(encoding="utf-8")
+    except Exception:
+        return headings
+    for match in re.finditer(r"^(#{2,3})\s+(.+)", text, flags=re.MULTILINE):
+        heading_text = match.group(2).strip()
+        # Strip trailing {#custom-anchor} if present
+        heading_text = re.sub(r"\s*\{#[^}]+\}\s*$", "", heading_text).strip()
+        anchor_id = heading_to_anchor_id(heading_text)
+        if anchor_id:
+            headings[anchor_id] = heading_text
+            # Also store a normalized version (collapsed hyphens)
+            normalized = normalize_anchor(anchor_id)
+            if normalized != anchor_id and normalized not in headings:
+                headings[normalized] = heading_text
+    return headings
+
+
+def check_anchor_drift(root: Path) -> list[str]:
+    """Validate section anchor references in markdown links and plain text.
+
+    Returns a list of warning strings (not CI-blocking).
+    Checks:
+    1. Same-file anchors: [text](#anchor) -> anchor exists in this file's headings
+    2. Cross-file anchors: [text](file.md#anchor) -> anchor exists in target file's headings
+    3. Heading text drift: link text substantially differs from heading text
+    """
+    root = root.resolve()
+    warnings: list[str] = []
+
+    # Pre-load all file headings for cross-file lookups
+    file_headings_cache: dict[str, dict[str, str]] = {}
+
+    for md_file in sorted(root.rglob("*.md")):
+        rel_parts = md_file.relative_to(root).parts
+        if any(p in IGNORED_DIRS for p in rel_parts):
+            continue
+        try:
+            text = strip_code_blocks(md_file.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+
+        rel_path = str(md_file.relative_to(root))
+
+        # Load this file's own headings
+        own_headings = extract_file_headings(md_file)
+        file_headings_cache[str(md_file)] = own_headings
+
+        # ── 1. Same-file anchor checks ──
+        for link_match in ANCHOR_LINK_RE.finditer(text):
+            link_text = link_match.group(1).strip()
+            link_url = link_match.group(2).strip()
+            anchor_only = link_match.group(3)
+
+            # Skip external URLs
+            if re.match(r"^[a-z][a-z0-9+.-]*:", link_url, flags=re.IGNORECASE):
+                continue
+
+            # Same-file anchors: link has no .md file part before the #
+            if link_url.startswith("#"):
+                target_anchor = anchor_only
+                normalized_target = normalize_anchor(target_anchor)
+                if own_headings and normalized_target not in own_headings:
+                    # Try matching without the initial number prefix
+                    found = False
+                    for aid, htext in own_headings.items():
+                        aid_norm = normalize_anchor(aid)
+                        if normalized_target == aid_norm:
+                            found = True
+                            break
+                        stripped_aid = re.sub(r"^\d+-", "", aid_norm)
+                        stripped_target = re.sub(r"^\d+-", "", normalized_target)
+                        if stripped_target == stripped_aid:
+                            found = True
+                            break
+                    if not found:
+                        warnings.append(
+                            f"[ANCHOR_MISSING] {rel_path}: Same-file anchor "
+                            f"'{target_anchor}' (from link '[{link_text}]({link_url})') "
+                            f"does not match any heading in this file"
+                        )
+
+        # ── 2. Cross-file anchor checks ──
+        for link_match in ANCHOR_LINK_RE.finditer(text):
+            link_url = link_match.group(2).strip()
+
+            # Skip same-file and external URLs
+            if link_url.startswith("#"):
+                continue
+            if re.match(r"^[a-z][a-z0-9+.-]*:", link_url, flags=re.IGNORECASE):
+                continue
+
+            # Must be file.md#anchor format
+            if "#" not in link_url:
+                continue
+
+            file_part, anchor_part = link_url.split("#", 1)
+            if not file_part or not anchor_part:
+                continue
+
+            # Resolve the target file
+            target_path = md_file.parent / unquote(file_part)
+            if not target_path.exists():
+                continue
+
+            # Load target headings if not cached
+            target_key = str(target_path)
+            if target_key not in file_headings_cache:
+                file_headings_cache[target_key] = extract_file_headings(target_path)
+
+            target_headings = file_headings_cache.get(target_key, {})
+            if target_headings and anchor_part not in target_headings:
+                normalized_anchor = normalize_anchor(anchor_part)
+                if normalized_anchor not in target_headings:
+                    found = False
+                    for aid in target_headings:
+                        aid_norm = normalize_anchor(aid)
+                        if normalized_anchor == aid_norm:
+                            found = True
+                            break
+                        stripped_aid = re.sub(r"^\d+-", "", aid_norm)
+                        stripped_target = re.sub(r"^\d+-", "", normalized_anchor)
+                        if stripped_target == stripped_aid:
+                            found = True
+                            break
+                    if not found:
+                        warnings.append(
+                            f"[ANCHOR_MISSING] {rel_path}: Cross-file anchor "
+                            f"'{anchor_part}' not found in {target_path.name} "
+                            f"(from link '[{link_match.group(1).strip()}]({link_url})')"
+                        )
+
+        # ── 3. Heading text drift check ──
+        for link_match in ANCHOR_LINK_RE.finditer(text):
+            link_text = link_match.group(1).strip()
+            link_url = link_match.group(2).strip()
+
+            if not link_url.startswith("#"):
+                continue
+
+            target_anchor = link_match.group(3)
+            normalized_target = normalize_anchor(target_anchor)
+            actual_heading = own_headings.get(target_anchor) or own_headings.get(normalized_target)
+            if actual_heading:
+                link_normalized = re.sub(r"[^a-z0-9]", "", link_text.lower())
+                heading_normalized = re.sub(r"[^a-z0-9]", "", actual_heading.lower())
+                if link_normalized and heading_normalized:
+                    overlap = len(set(link_normalized) & set(heading_normalized))
+                    union = len(set(link_normalized) | set(heading_normalized))
+                    if union > 0 and (overlap / union) < 0.3:
+                        if "table of contents" not in text[:100].lower():
+                            warnings.append(
+                                f"[HEADING_DRIFT] {rel_path}: Link text '{link_text}' differs "
+                                f"significantly from heading '{actual_heading}' "
+                                f"(anchor '{target_anchor}')"
+                            )
+
+    return warnings
+
+
 def find_markdown_links(text: str) -> list[str]:
     targets: list[str] = []
     for match in MARKDOWN_LINK_RE.finditer(text):
@@ -213,27 +412,6 @@ def validate_repository(root: Path) -> list[Finding]:
 
     return sorted(findings, key=lambda item: (item.path, item.code, item.message))
 
-
-def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("root", nargs="?", default=".", help="Repository root to validate")
-    args = parser.parse_args(argv)
-
-    findings = validate_repository(Path(args.root))
-    if findings:
-        print("CERG validation failed:")
-        for finding in findings:
-            print(f"- {finding.path}: [{finding.code}] {finding.message}")
-        return 1
-    print("CERG validation passed: links, catalog references, and file inventory are consistent.")
-    
-    # P1 Quality checks (warnings only, do not block CI)
-    root_path = Path(args.root)
-    catalog = parse_catalog(root_path)
-    quality_warnings = quality_checks(root_path, catalog)
-    print_quality_report(quality_warnings, root_path)
-    
-    return 0
 
 
 
@@ -394,6 +572,12 @@ def quality_checks(root, catalog):
             if pat in text:
                 warnings.append(f"[STALE_WEBSITE] {rel}: contains stale website reference — GitHub is authoritative, site is convenience mirror")
                 break
+    
+    # ── ANCHOR DRIFT CHECKS (warnings) ──
+    try:
+        warnings.extend(check_anchor_drift(root))
+    except Exception:
+        pass
     
     return errors, warnings
 

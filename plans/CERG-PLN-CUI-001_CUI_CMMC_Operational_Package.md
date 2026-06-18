@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PLN-CUI-001 |
-| **Version** | 1.21 |
+| **Version** | 1.22 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | CMMC / Federal Compliance Manager |
@@ -36,7 +36,6 @@
 12. [C3PAO Assessment Logistics](#12-c3pao-assessment-logistics)
 13. [CUI Subcontractor Register](#13-cui-subcontractor-register)
 14. [FedRAMP Equivalency Evidence Checklist](#14-fedramp-equivalency-evidence-checklist)
-15. [Operating Cadence](#15-operating-cadence)
 15. [Regulatory and Framework Alignment Summary](#15-regulatory-and-framework-alignment-summary)
 16. [Document Control](#16-document-control)
 
@@ -289,7 +288,97 @@ A pre-assessment self-check, repeated quarterly and aggressively in the 90 days 
 | Incident Response | DC3 reporting path tested or rehearsed | Y / N |
 | People | Awareness training current for CUI handlers | Y / N |
 | Physical | CUI work areas conform to physical control requirements | Y / N |
-| Sampled Walkthroughs | At least one walkthrough per CUI system in the 90-day window | Y / N |
+| **Sampled Walkthroughs** | At least one walkthrough per CUI system in the 90-day window | Y / N |
+
+### 11.2 Mock CMMC Assessment Procedure
+
+The Mock Assessment Procedure is scheduled 6 months before the target C3PAO assessment date. It simulates the full CMMC Level 2 assessment process using internal or partner assessors to identify gaps before the real assessment.
+
+#### Scope Definition
+
+| **Scope Element** | **Description** |
+|---|---|
+| Assessment Boundary | All systems, people, processes, and facilities within the CUI boundary (Section 3) |
+| Framework | CMMC Level 2 practices and processes (ALL 110+ practices across 14 domains) |
+| Assessment Type | Full mock (practice-by-practice evidence review + interview simulation) |
+| Exclusions | Explicitly documented; any exclusion must be approved by CMMC / Federal Compliance Manager |
+| Evidence Window | Evidence from prior 12 months minimum; assessors may request specific periods |
+
+#### Assessor Assignment
+
+| **Assessor Role** | **Source** | **Responsibilities** |
+|---|---|---|
+| Lead Assessor | Internal (Governance Pillar Leader or qualified senior CERG member) OR external partner (e.g., consulting firm, C3PAO-in-training) | Overall assessment coordination, final findings report, exit briefing |
+| Practice Reviewer | Internal (Engineering, Risk, Governance pillar members NOT responsible for the systems under assessment) | Practice-by-practice evidence review per Practice Evidence Matrix |
+| Interviewer | Internal (trained assessor or HR-partnered facilitator) | Conduct leadership, system owner, and operator interviews |
+| Scribe | Internal (Evidence Librarian or designee) | Document findings, observations, and notes during all sessions |
+| Observer | CMMC / Federal Compliance Manager | Observe process; no scoring authority during mock |
+
+#### Independence Requirement
+
+- No assessor may evaluate practices they personally own or operate.
+- If the organization has only 2–3 CERG team members, use an external partner for at least the Lead Assessor role.
+- Independence declarations are signed by each assessor before the mock begins.
+
+#### Practice-by-Practice Evidence Review
+
+The core of the mock assessment. Each CMMC Level 2 practice (ALL 110+) is reviewed against the Practice Evidence Matrix (Section 10).
+
+| **Review Step** | **Details** |
+|---|---|
+| Pre-populate | Evidence Matrix is pre-populated with current evidence artifacts, status, and last-verified dates |
+| Reviewer assignment | Each practice assigned to a Practice Reviewer; 20–30 practices per reviewer typical |
+| Evidence inspection | Reviewer inspects each evidence artifact for: completeness (per Section 10 matrix), freshness (within expected window), traceability (artifact maps to the practice claim), and quality (per [`CERG-GOV-AUD-001`](../governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md)) |
+| Scoring | Per CMMC scoring: MET / NOT MET / NOT APPLICABLE |
+| Observation notes | Reviewer records observations, concerns, and clarifying questions per practice |
+| Gap flagging | Any practice scored NOT MET is flagged with the specific deficiency, root cause, and recommended remediation |
+| Re-review | Remediated practices are re-reviewed within 2 weeks of closure evidence |
+
+#### Interview Simulation
+
+Interviews simulate C3PAO assessor interaction with key personnel.
+
+| **Interview Session** | **Participants** | **Duration** | **Topics** |
+|---|---|---|---|
+| Leadership | CISO, Governance Pillar Leader, CMMC / Federal Compliance Manager | 60 min | Program governance, risk posture, resource adequacy, CISO awareness |
+| System Owners | Named system owners for each CUI system | 45 min per system | System architecture, boundary, data flows, SSP accuracy, evidence accessibility |
+| Operators | Engineering and IT staff operating CUI systems | 30 min per group | Day-to-day operations, control execution, evidence production, training awareness |
+| Policy & Process | Policy & Standards Manager, relevant process owners | 45 min | Policy awareness, process adherence, document currency, exception handling |
+| Incident Response | Incident Commander, IR team members | 30 min | IR plan awareness, DC3 reporting path, tabletop exercise experience |
+
+#### Findings Report
+
+| **Report Section** | **Content** |
+|---|---|
+| Executive Summary | Overall mock assessment result, total practices scored NOT MET, top 5 risks |
+| Scope and Methodology | Assessment boundary, assessor roles, evidence window, interview participants |
+| Practice-by-Practice Results | Full matrix: practice ID, scoring, observations, evidence state |
+| Findings Detail | Each NOT MET practice: deficiency description, root cause, evidence gap analysis, risk impact |
+| Strengths | Practices where evidence is exemplary — maintain as-is |
+| Interview Observations | Notable themes, awareness gaps, procedural inconsistencies |
+| Recommendations | Prioritised remediation actions with owners and target dates |
+
+#### Remediation Timeline
+
+| **Phase** | **Activities** | **Duration** | **Owner** |
+|---|---|---|---|
+| Findings Review | CMMC / Federal Compliance Manager reviews findings; categorises by severity and effort | 1 week | CMMC / Federal Compliance Manager |
+| Remediation Planning | Owner assigned per finding; remediation plan with milestones | 2 weeks | Practice owners |
+| Quick Wins | Fixes requiring <2 hours effort: missing evidence labels, stale dates, documentation corrections | 2 weeks | Practice owners |
+| Medium Remediation | Fixes requiring 2–40 hours: new evidence collection, SOP updates, control implementation | 6 weeks | Practice owners |
+| Major Remediation | Fixes requiring >40 hours: new tooling, architecture changes, policy creation | 8–12 weeks | Governance Pillar Leader + pillar owners |
+| Milestone Review | Biweekly check-ins on remediation progress | Until closed | CMMC / Federal Compliance Manager |
+
+#### Re-Test
+
+| **Re-Test Element** | **Detail** |
+|---|---|
+| Timing | 30 days before target C3PAO assessment date |
+| Scope | Only previously scored NOT MET practices + any practice affected by remediation |
+| Assessor | Same Lead Assessor (or equivalent independence) |
+| Method | Full evidence re-inspection + targeted interviews on changed practices |
+| Outcome | Updated findings report; remaining NOT MET practices are either remediated with evidence or escalated to CISO for risk acceptance decision |
+| Go/No-Go Decision | CISO, Governance Pillar Leader, and CMMC / Federal Compliance Manager decide based on re-test results: proceed to C3PAO assessment, delay (with contract impact assessment), or proceed with known gaps documented |
 
 ---
 
@@ -364,8 +453,8 @@ For cloud / SaaS providers handling CUI that are not FedRAMP-authorized, the equ
 | | |
 |---|---|
 | **Document ID** | CERG-PLN-CUI-001 |
-| **Version** | 1.21 |
+| **Version** | 1.22 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / on regulatory change |
-| **Change Log** | 1.0 - Initial publication. SSP, POA&M, SPRS, boundary, flow map, category register, evidence matrix, readiness, C3PAO logistics, subcontractor register, FedRAMP equivalency. |
+| **Change Log** | 1.0 - Initial publication. SSP, POA&M, SPRS, boundary, flow map, category register, evidence matrix, readiness, C3PAO logistics, subcontractor register, FedRAMP equivalency. 1.22 - Added Mock CMMC Assessment Procedure (§11.2) with scope, assessor assignment, practice-by-practice evidence review, interview simulation, findings report, remediation timeline, and re-test. |
 

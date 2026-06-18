@@ -74,6 +74,20 @@ CERG tracks five asset classes. Each has a named authoritative inventory.
 | **Data** | Information assets, governed for classification and handling. | Datasets, databases, document repositories. Handling is governed by [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md). |
 | **Identity** | Accounts and service principals that act on the estate. | User accounts, service accounts, machine identities, API principals. Governed by [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md); inventoried here. |
 
+### 3.1 Ephemeral Asset Pattern
+
+Containers, serverless functions (AWS Lambda, Azure Functions, GCP Cloud Functions), CI/CD pipeline runners, auto-scaling groups, and dynamically provisioned cloud resources do not have stable instance identities or persistent owners. The persistent-instance model in §3 does not apply; the following pattern governs instead.
+
+| Principle | Rule | Method |
+|-----------|------|--------|
+| **Tag-based inventory, not instance-based** | Assets are tracked by tags, labels, or annotations at build time, not by individual instance ID. The inventory records the *blueprint* (image, template, IaC module) and the *deployment pattern*, not each runtime instance. | CMDB records for container images, serverless function ARNs, CI/CD pipeline definitions; reconciled via CSPM/CNAPP API. |
+| **Owner by deployment pipeline, not by asset** | The deployment pipeline or project that creates the ephemeral asset is the accountable owner. The pipeline owner is recorded once; all instances created by that pipeline inherit the owner. | Pipeline manifest (CI/CD YAML, Terraform module, Helm chart) carries an `owner` label. |
+| **Pipeline-integrated baseline enforcement** | Security controls are enforced at the pipeline gate, not retroactively scanned. Admission control (OPA/Kyverno, IAM policy-as-code, IaC scanning) rejects non-compliant deployments before they reach production. | Policy-as-code gates in CI/CD: image vulnerability scan < threshold, DISH baseline checks, IAM least-privilege validation. |
+| **Scan-on-deploy, not scan-on-schedule** | Ephemeral assets are scanned at build/deploy time, not on a recurring schedule. A container that runs for 4 hours and terminates is scanned in the pipeline; a scheduled weekly scan would miss it entirely. | Pipeline vulnerability scan (trivy, grype, snyk) as a build step; CSPM runtime scanning for drift detection. |
+| **Evidence via pipeline logs, not manual collection** | Evidence of control operation for ephemeral assets is the pipeline execution log, not a manually collected artifact. The pipeline log proves the image was scanned, the admission policy passed, and the deployment was approved. | CI/CD pipeline artifact retention; SIEM ingestion of pipeline audit events. |
+
+> **Ephemeral ≠ Unmanaged.** Ephemeral assets are not exempt from inventory, ownership, scanning, or evidence. The method changes; the requirement does not. A container that runs for 60 seconds without an owner, without a scan, and without a baseline is as uncontrolled as a physical server racked without a ticket.
+
 > **OT Assets Are In Scope and Need Care**
 >
 > Operational technology assets are tracked like every other asset, but discovery against OT is constrained: active scanning can disrupt control systems. OT asset discovery uses passive and OT-safe methods per [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md). The requirement to inventory OT assets is identical to any other class. The method of discovery is not. For NERC-CIP entities, the OT hardware inventory is also the basis of BES Cyber System identification under CIP-002.

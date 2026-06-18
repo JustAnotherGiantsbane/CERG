@@ -2,7 +2,37 @@
 
 These examples show how CERG flows, roles, records, and evidence come together during normal operations. They are not new requirements. They are narrative walkthroughs that help a reader see how existing CERG artifacts are used in real work.
 
-Use these examples after reading the [Cross-Pillar Operational Flows](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md), [Operating Model](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md), and [Consolidated Roles and RACI Instrument](../../governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md).
+**If you are a leader or SME new to CERG, read Story 2 or Story 3 first.** They show the program producing outcomes under pressure without requiring prior knowledge of every artifact.
+
+**If you are adopting CERG Lite (2-8 people), read [Story 8](story-8-cerg-lite-maria.md) first.** It is the only story written for a small team that owns everything.
+
+**If you are running CERG Standard or Regulated, any story applies directly.** Each one names the primary flow, supporting procedures and standards, the pillar that owns each step, and the records and evidence produced.
+
+---
+
+## How to use these stories
+
+- **Onboarding.** Use them to explain how the three pillars interact without requiring every pillar to own every task.
+- **Tabletop exercises.** Run the walkthrough as a scenario. Test whether your local records, evidence stores, and dashboards can support the steps.
+- **Implementation planning.** Use them to identify missing integrations between intake, ticketing, GRC, evidence storage, identity, vulnerability, and reporting systems.
+- **Adoption storytelling.** Adapt the roles, systems, and timing to your [Organization Adaptation Profile](../../governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) without changing the underlying accountability model.
+
+These stories are illustrative, not normative. They may reference documents or stories that are planned for a future V1.x release. Where they do, the link or marker says so.
+
+## Stories at a glance
+
+| # | Story | Primary flow | Best for |
+|---|---|---|---|
+| 1 | New SaaS application | F-02 Project Intake, Architecture Review, and Threat Modeling | Intake and Architecture Review procedure walkthrough |
+| 2 | Critical vulnerability | F-04 Finding to Remediation, Exception, or Residual Risk | Exposure Management and SLA discipline under pressure |
+| 3 | Audit request | F-07 Metrics, Oversight, and Improvement Routing | Evidence quality and audit response |
+| 4 | Major cloud workload launch | F-02 + F-03 + F-05 | Architecture, asset registration, and release routing together |
+| 5 | Privileged access review finds excessive access | F-04 + F-07 | Access reviews and recurring-finding program improvement |
+| 6 | Third-party security incident notification | F-06 + F-04 | Vendor incidents and handoff to IR |
+| 7 | Enterprise AI assistant rollout | F-02 | AI standard application and controlled pilot pattern |
+| 8 | [CERG Lite - Maria and the Tuesday scanner report](story-8-cerg-lite-maria.md) | F-04 | Small-team MVC operations and exposure triage |
+| 9 | [F-01 Control Intent - when the regulator changes the rule](story-9-f-01-control-intent.md) | F-01 | Translating regulatory change into implementation work |
+| 10 | [The new CISO's first 90 days](story-10-new-ciso-90-days.md) | MVC + F-07 | First-quarter operating rhythm for a new security leader |
 
 ---
 
@@ -71,7 +101,7 @@ A vulnerability scanner reports a critical remote-code-execution exposure on an 
 
 ### CERG flow pattern
 
-Primary flow: [F-04 Finding to Remediation, Exception, or Residual Risk](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#11-flow-f-04-finding--remediation-exception-or-residual-risk)
+Primary flow: [F-04 Finding to Remediation, Exception, or Residual Risk](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#12-flow-f-04-finding-to-remediation-exception-or-residual-risk)
 
 Supporting procedures and standards:
 
@@ -176,7 +206,7 @@ A product team is moving a customer-facing API from a data center to a cloud pla
 
 ### CERG flow pattern
 
-Primary flows: [F-02 Project Intake, Architecture Review, and Threat Modeling](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#9-flow-f-02--project-intake-architecture-review-and-threat-modeling), [F-03 Asset Registration and Coverage Validation](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#10-flow-f-03--asset-registration-and-coverage-validation), and [F-05 Change and Release Security Routing](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#12-flow-f-05-change--release-security-routing)
+Primary flows: [F-02 Project Intake, Architecture Review, and Threat Modeling](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#9-flow-f-02--project-intake-architecture-review-and-threat-modeling), [F-03 Asset Registration and Coverage Validation](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#10-flow-f-03--asset-registration-and-coverage-validation), and [F-05 Change and Release Security Routing](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#13-flow-f-05-change-and-release-security-routing)
 
 Supporting procedures and standards:
 
@@ -225,7 +255,7 @@ A quarterly privileged access review finds that several users retained administr
 
 ### CERG flow pattern
 
-Primary flows: [F-04 Finding to Remediation, Exception, or Residual Risk](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#11-flow-f-04-finding--remediation-exception-or-residual-risk) and [F-07 Metrics, Oversight, and Improvement Routing](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#14-flow-f-07-metrics-oversight-and-improvement-routing)
+Primary flows: [F-04 Finding to Remediation, Exception, or Residual Risk](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#12-flow-f-04-finding-to-remediation-exception-or-residual-risk) and [F-07 Metrics, Oversight, and Improvement Routing](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#14-flow-f-07-metrics-oversight-and-improvement-routing)
 
 Supporting procedures and standards:
 
@@ -272,7 +302,7 @@ A vendor notifies the organization that its file transfer platform was compromis
 
 ### CERG flow pattern
 
-Primary flows: [F-06 Incident to Recovery to Standards Feedback](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#13-flow-f-06-incident--recovery-to-standards-feedback) and [F-04 Finding to Remediation, Exception, or Residual Risk](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#11-flow-f-04-finding--remediation-exception-or-residual-risk)
+Primary flows: [F-06 Incident to Recovery to Standards Feedback](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#14-flow-f-06-incident-to-recovery-to-standards-feedback) and [F-04 Finding to Remediation, Exception, or Residual Risk](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#12-flow-f-04-finding-to-remediation-exception-or-residual-risk)
 
 Supporting procedures and standards:
 
@@ -360,10 +390,3 @@ The pilot launches with user guidance, logging, and a named Business Owner. Afte
 - Metrics updated for AI governance and adoption oversight.
 
 ---
-
-## How to use these stories
-
-- Use them in onboarding to explain how the three pillars interact without requiring every pillar to own every task.
-- Use them in tabletop exercises to test whether local records, evidence stores, and dashboards can support the walkthrough.
-- Use them during implementation planning to identify missing integrations between intake, ticketing, GRC, evidence storage, identity, vulnerability, and reporting systems.
-- Adapt the roles, systems, and timing to your [Organization Adaptation Profile](../../governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) without changing the underlying accountability model.

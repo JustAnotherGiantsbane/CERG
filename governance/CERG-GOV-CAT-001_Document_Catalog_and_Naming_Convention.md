@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.38 |
+| **Version** | 1.41 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -15,6 +15,10 @@
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (GOVERN) · ISO/IEC 27001 A.5 |
 | **Regulations** | Cross-cutting |
 | **Environments** | All CERG-managed documentation |
+
+> **Catalog Sync Tool**
+>
+> The file `tools/cerg-catalog-sync.py` synchronises each document's metadata table `Status` field with the status recorded in this catalog's §5 authoritative listing. Run `python3 tools/cerg-catalog-sync.py --dry-run` to detect drift, `--write` to update CAT-001 from file frontmatter, or `--ci` (exit 1 on drift) for pre-commit validation. See the tool's header for full usage.
 
 ---
 
@@ -26,7 +30,8 @@
 4. [Authority and Status Lifecycle](#4-authority-and-status-lifecycle)
 5. [Authoritative Catalog (V1)](#5-authoritative-catalog-v1)
 6. [Cross-Reference Rules](#6-cross-reference-rules)
-7. [Document Control](#7-document-control)
+7. [Artifact Roadmap (V1.x → V2)](#7-artifact-roadmap-v1x-to-v2)
+8. [Document Control](#8-document-control)
 
 ## 1. Purpose and Scope
 
@@ -228,16 +233,99 @@ Operational records (risk register entries, exceptions, findings, etc.) use stan
 | Improvement Item | IMPG-YYYY-NNN | IMPG-2026-001 | Program improvement register |
 | Requirement (atomic) | CERG-REQ-DOC-NNN | CERG-REQ-AC-001 | machine-readable/ requirements YAML |
 
-### 4.4 Document Deprecation Policy
+### 4.4 Document Retirement Policy
 
-Documents in the CERG corpus follow these rules when they are retired or superseded:
+Documents in the CERG corpus that are no longer authoritative follow a defined retirement process. Retirement is distinct from deprecation: a deprecated document still guides behaviour until replaced; a retired document is formally withdrawn and must not be relied upon for operations, audits, or compliance assertions.
 
-- **IDs are never reused.** A retired Document ID is permanently reserved. No new document will ever receive that ID.
-- **Superseding documents identify their predecessor.** When a document is replaced, the new version or replacement document states which document it supersedes.
-- **The machine-readable manifest preserves history.** The manifest (cerg-manifest.yaml) retains entries for retired documents with status: Retired.
-- **Breaking changes are documented.** Any change to Document IDs, statuses, role names, or workflow structures that would break cross-references is recorded in the revision history of the affected document and noted in the revision history.
-- **Retired documents remain in the repository.** They are not deleted. They are retained for audit trail and cross-reference integrity.
-- **Retired artifacts may still be referenced** by older versions of documents. The referencing document should note the retirement in its next review cycle.
+#### Retirement Criteria
+
+A document may be retired when any of the following conditions are met:
+
+| **Criterion** | **Description** | **Example** |
+|---|---|---|
+| **Superseded** | A new document replaces the artifact's function with broader scope, improved methodology, or updated framework alignment | A NERC-CIP operational package section superseded by a dedicated CIP standard |
+| **Regulatory scope removed** | The regulation or framework driving the document no longer applies to the organization's operations | CMMC scope contract expires; CUI-CMMC package sections no longer applicable |
+| **Framework retired** | The underlying framework or standard has been withdrawn by the issuing body and no replacement is adopted | NIST 800-53 Rev 5 entirely replaced by a future revision that CERG does not adopt |
+| **Merged into parent** | The document's content has been absorbed into a parent document and the standalone artifact is no longer needed | A standalone guideline merged into its parent standard |
+| **Decommissioned system scope** | The document governs a system, environment, or technology that has been decommissioned | OT-specific procedure for a decommissioned control system |
+| **Organisational restructuring** | The role, function, or pillar that owned the document no longer exists in the current operating model | A job description for a role eliminated in a reorganisation |
+
+#### 90-Day Notice Period
+
+When a document is identified for retirement:
+
+1. **Notice published.** The Governance Pillar Leader (Document Control) publishes a retirement notice in the CERG communications channel (e.g., pillar sync, mailing list, or document catalog changelog) at least **90 calendar days** before the intended retirement effective date.
+
+2. **Notice content.** The notice includes:
+   - Document ID and title being retired
+   - Retirement criteria met (from the table above)
+   - Effective date of retirement
+   - Superseding document (if any) — ID, title, location
+   - Migration guidance (see §4.4.3)
+   - Contact for questions or dispute
+
+3. **Review period.** Interested stakeholders (pillar leaders, document owners, adopters) have 30 days from the notice date to raise objections, request extension, or propose alternatives.
+
+4. **Exception window.** If a stakeholder demonstrates that the retirement would create a regulatory gap, audit finding, or operational disruption, the Governance Pillar Leader may extend the notice period by up to an additional 90 days.
+
+5. **CISO escalation.** Unresolved disputes about retirement are escalated to the CISO for final decision.
+
+#### Migration Guide
+
+Every retirement notice must include a migration guide. The guide addresses:
+
+| **Migration Element** | **Required Content** |
+|---|---|
+| Superseding document | Full Document ID, title, file path, version |
+| Mapping of retired sections to superseding sections | Table: Retired §X → Superseding §Y, or "No direct replacement — see compensating guidance" |
+| Critical cross-reference updates | List of known documents that reference the retired document's ID or sections; recommended replacement references |
+| Evidence transition | Instructions for moving or re-referencing evidence artifacts that point to the retired document |
+| Training / awareness impact | If the retired document was part of onboarding or role-based training, what replaces it |
+| Timeline | Recommended date by which all references should be updated; default is 90 days from retirement effective date |
+
+#### Evidence Retention After Retirement
+
+Retired documents are **not deleted**. They are retained in the repository for the following purposes and durations:
+
+| **Retention Purpose** | **Minimum Retention Period** | **Disposition** |
+|---|---|---|
+| Audit trail — regulatory evidence that referenced the retired document | Longest applicable regulatory retention period (e.g., SOX: 7 years; NERC-CIP: 5 years; CMMC: 3 years) | Secure deletion after retention period; certificate of destruction |
+| Cross-reference integrity — documents that still link to the retired document | Until all referencing documents have been updated in a subsequent review cycle | Evaluation at next review cycle of the referencing document |
+| Historical record — program evolution | Indefinite (retired documents remain in the Git repository for historical reference) | Never deleted from Git history; only removed from active catalog |
+| Litigation hold | Per legal hold duration | Preservation until legal hold is formally released in writing |
+
+#### Crosswalk Freeze
+
+When a document is retired:
+
+1. **Crosswalk status is frozen.** The retired document's entry in CAT-001 §5 is updated to `Retired` status but **not removed** from the catalog. The entry remains visible as a historical record.
+
+2. **Cross-references are not removed.** Cross-references from other documents to the retired document are preserved but flagged. The validator (`cerg-validate.py`) treats references to Retired documents as a **warning**, not an error, with a configurable grace period (default: 180 days from retirement effective date).
+
+3. **New references are prohibited.** After the retirement effective date, no new document may introduce a cross-reference to a Retired document. Existing cross-references are updated at the referencing document's next scheduled review.
+
+4. **Catalog freeze entry.** The retired document's catalog row includes:
+   - Status: `Retired`
+   - Retirement effective date
+   - Superseding document ID (if any)
+   - Link to retirement notice
+
+5. **Superseding documents identify their predecessor.** Any document that supersedes a retired artifact includes a note in its metadata or Document Control section: `Supersedes CERG-XXX-XXX-NNN (retired YYYY-MM-DD)`.
+
+#### Retirement Record in Revisions
+
+Each retirement event is recorded in the revision history of:
+- The retired document itself (final entry: "Document retired [date]")
+- CAT-001 (entry: "Retired [doc ID] — [reason]")
+- CERG-GOV-IMPREG-001 (Program Improvement Register), if applicable
+
+#### Reversal
+
+A retired document may be reactivated (returned to `Approved` status) only if:
+1. A stakeholder demonstrates a regulatory or operational need that the superseding document does not satisfy.
+2. The Governance Pillar Leader approves reactivation after a documented review.
+3. The document's content is reviewed and updated to current standards before reactivation.
+4. The `Retired` catalog entry is updated to `Approved` with a revision history note.
 
 ### 4.5 Ownership Delegation
 
@@ -269,7 +357,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md) | Record Catalog | Governance Pillar Leader (Document Control) | Approved |
 | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Unified Control Baseline | Governance Pillar Leader | Approved |
 | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Metrics, Dashboard, and CISO/Board Reporting | Governance Pillar Leader | Approved |
-| [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | CERG Framework (narrative) | CISO | Approved |
+| [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | SURGE / CERG Framework (narrative) | CISO | Approved |
 | [`CERG-GOV-FRM-002`](CERG-GOV-FRM-002_Framework_System_Map.md) | Framework System Map | Governance Pillar Leader | Approved |
 | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk Management Framework | Governance Pillar Leader | Approved |
 | [`CERG-GOV-TAX-001`](CERG-GOV-TAX-001_Risk_Taxonomy.md) | Risk Taxonomy | Cyber Risk | Approved |
@@ -305,6 +393,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-GOV-EDG-001`](CERG-GOV-EDG-001_Edge_Register.md) | Edge Register | Governance Pillar Leader / Vendor Risk Analyst | Approved |
 | [`CERG-GOV-CJ-001`](CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md) | Crown Jewel Register and Loss Scenario Library | Risk Pillar Leader / Governance Pillar Leader | Approved |
 | [`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md) | CERG Service-Level Commitments | CISO | Approved |
+| [`CERG-GOV-CAL-002`](CERG-GOV-CAL-002_Calibration_Checklist.md) | Calibration Checklist | Governance Pillar Leader | Approved |
 
 ### 5.3 Standards
 
@@ -368,6 +457,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-TMPL-AR-001`](../templates/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md) | Architecture and Project Intake Form | Engineering Pillar Leader | Approved |
 | [`CERG-TMPL-TPRM-001`](../templates/CERG-TMPL-TPRM-001_Vendor_Security_Questionnaire_and_Assessment_Template.md) | Vendor Security Questionnaire and TPRM Assessment Template | Vendor Risk Analyst | Approved |
 | [`CERG-TMPL-RM-003`](../templates/CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md) | Risk Acceptance Memo Template | Risk Pillar Leader | Approved |
+| [`CERG-TMPL-RM-004`](../templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md) | Risk Acceptance Request Form | Risk Register Owner | Approved |
 | [`CERG-TMPL-AI-001`](../templates/CERG-TMPL-AI-001_AI_Intake_and_Sanctioning_Template.md) | AI Intake and Sanctioning Template | Governance Pillar Leader | Approved |
 | [`CERG-TMPL-AI-002`](../templates/CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md) | Sanctioned AI Tools Register Template | Governance Pillar Leader | Approved |
 | [`CERG-TMPL-AI-003`](../templates/CERG-TMPL-AI-003_AI_System_and_Model_Register_Template.md) | AI System and Model Register Template | Application Security Engineer | Approved |
@@ -375,6 +465,8 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-TMPL-MTR-001`](../templates/CERG-TMPL-MTR-001_Board_and_CISO_Reporting_Deck_Template.md) | Board and CISO Reporting Deck Template | Governance Pillar Leader | Approved |
 | [`CERG-TMPL-GOV-001`](../templates/CERG-TMPL-GOV-001_Stakeholder_Perception_Survey.md) | Stakeholder Perception Survey | Governance Pillar Leader | Approved |
 
+| [`CERG-TMPL-SAAS-001`](../templates/CERG-TMPL-SAAS-001_SaaS_Evidence_Collection_Checklist.md) | SaaS Evidence Collection Checklist | Governance Pillar Leader | Approved |
+| [`CERG-TMPL-SBOM-001`](../templates/CERG-TMPL-SBOM-001_SBOM_Evidence_Collection_Checklist.md) | SBOM Evidence Collection Checklist | Vendor Risk Analyst | Approved |
 Other templates remain embedded as appendices of their parent procedure or plan unless they have independent reuse outside that artifact. The Document Catalog references the parent.
 
 ---
@@ -423,18 +515,29 @@ The `machine-readable/` directory contains YAML specifications generated from th
 
 Key artifacts include:
 - `cerg-llm-index.json` — Full local Markdown corpus index for LLM/agent consumption
-- `cerg-manifest.yaml` — Canonical manifest of all 118 governed source artifacts
+- `cerg-manifest.yaml` — Canonical manifest of governed source artifacts
 - `cerg-publication-manifest.yaml` — Publication eligibility separate from lifecycle approval status
 - `cerg-requirements.yaml` — Pilot atomic requirements extracted from 8 normative source documents
 - `cerg-flows.yaml` — Cross-pillar operational flow specifications (7 flows)
 - `cerg-record-schemas.yaml` — Core operational record schemas
 - Companion schema files for runtime model, evidence, metrics, crown jewels, vulnerability priority, IR interface, vendor kill switch, identity, segmentation, AI intake, workforce capacity, and decision logging
 
+### 5.9 Examples
+
+The `examples/` directory contains narrative walkthroughs and adoption profiles. These are not authoritative documents and do not appear in the V1 catalog. They show how V1 artifacts are used together during real work, and they are the recommended first stop for leaders and SMEs trying to understand how the program operates.
+
+| Example | Purpose | Format |
+|---|---|---|
+| `examples/day-in-the-life/README.md` | Ten narrative walkthroughs of how the three pillars produce outcomes together (intake, vulnerability, audit, cloud launch, access review, third-party incident, AI rollout, CERG Lite exposure triage, control-intent implementation, and new-CISO onboarding) | Markdown stories with step tables and operational output lists |
+| `examples/regulated-utility-profile/` | A filled-in sample of [CERG-GOV-VAR-001](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) for a regulated utility sector organization | Adapted profile |
+
+Examples are illustrative, not normative. They may be updated outside the V1 review cycle and may reference planned V1.x documents with explicit `(Planned)` markers.
+
 ## 6. Cross-Reference Rules
 
 These rules govern every "Related Documents" table, every footnote reference, and every link in a CERG artifact.
 
-1. **Link only to artifacts that appear in this catalog.** If the artifact does not appear in Section 5, do not reference it.
+1. **Link only to artifacts that appear in this catalog.** If the artifact does not appear in Section 5 or Section 7, do not reference it.
 2. **Distinguish approved from planned.** When a Related Documents table includes a Planned artifact, mark it `(Planned, V1.x)` or `(Planned, V2)` so the reader knows it does not yet exist.
 3. **Use the Document ID, not the file name.** File names change; IDs do not.
 4. **Avoid forward references to TMPL artifacts that live inside a parent.** Cite the parent and the appendix (`CERG-PRC-AR-001 Appendix B, Security Project Intake Form`).
@@ -445,3 +548,110 @@ These rules govern every "Related Documents" table, every footnote reference, an
 > A new CERG team member opens any artifact, follows a reference, and arrives at exactly the document the reference named, at the version the catalog records, with no dead links and no surprises. If that holds for every reference in the library, the catalog is doing its job. If it does not, the catalog, not the citing document, is the artifact that needs the fix.
 
 ---
+
+## 7. Artifact Roadmap (V1.x to V2)
+
+This section is the authoritative list of planned artifacts. Per Cross-Reference Rule 1, a planned artifact may be referenced by another artifact only if it appears here, and the reference is marked `(Planned, V1.x)` or `(Planned, V2)`.
+
+An artifact moves from this section to Section 5 when it is authored and reaches `Draft` or above. An artifact in this section has an ID reserved and an owner assigned but is not yet authoritative and must not be relied upon.
+
+### 7.1 Status of the V1.x Build
+
+The V1.x build extends the original V1 library along six tracks: the adoption layer, the Engineering-pillar standards, the governance glue, the missing procedures, the missing operational packages, and the standalone template library. As of this version of the catalog, the adoption layer (`IMP`, `VAR`, `MAT`), the seven Engineering and data standards (`SDL`, `AM`, `NET`, `EP`, `DG`, `AI`, `MSG`), the consolidated RACI instrument (`RAC`), the Group C in-scope procedures (`IR-002`, `TM`, `TI`, `AUD`, `CHG`), the Group D operational packages (`BC`, `ISO`, `PRIV`), the Group E standalone templates, and the F2-F4 governance instruments (`CAL`, `STY`, `TRC`) are authored and registered in Section 5. The artifacts below remain planned.
+
+### 7.2 Planned Procedures
+
+
+| [`CERG-PRC-AC-001`]() | Access Review Runbook (reserved) | Identity Engineer | Planned, V1.x |
+
+No in-scope Group C procedures remain planned in V1.x. Security Awareness and Training and SOC / Forensics operations are intentionally out of CERG scope and are not reserved here.
+
+### 7.3 Planned Plans and Operational Packages
+
+No Group D operational packages remain planned. Business Continuity and Disaster Recovery, ISO/IEC 27001, and Privacy and Data Protection packages are authored and registered in Section 5.5.
+
+### 7.4 Planned Templates
+
+No Group E standalone templates remain planned. The System Security Plan, POA&M, security exception request, architecture and project intake form, vendor security questionnaire, risk acceptance memo, control evidence worksheet, and Board / CISO reporting deck templates are authored and registered in Section 5.6.
+
+The incident report and post-incident review template remains embedded in the incident response plan and playbook set unless promoted by a future amendment.
+
+### 7.5 Planned Governance Instruments
+
+
+| [`CERG-GOV-CIP-001`]() | NERC-CIP Governance Instrument (reserved) | OT Security Engineer | Planned, V1.x |
+| [`CERG-GL-OT-001`]() | OT Security Guideline (reserved) | OT Security Engineer | Planned, V1.x |
+| [`CERG-TMPL-CIP-001`]() | NERC-CIP Template (reserved) | NERC-CIP Compliance Manager | Planned, V1.x |
+
+No F2-F4 governance instruments remain planned. The Annual Security and Governance Calendar, Document Authoring and Style Guide, and Control-to-Procedure Traceability Matrix are authored and registered in Section 5.2.
+
+> **The Roadmap Is a Commitment, Not a Wishlist**
+>
+> An ID in this section is a reserved identifier with a named owner. It is not a vague intention. When an artifact is listed here, a citing document is permitted to forward-reference it, which means readers will encounter the reference before the artifact exists. That is only safe if this section is honest: every entry has a real owner and a real target, and an entry that is no longer intended is removed by amendment, not left to mislead.
+
+---
+
+## 8. Document Control
+
+| Field | Value |
+|---|---|
+| **Document ID** | CERG-GOV-CAT-001 |
+| **Version** | 1.41 |
+| **Status** | Approved |
+| **Effective Date** | 2026-06-17 |
+| **Classification** | Public |
+| **Owner** | Governance Pillar Leader (Document Control) |
+| **Approved By** | CISO |
+| **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Review Cycle** | Quarterly, or upon any artifact add or retire |
+| **Next Scheduled Review** | 2026-09-17 |
+| **Frameworks** | NIST CSF 2.0 (GOVERN); ISO/IEC 27001 A.5 |
+| **Regulations** | Cross-cutting |
+| **Environments** | All CERG-managed documentation |
+
+### Revision History
+
+| **Version** | **Date** | **Author** | **Change Summary** |
+|---|---|---|---|
+| 1.41 | 2026-06-18 | Governance Pillar Leader | Expanded §4.4 from Document Deprecation Policy to full Document Retirement Policy with criteria, 90-day notice period, migration guide, evidence retention, crosswalk freeze, and reversal provisions. Added catalog sync tool reference after metadata table. |
+| 1.40 | 2026-06-17 | Governance Pillar Leader | Reconciled concurrent catalog revision history and updated the next scheduled review date after AI and SaaS/SBOM additions. |
+| 1.39 | 2026-06-17 | Governance Pillar Leader | Removed the hardcoded machine-readable manifest artifact count so the catalog does not drift when templates are added. |
+| 1.38 | 2026-06-17 | Governance Pillar Leader | Registered CERG-TMPL-AI-003 as the AI system and model register template. |
+| 1.37 | 2026-06-17 | Governance Pillar Leader | Registered CERG-TMPL-AI-002 as the sanctioned AI tools register template. |
+| 1.36 | 2026-06-17 | Governance Pillar Leader | Registered CERG-TMPL-AI-001 as the standalone AI intake and sanctioning template. |
+| 1.35 | 2026-06-14 | Governance Pillar Leader | Removed duplicate Table of Contents entries after the machine-readable artifact update. |
+| 1.34 | 2026-06-14 | Governance Pillar Leader | Updated machine-readable artifact inventory language to reflect regenerated local manifests, canonical paths, and the full LLM index. |
+| 1.33 | 2026-06-14 | Governance Pillar Leader | Status taxonomy cleanup. Replaced Published and Active catalog statuses with Approved; publication eligibility remains tracked separately in the publication manifest. |
+| 1.32 | 2026-06-13 | Governance Pillar Leader | Adoption usability amendment. Added FRM-002 Framework System Map, CAT-002 Record Catalog, IMP-005 Adoption Decision Tree and Dependency Matrix, and IMP-006 Role-Based Implementation Checklists to Section 5.2. |
+| 1.0 | 2026-05-01 | Cyber Governance | Initial release. Established the naming convention, document types, the authority and status lifecycle, the V1 authoritative catalog, and the cross-reference rules. |
+| 1.21 | 2026-05-01 | Cyber Governance | Catalog maintenance release aligning artifact versions across the V1 library. |
+| 1.22 | 2026-05-21 | Cyber Governance | Registered the adoption-layer domains `IMP`, `VAR`, and `MAT` in Section 2.1 and added `CERG-GOV-IMP-001`, `CERG-GOV-VAR-001`, and `CERG-GOV-MAT-001` to Section 5.2. |
+| 1.23 | 2026-05-21 | Cyber Governance | Registered domains `RAC`, `SDL`, `AM`, `NET`, `EP`, `DG`, `AI`, and `MSG`. Added `CERG-GOV-RAC-001` to Section 5.2 and seven standards to Section 5.3. Set `CERG-GOV-RAC-001` and the seven new standards to `Approved` on CISO sign-off. Restored the document to its full structure: completed the Section 6 Reference Discipline Test callout, and authored Section 7 (Artifact Roadmap) and Section 8 (Document Control), which had been absent. |
+| 1.24 | 2026-05-22 | Cyber Governance | Registered domains `TM`, `TI`, `AUD`, and `CHG`; added `CERG-PRC-IR-002`, `CERG-PRC-TM-001`, `CERG-PRC-TI-001`, `CERG-PRC-AUD-001`, and `CERG-PRC-CHG-001` to Section 5.4 as Draft; removed the now-authored Group C procedure reservations from Section 7.2; noted that Security Awareness and Training and SOC / Forensics operations are intentionally out of CERG scope. |
+| 1.25 | 2026-05-22 | Cyber Governance | Registered domains `BC`, `ISO`, and `PRIV`; added `CERG-PLN-BC-001`, `CERG-PLN-ISO-001`, and `CERG-PLN-PRIV-001` to Section 5.5 as Draft; removed the now-authored Group D operational package reservations from Section 7.3. |
+| 1.26 | 2026-05-22 | Cyber Governance | Added eight standalone Group E templates to Section 5.6 as Draft: `CERG-TMPL-CUI-001`, `CERG-TMPL-CUI-002`, `CERG-TMPL-RM-002`, `CERG-TMPL-AR-001`, `CERG-TMPL-TPRM-001`, `CERG-TMPL-RM-003`, `CERG-TMPL-AUD-001`, and `CERG-TMPL-MTR-001`; updated Section 7.4 to state that no Group E standalone templates remain planned. |
+| 1.27 | 2026-05-22 | Cyber Governance | Registered domains `CAL`, `STY`, and `TRC`; added `CERG-GOV-CAL-001`, `CERG-GOV-STY-001`, and `CERG-GOV-TRC-001` to Section 5.2 as Draft; updated Section 7.5 to state that no F2-F4 governance instruments remain planned. |
+| 1.30 | 2026-05-27 | Cyber Governance | HR program build-out amendment. Registered domains `CMP`, `PERF`, `ONB`, `WFP`, `TRN`, `SUCC`, `CON`, and `EDG`. Added to Section 5.2: `CERG-GOV-CMP-001` (Competency Model and Behavioral Anchors), `CERG-GOV-PERF-001` (Performance Management and Promotion Framework), `CERG-GOV-ONB-001` (Onboarding and Integration Program), `CERG-GOV-WFP-001` (Workforce Planning and Capacity Model), `CERG-GOV-TRN-001` (Training, Development, and Certification Framework), `CERG-GOV-SUCC-001` (Succession Planning and Talent Review Framework), and `CERG-GOV-CON-001` (Contractor and Non-Employee Staff Integration Guide). Extended `CERG-GOV-IMP-001` to v1.1 with Employer Brand and Talent Attraction section. |
+| 1.32 | 2026-06-18 | Governance Pillar Leader | Registered CERG-TMPL-RM-004 (Risk Acceptance Request Form) in §5.6 as the distinct Business Owner + RMF-001 authority risk acceptance workflow, separate from the Security Exception Request Form (TMPL-RM-002). |
+| 1.31 | 2026-06-11 | Governance Pillar Leader | Workforce architecture and cross-pillar flows amendment. Registered domains `JF` and `FLOW`. Added JF-001 (Job Families Overview), JF-002 (NICE Crosswalk), and FLOW-001 (Cross-Pillar Operational Flows) to §5.2. Added §5.7 (Job Descriptions — 27 per-role documents across five job families) and §5.8 (Machine-Readable Artifacts). Rewrote JD-001 as family-level index. Modified RAC-001, JA-001, CMP-001, TRN-001, PERF-001, and OM-001 with NICE and Job Family cross-references. |
+| 1.29 | 2026-05-27 | Cyber Governance | Job architecture and human capital amendment. Registered domains `JA` and `JD`. Added to Section 5.2: `CERG-GOV-JA-001` (Job Architecture and Grade Framework) and `CERG-GOV-JD-001` (CERG Job Descriptions). The JA-001 establishes the two-track grade structure (SME: Specialist through Sr. Advisor; Management: Manager through Director), leveling dimensions, span-of-control guidelines, and compensation philosophy. The JD-001 provides full job descriptions for all 25 canonical CERG roles. |
+| 1.28 | 2026-05-26 | Cyber Governance | NIST CSF Adaptive gap closure amendment. Registered domains `LL`, `IMPREG`, and `CEF`. Added to Section 5.2: `CERG-GOV-IMPREG-001` (Program Improvement Register) and `CERG-GOV-CEF-001` (Control Effectiveness Framework). Added to Section 5.4: `CERG-PRC-LL-001` (Lessons Learned and Program Improvement Procedure). Added to Section 5.6: `CERG-TMPL-GOV-001` (Stakeholder Perception Survey). Noted extended artifacts: PRC-TI-001 v1.1, MTR-001 v1.3, PRC-AV-001 v1.2, RMF-001 v1.3, MAT-001 v1.1, OM-001 v1.22. |
+
+### Review Triggers
+
+- Any artifact added to, or retired from, the CERG library
+- Any new domain or type code required by a new artifact
+- A change to the naming convention or the cross-reference rules
+- A planned artifact in Section 7 reaching `Draft` or above, which moves it to Section 5
+- Direction from the CISO
+
+Governance owns this document. The Governance Pillar Leader (Document Control) is responsible for initiating reviews, managing the revision cycle, and obtaining approval for all changes.
+
+### Related Documents
+
+| **Document** | **ID** | **Relationship** |
+|---|---|---|
+| Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy; establishes the document hierarchy this catalog inventories |
+| CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Defines the roles cited as artifact owners |
+| Consolidated Roles, Responsibilities, and RACI Instrument | [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Master RACI for ownership of every artifact in this catalog |
+| Implementation and Adaptation Guide | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Adoption sequencing; instructs adopters to keep this catalog current | 

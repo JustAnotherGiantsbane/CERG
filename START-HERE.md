@@ -25,6 +25,7 @@ If you are still unsure where to begin, use these four helpers before diving int
 - [Adoption Decision Tree and Dependency Matrix](governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md) - which path and overlays apply, plus what must be adopted together.
 - [Role-Based Implementation Checklists](governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md) - what the CISO, Governance, Risk, and Engineering leads do first.
 - [Record Catalog](governance/CERG-GOV-CAT-002_Record_Catalog.md) - the records and minimum evidence that prove the program is operating.
+- [Day in the Life examples](examples/day-in-the-life/README.md) - seven narrative walkthroughs showing how the three pillars produce real work during incidents, audits, intake, AI rollouts, and access reviews. Read one before you read the standards.
 
 ---
 
@@ -63,6 +64,8 @@ Adopt these eight documents first:
 8. Exposure Management Procedure
 
 Use the Record Catalog, Adoption Safety Guide, Small Team Adoption Path, and Role-Based Implementation Checklists as adoption aids. They help you adopt the MVC; they are not additional MVC requirements.
+
+**Read one story.** The [CERG Lite day-in-the-life walkthrough](examples/day-in-the-life/story-8-cerg-lite-maria.md) shows what your first month of running the MVC actually looks like when two people own everything.
 
 ### What you can defer
 
@@ -143,5 +146,7 @@ MVC + all 15 standards + Architecture Review, TPRM, Change Management, Audit/Evi
 ## After the first 30 days
 
 Once MVC is running, layer the remaining documents as needed. The sequence matters less after the spine is in place. Prioritize based on what's causing the most operational friction.
+
+Before broad standard-layer adoption, use the Gate 2 to Gate 3 transition test in the [Adoption Decision Tree and Dependency Matrix](governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md). Do not advance just because the calendar says day 60 or day 90. Advance when the MVC has produced risk, exposure, intake, evidence, pillar-accountability, and adoption-plan records.
 
 **[Back to README](README.md)** · **[Full catalog](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md)** · **[Implementation Guide](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md)**

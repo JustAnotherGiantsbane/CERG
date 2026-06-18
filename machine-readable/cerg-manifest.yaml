@@ -17,7 +17,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md
   source_file: CERG-GOV-AUD-001_Evidence_Quality_Standard.md
-  source_hash: 2896ecb39a5c9e33ad7e6d93856abd02d86127df604c2f57c0a80a13081169dc
+  source_hash: 593e3fc66ee2141b3badd1a0299ecd611a6af34b7deab593288723b3e0af6e15
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md
   llm_include: true
   llm_priority: medium
@@ -44,11 +44,31 @@
   normative_weight: supporting
   pillar: governance
   summary: Annual Security and Governance Calendar
+- document_id: CERG-GOV-CAL-002
+  title: Calibration Checklist
+  document_type: governance_instrument
+  domain: CAL
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Policy & Standards)'
+  approval_authority: 'Governance Pillar Leader (Policy & Standards)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-CAL-002_Calibration_Checklist.md
+  source_file: CERG-GOV-CAL-002_Calibration_Checklist.md
+  source_hash: b36cf7e13b9f4ef0248be42896074fdcf03592c89081db59c7ef4608c00a1509
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAL-002_Calibration_Checklist.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Calibration Checklist
 - document_id: CERG-GOV-CAT-001
   title: Document Catalog and Naming Convention
   document_type: governance_instrument
   domain: CAT
-  version: 1.38
+  version: 1.41
   status: Approved
   classification: Public
   publication_profile: public
@@ -57,7 +77,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  source_hash: efb6769da405e5952cf461ad501f7fa0abdfabfd2b531e68cac3c3817ebef2cf
+  source_hash: b103d8c828e30ba4edf4ef1f994edbb39a59dddc3a42bb9810de470afc60a796
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   llm_include: true
   llm_priority: high
@@ -97,7 +117,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CB-001_Unified_Control_Baseline.md
   source_file: CERG-GOV-CB-001_Unified_Control_Baseline.md
-  source_hash: 11c24e1362a0f9ac9c531a40d072e0d69b9f2b5d004f42596a049ae24e655abb
+  source_hash: 3d1dcecdf82a638a6ca3d446b679cf3e1c8a9a1d6ff4003e277c39fe21165b33
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CB-001_Unified_Control_Baseline.md
   llm_include: true
   llm_priority: medium
@@ -277,7 +297,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-FRM-002_Framework_System_Map.md
   source_file: CERG-GOV-FRM-002_Framework_System_Map.md
-  source_hash: 6613c8cdaf289dd880dbcdf3162382417fd6c9ee28241ab0a2433f4111a9d897
+  source_hash: 6572378b3f36575d3f19c65743477626523fe80753fe6e68775d091fa8345ae5
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-FRM-002_Framework_System_Map.md
   llm_include: true
   llm_priority: medium
@@ -297,7 +317,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md
   source_file: CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md
-  source_hash: 0423518d9a43471ccca114b37a08f220115dc048e0fdfdca5153d9e9a2335f52
+  source_hash: 7023d39773d9081327348dfd22cad22b18876119f4c7508cb4b83d4c29ed8eed
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md
   llm_include: true
   llm_priority: medium
@@ -317,7 +337,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md
   source_file: CERG-GOV-IMP-002_Adoption_Safety_Guide.md
-  source_hash: 4be4e8fa455bf9bde7383832e0ecbb56d2d6ab81b4a6caede996144f9782cfa8
+  source_hash: 0724ea9e156d754ccc30ed28c8eacfd5bd9af61f8aea101cc670e88ef7929b17
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md
   llm_include: true
   llm_priority: medium
@@ -377,7 +397,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md
   source_file: CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md
-  source_hash: aed451a41e5b835cfa4edd85d762af6333db13063686a15feb416c6b95f85db8
+  source_hash: 55f9276c3405d7cc8fc4c5ef346b87ed8dab28dc8958d492f412aa60360ccfa9
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md
   llm_include: true
   llm_priority: medium
@@ -497,7 +517,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
   source_file: CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
-  source_hash: ee6fc65c90915ab1c4826d0ef865c7823df09a68ba6ee848de195692f725db12
+  source_hash: 46e30f56158c3a511ebd81c700da3da504f255fc22b405bfe270e762cdd7091e
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
   llm_include: true
   llm_priority: medium
@@ -517,7 +537,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   source_file: CERG-GOV-OM-001_CERG_Operating_Model.md
-  source_hash: 4ede0940b7a2b7e9b600a9e13e68cd9260800cd246fc07704561c34050333760
+  source_hash: ce59d5efa4b40d0314f10f6c1c34d9f23c240df0f4939bd860b67edf131a456e
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   llm_include: true
   llm_priority: high
@@ -557,7 +577,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md
   source_file: CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md
-  source_hash: ca84a509a82ca7616d18dc30f2ad58f1737ecd1efbb9dc86a4ef6f82556f0840
+  source_hash: 688f4ac24a95ee0df00471a9f5a6b69f7abfbf555e453b7ab35368b0602051af
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md
   llm_include: true
   llm_priority: medium
@@ -597,7 +617,7 @@
   parent_artifact: 'CERG-POL-001 — CERG Cybersecurity Policy'
   source_path: governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
   source_file: CERG-GOV-RMF-001_Risk_Management_Framework.md
-  source_hash: 8680d4aa468793bea89dfc99a52b0f5ee4e0643494fe5999301a3d776ea085cb
+  source_hash: 15ddb0fad6cc3b45f2c9dec3c1a3e73e9aa708d65ae8ca5c8de245ace510640a
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
   llm_include: true
   llm_priority: high
@@ -617,7 +637,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md
   source_file: CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md
-  source_hash: 11def843e887f4ead3ed027b2734aca63292aaeb5dfc3c0063585c2baa543db5
+  source_hash: 4b47539ace83890831db6a3cf9dea82a62e197700822abe76bb301ad3c5bd5dc
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md
   llm_include: true
   llm_priority: medium
@@ -628,7 +648,7 @@
   title: Document Authoring and Style Guide
   document_type: governance_instrument
   domain: STY
-  version: 1.01
+  version: 1.02
   status: Approved
   classification: Public
   publication_profile: public
@@ -637,7 +657,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md
   source_file: CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md
-  source_hash: f669943a916083c0115b4537813ef0d4af5860aaa8b9f52faea99880cae4d4db
+  source_hash: 344df83f9d87594c147c1071d9dbfe4325e2f3b173fc9976b45fb9b0974e970a
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md
   llm_include: true
   llm_priority: medium
@@ -828,7 +848,7 @@
   title: NERC CIP Operational Package
   document_type: plan
   domain: CIP
-  version: 1.21
+  version: 1.22
   status: Approved
   classification: Public
   publication_profile: public
@@ -837,7 +857,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md
   source_file: CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md
-  source_hash: 0a2a564cb2c03bc8634d1365cdb2f72a720c59bfe28ddc0c64b50fb9e24ec443
+  source_hash: 78396ff6af30c3ac0d7051abe6507a59fc0a944df1bb58bab09e889d276dd2e8
   canonical_url: https://github.com/m0dernz/CERG/blob/main/plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md
   llm_include: true
   llm_priority: medium
@@ -848,7 +868,7 @@
   title: CUI CMMC Operational Package
   document_type: plan
   domain: CUI
-  version: 1.21
+  version: 1.22
   status: Approved
   classification: Public
   publication_profile: public
@@ -857,7 +877,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md
   source_file: CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md
-  source_hash: 34ddb6a9e3b0db2be898149b88ef90f66fcab46a7ea872f693a196fdbaa728cb
+  source_hash: c14deb7da23e43e6a204c0969b56413631970204e60fc35f3946ae62be744b3e
   canonical_url: https://github.com/m0dernz/CERG/blob/main/plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md
   llm_include: true
   llm_priority: medium
@@ -928,7 +948,7 @@
   title: SOX ITGC Operational Package
   document_type: plan
   domain: SOX
-  version: 1.21
+  version: 1.22
   status: Approved
   classification: Public
   publication_profile: public
@@ -937,7 +957,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md
   source_file: CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md
-  source_hash: 038bcf222627865ce0c621c515ff3a521ee7c7cfaac345127da6402157f52505
+  source_hash: d58c3416aebb2f0a1c69c9d5db8ff6e97b65c10a8f1d1737667f3e78b2610a4b
   canonical_url: https://github.com/m0dernz/CERG/blob/main/plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md
   llm_include: true
   llm_priority: medium
@@ -977,7 +997,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
   source_file: CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
-  source_hash: 814c9d77c8c6c5ac84e7878512f7fb44261d292350f4b1f6ed082730dab408b5
+  source_hash: 9f683b74bfb6871374d3f650afe452db35c551140b4866ceac3ab7d20d84dc84
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
   llm_include: true
   llm_priority: medium
@@ -1097,7 +1117,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
   source_file: CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
-  source_hash: 10d56fda1da23b05ba207c7260227e0d43835da12e1104aa870e2d3dfce631e7
+  source_hash: 13d7be1ef40b08ba08294754c5c9a1c67b194eeb771fb0dfab2c704a55a09aef
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
   llm_include: true
   llm_priority: high
@@ -1157,7 +1177,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
   source_file: CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
-  source_hash: 63039d0da90e66e45bc5d9ee6caf8539fe6a2e3c7497f1adb44f24dbe5a77d4b
+  source_hash: c0d784e43415df50ff0d91c8131a96895cefaefac7085681f115f493d1d40630
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
   llm_include: true
   llm_priority: medium
@@ -1877,7 +1897,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: standards/CERG-STD-AC-001_Access_Management_Standard.md
   source_file: CERG-STD-AC-001_Access_Management_Standard.md
-  source_hash: 8923e6b8a219c0692427ae55890be70c485e9765f1309c13ffe6f48641526c70
+  source_hash: 14c85ae69a6ab5a1ff1d74810543643769841e86a5eaf87fc97a1266db3208ad
   canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-AC-001_Access_Management_Standard.md
   llm_include: true
   llm_priority: medium
@@ -1917,7 +1937,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md
   source_file: CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md
-  source_hash: 2314e12e4b20006b2db9c7bfc90782b476cc374ff96a7d35719dba6660f5e019
+  source_hash: b51e675adca555661e9bdc2191ab9eca9c34c16466ac1567ad69e2613b3513bc
   canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md
   llm_include: true
   llm_priority: medium
@@ -1937,7 +1957,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md
   source_file: CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md
-  source_hash: 40b1190361823c6df3085f5b31c7c9b627909511d1931a6e9df2181912bbbc64
+  source_hash: 5c755eda71fb09e184dc3f1d2fa845810b462488aba1c1e17debae8dc2f76544
   canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md
   llm_include: true
   llm_priority: medium
@@ -1957,7 +1977,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md
   source_file: CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md
-  source_hash: ac75a5da312a5c0c8134f8274c6dc0d598d1dca20b323a54647fd09cf15af1b6
+  source_hash: ae9f21688ca4c5885f4081210600a7186cd6fd44d690a53e28b74822774c109d
   canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md
   llm_include: true
   llm_priority: medium
@@ -2037,7 +2057,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md
   source_file: CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md
-  source_hash: 5ec6bc637c9a4fea467ff7234312337196e0cf5c2a07a3a0563c9968dda51ab2
+  source_hash: 7e7fdae2f6e114a2281936c4879ee22754da4da63f0f41058ba40fdc497f4144
   canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md
   llm_include: true
   llm_priority: medium
@@ -2057,7 +2077,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md
   source_file: CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md
-  source_hash: fb65754489997109c2e965f87fceec5ca450286f9a3e269ab12911ac087cdbca
+  source_hash: 295346c25d4694a695166bf9cbce1783bf9cd4c032ec6329a226b00ee11015bb
   canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md
   llm_include: true
   llm_priority: medium
@@ -2137,7 +2157,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md
   source_file: CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md
-  source_hash: 109b5bbe8f922c4ccb06497956a01d8dd73f2b9e299eedf7fc29351aea99c858
+  source_hash: d5c2334e1513f7502059b6eb82ac6723ad93d4f5915c3c9fe236c1534247eab7
   canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md
   llm_include: true
   llm_priority: medium
@@ -2357,7 +2377,7 @@
   parent_artifact: ''
   source_path: templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md
   source_file: CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md
-  source_hash: 129fd2b6ebcdfb7fee584f7d14fed9e57c7ce95636139bdd731a7c584f0c1883
+  source_hash: 7ec3c4529e7fa1568c060121d8e95eb76b79e5810146df7aa9f1cfbbd44ad222
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md
   llm_include: true
   llm_priority: high
@@ -2404,6 +2424,66 @@
   normative_weight: supporting
   pillar: governance
   summary: Risk Acceptance Memo Template
+- document_id: CERG-TMPL-RM-004
+  title: Risk Acceptance Request Form
+  document_type: template
+  domain: RM
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Risk Register Owner
+  approval_authority: Risk Register Owner
+  parent_artifact: 'CERG-PRC-RM-001 — Risk Register and Exception Process'
+  source_path: templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md
+  source_file: CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md
+  source_hash: 0aba944d66c2a52abcbcb0295e7902f222f882003e0c17a303a959e1a2eb54c0
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Risk Acceptance Request Form
+- document_id: CERG-TMPL-SAAS-001
+  title: SaaS Evidence Collection Checklist
+  document_type: template
+  domain: SAAS
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: CERG-STD-IT-001
+  source_path: templates/CERG-TMPL-SAAS-001_SaaS_Evidence_Collection_Checklist.md
+  source_file: CERG-TMPL-SAAS-001_SaaS_Evidence_Collection_Checklist.md
+  source_hash: 9ba33b8af8cad4ac50d8b87314b77b0f5b9d0d9d6395a1e75451239ccb163907
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-SAAS-001_SaaS_Evidence_Collection_Checklist.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: SaaS Evidence Collection Checklist
+- document_id: CERG-TMPL-SBOM-001
+  title: SBOM Evidence Collection Checklist
+  document_type: template
+  domain: SBOM
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Vendor Risk Analyst
+  approval_authority: Vendor Risk Analyst
+  parent_artifact: 'CERG-PRC-TPRM-001 §11'
+  source_path: templates/CERG-TMPL-SBOM-001_SBOM_Evidence_Collection_Checklist.md
+  source_file: CERG-TMPL-SBOM-001_SBOM_Evidence_Collection_Checklist.md
+  source_hash: 7d337fa6a274ead690c0e7f13190711cb0ee7b7d9ce40ec6e4e91aaa5eea2d92
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-SBOM-001_SBOM_Evidence_Collection_Checklist.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: SBOM Evidence Collection Checklist
 - document_id: CERG-TMPL-TPRM-001
   title: Vendor Security Questionnaire and Assessment Template
   document_type: template

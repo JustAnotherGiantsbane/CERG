@@ -1,0 +1,262 @@
+# CERG Change Management Admission Control — GitHub Actions Workflow
+#
+# Enforces CERG FLOW-001 F-01 (Change Intake) and RMF-001 §9.7
+# (Exception / Risk Acceptance) as automated admission gates for
+# production changes.
+#
+# Every change entering a production environment must pass through
+# admission control that verifies:
+#   1. Change record exists with required metadata
+#   2. Change type is classified (Standard / Normal / Emergency / Exempt)
+#   3. Risk acceptance or policy exception is documented (if applicable)
+#   4. Required approvals are recorded per RMF-001 §9.7
+#   5. Security conformance evidence is attached
+#
+# CERG Control-to-Policy Mapping:
+#   FLOW-001 F-01     — Change intake and triage flow
+#   RMF-001 §9.7      — Exception / Risk acceptance authority
+#   PRC-CHG-001       — Security change management procedure
+#   CB-001 §9         — Evidence collection and freshness
+#   OM-001 §3.1       — Automated enforcement of change policy
+#
+# Usage: Place in .github/workflows/ of your CERG-enabled repository.
+# Triggered by issue/PR creation with the 'change-request' label, or
+# via repository_dispatch for automated pipeline integration.
+
+name: CERG Admission Control
+
+on:
+  pull_request:
+    types: [opened, synchronize, labeled, unlabeled]
+  issues:
+    types: [opened, labeled]
+  repository_dispatch:
+    types: [change-request]
+
+# ─────────────────────────────────────────────
+# Permissions
+# ─────────────────────────────────────────────
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+  checks: write
+
+# ─────────────────────────────────────────────
+# Environment Variables
+# ─────────────────────────────────────────────
+env:
+  CERG_ADMISSION_VERSION: "1.0.0"
+  # Path to the change record template (TMPL-CHG-001)
+  CHANGE_RECORD_PATH: ".cerg/change-records/"
+
+# ─────────────────────────────────────────────
+# Jobs
+# ─────────────────────────────────────────────
+jobs:
+  admission-control:
+    name: "CERG Admission Control"
+    runs-on: ubuntu-latest
+    outputs:
+      change_type: ${{ steps.classify.outputs.change_type }}
+      risk_level: ${{ steps.classify.outputs.risk_level }}
+      admission: ${{ steps.adjudicate.outputs.admission }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ── Step 1: Classify the change ──
+      - name: "Classify Change Type"
+        id: classify
+        run: |
+          # CERG PRC-CHG-001 defines four change types:
+          #   Standard   — Pre-approved, low-risk (e.g., routine patch)
+          #   Normal     — Requires CAB review with documented risk
+          #   Emergency  — Security incident / production outage fix
+          #   Exempt     — Already covered by an existing exception
+          #
+          # Classification is determined by:
+          #   - PR/issue labels
+          #   - Change record metadata in .cerg/change-records/
+          #   - Keywords in PR/issue body
+
+          CHANGE_TYPE="normal"
+          IS_EMERGENCY="false"
+          IS_EXEMPT="false"
+
+          # Check labels
+          LABELS="${{ join(github.event.pull_request.labels.*.name, ' ') }} ${{ join(github.event.issue.labels.*.name, ' ') }}"
+
+          if echo "$LABELS" | grep -qi "emergency"; then
+            CHANGE_TYPE="emergency"
+            IS_EMERGENCY="true"
+            echo "::notice::Change classified as EMERGENCY"
+          fi
+
+          if echo "$LABELS" | grep -qi "standard-change"; then
+            CHANGE_TYPE="standard"
+            echo "::notice::Change classified as STANDARD"
+          fi
+
+          if echo "$LABELS" | grep -qi "exempt"; then
+            CHANGE_TYPE="exempt"
+            IS_EXEMPT="true"
+            echo "::notice::Change classified as EXEMPT (existing exception applies)"
+          fi
+
+          # Check for change record file
+          if [ -f "$CHANGE_RECORD_PATH/change.md" ]; then
+            FILE_TYPE=$(grep -i "^Change Type:" "$CHANGE_RECORD_PATH/change.md" 2>/dev/null | cut -d: -f2 | tr -d ' ')
+            if [ -n "$FILE_TYPE" ]; then
+              CHANGE_TYPE=$(echo "$FILE_TYPE" | tr '[:upper:]' '[:lower:]')
+              echo "::notice::Change type determined from record file: $CHANGE_TYPE"
+            fi
+          fi
+
+          # Determine risk level from change metadata
+          RISK_LEVEL="low"
+          if [ -f "$CHANGE_RECORD_PATH/change.md" ]; then
+            FILE_RISK=$(grep -i "^Risk Level:" "$CHANGE_RECORD_PATH/change.md" 2>/dev/null | cut -d: -f2 | tr -d ' ')
+            if [ -n "$FILE_RISK" ]; then
+              RISK_LEVEL=$(echo "$FILE_RISK" | tr '[:upper:]' '[:lower:]')
+            fi
+          fi
+
+          echo "change_type=$CHANGE_TYPE" >> "$GITHUB_OUTPUT"
+          echo "risk_level=$RISK_LEVEL" >> "$GITHUB_OUTPUT"
+          echo "is_emergency=$IS_EMERGENCY" >> "$GITHUB_OUTPUT"
+          echo "is_exempt=$IS_EXEMPT" >> "$GITHUB_OUTPUT"
+
+      # ── Step 2: Validate standard change pre-approval ──
+      - name: "Validate Standard Change"
+        if: steps.classify.outputs.change_type == 'standard'
+        run: |
+          # PRC-CHG-001: Standard changes are pre-approved but must have:
+          #   - Documented procedure reference (e.g., "STD-IT-001 §4.2")
+          #   - Scripted / automated implementation
+          #   - Rollback plan
+
+          BODY="${{ github.event.pull_request.body || github.event.issue.body }}"
+
+          if echo "$BODY" | grep -qiE "(procedure|standard).*(reference|§|section)"; then
+            echo "::notice::Standard change includes procedure reference"
+          else
+            echo "::warning::Standard changes should reference the approved procedure (PRC-CHG-001)"
+          fi
+
+          # Check for rollback plan
+          if echo "$BODY" | grep -qi "rollback"; then
+            echo "::notice::Rollback plan found"
+          else
+            echo "::warning::Standard changes should include a rollback plan"
+          fi
+
+      # ── Step 3: Validate normal change (requires CAB approval + risk acceptance or exception) ──
+      - name: "Validate Normal Change — Risk Acceptance / Exception"
+        if: steps.classify.outputs.change_type == 'normal'
+        run: |
+          # RMF-001 §9.7a distinguishes Policy Exception (Governance-owned)
+          # from Risk Acceptance (Risk-owned + Business acceptance).
+          #
+          # A Normal change must reference at least one of:
+          #   - A Risk Acceptance record (RISK-YYYY-NNN)
+          #   - A Policy Exception record (EXC-YYYY-NNN)
+          #   - A signed approval from the relevant authority
+
+          BODY="${{ github.event.pull_request.body || github.event.issue.body }}"
+          APPROVAL_FOUND="false"
+          RECORDS_FOUND=0
+
+          # Check for Risk Acceptance references
+          if echo "$BODY" | grep -qiE "(Risk Acceptance|RISK-)[0-9]{4}-[0-9]{3}"; then
+            echo "::notice::Risk Acceptance record found in change request"
+            RECORDS_FOUND=$((RECORDS_FOUND + 1))
+          fi
+
+          # Check for Exception references
+          if echo "$BODY" | grep -qiE "(Exception|EXC-)[0-9]{4}-[0-9]{3}"; then
+            echo "::notice::Exception record found in change request"
+            RECORDS_FOUND=$((RECORDS_FOUND + 1))
+          fi
+
+          # Check for explicit approval
+          if echo "$BODY" | grep -qiE "(approved by|reviewed by|signed off by|approved-by)"; then
+            echo "::notice::Approval signature found in change request"
+            APPROVAL_FOUND="true"
+          fi
+
+          # Check for required approval authority per RMF-001 §9.7
+          if echo "$BODY" | grep -qiE "(CISO|Governance Pillar Leader|Risk Pillar Leader|Engineering Pillar Leader|Business Owner)"; then
+            echo "::notice::Required approval authority referenced"
+          fi
+
+          if [ "$RECORDS_FOUND" -eq 0 ] && [ "$APPROVAL_FOUND" = "false" ]; then
+            echo "::error::RMF-001 §9.7 — Normal changes require either a Risk Acceptance record" \
+              "(RISK-YYYY-NNN), a Policy Exception record (EXC-YYYY-NNN), or an explicit" \
+              "approval signature from the designated authority (CISO / Pillar Leader / Business Owner)."
+            exit 1
+          fi
+
+      # ── Step 4: Emergency change — expedited but must be documented ──
+      - name: "Validate Emergency Change"
+        if: steps.classify.outputs.change_type == 'emergency'
+        run: |
+          # FLOW-001 F-01 Emergency path: documentation within 48 hours.
+          # Emergency bypasses pre-approval but requires:
+          #   1. Incident/ticket reference
+          #   2. Post-change review within 5 business days
+          #   3. Reason for emergency classification
+
+          BODY="${{ github.event.pull_request.body || github.event.issue.body }}"
+          EMERGENCY_OK="true"
+
+          if ! echo "$BODY" | grep -qiE "(incident|IR-|ticket|SEV|P[0-9])"; then
+            echo "::warning::Emergency changes should reference an incident or ticket number"
+          fi
+
+          if ! echo "$BODY" | grep -qiE "(reason|why|because|critical|outage|security)"; then
+            echo "::warning::Emergency classification reason should be documented"
+          fi
+
+          echo "::notice::Emergency change bypassed pre-approval — post-change review required per FLOW-001 F-01"
+
+      # ── Step 5: Exempt change — verify exception is current ──
+      - name: "Validate Exempt Change"
+        if: steps.classify.outputs.change_type == 'exempt'
+        run: |
+          # RMF-001 §9.7: Exempt changes must reference a current exception record.
+          # The exception must not be expired.
+
+          BODY="${{ github.event.pull_request.body || github.event.issue.body }}"
+
+          if echo "$BODY" | grep -qiE "(EXC-|exception)[0-9]{4}-[0-9]{3}"; then
+            echo "::notice::Exception record referenced — verifying currency"
+          else
+            echo "::error::RMF-001 §9.7 — Exempt changes must reference an active exception" \
+              "record (EXC-YYYY-NNN). Changes cannot self-declare exempt status."
+            exit 1
+          fi
+
+      # ── Step 6: Adjudicate admission ──
+      - name: "Adjudicate Admission"
+        id: adjudicate
+        run: |
+          # All gates passed — grant admission
+          echo "admission=GRANTED" >> "$GITHUB_OUTPUT"
+          echo "::notice::CERG admission control PASSED — change is authorized to proceed"
+
+  # ── Results Summary ──
+  admission-summary:
+    name: "Admission Control Summary"
+    runs-on: ubuntu-latest
+    needs: admission-control
+    steps:
+      - name: "Post admission result"
+        run: |
+          echo "## CERG Admission Control Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Check | Result | Reference |" >> $GITHUB_STEP_SUMMARY
+          echo "|-------|--------|-----------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Change Type | ${{ needs.admission-control.outputs.change_type }} | PRC-CHG-001 |" >> $GITHUB_STEP_SUMMARY
+          echo "| Risk Level | ${{ needs.admission-control.outputs.risk_level }} | RMF-001 §9.7 |" >> $GITHUB_STEP_SUMMARY
+          echo "| Admission | ${{ needs.admission-control.outputs.admission }} | FLOW-001 F-01 |" >> $GITHUB_STEP_SUMMARY

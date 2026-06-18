@@ -68,6 +68,71 @@ The six phases map directly to the NIST RMF, with CERG pillar ownership assigned
 | 5. Authorize  | Step 5 - Authorize  | Governance         | Risk, Engineering  |
 | 6. Monitor    | Step 6 - Monitor    | Risk + Governance  | Engineering        |
 
+#### Phase RACI Sub-Matrices
+
+The following RACI sub-matrices resolve pillar ownership ambiguity for specific activities within each phase. **R** = Responsible (does the work), **A** = Accountable (owns the outcome — one per row), **C** = Consulted (provides input before decision), **I** = Informed (notified after decision).
+
+##### Phase 1: Categorize — RACI
+
+| Activity | Governance | Engineering | Risk |
+|----------|-----------|-------------|------|
+| System impact-level determination (CIA) | R | C | I |
+| Regulatory scope declaration (BES/CUI/SOX) | A/R | C | C |
+| Asset inventory handoff from Engineering | I | R | A |
+| Data classification mapping | R | C | C |
+| System Categorization Register maintenance | A/R | I | I |
+
+##### Phase 2: Select — RACI
+
+| Activity | Governance | Engineering | Risk |
+|----------|-----------|-------------|------|
+| Baseline control selection per impact level | A/R | C | I |
+| Overlay identification (CUI/BES/SOX/etc.) | A/R | C | C |
+| Tailoring and compensating control approval | A | R | C |
+| Exception/Deviation scoping | A | R | C |
+| Control selection documentation for SSP | A/R | C | I |
+
+##### Phase 3: Implement — RACI
+
+| Activity | Governance | Engineering | Risk |
+|----------|-----------|-------------|------|
+| Baseline design and configuration | C | A/R | I |
+| Control implementation | I | A/R | C |
+| Implementation evidence collection | C | R | A |
+| Handoff package preparation | C | A/R | C |
+| Pre-production security review | C | R | A |
+
+##### Phase 4: Assess — RACI
+
+| Activity | Governance | Engineering | Risk |
+|----------|-----------|-------------|------|
+| Vulnerability scanning and coverage | I | C | A/R |
+| Penetration testing coordination | I | C | A/R |
+| Control effectiveness testing | C | C | A/R |
+| Finding validation and prioritization | I | R | A |
+| Risk assessment report production | C | I | A/R |
+
+##### Phase 5: Authorize — RACI
+
+| Activity | Governance | Engineering | Risk |
+|----------|-----------|-------------|------|
+| Authorization package assembly | A/R | C | C |
+| POA&M compilation and tracking | A/R | I | C |
+| CISO recommendation preparation | A | C | R |
+| Business-owner acceptance coordination | A/R | I | I |
+| Authorization letter and recordkeeping | A/R | I | I |
+
+##### Phase 6: Monitor — RACI
+
+| Activity | Governance | Engineering | Risk |
+|----------|-----------|-------------|------|
+| Continuous vulnerability monitoring | I | C | A/R |
+| Configuration drift detection and remediation | I | A/R | C |
+| Threat intelligence ingestion and analysis | I | I | A/R |
+| Risk register updates and review | A/R | C | R |
+| Control effectiveness re-assessment | A | C | R |
+| Compliance calendar execution | A/R | I | I |
+
 ### 2.2 [NIST CSF 2.0](https://www.nist.gov/cyberframework) Function Mapping
 
 [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) defines six functions. The CERG-RMF operationalizes all six within the risk cycle:
@@ -156,7 +221,7 @@ Not every control applies equally to every system. CERG's tailoring process allo
 |---|---|---|
 | **Compensating Control** | An alternative control that meets the intent of the baseline control when the standard control cannot be implemented (common in OT environments) | Risk assessment + Risk Pillar Leader approval |
 | **Control Enhancement** | Additional control implementation above baseline, based on threat intelligence or risk assessment findings | Engineering + Governance alignment |
-| **Exception / Deviation** | Documented acknowledgment that a control cannot be satisfied; requires compensating controls and risk acceptance | Per the canonical Risk Acceptance Authority table in [§9.7](#97-risk-acceptance-authority) |
+| **Exception / Deviation** | Documented acknowledgment that a control cannot be satisfied; requires compensating controls and risk acceptance | Per the canonical Risk Acceptance Authority table in [§9.7 Risk Acceptance Authority](#97-risk-acceptance-authority-canonical) |
 
 ---
 
@@ -214,7 +279,7 @@ Assessment validates that implemented controls are working as intended. In CERG,
 
 ### 6.3 Finding Severity and SLAs
 
-All findings from assessment activities are assigned a severity rating and a remediation SLA. Exceptions to SLAs require documented risk acceptance per the process in [§9.7](#97-risk-acceptance-authority).
+All findings from assessment activities are assigned a severity rating and a remediation SLA. Exceptions to SLAs require documented risk acceptance per the process in [§9.7 Risk Acceptance Authority](#97-risk-acceptance-authority-canonical).
 
 The authoritative remediation-SLA table lives in [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) §5. The values published there govern every CERG-managed scan, pen test, and assessment finding across IT, cloud, SaaS, and (with the BES schedule overlay) OT environments. Pillar dashboards and KRIs in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) measure compliance against PRC-VM-001's SLA values, not against a separate table.
 
@@ -663,6 +728,118 @@ The review produces one of two outputs:
 
 Cascading changes from a risk appetite adjustment are tracked in the improvement register (IMPREG-001) until verified. A metric threshold change is verified when it produces one full quarter of actionable signals. A control priority change is verified when the control's effectiveness metric reflects the new posture. No cascading change is considered complete until it is verified Effective.
 
+### 12.6 Worked Calibration Example: Mid-Market Utility
+
+> **Purpose**
+>
+> This worked example shows how a fictitious organization — Contoso Energy Solutions ($1.2B revenue, NERC-CIP Low + SOX scope) — calibrates risk appetite bands from business inputs. First-time adopters can use this as a template for their own calibration.
+
+#### 12.6.1 Business Profile
+
+| **Parameter** | **Value** |
+|---|---|
+| Revenue | $1.2B (mid-market utility) |
+| Regulatory scope | NERC-CIP (Low Impact BES), SOX ITGC |
+| Cyber insurance retention | $500K (self-insured retention) |
+| Estimated downtime cost per day (Tier 1) | $120K (billing + operations) |
+| Estimated downtime cost per day (Tier 2) | $30K (internal systems) |
+| IT/OT asset count | ~2,500 IT + ~300 OT/BES assets |
+| Security team size | 8 people (CISO + 3 Engineering + 2 Risk + 2 Governance) |
+| Maturity baseline | CERG MAT-001: Initial (3.2) |
+
+#### 12.6.2 Inputs to Calibration
+
+**A. Incident history (trailing 12 months):**
+- 1 ransomware event (contained, cost: $350K within retention)
+- 3 phishing-related credential theft events (no material loss)
+- 2 OT patching gaps identified in CIP self-certification (no incident)
+- Trend: incident frequency stable, severity increasing (ransomware was new)
+
+**B. Threat landscape:**
+- Sector: Energy/Utilities — targeted by state-sponsored and ransomware groups
+- Top TTPs: Initial Access via VPN/vendor, Lateral Movement via RDP, Data Exfiltration via cloud storage
+- KEV exploits targeting utility sector: 4 in trailing 12 months
+
+**C. Business strategy:**
+- Cloud migration program (Year 1–2): moving 40% of IT workloads to AWS
+- OT/IT convergence pilot (Year 2): SCADA historian integration with cloud analytics
+- Capital budget for cyber: $2.1M (flat vs. prior year)
+- Revenue growth target: 5% organic, no M&A planned
+
+#### 12.6.3 Calibration Calculations
+
+**Step 1 — Establish ALE bands as % of revenue**
+
+Using revenue-based calibration as the primary anchor:
+
+| **Risk Band** | **ALE Range** | **% of Revenue** | **Rationale** |
+|---|---|---|---|
+| Low | < $120K | < 0.01% | Below insurance retention; routine operational cost |
+| Medium | $120K – $1.2M | 0.01% – 0.10% | Within insurance retention; multiple events could exhaust retention |
+| High | $1.2M – $6M | 0.10% – 0.50% | Exceeds insurance retention; would require capital reallocation |
+| Critical | > $6M | > 0.50% | Material to earnings; board notification threshold |
+
+**Step 2 — Single-risk ALE as function of insurance retention and downtime cost**
+
+Single-risk ALE = (Exposure Frequency × Loss Event Value). For this calibration, the CISO and CFO agree:
+
+| **Risk Scenario** | **Frequency (per year)** | **Loss Event** | **Single-Risk ALE** | **Band** |
+|---|---|---|---|---|
+| Ransomware encrypts Tier 1 billing system | 0.2 (1 in 5 years) | $350K (within retention) + $480K (4 days downtime at $120K/day) = $830K | $166K | Medium |
+| CUI data breach via compromised vendor | 0.1 (1 in 10 years) | $2.1M (notification + legal + regulatory fines) | $210K | Medium |
+| OT BES Cyber System compromise (loss of view) | 0.05 (1 in 20 years) | $5M (NERC fine + restoration + reliability coordinator penalties) | $250K | Medium-High |
+| SOX ITGC control failure → material weakness | 0.15 (1 in 7 years) | $1.5M (audit + remediation + reporting delay costs) | $225K | Medium |
+| Cloud misconfiguration → data exposure | 0.3 (1 in 3 years) | $200K (within retention) | $60K | Low |
+
+**Step 3 — Calibrated risk appetite bands for the 5×5 matrix**
+
+Mapping the ALE bands to the existing 5×5 scoring framework:
+
+| **5×5 Score** | **Label** | **Corresponds to ALE** | **Appetite Position** |
+|---|---|---|---|
+| 1 | Informational | < $50K | Accept — no formal tracking needed |
+| 2–5 | Low | $50K – $120K | Accept — track for trend |
+| 6–11 | Medium | $120K – $1.2M | Accept with documented rationale; requires Business Owner sign-off |
+| 12–19 | High | $1.2M – $6M | Accept only with CISO + Business Owner approval; exceptional |
+| 20–25 | Critical | > $6M | Do not accept without Board notification; requires Executive Sponsor concurrence |
+
+**Step 4 — Regulatory overlay adjustments**
+
+| **Regulatory Scope** | **Adjustment to Bands** | **Rationale** |
+|---|---|---|
+| NERC-CIP (Low Impact BES) | Critical band triggers at > $4M (not $6M) | NERC penalty exposure + reliability risk lowers the threshold |
+| SOX ITGC | High band lowered to $1M – $4M | Material weakness disclosure risk + audit costs compress the band |
+| CUI / CMMC (not in scope) | Standard bands apply | Not applicable until CUI contracts exist |
+
+#### 12.6.4 Calibration Output
+
+**Risk Appetite Statement (adopted):**
+
+> Contoso Energy Solutions accepts residual cybersecurity risk where:
+> a) The estimated annualized loss exposure (ALE) per risk is below $1.2M (0.10% of revenue), AND
+> b) The single-risk ALE does not exceed $6M (0.50% of revenue), AND
+> c) The risk does not threaten NERC-CIP reliability obligations, SOX material weakness reporting, or safety-of-life systems.
+>
+> Risk that exceeds any of these thresholds must be treated, transferred, or avoided. Acceptance above these thresholds requires CISO + CFO approval and board notification.
+
+**Cascading changes triggered:**
+
+| **Cascade** | **Action** | **Owner** |
+|---|---|---|
+| Metric thresholds | Tighten NERC-CIP vulnerability SLA from 90 days to 60 days for BES Cyber Systems | Governance Pillar Leader |
+| Control priorities | Elevate cloud security posture management to High priority (cloud migration program underway) | Engineering Pillar Leader |
+| Exception authority | Compliance manager may approve Low exceptions for NERC-CIP without pillar leader sign-off | CISO |
+| Investment signal | Cloud security tooling and OT monitoring identified as budget candidates for next cycle | CISO |
+
+#### 12.6.5 How to Use This Example for Your Organization
+
+1. Replace the revenue figure and insurance retention with your organization's numbers.
+2. Populate the incident history, threat landscape, and business strategy inputs from your own data.
+3. Run the ALE band calculation using your revenue as the denominator.
+4. Map single-risk ALEs for your top 5–10 risk scenarios to validate the bands produce actionable prioritization.
+5. Add regulatory overlay adjustments for each regulator in your scope.
+6. Document the risk appetite statement and cascade changes in the improvement register.
+
 ---
 
 ## 13. Document Control and Review
@@ -685,6 +862,7 @@ Cascading changes from a risk appetite adjustment are tracked in the improvement
 
 | Version | Date | Author | Change Description |
 |---|---|---|---|
+| 1.32 | 2026-06-18 | Governance Pillar Leader | Added §12.6 Worked Calibration Example for mid-market utility ($1.2B revenue, NERC-CIP+SOX scope) with ALE bands as % of revenue, single-risk ALE as function of insurance retention and downtime cost, calibrated 5x5 band mapping, regulatory overlay adjustments, and cascading changes. |
 | 1.31 | 2026-06-14 | Governance Pillar Leader | Clarified canonical risk-acceptance authority, default acceptance durations, and the shortest-applicable-duration rule. |
 | 1.0 | 2026-05-01 | Cyber Governance | Initial release. Establishes the CERG-RMF cycle, the FAIR-aligned risk statement format, the 5x5 likelihood/impact model, the canonical risk acceptance authority table, and the risk appetite and tolerance posture. Retires the parallel SLA table in favor of the single source of truth in CERG-PRC-VM-001. Adopts canonical ID CERG-GOV-RMF-001 per CERG-GOV-CAT-001 §5.2. |
 | 1.3 | 2026-05-26 | Cyber Governance | Added Section 12 Risk Appetite Calibration: annual and triggered review cadence, structured input package, calibration decision framework with cascading changes (metric thresholds, control priorities, exception authority, investment signals), approval workflow, and cascade tracking through the improvement register. Renumbered Document Control to Section 13. |
