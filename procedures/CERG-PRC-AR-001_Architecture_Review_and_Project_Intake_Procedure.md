@@ -591,4 +591,173 @@ Good governance makes projects faster because teams can design correctly before 
 | **Version** | 1.0 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / on platform or process change |
-| **Change Log** | 1.0 - Initial publication. Establishes intake, review, threat-model, build-time, pre-prod, and handoff phases with the citizen-development carve-out. |
+| **Change Log** | 1.1 - Added Appendix A worked example. 1.0 - Initial publication. Establishes intake, review, threat-model, build-time, pre-prod, and handoff phases with the citizen-development carve-out. |
+
+
+---
+
+## Appendix A. Worked Example: CloudApp Migration
+
+> **Purpose**
+>
+> This appendix walks a fictitious project — "CloudApp Migration" — through all five phases of the architecture review process. It shows what each artifact looks like when populated, so first-time adopters have a concrete reference.
+
+### A.1 Scenario
+
+**Profile:** Contoso Energy Solutions, a mid-market utility ($1.2B revenue). NERC-CIP Low impact, SOX ITGC scope.
+
+**Project:** Migrate the internal billing application ("CloudApp") from on-premises to AWS. CloudApp processes customer billing data (Internal classification), interfaces with the financial ERP (SOX-scoped), and exposes a REST API to an external collections vendor.
+
+**Team:** 1 Cloud Security Engineer (reviewer), 1 Risk Analyst (threat model), 1 Governance Pillar Leader (SOX overlay), 1 Project Technical Lead, 1 Business Owner (CFO designee).
+
+### A.2 Completed Intake Form (Phase 1)
+
+```
+SECURITY PROJECT INTAKE - AR-2026-0001
+
+A. PROJECT IDENTITY
+   Project Name             : CloudApp Migration to AWS
+   Sponsor (named role)     : CFO Designee (Business Owner)
+   Technical Lead           : Sr. Cloud Engineer, IT Operations
+   Business Outcome         : Reduce datacenter footprint, enable auto-scaling
+   Target Production Date   : 2026-09-30
+
+B. SCOPE
+   Data Classifications Handled : Internal (billing records)
+   Regulatory Scope             : SOX (via ERP integration)
+   Operating Units Impacted     : Finance, IT Operations
+   Environments                 : Cloud (AWS)
+   Geographies                  : US only
+   Trust Boundaries Crossed     : Network (on-prem to cloud), Identity (IdP federation), Organization (vendor API)
+
+C. TECHNOLOGY
+   New SaaS introduced?         : Y - Twilio SendGrid (transactional email vendor) - tier assessment needed
+   New cloud account/sub/proj?  : Y - new AWS production account
+   New OT touch / IT/OT bridge? : N
+   New external connection?     : Y - collections vendor API (Tier 2 per TPRM)
+   New identity / federation?   : Y - AWS IAM Identity Center federation with Azure AD
+
+D. THIRD PARTIES
+   Vendors involved             : AWS, Twilio SendGrid, Collections Vendor (ABC Collect Inc.)
+   Vendor tier (per TPRM)       : AWS = Tier 1, SendGrid = Tier 2, ABC Collect = Tier 2
+   International access?        : N
+
+E. CHANGE CONTEXT
+   New build / migrate / retire / extend : Migrate + Extend (vendor API integration is new)
+   Existing CERG-tracked asset IDs       : On-prem billing server (ASSET-00101)
+
+F. INITIAL SECURITY CONCERNS (from project team)
+   What worries us most         : SOX evidence continuity during migration; vendor API authentication
+   What we know is unresolved   : ERP integration will use a private link; encryption cert renewal timeline
+
+G. ASKS
+   What CERG help do we need at design stage? : VPC design review, identity federation pattern, SOX evidence requirements
+```
+
+### A.3 Scope Determination Output
+
+| **Field** | **Determination** |
+|---|---|
+| Review Path | **Mandatory** — new cloud account, external connection, SOX scope |
+| Overlay Reviewers | SOX ITGC Lead (ERP integration), Vendor Risk Analyst (SendGrid + ABC Collect) |
+| Threat Modeling Required | Yes |
+| TPRM Engagement Required | Yes — SendGrid (Tier 2) and ABC Collect (Tier 2) need assessment |
+| SLC Tier | Tier 2 (standard urgency, non-regulated project with SOX adjacency) |
+| Estimated Effort | Phase 2: 7 business days; Phase 4: 5 business days |
+
+### A.4 Architecture Review Record (Phase 2)
+
+**Status:** Approved-with-Conditions
+
+| **Finding ID** | **Area** | **Finding** | **Severity** | **Disposition** |
+|---|---|---|---|---|
+| AR-2026-0001-F01 | Identity | AWS IAM Role for ERP integration grants full DynamoDB access instead of least-privilege per table | High | Fix before go-live: scope IAM policy to specific DynamoDB tables |
+| AR-2026-0001-F02 | Network | VPC flow logs enabled but not shipped to SIEM; retention set to 7 days instead of 365 | High | Fix before go-live: configure VPC flow log delivery to SIEM; set retention to 365 days |
+| AR-2026-0001-F03 | Logging | Application logs write to CloudWatch with 14-day retention; no forwarding to central SIEM | Medium | Fix within 30 days of go-live: configure CloudWatch subscription filter to SIEM; extend retention to 1 year |
+| AR-2026-0001-F04 | Cryptography | KMS key for RDS encryption uses automatic key rotation but no CMK; key material is AWS-managed | Medium | Accept with condition: document SOX-relevant controls to confirm CMK not required; reassess at SOX evidence cycle |
+| AR-2026-0001-F05 | Third Party | SendGrid API key stored in application config file, not secrets manager | High | Fix before go-live: migrate to AWS Secrets Manager with automatic rotation |
+
+**Conditions for Phase 2 approval:**
+- High findings (F01, F02, F05) must be remediated before Phase 4 pre-production review
+- Medium findings (F03, F04) must have treatment plan with owner and target date by go-live
+
+### A.5 Threat Model Record (Phase 2)
+
+```
+THREAT MODEL - CloudApp Migration               AR-2026-0001 - TM-001
+
+1. ASSETS AND DATA
+   - Customer billing records (Internal classification)
+   - ERP financial transaction data (SOX-scoped)
+   - AWS IAM roles, KMS keys, CloudTrail audit logs
+
+2. ACTORS AND ENTRY POINTS
+   - Internal users (Finance team) via Azure AD SSO
+   - Collections vendor (ABC Collect) via REST API + API key
+   - AWS managed services (RDS, DynamoDB, S3) - provider trust model
+
+3. TRUST BOUNDARIES
+   - On-premises Azure AD <-> AWS IAM Identity Center (identity boundary)
+   - AWS VPC <-> On-premises ERP via AWS PrivateLink (network boundary)
+   - CloudApp API <-> ABC Collect (external organizational boundary)
+
+4. THREATS BY BOUNDARY
+   Identity Boundary: [Spoofing] Compromised Azure AD account could assume AWS role
+     -> Control: Conditional Access MFA, JIT elevation via PAM
+   Network Boundary: [Tampering] Man-in-the-middle on PrivateLink connection
+     -> Control: TLS 1.2 minimum, mutual TLS for ERP integration
+   External Boundary: [Info Disclosure] ABC Collect API key leak could expose billing data
+     -> Control: API key in Secrets Manager, IP whitelisting, rate limiting
+
+5. EXISTING CONTROLS
+   - Azure AD MFA for all internal users
+   - AWS CloudTrail enabled across all accounts
+   - AWS Config rules for baseline drift detection
+   - VPCs with default-deny routing, limited egress
+
+6. RESIDUAL RISKS (to risk register)
+   - TM-R01: Vendor API compromise could allow data exfiltration [Medium]
+   - TM-R02: SOX evidence chain depends on CloudTrail integrity [Low]
+
+7. ATTACK SIMULATION CANDIDATES
+   - Purple team: "Assume API key compromised — can attacker pivot to cloud control plane?"
+```
+
+### A.6 Pre-Production Security Review (Phase 4)
+
+**Disposition:** Ready-with-Risk-Acceptance
+
+| **Check** | **Result** | **Evidence** |
+|---|---|---|
+| DISH baseline applied | Pass — AWS account scans at DISH Enhanced tier; no Critical/High deviations | DISH scan AR-2026-0001-001 |
+| Exposure posture | 2 Medium findings open (both accepted with risk register entries) | Exposure pipeline report |
+| Identity wired | SSO + MFA enforced; AWS IAM Identity Center synced from Azure AD; PAM not required for this asset class | IdP policy export |
+| Logging | CloudTrail + VPC Flow Logs + CloudWatch shipped to SIEM; retention 365 days | SIEM source inventory |
+| Detection | CloudApp added to detection coverage: GuardDuty + Security Hub + custom CIS rules | Detection coverage report |
+| Cryptography | TLS 1.2 minimum on ALB; KMS with automatic key rotation; Secrets Manager for all secrets | TLS scan, KMS key config |
+| Resilience | RTO 4h / RPO 1h via multi-AZ RDS; restoration test scheduled for Day +14 post-go-live | Backup config, resilience register |
+| Vendor / TPRM | AWS Tier 1 evidence current; SendGrid Tier 2 assessment complete — SOC 2 accepted with CUEC mapping; ABC Collect assessment in progress — conditional acceptance granted with 90-day re-review | TPRM tool entries |
+| SOX overlay artifacts | ERP integration controls mapped to ITGC CM-2, CM-3, CM-4; compensating control memo for KMS key type accepted by SOX ITGC Lead | SOX control mapping |
+| Phase 2 conditions cleared | F01 (IAM scoping) resolved — IAM policy updated; F02 (flow logs) resolved — SIEM delivery confirmed; F05 (Secrets Manager) resolved — SendGrid key migrated; F03 (logging retention) on track for 30-day target | Phase 2 record annotations |
+| Asset inventory | CloudApp added as ASSET-00201 (AWS): owner = IT Operations, tier = Production Tier 2, SOX scope = yes | Asset inventory |
+
+### A.7 Production Handoff Summary (Phase 5)
+
+| **Section** | **Status** |
+|---|---|
+| System Identity | ASSET-00201 — CloudApp (AWS); Tier: Production Tier 2; Owner: IT Operations; Regulatory: SOX |
+| Review Records | Intake AR-2026-0001, Architecture Review AR-2026-0001-F01–F05, Threat Model TM-001, Pre-Production Record PP-2026-0001 |
+| Control Posture | 30 controls Implemented, 2 Partial (logging retention, vendor assessment), 1 Risk Accepted (KMS key type) |
+| Evidence Pointers | DISH scan, SIEM source list, Secrets Manager audit, Backup config, CloudTrail integrity verification |
+| Risk Acceptances | RA-2026-0001 (KMS key type — expiration 2027-06-30); RA-2026-0002 (SendGrid assessment conditional — re-review 2026-12-31) |
+| Ongoing Controls | Weekly exposure scan, monthly access review, quarterly SOX control evidence refresh, annual pen test |
+| Run-book | Confluence link: RUN-CloudApp-001; On-call: IT Ops rotation via PagerDuty |
+| Sign-offs | Engineering Reviewer: Cloud Security Engineer; Risk Reviewer: Risk Analyst; Governance (SOX): SOX ITGC Lead; Engineering Pillar Leader; CISO (KMS risk acceptance); Business Owner: CFO Designee |
+
+### A.8 Key Takeaways for First-Time Adopters
+
+1. **Start early.** The intake form surfaced the SOX evidence concern on day one, which gave Governance time to map controls before go-live.
+2. **Threat modeling changed the design.** The vendor API risk (TM-R01) prompted adding IP whitelisting and rate limiting that were not in the original architecture.
+3. **Pre-approved patterns reduce Phase 2 time.** The AWS VPC landing-zone pattern was pre-approved; the team skipped the VPC design review and focused on application-layer controls.
+4. **Risk acceptance is not failure.** The KMS key type acceptance was a deliberate decision after documented analysis — SOX auditibility was preserved via compensating controls.
+5. **Evidence continuity from day one.** CloudTrail was configured before the first workload deployment, ensuring no gap in SOX evidence during migration.

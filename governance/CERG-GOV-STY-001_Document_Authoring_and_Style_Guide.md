@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-STY-001 |
-| **Version** | 1.01 |
+| **Version** | 1.02 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
@@ -213,6 +213,105 @@ Weak cross-reference:
 
 `See the risk procedure.`
 
+### 7.1 Stable Section ID Convention
+
+CERG documents use numeric section numbers (e.g., `§9.7`) for sequential structure. However, cross-document references to numeric sections are fragile — renumbering a section in one document breaks references in all documents that point to the old number. To mitigate this, every substantive section SHOULD carry a stable anchor ID in addition to its numeric section heading.
+
+#### Anchor ID Pattern
+
+Add a stable HTML anchor directly before each top-level (`##`) and second-level (`###`) section heading:
+
+```markdown
+<a id="risk-acceptance-authority"></a>
+## 9.7 Risk Acceptance Authority
+```
+
+Or use Markdown's built-in heading anchoring by choosing a stable, kebab-case heading slug and linking to it:
+
+```markdown
+## 9.7. Risk Acceptance Authority   {#risk-acceptance-authority}
+```
+
+For Markdown files in the CERG repository, the preferred approach is to append a stable anchor ID in curly braces after the heading:
+
+```markdown
+## 9.7. Risk Acceptance Authority   {#risk-acceptance-authority}
+```
+
+#### When to Use Stable Anchors
+
+| **Section Type** | **Anchor Required?** | **Rationale** |
+|---|---|---|
+| Top-level sections (`## N. Title`) | Recommended | Frequently cross-referenced from other documents |
+| Subsections (`### N.M Title`) referenced from other docs | Yes | Cross-document references are the primary fragility source |
+| Subsections with no external references | Optional | Not yet referenced, but adding an anchor is cheap insurance |
+| Appendices | Yes | Frequently referenced from regulatory packages |
+| Document Control / Revision History | No | Never externally referenced by section number |
+
+#### Anchor ID Convention
+
+- Use lowercase kebab-case: `#risk-acceptance-authority`, `#evidence-library-structure`.
+- Keep IDs concise but descriptive (2–5 words).
+- Prefix with the document's domain segment if ambiguity is likely: `#cb-insm-overlay` rather than `#insm-overlay`.
+- Do not include the numeric section number in the anchor ID (the whole point is to decouple from numbering).
+
+#### Examples
+
+```markdown
+## 4. Authority and Status Lifecycle   {#authority-status-lifecycle}
+
+### 4.1 Review Cadence Tiers   {#review-cadence-tiers}
+
+### 4.2 CERG Source-of-Truth Model   {#source-of-truth-model}
+```
+
+Cross-reference format using stable anchors:
+
+```
+See [CERG-GOV-RMF-001](#risk-acceptance-authority) for risk acceptance approval authority.
+For evidence tiers, refer to [CERG-GOV-AUD-001](#evidence-tier-requirements) §4.
+```
+
+> **Stable IDs Protect Cross-Document References**
+>
+> When §9.7 is renumbered to §9.8 because a new §9.6 is inserted, every cross-document link that said "§9.7" breaks silently. A stable anchor `#risk-acceptance-authority` survives renumbering. The numeric section remains in the heading for human readability; the anchor provides the machine-stable reference.
+
+### 7.2 Cross-Reference Update Procedure
+
+When section numbering changes in any document (insert, delete, or reorder sections):
+
+1. **Identify affected references.** Search the entire CERG corpus for references to the renumbered document's old section numbers (e.g., search for `RMF-001 §9.7` across all `.md` files). Use `rgrep` or `search_files` tool.
+
+2. **Update numeric references.** Replace each occurrence of the old section number with the new one in the referencing documents.
+
+3. **Verify stable anchors.** If the renumbered section has a stable anchor (per §7.1), the anchor reference does NOT need updating — this is the benefit of stable anchors.
+
+4. **Update TOC in the changed document.** The Table of Contents must reflect new section numbers and anchor links.
+
+5. **Update internal cross-references.** Within the changed document itself, update any prose that references old section numbers.
+
+6. **Validate.** Run `python3 tools/cerg-validate.py` to verify no broken links. Run `python3 tools/cerg-integrity-check.py` for broader drift detection.
+
+7. **Commit.** One commit per changed file with message format: `renumber §§N–M in DOC-ID, update cross-references`.
+
+#### Batch Renumbering for Inserted Sections
+
+When inserting a new section between existing sections (e.g., inserting §6.5 between §6.4 and §6.5):
+
+1. Renumber from the HIGHEST section number down to the insertion point to prevent cascading replacement.
+2. Example: To insert §6.5 between §6.4 and §6.5, first renumber §6.5→§6.6, §6.6→§6.7, ..., then insert new §6.5.
+3. Update all cross-document references to the renumbered sections (per step 1–2 above).
+
+#### Cross-Reference Hygiene Checks (Pre-Commit)
+
+Before committing any section renumbering:
+
+- [ ] Search the corpus for references to the renumbered document.
+- [ ] Update all found references.
+- [ ] Run validator (0 errors required).
+- [ ] Verify TOC matches new numbering.
+- [ ] Verify stable anchors are present on externally-referenced sections.
+
 ---
 
 ## 8. Callouts, Tables, and Lists
@@ -338,6 +437,7 @@ Every contribution must pass these gates before commit:
 | No em dash characters | Search files for the prohibited em dash character | No output |
 | Render check | `python3 tools/cerg-render.py --check` | Passes |
 | Catalog registration | Inspect `CERG-GOV-CAT-001` | New artifact listed or planned entry updated |
+| Catalog status sync | `python3 tools/cerg-catalog-sync.py --ci` | Exit 0 — file frontmatter Status matches CAT-001 §5 |
 | Role discipline | Compare against `CERG-GOV-OM-001` and `CERG-GOV-RAC-001` | No invented roles |
 | Cross-reference discipline | Follow internal links or use a link checker when available | No dead links |
 | Status discipline | Inspect metadata and Document Control | New artifact is Draft unless approved |
@@ -386,11 +486,40 @@ When a document is needed urgently (e.g., to address a new regulatory requiremen
 
 ### Change Log Requirements
 
-Every edit to an Approved document must include a Revision History entry with:
-- Version number
-- Date
-- Author
-- Brief change summary
+Every edit to an Approved document must include a Revision History entry with the following **standardised columns**:
+
+| **Column** | **Required** | **Guidance** |
+|---|---|---|
+| **Version** | Yes | Document version at time of change (e.g., 1.22) |
+| **Date** | Yes | Date of change in ISO 8601 format (YYYY-MM-DD) |
+| **Author** | Yes | Canonical role name or named individual |
+| **Change Type** | Yes | One of: `Major` (structural/scope change), `Minor` (new content, renumbering), `Patch` (typo, link fix, metadata correction) |
+| **Summary** | Yes | Brief, specific description of what changed and why |
+| **Linked Issue/PR** | Recommended | Reference to the issue, PR, or improvement register entry that drove the change |
+
+Example:
+
+| **Version** | **Date** | **Author** | **Change Type** | **Summary** | **Linked Issue/PR** |
+|---|---|---|---|---|---|
+| 1.22 | 2026-06-18 | Governance Pillar Leader | Minor | Expanded CIP-015 §13 from placeholder to full INSM Implementation Annex | #INIT-9.1 |
+| 1.21 | 2026-06-17 | Governance Pillar Leader | Patch | Updated supporting documents links | #42 |
+
+> **Consistent Revision History Is an Audit Artifact**
+>
+> An auditor, regulator, or new team member should be able to reconstruct the change history of any CERG document from its Revision History table. Inconsistent columns, missing dates, or vague summaries ("updated section") undermine that. Use the standard columns above for every entry.
+
+### Aggregated Changelog
+
+The tool `tools/cerg-changelog.py` aggregates all Revision History entries from all Approved CERG documents into a single chronological changelog. Run it at any time to generate:
+
+```bash
+python3 tools/cerg-changelog.py                    # Print to stdout
+python3 tools/cerg-changelog.py --since 2026-01-01  # Filter by date
+python3 tools/cerg-changelog.py --doc PLN-CIP-001   # Filter by document
+python3 tools/cerg-changelog.py --json              # JSON output
+```
+
+The aggregated changelog is a human-readable supplement, not a replacement for per-document Revision History tables.
 
 ### Framework-Wide Updates
 
@@ -409,7 +538,7 @@ When a new framework revision is published (e.g., NIST 800-53 Rev 6, NIST 800-17
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-STY-001 |
-| **Version** | 1.01 |
+| **Version** | 1.02 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-14 |
 | **Classification** | Public |
@@ -426,7 +555,8 @@ When a new framework revision is published (e.g., NIST 800-53 Rev 6, NIST 800-17
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.01 | 2026-06-14 | Governance Pillar Leader | Aligned status lifecycle language to CAT-001 by using Approved as the authoritative status and treating publication eligibility as separate metadata. |
+| 1.02 | 2026-06-18 | Governance Pillar Leader | Minor | Added Stable Section ID Convention (§7.1), Cross-Reference Update Procedure (§7.2), standardised Revision History columns, catalog sync reference in quality gates, and aggregated changelog tool reference. | INIT-10.1, INIT-10.3 |
+| 1.01 | 2026-06-14 | Governance Pillar Leader | Minor | Aligned status lifecycle language to CAT-001 by using Approved as the authoritative status and treating publication eligibility as separate metadata. |
 | 1.0 | 2026-05-22 | Cyber Governance | Initial release. Establishes the CERG house style, metadata and skeleton rules, role and cross-reference discipline, language rules, org-adaptation guidance, and pre-commit quality gates. |
 
 ### Review Triggers

@@ -285,6 +285,21 @@ Evidence that exceeds its freshness window is **stale**. Stale evidence:
 
 The Evidence Librarian checks evidence freshness at the monthly review. The evidence index spreadsheet (§7 of the Small Team Adoption Path) or the GRC platform tracks freshness dates. Stale evidence is flagged in the monthly metrics report.
 
+### 6.1 Evidence Retrieval SLA (Adoption-Gate Tiered)
+
+Evidence must be retrievable within the following SLA, tiered by adoption gate. The applicable gate is defined in the organization's Adoption Gates document ([`CERG-GOV-IMP-005`](CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md) where published; otherwise default to Gate 1).
+
+| Gate | Timeframe | Retrievable Within | Method | Evidence Index Required |
+|------|-----------|-------------------|--------|------------------------|
+| Gate 1 (Spine) | 0–90 days | 15 business days | Manual collection from control owners; shared drive or email attachment acceptable | No — file naming convention suffices |
+| Gate 2 (Operating) | 90–180 days | 10 business days | Structured evidence index (spreadsheet or lightweight GRC tool) | Yes — spreadsheet with control-id, path, date, owner |
+| Gate 3 (Governed) | 180+ days | 5 business days | Tool-supported retrieval (GRC platform, evidence repository with search) | Yes — tool-native index |
+| Gate 4 (Adaptive) | Mature program | 2 business days | Automated evidence pipeline (API-driven collection, on-demand retrieval) | Yes — automated index updated continuously |
+
+> **SLA Clock Start.** The retrieval SLA clock starts when the evidence request is formally received by the Evidence Librarian or the owning pillar leader, not when the request is initiated. The requesting party is notified within 1 business day that the SLA clock has started.
+
+A process finding is opened if evidence is not retrievable within the applicable gate SLA, regardless of whether the underlying control is operating. The finding owner is the Evidence Librarian or the pillar leader responsible for the control evidence.
+
 ---
 
 ## 7. Business-Owner Accountability

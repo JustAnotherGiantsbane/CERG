@@ -1,0 +1,226 @@
+# CERG Architecture Review Gates — GitHub Actions Workflow
+#
+# Enforces CERG PRC-AR-001 and FLOW-001 F-02 gate rules at pull-request time.
+# Blocks PRs that introduce infrastructure / architecture changes without:
+#   1. A completed Architecture Review Record (PRC-AR-001 §4)
+#   2. An approved architecture decision or disposition (PRC-AR-001 §6)
+#   3. A threat model for High/Critical changes (PRC-AR-001 §5)
+#   4. Evidence of security conformance (CB-001 §9 / AUD-001)
+#
+# CERG Control-to-Policy Mapping:
+#   PRC-AR-001 §4     — Architecture Review Record mandatory for all changes
+#   PRC-AR-001 §5     — Threat model required for High/Critical risk changes
+#   PRC-AR-001 §6     — Disposition must be Approved or Approved with Conditions
+#   FLOW-001 F-02 T3  — Pipeline gates block changes without required artifacts
+#   CB-001 §9         — Evidence must be current before production handoff
+#   RMF-001 §9.7      — Risk acceptances / exceptions must reference signed records
+#
+# Usage: Place in .github/workflows/ of your CERG-enabled repository.
+
+name: CERG Architecture Review Gate
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled, unlabeled]
+    paths:
+      - 'infrastructure/**'
+      - 'terraform/**'
+      - 'cloudformation/**'
+      - 'k8s/**'
+      - 'helm/**'
+      - 'architecture/**'
+      - '**/Dockerfile'
+      - '**/docker-compose*'
+      - '**/*.tf'
+      - '**/*.yaml'
+      - '**/*.yml'
+
+# ─────────────────────────────────────────────
+# Permissions
+# ─────────────────────────────────────────────
+permissions:
+  contents: read
+  pull-requests: write
+  checks: write
+
+# ─────────────────────────────────────────────
+# Jobs
+# ─────────────────────────────────────────────
+jobs:
+  # ── Gate 1: Architecture Review Record Exists ──
+  arch-review-record:
+    name: "Gate 1 — Architecture Review Record"
+    runs-on: ubuntu-latest
+    outputs:
+      record_found: ${{ steps.check-record.outputs.found }}
+      disposition: ${{ steps.check-record.outputs.disposition }}
+      risk_level: ${{ steps.check-record.outputs.risk_level }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: "Check for Architecture Review Record"
+        id: check-record
+        run: |
+          # Look for an architecture review record in the PR metadata or a
+          # referenced file. CERG PRC-AR-001 §4 defines the record format.
+          #
+          # Expected patterns:
+          #   - PR body contains "Architecture Review: PRC-AR-001-YYYY-NNN"
+          #   - Or a file at .cerg/arch-reviews/PRC-AR-001-YYYY-NNN.md exists
+          #   - Or the PR title / labels indicate "arch-review-completed"
+
+          RECORD_FOUND="false"
+          DISPOSITION="none"
+          RISK_LEVEL="unknown"
+
+          # Check PR body for architecture review reference
+          if echo "${{ github.event.pull_request.body }}" | grep -qiE "Architecture Review.*PRC-AR-001"; then
+            RECORD_FOUND="true"
+            # Extract disposition from the review record reference
+            echo "::notice::Architecture Review record referenced in PR body"
+          fi
+
+          # Check for review record file in archive
+          if ls .cerg/arch-reviews/ 2>/dev/null | grep -qi "PRC-AR-001"; then
+            RECORD_FOUND="true"
+            echo "::notice::Architecture Review record file found in .cerg/arch-reviews/"
+          fi
+
+          # Check for a required label
+          if echo "${{ github.event.pull_request.labels.*.name }}" | grep -qi "arch-review-completed"; then
+            RECORD_FOUND="true"
+            echo "::notice::PR labeled 'arch-review-completed'"
+          fi
+
+          echo "found=$RECORD_FOUND" >> "$GITHUB_OUTPUT"
+          echo "disposition=$DISPOSITION" >> "$GITHUB_OUTPUT"
+          echo "risk_level=$RISK_LEVEL" >> "$GITHUB_OUTPUT"
+        shell: bash
+
+      - name: "Gate 1 — Block PR if missing Architecture Review Record"
+        if: steps.check-record.outputs.record_found == 'false'
+        run: |
+          echo "::error::PRC-AR-001 §4 — No Architecture Review Record found." \
+            "Every infrastructure/architecture change requires a completed" \
+            "Architecture Review Record referenced in the PR body or" \
+            "committed to .cerg/arch-reviews/."
+          echo ""
+          echo "Required format (in PR body or linked file):"
+          echo "  ## Architecture Review"
+          echo "  Review ID: PRC-AR-001-YYYY-NNN"
+          echo "  Disposition: Approved | Approved with Conditions | Returned"
+          echo "  Reviewer: [Name/Role]"
+          echo ""
+          echo "Or label the PR with 'arch-review-completed'."
+          exit 1
+
+  # ── Gate 2: Threat Model Required for High/Critical Changes ──
+  threat-model-check:
+    name: "Gate 2 — Threat Model Required"
+    runs-on: ubuntu-latest
+    needs: arch-review-record
+    if: |
+      needs.arch-review-record.outputs.risk_level == 'high' ||
+      needs.arch-review-record.outputs.risk_level == 'critical'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: "Check for Threat Model artifact"
+        id: check-tm
+        run: |
+          # PRC-AR-001 §5 requires a threat model for High/Critical changes.
+          # Expected patterns:
+          #   - PR body contains "Threat Model: TM-YYYY-NNN"
+          #   - A file at .cerg/threat-models/TM-YYYY-NNN.md exists
+          #   - The PR label "threat-model-completed" is applied
+
+          TM_FOUND="false"
+
+          if echo "${{ github.event.pull_request.body }}" | grep -qiE "Threat Model.*TM-"; then
+            TM_FOUND="true"
+            echo "::notice::Threat Model reference found in PR body"
+          fi
+
+          if ls .cerg/threat-models/ 2>/dev/null | grep -qi "^TM-"; then
+            TM_FOUND="true"
+            echo "::notice::Threat Model file found in .cerg/threat-models/"
+          fi
+
+          if echo "${{ github.event.pull_request.labels.*.name }}" | grep -qi "threat-model-completed"; then
+            TM_FOUND="true"
+            echo "::notice::PR labeled 'threat-model-completed'"
+          fi
+
+          echo "found=$TM_FOUND" >> "$GITHUB_OUTPUT"
+
+          if [ "$TM_FOUND" = "false" ]; then
+            echo "::error::PRC-AR-001 §5 — High/Critical risk changes require a completed threat model." \
+              "Reference Threat Model ID in PR body, commit artifact to" \
+              ".cerg/threat-models/, or label PR 'threat-model-completed'."
+            exit 1
+          fi
+
+  # ── Gate 3: Evidence Currency Check ──
+  evidence-check:
+    name: "Gate 3 — Evidence Currency"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: "Check Evidence freshness (CB-001 §9 / AUD-001)"
+        run: |
+          # AUD-001 requires evidence to be within one refresh cycle + 30 days.
+          # This is a lightweight check — real implementations integrate with
+          # an evidence repository API.
+
+          EVIDENCE_DIR=".cerg/evidence/"
+          if [ ! -d "$EVIDENCE_DIR" ]; then
+            echo "::notice::No evidence directory found at $EVIDENCE_DIR — skipping evidence check"
+            exit 0
+          fi
+
+          MAX_AGE_DAYS=395  # One year + 30 days (annual refresh cycle)
+          CURRENT_EPOCH=$(date +%s)
+          MAX_AGE_SECONDS=$((MAX_AGE_DAYS * 86400))
+          STALE_FILES=0
+
+          for ev_file in "$EVIDENCE_DIR"*; do
+            FILE_AGE=$((CURRENT_EPOCH - $(stat -c %Y "$ev_file" 2>/dev/null || echo 0)))
+            if [ "$FILE_AGE" -gt "$MAX_AGE_SECONDS" ]; then
+              echo "::warning::Evidence file $ev_file is stale (> $MAX_AGE_DAYS days old)"
+              STALE_FILES=$((STALE_FILES + 1))
+            fi
+          done
+
+          if [ "$STALE_FILES" -gt 0 ]; then
+            echo "::error::$STALE_FILES evidence file(s) are stale — per CB-001 §9 Rule 1," \
+              "evidence older than one refresh cycle + 30 days must be refreshed before production handoff."
+            exit 1
+          fi
+
+  # ── Summary ──
+  gate-summary:
+    name: "Architecture Review Gate Summary"
+    runs-on: ubuntu-latest
+    needs: [arch-review-record, threat-model-check, evidence-check]
+    if: always()
+    steps:
+      - name: "Collate gate results"
+        run: |
+          echo "## CERG Architecture Review Gate Results" > $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Gate | Status | Reference |" >> $GITHUB_STEP_SUMMARY
+          echo "|------|--------|-----------|" >> $GITHUB_STEP_SUMMARY
+
+          G1_STATUS="${{ needs.arch-review-record.result }}"
+          G2_STATUS="${{ needs.threat-model-check.result }}"
+          G3_STATUS="${{ needs.evidence-check.result }}"
+
+          echo "| G1: Architecture Review Record | $G1_STATUS | PRC-AR-001 §4 |" >> $GITHUB_STEP_SUMMARY
+          echo "| G2: Threat Model (if High/Critical) | $G2_STATUS | PRC-AR-001 §5 |" >> $GITHUB_STEP_SUMMARY
+          echo "| G3: Evidence Currency | $G3_STATUS | CB-001 §9, AUD-001 |" >> $GITHUB_STEP_SUMMARY

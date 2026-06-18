@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PLN-SOX-001 |
-| **Version** | 1.21 |
+| **Version** | 1.22 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (SOX Liaison) |
@@ -30,12 +30,12 @@
 3. [SOX-Relevant System Register](#3-sox-relevant-system-register)
 4. [ITGC Control Library](#4-itgc-control-library)
 5. [Evidence Reuse Mapping](#5-evidence-reuse-mapping)
-6. [Deficiency Workflow](#6-deficiency-workflow)
-7. [Auditor Interface](#7-auditor-interface)
-8. [Operating Cadence](#8-operating-cadence)
-9. [Roles and Responsibilities](#9-roles-and-responsibilities)
-9. [Regulatory and Framework Alignment Summary](#9-regulatory-and-framework-alignment-summary)
-10. [Document Control](#10-document-control)
+6. [SOC 1 Reuse Procedure](#6-soc-1-reuse-procedure)
+7. [Deficiency Workflow](#7-deficiency-workflow)
+8. [Auditor Interface](#8-auditor-interface)
+9. [Operating Cadence](#9-operating-cadence)
+10. [Regulatory and Framework Alignment Summary](#10-regulatory-and-framework-alignment-summary)
+11. [Document Control](#11-document-control)
 
 ---
 
@@ -169,7 +169,121 @@ Specifically, the most-reused artifacts:
 
 ---
 
-## 6. Deficiency Workflow
+## 6. SOC 1 Reuse Procedure
+
+CB-001 §10.1 SOX crosswalk and §7.1 Inheritance establish that SOC 1 reports can be reused for hosted financial systems. This procedure operationalises that reuse: it defines how CERG acquires SOC 1 reports, inventories Complementary User Entity Controls (CUECs), performs gap analysis, documents compensating controls, builds an evidence package for the external auditor, and manages the annual refresh cycle.
+
+### 6.1 Report Acquisition
+
+| **Step** | **Action** | **Owner** | **Cadence** |
+|---|---|---|---|
+| 1 | Identify all SOX-relevant systems hosted by external providers (IaaS, PaaS, SaaS) — sourced from SOX-Relevant System Register (Section 3) | SOX ITGC Lead | Quarterly + on new system onboarding |
+| 2 | Request SOC 1 Type II report from each provider (covering the most recent audit period) | SOX ITGC Lead | Within 30 days of provider's report issuance OR 90 days before external auditor testing |
+| 3 | Verify report covers the correct period (must overlap with CERG's SOX year) | SOX ITGC Lead | On receipt |
+| 4 | Confirm report is from a licensed CPA firm and includes the service auditor's opinion | SOX ITGC Lead | On receipt |
+| 5 | Archive report in the evidence library under `/frameworks/sox-itgc/soc1-reports/<provider>/<YYYY-QN>/` | Evidence Librarian | On receipt |
+| 6 | Register report status in SOX-Relevant System Register Section 3 (SOC 1 Available field) | SOX ITGC Lead | On receipt |
+
+> **SOC 1 Type II vs. Type I**
+>
+> CERG accepts SOC 1 Type II (tested over a period) as the primary reuse evidence. SOC 1 Type I (point-in-time design only) is accepted as interim evidence only when a Type II is not yet available, and must be supplemented with customer-side testing of the operating effectiveness of CUECs.
+
+### 6.2 CUEC Inventory
+
+Complementary User Entity Controls (CUECs) are controls the customer (CERG's organization) must operate for the SOC 1 controls to be effective. Missing CUECs create control gaps.
+
+| **Step** | **Action** | **Owner** |
+|---|---|---|
+| 1 | Extract CUEC section from SOC 1 report (typically Section 4 or Appendix) | SOX ITGC Lead |
+| 2 | Map each CUEC control objective to a CERG control or CERG process | SOX ITGC Lead + relevant pillar owner |
+| 3 | Assess each CUEC: Is the control operating? Evidence on file? Cadence satisfied? | SOX ITGC Lead |
+| 4 | Document CUEC status in the CUEC Inventory table | SOX ITGC Lead |
+| 5 | Flag any CUEC not implemented or insufficiently evidenced | SOX ITGC Lead |
+| 6 | Escalate missing CUECs to Governance Pillar Leader within 10 business days | SOX ITGC Lead |
+
+#### CUEC Inventory Table
+
+| **CUEC Reference** | **Provider Control Objective** | **CUEC Description** | **CERG Control / Process** | **Operating?** | **Evidence Ref** | **Gap?** |
+|---|---|---|---|---|---|---|
+| SOC1-ACME-001 | Logical access to hosted application is authorised and reviewed quarterly | Customer must maintain access recertification process for application users | AX-03 (Section 4.1) — Quarterly access recertification | Yes | Q1-2026 recert report | No |
+| SOC1-ACME-002 | Segregation of duties enforced in financial application | Customer must maintain SOD matrix for financially-sensitive roles | AX-04 (Section 4.1) — SOD review | Partially | SOD matrix exists; quarterly review not yet started | Yes — quarterly cadence not established |
+
+### 6.3 Gap Analysis vs. CB-001 Controls
+
+For each SOC 1 control objective that overlaps with a CB-001 control, the gap analysis determines whether CERG's control is sufficient to cover the provider's control objective, or whether a gap exists.
+
+| **Gap Category** | **Definition** | **Action** |
+|---|---|---|
+| Full Coverage | CERG control fully satisfies the SOC 1 control objective and CUEC | No action; document reuse mapping |
+| Partial Coverage | CERG control covers the objective but with scope or cadence differences | Document difference; assess materiality; if material, create compensating control or POA&M |
+| No Coverage | No CERG control maps to the SOC 1 control objective or CUEC | Create compensating control; if not feasible, record as deficiency per Section 6 (Deficiency Workflow) |
+| Provider-Exclusive | Control objective has no customer-side CUEC — provider handles entirely | Document as inherited; no CERG action required beyond evidence retention |
+
+The gap analysis is documented in the [CB-001](../governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) SOX crosswalk (§10.1) and in the SOC 1 evidence package (Section 6.5 below).
+
+### 6.4 Compensating Controls
+
+Where a gap exists (Partial or No Coverage), compensating controls are designed and implemented.
+
+| **Gap** | **Compensating Control Example** | **Evidence** | **Owner** | **Timeline** |
+|---|---|---|---|---|
+| Provider SOC 1 does not cover change management for a hosted financial application | CERG performs quarterly application-level change review; verifies that provider change tickets are reviewed by CERG | Quarterly change review meeting minutes; provider change ticket log | SOX ITGC Lead | Implemented within 30 days of gap identification |
+| Provider CUEC requires quarterly MFA attestation; CERG currently does annual | Increase MFA attestation to quarterly for the affected user population | Quarterly IdP MFA policy audit report | Identity Engineer | 60 days |
+| Provider SOC 1 excludes a sub-service organisation | Obtain sub-service organisation SOC report or create customer-side monitoring | Sub-service SOC report OR quarterly manual control test | Vendor Risk Analyst | 90 days |
+
+### 6.5 Evidence Package for External Auditor
+
+The SOC 1 Reuse Evidence Package is submitted to the external auditor at the start of SOX testing (interim phase). The package contains:
+
+| **Package Element** | **Source** | **Status** |
+|---|---|---|
+| Provider SOC 1 Type II report (current period) | Provider (Section 6.1) | Required |
+| CUEC Inventory (Section 6.2) | CERG | Required |
+| Gap Analysis (Section 6.3) | CERG | Required |
+| Compensating Control Documentation (Section 6.4) | CERG | Required if gaps exist |
+| CERG evidence for each CUEC | CERG evidence library per Section 4 | Required |
+| Provider sub-service organisation SOC (if applicable) | Provider / sub-service | Required if sub-service is material |
+| SOC 1 Reuse Summary Memo | CERG (SOX ITGC Lead) | Required |
+| Provider contract excerpt showing SLA and audit rights | Procurement / Legal | Recommended |
+
+#### SOC 1 Reuse Summary Memo
+
+A one-to-two-page memo accompanies the package explaining:
+- Which SOX-relevant systems use SOC 1 reuse
+- Which ITGC domains are covered by each SOC 1 (per §4 domain mapping)
+- CUEC status summary (count of implemented / partial / missing)
+- Gap analysis conclusion (material or immaterial gaps)
+- Compensating controls in place
+- Auditor coordination notes (any scope limitations in the SOC 1 report)
+- Next refresh date
+
+### 6.6 Annual Refresh Cycle
+
+| **Activity** | **Cadence** | **Owner** |
+|---|---|---|
+| Request updated SOC 1 report from each provider | Within 30 days of provider's new report issuance | SOX ITGC Lead |
+| Update CUEC Inventory (re-map controls, update status) | Within 30 days of receiving new report | SOX ITGC Lead |
+| Perform gap analysis on new report vs. prior year | Within 30 days of receiving new report | SOX ITGC Lead |
+| Update compensating controls where gaps changed | Within 60 days of gap identification | Relevant pillar owner |
+| Refresh SOC 1 Reuse Evidence Package | Before interim SOX testing (typically Q2) | SOX ITGC Lead |
+| Submit evidence package to external auditor | Per SOX year timeline (Section 7) | SOX ITGC Lead |
+| Review provider scope changes (new sub-services, decommissioned systems, changed control objectives) | Upon receipt of new report | SOX ITGC Lead + Vendor Risk Analyst |
+| Escalate provider report qualifications or adverse opinions to CISO | Immediately on discovery | SOX ITGC Lead |
+
+### 6.7 Roles and Responsibilities
+
+| **Role** | **SOC 1 Reuse Responsibility** |
+|---|---|
+| SOX ITGC Lead | Owns the end-to-end procedure: report acquisition, CUEC inventory, gap analysis, compensating controls, evidence package, annual refresh |
+| Evidence Librarian | Archives SOC 1 reports and evidence package in the evidence library |
+| Governance Pillar Leader | Accountable for the SOC 1 reuse program; approves compensating control decisions |
+| Vendor Risk Analyst | Coordinates provider report acquisition via TPRM process; sources sub-service organisation reports |
+| Relevant Pillar Owners (Engineering, Risk) | Implement compensating controls for gaps affecting their pillar |
+| CISO | Receives escalation for material gaps, qualified opinions, or residual risk acceptance |
+
+---
+
+## 7. Deficiency Workflow
 
 | **Step** | **Detail** |
 |---|---|
@@ -183,7 +297,7 @@ Specifically, the most-reused artifacts:
 
 ---
 
-## 7. Auditor Interface
+## 8. Auditor Interface
 
 | **Activity** | **CERG Action** |
 |---|---|
@@ -191,12 +305,12 @@ Specifically, the most-reused artifacts:
 | SOC 1 reuse for hosted financial systems | Where the financial SaaS or hosting provider has a SOC 1, complementary user-entity control (CUEC) review is conducted; CERG provides the customer-side evidence required. |
 | Internal Audit walkthroughs | CERG participates with system owner; provides evidence references. |
 | External Auditor testing | CERG provides evidence per the library; supports walkthroughs with system owners. |
-| Findings response | Per Section 6. |
+| Findings response | Per Section 7. |
 | Year-end attestations | CERG produces a summary of control posture by ITGC domain for inclusion in management's assessment. |
 
 ---
 
-## 8. Operating Cadence
+## 9. Operating Cadence
 
 | **Activity** | **Cadence** |
 |---|---|
@@ -210,24 +324,24 @@ Specifically, the most-reused artifacts:
 | Operating model review (with Internal Audit and Finance) | Annual |
 
 ---
-## 9. Regulatory and Framework Alignment Summary
+## 10. Regulatory and Framework Alignment Summary
 
 | **Regulation / Framework** | **Where in This Package** |
 |---|---|
-| Sarbanes-Oxley Act §404 | Sections 2–7 |
+| Sarbanes-Oxley Act §404 | Sections 2–8 |
 | COSO Internal Control - Integrated Framework | Cross-cutting |
 | COBIT 2019 (selected) | Section 4 |
 | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (mappings) | Section 4 reused control IDs |
 
 ---
 
-## 10. Document Control
+## 11. Document Control
 
 | | |
 |---|---|
 | **Document ID** | CERG-PLN-SOX-001 |
-| **Version** | 1.21 |
+| **Version** | 1.22 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / per SOX year |
-| **Change Log** | 1.0 - Initial publication. ITGC scoping, control library, system register, evidence reuse mapping, deficiency workflow, auditor interface. |
+| **Change Log** | 1.0 - Initial publication. ITGC scoping, control library, system register, evidence reuse mapping, deficiency workflow, auditor interface. 1.22 - Added SOC 1 Reuse Procedure (§6) with report acquisition, CUEC inventory, gap analysis vs. CB-001, compensating controls, evidence package for external auditor, and annual refresh cycle. Renumbered §§7–10 accordingly. |
 

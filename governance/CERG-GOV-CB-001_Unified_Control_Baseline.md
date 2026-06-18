@@ -261,6 +261,20 @@ For every control that crosses an organizational boundary, complete this table a
 | Reviewed By | [Name] |
 | Review Date | [Date] |
 
+#### Provider Evidence Gap Workflow
+
+When provider attestation is missing, expired, or does not cover the customer's scope, follow this workflow:
+
+| Step | Action | Owner | Output | SLA |
+|------|--------|-------|--------|-----|
+| 1. **Document the gap** | Describe what evidence is missing: control ID, provider, date expected vs. received, scope gap. | Control Owner / Risk (TPRM) | Gap record in Shared Responsibility Decision Table | Within 5 business days of discovering the gap |
+| 2. **Assess residual risk** | If provider evidence is unavailable, how does the control gap affect the customer environment? Quantify the exposure using FAIR-aligned risk statement format per RMF-001 §9.2. | Risk Pillar Leader | Risk assessment with LEF/LM bands | Within 10 business days of step 1 |
+| 3. **Select treatment path** | Choose one: Compensating control (customer-side control achieving same objective), Risk acceptance (per RMF-001 §9.7), or Provider remediation (contractual timeline). | Control Owner + Risk Pillar Leader | Treatment decision documented in risk register | Within 10 business days of step 2 |
+| 4. **Set re-evaluation trigger** | Define the event that will trigger gap re-evaluation: contract renewal, attestation expiry, scope change, or provider breach notification. | Governance Pillar Leader | Re-evaluation trigger entry in evidence index | Within 5 business days of step 3 |
+| 5. **Escalate if Critical/High** | If the gap affects a Critical or High overlay control (per §8), escalate to the CISO within 24 hours of step 2. CISO determines whether an immediate compensating control is required or whether the gap is being tracked through the risk register. | Risk Pillar Leader | CISO notification and disposition | 24 hours (Critical/High) |
+
+> **Provider Evidence Gap vs. Control Finding.** A provider evidence gap is not automatically a control failure. It means the inheritance claim cannot be verified. The control status should be `Partially Implemented` (evidence gap) or `Inherited — Unverified` until the workflow is resolved. If the gap persists beyond the re-evaluation trigger without a documented compensating control or risk acceptance, the control defaults to `Not Implemented`.
+
 ## 8. Overlay Matrix
 
 Overlays add to the organizational baseline. They never silently relax it.
@@ -324,9 +338,17 @@ The discipline rule is unchanged from §2: a control without a named evidence ar
 
 Three rules apply to every entry above:
 
-1. **Currency.** Evidence captured in the prior refresh cycle is current. Evidence older than two refresh cycles is stale; staleness is a finding in its own right and routes to the owning pillar for action.
+1. **Currency (Adoption-Gate Tiered).** Evidence captured in the prior refresh cycle is current. Evidence older than **one refresh cycle plus 30 days** is stale; staleness is a finding in its own right and routes to the owning pillar for action. Examples per cadence:
+   - **Annual controls** (e.g., CP-4 annual test, CM-3 annual review): evidence is current for 13 months; stale at 13 months + 1 day.
+   - **Quarterly controls** (e.g., CM-7 least functionality, AC-6 role inventory): evidence is current for 4 months; stale at 4 months + 1 day.
+   - **Continuous controls** (e.g., AU-2 event logging, CM-6 drift detection): evidence is current for 30 days; stale at 31 days.
 2. **Attribution.** Every evidence artifact carries the named owning role from the canonical roster in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1. "Owned by the team" is not attribution.
-3. **Retrievability.** Evidence shall be retrievable within five business days of an auditor request. Anything that takes longer is a process finding regardless of whether the underlying control is operating.
+3. **Retrievability (Adoption-Gate Tiered).** Evidence shall be retrievable within the following SLA, tiered by adoption gate:
+   - **Gate 1 (Spine, 0–90 days):** Within 15 business days of an auditor request. Manual collection is acceptable.
+   - **Gate 2 (Operating, 90–180 days):** Within 10 business days. Structured evidence index required.
+   - **Gate 3 (Governed, 180+ days):** Within 5 business days. Tool-supported evidence pipeline.
+   - **Gate 4 (Adaptive, mature):** Within 2 business days. Automated evidence pipeline.
+Anything that takes longer than the applicable gate SLA is a process finding regardless of whether the underlying control is operating.
 
 > **Inheritance Evidence**
 >

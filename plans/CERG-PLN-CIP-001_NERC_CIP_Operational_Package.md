@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PLN-CIP-001 |
-| **Version** | 1.21 |
+| **Version** | 1.22 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | NERC-CIP Compliance Manager |
@@ -37,7 +37,7 @@
 10. [IT/OT Convergence Security Architecture Guideline](#10-itot-convergence-security-architecture-guideline)
 11. [CIP-013 Supply Chain Risk Management Plan](#11-cip-013-supply-chain-risk-management-plan)
 12. [CIP-009 Recovery Plan Package](#12-cip-009-recovery-plan-package)
-13. [CIP-015 INSM, Forward-Looking Integration](#13-cip-015-insm-forward-looking-integration)
+13. [CIP-015 INSM Implementation Annex](#13-cip-015-insm-implementation-annex)
 14. [Operating Cadence and Reporting](#14-operating-cadence-and-reporting)
 15. [Regulatory and Framework Alignment Summary](#15-regulatory-and-framework-alignment-summary)
 16. [Document Control](#16-document-control)
@@ -318,20 +318,147 @@ Operationalized in coordination with [`CERG-STD-RES-001`](../standards/CERG-STD-
 
 ---
 
-## 13. CIP-015 INSM, Forward-Looking Integration
+## 13. CIP-015 INSM Implementation Annex
 
-CIP-015 is tracked as a forward-looking internal network security monitoring (INSM) obligation. Until it becomes enforceable for the organization, CERG treats it as a readiness overlay rather than an audit assertion.
+CIP-015 (Internal Network Security Monitoring) is tracked as a forward-looking obligation for Medium and High Impact BES Cyber Systems. This annex operationalizes the CIP-015 readiness overlay referenced in CB-001 §8 BES Overlay. Until CIP-015 becomes enforceable for the organization, CERG treats this annex as a readiness investment; upon applicability, it becomes an audit-asserted operational procedure.
 
-### 13.1 Readiness Activities
+> **INSM Is Not Optional for Medium/High Impact BCS**
+>
+> Once CIP-015 becomes enforceable, operators of Medium and High Impact BES Cyber Systems must demonstrate continuous internal network security monitoring. This annex ensures CERG is not scrambling on day one.
 
-- Map existing OT telemetry sources to expected INSM coverage objectives.
-- Identify ESP / EAP monitoring gaps that would affect Medium or High Impact BES Cyber Systems.
-- Route monitoring backlog items through [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) and the risk register when coverage cannot be implemented immediately.
-- Preserve evidence of readiness decisions in the Evidence Library (Section 6).
+### 13.1 Scope and Applicability
 
-### 13.2 Cutover Trigger
+| **Scope Element** | **Coverage** |
+|---|---|
+| BES Impact Levels | Medium and High Impact BES Cyber Systems |
+| Associated Systems | EACMS, PACS, PCAs within the ESP boundary |
+| INSM Objective | Detect anomalous or malicious activity on internal OT networks at the ESP/EAP boundary and within the BES Cyber System interior |
+| Regulatory Driver | CIP-015 (draft, forward-looking); CB-001 §8 BES Overlay |
+| CERG Readiness Obligation | Produce evidence of readiness decisions, sensor coverage maps, and gap analysis until applicability |
 
-When CIP-015 becomes applicable, Governance updates this package, the OT standard, the logging and monitoring standard, and the compliance calendar with enforceable evidence requirements and cadence.
+### 13.2 Network Sensor Placement
+
+Sensor placement follows the ESP/EAP topology documented in Section 5 and the IT/OT convergence architecture in Section 10.
+
+| **Sensor Location** | **Placement Requirement** | **Monitoring Purpose** |
+|---|---|---|
+| EAP ingress/egress (IT side) | One sensor per EAP monitoring all inbound and outbound traffic crossing the ESP boundary | Detect unauthorized traversal, protocol anomalies, command-and-control patterns, data exfiltration attempts |
+| EAP interior (OT side) | One sensor within each ESP monitoring east-west traffic between BCS inside the same ESP | Detect lateral movement, insider-threat activity, protocol violations, unauthorized device-to-device communication |
+| IT/OT DMZ | Sensor at each industrial DMZ monitoring historian and data-broker flows | Detect data exfiltration, unauthorized data access, corrupted historian feeds |
+| Vendor remote-access gateway | Sensor at the vendor VPN/concentrator egress monitoring all remote sessions | Detect unauthorized vendor activity, session hijacking, credential misuse |
+| Field-location aggregation point | Where substations or remote sites aggregate, a sensor at the aggregation uplink | Detect compromised field devices communicating anomalously |
+
+#### Sensor Density Guidelines
+
+- Each Medium Impact ESP: Minimum 1 sensor covering EAP ingress/egress.
+- Each High Impact ESP: Minimum 2 sensors — one at EAP boundary, one for interior east-west monitoring.
+- Any ESP with >50 BCA devices: Add 1 sensor per additional 50 BCAs or fraction thereof, distributed across logical segments.
+- Sensor coverage evidence: Documented in the ESP/EAP topology diagram (Section 5) with sensor locations annotated.
+
+### 13.3 Data Collection Requirements
+
+| **Data Type** | **Source** | **Collection Method** | **Retention** | **CIP-015 Relevance** |
+|---|---|---|---|---|
+| NetFlow / IPFIX | Network switches and routers at EAPs and interior segments | Flow export to collector; minimum 1:4096 sampling for high-throughput links | 90 days (CIP-006 minimum); 365 days for High Impact | Network baseline, anomaly detection |
+| Full packet capture | EAP ingress/egress for High Impact ESPs | 10% sampled PCAP at EAP; 100% on High Impact EAPs for control-session traffic | 30 days rolling; 90 days for security events | Forensic analysis, threat-hunting |
+| DNS query logs | Authoritative DNS resolvers serving OT zones | Syslog to SIEM | 365 days | C2 detection, beacon identification |
+| Authentication events | Active Directory / LDAP, PAM, RADIUS servers | Syslog / Windows Event Forwarding to SIEM | 365 days | Unauthorized access detection |
+| OT protocol logs | Protocol-aware monitoring (DNP3, Modbus, IEC 61850, IEC 104 pass-through) | Deep packet inspection via OT-IDPS or protocol-aware sensor | 90 days; 365 days for security events | Protocol anomaly detection, control-command validation |
+| Firewall / ACL logs | ESP boundary firewalls, EAP devices | Syslog to SIEM | 90 days; 365 days for High Impact | Policy violation detection |
+| Endpoint detection logs | OT endpoints with approved host-based monitoring | Agent-based (where available and OT-safe) or log export | 90 days | Host compromise detection |
+| Vendor remote-access logs | PAM gateway, VPN concentrator | Session recording + metadata to SIEM | 365 days; indefinite for security incidents | Vendor anomaly detection |
+
+#### Collection Integration
+
+- All INSM data sources feed into the enterprise SIEM per [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) Section 4.
+- Where SIEM ingestion is not feasible (e.g., air-gapped OT environments), a local log collector forwards to SIEM via one-way data diode.
+
+### 13.4 Alerting Rules and Detection Baseline
+
+The following alert categories are the minimum detection baseline for Medium and High Impact BES Cyber Systems. Rules are implemented in the SIEM and maintained by the Detection Engineer per [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) Section 6.
+
+| **Alert Category** | **Rule Description** | **Severity** | **Response SLA** |
+|---|---|---|---|
+| Unauthorized EAP traversal | Device not on authorized BCA list communicating across EAP | Critical | 1 hour |
+| Protocol anomaly | DNP3/Modbus/IEC 61850 message outside allowed function codes or address range | High | 2 hours |
+| Beaconing / C2 | Outbound connection to untrusted destination with periodic patterns | Critical | 1 hour |
+| New device on OT segment | MAC or IP not in asset inventory detected on OT LAN | High | 4 hours |
+| Authentication spike | >10 failed authentication attempts on any OT system in 5 minutes | Medium | 4 hours |
+| Vendor session anomaly | Vendor remote access outside approved schedule or from unexpected location | Medium | 2 hours |
+| Configuration drift | Baseline comparison of ESP/ EAP rule set differs from authorised baseline | High | 4 hours |
+| Data volume anomaly | Outbound data transfer from OT DMZ exceeding 3x rolling 30-day average | High | 2 hours |
+| Controller firmware change | Firmware hash change on BES Cyber System controller | Critical | 1 hour |
+| Rogue DHCP / ARP spoof | DHCP server or unexpected ARP announcement within ESP | High | 2 hours |
+
+#### Alert Tuning and False-Positive Management
+
+- All alerting rules start in test mode for 30 days post-deployment.
+- After 30 days, rules are moved to active monitoring with a 14-day tuning window.
+- False-positive rate >5% per rule triggers re-evaluation and rule revision.
+- Tuning documentation is retained in the evidence library.
+
+### 13.5 Evidence Package
+
+CIP-015 evidence is collected and stored in the NERC-CIP Evidence Library (Section 6) under CIP-015 requirements.
+
+| **Evidence Item** | **Source** | **Cadence** | **CIP-015 Requirement** |
+|---|---|---|---|
+| Sensor inventory and placement diagram | Section 13.2 sensor tables + ESP/EAP diagrams | Annual + on change | R1 (monitoring coverage) |
+| Data collection configuration | SIEM data source inventory | Quarterly | R2 (data collection) |
+| Alerting rule inventory | SIEM rule registry | Quarterly | R3 (analysis) |
+| Sample alert records | SIEM alert history (10 per category per quarter) | Quarterly | R3 (analysis) |
+| False-positive tuning log | SIEM tuning tickets | Quarterly | R3 (analysis) |
+| Sensor health check | Sensor uptime report | Monthly | R1 (monitoring coverage) |
+| Coverage gap analysis | Section 13.6 | Quarterly | R1, R2 |
+| Response time measurement | Alert-to-investigation timestamp logs | Quarterly | R4 (response) |
+| INSM governance record | Risk-register entries, readiness decisions | Annual | Cross-cutting |
+
+### 13.6 Coverage Gap Analysis
+
+A formal gap analysis is performed quarterly, comparing current INSM coverage against the CIP-015 draft requirements and CB-001 §8 BES Overlay expectations.
+
+| **Gap Category** | **Assessment Question** | **Acceptable State** | **Escalation Path** |
+|---|---|---|---|
+| Sensor coverage | Does every Medium/High ESP have at least one sensor? | Yes for Medium; minimum 2 for High | Gap >30 days → CISO escalation |
+| Data source coverage | Are all data types in Section 13.3 being collected? | ≥80% of required data types collected | Gap >90 days → Risk Register entry |
+| Alert coverage | Are all alert categories in Section 13.4 active? | 100% of Critical/High alert categories active | Gap >14 days → Risk Register entry |
+| Retention compliance | Are data retention periods meeting Section 13.3 minimums? | 100% of data types at min retention | Gap → Deviation record per Section 9 |
+| Response time adherence | Are alert response SLAs being met? | ≥90% within SLA | Gap → Corrective action per Section 8 |
+
+Gaps are documented in the risk register and tracked as deviation items per Section 9 until closure.
+
+### 13.7 Integration with Existing CERG Capabilities
+
+| **CERG Capability** | **Integration Point** | **INSM Dependency** |
+|---|---|---|
+| Exposure Management ([`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md)) | Vulnerability scan findings correlated with INSM alert data to identify actively exploited vulnerabilities | INSM provides active-threat context for vulnerability prioritisation |
+| Logging and Detection ([`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md)) | OT telemetry added to SIEM as mandatory log source per LM-001 §4; alert rules follow LM-001 §6 | LM-001 is the procedural owner of SIEM ingestion and rule management |
+| Threat Intelligence ([`CERG-PRC-TI-001`](../procedures/CERG-PRC-TI-001_Threat_Intelligence_Procedure.md)) | OT-specific threat intel feeds enrich INSM alerts (e.g., ICS-CERT advisories, sector-specific IOCs) | INSM alerting rules consume threat intel for contextual alerting |
+| Incident Response ([`CERG-PLN-IR-001`](CERG-PLN-IR-001_Incident_Response_Plan.md)) | INSM alerts feed incident triage; playbooks incorporate OT-specific containment | IR team requires INSM evidence for OT incident scoping |
+| Architecture Review ([`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md)) | New OT projects include INSM sensor placement review in architecture intake | INSM coverage is a gate criterion for OT project production handoff |
+| Adversarial Validation ([`CERG-PRC-AV-001`](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md)) | Penetration test scope includes INSM alert evasions to test detection coverage | AV tests validate INSM effectiveness |
+| Risk Register ([`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md)) | INSM coverage gaps recorded as risk items with compensating controls | Risk register tracks residual detection risk |
+
+### 13.8 Readiness Activities (Pre-Applicability)
+
+Until CIP-015 is enforceable, CERG performs the following readiness activities:
+
+1. **Map existing OT telemetry sources** to expected INSM coverage objectives (Section 13.3).
+2. **Identify ESP / EAP monitoring gaps** that would affect Medium or High Impact BES Cyber Systems.
+3. **Deploy minimum viable sensors** at EAP ingress/egress for High Impact ESPs.
+4. **Implement baseline alerting rules** for Critical and High alert categories (Section 13.4).
+5. **Route monitoring backlog items** through [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) and the risk register when coverage cannot be implemented immediately.
+6. **Preserve evidence of readiness decisions** in the Evidence Library (Section 6).
+
+### 13.9 Cutover Trigger
+
+When CIP-015 becomes applicable, Governance:
+1. Updates this annex from "readiness" to "enforceable" status.
+2. Sets evidence collection cadences from "on readiness" to Section 13.5 table frequencies.
+3. Activates all alerting rules from test mode to active monitoring.
+4. Updates compliance calendar with enforceable evidence requirements.
+5. Notifies all NERC-CIP Compliance Manager, OT Security Engineer, and Detection Engineer roles.
+6. Creates CIP-015-specific evidence library entries per Section 6.
 
 ---
 ## 14. Operating Cadence and Reporting
@@ -380,8 +507,8 @@ When CIP-015 becomes applicable, Governance updates this package, the OT standar
 | | |
 |---|---|
 | **Document ID** | CERG-PLN-CIP-001 |
-| **Version** | 1.21 |
+| **Version** | 1.22 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / on CIP version or filing change |
-| **Change Log** | 1.0 - Initial publication. Evidence library, OT VM, BES access, deviation template, IT/OT convergence guideline, categorization, ESP/EAP, CIP-013, CIP-009, CIP-015 forward-looking. |
+| **Change Log** | 1.0 - Initial publication. Evidence library, OT VM, BES access, deviation template, IT/OT convergence guideline, categorization, ESP/EAP, CIP-013, CIP-009, CIP-015 forward-looking. 1.22 - Expanded CIP-015 §13 from placeholder to full INSM Implementation Annex with sensor placement, data collection, alerting rules, evidence package, gap analysis, and integration map. |
 

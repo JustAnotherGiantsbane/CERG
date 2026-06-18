@@ -315,7 +315,18 @@ Risk register access is role-based. Business owners see their scope by default; 
 
 ## 7. Exception Process
 
-### 7.1 What Requires an Exception
+### 7.1 Exception vs. Risk Acceptance — Which Path to Use
+
+Per [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7a, CERG distinguishes two distinct decision paths. Using the wrong path bypasses the required approval authority.
+
+| **Path** | **Description** | **Form** | **Approval** | **Register** |
+|---|---|---|---|---|
+| **Security Exception** (Governance-tracked) | A specific control or standard cannot be met as written. The deviation is temporary, with compensating controls, expiration, and a remediation plan. | [`CERG-TMPL-RM-002`](../templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md) — Security Exception Request Form | Governance approves within authority per §8. Assessment by Risk and Engineering. | Exception register; linked to risk register entry |
+| **Risk Acceptance** (Business Owner + RMF-001 §9.7) | The residual risk after controls is within appetite. No further treatment is planned beyond monitoring. The Business Owner explicitly accepts the business consequence. | [`CERG-TMPL-RM-004`](../templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md) — Risk Acceptance Request Form | Per RMF-001 §9.7 authority table: Business Owner at all levels; CISO for High; CISO + Executive Sponsor for Critical. | Risk register (accepted status) |
+
+**Routing rule:** If the trigger is a control or standard that cannot be met → Security Exception (TMPL-RM-002). If the trigger is residual risk the organization chooses to live with → Risk Acceptance (TMPL-RM-004). When in doubt, route as Security Exception; the Risk Register Owner may reclassify during triage.
+
+### 7.2 What Requires an Exception
 
 An exception is required whenever a system, person, or process intentionally deviates from a control established in [CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) or its subordinate standards. Examples include:
 
@@ -326,7 +337,7 @@ An exception is required whenever a system, person, or process intentionally dev
 - A vendor account configuration not meeting the access management standard
 - An OT system that cannot satisfy a CIP-007 requirement on schedule (in addition to the CIP deviation process)
 
-### 7.2 Exception Workflow
+### 7.3 Exception Workflow
 
 | **Step** | **Action** | **Owner** |
 |---|---|---|
@@ -338,14 +349,14 @@ An exception is required whenever a system, person, or process intentionally dev
 | 6 | Approved exception is entered into the risk register as a linked acceptance entry; compensating controls are tracked. | Governance |
 | 7 | At expiration, the exception is re-evaluated. Renewal requires a new approval cycle. Renewals shall not be granted by default. | Governance |
 
-### 7.3 Exception Discipline
+### 7.4 Exception Discipline
 
 > **Renewals Are Where Programs Decay**
 >
 > The most common failure mode of an exception program is the silent renewal. An exception is approved with a six-month duration; six months later it is renewed with a single email; six months after that the original reviewers have left the organization, the compensating controls have drifted, and the underlying control gap has become permanent. Governance enforces re-evaluation at every renewal: confirm the compensating controls are still in place, confirm the business justification is still valid, confirm the requested duration is still reasonable.
 
 
-### 7.3.1 Exception Expiration Warning Chain
+### 7.4.1 Exception Expiration Warning Chain
 
 Every exception carries an expiration date. The following warning chain ensures no exception expires silently:
 
@@ -359,7 +370,7 @@ Every exception carries an expiration date. The following warning chain ensures 
 
 An exception renewed more than twice without material progress toward remediation escalates one approval tier above the original approver (per RMF-001 §9.7). The renewal justification must document what has changed since the previous acceptance and what prevents closure.
 
-### 7.4 Regulatory Overlays
+### 7.5 Regulatory Overlays
 
 For exceptions affecting regulated assets:
 
@@ -370,9 +381,15 @@ For exceptions affecting regulated assets:
 
 ---
 
-### 7.5 Exception Request Form Template
+### 7.6 Exception Request Form and Risk Acceptance Form Templates
 
-The following template shall be used for all exception requests. Completed forms are submitted through the centralized risk intake and referenced in the risk register.
+The following templates shall be used for all exception and acceptance requests. Use the correct form per the routing rule in §7.1. Completed forms are submitted through the centralized risk intake and referenced in the risk register.
+
+**For Security Exceptions** (policy/standard deviation, Governance-tracked): use [`CERG-TMPL-RM-002`](../templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md) — Security Exception Request Form.
+
+**For Risk Acceptances** (Business Owner accepts residual risk, per-RMF-001 authority): use [`CERG-TMPL-RM-004`](../templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md) — Risk Acceptance Request Form.
+
+The Security Exception Request Form (TMPL-RM-002) template is reproduced below for reference. The Risk Acceptance Request Form (TMPL-RM-004) is a separate artifact.
 
 ```
 EXCEPTION REQUEST FORM - EXC-YYYY-NNNN
@@ -563,6 +580,7 @@ The register is not a parallel system to these programs. It is the connective ti
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.02 | 2026-06-18 | Governance Pillar Leader | Added §7.1 Exception vs. Risk Acceptance routing table distinguishing Security Exception (→TMPL-RM-002, Governance-tracked) from Risk Acceptance (→TMPL-RM-004, Business Owner + RMF-001 authority). Renumbered subsequent subsections. Updated §7.6 template references. |
 | 1.01 | 2026-06-14 | Governance Pillar Leader | Aligned scoring bands, approval summaries, and duration guidance to the canonical RMF authority table. |
 | 1.0 | 2026-05-01 | CERG Governance | Initial release |
 
