@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## PLAN OF ACTION AND MILESTONES TEMPLATE
 ### POA&M Register · Milestones · Ownership · Validation · Closure Evidence
 

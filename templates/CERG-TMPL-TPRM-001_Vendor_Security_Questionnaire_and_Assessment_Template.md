@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## VENDOR SECURITY QUESTIONNAIRE AND TPRM ASSESSMENT TEMPLATE
 ### Vendor Intake · Data Scope · Control Evidence · Residual Risk · Approval
 

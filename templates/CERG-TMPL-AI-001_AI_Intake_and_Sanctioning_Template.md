@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## AI INTAKE AND SANCTIONING TEMPLATE
 ### Use Case · Data Classification · Provider Terms · Human Oversight · Approval Decision
 

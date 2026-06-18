@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## BOARD AND CISO REPORTING DECK TEMPLATE
 ### Executive Narrative · Risk Posture · Metrics · Decisions · Action Tracking
 

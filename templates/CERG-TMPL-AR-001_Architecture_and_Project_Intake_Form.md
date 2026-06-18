@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## ARCHITECTURE AND PROJECT INTAKE FORM
 ### Project Intake · Data Scope · Threat Modeling Trigger · Review Routing
 

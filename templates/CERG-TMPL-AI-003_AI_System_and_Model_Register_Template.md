@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## AI SYSTEM AND MODEL REGISTER TEMPLATE
 ### Model Inventory · Data Sources · Agency Boundary · Integrations · Monitoring · Ownership
 

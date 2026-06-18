@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## CONTROL EVIDENCE AND TEST WORKSHEET
 ### Control Objective · Sample · Test Steps · Evidence Quality · Result
 

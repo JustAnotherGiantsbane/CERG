@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## RISK REGISTER TEMPLATES AND REPORTING
 ### Register Schema · Exception Request · Scoring Examples · CISO Slice-and-Dice Reporting
 
