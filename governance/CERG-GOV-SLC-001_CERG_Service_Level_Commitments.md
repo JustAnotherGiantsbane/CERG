@@ -24,6 +24,7 @@
 1. [Purpose and Scope](#1-purpose-and-scope)
 2. [Principles](#2-principles)
 3. [Service Commitment Catalog](#3-service-commitment-catalog)
+   - 3.6 [What a missed commitment looks like in practice](#36-what-a-missed-commitment-looks-like-in-practice)
 4. [Escalation Path for Missed Commitments](#4-escalation-path-for-missed-commitments)
 5. [What This Is Not](#5-what-this-is-not)
 6. [Metrics and Reporting](#6-metrics-and-reporting)
@@ -104,6 +105,32 @@ The commitment values in §3.1–§3.4 are mature-program targets. New adopters 
 | **Gate 3+ (Governed / Adaptive)** | Per §3.1 (10 / 7 / 5 business days by tier) | Per §3.3 (3 business days) | Per §3.1 / §3.3 | Per §3.2 (5 business days) |
 
 > **Phase Advancement.** Advancement from one gate to the next is recorded in the adoption gates document ([`CERG-GOV-IMP-005`](CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md)) and communicated to the Cyber Oversight Group. SR metric reporting switches to the next phase target upon confirmation of gate transition.
+
+### 3.6 What a missed commitment looks like in practice
+
+The SLA commitments above are not abstractions. They show up in real meetings. The worked example below is a fictional but realistic Tuesday morning scenario at a 60-person SaaS company in the second quarter of CERG Standard adoption. It illustrates what the §4 escalation path actually produces.
+
+A product team submits a T1 architecture review intake for a new customer-facing analytics feature on a Tuesday at 9 a.m. The intake is logged in the Project Intake Record, tiered T1 because the workload is internet-facing and handles customer data, and routed to Engineering. Per §3.5 Gate 2, the SR-001 commitment is a 10-business-day architecture review turnaround.
+
+By day 6, Engineering has not started the review. The intake sits in the queue behind two higher-priority reviews. Nobody on Engineering has acknowledged the delay to the product team. By day 9, the product manager pings Engineering directly. Engineering says "we'll get to it." By day 11, the 10-business-day commitment has been missed. No notification was sent per §4 step 1.
+
+Here is what the §4 escalation path produces:
+
+1. **Day 11 (commitment missed, no notification sent).** The Engineering Pillar Leader is auto-notified by the SR-001 metric breach. The single miss is logged. The Engineering Pillar Leader contacts the product manager the same morning with a revised date (day 14) and a reason ("behind on two other T1s; yours is next"). The revised date goes into the intake record.
+
+2. **Day 14 (revised date met).** The architecture review is delivered. The SR-001 metric records the miss: the commitment clock was 10 business days, the actual was 14. Quality was acceptable; the product team got a useful review.
+
+3. **End of month (single miss).** The Engineering Pillar Leader reviews the SR-001 trend. One miss in the month is within noise. No further action. The miss is in the dashboard.
+
+4. **Quarter review (pattern).** If the same pillar has three or more misses in a quarter, the pattern surfaces to the CISO and the Cyber Oversight Group per §4 step 3. The CISO opens a discussion: is the published value mis-calibrated to capacity, or is the pillar overcommitted? The answer drives a workforce-planning or scoping decision, not a "try harder" instruction.
+
+5. **Annual (systemic).** If the same pillar has chronic misses across two quarters, the CISO records a Program Improvement Register entry per §4 step 4 with source "SLC systemic miss, pillar X, YYYY." The improvement is owned at the CISO level, not the pillar level, because chronic misses signal a capacity gap CERG must fix.
+
+The same pattern applies to every commitment in §3. The numbers are smaller or larger, the pillar is different, but the chain is the same: miss, log, communicate, escalate by pattern, address systemically.
+
+The point of publishing these commitments is not to create a metric treadmill. The point is to make CERG's responsiveness visible so that friction is caught early, not when the business has built workarounds. A single miss is acceptable. A pattern is a finding. Chronic is a program-level problem.
+
+For a 90-day narrative that includes the first SR-001 miss in a real adoption arc, see [Story 10 (The new CISO's first 90 days)](../examples/day-in-the-life/story-10-new-ciso-90-days.md). For the worked example of how a business-side SLA breach is handled by Risk, see [Story 2 (Critical vulnerability)](../examples/day-in-the-life/README.md#story-2-critical-vulnerability).
 
 ---
 
