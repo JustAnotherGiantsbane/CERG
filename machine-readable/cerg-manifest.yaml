@@ -44,11 +44,31 @@
   normative_weight: supporting
   pillar: governance
   summary: Annual Security and Governance Calendar
+- document_id: CERG-GOV-CAL-002
+  title: Calibration Checklist
+  document_type: governance_instrument
+  domain: CAL
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Policy & Standards)'
+  approval_authority: 'Governance Pillar Leader (Policy & Standards)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-CAL-002_Calibration_Checklist.md
+  source_file: CERG-GOV-CAL-002_Calibration_Checklist.md
+  source_hash: b36cf7e13b9f4ef0248be42896074fdcf03592c89081db59c7ef4608c00a1509
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAL-002_Calibration_Checklist.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Calibration Checklist
 - document_id: CERG-GOV-CAT-001
   title: Document Catalog and Naming Convention
   document_type: governance_instrument
   domain: CAT
-  version: 1.40
+  version: 1.41
   status: Approved
   classification: Public
   publication_profile: public
@@ -57,7 +77,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  source_hash: aaef5566bdcea9add36dfe634fa73c7d6b6e276d9b06b8425c5029783e857ffc
+  source_hash: 5acd0efb62e14faa2f31d24fdb9fa579671a43580177f8dce795b29f6e96690f
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   llm_include: true
   llm_priority: high
@@ -517,7 +537,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   source_file: CERG-GOV-OM-001_CERG_Operating_Model.md
-  source_hash: 614e62fea758d3c9f5ef7cf9b9fa41a305322b0a82f44fd1814d3e5be74d926f
+  source_hash: 36702dd2fbd32ffb908b428bbec2e70b1e2ad4b5990056b81b9bdb9394665010
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   llm_include: true
   llm_priority: high
@@ -557,7 +577,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md
   source_file: CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md
-  source_hash: c3b5a90a642fbff47be803351c48ad57fd1231b8ae0f46aeb9a324e918b853f4
+  source_hash: ca34f6993fddb2a64ae8faf804b7efbcda2320e03bea5c337a4df486b0c8c3e1
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md
   llm_include: true
   llm_priority: medium
@@ -628,7 +648,7 @@
   title: Document Authoring and Style Guide
   document_type: governance_instrument
   domain: STY
-  version: 1.01
+  version: 1.02
   status: Approved
   classification: Public
   publication_profile: public
@@ -637,7 +657,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md
   source_file: CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md
-  source_hash: af9114356128234f52a330f1e1c78f2f95c28611153245b83756523f95349424
+  source_hash: 51b2d0626b7cc834dcbb65e2a178f97a9f311d0c2e1c75b5eced60118d79c406
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md
   llm_include: true
   llm_priority: medium
@@ -828,7 +848,7 @@
   title: NERC CIP Operational Package
   document_type: plan
   domain: CIP
-  version: 1.21
+  version: 1.22
   status: Approved
   classification: Public
   publication_profile: public
@@ -837,7 +857,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md
   source_file: CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md
-  source_hash: 76731fee98c8b53bb58b7de2c32002517a5c12719f36935dc7f42d924e4748f3
+  source_hash: 27fa6f97ed586a148dac55b53a6ae39b74cac5a418e0e25c58fcbbcb1fedbcdd
   canonical_url: https://github.com/m0dernz/CERG/blob/main/plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md
   llm_include: true
   llm_priority: medium
@@ -848,7 +868,7 @@
   title: CUI CMMC Operational Package
   document_type: plan
   domain: CUI
-  version: 1.21
+  version: 1.22
   status: Approved
   classification: Public
   publication_profile: public
@@ -857,7 +877,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md
   source_file: CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md
-  source_hash: 3c70ff126b0924febf146b45c5234851f179719cedd1b9862d9b44852f9d6e60
+  source_hash: 7a61768aeb4252a2f2571ba88bc07555f579dd61f8f26f084d92054e73ecc09e
   canonical_url: https://github.com/m0dernz/CERG/blob/main/plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md
   llm_include: true
   llm_priority: medium
@@ -928,7 +948,7 @@
   title: SOX ITGC Operational Package
   document_type: plan
   domain: SOX
-  version: 1.21
+  version: 1.22
   status: Approved
   classification: Public
   publication_profile: public
@@ -937,7 +957,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md
   source_file: CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md
-  source_hash: 2032fe9602679b74d3b086b1b2e3f07ed1f0e3ede9b59b8868593f8605aaa16e
+  source_hash: 033c01c61050a2b3d1068828922b1effd15f7d97736c00a93c0a5ee32c05ef1a
   canonical_url: https://github.com/m0dernz/CERG/blob/main/plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md
   llm_include: true
   llm_priority: medium
