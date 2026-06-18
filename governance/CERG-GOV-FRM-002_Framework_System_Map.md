@@ -161,7 +161,7 @@ The handoffs are explicit. The records are explicit. The clock is explicit. No p
 
 In small teams (CERG Lite, 2-8 people), the three pillars collapse onto fewer heads. The collapse is intentional, documented in the Decision Log per [IMP-002 §4](../governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md#4-the-decision-log), and follows the [role consolidation map in IMP-003 §4](../governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md#4-role-consolidation-map). The questions do not collapse, only the heads. Risk still triages. Engineering still builds. Governance still routes. One person may answer all three questions in a single hour, but the questions remain distinct.
 
-Story 8 ([CERG Lite](../examples/day-in-the-life/README.md#story-8-cerg-lite-maria-and-the-tuesday-scanner-report) - Maria and the Tuesday scanner report) is the canonical worked example of the collapse pattern.
+Story 8 ([CERG Lite - Maria and the Tuesday scanner report](../examples/day-in-the-life/story-8-cerg-lite-maria.md)) is the canonical worked example of the collapse pattern.
 
 ---
 
