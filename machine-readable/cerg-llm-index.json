@@ -3,7 +3,7 @@
   "generated": "2026-06-18",
   "source": "local markdown corpus",
   "total_documents": 145,
-  "total_tokens_estimate": 909391,
+  "total_tokens_estimate": 910428,
   "by_type": {
     "readme": 14,
     "governance-instrument": 40,
@@ -824,11 +824,11 @@
       "path": "governance/CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md",
       "lines": [
         14641,
-        14819
+        14846
       ],
-      "lines_count": 178,
-      "chars": 13205,
-      "tokens": 3773,
+      "lines_count": 205,
+      "chars": 16835,
+      "tokens": 4810,
       "summary": "CERG GOV document: CERG Service Level Commitments"
     },
     {
@@ -843,8 +843,8 @@
       "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "governance/CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md",
       "lines": [
-        14821,
-        15395
+        14848,
+        15422
       ],
       "lines_count": 574,
       "chars": 25771,
@@ -863,8 +863,8 @@
       "owner": "Governance Pillar Leader (Document Control)",
       "path": "governance/CERG-GOV-STY-002_Style_Compliance_Tracker.md",
       "lines": [
-        15397,
-        15583
+        15424,
+        15610
       ],
       "lines_count": 186,
       "chars": 9411,
@@ -883,8 +883,8 @@
       "owner": "CISO",
       "path": "governance/CERG-GOV-SUCC-001_Succession_Planning_and_Talent_Review_Framework.md",
       "lines": [
-        15585,
-        15924
+        15612,
+        15951
       ],
       "lines_count": 339,
       "chars": 25317,
@@ -903,8 +903,8 @@
       "owner": "Risk Pillar Leader",
       "path": "governance/CERG-GOV-TAX-001_Risk_Taxonomy.md",
       "lines": [
-        15926,
-        16231
+        15953,
+        16258
       ],
       "lines_count": 305,
       "chars": 23874,
@@ -923,8 +923,8 @@
       "owner": "Governance Pillar Leader (Control Baseline)",
       "path": "governance/CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md",
       "lines": [
-        16233,
-        16442
+        16260,
+        16469
       ],
       "lines_count": 209,
       "chars": 22157,
@@ -943,8 +943,8 @@
       "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md",
       "lines": [
-        16444,
-        16971
+        16471,
+        16998
       ],
       "lines_count": 527,
       "chars": 32059,
@@ -963,8 +963,8 @@
       "owner": "Governance Pillar Leader (Document Control)",
       "path": "governance/CERG-GOV-VAR-001_Organization_Adaptation_Profile.md",
       "lines": [
-        16973,
-        17256
+        17000,
+        17283
       ],
       "lines_count": 283,
       "chars": 16925,
@@ -983,8 +983,8 @@
       "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "governance/CERG-GOV-WFP-001_Workforce_Planning_and_Capacity_Model.md",
       "lines": [
-        17258,
-        17759
+        17285,
+        17786
       ],
       "lines_count": 501,
       "chars": 31133,
@@ -1003,8 +1003,8 @@
       "owner": "Chief Information Security Officer",
       "path": "governance/CERG-POL-001_Cybersecurity_Policy.md",
       "lines": [
-        17761,
-        18262
+        17788,
+        18289
       ],
       "lines_count": 501,
       "chars": 43340,
@@ -1023,8 +1023,8 @@
       "owner": "Governance Pillar Leader",
       "path": "standards/CERG-STD-AC-001_Access_Management_Standard.md",
       "lines": [
-        18264,
-        18655
+        18291,
+        18682
       ],
       "lines_count": 391,
       "chars": 41393,
@@ -1043,8 +1043,8 @@
       "owner": "Engineering Pillar Leader (Application Security)",
       "path": "standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md",
       "lines": [
-        18657,
-        18897
+        18684,
+        18924
       ],
       "lines_count": 240,
       "chars": 23257,
@@ -1063,8 +1063,8 @@
       "owner": "Engineering Pillar Leader (Platforms)",
       "path": "standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md",
       "lines": [
-        18899,
-        19187
+        18926,
+        19214
       ],
       "lines_count": 288,
       "chars": 25074,
@@ -1083,8 +1083,8 @@
       "owner": "Engineering Pillar Leader (Platforms)",
       "path": "standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md",
       "lines": [
-        19189,
-        19548
+        19216,
+        19575
       ],
       "lines_count": 359,
       "chars": 22259,
@@ -1103,8 +1103,8 @@
       "owner": "Engineering Pillar Leader (Platforms)",
       "path": "standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md",
       "lines": [
-        19550,
-        19881
+        19577,
+        19908
       ],
       "lines_count": 331,
       "chars": 19800,
@@ -1123,8 +1123,8 @@
       "owner": "CMMC / Federal Compliance Manager",
       "path": "standards/CERG-STD-CUI-001_CUI_Handling_Standard.md",
       "lines": [
-        19883,
-        20269
+        19910,
+        20296
       ],
       "lines_count": 386,
       "chars": 39250,
@@ -1143,8 +1143,8 @@
       "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md",
       "lines": [
-        20271,
-        20511
+        20298,
+        20538
       ],
       "lines_count": 240,
       "chars": 20998,
@@ -1163,8 +1163,8 @@
       "owner": "Engineering Pillar Leader (Endpoint)",
       "path": "standards/CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md",
       "lines": [
-        20513,
-        20751
+        20540,
+        20778
       ],
       "lines_count": 238,
       "chars": 21401,
@@ -1183,8 +1183,8 @@
       "owner": "Governance Pillar Leader",
       "path": "standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md",
       "lines": [
-        20753,
-        21114
+        20780,
+        21141
       ],
       "lines_count": 361,
       "chars": 42139,
@@ -1203,8 +1203,8 @@
       "owner": "Risk Pillar Leader (Detection Engineering)",
       "path": "standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md",
       "lines": [
-        21116,
-        21472
+        21143,
+        21499
       ],
       "lines_count": 356,
       "chars": 21164,
@@ -1223,8 +1223,8 @@
       "owner": "Engineering Pillar Leader (Platforms)",
       "path": "standards/CERG-STD-MSG-001_Email_and_Messaging_Security_Standard.md",
       "lines": [
-        21474,
-        21698
+        21501,
+        21725
       ],
       "lines_count": 224,
       "chars": 20357,
@@ -1243,8 +1243,8 @@
       "owner": "Engineering Pillar Leader (Platforms)",
       "path": "standards/CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md",
       "lines": [
-        21700,
-        21926
+        21727,
+        21953
       ],
       "lines_count": 226,
       "chars": 21176,
@@ -1263,8 +1263,8 @@
       "owner": "Governance Pillar Leader (OT/NERC-CIP)",
       "path": "standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md",
       "lines": [
-        21928,
-        22278
+        21955,
+        22305
       ],
       "lines_count": 350,
       "chars": 37255,
@@ -1283,8 +1283,8 @@
       "owner": "Engineering Pillar Leader (Resilience)",
       "path": "standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md",
       "lines": [
-        22280,
-        22607
+        22307,
+        22634
       ],
       "lines_count": 327,
       "chars": 18227,
@@ -1303,8 +1303,8 @@
       "owner": "Engineering Pillar Leader (Application Security)",
       "path": "standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md",
       "lines": [
-        22609,
-        22904
+        22636,
+        22931
       ],
       "lines_count": 295,
       "chars": 25005,
@@ -1323,8 +1323,8 @@
       "owner": "Identity Engineer",
       "path": "procedures/CERG-PRC-AC-002_Access_Management_Runbook.md",
       "lines": [
-        22906,
-        23261
+        22933,
+        23288
       ],
       "lines_count": 355,
       "chars": 18853,
@@ -1343,8 +1343,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md",
       "lines": [
-        23263,
-        24024
+        23290,
+        24051
       ],
       "lines_count": 761,
       "chars": 51519,
@@ -1363,8 +1363,8 @@
       "owner": "Governance Pillar Leader",
       "path": "procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md",
       "lines": [
-        24026,
-        24464
+        24053,
+        24491
       ],
       "lines_count": 438,
       "chars": 26497,
@@ -1383,8 +1383,8 @@
       "owner": "Adversarial Testing Lead",
       "path": "procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md",
       "lines": [
-        24466,
-        25070
+        24493,
+        25097
       ],
       "lines_count": 604,
       "chars": 36759,
@@ -1403,8 +1403,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "procedures/CERG-PRC-CHG-001_Security_Change_Management_Procedure.md",
       "lines": [
-        25072,
-        25495
+        25099,
+        25522
       ],
       "lines_count": 423,
       "chars": 26822,
@@ -1423,8 +1423,8 @@
       "owner": "Standing IR Team / Incident Commander",
       "path": "procedures/CERG-PRC-IR-002_Incident_Response_Playbook_Set.md",
       "lines": [
-        25497,
-        26211
+        25524,
+        26238
       ],
       "lines_count": 714,
       "chars": 45863,
@@ -1443,8 +1443,8 @@
       "owner": "Governance Pillar Leader",
       "path": "procedures/CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md",
       "lines": [
-        26213,
-        26642
+        26240,
+        26669
       ],
       "lines_count": 429,
       "chars": 27906,
@@ -1463,8 +1463,8 @@
       "owner": "Risk Register Owner",
       "path": "procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md",
       "lines": [
-        26644,
-        27263
+        26671,
+        27290
       ],
       "lines_count": 619,
       "chars": 43607,
@@ -1483,8 +1483,8 @@
       "owner": "Risk Pillar Leader",
       "path": "procedures/CERG-PRC-TI-001_Threat_Intelligence_Procedure.md",
       "lines": [
-        27265,
-        27941
+        27292,
+        27968
       ],
       "lines_count": 676,
       "chars": 40419,
@@ -1503,8 +1503,8 @@
       "owner": "Risk Pillar Leader",
       "path": "procedures/CERG-PRC-TM-001_Threat_Modeling_Procedure.md",
       "lines": [
-        27943,
-        28508
+        27970,
+        28535
       ],
       "lines_count": 565,
       "chars": 36380,
@@ -1523,8 +1523,8 @@
       "owner": "Vendor Risk Analyst",
       "path": "procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md",
       "lines": [
-        28510,
-        29118
+        28537,
+        29145
       ],
       "lines_count": 608,
       "chars": 44366,
@@ -1543,8 +1543,8 @@
       "owner": "Exposure Management Lead",
       "path": "procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md",
       "lines": [
-        29120,
-        29599
+        29147,
+        29626
       ],
       "lines_count": 479,
       "chars": 27602,
@@ -1563,8 +1563,8 @@
       "owner": "Governance Pillar Leader",
       "path": "plans/CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md",
       "lines": [
-        29601,
-        29905
+        29628,
+        29932
       ],
       "lines_count": 304,
       "chars": 19403,
@@ -1583,8 +1583,8 @@
       "owner": "NERC-CIP Compliance Manager",
       "path": "plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md",
       "lines": [
-        29907,
-        30418
+        29934,
+        30445
       ],
       "lines_count": 511,
       "chars": 33503,
@@ -1603,8 +1603,8 @@
       "owner": "CMMC / Federal Compliance Manager",
       "path": "plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md",
       "lines": [
-        30420,
-        30880
+        30447,
+        30907
       ],
       "lines_count": 460,
       "chars": 26423,
@@ -1623,8 +1623,8 @@
       "owner": "Standing IR Team / Incident Commander",
       "path": "plans/CERG-PLN-IR-001_Incident_Response_Plan.md",
       "lines": [
-        30882,
-        31325
+        30909,
+        31352
       ],
       "lines_count": 443,
       "chars": 31685,
@@ -1643,8 +1643,8 @@
       "owner": "Governance Pillar Leader",
       "path": "plans/CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md",
       "lines": [
-        31327,
-        31657
+        31354,
+        31684
       ],
       "lines_count": 330,
       "chars": 17661,
@@ -1663,8 +1663,8 @@
       "owner": "Governance Pillar Leader",
       "path": "plans/CERG-PLN-PRIV-001_Privacy_and_Data_Protection_Operational_Package.md",
       "lines": [
-        31659,
-        31979
+        31686,
+        32006
       ],
       "lines_count": 320,
       "chars": 18425,
@@ -1683,8 +1683,8 @@
       "owner": "Governance Pillar Leader (SOX Liaison)",
       "path": "plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md",
       "lines": [
-        31981,
-        32325
+        32008,
+        32352
       ],
       "lines_count": 344,
       "chars": 24325,
@@ -1703,8 +1703,8 @@
       "owner": "Governance Pillar Leader",
       "path": "templates/CERG-TMPL-AI-001_AI_Intake_and_Sanctioning_Template.md",
       "lines": [
-        32327,
-        32525
+        32354,
+        32552
       ],
       "lines_count": 198,
       "chars": 11916,
@@ -1723,8 +1723,8 @@
       "owner": "Governance Pillar Leader",
       "path": "templates/CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md",
       "lines": [
-        32527,
-        32688
+        32554,
+        32715
       ],
       "lines_count": 161,
       "chars": 10023,
@@ -1743,8 +1743,8 @@
       "owner": "Application Security Engineer",
       "path": "templates/CERG-TMPL-AI-003_AI_System_and_Model_Register_Template.md",
       "lines": [
-        32690,
-        32914
+        32717,
+        32941
       ],
       "lines_count": 224,
       "chars": 14202,
@@ -1763,8 +1763,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "templates/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md",
       "lines": [
-        32916,
-        33068
+        32943,
+        33095
       ],
       "lines_count": 152,
       "chars": 6347,
@@ -1783,8 +1783,8 @@
       "owner": "Evidence Librarian",
       "path": "templates/CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md",
       "lines": [
-        33070,
-        33209
+        33097,
+        33236
       ],
       "lines_count": 139,
       "chars": 5509,
@@ -1803,8 +1803,8 @@
       "owner": "CMMC / Federal Compliance Manager",
       "path": "templates/CERG-TMPL-CUI-001_System_Security_Plan_Template.md",
       "lines": [
-        33211,
-        33462
+        33238,
+        33489
       ],
       "lines_count": 251,
       "chars": 10898,
@@ -1823,8 +1823,8 @@
       "owner": "CMMC / Federal Compliance Manager",
       "path": "templates/CERG-TMPL-CUI-002_POAM_Template.md",
       "lines": [
-        33464,
-        33645
+        33491,
+        33672
       ],
       "lines_count": 181,
       "chars": 8114,
@@ -1843,8 +1843,8 @@
       "owner": "Governance Pillar Leader",
       "path": "templates/CERG-TMPL-GOV-001_Stakeholder_Perception_Survey.md",
       "lines": [
-        33647,
-        33844
+        33674,
+        33871
       ],
       "lines_count": 197,
       "chars": 11286,
@@ -1863,8 +1863,8 @@
       "owner": "Governance Pillar Leader",
       "path": "templates/CERG-TMPL-MTR-001_Board_and_CISO_Reporting_Deck_Template.md",
       "lines": [
-        33846,
-        33983
+        33873,
+        34010
       ],
       "lines_count": 137,
       "chars": 6212,
@@ -1883,8 +1883,8 @@
       "owner": "Governance Pillar Leader (Risk Register)",
       "path": "templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md",
       "lines": [
-        33985,
-        34285
+        34012,
+        34312
       ],
       "lines_count": 300,
       "chars": 15823,
@@ -1903,8 +1903,8 @@
       "owner": "Risk Register Owner",
       "path": "templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md",
       "lines": [
-        34287,
-        34437
+        34314,
+        34464
       ],
       "lines_count": 150,
       "chars": 5891,
@@ -1923,8 +1923,8 @@
       "owner": "Risk Pillar Leader",
       "path": "templates/CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md",
       "lines": [
-        34439,
-        34582
+        34466,
+        34609
       ],
       "lines_count": 143,
       "chars": 5307,
@@ -1943,8 +1943,8 @@
       "owner": "Risk Register Owner",
       "path": "templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md",
       "lines": [
-        34584,
-        34773
+        34611,
+        34800
       ],
       "lines_count": 189,
       "chars": 9536,
@@ -1963,8 +1963,8 @@
       "owner": "Governance Pillar Leader",
       "path": "templates/CERG-TMPL-SAAS-001_SaaS_Evidence_Collection_Checklist.md",
       "lines": [
-        34775,
-        34876
+        34802,
+        34903
       ],
       "lines_count": 101,
       "chars": 5077,
@@ -1983,8 +1983,8 @@
       "owner": "Vendor Risk Analyst",
       "path": "templates/CERG-TMPL-SBOM-001_SBOM_Evidence_Collection_Checklist.md",
       "lines": [
-        34878,
-        34972
+        34905,
+        34999
       ],
       "lines_count": 94,
       "chars": 4895,
@@ -2003,8 +2003,8 @@
       "owner": "Vendor Risk Analyst",
       "path": "templates/CERG-TMPL-TPRM-001_Vendor_Security_Questionnaire_and_Assessment_Template.md",
       "lines": [
-        34974,
-        35115
+        35001,
+        35142
       ],
       "lines_count": 141,
       "chars": 6437,
@@ -2023,8 +2023,8 @@
       "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "roles/CERG-GOV-JF-001_Job_Families_Overview.md",
       "lines": [
-        35117,
-        35370
+        35144,
+        35397
       ],
       "lines_count": 253,
       "chars": 16909,
@@ -2043,8 +2043,8 @@
       "owner": "Governance Pillar Leader (Policy & Standards)",
       "path": "roles/CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md",
       "lines": [
-        35372,
-        35578
+        35399,
+        35605
       ],
       "lines_count": 206,
       "chars": 14886,
@@ -2063,8 +2063,8 @@
       "owner": null,
       "path": "roles/README.md",
       "lines": [
-        35580,
-        35627
+        35607,
+        35654
       ],
       "lines_count": 47,
       "chars": 1823,
@@ -2083,8 +2083,8 @@
       "owner": "Governance Pillar Leader",
       "path": "roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-000_Incident_Response_Family.md",
       "lines": [
-        35629,
-        35751
+        35656,
+        35778
       ],
       "lines_count": 122,
       "chars": 5889,
@@ -2103,8 +2103,8 @@
       "owner": "Governance Pillar Leader",
       "path": "roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-001_Incident_Commander.md",
       "lines": [
-        35753,
-        35972
+        35780,
+        35999
       ],
       "lines_count": 219,
       "chars": 16489,
@@ -2123,8 +2123,8 @@
       "owner": "Governance Pillar Leader",
       "path": "roles/jf-adjunct/CERG-GOV-JD-ADJUNCT-002_Lead_Investigator.md",
       "lines": [
-        35974,
-        36196
+        36001,
+        36223
       ],
       "lines_count": 222,
       "chars": 16456,
@@ -2143,8 +2143,8 @@
       "owner": "CISO",
       "path": "roles/jf-exec/CERG-GOV-JD-EXEC-000_Executive_Leadership_Family.md",
       "lines": [
-        36198,
-        36319
+        36225,
+        36346
       ],
       "lines_count": 121,
       "chars": 5643,
@@ -2163,8 +2163,8 @@
       "owner": "CISO",
       "path": "roles/jf-exec/CERG-GOV-JD-EXEC-001_Chief_Information_Security_Officer.md",
       "lines": [
-        36321,
-        36520
+        36348,
+        36547
       ],
       "lines_count": 199,
       "chars": 18070,
@@ -2183,8 +2183,8 @@
       "owner": "CISO",
       "path": "roles/jf-exec/CERG-GOV-JD-EXEC-002_Executive_Sponsor.md",
       "lines": [
-        36522,
-        36721
+        36549,
+        36748
       ],
       "lines_count": 199,
       "chars": 16655,
@@ -2203,8 +2203,8 @@
       "owner": "Governance Pillar Leader",
       "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-000_Governance_Compliance_Family.md",
       "lines": [
-        36723,
-        36849
+        36750,
+        36876
       ],
       "lines_count": 126,
       "chars": 6834,
@@ -2223,8 +2223,8 @@
       "owner": "Governance Pillar Leader",
       "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-001_NERC-CIP_Compliance_Manager.md",
       "lines": [
-        36851,
-        37053
+        36878,
+        37080
       ],
       "lines_count": 202,
       "chars": 21569,
@@ -2243,8 +2243,8 @@
       "owner": "Governance Pillar Leader",
       "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-002_CMMC_Federal_Compliance_Manager.md",
       "lines": [
-        37055,
-        37257
+        37082,
+        37284
       ],
       "lines_count": 202,
       "chars": 21240,
@@ -2263,8 +2263,8 @@
       "owner": "Governance Pillar Leader",
       "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-003_SOX_ITGC_Lead.md",
       "lines": [
-        37259,
-        37461
+        37286,
+        37488
       ],
       "lines_count": 202,
       "chars": 21135,
@@ -2283,8 +2283,8 @@
       "owner": "Governance Pillar Leader",
       "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-004_Policy_and_Standards_Manager.md",
       "lines": [
-        37463,
-        37665
+        37490,
+        37692
       ],
       "lines_count": 202,
       "chars": 21325,
@@ -2303,8 +2303,8 @@
       "owner": "Governance Pillar Leader",
       "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-005_Risk_Register_Owner.md",
       "lines": [
-        37667,
-        37869
+        37694,
+        37896
       ],
       "lines_count": 202,
       "chars": 21192,
@@ -2323,8 +2323,8 @@
       "owner": "Governance Pillar Leader",
       "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-006_Evidence_Librarian.md",
       "lines": [
-        37871,
-        38073
+        37898,
+        38100
       ],
       "lines_count": 202,
       "chars": 21215,
@@ -2343,8 +2343,8 @@
       "owner": "Governance Pillar Leader",
       "path": "roles/jf-govcomp/CERG-GOV-JD-GOVCOMP-007_Governance_Pillar_Leader.md",
       "lines": [
-        38075,
-        38277
+        38102,
+        38304
       ],
       "lines_count": 202,
       "chars": 21504,
@@ -2363,8 +2363,8 @@
       "owner": "Risk Pillar Leader",
       "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-000_Risk_Operations_Family.md",
       "lines": [
-        38279,
-        38406
+        38306,
+        38433
       ],
       "lines_count": 127,
       "chars": 6913,
@@ -2383,8 +2383,8 @@
       "owner": "Risk Pillar Leader",
       "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md",
       "lines": [
-        38408,
-        38610
+        38435,
+        38637
       ],
       "lines_count": 202,
       "chars": 21389,
@@ -2403,8 +2403,8 @@
       "owner": "Risk Pillar Leader",
       "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-002_Adversarial_Testing_Lead.md",
       "lines": [
-        38612,
-        38814
+        38639,
+        38841
       ],
       "lines_count": 202,
       "chars": 21460,
@@ -2423,8 +2423,8 @@
       "owner": "Risk Pillar Leader",
       "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-003_Threat_Intelligence_Analyst.md",
       "lines": [
-        38816,
-        39018
+        38843,
+        39045
       ],
       "lines_count": 202,
       "chars": 21568,
@@ -2443,8 +2443,8 @@
       "owner": "Risk Pillar Leader",
       "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md",
       "lines": [
-        39020,
-        39222
+        39047,
+        39249
       ],
       "lines_count": 202,
       "chars": 21506,
@@ -2463,8 +2463,8 @@
       "owner": "Risk Pillar Leader",
       "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-005_OT_Risk_Analyst.md",
       "lines": [
-        39224,
-        39426
+        39251,
+        39453
       ],
       "lines_count": 202,
       "chars": 21165,
@@ -2483,8 +2483,8 @@
       "owner": "Risk Pillar Leader",
       "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-006_Identity_Risk_Analyst.md",
       "lines": [
-        39428,
-        39630
+        39455,
+        39657
       ],
       "lines_count": 202,
       "chars": 21275,
@@ -2503,8 +2503,8 @@
       "owner": "Risk Pillar Leader",
       "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-007_Vendor_Risk_Analyst.md",
       "lines": [
-        39632,
-        39834
+        39659,
+        39861
       ],
       "lines_count": 202,
       "chars": 21344,
@@ -2523,8 +2523,8 @@
       "owner": "Risk Pillar Leader",
       "path": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-008_Risk_Pillar_Leader.md",
       "lines": [
-        39836,
-        40038
+        39863,
+        40065
       ],
       "lines_count": 202,
       "chars": 21884,
@@ -2543,8 +2543,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-000_Security_Engineering_Family.md",
       "lines": [
-        40040,
-        40166
+        40067,
+        40193
       ],
       "lines_count": 126,
       "chars": 6747,
@@ -2563,8 +2563,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-001_Cloud_Security_Engineer.md",
       "lines": [
-        40168,
-        40370
+        40195,
+        40397
       ],
       "lines_count": 202,
       "chars": 22599,
@@ -2583,8 +2583,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-002_Identity_Engineer.md",
       "lines": [
-        40372,
-        40574
+        40399,
+        40601
       ],
       "lines_count": 202,
       "chars": 22496,
@@ -2603,8 +2603,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-003_OT_Security_Engineer.md",
       "lines": [
-        40576,
-        40778
+        40603,
+        40805
       ],
       "lines_count": 202,
       "chars": 22661,
@@ -2623,8 +2623,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-004_Application_Security_Engineer.md",
       "lines": [
-        40780,
-        40982
+        40807,
+        41009
       ],
       "lines_count": 202,
       "chars": 22655,
@@ -2643,8 +2643,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md",
       "lines": [
-        40984,
-        41186
+        41011,
+        41213
       ],
       "lines_count": 202,
       "chars": 22557,
@@ -2663,8 +2663,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-006_Cryptography_Engineer.md",
       "lines": [
-        41188,
-        41390
+        41215,
+        41417
       ],
       "lines_count": 202,
       "chars": 22297,
@@ -2683,8 +2683,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-007_Engineering_Pillar_Leader.md",
       "lines": [
-        41392,
-        41594
+        41419,
+        41621
       ],
       "lines_count": 202,
       "chars": 22901,
@@ -2703,8 +2703,8 @@
       "owner": "Engineering Pillar Leader",
       "path": "roles/jf-seceng/CERG-GOV-JD-SECENG-008_Pre-production_Reviewer.md",
       "lines": [
-        41596,
-        41798
+        41623,
+        41825
       ],
       "lines_count": 202,
       "chars": 22407,
@@ -2723,8 +2723,8 @@
       "owner": null,
       "path": "machine-readable/README.md",
       "lines": [
-        41800,
-        41866
+        41827,
+        41893
       ],
       "lines_count": 66,
       "chars": 5983,
@@ -2743,8 +2743,8 @@
       "owner": null,
       "path": "examples/README.md",
       "lines": [
-        41868,
-        41895
+        41895,
+        41922
       ],
       "lines_count": 27,
       "chars": 1182,
@@ -2763,8 +2763,8 @@
       "owner": null,
       "path": "examples/day-in-the-life/README.md",
       "lines": [
-        41897,
-        42289
+        41924,
+        42316
       ],
       "lines_count": 392,
       "chars": 34027,
@@ -2783,8 +2783,8 @@
       "owner": null,
       "path": "examples/day-in-the-life/story-10-new-ciso-90-days.md",
       "lines": [
-        42291,
-        42426
+        42318,
+        42453
       ],
       "lines_count": 135,
       "chars": 14217,
@@ -2803,8 +2803,8 @@
       "owner": null,
       "path": "examples/day-in-the-life/story-8-cerg-lite-maria.md",
       "lines": [
-        42428,
-        42524
+        42455,
+        42551
       ],
       "lines_count": 96,
       "chars": 11884,
@@ -2823,8 +2823,8 @@
       "owner": null,
       "path": "examples/day-in-the-life/story-9-f-01-control-intent.md",
       "lines": [
-        42526,
-        42638
+        42553,
+        42665
       ],
       "lines_count": 112,
       "chars": 13135,
@@ -2843,8 +2843,8 @@
       "owner": null,
       "path": "examples/regulated-utility-profile/README.md",
       "lines": [
-        42640,
-        42702
+        42667,
+        42729
       ],
       "lines_count": 62,
       "chars": 3913,
@@ -2863,8 +2863,8 @@
       "owner": null,
       "path": "ADOPT-WITH-AN-AGENT.md",
       "lines": [
-        42704,
-        42788
+        42731,
+        42815
       ],
       "lines_count": 84,
       "chars": 4310,
@@ -2883,8 +2883,8 @@
       "owner": null,
       "path": "BEGINNER-GUIDE.md",
       "lines": [
-        42790,
-        42893
+        42817,
+        42920
       ],
       "lines_count": 103,
       "chars": 3835,
@@ -2903,8 +2903,8 @@
       "owner": null,
       "path": "CODE_OF_CONDUCT.md",
       "lines": [
-        42895,
-        42933
+        42922,
+        42960
       ],
       "lines_count": 38,
       "chars": 2023,
@@ -2923,8 +2923,8 @@
       "owner": null,
       "path": "CONTRIBUTING.md",
       "lines": [
-        42935,
-        42983
+        42962,
+        43010
       ],
       "lines_count": 48,
       "chars": 3708,
@@ -2943,8 +2943,8 @@
       "owner": null,
       "path": "SECURITY.md",
       "lines": [
-        42985,
-        43000
+        43012,
+        43027
       ],
       "lines_count": 15,
       "chars": 839,
@@ -2963,8 +2963,8 @@
       "owner": null,
       "path": "adoption-packs/cerg-lite/README.md",
       "lines": [
-        43002,
-        43080
+        43029,
+        43107
       ],
       "lines_count": 78,
       "chars": 3707,
@@ -2983,8 +2983,8 @@
       "owner": null,
       "path": "adoption-packs/cerg-lite/agent-prompt.md",
       "lines": [
-        43082,
-        43116
+        43109,
+        43143
       ],
       "lines_count": 34,
       "chars": 1516,
@@ -3003,8 +3003,8 @@
       "owner": null,
       "path": "tools/policy-as-code/README.md",
       "lines": [
-        43118,
-        43191
+        43145,
+        43218
       ],
       "lines_count": 73,
       "chars": 4153,

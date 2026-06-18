@@ -657,7 +657,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md
   source_file: CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md
-  source_hash: 4b47539ace83890831db6a3cf9dea82a62e197700822abe76bb301ad3c5bd5dc
+  source_hash: 519a1e2b39cfe04598aa82841f192ca7cd84eb49a2d0a48cd4aabfe8d9687eb3
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md
   llm_include: true
   llm_priority: medium
