@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## BUSINESS CONTINUITY AND DISASTER RECOVERY PLAN
 ### Business Impact Analysis · Recovery Sequencing · Crisis Roles · DR Exercises · Cyber Recovery Interface
 

@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## CUI / [CMMC](https://dodcio.defense.gov/CMMC/) OPERATIONAL PACKAGE
 ### SSP · POA&M · SPRS · Boundary · 800-171 Practice Evidence · [CMMC L2](https://dodcio.defense.gov/CMMC/) Readiness · Subcontractor Register
 

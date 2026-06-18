@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## ISO/IEC 27001 OPERATIONAL PACKAGE
 ### ISMS Scope · Statement of Applicability · Annex A Mapping · Internal Audit · Management Review
 
