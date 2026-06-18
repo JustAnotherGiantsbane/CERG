@@ -30,6 +30,25 @@ CERG is open source (CC BY 4.0) and contributions are welcome. This document exp
 
 **For everything**: make sure `python3 tools/cerg-validate.py` passes with 0 errors before submitting. Warnings should be resolved before submitting unless they are intentionally documented and accepted by maintainers; errors are not acceptable.
 
+## Optional: pre-commit hook
+
+A `.pre-commit-config.yaml` is provided that runs the validator, integrity checker, and validator tests on every commit. This is **optional** — the CERG CI workflow runs the same checks on every push and pull request, so pre-commit is a faster local feedback loop, not an additional gate.
+
+To enable:
+
+```bash
+pip install pre-commit
+pre-commit install
+```
+
+To skip on a specific commit when intentional:
+
+```bash
+git commit --no-verify
+```
+
+The pre-commit hooks run against the full corpus, so every commit triggers a repo-wide check. This is intentional: a link fix in one file can break references in another, and a per-file subset would miss that.
+
 ## Document conventions (quick reference)
 
 - **Metadata table**: full 11-field STY-001 §4 format (Document ID, Version, Status, Classification, Owner, Parent Policy, Review Cycle, Frameworks, Regulations, Environments). Copy the shape from [EDG-001](governance/CERG-GOV-EDG-001_Edge_Register.md).
