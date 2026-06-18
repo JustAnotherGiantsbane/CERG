@@ -337,7 +337,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md
   source_file: CERG-GOV-IMP-002_Adoption_Safety_Guide.md
-  source_hash: 0724ea9e156d754ccc30ed28c8eacfd5bd9af61f8aea101cc670e88ef7929b17
+  source_hash: 18e7335e3ce7cfbb1e0b46d9e7d82c0b059fac38722bda230cd54d2fbf23afcc
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md
   llm_include: true
   llm_priority: medium
@@ -357,7 +357,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md
   source_file: CERG-GOV-IMP-003_Small_Team_Adoption_Path.md
-  source_hash: 6e11f8ba867df72e35d38efd8e6cad2e78726ad6deacc718e9fabf89674fc9f3
+  source_hash: 180ff52e6c4d6d1f7fb9c37ecc2a17790f031d500c0557852daf50608321c356
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md
   llm_include: true
   llm_priority: medium
@@ -457,7 +457,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMPREG-001_Program_Improvement_Register.md
   source_file: CERG-GOV-IMPREG-001_Program_Improvement_Register.md
-  source_hash: 4dd76e2b7a1c9d9f95fa8d442afe0434107f1f9b5565cf804784a1328f511441
+  source_hash: 1ba3debd63fe57a39aa79dcf36dc71d7664e4f824356d81c7a9e7ffce964d7cc
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMPREG-001_Program_Improvement_Register.md
   llm_include: true
   llm_priority: medium
