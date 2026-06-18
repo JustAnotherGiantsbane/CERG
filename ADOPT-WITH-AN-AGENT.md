@@ -67,7 +67,29 @@ Help me identify CERG regulated overlays that may apply. Do not claim compliance
 I want to contribute to CERG. Read CONTRIBUTING.md and the document style guide before suggesting changes. Prefer improving existing documents over adding new ones. For any new artifact proposal, explain the adoption path, dependency, record produced, and why the content cannot fit in an existing document.
 ```
 
-## 9. Agent deliverables checklist
+## 9. Automation scope guardrails
+
+CERG can support automation, but the core framework is an operating model first. Do not transform CERG into a tooling framework unless the human explicitly asks for that extension.
+
+Safe automation tasks:
+
+- Build adoption checklists from existing CERG documents.
+- Map chosen documents to owners, records, and evidence locations.
+- Generate draft register rows, decision log entries, and deferral rationales.
+- Use [Implementation Cards](governance/CERG-GOV-IMP-004_Implementation_Cards.md) as staged security-intent adoption paths.
+- Use [Maturity Self-Assessment](governance/CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) to identify next maturity moves.
+
+Do not add these to the core repo by default:
+
+- New control catalogs that replace CERG security intents.
+- MCP servers, APIs, or agent services.
+- Detection-as-code packs, Sigma rules, or SIEM queries.
+- ATT&CK graph databases or adversary emulation playbooks.
+- OSQuery, Elastic, Wazuh, or other collector configurations.
+
+Those may become optional extensions later, but they should not be part of first adoption and should not be generated without explicit maintainer approval.
+
+## 10. Agent deliverables checklist
 
 A good first agent-assisted session should produce:
 
