@@ -68,7 +68,7 @@
   title: Document Catalog and Naming Convention
   document_type: governance_instrument
   domain: CAT
-  version: 1.43
+  version: 1.44
   status: Approved
   classification: Public
   publication_profile: public
@@ -77,7 +77,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  source_hash: 5415528ea8630116df1a50aadccad3d3f77e1a9c76e6f56d162b523cdc468ef6
+  source_hash: 0082a165246412a50b6d3b0b5ec95702a90346fc513cbbcd2f8506dab55138e5
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   llm_include: true
   llm_priority: high
@@ -304,6 +304,26 @@
   normative_weight: supporting
   pillar: governance
   summary: Framework System Map
+- document_id: CERG-GOV-GEN-001
+  title: CERG Glossary
+  document_type: governance_instrument
+  domain: GEN
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Document Control)'
+  approval_authority: 'Governance Pillar Leader (Document Control)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-GEN-001_CERG_Glossary.md
+  source_file: CERG-GOV-GEN-001_CERG_Glossary.md
+  source_hash: 8e6e785d3face09927dde4d155a0e20d28fff2327942ea30dbfd2ef93bd8400f
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-GEN-001_CERG_Glossary.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: CERG Glossary
 - document_id: CERG-GOV-IMP-001
   title: Implementation and Adaptation Guide
   document_type: governance_instrument

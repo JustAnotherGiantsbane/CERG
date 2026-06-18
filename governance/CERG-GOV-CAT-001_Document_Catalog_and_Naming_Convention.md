@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.43 |
+| **Version** | 1.44 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -138,6 +138,7 @@ Files are named `<DocumentID>_<Short_Title>.md` using underscore-separated title
 | `FLOW` | Cross-pillar operational flows |
 | `CJ` | Crown jewels and loss-scenario library |
 | `SLC` | CERG service-level commitments (CERG-to-business) |
+| `GEN` | Cross-cutting reference material (glossary, term definitions, foundational index) |
 
 New domains are added only by amendment to this catalog.
 
@@ -391,6 +392,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-GOV-JF-001`](../roles/CERG-GOV-JF-001_Job_Families_Overview.md) | Job Families Overview | Governance Pillar Leader (Policy & Standards) | Approved |
 | [`CERG-GOV-JF-002`](../roles/CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) | NICE Workforce Framework Crosswalk | Governance Pillar Leader (Policy & Standards) | Approved |
 | [`CERG-GOV-FLOW-001`](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) | Cross-Pillar Operational Flows | Governance Pillar Leader | Approved |
+| [`CERG-GOV-GEN-001`](CERG-GOV-GEN-001_CERG_Glossary.md) | CERG Glossary | Governance Pillar Leader (Document Control) | Approved |
 | [`CERG-GOV-EDG-001`](CERG-GOV-EDG-001_Edge_Register.md) | Edge Register | Governance Pillar Leader / Vendor Risk Analyst | Approved |
 | [`CERG-GOV-CJ-001`](CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md) | Crown Jewel Register and Loss Scenario Library | Risk Pillar Leader / Governance Pillar Leader | Approved |
 | [`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md) | CERG Service-Level Commitments | CISO | Approved |
@@ -597,7 +599,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.43 |
+| **Version** | 1.44 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-18 |
 | **Classification** | Public |
@@ -614,6 +616,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.44 | 2026-06-18 | Governance Pillar Leader | Registered domain code `GEN` (cross-cutting reference material) in §2.1. Registered `CERG-GOV-GEN-001` (CERG Glossary) in §5.2 as the canonical reference for CERG terms, record types, conversion rules, and role names. Glossary content extracted from FLOW-001 §2 (Operating Principles, Record Type Definitions) and from CB-001, RMF-001, OM-001, and roles/ cross-references. |
 | 1.43 | 2026-06-18 | Governance Pillar Leader | Registered `CERG-GOV-IMP-007` (Role Reader Paths) in §5.2 as the sequenced 30-35 minute reading order for the CISO, Risk Lead, and Engineering Lead roles. |
 | 1.42 | 2026-06-18 | Governance Pillar Leader | Added §5.9 Examples subsection. Authorizes the `examples/` directory in the catalog and clarifies that examples are illustrative, not normative. Cross-reference rule 1 in §6 continues to govern which artifacts may be referenced from examples, with `(Planned, V1.x)` markers required for any forward references. |
 | 1.41 | 2026-06-18 | Governance Pillar Leader | Expanded §4.4 from Document Deprecation Policy to full Document Retirement Policy with criteria, 90-day notice period, migration guide, evidence retention, crosswalk freeze, and reversal provisions. Added catalog sync tool reference after metadata table. |
