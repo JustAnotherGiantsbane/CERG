@@ -1,0 +1,44 @@
+# Pre-commit configuration for CERG contributors.
+#
+# This file is OPTIONAL. The CERG CI workflow (.github/workflows/cerg-validate.yml)
+# runs the same validator on every push and pull request. Pre-commit is offered as
+# a faster local feedback loop so contributors can catch validation errors before
+# pushing, without waiting for CI.
+#
+# To enable locally:
+#   pip install pre-commit
+#   pre-commit install
+#
+# To run on demand (without installing):
+#   pre-commit run --all-files
+#
+# To skip on a specific commit (when intentional):
+#   git commit --no-verify
+#
+# The validator runs against the FULL corpus, so every commit triggers a
+# repo-wide check. This is intentional: a link fix in one file can break
+# references in another, and a per-file subset would miss that.
+repos:
+  - repo: local
+    hooks:
+      - id: cerg-validate
+        name: CERG catalog and link validator
+        entry: python3 tools/cerg-validate.py
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [commit]
+      - id: cerg-integrity-check
+        name: CERG integrity checker
+        entry: python3 tools/cerg-integrity-check.py
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [commit]
+      - id: cerg-tests
+        name: CERG validator tests
+        entry: python3 -m pytest tests/test_cerg_validate.py -q
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [commit]
