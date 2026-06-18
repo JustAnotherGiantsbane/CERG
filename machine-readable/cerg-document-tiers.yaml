@@ -169,5 +169,10 @@ agent_task_map:
     load_tiers: [tier_0_orientation, tier_1_mvc_spine, tier_4_conditional_overlays]
   workforce_design:
     load_tiers: [tier_0_orientation, tier_5_workforce_architecture]
+  evaluate_extension_proposal:
+    load:
+      - cerg-agent-extension-roadmap.yaml
+      - cerg-document-tiers.yaml
+      - cerg-llm-index.json
   full_reference_review:
     load: cerg-llm-index.json
