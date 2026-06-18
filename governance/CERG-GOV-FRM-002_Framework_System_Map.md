@@ -150,6 +150,8 @@ CERG work should not move by informal chat alone. It should move through one of 
 | Stand up risk management | [RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md) | [PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md), [TMPL-RM-001](../templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) |
 | Start exposure management | [PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | [RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md), [CAT-002](CERG-GOV-CAT-002_Record_Catalog.md) |
 | Review a new system or SaaS | [PRC-AR-001](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | [TMPL-AR-001](../templates/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md), [PRC-TPRM-001](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
+| Show how CERG runs in practice | [Day in the Life examples](../examples/day-in-the-life/README.md) | [FLOW-001](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md), [OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) |
+| Onboard a new team member | [Day in the Life examples](../examples/day-in-the-life/README.md), [ONB-001](CERG-GOV-ONB-001_Onboarding_and_Integration_Program.md) | [RAC-001](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) |
 
 ---
 
@@ -172,6 +174,8 @@ Start with:
 9. Record Catalog
 10. Role-Based Implementation Checklists
 
+To see what this looks like in practice on a 2-8 person team, read the [CERG Lite day-in-the-life story](../examples/day-in-the-life/README.md#story-8-cerg-lite-maria-and-the-tuesday-scanner-report).
+
 ### 6.2 CERG Standard
 
 Use when the organization has an existing security function and needs consistent operation.
@@ -183,6 +187,8 @@ Add:
 - Third-party and supply-chain risk.
 - Metrics and reporting.
 - Evidence quality and audit procedure.
+
+For worked examples of how the three pillars produce outcomes together, see the [Day in the Life examples](../examples/day-in-the-life/README.md) — Stories 1, 2, 3, 5, and 7 cover the most common Standard-team situations.
 
 ### 6.3 CERG Regulated
 
@@ -198,6 +204,8 @@ Add the applicable package:
 | ISO 27001 | ISO operational package, control baseline, SoA support |
 | Privacy | Privacy and data protection operational package, data governance standard |
 
+For regulator-facing walkthroughs, see the [Day in the Life examples](../examples/day-in-the-life/README.md) — Story 3 (audit request) and Story 6 (third-party incident notification) are written so a regulated audience can map them straight to their own audit and notification obligations.
+
 ---
 
 ## 7. Navigation by Pillar
@@ -207,6 +215,7 @@ Add the applicable package:
 | Engineering | [OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md), [FLOW-001](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md), relevant standards | Architecture intake, asset coverage, configuration baseline, remediation records |
 | Risk | [RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md), [TAX-001](CERG-GOV-TAX-001_Risk_Taxonomy.md), [FLOW-001](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) | Risk register, finding records, vendor assessments, threat validation records |
 | Governance | [POL-001](CERG-POL-001_Cybersecurity_Policy.md), [CAT-001](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md), [CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md), [AUD-001](CERG-GOV-AUD-001_Evidence_Quality_Standard.md) | Evidence index, control implementation records, metrics dashboard, improvement register |
+| All three pillars working together | [Day in the Life examples](../examples/day-in-the-life/README.md) | [FLOW-001](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md), [OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) |
 
 ---
 

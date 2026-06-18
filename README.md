@@ -20,6 +20,7 @@ CERG is built around three accountable pillars:
 | New to GitHub or Markdown | [BEGINNER-GUIDE.md](BEGINNER-GUIDE.md) |
 | Using an AI assistant or coding agent | [ADOPT-WITH-AN-AGENT.md](ADOPT-WITH-AN-AGENT.md) |
 | A small team adopting the minimum spine | [CERG Lite adoption pack](adoption-packs/cerg-lite/README.md) |
+| Looking for operational examples | [Day in the Life examples](examples/day-in-the-life/README.md) |
 | Comparing adoption paths | [Adoption Decision Tree](governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md) |
 | Contributing | [CONTRIBUTING.md](CONTRIBUTING.md) |
 
