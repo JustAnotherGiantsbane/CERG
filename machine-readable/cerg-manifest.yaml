@@ -44,6 +44,26 @@
   normative_weight: supporting
   pillar: governance
   summary: Annual Security and Governance Calendar
+- document_id: CERG-GOV-CAL-002
+  title: Calibration Checklist
+  document_type: governance_instrument
+  domain: CAL
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: 'Governance Pillar Leader (Policy & Standards)'
+  approval_authority: 'Governance Pillar Leader (Policy & Standards)'
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-CAL-002_Calibration_Checklist.md
+  source_file: CERG-GOV-CAL-002_Calibration_Checklist.md
+  source_hash: b36cf7e13b9f4ef0248be42896074fdcf03592c89081db59c7ef4608c00a1509
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAL-002_Calibration_Checklist.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Calibration Checklist
 - document_id: CERG-GOV-CAT-001
   title: Document Catalog and Naming Convention
   document_type: governance_instrument
@@ -57,7 +77,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  source_hash: 651e0d6296df633b200ffc88b7e761163876e860622eeee05f3be52295a8cf67
+  source_hash: 6d65238611dae213e930a1085f552ac23e35d95f0700a40d5c79520f4de56407
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   llm_include: true
   llm_priority: high
@@ -557,7 +577,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md
   source_file: CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md
-  source_hash: c3b5a90a642fbff47be803351c48ad57fd1231b8ae0f46aeb9a324e918b853f4
+  source_hash: e5201e196481a7df8b1395e90a65d9db4228b076ca18c622b5e2e15d584639b1
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md
   llm_include: true
   llm_priority: medium
@@ -728,16 +748,16 @@
   title: Training Development and Certification Framework
   document_type: governance_instrument
   domain: TRN
-  version: 1.0
+  version: ''
   status: Approved
   classification: Public
   publication_profile: public
-  owner_role: 'Governance Pillar Leader (Policy & Standards)'
-  approval_authority: 'Governance Pillar Leader (Policy & Standards)'
-  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: ''
   source_path: governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md
   source_file: CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md
-  source_hash: b0d252b555f5f8bc0f322ff431c5acb75c340806cfc742e337075802613c3201
+  source_hash: 009af716c8cdb4d8ad414f718d59aec85f9a8d970169000affab29e676628f9d
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md
   llm_include: true
   llm_priority: medium
@@ -1108,16 +1128,16 @@
   title: Threat Intelligence Procedure
   document_type: procedure
   domain: TI
-  version: 1.1
+  version: ''
   status: Approved
   classification: Public
   publication_profile: public
-  owner_role: Risk Pillar Leader
-  approval_authority: Risk Pillar Leader
-  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: ''
   source_path: procedures/CERG-PRC-TI-001_Threat_Intelligence_Procedure.md
   source_file: CERG-PRC-TI-001_Threat_Intelligence_Procedure.md
-  source_hash: c7afb61411f937a63fe59bd6aef3d18710300f91540f1ffb2cc0fb522dded7b0
+  source_hash: 86931842300a60cd9c1c4d7dfd3f9363d6e45d4b45622e7fa5a06bed8a03b689
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-TI-001_Threat_Intelligence_Procedure.md
   llm_include: true
   llm_priority: medium
