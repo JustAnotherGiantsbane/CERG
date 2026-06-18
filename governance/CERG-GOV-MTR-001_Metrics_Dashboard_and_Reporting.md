@@ -226,7 +226,7 @@ New adopters have no baseline. SR metrics are reported with phase context so tha
 | **Gate 2 (Operating, 90–180 days)** | 10 business days | 5 business days | 10 business days | 10 business days |
 | **Gate 3+ (Governed / Adaptive)** | Per SLC-001 §3.1 | Per SLC-001 §3.3 (3 business days) | Per SLC-001 §3.1 / §3.3 | Per SLC-001 §3.2 (5 business days) |
 
-> **Phase-Context Reporting.** The CISO Dashboard reports SR metrics with a phase-context indicator (e.g., "Gate 1 — transitional target"). The COG Brief includes the phase label in the SR-001 through SR-005 tiles. Phase advancement is recorded in the adoption gates document ([`CERG-GOV-IMP-005`](CERG-GOV-IMP-005_Adoption_Gates.md)).
+> **Phase-Context Reporting.** The CISO Dashboard reports SR metrics with a phase-context indicator (e.g., "Gate 1 — transitional target"). The COG Brief includes the phase label in the SR-001 through SR-005 tiles. Phase advancement is recorded in the adoption gates document ([`CERG-GOV-IMP-005`](CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md)).
 
 ---
 

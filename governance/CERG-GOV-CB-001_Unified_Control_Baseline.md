@@ -269,10 +269,7 @@ When provider attestation is missing, expired, or does not cover the customer's 
 |------|--------|-------|--------|-----|
 | 1. **Document the gap** | Describe what evidence is missing: control ID, provider, date expected vs. received, scope gap. | Control Owner / Risk (TPRM) | Gap record in Shared Responsibility Decision Table | Within 5 business days of discovering the gap |
 | 2. **Assess residual risk** | If provider evidence is unavailable, how does the control gap affect the customer environment? Quantify the exposure using FAIR-aligned risk statement format per RMF-001 §9.2. | Risk Pillar Leader | Risk assessment with LEF/LM bands | Within 10 business days of step 1 |
-| 3. **Select treatment path** | Choose one:
-   - **Compensating control**: implement a customer-side control that achieves the same control objective (e.g., WAF if provider DDoS protection cannot be verified).
-   - **Risk acceptance**: if compensating control is not feasible, submit for risk acceptance per RMF-001 §9.7 authority levels.
-   - **Provider remediation**: require the provider to produce the missing evidence within a defined timeline (attach contractual mechanism if available). | Control Owner + Risk Pillar Leader | Treatment decision documented in risk register | Within 10 business days of step 2 |
+| 3. **Select treatment path** | Choose one: Compensating control (customer-side control achieving same objective), Risk acceptance (per RMF-001 §9.7), or Provider remediation (contractual timeline). | Control Owner + Risk Pillar Leader | Treatment decision documented in risk register | Within 10 business days of step 2 |
 | 4. **Set re-evaluation trigger** | Define the event that will trigger gap re-evaluation: contract renewal, attestation expiry, scope change, or provider breach notification. | Governance Pillar Leader | Re-evaluation trigger entry in evidence index | Within 5 business days of step 3 |
 | 5. **Escalate if Critical/High** | If the gap affects a Critical or High overlay control (per §8), escalate to the CISO within 24 hours of step 2. CISO determines whether an immediate compensating control is required or whether the gap is being tracked through the risk register. | Risk Pillar Leader | CISO notification and disposition | 24 hours (Critical/High) |
 

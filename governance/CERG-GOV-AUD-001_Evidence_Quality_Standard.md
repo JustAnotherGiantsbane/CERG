@@ -287,7 +287,7 @@ The Evidence Librarian checks evidence freshness at the monthly review. The evid
 
 ### 6.1 Evidence Retrieval SLA (Adoption-Gate Tiered)
 
-Evidence must be retrievable within the following SLA, tiered by adoption gate. The applicable gate is defined in the organization's Adoption Gates document ([`CERG-GOV-IMP-005`](CERG-GOV-IMP-005_Adoption_Gates.md) where published; otherwise default to Gate 1).
+Evidence must be retrievable within the following SLA, tiered by adoption gate. The applicable gate is defined in the organization's Adoption Gates document ([`CERG-GOV-IMP-005`](CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md) where published; otherwise default to Gate 1).
 
 | Gate | Timeframe | Retrievable Within | Method | Evidence Index Required |
 |------|-----------|-------------------|--------|------------------------|

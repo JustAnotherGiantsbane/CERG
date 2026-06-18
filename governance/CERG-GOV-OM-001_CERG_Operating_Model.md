@@ -170,13 +170,95 @@ Disagreements that the pillars cannot resolve are escalated to the CISO. The CIS
 
 ### 4.4 Cyber Oversight Group (COG)
 
-The **Cyber Oversight Group (COG)** is the standing internal forum that reviews cyber risk posture between board cycles. It is chaired by the CISO. Members include the CIO, the COO or operational equivalent, the General Counsel, the Chief Financial Officer (or designee), the Enterprise Risk lead, and business-unit risk owners for systems in CERG scope. The COG meets monthly and serves three purposes:
+The **Cyber Oversight Group (COG)** is the standing internal forum that reviews cyber risk posture between board cycles. It is chaired by the CISO.
+
+**Standing core members (every meeting):**
+- Chief Information Security Officer (CISO) — Chair
+- Chief Information Officer (CIO) or designee
+- Chief Operating Officer (COO) or operational equivalent
+- General Counsel (GC) or designee
+- Chief Financial Officer (CFO) or designee
+- Enterprise Risk lead
+- Governance Pillar Leader (secretariat)
+
+**Dynamic members (per agenda):**
+- Business Unit Risk Owner for any system, asset, or process appearing on the agenda — invited for the relevant agenda items
+- Engineering Pillar Leader — invited when architecture decisions, cloud migration, or OT/IT convergence items are on the agenda
+- Risk Pillar Leader — invited when risk acceptance review, threat landscape, or adversarial testing results are on the agenda
+- Any additional subject matter expert whose presence is needed for informed discussion on a specific agenda item, identified by the CISO or Governance Pillar Leader during agenda preparation
+
+**Dynamic membership rule:** Standing core members participate in every meeting. Dynamic members are invited when their scope of accountability appears on the agenda. The agenda, distributed at least 5 business days before each meeting, lists the attending dynamic members and the items for which their attendance is requested.
+
+The COG meets monthly and serves three purposes:
 
 1. **Posture review.** The CISO presents the open Risk Register summary, top KRIs from [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md), and any High or Critical risk acceptance decisions made since the last meeting.
 2. **Cross-functional treatment alignment.** Risks whose treatment crosses business boundaries - e.g., a risk that requires Operations to change a maintenance practice, or Finance to fund a remediation - are surfaced for cross-functional decision or escalation.
 3. **Pre-board review.** The COG serves as the dress rehearsal for board-cycle reporting; material risk decisions surface here first so the board reporting is informed by cross-functional perspective.
 
 The COG is not a risk-acceptance authority. Acceptance authority lives in the [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 table. The COG is the forum where the right decision-makers are in the room, informed, and aligned. Downstream reports - including the metrics dashboard in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) §9 and the risk-register reporting cadence in [`CERG-TMPL-RM-001`](../templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) §7.3 - have the COG as their primary audience.
+
+#### COG Agenda Template
+
+The Governance Pillar Leader (secretariat) prepares the agenda using the template below, distributes it at least 5 business days before the meeting, and identifies which dynamic members are requested for which items.
+
+```
+COG AGENDA - YYYY-MM-DD
+
+MEETING INFORMATION
+   Date       : YYYY-MM-DD
+   Time       : [Time / Duration]
+   Chair      : CISO
+   Secretariat: Governance Pillar Leader
+
+ATTENDEES
+   Standing core: CISO, CIO, COO, GC, CFO, ER Lead, Governance Pillar Leader
+   Dynamic invited: [BU Risk Owner for Item X], [Pillar Leader for Item Y], [SME as needed]
+
+AGENDA ITEMS
+
+1. ADMINISTRATIVE (5 min)
+   - Approval of prior meeting minutes
+   - Conflict of interest disclosure (if any)
+
+2. POSTURE REVIEW (20 min) — Lead: CISO
+   - Risk Register summary: open entries by severity, new entries since last meeting
+   - Top KRIs from CERG-GOV-MTR-001: [list 3-5 KRIs with green/amber/red]
+   - High / Critical risk acceptance decisions since last meeting
+   - [If dynamic member invited:] [BU Owner] provides context on [relevant KRI or risk item]
+
+3. CROSS-FUNCTIONAL TREATMENT ALIGNMENT (20 min)
+   a) [Risk Item 1 — e.g., Cloud migration vendor API exposure] — Owner: [Name]
+      - Risk statement, residual score, treatment options
+      - Ask (funding / operations change / policy waiver)
+      - Discussion / decision
+   b) [Risk Item 2 — e.g., OT patching cadence gap] — Owner: [Name]
+      - Risk statement, residual score, treatment options
+      - Ask
+      - Discussion / decision
+   c) [Risk Item N]
+
+4. REGULATORY AND AUDIT UPDATE (10 min) — Lead: Governance Pillar Leader
+   - Regulatory change tracker: items affecting COG scope
+   - Audit / assessment calendar: upcoming engagements
+   - Open findings and POA&M status
+
+5. PRE-BOARD REVIEW (10 min) — Lead: CISO
+   - Board reporting package (draft) for upcoming cycle
+   - Material risk items requiring board attention
+   - Decision: approve / revise / hold for next meeting
+
+6. ANY OTHER BUSINESS (5 min)
+
+7. ACTION ITEM REVIEW (5 min)
+   - Review action items from prior meeting
+   - New action items with owner and target date
+
+MATERIALS ATTACHED
+   - Risk Register summary report
+   - KRI dashboard (CERG-GOV-MTR-001 §9 extract)
+   - Board reporting package draft (if applicable)
+   - Risk acceptance records for review items
+```
 
 ---
 
@@ -564,6 +646,7 @@ This ensures that "no single point of failure" is not just a claim about org-cha
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.24 | 2026-06-18 | Governance Pillar Leader | Updated §4.4 COG membership with explicit standing-core and dynamic-per-agenda members (Business Unit Risk Owner for systems on agenda, Engineering/Risk pillar leaders as needed). Added COG Agenda Template with dynamic attendee section. |
 | 1.23 | 2026-06-14 | Governance Pillar Leader | Removed residual IR Plan Steward language and clarified that CERG provides IR support while the standing IR team owns the IR plan, exercises, notification clocks, and incident command. |
 | 1.0 | 2026-05-01 | CISO + Cyber Governance | Initial release. Establishes the three pillars, decision rights, engagement models, the canonical role roster (§6.1), the Cyber Oversight Group (§4.4), the standing coordination cadence aligned with CERG-RMF §8.2, and the maturity indicator set cross-referenced to CERG-GOV-MTR-001. Clarifies that the Incident Response plan and capability are owned by a standing IR team outside CERG; CERG provides liaison roles and feeds data into the IR program. |
 | 1.22 | 2026-05-26 | Cyber Governance | Added Section 10.4 Knowledge Transfer and Cross-Training: cross-training log schema, documentation completeness metrics (KM-001, KM-002), cross-training expectations (KM-003, minimum 4 hours/quarter), and maturity assessment integration for domain X5 Adaptive scoring. |

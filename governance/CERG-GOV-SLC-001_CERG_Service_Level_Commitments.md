@@ -105,7 +105,7 @@ The commitment values in §3.1–§3.4 are mature-program targets. New adopters 
 | **Gate 2 (Operating, 90–180 days)** | 10 business days | 5 business days | 10 business days | 10 business days |
 | **Gate 3+ (Governed / Adaptive)** | Per §3.1 (10 / 7 / 5 business days by tier) | Per §3.3 (3 business days) | Per §3.1 / §3.3 | Per §3.2 (5 business days) |
 
-> **Phase Advancement.** Advancement from one gate to the next is recorded in the adoption gates document ([`CERG-GOV-IMP-005`](CERG-GOV-IMP-005_Adoption_Gates.md)) and communicated to the Cyber Oversight Group. SR metric reporting switches to the next phase target upon confirmation of gate transition.
+> **Phase Advancement.** Advancement from one gate to the next is recorded in the adoption gates document ([`CERG-GOV-IMP-005`](CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md)) and communicated to the Cyber Oversight Group. SR metric reporting switches to the next phase target upon confirmation of gate transition.
 
 ---
 
