@@ -2,12 +2,12 @@
   "cerg_version": "1.41",
   "generated": "2026-06-18",
   "source": "local markdown corpus",
-  "total_documents": 143,
-  "total_tokens_estimate": 899842,
+  "total_documents": 144,
+  "total_tokens_estimate": 903924,
   "by_type": {
     "readme": 14,
     "governance-instrument": 39,
-    "meta": 4,
+    "meta": 5,
     "policy": 1,
     "standard": 15,
     "procedure": 12,
@@ -65,7 +65,7 @@
     "META": {
       "type": "Repository Metadata",
       "pillar": "cross-cutting",
-      "count": 18
+      "count": 19
     }
   },
   "prefixes": {
@@ -247,8 +247,8 @@
         2204
       ],
       "lines_count": 657,
-      "chars": 57504,
-      "tokens": 16430,
+      "chars": 57524,
+      "tokens": 16435,
       "summary": "CERG GOV document: Document Catalog and Naming Convention"
     },
     {
@@ -2744,12 +2744,32 @@
       "path": "examples/day-in-the-life/README.md",
       "lines": [
         41657,
-        42050
+        42049
       ],
-      "lines_count": 393,
-      "chars": 33973,
-      "tokens": 9707,
+      "lines_count": 392,
+      "chars": 34027,
+      "tokens": 9722,
       "summary": "CERG META document: README"
+    },
+    {
+      "id": "story-10-new-ciso-90-days",
+      "prefix": "META",
+      "title": "story-10-new-ciso-90-days",
+      "type": "meta",
+      "pillar": "cross-cutting",
+      "status": null,
+      "version": null,
+      "classification": null,
+      "owner": null,
+      "path": "examples/day-in-the-life/story-10-new-ciso-90-days.md",
+      "lines": [
+        42051,
+        42186
+      ],
+      "lines_count": 135,
+      "chars": 14217,
+      "tokens": 4062,
+      "summary": "CERG META document: story-10-new-ciso-90-days"
     },
     {
       "id": "story-8-cerg-lite-maria",
@@ -2763,8 +2783,8 @@
       "owner": null,
       "path": "examples/day-in-the-life/story-8-cerg-lite-maria.md",
       "lines": [
-        42052,
-        42148
+        42188,
+        42284
       ],
       "lines_count": 96,
       "chars": 11884,
@@ -2783,8 +2803,8 @@
       "owner": null,
       "path": "examples/day-in-the-life/story-9-f-01-control-intent.md",
       "lines": [
-        42150,
-        42262
+        42286,
+        42398
       ],
       "lines_count": 112,
       "chars": 13135,
@@ -2803,8 +2823,8 @@
       "owner": null,
       "path": "examples/regulated-utility-profile/README.md",
       "lines": [
-        42264,
-        42326
+        42400,
+        42462
       ],
       "lines_count": 62,
       "chars": 3913,
@@ -2823,8 +2843,8 @@
       "owner": null,
       "path": "ADOPT-WITH-AN-AGENT.md",
       "lines": [
-        42328,
-        42412
+        42464,
+        42548
       ],
       "lines_count": 84,
       "chars": 4310,
@@ -2843,8 +2863,8 @@
       "owner": null,
       "path": "BEGINNER-GUIDE.md",
       "lines": [
-        42414,
-        42517
+        42550,
+        42653
       ],
       "lines_count": 103,
       "chars": 3835,
@@ -2863,8 +2883,8 @@
       "owner": null,
       "path": "CODE_OF_CONDUCT.md",
       "lines": [
-        42519,
-        42557
+        42655,
+        42693
       ],
       "lines_count": 38,
       "chars": 2023,
@@ -2883,8 +2903,8 @@
       "owner": null,
       "path": "CONTRIBUTING.md",
       "lines": [
-        42559,
-        42607
+        42695,
+        42743
       ],
       "lines_count": 48,
       "chars": 3708,
@@ -2903,8 +2923,8 @@
       "owner": null,
       "path": "SECURITY.md",
       "lines": [
-        42609,
-        42624
+        42745,
+        42760
       ],
       "lines_count": 15,
       "chars": 839,
@@ -2923,8 +2943,8 @@
       "owner": null,
       "path": "adoption-packs/cerg-lite/README.md",
       "lines": [
-        42626,
-        42704
+        42762,
+        42840
       ],
       "lines_count": 78,
       "chars": 3707,
@@ -2943,8 +2963,8 @@
       "owner": null,
       "path": "adoption-packs/cerg-lite/agent-prompt.md",
       "lines": [
-        42706,
-        42740
+        42842,
+        42876
       ],
       "lines_count": 34,
       "chars": 1516,
@@ -2963,8 +2983,8 @@
       "owner": null,
       "path": "tools/policy-as-code/README.md",
       "lines": [
-        42742,
-        42815
+        42878,
+        42951
       ],
       "lines_count": 73,
       "chars": 4153,

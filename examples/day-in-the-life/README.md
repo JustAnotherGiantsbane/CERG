@@ -32,8 +32,7 @@ These stories are illustrative, not normative. They may reference documents or s
 | 7 | Enterprise AI assistant rollout | F-02 | AI standard application and controlled pilot pattern |
 | 8 | [CERG Lite - Maria and the Tuesday scanner report](story-8-cerg-lite-maria.md) | F-04 | Small-team MVC operations and exposure triage |
 | 9 | [F-01 Control Intent - when the regulator changes the rule](story-9-f-01-control-intent.md) | F-01 | Translating regulatory change into implementation work |
-
-Story 10 (the new CISO's first 90 days) is a planned example and is not yet published.
+| 10 | [The new CISO's first 90 days](story-10-new-ciso-90-days.md) | MVC + F-07 | First-quarter operating rhythm for a new security leader |
 
 ---
 
