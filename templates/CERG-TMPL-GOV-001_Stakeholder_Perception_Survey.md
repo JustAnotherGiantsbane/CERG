@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## STAKEHOLDER PERCEPTION SURVEY
 ### Survey Instrument · Administration Cadence · Analysis · Program Integration
 

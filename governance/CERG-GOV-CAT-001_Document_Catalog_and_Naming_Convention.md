@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## DOCUMENT CATALOG AND NAMING CONVENTION
 ### Authoritative Inventory · ID Scheme · Roadmap
 

@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## AUDIT AND EVIDENCE MANAGEMENT PROCEDURE
 ### Evidence Library · Control Testing · Audit Intake · Auditor Response · Finding Tracking
 

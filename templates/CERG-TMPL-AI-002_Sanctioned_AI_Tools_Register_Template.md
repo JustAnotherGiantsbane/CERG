@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## SANCTIONED AI TOOLS REGISTER TEMPLATE
 ### Approved Tools · Data Classification Limits · Use Cases · Conditions · Review Cadence
 

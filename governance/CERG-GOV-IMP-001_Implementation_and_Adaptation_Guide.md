@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## IMPLEMENTATION AND ADAPTATION GUIDE
 ### The On-Ramp: Fork, Adapt, Run · Talent Brand · Interview Guide
 

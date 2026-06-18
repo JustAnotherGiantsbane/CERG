@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## THIRD-PARTY AND SUPPLY CHAIN RISK PROCEDURE
 ### Vendor Tiering · Evidence by Tier · Contract Clauses · SBOM · International Access · Supply Chain Compromise Team (SCCT)
 

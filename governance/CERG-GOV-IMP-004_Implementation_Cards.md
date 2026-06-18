@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## IMPLEMENTATION CARDS
 ### For Every Compliance Intent · Minimum Viable to Full Implementation · Who Does What
 
@@ -430,8 +428,6 @@ Annual review or upon material change to the control baseline, compliance matrix
 | Edge Register | CERG-GOV-EDG-001 | Edge management for vendor/network intents |
 
 ---
-
-> **SURGE, Cyber Engineering, Risk & Governance**
 >
 > _An intent without implementation guidance is governance poetry. These cards make the intents actionable._
 

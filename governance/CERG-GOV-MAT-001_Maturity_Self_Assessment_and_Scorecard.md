@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## MATURITY SELF-ASSESSMENT AND SCORECARD
 ### Tier Self-Scoring · Pillar Domains · Gap Output · Re-Measurement
 

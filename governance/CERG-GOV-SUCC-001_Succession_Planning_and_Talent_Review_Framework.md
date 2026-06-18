@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## SUCCESSION PLANNING AND TALENT REVIEW FRAMEWORK
 ### Heat Maps · Readiness Ratings · Emergency Succession · Development Plans
 

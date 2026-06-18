@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## CONSOLIDATED ROLES, RESPONSIBILITIES, AND RACI INSTRUMENT
 ### Canonical Role Reference · Master RACI · Role Descriptions · Scaling Map
 

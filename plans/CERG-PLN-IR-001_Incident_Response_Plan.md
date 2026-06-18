@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## INCIDENT RESPONSE PLAN
 ### Detection · Containment · Investigation · Notification · Recovery · Lessons Learned
 

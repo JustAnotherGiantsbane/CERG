@@ -182,7 +182,7 @@ When inserting or deleting sections:
 
 ### Document Status Rules
 
-- CERG-owned documents pushed to `main` should use lifecycle status `Approved` unless they are intentionally Draft, For Review, Retired, or roadmap Planned.
+- CERG-owned documents pushed to `main` should use lifecycle status `Approved` unless they are intentionally Draft, For Review, Retired, or Planned.
 - Publication eligibility is not a lifecycle status; use the publication manifest for public-release decisions.
 - Exception: IR documents (PLN‑IR‑001, PRC‑IR‑002) use `External Interface` status, are owned by `Standing IR Team / Incident Commander`, and carry an ADJACENT FUNCTION banner.
 - Status, owner, and approval authority must be consistent across the metadata table, Document Control section, and CAT‑001 catalog entry.

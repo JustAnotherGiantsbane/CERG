@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## SYSTEM SECURITY PLAN TEMPLATE
 ### System Boundary · Authorization Context · Control Implementation · Inheritance · Evidence Index
 

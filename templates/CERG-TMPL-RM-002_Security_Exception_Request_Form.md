@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## SECURITY EXCEPTION REQUEST FORM
 ### Control Exception · Waiver Request · Compensating Controls · Expiration · Approval
 

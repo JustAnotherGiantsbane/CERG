@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## UNIFIED CONTROL BASELINE
 ### Organizational Baseline · Overlay Matrix · Implementation, Evidence, and Inheritance Model
 
@@ -100,7 +97,7 @@ Every control entry in the baseline carries one of the following statuses. The s
 | `Implemented` | Control is in place, tested, and operating as designed. | Named evidence artifact for the current cycle. |
 | `Partially Implemented` | Control is in place for some scope or is operating at reduced effectiveness. | Evidence of what is in place plus a POA&M entry. |
 | `Inherited` | Implementation is provided by another party - cloud provider, SaaS provider, parent enterprise control, IAM team. | Inheritance Evidence Package (Section 5). |
-| `Planned` | Control is in the roadmap with an owner and target date. | POA&M entry with date and owner. |
+| `Planned` | Control is planned with an owner and target date. | POA&M entry with date and owner. |
 | `Risk Accepted` | Deviation is approved and tracked via [CERG-PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) Section 7. | Risk register entry, exception ID, approver. |
 | `Not Applicable` | Control does not apply to this scope. | Documented N/A rationale (system type, no in-scope data, etc.). |
 

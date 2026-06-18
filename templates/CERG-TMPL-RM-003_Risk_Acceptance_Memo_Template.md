@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## RISK ACCEPTANCE MEMO TEMPLATE
 ### Decision Record · Residual Risk · Business Rationale · Conditions · Expiration
 

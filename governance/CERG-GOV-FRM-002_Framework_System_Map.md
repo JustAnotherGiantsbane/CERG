@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## FRAMEWORK SYSTEM MAP
 ### Front Door · Document Relationships · Adoption Navigation
 

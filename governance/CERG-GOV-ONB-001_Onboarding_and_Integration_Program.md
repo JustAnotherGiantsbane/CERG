@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## ONBOARDING AND INTEGRATION PROGRAM
 ### 30/60/90-Day Plans · CERG 101 · Buddy System · First Contribution
 

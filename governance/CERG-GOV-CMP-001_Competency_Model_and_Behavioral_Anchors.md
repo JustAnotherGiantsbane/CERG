@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## COMPETENCY MODEL AND BEHAVIORAL ANCHORS
 ### Leveled Knowledge · Skills · Behaviors Across All Three Pillars
 

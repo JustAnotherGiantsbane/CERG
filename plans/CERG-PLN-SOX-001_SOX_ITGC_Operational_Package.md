@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## SOX ITGC OPERATIONAL PACKAGE
 ### Control Library · SOX-Relevant System Register · Evidence Reuse · Deficiency Workflow
 

@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## RECORD CATALOG
 ### Authoritative Record Types · Required Fields · Evidence Value
 

@@ -1,4 +1,4 @@
-### Cyber Engineering, Risk & Governance: SURGE Framework
+### Cyber Engineering, Risk & Governance: CERG Framework
 
 > **How to read this matrix:** Each row represents a security _intent_, the underlying goal that multiple frameworks are all trying to achieve. The regulatory and NIST columns show where each framework addresses that intent. Where multiple frameworks align to one row, a single control effort satisfies all of them. Items marked **⚠ Unique** have requirements that don't fully overlap with the other frameworks and warrant dedicated attention.
 

@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## CONTROL EFFECTIVENESS FRAMEWORK
 ### Effectiveness Measurement · Failure Analysis · Rationalization · Adaptive Maturity Integration
 

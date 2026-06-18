@@ -1,6 +1,3 @@
-
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## ORGANIZATION ADAPTATION PROFILE
 ### Token Scheme · Values File · Render Tool
 
@@ -113,7 +110,7 @@ This is the authoritative list of tokens. New tokens are added only by amendment
 | **Token** | **Meaning** | **Example Value** |
 |---|---|---|
 | `{{PROGRAM_NAME}}` | The name the organization gives its security program. Defaults to `CERG`. | `CERG` |
-| `{{PROGRAM_ACRONYM}}` | The pronounced acronym for the pillar set. Defaults to `SURGE`. | `SURGE` |
+| `{{PROGRAM_ACRONYM}}` | The program acronym for the pillar set. Defaults to `CERG`. | `CERG` |
 
 ### 4.3 Scale and Structure
 

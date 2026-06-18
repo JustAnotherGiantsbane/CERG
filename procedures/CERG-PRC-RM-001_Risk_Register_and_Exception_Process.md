@@ -1,5 +1,3 @@
-# SURGE: Cyber Engineering, Risk & Governance
-
 ## RISK REGISTER AND EXCEPTION PROCESS
 ### Identification · Treatment · Acceptance · Review
 
@@ -613,8 +611,6 @@ Governance owns this procedure. The Risk Register Owner is responsible for revis
 | CERG Operating Model | [CERG-GOV-OM-001](../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) | Pillar structure and risk governance |
 
 ---
-
-> **SURGE, Cyber Engineering, Risk & Governance**
 >
 > _Identify it. Score it. Record it. Own it._
 
