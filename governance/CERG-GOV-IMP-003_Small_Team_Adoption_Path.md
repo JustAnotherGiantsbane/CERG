@@ -88,7 +88,8 @@ The following are explicitly deferred for small teams. Document the deferral in 
 - Board/CISO reporting deck template — use a simple status report instead
 - Per-role JD documents — JF-001 and JF-002 are sufficient
 - Contractor integration guide (CON-001) — unless you have contractors
-- Stakeholder perception survey (TMPL-GOV-001)
+- Cross-pillar operational flows (FLOW-001) — the procedures themselves (PRC-*) are sufficient for initial adoption
+- Stakeholder perception survey (TMPL-GOV-001) — first run at month 2, then annually per IMP-002
 
 ---
 

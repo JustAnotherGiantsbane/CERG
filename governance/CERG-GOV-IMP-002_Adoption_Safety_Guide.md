@@ -87,7 +87,12 @@ These documents add value but are not needed on day one. Adopt them after you ha
 - Board and CISO reporting deck template (TMPL-MTR-001) — use a simple status report first
 - Full role architecture with per-role JDs (roles/jf-*/) — the family overviews (JF-001, JF-002) are sufficient
 - Cross-pillar operational flows (FLOW-001) — the procedures themselves (PRC-*) are sufficient for initial adoption
-- Stakeholder perception survey (TMPL-GOV-001)
+
+### Run at Month 2
+
+The following artifacts are not adopted (they are templates or surveys), but they are run on a schedule starting at month 2 of adoption:
+
+- **Stakeholder perception survey ([`CERG-TMPL-GOV-001`](../templates/CERG-TMPL-GOV-001_Stakeholder_Perception_Survey.md))** — administer the first survey at month 2 (after one full cadence cycle), then annually. Per [`CERG-GOV-SLC-001`](../governance/CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md), the annual-only cadence is intentionally paired with monthly Service Responsiveness metrics (SR-001 through SR-005 in [`CERG-GOV-MTR-001`](../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md)) so friction is caught continuously, not only once a year.
 
 ### Never Adopt Blindly
 

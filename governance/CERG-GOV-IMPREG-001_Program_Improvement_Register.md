@@ -182,6 +182,8 @@ When an improvement is approved that will reduce a class of risk, the risk regis
 | **GOV-TRC-001** (Traceability) | When an improvement amends a control, the traceability matrix is updated to reflect the new or changed control-to-procedure mapping. |
 | **GOV-CAT-001** (Catalog) | When an improvement creates, amends, or retires an artifact, the catalog is amended. |
 | **GOV-RAC-001** (RACI) | When an improvement changes ownership or accountability, the RACI instrument is updated. |
+| **TMPL-GOV-001** (Stakeholder Perception Survey) | Survey results are an intake source. A mean Likert score below 3.0, a recurring open-ended theme across "START doing" and "STOP doing," or a year-over-year decline of 0.5 points or more triggers a perception-survey-driven improvement entry with source "Stakeholder Perception Survey YYYY." |
+| **GOV-SLC-001** (Service-Level Commitments) | Each monthly Service Responsiveness metric (SR-001 through SR-005) that breaches its target becomes an improvement candidate. The annual perception survey is the qualitative companion to these continuous quantitative measures. |
 
 ---
 
