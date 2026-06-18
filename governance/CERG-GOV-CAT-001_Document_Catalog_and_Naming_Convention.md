@@ -430,6 +430,17 @@ Key artifacts include:
 - `cerg-record-schemas.yaml` — Core operational record schemas
 - Companion schema files for runtime model, evidence, metrics, crown jewels, vulnerability priority, IR interface, vendor kill switch, identity, segmentation, AI intake, workforce capacity, and decision logging
 
+### 5.9 Examples
+
+The `examples/` directory contains narrative walkthroughs and adoption profiles. These are not authoritative documents and do not appear in the V1 catalog. They show how V1 artifacts are used together during real work, and they are the recommended first stop for leaders and SMEs trying to understand how the program operates.
+
+| Example | Purpose | Format |
+|---|---|---|
+| `examples/day-in-the-life/README.md` | Seven narrative walkthroughs of how the three pillars produce outcomes together (intake, vulnerability, audit, cloud launch, access review, third-party incident, AI rollout) | Markdown stories with step tables and operational output lists |
+| `examples/regulated-utility-profile/` | A filled-in sample of [CERG-GOV-VAR-001](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) for a regulated utility sector organization | Adapted profile |
+
+Examples are illustrative, not normative. They may be updated outside the V1 review cycle and may reference planned V1.x documents with explicit `(Planned)` markers.
+
 ## 6. Cross-Reference Rules
 
 These rules govern every "Related Documents" table, every footnote reference, and every link in a CERG artifact.
