@@ -20,7 +20,7 @@ CERG is open source (CC BY 4.0) and contributions are welcome. This document exp
 
 2. **Check the catalog.** Every document has a `CERG-TYPE-DOMAIN-NNN` ID registered in [CAT-001](governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md). New documents need a new domain code registered in §2.1 before the catalog row is added in §5.
 
-3. **Understand the conventions.** Read [STY-001](governance/CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md) (metadata tables, section numbering, no em dashes in prose). Read the [CERG framework skill](https://github.com/m0dernz/CERG/blob/main/.hermes/skills/cerg-framework/SKILL.md) for editing pitfalls — especially the `patch` tool collision with `---` separators.
+3. **Understand the conventions.** Read [STY-001](governance/CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md) (metadata tables, section numbering, no em dashes in prose). See [AGENTS.md](AGENTS.md) for editing pitfalls — especially the `patch` tool collision with `---` separators.
 
 ## How to submit changes
 
