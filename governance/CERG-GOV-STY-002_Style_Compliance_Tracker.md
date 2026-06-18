@@ -146,3 +146,41 @@ The following contradictions existed in the corpus at the time of the June 2026 
 | Documents missing Document Control section | 5 (7%) — tracked above |
 | Documents using non-standard metadata format | 5 (7%) — tracked above |
 | Documents created 2026-06-11 needing style review | 34 (all in roles/) |
+
+---
+
+## Document Control
+
+| | |
+|---|---|
+| **Document ID** | CERG-GOV-STY-002 |
+| **Version** | 1.01 |
+| **Status** | Approved |
+| **Classification** | Public |
+| **Owner** | Governance Pillar Leader (Document Control) |
+| **Approved By** | CISO |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Review Cycle** | Quarterly |
+| **Next Scheduled Review** | 2026-09-17 |
+| **Frameworks** | NIST CSF 2.0 |
+| **Regulations** | Cross-cutting |
+| **Environments** | All CERG-managed documentation |
+
+### Revision History
+
+| **Version** | **Date** | **Author** | **Change Summary** |
+|---|---|---|---|
+| 1.01 | 2026-06-17 | Governance Pillar Leader | Added Document Control section. |
+
+### Review Triggers
+
+- Quarterly review cycle
+- New document added to corpus
+- Style guide (STY-001) updated
+
+### Related Documents
+
+| **Document** | **ID** | **Relationship** |
+|---|---|---|
+| Document Authoring and Style Guide | [CERG-GOV-STY-001](CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md) | Parent style guide |
+| Document Catalog | [CERG-GOV-CAT-001](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Catalog reference |

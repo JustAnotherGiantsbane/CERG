@@ -380,7 +380,7 @@ When CIP-015 becomes applicable, Governance updates this package, the OT standar
 | | |
 |---|---|
 | **Document ID** | CERG-PLN-CIP-001 |
-| **Version** | 1.0 |
+| **Version** | 1.21 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / on CIP version or filing change |
 | **Change Log** | 1.0 - Initial publication. Evidence library, OT VM, BES access, deviation template, IT/OT convergence guideline, categorization, ESP/EAP, CIP-013, CIP-009, CIP-015 forward-looking. |

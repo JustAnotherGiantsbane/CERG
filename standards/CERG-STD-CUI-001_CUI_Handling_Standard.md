@@ -349,6 +349,15 @@ CUI control deficiencies do not follow the ordinary exception process. Open defi
 
 ## 12. Document Control
 
+| | |
+|---|---|
+| **Document ID** | CERG-STD-CUI-001 |
+| **Version** | 1.21 |
+| **Approved By** | CISO |
+| **Next Review** | Annual / Upon Significant Change / NIST 800-171 Revision |
+| **Change Log** | 1.0 - Initial publication. NIST 800-171r3, DFARS 252.204-7012, CMMC Level 2. |
+
+
 ### Revision History
 
 | **Version** | **Date** | **Author** | **Change Summary** |

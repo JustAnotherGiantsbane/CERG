@@ -314,6 +314,15 @@ No control in this standard may be waived without a documented exception. Except
 
 ## 12. Document Control
 
+| | |
+|---|---|
+| **Document ID** | CERG-STD-OT-001 |
+| **Version** | 1.21 |
+| **Approved By** | CISO |
+| **Next Review** | Annual / Upon Significant Change / CIP Standard Revision |
+| **Change Log** | 1.0 - Initial publication. BES and non-BES OT environments. |
+
+
 ### Revision History
 
 | **Version** | **Date** | **Author** | **Change Summary** |
