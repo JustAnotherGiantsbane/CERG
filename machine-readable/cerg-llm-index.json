@@ -2,12 +2,12 @@
   "cerg_version": "1.41",
   "generated": "2026-06-18",
   "source": "local markdown corpus",
-  "total_documents": 142,
-  "total_tokens_estimate": 896042,
+  "total_documents": 143,
+  "total_tokens_estimate": 899842,
   "by_type": {
     "readme": 14,
     "governance-instrument": 39,
-    "meta": 3,
+    "meta": 4,
     "policy": 1,
     "standard": 15,
     "procedure": 12,
@@ -65,7 +65,7 @@
     "META": {
       "type": "Repository Metadata",
       "pillar": "cross-cutting",
-      "count": 17
+      "count": 18
     }
   },
   "prefixes": {
@@ -247,8 +247,8 @@
         2204
       ],
       "lines_count": 657,
-      "chars": 57474,
-      "tokens": 16421,
+      "chars": 57504,
+      "tokens": 16430,
       "summary": "CERG GOV document: Document Catalog and Naming Convention"
     },
     {
@@ -2744,11 +2744,11 @@
       "path": "examples/day-in-the-life/README.md",
       "lines": [
         41657,
-        42049
+        42050
       ],
-      "lines_count": 392,
-      "chars": 33842,
-      "tokens": 9669,
+      "lines_count": 393,
+      "chars": 33973,
+      "tokens": 9707,
       "summary": "CERG META document: README"
     },
     {
@@ -2763,13 +2763,33 @@
       "owner": null,
       "path": "examples/day-in-the-life/story-8-cerg-lite-maria.md",
       "lines": [
-        42051,
-        42147
+        42052,
+        42148
       ],
       "lines_count": 96,
       "chars": 11884,
       "tokens": 3395,
       "summary": "CERG META document: story-8-cerg-lite-maria"
+    },
+    {
+      "id": "story-9-f-01-control-intent",
+      "prefix": "META",
+      "title": "story-9-f-01-control-intent",
+      "type": "meta",
+      "pillar": "cross-cutting",
+      "status": null,
+      "version": null,
+      "classification": null,
+      "owner": null,
+      "path": "examples/day-in-the-life/story-9-f-01-control-intent.md",
+      "lines": [
+        42150,
+        42262
+      ],
+      "lines_count": 112,
+      "chars": 13135,
+      "tokens": 3753,
+      "summary": "CERG META document: story-9-f-01-control-intent"
     },
     {
       "id": "README-examples-regulated-utility-profile",
@@ -2783,8 +2803,8 @@
       "owner": null,
       "path": "examples/regulated-utility-profile/README.md",
       "lines": [
-        42149,
-        42211
+        42264,
+        42326
       ],
       "lines_count": 62,
       "chars": 3913,
@@ -2803,8 +2823,8 @@
       "owner": null,
       "path": "ADOPT-WITH-AN-AGENT.md",
       "lines": [
-        42213,
-        42297
+        42328,
+        42412
       ],
       "lines_count": 84,
       "chars": 4310,
@@ -2823,8 +2843,8 @@
       "owner": null,
       "path": "BEGINNER-GUIDE.md",
       "lines": [
-        42299,
-        42402
+        42414,
+        42517
       ],
       "lines_count": 103,
       "chars": 3835,
@@ -2843,8 +2863,8 @@
       "owner": null,
       "path": "CODE_OF_CONDUCT.md",
       "lines": [
-        42404,
-        42442
+        42519,
+        42557
       ],
       "lines_count": 38,
       "chars": 2023,
@@ -2863,8 +2883,8 @@
       "owner": null,
       "path": "CONTRIBUTING.md",
       "lines": [
-        42444,
-        42492
+        42559,
+        42607
       ],
       "lines_count": 48,
       "chars": 3708,
@@ -2883,8 +2903,8 @@
       "owner": null,
       "path": "SECURITY.md",
       "lines": [
-        42494,
-        42509
+        42609,
+        42624
       ],
       "lines_count": 15,
       "chars": 839,
@@ -2903,8 +2923,8 @@
       "owner": null,
       "path": "adoption-packs/cerg-lite/README.md",
       "lines": [
-        42511,
-        42589
+        42626,
+        42704
       ],
       "lines_count": 78,
       "chars": 3707,
@@ -2923,8 +2943,8 @@
       "owner": null,
       "path": "adoption-packs/cerg-lite/agent-prompt.md",
       "lines": [
-        42591,
-        42625
+        42706,
+        42740
       ],
       "lines_count": 34,
       "chars": 1516,
@@ -2943,8 +2963,8 @@
       "owner": null,
       "path": "tools/policy-as-code/README.md",
       "lines": [
-        42627,
-        42700
+        42742,
+        42815
       ],
       "lines_count": 73,
       "chars": 4153,

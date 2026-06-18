@@ -31,8 +31,9 @@ These stories are illustrative, not normative. They may reference documents or s
 | 6 | Third-party security incident notification | F-06 + F-04 | Vendor incidents and handoff to IR |
 | 7 | Enterprise AI assistant rollout | F-02 | AI standard application and controlled pilot pattern |
 | 8 | [CERG Lite - Maria and the Tuesday scanner report](story-8-cerg-lite-maria.md) | F-04 | Small-team MVC operations and exposure triage |
+| 9 | [F-01 Control Intent - when the regulator changes the rule](story-9-f-01-control-intent.md) | F-01 | Translating regulatory change into implementation work |
 
-Stories 9 and 10 (F-01 Control Intent and the new CISO's first 90 days) are planned examples and are not yet published.
+Story 10 (the new CISO's first 90 days) is a planned example and is not yet published.
 
 ---
 
