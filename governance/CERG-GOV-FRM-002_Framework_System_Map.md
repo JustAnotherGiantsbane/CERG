@@ -181,6 +181,7 @@ Story 8 ([CERG Lite - Maria and the Tuesday scanner report](../examples/day-in-t
 | Show how CERG runs in practice | [Day in the Life examples](../examples/day-in-the-life/README.md) | [FLOW-001](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md), [OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) |
 | Onboard a new team member | [Day in the Life examples](../examples/day-in-the-life/README.md), [ONB-001](CERG-GOV-ONB-001_Onboarding_and_Integration_Program.md) | [RAC-001](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) |
 | Take on a CERG role for the first time | [Role Reader Paths](CERG-GOV-IMP-007_Role_Reader_Paths.md) | [IMP-006](CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md) (action list, after reading) |
+| Look up a CERG term or record type | [CERG Glossary](CERG-GOV-GEN-001_CERG_Glossary.md) | [FLOW-001 §2](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#2-operating-principles) (origin of record type definitions) |
 
 ---
 

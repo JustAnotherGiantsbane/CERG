@@ -1,5 +1,5 @@
 # CERG Publication Eligibility Manifest
-# Generated from document metadata | 126 artifacts
+# Generated from document metadata | 127 artifacts
 # Separates lifecycle approval from public-release eligibility
 
 - document_id: CERG-GOV-AUD-001
@@ -165,6 +165,17 @@
   full_text_public_allowed: true
   redaction_required: false
   approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-18
+
+- document_id: CERG-GOV-GEN-001
+  source_path: governance/CERG-GOV-GEN-001_CERG_Glossary.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Governance Pillar Leader (Document Control)'
   release_date: 2026-06-18
 
 - document_id: CERG-GOV-IMP-001
