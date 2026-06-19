@@ -1,17 +1,17 @@
 ## RISK ACCEPTANCE MEMO TEMPLATE
-### Decision Record · Residual Risk · Business Rationale · Conditions · Expiration
+### Supporting Memo · Residual Risk · Business Rationale · Conditions · Expiration
 
 ---
 
 | | |
 |---|---|
 | **Document ID** | CERG-TMPL-RM-003 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
 | **Parent Document** | [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) - Risk Register and Exception Process |
-| **Supporting Documents** | [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) · [`CERG-TMPL-RM-002`](CERG-TMPL-RM-002_Security_Exception_Request_Form.md) |
+| **Supporting Documents** | [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) · [`CERG-TMPL-RM-001`](CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) · [`CERG-TMPL-RM-004`](CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md) |
 | **Review Cycle** | Annual / On process or control change |
 | **Frameworks** | NIST 800-30r1 · NIST 800-39 · ISO 31000 |
 | **Regulations** | Cross-cutting |
@@ -31,22 +31,22 @@
 
 ## 1. Purpose and Use
 
-This memo records an explicit risk acceptance decision. It is used when leadership chooses to accept residual risk rather than mitigate, transfer, or avoid it immediately. The completed memo must link to the risk register and must not replace the register entry.
+This memo is a lightweight supporting artifact for a risk acceptance decision governed by [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 and submitted through [`CERG-TMPL-RM-004`](CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md). It may summarize rationale, conditions, and review triggers, but it does not create a separate acceptance path. The completed memo must attach to the Risk Acceptance Request Form, link to the risk register, and must not replace either artifact.
 
 > **Acceptance Is a Decision, Not an Absence of Action**
 >
-> Risk is not accepted because nobody fixed it. Risk is accepted only when the right authority understands the scenario, impact, residual exposure, conditions, expiration, and alternatives, then records the decision.
+> Risk is not accepted because nobody fixed it. Risk is accepted only when the right authority understands the scenario, impact, residual exposure, conditions, expiration, and alternatives, then records the decision. The Business Owner accepts the business consequence; Security assesses and recommends but does not accept business risk.
 
 ---
 
 ## 2. Template Instructions
 
-1. Copy this template before use.
+1. Use this memo only as an attachment or supporting decision narrative for [`CERG-TMPL-RM-004`](CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md).
 2. Replace every bracketed field with case-specific information.
 3. Do not delete fields that appear not applicable. Mark them `Not Applicable` and explain why.
-4. Use canonical CERG role names from `CERG-GOV-OM-001`.
+4. Use canonical CERG role names from `CERG-GOV-OM-001` and approval authority from `CERG-GOV-RMF-001` §9.7.
 5. Link risks, findings, exceptions, evidence, and approvals to the system of record.
-6. Store the completed artifact in the evidence library governed by `CERG-PRC-AUD-001`.
+6. Store the completed artifact with the completed Risk Acceptance Request Form and risk-register entry in the evidence library governed by `CERG-PRC-AUD-001`.
 
 ---
 
@@ -60,6 +60,7 @@ This memo records an explicit risk acceptance decision. It is used when leadersh
 | Risk ID | `[Risk ID]` |
 | Risk Statement | `[Because of..., affecting..., there is a possibility that..., resulting in...]` |
 | Requesting Owner | `[Owner]` |
+| Business Owner / Risk Owner | `[Name and role accepting business consequence]` |
 | Affected Assets / Processes | `[Scope]` |
 | Regulatory Scope | `[CUI / SOX / CIP / privacy / none]` |
 | Residual Risk Rating | `[Low / Medium / High / Critical]` |
@@ -94,14 +95,17 @@ This memo records an explicit risk acceptance decision. It is used when leadersh
 
 ## 4. Review and Approval
 
+Approval authority follows [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 and is recorded on [`CERG-TMPL-RM-004`](CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md). This memo is not valid unless the required `TMPL-RM-004` approvals are complete.
+
 | **Reviewer / Approver** | **Review Meaning** | **Name / Date** |
 |---|---|---|
 | Risk Register Owner | Confirms register entry, scoring, and linkage. | `[Name / Date]` |
-| Risk Pillar Leader | Approves within delegated authority. | `[Name / Date]` |
-| Chief Information Security Officer (CISO) | Approves High or Critical acceptance where required. | `[Name / Date]` |
-| Executive Sponsor | Provides business concurrence for Critical risk where required. | `[Name / Date]` |
+| Risk Pillar Leader | Confirms risk assessment methodology and recommendation. | `[Name / Date]` |
+| Business Owner | Accepts the business consequence of residual risk. Required for every Low, Medium, or High acceptance. | `[Name / Date]` |
+| Chief Information Security Officer (CISO) | Approves High and Critical acceptance where required by RMF-001 §9.7. | `[Name / Date]` |
+| Executive Sponsor | Accepts the business consequence for Critical risk where required by RMF-001 §9.7. | `[Name / Date]` |
 
-Completed templates are reviewed at the cadence defined by their parent procedure or plan. Material changes require a new review.
+Completed templates are reviewed at the cadence defined by their parent procedure or plan. Material changes require a new review through `TMPL-RM-004`.
 
 ---
 
@@ -110,7 +114,7 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-TMPL-RM-003 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
@@ -127,6 +131,7 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-06-18 | Governance Pillar Leader | Recast this memo as a supporting attachment to TMPL-RM-004 and RMF-001 §9.7, added Business Owner / Executive Sponsor acceptance language, and removed standalone acceptance authority. |
 | 1.0 Draft | 2026-05-22 | Cyber Governance | Initial release. Establishes a standalone fill-in template for risk acceptance memo template. |
 
 ### Review Triggers
@@ -141,3 +146,5 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 | **Document** | **ID** | **Relationship** |
 |---|---|---|
 | Risk Register and Exception Process | [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Governing risk acceptance lifecycle |
+| Risk Acceptance Request Form | [`CERG-TMPL-RM-004`](CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md) | Required acceptance form; this memo may attach as support |
+| Risk Management Framework | [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) | Canonical scoring and acceptance authority (§9.5 and §9.7) |
