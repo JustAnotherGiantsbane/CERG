@@ -316,28 +316,29 @@ Supporting procedures and standards:
 
 | Step | What happens | Primary owner | Record or evidence |
 |------|--------------|---------------|--------------------|
-| 1 | Vendor notification is received and triaged for affected services, data, dates, and contract obligations. | Risk Pillar | Third-party incident record |
-| 2 | Engineering identifies integrations, disables risky transfer paths if needed, rotates credentials, and preserves logs. | Engineering Pillar | Containment and log evidence |
-| 3 | Governance confirms notification obligations, evidence requirements, decision logging, and executive reporting cadence. | Governance Pillar | Decision log and evidence index |
-| 4 | Risk coordinates vendor questions, exposure analysis, and whether the event becomes an internal incident. | Risk Pillar | Incident Record or Risk Record |
-| 5 | Engineering implements technical recovery actions, such as credential rotation, endpoint validation, and alternate transfer process. | Engineering Pillar | Change or recovery records |
-| 6 | Governance tracks open actions, customer or regulator evidence needs, and metrics for third-party incident response. | Governance Pillar | Reporting Metric Record |
-| 7 | Lessons learned update vendor requirements, contract clauses, monitoring expectations, or exit criteria. | Risk Pillar | Improvement Record |
+| 1 | Vendor notification is received and triaged for affected services, data, dates, and contract obligations. | Risk Pillar / Vendor Risk Analyst | Third-party incident triage record |
+| 2 | The Incident Commander determines whether to declare an internal incident, assigns severity if needed, and sets the next decision time. | Incident Commander / Standing IR Team | IR-owned Incident Record or documented no-declaration rationale |
+| 3 | Engineering identifies integrations, disables risky transfer paths if approved by the IC, rotates credentials, and preserves logs. | Engineering Pillar | Containment and log evidence |
+| 4 | Governance supplies evidence requirements, regulatory mapping support, and decision-log indexing to the IC / Legal process. | Governance Pillar | CERG evidence index and support log |
+| 5 | Risk coordinates vendor questions, exposure analysis, and residual third-party risk. | Risk Pillar | Vendor Risk Record or Risk Record |
+| 6 | Engineering implements technical recovery actions, such as credential rotation, endpoint validation, and alternate transfer process. | Engineering Pillar | Change or recovery records |
+| 7 | Governance tracks CERG support actions, customer or regulator evidence needs, and metrics for third-party incident response. | Governance Pillar | Reporting Metric Record |
+| 8 | Lessons learned update vendor requirements, contract clauses, monitoring expectations, or exit criteria. | Risk Pillar | Improvement Record |
 
 ### Example day-in-the-life narrative
 
-The vendor notice arrives at 4:30 p.m. Risk opens the triage record and asks three questions immediately: what data types were exchanged, what dates are in scope, and what indicators or logs are available. Engineering identifies the integration owner, pauses scheduled transfers, rotates API credentials, and preserves local transfer logs.
+The vendor notice arrives at 4:30 p.m. Risk opens the triage record and asks three questions immediately: what data types were exchanged, what dates are in scope, and what indicators or logs are available. Because customer operational reports may be involved, Risk notifies the Incident Commander. The IC does not delegate the incident decision to CERG; the IC determines whether this is an internal incident, names the next decision time, and tells CERG what support is needed.
 
-Governance starts the decision log and confirms who will approve customer communications if data exposure is confirmed. The CISO receives a short status summary with known facts, unknowns, next decision time, and current containment actions. Risk pushes the vendor for file-level access evidence and maps the scenario to the vendor risk record.
+Engineering identifies the integration owner, pauses scheduled transfers after IC approval, rotates API credentials, and preserves local transfer logs. Governance opens the CERG evidence/support log, maps possible notification obligations for Legal and the IC, and records who will approve customer communications if data exposure is confirmed. The CISO receives a short status summary with known facts, unknowns, next decision time, and current containment actions. Risk pushes the vendor for file-level access evidence and maps the scenario to the vendor risk record.
 
-The next morning, the vendor confirms that no organization files were accessed, but the vendor cannot meet the evidence quality the organization normally requires. Risk records residual third-party risk. Governance requires the evidence limitation to be visible in the file, not hidden in email. Engineering implements an alternate encrypted transfer path for the most sensitive reports until the vendor completes remediation.
+The next morning, the vendor confirms that no organization files were accessed, and the IC documents that no internal incident declaration is required. The vendor still cannot meet the evidence quality the organization normally requires. Risk records residual third-party risk. Governance requires the evidence limitation to be visible in the file, not hidden in email. Engineering implements an alternate encrypted transfer path for the most sensitive reports until the vendor completes remediation.
 
 ### Operational outputs
 
-- Third-party incident triage and decision log created.
+- Third-party incident triage and IC declaration/no-declaration rationale recorded.
 - Integrations, credentials, and logs preserved or remediated.
 - Vendor risk record updated with incident facts and residual risk.
-- Governance evidence package prepared for executive, customer, or audit use.
+- Governance evidence package prepared for executive, customer, regulator, or audit use under IC / Legal direction.
 - Vendor standards and contract requirements updated if gaps are found.
 
 ---
