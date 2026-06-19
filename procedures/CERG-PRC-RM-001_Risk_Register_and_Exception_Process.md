@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-RM-001 |
-| **Version** | 1.01 |
+| **Version** | 1.03 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |
@@ -144,67 +144,49 @@ Risk statements are specific enough to support scoring. "We need better cloud se
 
 ### 4.2 Scoring Framework
 
-Risks are scored using a 5×5 matrix of **Likelihood** and **Impact**. The matrix produces a residual risk rating after considering controls in place. Inherent risk (controls hypothetically absent) is recorded but not the primary driver of treatment decisions.
+Risks are scored using the canonical 5×5 **Likelihood × Impact** model in [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.5. This procedure operationalizes that model; it does not define a separate scoring scale. If this procedure and RMF-001 differ, RMF-001 governs.
 
-#### Likelihood
+The matrix produces a residual risk rating after considering controls in place. Inherent risk (controls hypothetically absent) is recorded but not the primary driver of treatment decisions.
 
-| **Score** | **Label** | **Meaning** |
+#### Likelihood Summary
+
+| **Score** | **RMF Label** | **Operational Meaning** |
 |---|---|---|
-| 1 | Rare | Conceivable but no specific indicator. Outside common attack patterns for the organization. |
-| 2 | Unlikely | Occurs in the industry occasionally; no current indicator at the organization. |
-| 3 | Possible | Realistic given the threat landscape; mitigating controls reduce likelihood. |
-| 4 | Likely | Frequent in the industry; conditions present at the organization with limited mitigation. |
-| 5 | Almost Certain | Active or imminent; observed indicators or active exploitation; minimal current mitigation. |
+| 1 | Very Low | No specific indicator; outside common attack or failure patterns for the organization. |
+| 2 | Low | Occurs in the industry occasionally; no current indicator at the organization. |
+| 3 | Medium | Realistic given the threat landscape; mitigating controls reduce likelihood. |
+| 4 | High | Frequent in the industry; conditions present at the organization with limited mitigation. |
+| 5 | Very High | Active or imminent; observed indicators, active exploitation, or minimal current mitigation. |
 
-#### Impact
+#### Impact Summary
 
-| **Score** | **Label** | **Meaning (any one criterion qualifies)** |
+| **Score** | **RMF Label** | **Operational Meaning** |
 |---|---|---|
 | 1 | Negligible | No regulatory, customer, financial, or operational impact beyond routine response. |
 | 2 | Minor | Limited operational disruption or remediation cost; no regulatory or customer-visible impact. |
-| 3 | Moderate | Material remediation effort or modest customer impact; localized regulatory finding without breach. |
-| 4 | Major | Significant regulatory exposure (CIP, CUI, breach-law notification), material customer impact, or significant operational disruption (Tier 1 systems). |
-| 5 | Critical | Material business / financial impact; broad customer harm; regulatory enforcement; safety or reliability consequence; SEC-disclosable. |
+| 3 | Medium | Material remediation effort, leadership-reportable loss, or limited reputation impact. |
+| 4 | Major | Significant regulatory exposure, material customer impact, Tier 1 disruption, or significant reputation damage. |
+| 5 | Catastrophic | Material business / financial impact, broad customer harm, regulatory enforcement, safety or reliability consequence, or SEC-disclosable impact. |
 
 #### Rating Bands
 
 | **Score Product** | **Rating** | **Default Treatment Expectation** |
 |---|---|---|
-| 1 | **Informational** | Track for trend analysis; no formal acceptance required. |
-| 2–5 | **Low** | Track; treat as resources allow. |
-| 6–11 | **Medium** | Treat within a defined plan; review at standing cadence. |
-| 12–19 | **High** | Treat with priority; acceptance requires CISO + Business Owner approval. |
-| 20–25 | **Critical** | Immediate treatment required; acceptance requires CISO + Executive Sponsor approval and board notification. |
+| 1 | **Informational** | Track for trend analysis; no formal acceptance required unless another obligation requires it. |
+| 2–5 | **Low** | Track; treat as resources allow; acceptance follows RMF-001 §9.7. |
+| 6–11 | **Medium** | Treat within a defined plan; review at standing cadence; acceptance follows RMF-001 §9.7. |
+| 12–19 | **High** | Treat with priority; acceptance follows RMF-001 §9.7 and requires CISO + Business Owner approval. |
+| 20–25 | **Critical** | Immediate treatment required; acceptance follows RMF-001 §9.7 and requires CISO + Executive Sponsor approval plus board notification. |
 
 ### 4.3 Quantitative Calibration Guide
 
-The qualitative labels in the 5×5 matrix are calibrated against quantitative anchors to promote scoring consistency.
-
-#### Likelihood Calibration (Annualized Probability)
-
-| **Score** | **Label** | **Annual Probability** | **Expected Frequency** |
-|---|---|---|---|
-| 1 | Rare | < 5% | Less than once every 20 years |
-| 2 | Unlikely | 5–20% | Once every 5–20 years |
-| 3 | Possible | 20–50% | Once every 2–5 years |
-| 4 | Likely | 50–90% | Once every 1–2 years |
-| 5 | Almost Certain | > 90% | More than once per year |
-
-#### Impact Calibration (Financial Equivalent)
-
-| **Score** | **Label** | **Financial Impact** | **Non-Financial Equivalent** |
-|---|---|---|---|
-| 1 | Negligible | < $50K | No regulatory, customer, or operational impact beyond routine response |
-| 2 | Minor | $50K–$250K | Limited operational disruption; no regulatory or customer-visible impact |
-| 3 | Moderate | $250K–$1M | Material remediation effort or modest customer impact; localized regulatory finding |
-| 4 | Major | $1M–$10M | Significant regulatory exposure (CIP, CUI, breach notification), material customer impact, Tier 1 system disruption |
-| 5 | Critical | > $10M or regulatory enforcement | Material business/financial impact; broad customer harm; safety or reliability consequence; SEC-disclosable |
+Quantitative calibration is maintained in [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.5 and §12. Local revenue, insurance, downtime, regulatory, and safety thresholds may be calibrated there, but calibrated thresholds do not override the acceptance authority in RMF-001 §9.7.
 
 #### Using Calibration in Scoring Discussions
 
 The calibration table is a coordination tool, not a precise calculator. When two analysts reach different scores:
-1. Each states their rationale in terms of likelihood (what is the annual probability?) and impact (what is the estimated financial or operational consequence?).
-2. The Governance Lead facilitates the discussion toward the better-supported score.
+1. Each states their rationale in terms of likelihood (what is the annualized frequency?) and impact (what is the estimated financial, operational, regulatory, safety, or customer consequence?).
+2. The Governance Lead facilitates the discussion toward the better-supported score using RMF-001 §9.5.
 3. If disagreement persists, the higher score is used and the rationale for both scores is recorded.
 
 The goal is not perfect precision - it is consistent conversation that produces comparable risk rankings across the register.
@@ -228,7 +210,7 @@ Each risk has one of four treatment decisions. Treatment is decided by the risk 
 | **Reduce (Mitigate)** | Implement or strengthen controls to reduce likelihood, impact, or both. The default treatment for most risks. | Almost always preferred where feasible and timely. |
 | **Transfer** | Shift the financial or operational consequence to a third party (insurance, contractual indemnity, managed service). | When transfer is economically and operationally rational; not a substitute for treatment of the underlying technical risk. |
 | **Avoid** | Cease or decline the activity producing the risk. | When the activity is not essential or when residual risk is unacceptable under any treatment. |
-| **Accept** | Acknowledge the risk and proceed without further action beyond monitoring. | When the cost or operational impact of treatment exceeds the residual risk, and the residual is within the organization's tolerance. |
+| **Accept** | Acknowledge the residual risk under documented conditions, owner accountability, expiration/review cadence, and monitoring. | When the cost or operational impact of treatment exceeds the residual risk, the residual is within the organization's tolerance, and the Business Owner or Executive Sponsor accepts the consequence under RMF-001 §9.7. |
 
 ### 5.1 Treatment Plan Elements
 
@@ -245,8 +227,8 @@ Every treatment decision records:
 
 | **Form** | **Description** |
 |---|---|
-| **Permanent acceptance** | The residual risk is permanently within tolerance; no further treatment is planned. Permanent acceptance still requires periodic re-review and remains in the register. |
-| **Time-bound acceptance** | The risk is accepted for a defined window during which compensating controls operate; treatment is expected to occur within the window. This is the predominant form of acceptance for control deficiencies awaiting remediation. |
+| **Standing acceptance** | The residual risk is within tolerance for an ongoing activity. Standing acceptance still requires a named Business Owner, periodic re-review, and a register entry; it is not irrevocable or ownerless. |
+| **Time-bound acceptance** | The risk is accepted for a defined window during which compensating controls operate; treatment is expected to occur within the window. This is the predominant form of acceptance for control deficiencies awaiting remediation. Duration cannot exceed RMF-001 §9.7 or any shorter applicable regulatory/procedure limit. |
 
 ---
 
@@ -344,7 +326,7 @@ An exception is required whenever a system, person, or process intentionally dev
 | 3 | Risk assesses likelihood and impact of the residual risk; provides a written risk finding. | Risk |
 | 4 | Governance applies the approval matrix (Section 8); routes for approval. Business owner approval is required for any exception carrying residual risk above Low. | Governance |
 | 5 | Approver decides: approve, approve with conditions, deny, or return for additional information. | Approver |
-| 6 | Approved exception is entered into the risk register as a linked acceptance entry; compensating controls are tracked. | Governance |
+| 6 | Approved exception is entered into the exception register and linked to the risk register when residual exposure exists; compensating controls are tracked. | Governance |
 | 7 | At expiration, the exception is re-evaluated. Renewal requires a new approval cycle. Renewals shall not be granted by default. | Governance |
 
 ### 7.4 Exception Discipline
@@ -366,7 +348,7 @@ Every exception carries an expiration date. The following warning chain ensures 
 | **Post-expiration (Day 0)** | Auto-create Finding Record (severity: High); flag affected control as "gap open"; the exception is no longer valid | Risk Register Owner |
 | **Post-expiration (Day 5)** | If no disposition: escalate to CISO | Governance Pillar Leader |
 
-An exception renewed more than twice without material progress toward remediation escalates one approval tier above the original approver (per RMF-001 §9.7). The renewal justification must document what has changed since the previous acceptance and what prevents closure.
+An exception renewed more than twice without material progress toward remediation escalates one approval tier above the original approver. If the renewal also accepts residual risk, the approval path follows RMF-001 §9.7. The renewal justification must document what has changed since the previous approval and what prevents closure.
 
 ### 7.5 Regulatory Overlays
 
@@ -387,7 +369,7 @@ The following templates shall be used for all exception and acceptance requests.
 
 **For Risk Acceptances** (Business Owner accepts residual risk, per-RMF-001 authority): use [`CERG-TMPL-RM-004`](../templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md) — Risk Acceptance Request Form.
 
-The Security Exception Request Form (TMPL-RM-002) template is reproduced below for reference. The Risk Acceptance Request Form (TMPL-RM-004) is a separate artifact.
+The Security Exception Request Form (TMPL-RM-002) template is reproduced below for reference. The Risk Acceptance Request Form (TMPL-RM-004) is a separate artifact. [`CERG-TMPL-RM-003`](../templates/CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md) may be attached as a lightweight memo, but it does not replace TMPL-RM-004 or RMF-001 §9.7 approval authority.
 
 ```
 EXCEPTION REQUEST FORM - EXC-YYYY-NNNN
@@ -460,7 +442,7 @@ Risk treatment decisions require documented approval from the authority matching
 
 | **Risk Rating / Treatment** | **Security Role** | **Business Role** | **Approval** |
 |---|---|---|---|
-| Low risk – Accept or exception | Governance: confirms procedural exception; Risk: confirms low residual risk if needed | Business Owner: owns local decision | Business Owner + Risk Register Owner |
+| Low risk – Accept or exception | Governance: confirms procedural exception; Risk: confirms low residual risk if needed | Business Owner: owns local consequence | Business Owner + Risk Register Owner |
 | Medium risk – Reduce / Transfer / Avoid | Risk: performs risk assessment; Engineering: validates treatment plan | Business Owner: signs off on treatment | Risk or Engineering Pillar Leader |
 | Medium risk – Accept | Risk: performs risk assessment; Governance: documents conditions | Business Owner: accepts residual risk | Business Owner + Pillar Leader or Governance Pillar Leader |
 | High risk – Accept | Risk: signs finding; Governance: structures package | Business Owner: accepts business consequence | CISO + Business Owner |
@@ -468,7 +450,7 @@ Risk treatment decisions require documented approval from the authority matching
 | Any exception affecting BES Cyber Systems | As above per severity | As above | As above + NERC-CIP deviation process |
 | Any exception affecting CUI environment posture | As above per severity | As above | As above + POA&M entry |
 | Any exception affecting [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC | As above per severity | As above | As above + CFO designee notification or approval where required by SOX governance |
-| Emergency exception (operational necessity) | Risk Pillar Leader or Engineering Pillar Leader may authorize immediately | Business Owner notified within 24 hours | CISO must approve or deny post-hoc within 24 hours. If denied, the action must be reversed or mitigated, and the residual risk is logged to the risk register with the denial rationale. |
+| Emergency exception (operational necessity) | Risk Pillar Leader or Engineering Pillar Leader may authorize immediately to protect operations | Business Owner notified within 24 hours and required for any continuing residual-risk acceptance | CISO must approve or deny post-hoc within 24 hours. If denied, the action must be reversed or mitigated, and the residual risk is logged to the risk register with the denial rationale. Continuing acceptance follows RMF-001 §9.7. |
 
 Approvers may delegate within their authority but shall document the delegation. The CISO retains final authority for any risk-related decision. Acceptance of residual risk at any tier follows the canonical authority table in [CERG-GOV-RMF-001](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. The business owner accepts the business risk — security does not accept business risk. No acceptance expires automatically; every acceptance at every tier requires a fresh approval cycle at expiration.
 
@@ -561,7 +543,7 @@ The register is not a parallel system to these programs. It is the connective ti
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-RM-001 |
-| **Version** | 1.01 |
+| **Version** | 1.03 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |
@@ -578,6 +560,7 @@ The register is not a parallel system to these programs. It is the connective ti
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.03 | 2026-06-18 | Governance Pillar Leader | Made RMF-001 the explicit source of truth for scoring and acceptance authority, removed competing local calibration thresholds, clarified Business Owner consequence acceptance, and constrained TMPL-RM-003 to a supporting memo role. |
 | 1.02 | 2026-06-18 | Governance Pillar Leader | Added §7.1 Exception vs. Risk Acceptance routing table distinguishing Security Exception (→TMPL-RM-002, Governance-tracked) from Risk Acceptance (→TMPL-RM-004, Business Owner + RMF-001 authority). Renumbered subsequent subsections. Updated §7.6 template references. |
 | 1.01 | 2026-06-14 | Governance Pillar Leader | Aligned scoring bands, approval summaries, and duration guidance to the canonical RMF authority table. |
 | 1.0 | 2026-05-01 | CERG Governance | Initial release |
