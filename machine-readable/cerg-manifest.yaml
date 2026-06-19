@@ -1,6 +1,6 @@
 # cerg-manifest.yaml
 # DERIVED ARTIFACT — authoritative source is the CERG markdown corpus
-# Generated: 2026-06-18 | Owner: Governance Pillar Leader (Document Control)
+# Generated: 2026-06-19 | Owner: Governance Pillar Leader (Document Control)
 # Regenerate on any change to source documents
 # See METADATA.yaml for full governance information
 
@@ -248,7 +248,7 @@
   title: Cross-Pillar Operational Flows
   document_type: governance_instrument
   domain: FLOW
-  version: 1.1
+  version: 1.3
   status: Approved
   classification: Public
   publication_profile: public
@@ -257,7 +257,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md
   source_file: CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md
-  source_hash: 97479d896a51f48aca255dda495297dacb172bb91381b215ac900f15e32d62fe
+  source_hash: 04e665920ed924747ead6d2b93ec5ab7a8fe0c8e1c16dfdfc5faccdc532e5803
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md
   llm_include: true
   llm_priority: medium
@@ -648,7 +648,7 @@
   title: Risk Management Framework
   document_type: governance_instrument
   domain: RMF
-  version: 1.31
+  version: 1.33
   status: Approved
   classification: Public
   publication_profile: public
@@ -657,7 +657,7 @@
   parent_artifact: 'CERG-POL-001 — CERG Cybersecurity Policy'
   source_path: governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
   source_file: CERG-GOV-RMF-001_Risk_Management_Framework.md
-  source_hash: 15ddb0fad6cc3b45f2c9dec3c1a3e73e9aa708d65ae8ca5c8de245ace510640a
+  source_hash: 3097963d97efaba7e326bec9f73a1b488f7a8d88c00ade8ade2db98eba0825a0
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
   llm_include: true
   llm_priority: high
@@ -928,7 +928,7 @@
   title: Incident Response Plan
   document_type: plan
   domain: IR
-  version: 1.21
+  version: 1.22
   status: External Interface
   classification: External Interface
   publication_profile: external_interface
@@ -937,7 +937,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: plans/CERG-PLN-IR-001_Incident_Response_Plan.md
   source_file: CERG-PLN-IR-001_Incident_Response_Plan.md
-  source_hash: cca3c410f3c0e5426288e2d1a689b4854c62fb61eae1c185b902a7c5871844cc
+  source_hash: a59af1edfdddee41caea7ce3f4b072a192ea86ca8709c2355d991ce5eaf1a86c
   canonical_url: https://github.com/m0dernz/CERG/blob/main/plans/CERG-PLN-IR-001_Incident_Response_Plan.md
   llm_include: false
   llm_priority: medium
@@ -1108,7 +1108,7 @@
   title: Incident Response Playbook Set
   document_type: procedure
   domain: IR
-  version: 1.0
+  version: 1.1
   status: External Interface
   classification: External Interface
   publication_profile: external_interface
@@ -1117,7 +1117,7 @@
   parent_artifact: 'Not applicable; adjacent-function artifact cross-referenced by CERG for integration'
   source_path: procedures/CERG-PRC-IR-002_Incident_Response_Playbook_Set.md
   source_file: CERG-PRC-IR-002_Incident_Response_Playbook_Set.md
-  source_hash: ce663a29bc87d8d63357e80932825cf6b6c08806440bbd78f30a90e39211b979
+  source_hash: dab91bb9b5ca2e1bc8a68fa81ddc2c11b24157676e8bd9a0fa3b80ff98842f89
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-IR-002_Incident_Response_Playbook_Set.md
   llm_include: false
   llm_priority: medium
@@ -1148,7 +1148,7 @@
   title: Risk Register and Exception Process
   document_type: procedure
   domain: RM
-  version: 1.01
+  version: 1.03
   status: Approved
   classification: Public
   publication_profile: public
@@ -1157,7 +1157,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
   source_file: CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
-  source_hash: 13d7be1ef40b08ba08294754c5c9a1c67b194eeb771fb0dfab2c704a55a09aef
+  source_hash: 41389293ae4e3b6c30533490c8f15192a5438b6c0c50b96a8de07dbcc3b0f098
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
   llm_include: true
   llm_priority: high
@@ -1648,7 +1648,7 @@
   title: Detection Engineer
   document_type: job_description
   domain: JD-RISKOPS
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -1657,7 +1657,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md
   source_file: CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md
-  source_hash: e52d60b9d6938d5ca7e11047a5320c6c0e42ceed549f242321486573d1b9259e
+  source_hash: 846e8a3be2c4c8783b2fa202fcef82529e771e439c4741052d91c8555df39d73
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md
   llm_include: true
   llm_priority: low
@@ -1708,7 +1708,7 @@
   title: Vendor Risk Analyst
   document_type: job_description
   domain: JD-RISKOPS
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -1717,7 +1717,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-007_Vendor_Risk_Analyst.md
   source_file: CERG-GOV-JD-RISKOPS-007_Vendor_Risk_Analyst.md
-  source_hash: 7d2b38e31552d8838195c1b9220a34fa94f63c1a8cca4d38e266acb06f79a8f9
+  source_hash: ec8cecb14f26b8588f7d17095af1e83343bea34503b59338be1f72cadbca8a3b
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-007_Vendor_Risk_Analyst.md
   llm_include: true
   llm_priority: low
@@ -2448,7 +2448,7 @@
   title: Risk Acceptance Memo Template
   document_type: template
   domain: RM
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -2457,7 +2457,7 @@
   parent_artifact: 'CERG-PRC-RM-001 — Risk Register and Exception Process'
   source_path: templates/CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md
   source_file: CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md
-  source_hash: 142ad6327ce2e1c8451efdc6f62b0d3ed71ea500e12350081a16654e8bc37fdd
+  source_hash: 0992b81718a36c2cc2e139e5408e7a100cd837e73af84c6ed95f037eabd638bd
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md
   llm_include: true
   llm_priority: medium
@@ -2468,7 +2468,7 @@
   title: Risk Acceptance Request Form
   document_type: template
   domain: RM
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -2477,7 +2477,7 @@
   parent_artifact: 'CERG-PRC-RM-001 — Risk Register and Exception Process'
   source_path: templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md
   source_file: CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md
-  source_hash: 0aba944d66c2a52abcbcb0295e7902f222f882003e0c17a303a959e1a2eb54c0
+  source_hash: 2d325a8311ea24e908abb1d8a33d2d2241238435c24199f6b8ee3ac24a95c16d
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md
   llm_include: true
   llm_priority: medium
