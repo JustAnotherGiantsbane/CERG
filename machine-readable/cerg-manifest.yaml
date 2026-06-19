@@ -768,7 +768,7 @@
   title: Control to Procedure Traceability Matrix
   document_type: governance_instrument
   domain: TRC
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -777,7 +777,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md
   source_file: CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md
-  source_hash: 66e477499822633f01f937c1b6e6a8aabbb60793567fa426eb1aa5af0671fd08
+  source_hash: 6890e81d1b2a469fab6dab2f1d4a4edee8352de9aecc92761bbf5890a99d4e04
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md
   llm_include: true
   llm_priority: medium
@@ -1008,7 +1008,7 @@
   title: Access Management Runbook
   document_type: procedure
   domain: AC
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -1017,7 +1017,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-AC-002_Access_Management_Runbook.md
   source_file: CERG-PRC-AC-002_Access_Management_Runbook.md
-  source_hash: 8d74287869af5a2c8cc54493fe7f9b015878582453fd28b33b7f1c1c3a032c78
+  source_hash: b947607bbf87de767b6a934e4712b2b11554453448ec10dcb46e14bb788bf1a4
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-AC-002_Access_Management_Runbook.md
   llm_include: true
   llm_priority: medium
