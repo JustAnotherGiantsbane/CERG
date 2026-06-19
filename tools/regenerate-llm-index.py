@@ -26,13 +26,28 @@ PREFIXES = {
     "POL": {"type": "Policy", "pillar": "governance"},
     "GOV": {"type": "Governance Instrument", "pillar": "governance"},
     "STD": {"type": "Standard", "pillar": "engineering"},
-    "PRC": {"type": "Procedure", "pillar": "risk"},
+    "PRC": {"type": "Procedure", "pillar": "varies-by-document"},
     "PLN": {"type": "Plan / Package", "pillar": "governance"},
     "GL": {"type": "Guideline", "pillar": "governance"},
     "TMPL": {"type": "Template", "pillar": "governance"},
     "JF": {"type": "Job Family", "pillar": "workforce"},
     "JD": {"type": "Job Description", "pillar": "workforce"},
     "META": {"type": "Repository Metadata", "pillar": "cross-cutting"},
+}
+
+PROCEDURE_PILLARS = {
+    "CERG-PRC-AC-002": "engineering",
+    "CERG-PRC-AR-001": "engineering",
+    "CERG-PRC-AUD-001": "governance",
+    "CERG-PRC-AV-001": "risk",
+    "CERG-PRC-CHG-001": "engineering",
+    "CERG-PRC-IR-002": "external-interface",
+    "CERG-PRC-LL-001": "governance",
+    "CERG-PRC-RM-001": "risk",
+    "CERG-PRC-TI-001": "risk",
+    "CERG-PRC-TM-001": "risk",
+    "CERG-PRC-TPRM-001": "risk",
+    "CERG-PRC-VM-001": "risk",
 }
 
 FALLBACK_SUMMARY = {
@@ -114,7 +129,7 @@ def type_and_pillar(path: Path, doc_id: str) -> tuple[str, str, str]:
     if prefix == "STD":
         return "standard", "engineering", prefix
     if prefix == "PRC":
-        return "procedure", "risk", prefix
+        return "procedure", PROCEDURE_PILLARS.get(doc_id, "cross-pillar"), prefix
     if prefix == "PLN":
         return "plan", "governance", prefix
     if prefix == "GL":
