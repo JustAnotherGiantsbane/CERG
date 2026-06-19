@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-002 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -45,6 +45,7 @@ This document applies to all CERG adopters. Small teams may maintain these recor
 
 1. **Every record has an owner.** Shared awareness is not ownership.
 2. **Every record has a state.** Open, approved, accepted, closed, superseded, or retired must be visible.
+2a. **Canonical names win over local aliases.** Teams may use local ticket names, queue names, or tool object names, but reporting, evidence indexes, and cross-references must map those aliases back to the canonical record types in §4.
 3. **Every record has evidence.** The evidence may be lightweight, but it must exist.
 4. **Every risk decision is explicit.** Silence is not acceptance.
 5. **Every exception expires.** Permanent exceptions are risk acceptances or control changes.
@@ -60,7 +61,7 @@ Every CERG record should include these fields unless the source procedure explic
 | Field | Purpose |
 |---|---|
 | Record ID | Stable identifier unique within the record type |
-| Record type | One of the catalog types in §4 |
+| Record type | One of the catalog types in §4; aliases must map back to this value |
 | Title | Human-readable summary |
 | Description | What happened, what is required, or what decision is needed |
 | Owner | Role accountable for action or decision |
@@ -81,6 +82,26 @@ Every CERG record should include these fields unless the source procedure explic
 
 ## 4. Authoritative Record Catalog
 
+The record names in this section are authoritative. Other CERG documents may use local operational wording such as "ticket," "case," "register entry," "memo," "worksheet," or "backlog item," but those terms are aliases unless they appear as a canonical record type below. When a procedure, flow, template, example, or tool uses an alias, it must preserve the CAT-002 canonical record type in metadata, tags, evidence index, or cross-reference.
+
+### 4.0 Common Alias Map
+
+| Canonical record type | Common aliases / local names | Alias rule |
+|---|---|---|
+| Control Implementation Record | Control implementation row, control status record, control snapshot | Use canonical name for control-baseline evidence and reporting. |
+| Evidence Index Entry | Evidence record, evidence library row, evidence package index | The artifact may be evidence; the index entry is the cataloged record. |
+| Program Improvement Record | Improvement Record, improvement backlog item, lessons-learned action | Use Program Improvement Record when the item changes CERG process, control, metric, or cadence. |
+| Risk Register Entry | Risk Record, risk register row, risk item | `Risk Record` is allowed as shorthand in flows; evidence indexes should map it to Risk Register Entry. |
+| Security Exception Record | Exception Record, deviation record, waiver ticket | `Waiver` and `deviation` are local aliases only; the canonical CERG record is Security Exception Record. |
+| Risk Acceptance Record | Risk acceptance memo, accepted-risk entry, acceptance request | `TMPL-RM-004` is the required acceptance form; `TMPL-RM-003` may support it but does not replace it. |
+| Finding Record | Finding ticket, vulnerability ticket, exposure item, audit finding | Raw scanner output becomes a Finding Record only after triage/validation. |
+| Exposure Backlog Item | Vulnerability backlog row, scanner observation, exposure ticket | Use for PRC-VM exposure workflow; promote to Finding Record or Risk Register Entry when criteria are met. |
+| Project Security Review Record | Project Intake Record, Architecture Review Record, security review ticket | Intake and architecture-review tools may split the workflow; the evidence package maps to this canonical record. |
+| Security Change Review Record | Change Record, security impact assessment, release security review | `Change Record` is acceptable shorthand where the change system is the source of truth. |
+| Asset Inventory Record | Asset Record, CMDB item, system inventory row | Local CMDB object names must preserve owner, classification, criticality, and coverage status. |
+| Incident Record | IR ticket, incident case, security incident record | Owned by the standing IR team; CERG support evidence links to, but does not replace, this record. |
+| Lessons Learned Record | Post-incident action, after-action item, PIR finding | Use Program Improvement Record when the lesson changes the CERG program. |
+
 ### 4.1 Governance and program records
 
 | Record type | Primary owner | Created by | Required when | Evidence value |
@@ -100,7 +121,7 @@ Every CERG record should include these fields unless the source procedure explic
 |---|---|---|---|---|
 | Risk Register Entry | Risk Register Owner | [RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md), [PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Material cybersecurity risk is identified | Proves risk statement, scoring, treatment, owner, and status |
 | Security Exception Record | Risk Register Owner | [PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md), [TMPL-RM-002](../templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md) | Temporary deviation from a policy, standard, or control | Proves temporary approval, compensating controls, expiration, and owner |
-| Risk Acceptance Memo | CISO / Authorized business owner | [TMPL-RM-003](../templates/CERG-TMPL-RM-003_Risk_Acceptance_Memo_Template.md) | Residual risk exceeds ordinary operating tolerance | Proves explicit accountable acceptance |
+| Risk Acceptance Record | Business Owner / Executive Sponsor with Risk Register Owner | [RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md), [PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md), [TMPL-RM-004](../templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md) | Residual risk is formally accepted under RMF-001 §9.7 | Proves explicit business consequence acceptance, CISO approval where required, conditions, expiration, and review cadence |
 | Finding Record | Exposure Management Lead / relevant Risk owner | FLOW F-04, [PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Vulnerability, audit issue, test result, control gap, or observation is validated | Proves triage, severity, ownership, and disposition |
 | Exposure Backlog Item | Exposure Management Lead | [PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Vulnerability requires tracking to remediation or exception | Proves remediation status and SLA performance |
 | Threat Intelligence Record | Threat Intelligence Analyst | [PRC-TI-001](../procedures/CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) | Intelligence changes risk, detection, or prioritization | Proves source, relevance, action, and disposition |
@@ -227,7 +248,7 @@ A record is not complete unless it passes these checks:
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-002 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Approved By** | CISO |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -237,6 +258,7 @@ A record is not complete unless it passes these checks:
 
 | **Version** | **Date** | **Author** | **Change** |
 |---|---|---|---|
+| 1.1 | 2026-06-18 | Governance Pillar Leader | Added canonical record-name and alias discipline, common alias map, and aligned risk acceptance records to RMF-001 §9.7 and TMPL-RM-004. |
 | 1.0 | 2026-06-13 | Governance Pillar Leader | Initial publication. Establishes the authoritative CERG record catalog, minimum required fields, and minimum viable evidence library. |
 
 ### Review Triggers
