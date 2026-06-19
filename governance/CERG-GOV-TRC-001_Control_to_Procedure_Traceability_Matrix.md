@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-TRC-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Control Baseline) |
@@ -74,9 +74,9 @@ This document complements the Unified Control Baseline. It does not replace it. 
 
 | **Baseline Control** | **Control Intent** | **Governing Standard** | **Operating Procedure / Plan** | **Evidence / Template** | **Primary Accountable Role** | **Gap Signal** |
 |---|---|---|---|---|---|---|
-| AC-2 Account Management | Approved, owned, reviewed accounts. | [`CERG-STD-AC-001`](../standards/CERG-STD-AC-001_Access_Management_Standard.md) | Access review and JML process under access standard; audit testing through [`CERG-PRC-AUD-001`](../procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md). | JML log, quarterly recertification report, [`CERG-TMPL-AUD-001`](../templates/CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md). | Engineering Pillar Leader | Accounts without owner, recertification, or JML evidence. |
+| AC-2 Account Management | Approved, owned, reviewed accounts. | [`CERG-STD-AC-001`](../standards/CERG-STD-AC-001_Access_Management_Standard.md) | JML and access review execution through [`CERG-PRC-AC-002`](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md); audit testing through [`CERG-PRC-AUD-001`](../procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md). | JML log, access review evidence package, quarterly recertification report, [`CERG-TMPL-AUD-001`](../templates/CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md). | Engineering Pillar Leader | Accounts without owner, recertification, reviewer authority, or JML evidence. |
 | AC-3 Access Enforcement | Approved authentication and authorization. | [`CERG-STD-AC-001`](../standards/CERG-STD-AC-001_Access_Management_Standard.md) | Architecture review through [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). | IdP / PAM policy export, architecture intake record. | Engineering Pillar Leader | Local, shared, hard-coded, or bypass access path. |
-| AC-6 Least Privilege | Role-bound and time-bound access. | [`CERG-STD-AC-001`](../standards/CERG-STD-AC-001_Access_Management_Standard.md) | Quarterly access review and exception workflow through [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). | PAM session logs, role inventory, exception register. | Engineering Pillar Leader | Privileged access without role basis, expiration, or review. |
+| AC-6 Least Privilege | Role-bound and time-bound access. | [`CERG-STD-AC-001`](../standards/CERG-STD-AC-001_Access_Management_Standard.md) | Privileged access review and removal validation through [`CERG-PRC-AC-002`](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md); exception workflow through [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). | Privileged access review evidence package, PAM session logs, role inventory, exception register. | Engineering Pillar Leader | Privileged access without role basis, reviewer authority, expiration, removal validation, or review evidence. |
 | AC-7 Unsuccessful Logon Attempts | Identity attack resistance. | [`CERG-STD-AC-001`](../standards/CERG-STD-AC-001_Access_Management_Standard.md), [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) | Detection coverage review through metrics and audit. | IdP policy export, detection rule, coverage report. | Risk Pillar Leader | Failed-login thresholds or detection rules missing. |
 | AC-17 Remote Access | Governed and logged remote access. | [`CERG-STD-AC-001`](../standards/CERG-STD-AC-001_Access_Management_Standard.md), [`CERG-STD-NET-001`](../standards/CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md) | Architecture review, risk exception process for nonstandard paths. | Gateway logs, MFA policy export, exception request form. | Engineering Pillar Leader | Direct or undocumented remote access path. |
 | AC-19 Mobile / BYOD | Conditional-access controlled mobile access. | [`CERG-STD-EP-001`](../standards/CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md) | Device posture review and exception workflow. | MDM compliance report, exception register. | Engineering Pillar Leader | Mobile access without enrollment or compliance signal. |
@@ -117,6 +117,21 @@ This document complements the Unified Control Baseline. It does not replace it. 
 | Privacy | [`CERG-STD-DG-001`](../standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md), [`CERG-PLN-PRIV-001`](../plans/CERG-PLN-PRIV-001_Privacy_and_Data_Protection_Operational_Package.md) | DPIA support record, data inventory, deletion evidence, breach clock support record. | Personal data processing lacks inventory, DPIA, or retention evidence. |
 | ISO/IEC 27001 | [`CERG-PLN-ISO-001`](../plans/CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md) | ISMS scope, SoA, internal audit, management review. | ISO-scoped control lacks SoA rationale or audit evidence. |
 
+### 5.1 Composite Trace: Regulated Architecture Review
+
+Regulated architecture review is a composite evidence path, not a single-control test. Use this trace when a new or materially changed system touches CUI, BES Cyber Systems, SOX-relevant financial systems, personal data at material scale, AI with regulated data, or another regulated scope.
+
+| Trace element | Required routing | Canonical records / evidence | Controls covered |
+|---|---|---|---|
+| Intake and scope | [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) identifies business owner, system owner, environment, data classification, regulatory scope, go-live target, and review tier. | Project Security Review Record; intake form; scope statement; data classification decision. | AC-2, AC-3, AC-6, CM-3, CM-8, RA-3 |
+| Architecture and control design | Engineering reviews identity, network, logging, resilience, data handling, integration, and change path against applicable standards. | Architecture decision, design diagram, control conformance checklist, approved-pattern reference if used. | AC-3, AC-17, AU-2, AU-9, CM-2, CM-6, CP-9, SI-4 |
+| Threat and risk analysis | Risk performs threat model where required and opens risk entries for deferred or residual issues. | Threat Model Record; Risk Register Entry; Finding Record where pre-go-live issue is discovered. | RA-3, RA-5, SI-2, SR-2/SR-3 where vendor/integration exists |
+| Regulated overlay | Governance maps CUI, BES, SOX, privacy, or ISO obligations and required evidence package. | SSP / POA&M where CUI applies; CIP evidence reference where BES applies; SOX ITGC control mapping; Privacy Security Support Record where privacy applies. | Overlay-specific controls plus AC/AU/CM/CP/IA/RA/SI/SR baseline controls |
+| Pre-production closure | Required pre-go-live issues are remediated, exceptioned, or risk-accepted under RMF authority before release. | Closure checklist, remediation evidence, Security Exception Record, Risk Acceptance Record, go-live disposition. | CM-3, RA-3, SI-2 |
+| Handoff and evidence index | Evidence Librarian indexes the complete review package and links it to control, system, owner, period, and regulatory scope. | Evidence Index Entry; Project Security Review Record closure package; Reporting Metric Record where tracked. | AUD evidence path for all mapped controls |
+
+A regulated architecture review is incomplete if any required overlay has no named owner, no evidence location, or no disposition for deferred issues. Deferred issues that remain after go-live must appear as a Risk Register Entry, Security Exception Record, Risk Acceptance Record, or POA&M item as applicable.
+
 ---
 
 ## 6. Gap Detection Rules
@@ -128,7 +143,7 @@ A traceability gap exists when any of the following is true:
 3. a control maps to a procedure that is out of scope, retired, or missing from the catalog;
 4. a control depends on inherited control evidence but the inheritance package is missing;
 5. a control is partially implemented but has no POA&M item;
-6. a control is risk accepted but lacks risk-register entry, acceptance memo, or exception request;
+6. a control is risk accepted but lacks a Risk Register Entry, Risk Acceptance Record, or linked Security Exception Record where a control deviation exists;
 7. a control has evidence, but the evidence cannot be retrieved within the audit retrieval window;
 8. the catalog changes but this matrix is not reviewed.
 
@@ -171,7 +186,7 @@ Maintenance steps:
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-TRC-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
@@ -188,6 +203,7 @@ Maintenance steps:
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-06-18 | Governance Pillar Leader | Added PRC-AC-002 to AC-2 and AC-6 traces, added regulated architecture review composite trace, and aligned risk-acceptance evidence names to CAT-002. |
 | 1.0 Draft | 2026-05-22 | Cyber Governance | Initial release. Establishes the control-to-procedure traceability matrix, overlay traceability, gap detection rules, and maintenance workflow. |
 
 ### Review Triggers
