@@ -88,7 +88,7 @@ The record names in this section are authoritative. Other CERG documents may use
 
 | Canonical record type | Common aliases / local names | Alias rule |
 |---|---|---|
-| Control Implementation Record | Control implementation row, control status record, control snapshot | Use canonical name for control-baseline evidence and reporting. |
+| Control Implementation Record | Control Change Record, control implementation row, control status record, control snapshot | Use canonical name for control-baseline evidence and reporting. |
 | Evidence Index Entry | Evidence record, evidence library row, evidence package index | The artifact may be evidence; the index entry is the cataloged record. |
 | Program Improvement Record | Improvement Record, improvement backlog item, lessons-learned action | Use Program Improvement Record when the item changes CERG process, control, metric, or cadence. |
 | Risk Register Entry | Risk Record, risk register row, risk item | `Risk Record` is allowed as shorthand in flows; evidence indexes should map it to Risk Register Entry. |
