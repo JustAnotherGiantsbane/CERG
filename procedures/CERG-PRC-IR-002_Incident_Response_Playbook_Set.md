@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-IR-002 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | External Interface |
 | **Classification** | External Interface |
 | **Owner** | Standing IR Team / Incident Commander |
@@ -80,7 +80,7 @@ This is not a SOC procedure, forensics manual, or replacement Incident Response 
 | Detection content and telemetry readiness | Detection Engineer under CERG standards | Supplies and improves signals before and after incident. |
 | Post-incident risk and control remediation | CERG | Records risks, updates controls, tracks remediation. |
 
-CERG may author and maintain this playbook set, but scenario execution during an active incident is under the Incident Commander.
+The standing IR team owns and maintains this playbook set. CERG Governance provides repository, cross-reference, and evidence-integration support only. Scenario execution during an active incident is under the Incident Commander.
 
 ### 2.1 Integration with the Incident Response Plan
 
@@ -91,7 +91,7 @@ This playbook set operates under [CERG-PLN-IR-001](../plans/CERG-PLN-IR-001_Inci
 | **IR Plan Stage** | **CERG Playbook Activation** | **CERG Action** |
 |---|---|---|
 | Incident declared | Incident Commander notifies CERG on-call per Section 18.1 | CERG acknowledges and stands by |
-| Severity determined (P1-P4) | Playbook selected per Section 3.5 | CERG activates at the level defined in Section 3.6 |
+| Severity determined (P1-P4) | Playbook selected per Section 3.1 | CERG activates at the level defined in Section 3.2 |
 | Triage | Playbook Triage phase | CERG supplies asset context, data classification, control evidence, logging posture |
 | Containment | Playbook Containment phase | CERG supports with Engineering and Risk expertise |
 | Eradication | Playbook Eradication phase | CERG identifies control gaps and remediation paths |
@@ -121,7 +121,7 @@ Playbooks are tested to validate that they work as intended and that CERG person
 
 #### Exercise Design
 
-- Exercises are designed by the Governance Pillar Leader in coordination with the Incident Commander
+- Exercises are designed and owned by the Incident Commander / standing IR team; Governance and Risk provide CERG support scenarios and evidence objectives
 - Each exercise has defined objectives, success criteria, and an after-action review
 - Exercises test the playbook, not the individuals; the goal is to find gaps, not to evaluate performance
 
@@ -137,7 +137,7 @@ Playbooks are tested to validate that they work as intended and that CERG person
 
 #### Exercise Findings
 
-Exercise findings feed into [CERG-PRC-LL-001](CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) as lesson artifacts. Playbooks are updated based on exercise findings within 30 days of the after-action review.
+Exercise findings feed into [CERG-PRC-LL-001](CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) as lesson artifacts when they affect CERG controls, evidence, risk, or support procedures. The standing IR team approves playbook updates based on exercise findings; CERG Governance updates repository links and CERG-facing support language within 30 days of the after-action review.
 
 ---
 
@@ -185,7 +185,7 @@ All incidents are classified by severity to determine response priority, escalat
 
 #### Escalation Thresholds
 
-- Any P1 or P2 incident: CISO is notified immediately. The Governance Pillar Leader determines regulatory notification obligations.
+- Any P1 or P2 incident: CISO is notified immediately. The Incident Commander and Legal determine regulatory notification obligations; Governance supplies evidence and obligation-mapping support.
 - Any incident involving PII, CUI, or BCSI: The relevant compliance manager (CMMC / NERC-CIP) is engaged within the first hour.
 - Any incident with potential customer impact: Account Management and Legal are engaged per the Incident Response Plan.
 - Any incident lasting > 24 hours: Severity is re-evaluated; a P2 that persists > 24 hours may be elevated to P1 at the Incident Commander's discretion.
@@ -381,7 +381,7 @@ CERG supports the application team in identifying and fixing the vulnerability: 
 
 ### 12.4 Evidence and Communications Inputs
 
-CERG preserves: application logs, WAF logs, authentication logs, database audit logs, attack payloads, vulnerability scan results, fix evidence, and retest results. If the application handles regulated data, Governance determines notification obligations.
+CERG preserves: application logs, WAF logs, authentication logs, database audit logs, attack payloads, vulnerability scan results, fix evidence, and retest results. If the application handles regulated data, the Incident Commander and Legal determine notification obligations; Governance supplies evidence and obligation-mapping support.
 
 ---
 
@@ -401,7 +401,7 @@ CERG supports eradication by identifying the infection vector: email attachment,
 
 ### 13.4 Evidence and Communications Inputs
 
-CERG preserves: malware samples, C2 logs, affected system inventory, infection timeline, containment actions, and recovery evidence. If the malware accessed regulated data, Governance determines notification obligations.
+CERG preserves: malware samples, C2 logs, affected system inventory, infection timeline, containment actions, and recovery evidence. If the malware accessed regulated data, the Incident Commander and Legal determine notification obligations; Governance supplies evidence and obligation-mapping support.
 
 ---
 
@@ -421,7 +421,7 @@ CERG tracks the vendor patch release and coordinates with Engineering for emerge
 
 ### 14.4 Evidence and Communications Inputs
 
-CERG preserves: vulnerability advisory or CVE, affected asset inventory, patch deployment evidence, containment actions, and any compromise evidence. For vulnerabilities affecting regulated systems, Governance determines regulatory notification obligations.
+CERG preserves: vulnerability advisory or CVE, affected asset inventory, patch deployment evidence, containment actions, and any compromise evidence. For vulnerabilities affecting regulated systems, the Incident Commander and Legal determine regulatory notification obligations; Governance supplies evidence and obligation-mapping support.
 
 ---
 
@@ -441,7 +441,7 @@ CERG coordinates with the Cryptography Engineer to: identify how the material wa
 
 ### 15.4 Evidence and Communications Inputs
 
-CERG preserves: certificate or key metadata, revocation records, rotation evidence, affected system inventory, and timeline of compromise and recovery. If the compromised material protected regulated data or authentication to regulated systems, Governance determines notification obligations. Certificate Transparency logs are monitored for 30 days post-incident for anomalous issuance.
+CERG preserves: certificate or key metadata, revocation records, rotation evidence, affected system inventory, and timeline of compromise and recovery. If the compromised material protected regulated data or authentication to regulated systems, the Incident Commander and Legal determine notification obligations; Governance supplies evidence and obligation-mapping support. Certificate Transparency logs are monitored for 30 days post-incident for anomalous issuance.
 
 ---
 
@@ -489,7 +489,7 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](../governance/CERG
 |---|---|
 | **Incident Commander** | Commands the active incident. Owns tactical incident decisions. |
 | **Lead Investigator** | Leads investigation and evidence direction during active response. |
-| **Governance Pillar Leader** | Owns this CERG-facing playbook set; supplies regulatory, evidence, and reporting support. |
+| **Governance Pillar Leader** | Provides repository, cross-reference, regulatory-mapping, evidence, and reporting support; does not own incident command, notification clocks, exercises, or this adjacent-function artifact. |
 | **Risk Pillar Leader** | Coordinates Cyber Risk support and post-incident risk capture. |
 | **Engineering Pillar Leader** | Coordinates Cyber Engineering support and technical control changes. |
 | **Detection Engineer** | Supplies telemetry context and post-incident detection improvements where in scope. |
@@ -513,23 +513,23 @@ CERG maintains an on-call rotation for incident support. The rotation schedule i
 
 #### Activation Procedure
 
-1. **Declaration**: The Incident Commander (or delegate) declares an incident and determines severity per Section 3.6.
+1. **Declaration**: The Incident Commander (or delegate) declares an incident and determines severity per Section 3.2.
 2. **CERG Notification**: The Incident Commander or SOC notifies the CERG on-call contact through the designated channel (secure messaging, phone).
 3. **Pillar Activation**:
-   - P1/P2: Engineering Pillar Leader and Risk Pillar Leader are activated immediately. Governance Pillar Leader is activated for regulatory scoping.
+   - P1/P2: Engineering Pillar Leader and Risk Pillar Leader are activated immediately. Governance Pillar Leader is activated for evidence support and regulatory mapping at IC / Legal direction.
    - P3: Relevant pillar leader(s) activated as needed.
    - P4: CERG monitors; no activation unless escalated.
 4. **Acknowledgment**: Activated CERG roles acknowledge within 30 minutes (P1), 1 hour (P2), or 4 hours (P3).
-5. **Stand-down**: The Incident Commander declares stand-down; CERG returns to normal operations and begins post-incident actions per Section 11.
+5. **Stand-down**: The Incident Commander declares stand-down; CERG returns to normal operations and begins post-incident actions per Section 17.
 
 #### Escalation Contacts
 
 | **Role** | **Escalation Contact** | **When to Escalate** |
 |---|---|---|
 | On-call CERG responder | Engineering Pillar Leader or Risk Pillar Leader | Unable to resolve within capability; incident severity escalates |
-| Engineering Pillar Leader | CISO | P1 incident; regulatory notification required; Executive decision needed |
+| Engineering Pillar Leader | CISO | P1 incident; urgent technical containment or recovery decision needed; executive decision needed |
 | Risk Pillar Leader | CISO | P1 incident; risk acceptance required during active response |
-| Governance Pillar Leader | CISO | Regulatory notification or evidence preservation dispute |
+| Governance Pillar Leader | Incident Commander / Legal; CISO if unresolved | Evidence preservation, regulatory mapping, or repository-support dispute |
 | CISO | Executive Sponsor / Board | Material business impact; SEC disclosure consideration; safety consequence |
 
 ---
@@ -658,7 +658,7 @@ Residual Risk: [risk register entries created]
 Lessons Learned: [key findings for program improvement per CERG-PRC-LL-001]
 Action Items: [owner, action, due date]
 
-Prepared by: [CERG Governance]
+Prepared by: [Standing IR Team / CERG support contributor]
 Reviewed by: [Incident Commander, CISO]
 ```
 
@@ -669,7 +669,7 @@ Reviewed by: [Incident Commander, CISO]
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-PRC-IR-002 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | External Interface |
 | **Effective Date** | 2026-05-22 |
 | **Classification** | External Interface |
@@ -686,6 +686,7 @@ Reviewed by: [Incident Commander, CISO]
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-06-18 | Standing IR Team / Incident Commander | Clarified that the standing IR team owns this playbook set, exercises, notification-clock process, and scenario execution; CERG Governance provides repository, evidence, regulatory-mapping, and post-incident improvement support only. |
 | 1.0 Draft | 2026-05-22 | Cyber Governance | Initial release. Establishes CERG-facing incident playbooks for ransomware, business email compromise, data breach or exfiltration, phishing campaign, distributed denial of service, insider threat, and cloud account compromise. Preserves the Operating Model boundary that the standing Incident Response team owns active incident command while CERG supplies control, evidence, risk, and recovery support. |
 
 ### Review Triggers
@@ -696,7 +697,7 @@ Reviewed by: [Incident Commander, CISO]
 - Change to legal, regulatory, or contractual incident-notification obligations
 - Direction from the CISO or Incident Commander
 
-Cyber Governance owns this CERG-facing playbook set. The Governance Pillar Leader is responsible for initiating reviews, managing the revision cycle, and obtaining CISO approval and Incident Commander owner concurrence for all changes.
+The standing IR team owns and maintains this playbook set. CERG Governance reviews repository links, metadata, cross-references, and CERG-facing evidence/support language only. Changes to incident procedures, notification timelines, exercise cadence, or scenario execution require Incident Commander / CISO approval and IRT acknowledgment.
 
 ### Related Documents
 
