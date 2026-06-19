@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-FLOW-001 |
-| **Version** | 1.2 |
+| **Version** | 1.3 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -644,14 +644,20 @@ Convert discovered exposure into a deterministic treatment path: remediation, co
 7. Governance updates reporting and escalates recurring patterns.
 
 
-### Severity-Tiered SLA
+### SLA Authority
 
-| Severity | Triage SLA | Remediation SLA | KEV / Active Exploit SLA |
-|----------|-----------|----------------|--------------------------|
-| **Critical** | 4 hours | 48 hours | 24 hours |
-| **High** | 24 hours | 14 days | 7 days |
-| **Medium** | 5 business days | 30 days | N/A |
-| **Low** | 10 business days | 90 days | N/A |
+This flow does not define a separate vulnerability or exposure remediation clock. For vulnerabilities, KEV items, active exploitation, scanner observations, and confirmed reachable exposures, [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) §7.2 is the canonical SLA source. FLOW F-04 uses the finding state and record handoff; PRC-VM determines the treatment clock.
+
+| PRC-VM Classification | Treatment Clock |
+|---|---|
+| **Material Risk — PPR** | 48 hours (Internet-facing) / 72 hours (internal) |
+| **Confirmed Exposure — Critical** | 3 days |
+| **Confirmed Exposure — High** | 15 days |
+| **Confirmed Exposure — Medium** | 30 days |
+| **Confirmed Flaw, Not Exposed** | 90 days / next maintenance window |
+| **Hygiene Debt** | Patch hygiene cadence per PRC-VM §10 |
+
+For non-exposure findings such as audit findings, architecture review issues, or third-party assessment gaps, the owning procedure or record sets the due date. If more than one SLA or due date applies, use the shortest applicable clock.
 
 
 ### Risk Promotion Rules — When a Finding Becomes a Risk Register Entry
@@ -710,18 +716,11 @@ Recurring findings across multiple systems in the same control family trigger a 
 - Incident response (if active exploitation exists)
 
 ### Mandatory Rules
-- No finding may remain undefined beyond triage SLA.
-- Engineering may not close a Critical or High finding unilaterally; Risk must validate.
-- **Self-Service Closure (Medium/Low):** Engineering may close Medium and Low findings when automated validation confirms the fix. Automated validation includes: authenticated vulnerability re-scan (findings from scanning), SAST re-scan passing (findings from code review), CSPM posture check passing (findings from cloud posture), or policy-as-code gate passing (findings from IaC review). Risk validates Medium/Low findings by exception — spot-checking a sample rather than re-validating every closure.
-- Any control not met as written or on time routes to exception review.
-- Accepted residual risk requires named approver, rationale, review cadence, and expiration if applicable.
-
-### Mandatory Rules
-- No finding may remain undefined beyond triage SLA.
-- Engineering may not close a finding unilaterally; Risk must validate.
-- Any control not met as written or on time routes to exception review.
-- Accepted residual risk requires named approver, rationale, review cadence, and expiration if applicable.
-
+- No finding may remain undefined beyond triage SLA or the owning procedure's classification deadline.
+- Engineering may not close a Critical, High, Material Risk, PPR, adversarial, audit, or regulated-scope finding unilaterally; Risk must validate.
+- **Self-Service Closure (Medium/Low):** Engineering may close Medium and Low findings when automated validation confirms the fix and no regulated-scope, active-exploitation, adversarial-test, or audit requirement requires independent validation. Automated validation includes: authenticated vulnerability re-scan (findings from scanning), SAST re-scan passing (findings from code review), CSPM posture check passing (findings from cloud posture), or policy-as-code gate passing (findings from IaC review). Risk validates Medium/Low findings by exception — spot-checking a sample rather than re-validating every closure.
+- Any control not met as written or on time routes to exception review; any residual risk accepted after that review follows [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 and [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md).
+- Accepted residual risk requires the Business Owner or Executive Sponsor acceptance required by RMF-001 §9.7, rationale, conditions, review cadence, and expiration if applicable.
 
 
 ### Validation Method by Finding Source
@@ -754,12 +753,12 @@ Recurring findings across multiple systems in the same control family trigger a 
 
 | Trigger | Escalation Target | Action |
 |----------|------------------|--------|
-| Critical finding unassigned after **4 hours** | CISO | Immediate notification; CISO may invoke incident response |
-| Critical finding past remediation SLA (48 hours) | CISO | Mandatory review; create risk record for delayed remediation |
-| High finding unassigned after **24 hours** | Pillar Leader (Risk) | Pillar Leader must assign or explain |
-| High finding past remediation SLA (14 days) | Governance Pillar Leader | Create exception record or escalate to CISO |
-| Medium finding past SLA (30 days) | Risk Pillar Leader | Included in monthly roll-up report; risk of SLA drift |
-| Low finding past SLA (90 days) | Risk Pillar Leader | Included in quarterly review |
+| Material Risk — PPR unassigned after **4 hours** | CISO | Immediate notification; CISO may invoke incident response |
+| Material Risk — PPR past PRC-VM SLA | CISO | Mandatory review; create Risk Record for delayed treatment and route any acceptance through RMF-001 §9.7 |
+| Confirmed Exposure — Critical unassigned after **1 business day** | Pillar Leader (Risk) | Pillar Leader must assign or explain; CISO informed for regulated or crown-jewel scope |
+| Confirmed Exposure — Critical or High past PRC-VM SLA | Governance Pillar Leader + CISO | Create exception/risk-acceptance record as applicable; escalate treatment blocker |
+| Confirmed Exposure — Medium past PRC-VM SLA | Risk Pillar Leader | Included in monthly roll-up report; risk of SLA drift |
+| Confirmed Flaw Not Exposed or Hygiene Debt past applicable cadence | Risk Pillar Leader | Included in quarterly review or patch-hygiene review |
 | Repeated exception in same control family | Governance Pillar Leader | Create Control Change Record (F-01) |
 | Engineering refuses or stalls treatment | Pillar Leader (Risk → Engineering) | Cross-pillar escalation; CISO if unresolved after 5 business days |
 
@@ -1211,7 +1210,7 @@ Implement:
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-FLOW-001 |
-| **Version** | 1.2 |
+| **Version** | 1.3 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-17 |
 | **Classification** | Public |
@@ -1228,6 +1227,7 @@ Implement:
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.3 | 2026-06-18 | Governance Pillar Leader | Replaced F-04 competing severity SLA table with PRC-VM SLA authority, removed contradictory closure rules, and aligned residual-risk acceptance with RMF-001 §9.7. |
 | 1.2 | 2026-06-18 | Governance Pillar Leader | Rewrote F-06 to preserve Incident Commander / standing IR team authority for active incident operations while defining CERG support, evidence, and post-incident improvement routing. |
 | 1.1 | 2026-06-17 | Governance Pillar Leader | Added AI routing rules to F-02, including AI intake, sanctioned-tool register, system/model register, and escalation criteria for sensitive data, regulated scope, consequential decisions, and autonomous agency. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Seven cross-pillar operational flows, five shared state models, five minimum record templates, LLM execution directives, and recommended implementation sequence. |
