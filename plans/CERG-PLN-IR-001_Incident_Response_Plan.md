@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PLN-IR-001 |
-| **Version** | 1.21 |
+| **Version** | 1.22 |
 | **Status** | External Interface |
 | **Classification** | External Interface |
 | **Owner** | Standing IR Team / Incident Commander |
@@ -124,7 +124,7 @@ Activate this plan upon any of the following:
 | **Incident Commander (CISO / designated deputy)** | Single-decision authority; convenes and directs the IRT; owns external notification decisions; briefs executive leadership. |
 | **Lead Investigator** | Owns technical investigation; coordinates evidence collection and forensic analysis; produces the incident technical timeline. |
 | **Engineering Pillar Leader** | Executes containment and recovery technical actions; coordinates with platform teams; advises on architectural impact. |
-| **Governance Pillar Leader** | Owns the regulatory notification clock; maintains the SSP / POA&M impact tracking; coordinates with Legal on privilege; supports evidence preservation; assembles the post-incident report. |
+| **Governance Pillar Leader** | Supports regulatory mapping and evidence preservation at IC / Legal direction; maintains SSP / POA&M impact tracking; assembles CERG-owned post-incident evidence and improvement artifacts. |
 | **Legal (external function)** | Advises on privilege, notification obligations, regulator engagement, customer / partner contractual notifications, law enforcement engagement. |
 | **Communications (external function)** | Coordinates internal, customer, partner, and external public communications under IC direction. |
 | **Executive Sponsor (CEO / COO / CIO / CFO as appropriate)** | Provides executive decision support for material business, regulatory, or financial determinations. |
@@ -238,7 +238,7 @@ The IC may up- or down-grade severity at any time based on emerging information.
 
 ## 6. Notification Obligations
 
-Notification is one of the highest-risk areas of incident response. Many obligations operate on clocks that begin at discovery, not at confirmation. The Governance Lead owns the notification clock for each in-flight incident and tracks all applicable obligations on a per-incident notification register.
+Notification is one of the highest-risk areas of incident response. Many obligations operate on clocks that begin at discovery, not at confirmation. The Incident Commander owns the notification-clock process for each in-flight incident, with Legal determining applicable obligations and Governance maintaining the supporting evidence and notification register at IC / Legal direction.
 
 ### 6.1 Internal Notification
 
@@ -252,23 +252,23 @@ Notification is one of the highest-risk areas of incident response. Many obligat
 
 ### 6.2 External Notification (Regulator and Statutory)
 
-| **Authority / Obligation** | **Trigger** | **Clock** | **Owner** | **Reference** |
+| **Authority / Obligation** | **Trigger** | **Clock** | **Decision Owner / Support** | **Reference** |
 |---|---|---|---|---|
-| **DoD DC3 / DIBNet** | Reportable cyber incident affecting CUI or operationally critical support | **72 hours** from discovery | Governance + Legal | DFARS 252.204-7012(c) |
-| **NERC E-ISAC and Regional Entity** | Reportable Cyber Security Incident or attempt against BES Cyber Systems | Per CIP-008 timelines (1 hour for compromise of BCS; 24 hours for attempts) | Governance | NERC-CIP CIP-008-6 R1.4 |
+| **DoD DC3 / DIBNet** | Reportable cyber incident affecting CUI or operationally critical support | **72 hours** from discovery | IC + Legal; Governance evidence support | DFARS 252.204-7012(c) |
+| **NERC E-ISAC and Regional Entity** | Reportable Cyber Security Incident or attempt against BES Cyber Systems | Per CIP-008 timelines (1 hour for compromise of BCS; 24 hours for attempts) | IC + Legal + OT Operations; Governance evidence support | NERC-CIP CIP-008-6 R1.4 |
 | **SEC (Form 8-K Item 1.05)** | Material cybersecurity incident at a public-company registrant | **4 business days** from materiality determination | CISO + Legal + CFO | SEC Reg S-K Item 106(b); Form 8-K Item 1.05 |
-| **State breach notification laws** | Unauthorized acquisition of state-defined personal information | Per state - often "without unreasonable delay"; specific deadlines vary (e.g., 30/45/60 days) | Legal + Governance | State statutes |
+| **State breach notification laws** | Unauthorized acquisition of state-defined personal information | Per state - often "without unreasonable delay"; specific deadlines vary (e.g., 30/45/60 days) | Legal + IC; Governance evidence support | State statutes |
 | **GDPR Supervisory Authority** (where applicable) | Personal data breach with risk to data subjects | **72 hours** from awareness | Legal / DPO | GDPR Art 33 |
 | **HIPAA Breach Notification** (where applicable) | Breach of unsecured PHI | Per HIPAA timelines | Legal / Privacy | HIPAA 164.400 series |
-| **Sector / customer contractual notification** | Per contract terms (often 24–72 hours) | Per contract | Governance + Account Management | Contractual |
+| **Sector / customer contractual notification** | Per contract terms (often 24–72 hours) | Per contract | IC + Legal + Account Management; Governance evidence support | Contractual |
 | **Law enforcement (FBI / Secret Service / local)** | Sev 1 events at IC / Legal discretion; mandated reporting in some jurisdictions | At IC discretion unless mandated | IC + Legal | Jurisdiction-specific |
-| **CISA voluntary reporting (and CIRCIA when in force)** | Significant cyber incidents at critical infrastructure entities | Per CIRCIA rule (72 hours for incidents; 24 hours for ransom payments) once effective | Governance + Legal | CIRCIA (when final rule effective) |
+| **CISA voluntary reporting (and CIRCIA when in force)** | Significant cyber incidents at critical infrastructure entities | Per CIRCIA rule (72 hours for incidents; 24 hours for ransom payments) once effective | IC + Legal; Governance evidence support | CIRCIA (when final rule effective) |
 
 ### 6.3 Notification Decision Discipline
 
 > **Two Failure Modes**
 >
-> The two notification failure modes are: notifying too early on incomplete information, or notifying too late after the regulatory clock has run. Both are damaging. The discipline is: (a) start the regulatory clock log at the moment of discovery, not at the moment of confirmation; (b) make notification decisions through the IC + Legal + Governance triad, not unilaterally; (c) document the rationale at each decision point. If you would not be willing to defend the rationale to a regulator after the fact, do not adopt it during the incident.
+> The two notification failure modes are: notifying too early on incomplete information, or notifying too late after the regulatory clock has run. Both are damaging. The discipline is: (a) start the regulatory clock log at the moment of discovery, not at the moment of confirmation; (b) make notification decisions through the IC + Legal process, using Governance for evidence and regulatory-mapping support; (c) document the rationale at each decision point. If you would not be willing to defend the rationale to a regulator after the fact, do not adopt it during the incident.
 
 ---
 
@@ -284,11 +284,11 @@ Containment leverages cloud-native isolation (quarantine IAM, account suspension
 >
 > Response in OT environments evaluates every containment action for operational impact before execution. Isolation that would be routine in IT can produce a grid disturbance in OT. OT response actions require operations-team participation in the decision, not just notification.
 
-OT incidents engage the operations liaison as a peer decision-maker on containment options. Containment defaults to least-disruptive options first (passive monitoring intensification, network-edge controls) before in-band actions. NERC-CIP CIP-008 reporting timelines run regardless of operational readiness, Governance owns those clocks.
+OT incidents engage the operations liaison as a peer decision-maker on containment options. Containment defaults to least-disruptive options first (passive monitoring intensification, network-edge controls) before in-band actions. NERC-CIP CIP-008 reporting timelines run regardless of operational readiness; the IC owns the notification-clock process with Legal and OT Operations, while Governance supplies evidence and regulatory mapping support.
 
 ### 7.3 CUI Environments
 
-CUI incidents trigger DFARS 252.204-7012 reporting via DC3 / DIBNet within 72 hours of discovery (Section 6.2). Evidence preservation requirements (90-day retention of images and malware) apply per **[CERG-STD-CUI-001](../standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) §7**. The Governance Lead coordinates with the contracting officer when required by contract.
+CUI incidents trigger DFARS 252.204-7012 reporting via DC3 / DIBNet within 72 hours of discovery (Section 6.2). Evidence preservation requirements (90-day retention of images and malware) apply per **[CERG-STD-CUI-001](../standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) §7**. The IC and Legal coordinate required contracting-officer engagement, with Governance providing evidence and contract-mapping support.
 
 ### 7.4 [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-Relevant Systems
 
@@ -302,7 +302,7 @@ When the originating compromise is a third party (vendor, SaaS provider, softwar
 
 ## 8. Playbooks
 
-The plan is supported by detailed playbooks maintained as living artifacts in the CERG Governance library. Each playbook follows a consistent structure: trigger criteria, immediate actions, investigation steps, containment options, recovery steps, evidence checklist, and notification triggers.
+The plan is supported by detailed playbooks maintained by the standing IR team as living artifacts in this repository for cross-functional integration. Each playbook follows a consistent structure: trigger criteria, immediate actions, investigation steps, containment options, recovery steps, evidence checklist, and notification triggers.
 
 Currently maintained playbooks:
 
@@ -351,7 +351,7 @@ External communications during an active incident are owned by the IC, with cont
 - Say only what is established as fact. If a claim is not supported by current evidence, do not make it.
 - Lead with the actions being taken and the protections in place for affected parties.
 - Coordinate timing of public statements with regulatory and contractual notifications.
-- Refer technical questions to the appropriate IRT spokesperson; refer regulatory questions to Governance.
+- Refer technical questions to the appropriate IRT spokesperson; refer regulatory questions to Legal, with Governance available for evidence and obligation-mapping support.
 - Document every external statement in the incident timeline.
 
 ---
@@ -374,7 +374,7 @@ The Legal Lead is involved at activation for all Sev 1 and Sev 2 events. Privile
 
 ### 10.3 Law Enforcement Engagement
 
-Engagement with law enforcement is at the IC's discretion in consultation with Legal, except where reporting is mandated. Law enforcement engagement may affect notification timing and content; Governance maintains the contact procedure for FBI Cyber, Secret Service, CISA, and DC3.
+Engagement with law enforcement is at the IC's discretion in consultation with Legal, except where reporting is mandated. Law enforcement engagement may affect notification timing and content; the standing IR team maintains contact procedures for FBI Cyber, Secret Service, CISA, and DC3, with Governance repository support.
 
 ---
 
@@ -382,14 +382,14 @@ Engagement with law enforcement is at the IC's discretion in consultation with L
 
 | **Activity** | **Cadence** | **Owner** |
 |---|---|---|
-| Tabletop exercise - Sev 1 scenario (cross-environment) | Annual | Governance + Risk |
-| Tabletop exercise - OT (CIP-008) | Annual | Governance + Risk + OT Ops |
-| Tabletop exercise - CUI (DFARS 7012 reporting) | Annual | Governance |
-| Functional exercise / detection validation (purple-team) | Quarterly | Risk |
-| IRT contact roster validation | Quarterly | Governance |
-| External retainer activation test | Annual | Governance |
-| Playbook review | Annual; after each use | Governance / Risk |
-| This plan review | Annual; after any Sev 1 / Sev 2 incident; upon regulatory change | Governance |
+| Tabletop exercise - Sev 1 scenario (cross-environment) | Annual | Incident Commander / Standing IR Team; Governance + Risk support |
+| Tabletop exercise - OT (CIP-008) | Annual | Incident Commander / Standing IR Team + OT Ops; Governance + Risk support |
+| Tabletop exercise - CUI (DFARS 7012 reporting) | Annual | Incident Commander / Standing IR Team; Governance evidence support |
+| Functional exercise / detection validation (purple-team) | Quarterly | Incident Commander / Standing IR Team; Risk support |
+| IRT contact roster validation | Quarterly | Incident Commander / Standing IR Team; Governance repository support |
+| External retainer activation test | Annual | Incident Commander / Standing IR Team; Legal / Procurement support |
+| Playbook review | Annual; after each use | Incident Commander / Standing IR Team; Governance / Risk support |
+| This plan review | Annual; after any Sev 1 / Sev 2 incident; upon regulatory change | Incident Commander / Standing IR Team; Governance cross-reference support |
 
 Exercise results, including identified gaps and corrective actions, are recorded in the risk register and tracked to closure.
 
@@ -416,6 +416,7 @@ Exercise results, including identified gaps and corrective actions, are recorded
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.22 | 2026-06-18 | Standing IR Team / Incident Commander | Clarified that the standing IR team owns notification-clock process, playbook maintenance, exercises, and plan maintenance; CERG Governance provides evidence, regulatory-mapping, repository, and improvement-routing support only. |
 | 1.0 DRAFT | 2026 | CERG Governance | Initial release |
 
 ### Review Triggers
@@ -428,7 +429,7 @@ This plan shall be reviewed annually and upon any of the following:
 - IRT structural change (CISO transition, new external retainer)
 - Direction from the CISO, internal audit, or external examination
 
-Cyber Governance owns the plan as a document. The CISO owns the operational capability the plan describes. Updates require CISO approval and IRT acknowledgment.
+The standing IR team owns and maintains this plan. CERG Governance reviews repository links, metadata, and cross-references only. Updates to incident procedures, notification timelines, or exercise cadence require Incident Commander / CISO approval and IRT acknowledgment.
 
 ### Related Documents
 
