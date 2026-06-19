@@ -19,10 +19,11 @@ Supporting procedures and standards:
 - [Small Team Adoption Path](../../governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md) - the operating rhythm and role consolidation map for a 3-person team.
 - [Role-Based Implementation Checklists](../../governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md) - what each consolidated role does in week 1 through month 6.
 - [Exposure Management Procedure](../../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) - the observe, validate, classify, treat, verify flow Priya runs.
-- [Risk Register and Exception Process](../../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) - how the two Critical findings move from Finding to Risk if SLA is missed.
+- [Risk Register and Exception Process](../../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) - how findings become risks, exceptions, or risk acceptances when treatment cannot meet the required clock.
 - [Adoption Safety Guide](../../governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md) - role safety and decision log requirements for consolidated roles.
-- [Risk Management Framework](../../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) - the severity-tiered SLA table and exception logic.
+- [Risk Management Framework](../../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) - canonical risk scoring and Business Owner / Executive Sponsor acceptance authority.
 - [Evidence Quality Standard](../../governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md) - what "evidence" means on a spreadsheet in a small team.
+- [Third Party and Supply Chain Risk Procedure](../../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) - vendor escalation, evidence requests, and alternate-service decisions.
 
 ### How the three pillars collapse onto three people
 
@@ -38,41 +39,45 @@ The collapse is intentional and recorded in the [Decision Log](../../governance/
 
 | Step | What happens | Primary owner | Record or evidence |
 |------|--------------|---------------|--------------------|
-| 1 | Priya imports the 47 findings into the exposure backlog spreadsheet and tags each row with asset, severity, and SLA clock start. | Priya (Risk) | Exposure backlog (EVD rows) |
+| 1 | Priya imports the 47 findings into the exposure backlog spreadsheet and tags each row with asset, reachability, source severity, and PRC-VM classification clock. | Priya (Risk) | Exposure backlog (EVD rows) |
 | 2 | Priya validates reachability and asset ownership for the two Critical findings. One is on the customer portal web server; the other is on a legacy SFTP endpoint that hosts a vendor integration. | Priya (Risk) | Triage notes in Finding Record |
-| 3 | Priya checks whether public exploit code exists for either Critical CVE. Both have public exploits. Severity stays Critical. KEV-style override is unnecessary because the CVSS already classifies Critical, but Priya notes the active exploitation risk in the Finding Record. | Priya (Risk) | Triage notes |
-| 4 | Devin confirms the customer portal web server is in his asset inventory and that the application owner (Operations Director) is named. The SFTP endpoint is owned by a vendor, not Devin - he routes that one back to Priya for vendor-side coordination. | Devin (Engineering) | Asset Record update; vendor question logged |
-| 5 | Devin opens a Change Record for the customer portal patch. He coordinates a same-day maintenance window with the Operations Director. The Critical SLA is 48 hours per [RMF-001](../../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md); he has time, but only if the change goes today. | Devin (Engineering) | Change Record |
-| 6 | For the SFTP endpoint, Priya opens a Third-Party Finding and sends the vendor the CVE details, asks for patch timeline, and references the contract SLA (vendor must patch Critical within 30 days). Priya creates an Exception Record with compensating monitoring (alerting on anomalous SFTP traffic) and the vendor patch date as the expiration. | Priya (Risk) | Third-Party Finding; Exception Record |
-| 7 | Maria reviews both Criticals in the 20-minute risk slot during the next weekly meeting. She confirms the Critical SLA will be met on the portal (Devin's path) and approves Priya's Exception Record with the monitoring requirement. Maria logs the decision in the Decision Log per IMP-002 §4. | Maria (Governance / CISO) | Decision Log entry; approved Exception Record |
-| 8 | After the maintenance window, Devin uploads patch output, the change ticket closure, and a service-validation screenshot. Priya rescans the asset and confirms closure. The Finding Record moves to Closed. | Devin (Engineering) + Priya (Risk) | Closed Finding Record |
-| 9 | Priya leaves the remaining 45 findings in the exposure backlog with SLA clocks running. She flags the 11 High findings for the biweekly vulnerability SLA review. | Priya (Risk) | Updated exposure backlog |
-| 10 | Maria updates the evidence index with two new rows: the Closed Finding for the portal, and the Exception Record for the SFTP endpoint. The monthly metrics refresh will pull these automatically next week. | Maria (Governance) | Evidence index entries |
+| 3 | Priya checks public exploit and KEV status. Both have public exploit code; the Internet-facing portal is classified as **Material Risk — PPR**. The vendor SFTP endpoint is treated as a Third-Party Finding with potential Critical residual risk until the vendor proves containment. | Priya (Risk) | Classification notes; PRC-VM SLA clock |
+| 4 | Devin confirms the customer portal web server is in his asset inventory and that the application owner (Operations Director) is named. The SFTP endpoint is vendor-owned, so Devin identifies the integration path, credentials, logs, and whether Northwind can pause transfers safely. | Devin (Engineering) | Asset Record update; integration map; vendor question logged |
+| 5 | Devin opens an emergency Change Record for the customer portal patch. He coordinates a same-day maintenance window with the Operations Director because PRC-VM's PPR clock is 48 hours for Internet-facing exposure. | Devin (Engineering) | Change Record |
+| 6 | For the SFTP endpoint, Priya opens a Third-Party Finding, sends the vendor the CVE details, requests evidence of containment and patch timing, and references the contract SLA. Devin disables nonessential transfers, rotates credentials, and prepares an alternate encrypted transfer path for sensitive reports. | Priya (Risk) + Devin (Engineering) | Third-Party Finding; containment evidence; vendor evidence request |
+| 7 | Maria reviews both Criticals immediately, not at the next weekly meeting. She can approve emergency containment and exception routing as CISO/Governance, but she cannot accept the vendor residual business risk alone. If the business must keep using the SFTP path before vendor remediation, Maria prepares a Risk Acceptance Request for the COO Executive Sponsor under RMF-001 §9.7. | Maria (Governance / CISO) | Decision Log entry; Risk Acceptance Request if continued use is required |
+| 8 | The COO chooses the safer business path: pause sensitive SFTP transfers and use the alternate encrypted path until the vendor patches. Because the risky path is not used, no Critical risk acceptance is needed; the open item remains a Third-Party Finding with treatment tracking. | COO Executive Sponsor + Maria | Decision Log entry; business decision; alternate transfer evidence |
+| 9 | After the maintenance window, Devin uploads patch output, the change ticket closure, and a service-validation screenshot. Priya rescans the portal and confirms closure. The portal Finding Record moves to Closed. | Devin (Engineering) + Priya (Risk) | Closed Finding Record |
+| 10 | Priya leaves the remaining 45 findings in the exposure backlog with PRC-VM clocks running. She flags the 11 High findings for the biweekly exposure review. | Priya (Risk) | Updated exposure backlog |
+| 11 | Maria updates the evidence index with the Closed Finding for the portal, the Third-Party Finding for the SFTP endpoint, the vendor evidence request, and the COO decision to use the alternate path. | Maria (Governance) | Evidence index entries |
 
 ### Narrative
 
-At 8:07 a.m. Priya's email pings with the scanner export. She has been doing this every Tuesday for six weeks and has the spreadsheet template down. By 8:30 a.m. the two Critical findings are tagged, validated against the asset inventory, and routed. The portal finding goes to Devin. The SFTP finding goes back to Priya because the asset is vendor-owned.
+At 8:07 a.m. Priya's email pings with the scanner export. She has been doing this every Tuesday for six weeks and has the spreadsheet template down. By 8:30 a.m. the two Critical findings are tagged, validated against the asset inventory, and routed. The portal finding goes to Devin and is classified as Material Risk — PPR because it is Internet-facing with public exploit code. The SFTP finding goes back to Priya because the asset is vendor-owned, but Priya does not treat vendor ownership as a reason to slow down.
 
-Devin sees the portal Change Record in his queue at 8:45 a.m. He calls the Operations Director directly - the CERG escalation rule says a Critical SLA bypasses the normal change review queue. The Director approves a 2 p.m. maintenance window and reschedules a customer email blast so users hit the maintenance banner, not a blank page. Devin also applies a temporary WAF rule on the vulnerable path while the patch is prepared.
+Devin sees the portal Change Record in his queue at 8:45 a.m. He calls the Operations Director directly - the CERG escalation rule says a PPR exposure bypasses the normal change review queue. The Director approves a 2 p.m. maintenance window and reschedules a customer email blast so users hit the maintenance banner, not a blank page. Devin also applies a temporary WAF rule on the vulnerable path while the patch is prepared.
 
-Maria joins for the weekly 1-hour meeting at 10 a.m. Priya walks through the two Criticals in her 20-minute slot. Maria approves the SFTP exception because the compensating monitoring is already in place and the vendor contract requires patch within 30 days. Maria adds one Decision Log entry: "Vendor-side Critical CVE accepted with monitoring until vendor patch date; expires 30 days from today." That single entry satisfies IMP-002 §4.
+Maria does not wait for the weekly 1-hour meeting. She opens a 15-minute emergency risk huddle with Priya, Devin, and the COO. Priya explains that the vendor SFTP issue is not something Maria can simply accept as a security exception: if Northwind keeps sending sensitive reports over the exposed path, the COO must accept the business consequence under RMF-001 §9.7, with Maria approving as CISO. Devin offers a safer path: pause sensitive SFTP transfers, rotate credentials, monitor for anomalous SFTP traffic, and use an alternate encrypted transfer method until the vendor patches. The COO chooses the safer path, so no Critical residual-risk acceptance is needed.
 
-At 2:15 p.m. the maintenance window opens. Devin deploys the patch, validates the service, captures the validation screenshot, and closes the change ticket. Priya rescans at 3 p.m. The Critical is closed. The remaining exposure backlog carries the 45 other findings into the biweekly SLA review.
+Maria adds one Decision Log entry: "Vendor SFTP Critical exposure: sensitive transfers paused; alternate encrypted path approved by COO; vendor patch evidence due before SFTP resumes." Priya opens the Third-Party Finding, sends the vendor the CVE and evidence request, and records the contract SLA. This is still lightweight, but it is not informal.
+
+At 2:15 p.m. the maintenance window opens. Devin deploys the portal patch, validates the service, captures the validation screenshot, and closes the change ticket. Priya rescans at 3 p.m. The portal PPR exposure is closed. The remaining exposure backlog carries the 45 other findings into the biweekly exposure review.
 
 By the end of Tuesday, the team has produced:
 
-- 1 closed Finding Record (portal Critical)
-- 1 open Exception Record (SFTP Critical, with expiration date)
+- 1 closed Finding Record (portal Material Risk — PPR)
+- 1 open Third-Party Finding (SFTP Critical, vendor remediation pending)
 - 1 closed Change Record (portal patch)
-- 1 Decision Log entry (Maria)
-- 2 evidence index rows (one per Critical outcome)
+- 1 Decision Log entry (Maria) recording the COO-approved alternate transfer path
+- 1 vendor evidence request and contract-SLA follow-up
+- 4 evidence index rows (portal closure, SFTP finding, vendor evidence request, COO decision)
 - 11 High findings flagged for biweekly review
 
-No one worked more than their usual hours. The scanner run took 23 minutes of Priya's time. Devin's engineering work was bounded by the 4-hour change window. Maria's governance overhead was 15 minutes in the weekly meeting plus the Decision Log entry.
+The team did not create a new committee or a heavyweight exception package, but it did interrupt the normal rhythm for a real Critical decision. Priya's scanner triage stayed spreadsheet-light. Devin's engineering work was bounded by the emergency change window. Maria's governance work was a short emergency huddle, a Decision Log entry, and the discipline to involve the COO when business consequence could not be accepted by security.
 
 ### Operating under the 5-person rhythm
 
-The MVC spine did not break under pressure. The weekly 1-hour cadence absorbed the Critical triage in Maria's 20-minute risk slot. The Decision Log made Maria's exception approval auditable without a separate meeting. The exposure backlog spreadsheet gave Priya a place to capture every finding without opening a ticket for each one.
+The MVC spine did not break under pressure, but it also did not pretend every decision can wait for the weekly cadence. The emergency huddle protected the PPR clock and the vendor-risk decision without creating a standing committee. The Decision Log made Maria's CISO/Governance decision and the COO's business decision auditable. The exposure backlog spreadsheet gave Priya a place to capture every finding without opening a ticket for each one.
 
 The collapse of the three pillars onto three people is the central design constraint of CERG Lite, not a workaround. Maria is doing CISO, Governance, and Risk Register work in one head. Devin is doing Engineering and Identity work in one head. Priya is doing Risk, Exposure Management, Threat Intel (read-only), and Vendor Risk in one head. The MVC spine fits because the consolidated roles each get one seat at the weekly meeting, and the records are designed to be one-row-per-event in a spreadsheet.
 
@@ -80,16 +85,16 @@ If Northwind grows to 8 people in the next year, the team will deconsolidate. Ma
 
 ## Operational outputs
 
-- 1 closed Finding Record for the customer portal Critical CVE.
-- 1 open Exception Record for the SFTP Critical CVE, with compensating monitoring and expiration date.
+- 1 closed Finding Record for the customer portal Material Risk — PPR exposure.
+- 1 open Third-Party Finding for the SFTP Critical CVE, with vendor remediation and evidence due dates.
 - 1 closed Change Record linked to the portal patch.
-- 1 Decision Log entry recording Maria's exception approval.
-- 2 evidence index rows added (one per Critical outcome).
-- 11 High findings flagged for the biweekly SLA review; remaining 34 findings left in the backlog with SLA clocks running.
+- 1 Decision Log entry recording Maria's CISO/Governance decision and the COO's business decision to use the alternate transfer path.
+- 4 evidence index rows added (portal closure, SFTP finding, vendor evidence request, COO decision).
+- 11 High findings flagged for the biweekly exposure review; remaining 34 findings left in the backlog with PRC-VM clocks running.
 
 ## What this story does not cover
 
-- **Internal IR declaration.** Northwind's IR owner is a contracted MSSP. The story does not walk through a real internal IR event because the MVC spine deliberately defers incident ownership to the standing IR team. See Story 6 for that.
+- **Internal IR declaration.** Northwind's IR owner is a contracted MSSP. If the portal or SFTP evidence showed active compromise, Maria would call the MSSP / Incident Commander and F-06 would take over. This story covers exposure treatment before incident declaration. See Story 6 for the third-party incident pattern and IR handoff.
 - **Audit response.** Northwind is not yet regulated. When their largest customer requests a SOC 2 attestation in six months, Story 3 will be the right reference.
 - **AI tooling.** Northwind is not yet piloting AI. When the Operations Director asks about an AI assistant for the customer service team, Story 7 will be the right reference.
 
