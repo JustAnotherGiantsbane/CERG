@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-FLOW-001 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -51,7 +51,7 @@ Every flow in this document follows a consistent structure. When implementing a 
 | F-03 Asset Registration | Go-live approval, new asset, major change, ownership change, decommission | Owner confirmed + classification complete + coverage validated + gaps resolved as finding/risk |
 | F-04 Finding → Remediation | Vulnerability, adversarial test, threat intel, third-party, incident, audit, architecture review | Treatment executed + validated + exception/acceptance recorded if used + evidence linked + reporting updated |
 | F-05 Change & Release | Normal/major/emergency change, release candidate, config/identity/encryption change | Change executed + control continuity checked + SIA reviewed + emergency bypass recorded + evidence linked |
-| F-06 Incident → Recovery | Validated incident, material event, third-party incident, active exploitation, regulatory notification | Containment/recovery done + timeline/investigation produced + lessons learned recorded + corrective actions assigned + evidence delivered |
+| F-06 Incident → Recovery | Incident declared by standing IR team, material event, third-party incident with internal impact, active exploitation, regulatory notification support request | IR-owned response closed or stabilized + CERG support evidence delivered + lessons learned routed + corrective actions assigned |
 | F-07 Metrics & Oversight | Monthly/quarterly cycle, threshold breach, missed SLA, maturity assessment, board request | Metrics collected + thresholds evaluated + actions assigned for outliers + CISO review done + report published |
 
 ### Minimum Process Records
@@ -65,7 +65,7 @@ After each flow executes, these records must exist. If a record is missing, the 
 | F-03 Asset Registration | Asset Record | Asset ID, type, owners, environment, classification, criticality, coverage status |
 | F-04 Finding → Remediation | Finding Record; Risk Record if promoted; Exception Record if used | Finding ID, source, severity, assets, owners, treatment, due date, validation result |
 | F-05 Change & Release | Change Record | Change ID, type, assets, SIA, implementation window, rollback plan, control continuity result |
-| F-06 Incident → Recovery | Incident Record, Improvement Record | Incident ID, severity, timeline, containment actions, investigation summary, lessons learned, corrective actions |
+| F-06 Incident → Recovery | IR-owned Incident Record, CERG Improvement Record if program change is required | Incident ID, severity, timeline reference, CERG support actions, evidence package, lessons learned, corrective actions |
 | F-07 Metrics & Oversight | Reporting Metric Record | Metric name, definition, source, period, threshold, actual value, action assigned |
 
 ### SLA Exception Logic
@@ -864,90 +864,99 @@ Not all changes carry the same security risk. The table below defines what each 
 ## 14. Flow F-06 — Incident to Recovery to Standards Feedback
 
 ### Purpose
-Handle incidents consistently across environments while forcing lessons learned into engineering controls, risk posture, and governance artifacts.
+Define how CERG supports the standing Incident Response team during and after an incident, then converts verified lessons into engineering controls, risk posture, governance artifacts, metrics, and program improvements.
 
-> **IR Ownership:** The standing Incident Response team owns incident operations, the IR plan, regulatory notification clocks, and exercise management. CERG is not responsible for IR operations. This flow defines CERG's *supporting role* during incidents — evidence collection, reporting, and ensuring lessons learned feed back into CERG controls, standards, and metrics. The Incident Commander's authority during an active incident supersedes any CERG workflow step.
+> **IR Ownership:** The standing Incident Response team owns incident declaration, classification, command, the IR plan, regulatory notification-clock process, and exercise management. CERG is not responsible for IR operations. This flow defines CERG's *supporting role* during incidents: supplying asset context, exposure analysis, control evidence, recovery dependencies, regulatory mapping support, and post-incident improvement routing. The Incident Commander's authority during an active incident supersedes any CERG workflow step.
 
 ### Primary Owner
-**Risk Pillar**
+**Incident Commander / Standing Incident Response Team** for active incident operations.
+
+**CERG Governance Pillar** for CERG-owned evidence packaging, lessons-learned routing, standards feedback, and improvement tracking after the IR team requests support or closes active response.
 
 ### Supporting Owners
 - Engineering Pillar
+- Risk Pillar
 - Governance Pillar
 - CISO
+- Evidence Librarian
 
 ### Trigger Events
-- Alert validated as incident
-- Material security event declared
+- Incident declared by the Incident Commander or standing IR team
+- Material security event requiring CERG support
 - Third-party incident with internal impact
-- Active exploitation of known issue
-- Regulatory notifiable event
+- Active exploitation of a known issue in CERG-managed scope
+- Incident Commander, Legal, or Governance request for regulatory evidence or control-impact support
 
 ### Primary Record
-**Incident Record**
+**IR-owned Incident Record** during active response.
 
+**CERG Improvement Record** or related CERG record when the incident produces a control, risk, standard, evidence, or metric change.
 
 ### Required Inputs
 - Incident ID
-- Severity
-- Detected time
+- Incident Commander
+- Severity assigned by the IR process
+- Detected time or timeline reference
 - Affected assets
 - Suspected scope
 - Business owner
-- Incident commander
 - Regulatory scope
-- Legal / notification requirements
-- Containment strategy
+- CERG support requested
+- Evidence-preservation requirements
+- Containment or recovery decisions requiring CERG execution
 
+### Incident Severity Reference
 
-### Incident Severity Classification and Response Times
+Incident severity and response clocks are governed by the Incident Response Plan, not by this flow. CERG records use the paired labels below only to align CERG support records with the IR-owned incident record.
 
-| Severity | Description | IC Assignment | Containment Target | Lessons Learned Due |
-|----------|------------|--------------|-------------------|---------------------|
-| **P1 — Critical** | Active threat to life safety, grid reliability, or material business disruption | 15 minutes | 4 hours | 5 business days |
-| **P2 — High** | Confirmed compromise of regulated data, privileged access, or crown jewel system | 1 hour | 24 hours | 10 business days |
-| **P3 — Medium** | Suspected compromise, policy violation with exposure, or third-party incident with internal impact | 24 hours | 5 business days | 30 days |
-| **P4 — Low** | Isolated policy violation, informational alert, or routine incident | 5 business days | Next business day after triage | 90 days |
+| IR Severity | CERG Support Label | Meaning |
+|---|---|---|
+| **Sev 1** | **P1 / Critical** | Material business, safety, reliability, regulated-data, or crown-jewel impact. |
+| **Sev 2** | **P2 / Significant** | Confirmed compromise or regulated impact requiring full IR coordination. |
+| **Sev 3** | **P3 / Moderate** | Scoped compromise or material event requiring targeted CERG support. |
+| **Sev 4** | **P4 / Minor** | Localized event or alert requiring routine support or monitoring only. |
 
 ### Workflow
-1. Risk validates and classifies incident.
-2. CISO assigns or confirms Incident Commander.
-3. Engineering executes containment, eradication, and recovery changes.
-4. Governance manages notifications, evidence, and reporting obligations.
-5. Risk completes scope analysis and root cause assessment.
-6. Governance opens lesson-learned and feedback decision record.
-7. Engineering implements required corrective actions.
-8. Governance determines standards, procedure, and metrics updates.
+1. Incident Commander or standing IR team declares the incident, assigns severity, and opens the IR-owned Incident Record.
+2. Incident Commander requests CERG support and names the CERG outputs needed: asset context, logs, control evidence, risk history, vendor context, recovery dependency, regulatory mapping support, or technical execution.
+3. Risk supplies exposure context, threat intelligence, affected-control analysis, and investigation support under Incident Commander / Lead Investigator direction.
+4. Engineering executes containment, eradication, recovery, access, network, configuration, or restoration changes approved through the IR process.
+5. Governance supplies regulatory mapping, evidence indexing, decision-log support, and reporting artifacts under Incident Commander and Legal direction. Governance does not own the notification-clock process.
+6. Evidence Librarian preserves CERG-produced evidence and links it to the IR-owned Incident Record or submitted evidence package.
+7. After active response is closed or stabilized, Governance opens the CERG lessons-learned and feedback decision record.
+8. Engineering, Risk, and Governance assign corrective actions, risk-register updates, standards/procedure changes, metrics updates, or program improvement records.
 
-### Mandatory Post-Incident Outputs
-- Root cause class
-- Control failure class
-- Standards/procedure change decision
+### Mandatory Post-Incident CERG Outputs
+- CERG support actions and evidence package
+- Root cause or control-failure input supplied to the IR team
+- Risk-register update decision
+- Control, standard, or procedure change decision
 - Metrics/KRI update decision
-- Corrective-action owner
-- Review due date
+- Corrective-action owner and due date
+- Program Improvement Record when the lesson changes how CERG operates
 
 ### Mandatory Rules
-- Incident closure requires a lessons-learned decision, not only technical recovery.
-- If an incident exposes previously accepted risk, the acceptance rationale must be reviewed.
-- Recurring incident pattern in the same control family creates a Control Change Record.
+- CERG does not close the incident; the Incident Commander or standing IR team closes active response.
+- CERG's post-incident work is not complete until the lessons-learned decision is recorded, even if technical recovery is complete.
+- If an incident exposes previously accepted risk, the acceptance rationale and treatment conditions must be reviewed through the risk process.
+- A recurring incident pattern in the same control family creates a Control Change Record or Program Improvement Record.
+- Regulatory notification decisions are made through the IR, Legal, and executive process; CERG Governance records and preserves the supporting evidence it supplies.
 
-
-### Closure Criteria
-- Containment, eradication, and recovery completed
-- Incident timeline and investigation summary produced
-- Root cause class and control failure class determined
-- Lessons-learned decision recorded (standards, procedure, or metrics update — or no-change-with-rationale)
-- Corrective actions assigned with owner and due date
-- Notification and evidence package delivered
-- Previously accepted risk reviewed if incident exposed it
+### Closure Criteria for CERG Support
+- Incident Commander has closed or stabilized the active-response phase, or released CERG from active support.
+- CERG support actions are recorded and linked to the IR-owned Incident Record.
+- CERG-produced evidence package is stored and indexed.
+- Root cause and control-failure inputs are delivered to the IR team or lessons-learned process.
+- Lessons-learned decision recorded: standards, procedure, risk, control, metric, or no-change-with-rationale.
+- Corrective actions assigned with owner and due date.
+- Previously accepted risk reviewed if the incident exposed it.
 
 ### Evidence Required
-- Incident timeline
-- Recovery action log
-- Investigation summary
-- Notification and evidence package
-- Improvement record
+- IR timeline reference or incident record link
+- CERG support action log
+- Asset, data, control, risk, vendor, or recovery evidence supplied to the IR team
+- Evidence-preservation and submission package links
+- Lessons-learned or Program Improvement Record
 
 ---
 
@@ -1202,7 +1211,7 @@ Implement:
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-FLOW-001 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-17 |
 | **Classification** | Public |
@@ -1219,6 +1228,7 @@ Implement:
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.2 | 2026-06-18 | Governance Pillar Leader | Rewrote F-06 to preserve Incident Commander / standing IR team authority for active incident operations while defining CERG support, evidence, and post-incident improvement routing. |
 | 1.1 | 2026-06-17 | Governance Pillar Leader | Added AI routing rules to F-02, including AI intake, sanctioned-tool register, system/model register, and escalation criteria for sensitive data, regulated scope, consequential decisions, and autonomous agency. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Seven cross-pillar operational flows, five shared state models, five minimum record templates, LLM execution directives, and recommended implementation sequence. |
 
