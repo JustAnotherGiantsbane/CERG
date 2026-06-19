@@ -34,7 +34,7 @@
     },
     "PRC": {
       "type": "Procedure",
-      "pillar": "risk",
+      "pillar": "varies-by-document",
       "count": 12
     },
     "PLN": {
@@ -83,7 +83,7 @@
     },
     "PRC": {
       "type": "Procedure",
-      "pillar": "risk"
+      "pillar": "varies-by-document"
     },
     "PLN": {
       "type": "Plan / Package",
@@ -1336,7 +1336,7 @@
       "prefix": "PRC",
       "title": "Access Management Runbook",
       "type": "procedure",
-      "pillar": "risk",
+      "pillar": "engineering",
       "status": "Approved",
       "version": "1.0",
       "classification": "Public",
@@ -1356,7 +1356,7 @@
       "prefix": "PRC",
       "title": "Architecture Review and Project Intake Procedure",
       "type": "procedure",
-      "pillar": "risk",
+      "pillar": "engineering",
       "status": "Approved",
       "version": "1.0",
       "classification": "Public",
@@ -1376,7 +1376,7 @@
       "prefix": "PRC",
       "title": "Audit and Evidence Management Procedure",
       "type": "procedure",
-      "pillar": "risk",
+      "pillar": "governance",
       "status": "Approved",
       "version": "1.0",
       "classification": "Public",
@@ -1416,7 +1416,7 @@
       "prefix": "PRC",
       "title": "Security Change Management Procedure",
       "type": "procedure",
-      "pillar": "risk",
+      "pillar": "engineering",
       "status": "Approved",
       "version": "1.0",
       "classification": "Public",
@@ -1436,7 +1436,7 @@
       "prefix": "PRC",
       "title": "Incident Response Playbook Set",
       "type": "procedure",
-      "pillar": "risk",
+      "pillar": "external-interface",
       "status": "External Interface",
       "version": "1.1",
       "classification": "External Interface",
@@ -1456,7 +1456,7 @@
       "prefix": "PRC",
       "title": "Lessons Learned and Program Improvement Procedure",
       "type": "procedure",
-      "pillar": "risk",
+      "pillar": "governance",
       "status": "Approved",
       "version": "1.0",
       "classification": "Public",
