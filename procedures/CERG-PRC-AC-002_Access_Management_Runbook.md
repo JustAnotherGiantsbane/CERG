@@ -6,13 +6,13 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AC-002 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Identity Engineer |
 | **Parent Policy** | [`CERG-POL-001`](../governance/CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
 | **Parent Standard** | [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) - Access Management Standard |
-| **Supporting Documents** | [CERG-GOV-CB-001](../governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-CR-001](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
+| **Supporting Documents** | [CERG-GOV-CB-001](../governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) · [CERG-STD-CR-001](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) · [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) · [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [CERG-PRC-AUD-001](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) · [CERG-PRC-AR-001](CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) · [CERG-PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
 | **Review Cycle** | Annual / On IAM tooling change |
 | **Frameworks** | [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (AC, IA, AU) · [NIST 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html) · [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (PROTECT) |
 | **Regulations** | NERC-CIP CIP-004 / CIP-005 · [CMMC L2](https://dodcio.defense.gov/CMMC/) (3.1, 3.5) · SOX ITGC (Access) |
@@ -169,6 +169,25 @@ Same as 3.3 with all SLAs collapsed to "immediately" and the SOC alerted to moni
 - Reviewers who certify > X% of items in < Y minutes are flagged for sampling-audit.
 - Certifications of dormant accounts (> 60 days unused) require explicit justification.
 - Reviewers who never modify or remove are sampled.
+
+### 5.4 Privileged Access Review Evidence Checklist
+
+Every quarterly privileged access review evidence package must be complete enough for an auditor, the Evidence Librarian, or a future reviewer to reperform the review without asking the reviewer what they meant. Store the package as an **Access Review Record** / **Evidence Index Entry** per [`CERG-GOV-CAT-002`](../governance/CERG-GOV-CAT-002_Record_Catalog.md) and evidence quality rules in [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md).
+
+| Evidence element | Required content | Minimum evidence |
+|---|---|---|
+| Population | Complete privileged-user and privileged-group population in scope, including administrators, break-glass accounts, service principals with admin-equivalent rights, vendor privileged accounts, and emergency roles. | Timestamped export from IdP, PAM, IGA, directory, SaaS admin console, or CMDB source of truth. |
+| Scope | Systems, applications, environments, privileged roles, data classes, and regulatory scope covered by the review. | Scope statement tied to system owner / application owner and control IDs AC-2 / AC-6. |
+| Review period | Start and end date of the access population and activity period reviewed. | Campaign metadata, export timestamp, and period label in file name or evidence index. |
+| Reviewer | Named reviewer for each system, role, or entitlement group. | Reviewer assignment list or IGA campaign owner mapping. |
+| Reviewer authority | Proof that the reviewer is authorized to approve or remove the access being reviewed. | System owner list, role owner map, manager mapping, or approved delegation record. |
+| Review decisions | Per-user / per-entitlement decision: certify, remove, modify, investigate, or exception. Bulk certify is allowed only with retained population detail. | IGA decision export, signed spreadsheet, or workflow report with decision timestamps. |
+| Removals and modifications | All removed or modified entitlements, target completion date, actual completion date, and implementer. | Removal ticket, IGA fulfillment log, IdP/PAM change log, or change record. |
+| Post-removal validation | Evidence that removals/modifications actually took effect. | Timestamped post-change export or before/after comparison showing entitlement removed or changed. |
+| Exceptions | Any retained access that violates role, SoD, dormant, standing privilege, MFA, or PAM requirements. | Security Exception Record or Risk Acceptance Record with owner, rationale, compensating controls, expiration, and RMF authority where applicable. |
+| Evidence-library location | Single pointer to the complete review package and all supporting exports. | Evidence Index Entry with system, period, owner, quality tier, and retention label. |
+
+A privileged access review is incomplete if the population is missing, the reviewer lacks authority, decisions are not recorded at entitlement level, removals are not validated after implementation, or exceptions are retained only in email/chat rather than the exception or risk process.
 
 ---
 
@@ -349,7 +368,7 @@ Phishing-resistant MFA coverage is reported as `ID-001` in [`CERG-GOV-MTR-001`](
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AC-002 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / IAM tooling change |
-| **Change Log** | 1.0 - Initial publication. JML, access request, recertification, PAM, break-glass, service accounts, secrets, vendor access, MFA. Dual operating model preserved. |
+| **Change Log** | 1.1 - Added privileged access review evidence checklist and PRC-AUD evidence linkage. 1.0 - Initial publication. JML, access request, recertification, PAM, break-glass, service accounts, secrets, vendor access, MFA. Dual operating model preserved. |
