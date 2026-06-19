@@ -88,7 +88,7 @@
   title: Record Catalog
   document_type: governance_instrument
   domain: CAT
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -97,7 +97,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CAT-002_Record_Catalog.md
   source_file: CERG-GOV-CAT-002_Record_Catalog.md
-  source_hash: 0f3aed6be342e9a384a9f3111121055296bba4bb6f97e5e0ed639bae94e78ece
+  source_hash: bf93c51a834b51cb8e72aa4ef8aaf1f29001e547c125d965077143acba9f9b05
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-002_Record_Catalog.md
   llm_include: true
   llm_priority: medium
@@ -248,7 +248,7 @@
   title: Cross-Pillar Operational Flows
   document_type: governance_instrument
   domain: FLOW
-  version: 1.3
+  version: 1.4
   status: Approved
   classification: Public
   publication_profile: public
@@ -257,7 +257,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md
   source_file: CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md
-  source_hash: 04e665920ed924747ead6d2b93ec5ab7a8fe0c8e1c16dfdfc5faccdc532e5803
+  source_hash: 689e94161ccf70357a9b739a622a34258e84595720ce6d55c00e63cb9c7b9d79
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md
   llm_include: true
   llm_priority: medium
