@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-RM-001 |
-| **Version** | 1.03 |
+| **Version** | 1.04 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |
@@ -223,7 +223,13 @@ Every treatment decision records:
 - Compensating controls, in place now and required for the duration of the plan.
 - Trigger conditions for re-evaluation, what would invalidate the current decision.
 
-### 5.2 Risk Acceptance Has Two Forms
+### 5.2 Funding or Capacity Decision Brief
+
+When a treatment cannot proceed because funding, staffing, change-window capacity, vendor spend, or business prioritization is unavailable, the Risk Register Owner attaches a Control Funding Decision Brief using [`CERG-GOV-MTR-001`](../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) §6.1. The brief records the decision needed, control/risk link, business capability affected, options, deadline, and consequence of deferral.
+
+A funding or capacity deferral does not by itself accept residual risk. If residual risk remains after the decision, the Business Owner or required RMF-001 authority must complete [`CERG-TMPL-RM-004`](../templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md), and the risk register records the acceptance, expiration, treatment owner, and next review date.
+
+### 5.3 Risk Acceptance Has Two Forms
 
 | **Form** | **Description** |
 |---|---|
@@ -543,7 +549,7 @@ The register is not a parallel system to these programs. It is the connective ti
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-RM-001 |
-| **Version** | 1.03 |
+| **Version** | 1.04 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |
@@ -560,6 +566,7 @@ The register is not a parallel system to these programs. It is the connective ti
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.04 | 2026-06-18 | Governance Pillar Leader | Added funding/capacity decision brief routing and clarified that funding deferral does not itself accept residual risk. |
 | 1.03 | 2026-06-18 | Governance Pillar Leader | Made RMF-001 the explicit source of truth for scoring and acceptance authority, removed competing local calibration thresholds, clarified Business Owner consequence acceptance, and constrained TMPL-RM-003 to a supporting memo role. |
 | 1.02 | 2026-06-18 | Governance Pillar Leader | Added §7.1 Exception vs. Risk Acceptance routing table distinguishing Security Exception (→TMPL-RM-002, Governance-tracked) from Risk Acceptance (→TMPL-RM-004, Business Owner + RMF-001 authority). Renumbered subsequent subsections. Updated §7.6 template references. |
 | 1.01 | 2026-06-14 | Governance Pillar Leader | Aligned scoring bands, approval summaries, and duration guidance to the canonical RMF authority table. |
