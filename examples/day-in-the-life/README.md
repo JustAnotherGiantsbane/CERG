@@ -33,6 +33,7 @@ These stories are illustrative, not normative. They may reference documents or s
 | 8 | [CERG Lite - Maria and the Tuesday scanner report](story-8-cerg-lite-maria.md) | F-04 | Small-team MVC operations and exposure triage |
 | 9 | [F-01 Control Intent - when the regulator changes the rule](story-9-f-01-control-intent.md) | F-01 | Translating regulatory change into implementation work |
 | 10 | [The new CISO's first 90 days](story-10-new-ciso-90-days.md) | MVC + F-07 | First-quarter operating rhythm for a new security leader |
+| 11 | OT maintenance-window patch deferral | F-04 | OT/BES patch deferral, CIP routing, and compensating controls |
 
 ---
 
@@ -402,5 +403,57 @@ The pilot launches with user guidance, logging, and a named Business Owner. Afte
 - Pilot restrictions and administrative controls evidenced.
 - Risk review completed before broad rollout.
 - Metrics updated for AI governance and adoption oversight.
+
+---
+
+
+## Story 11: OT maintenance-window patch deferral
+
+### Situation
+
+A monthly exposure review finds a High vulnerability on an OT historian that supports a substation operations view. The vendor patch is available, but the OT owner says the patch cannot be applied until the next approved maintenance window without risking operational disruption. The asset is adjacent to BES monitoring data but is not itself a BES Cyber System.
+
+### CERG flow pattern
+
+Primary flow: [F-04 Finding to Remediation, Exception, or Residual Risk](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#11-flow-f-04--finding-to-remediation-exception-or-residual-risk)
+
+Supporting procedures and standards:
+
+- [Exposure Management Procedure](../../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) §7.4
+- [Grid Control Systems Security Standard](../../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) §11
+- [Risk Register and Exception Process](../../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md)
+- [Risk Acceptance Request Form](../../templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md)
+- [Record Catalog](../../governance/CERG-GOV-CAT-002_Record_Catalog.md)
+
+### Walkthrough
+
+| Step | What happens | Primary owner | Record or evidence |
+|------|--------------|---------------|--------------------|
+| 1 | Risk validates the scanner finding with OT-safe context: affected version, exploitability, network reachability, and whether the asset is BES Cyber System scope. | Risk Pillar / OT Risk Analyst | Finding Record |
+| 2 | Engineering and OT operations confirm that immediate patching would disrupt the operational window and identify non-patch treatments. | Engineering Pillar / OT Security Engineer | Treatment analysis |
+| 3 | Governance confirms the route: non-BES OT operational-window deferral, not a CIP deviation. | Governance Pillar / NERC-CIP Compliance Manager if needed | Routing note |
+| 4 | Engineering implements compensating controls: restrict management access, block the vulnerable service path, confirm monitoring, and document rollback. | Engineering Pillar | Compensating-control evidence |
+| 5 | Risk keeps the finding open, records the next maintenance window as the treatment date, and monitors for threat-intelligence changes. | Risk Pillar | Exposure pipeline update |
+| 6 | If the asset is later determined to be BES Cyber System scope or the deferral would create a CIP compliance gap, Governance reroutes to the BES/CIP deviation path. | Governance Pillar | CIP applicability / deviation record |
+| 7 | After the maintenance window, Engineering applies the patch, verifies service health, and supplies closure evidence. | Engineering Pillar | Closure evidence |
+
+### Example day-in-the-life narrative
+
+The scanner report arrives Monday morning, but the finding does not become a generic 30-day patch ticket. Risk checks reachability and confirms that the vulnerable service is only reachable from the OT management subnet. Engineering confirms that the affected historian feeds an operator dashboard and that an immediate reboot would interrupt a scheduled reliability test.
+
+The OT Security Engineer proposes three non-patch treatments for the deferral window: block the vulnerable service from non-management subnets, require jump-host access for administration, and add a detection for unexpected connection attempts. Governance checks the asset classification and confirms this is a non-BES OT operational-window deferral. Because CIP compliance is not affected, the team does not open a CIP deviation; it documents the CIP applicability note and stores the evidence with the Finding Record.
+
+The Business Owner accepts the short operational deferral only after seeing the compensating controls, the maintenance-window date, and the consequence if exploitation occurs. Risk does not close the finding. The exposure remains open with a deferral route, a named owner, and a review date. Two weeks later, threat intelligence reports active exploitation of the same product in the sector. Risk reopens the decision, Engineering adds a temporary allow-list rule, and the Business Owner confirms the maintenance window will not slip.
+
+During the maintenance window, Engineering patches the historian, validates service health with OT operations, and captures version evidence. Governance verifies that the record names match the Record Catalog and that the closure evidence is audit-ready. The finding closes only after the patch and verification are complete.
+
+### Operational outputs
+
+- Finding Record with OT/BES scope determination.
+- Non-patch treatment analysis and compensating-control evidence.
+- Maintenance-window deferral route documented under PRC-VM §7.4.
+- CIP applicability note or CIP deviation record when applicable.
+- Business Owner consequence decision if residual risk remains during the deferral.
+- Verified closure evidence after patching.
 
 ---
