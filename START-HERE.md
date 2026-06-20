@@ -25,8 +25,20 @@ If you are still unsure where to begin, use these four helpers before diving int
 - [Adoption Decision Tree and Dependency Matrix](governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md) - which path and overlays apply, plus what must be adopted together.
 - [Role-Based Implementation Checklists](governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md) - what the CISO, Governance, Risk, and Engineering leads do first.
 - [Record Catalog](governance/CERG-GOV-CAT-002_Record_Catalog.md) - the records and minimum evidence that prove the program is operating.
-- [Day in the Life examples](examples/day-in-the-life/README.md) - seven narrative walkthroughs showing how the three pillars produce real work during incidents, audits, intake, AI rollouts, and access reviews. Read one before you read the standards.
-- [Role Reader Paths](governance/CERG-GOV-IMP-007_Role_Reader_Paths.md) - a sequenced 30-35 minute reading order for the CISO, Risk Lead, and Engineering Lead if you are taking on a CERG role for the first time.
+- [Day in the Life examples](examples/day-in-the-life/README.md) - eleven narrative walkthroughs showing how the three pillars produce real work during incidents, audits, intake, AI rollouts, access reviews, new-CISO adoption, and OT patch deferral. Read one before you read the standards.
+- [Role Reader Paths](governance/CERG-GOV-IMP-007_Role_Reader_Paths.md) - a sequenced 25-35 minute reading order for the CISO, Risk Lead, Engineering Lead, and Business Owner / System Sponsor if you are taking on a CERG role for the first time.
+
+### Adoption suite map
+
+| If you need to... | Use |
+|---|---|
+| Pick the right adoption path in the first hour | This START-HERE page |
+| Understand the narrative rollout model | [IMP-001 Implementation and Adaptation Guide](governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) |
+| Avoid unsafe tailoring and authority collapse | [IMP-002 Adoption Safety Guide](governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md) |
+| Run CERG with 2-8 people | [IMP-003 Small Team Adoption Path](governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md) |
+| Decide Lite / Standard / Regulated and dependencies | [IMP-005 Decision Tree and Dependency Matrix](governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md) |
+| Convert reading into action | [IMP-006 Role-Based Implementation Checklists](governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md) |
+| Onboard a specific role quickly | [IMP-007 Role Reader Paths](governance/CERG-GOV-IMP-007_Role_Reader_Paths.md) |
 
 ---
 
