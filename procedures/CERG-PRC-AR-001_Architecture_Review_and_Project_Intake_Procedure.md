@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AR-001 |
-| **Version** | 1.0 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
@@ -34,7 +34,8 @@
 11. [Templates](#11-templates)
 12. [Metrics](#12-metrics)
 13. [Regulatory and Framework Alignment Summary](#13-regulatory-and-framework-alignment-summary)
-14. [Document Control](#14-document-control)
+14. [Pre-Approved Architecture Patterns](#14-pre-approved-architecture-patterns)
+15. [Document Control](#15-document-control)
 
 ---
 
@@ -43,6 +44,8 @@
 The Operating Model makes Engineering project engagement a core CERG delivery model. The RMF Phase 3 describes concept, design, build, pre-production, and production handoff outputs. Until this procedure, the intake forms, review checklists, threat modeling guidance, signoff criteria, and handoff packages those phases require existed implicitly.
 
 This procedure defines how a project enters CERG attention, how Engineering reviews it, how Risk threat-models it, how findings flow to remediation or risk acceptance, and how the system enters production with the right documentation, baselines, monitoring, and accepted exceptions.
+
+The standalone [`CERG-TMPL-AR-001`](../templates/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md) is the canonical front-door intake form for Phase 1. This procedure remains authoritative for the Phase 2 architecture review record, Phase 4 pre-production security review record, Phase 5 production handoff package, and go-live risk acceptance packet.
 
 > **Engineering's Job Is to Be in the Room Early**
 >
@@ -158,6 +161,8 @@ A project claiming lightweight review must cite the approved pattern it reuses a
 Intake is fast (< 5 business days) and produces a Scope Determination that drives every subsequent phase.
 
 ### 5.1 Security Project Intake Form (Template)
+
+Use [`CERG-TMPL-AR-001`](../templates/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md) for the authoritative Phase 1 intake form. The structure below is retained as the procedure-level minimum content model and for adopters embedding intake directly into a ticketing system.
 
 ```
 SECURITY PROJECT INTAKE - AR-YYYY-NNNN
@@ -512,7 +517,18 @@ Where a diagram is implicit (e.g., a pure SaaS service has no on-prem network), 
 
 ## 11. Templates
 
-The templates below are part of this procedure. The intake form (§5.1), threat model (§6.2), handoff package (§9.1), and go-live risk acceptance (§9.2) above are the authoritative templates. Promotion of any of these to a standalone `CERG-TMPL-AR-*` artifact is tracked in [`CERG-GOV-CAT-001`](../governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) as a V1.x planned item.
+Architecture review uses one standalone intake template and several procedure-owned record patterns. Authority is split as follows:
+
+| **Artifact** | **Authoritative Source** | **Purpose** |
+|---|---|---|
+| Phase 1 Architecture and Project Intake Form | [`CERG-TMPL-AR-001`](../templates/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md) | Opens the engagement, records scope determination, and routes follow-on records. |
+| Phase 2 Architecture Review Record | This procedure §6.4 and worked example Appendix A | Records findings, conditions, and Engineering disposition. |
+| Phase 2 Threat Model Record | This procedure §6.2 and [`CERG-PRC-TM-001`](CERG-PRC-TM-001_Threat_Modeling_Procedure.md) | Records threats, assumptions, residual risks, and simulation candidates. |
+| Phase 4 Pre-Production Security Review Record | This procedure §8 | Confirms readiness evidence and records Ready / Ready-with-Risk-Acceptance / Not Ready disposition. |
+| Phase 5 Production Handoff Package | This procedure §9.1 | Consolidates review records, control posture, evidence pointers, recurring obligations, and sign-offs for the asset record. |
+| Go-Live Risk Acceptance Packet | This procedure §9.2 and [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Documents accepted residual risk at go-live when required by the canonical risk authority path. |
+
+A completed [`CERG-TMPL-AR-001`](../templates/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md) is not evidence that Phase 2, Phase 4, or Phase 5 has been completed. It is the intake and routing record that starts the chain.
 
 ---
 
@@ -586,11 +602,32 @@ Good governance makes projects faster because teams can design correctly before 
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AR-001 |
-| **Version** | 1.0 |
+| **Version** | 1.2 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / on platform or process change |
-| **Change Log** | 1.1 - Added Appendix A worked example. 1.0 - Initial publication. Establishes intake, review, threat-model, build-time, pre-prod, and handoff phases with the citizen-development carve-out. |
+| **Change Log** | 1.2 - Clarified standalone intake template authority and procedure-owned closure records. 1.1 - Added Appendix A worked example. 1.0 - Initial publication. Establishes intake, review, threat-model, build-time, pre-prod, and handoff phases with the citizen-development carve-out. |
 
+### Revision History
+
+| **Version** | **Date** | **Author** | **Change Summary** |
+|---|---|---|---|
+| 1.2 | 2026-06-18 | Engineering Pillar Leader | Reconciled TMPL-AR-001 as the Phase 1 front-door intake form and clarified that PRC-AR-001 owns Phase 2-5 review, handoff, and go-live risk records. |
+| 1.1 | 2026-06-13 | Engineering Pillar Leader | Added Appendix A worked example. |
+| 1.0 | 2026-05-22 | Cyber Governance | Initial publication. Establishes intake, review, threat-model, build-time, pre-prod, and handoff phases with the citizen-development carve-out. |
+
+### Review Triggers
+
+- Change to architecture review intake, routing, or SLC tiers.
+- Change to the standalone intake template or procedure-owned review record structure.
+- Change to go-live risk acceptance authority.
+- Audit, assessment, or tabletop finding related to project review evidence.
+
+### Related Documents
+
+- [`CERG-TMPL-AR-001`](../templates/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md) - Architecture and Project Intake Form
+- [`CERG-PRC-TM-001`](CERG-PRC-TM-001_Threat_Modeling_Procedure.md) - Threat Modeling Procedure
+- [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) - Risk Register and Exception Process
+- [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) - Third Party and Supply Chain Risk Procedure
 
 ---
 
