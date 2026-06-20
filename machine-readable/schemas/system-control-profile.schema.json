@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cerg.nexus/schemas/system-control-profile.schema.json",
+  "title": "CERG System Control Profile",
+  "description": "Structured per-system or per-system-class control implementation, evidence, validation, and review record.",
+  "type": "object",
+  "required": [
+    "system_id",
+    "name",
+    "classification",
+    "system_owner",
+    "technical_owner",
+    "environment",
+    "profile_status",
+    "last_profile_review",
+    "next_profile_review",
+    "controls_applied"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "system_id": { "type": "string", "minLength": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "classification": { "type": "string", "minLength": 1 },
+    "system_owner": { "type": "string", "minLength": 1 },
+    "technical_owner": { "type": "string", "minLength": 1 },
+    "environment": {
+      "type": "string",
+      "enum": ["IT", "Cloud", "SaaS", "OT", "Hybrid", "Other"]
+    },
+    "regulatory_scope": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true,
+      "default": []
+    },
+    "profile_status": {
+      "type": "string",
+      "enum": ["Draft", "Approved", "Superseded", "Retired"]
+    },
+    "last_profile_review": { "type": "string", "format": "date" },
+    "next_profile_review": { "type": "string", "format": "date" },
+    "controls_applied": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/control_entry" }
+    }
+  },
+  "$defs": {
+    "control_entry": {
+      "type": "object",
+      "required": [
+        "control",
+        "implementation",
+        "evidence",
+        "evidence_type",
+        "last_validated",
+        "next_review",
+        "owner",
+        "status"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "control": {
+          "type": "string",
+          "pattern": "^[A-Z]{2,4}-[0-9A-Z.-]+$"
+        },
+        "implementation": { "type": "string", "minLength": 1 },
+        "evidence": { "type": "string", "minLength": 1 },
+        "evidence_type": { "type": "string", "minLength": 1 },
+        "last_validated": { "type": "string", "format": "date" },
+        "next_review": { "type": "string", "format": "date" },
+        "owner": { "type": "string", "minLength": 1 },
+        "status": {
+          "type": "string",
+          "enum": [
+            "Implemented",
+            "Partially Implemented",
+            "Planned",
+            "Inherited",
+            "Exception",
+            "Accepted Risk",
+            "Not Applicable"
+          ]
+        },
+        "related_risks": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": []
+        },
+        "related_exceptions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": []
+        },
+        "related_findings": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": []
+        },
+        "related_poams": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": []
+        }
+      }
+    }
+  }
+}
