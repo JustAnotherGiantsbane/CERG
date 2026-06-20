@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-STD-OT-001 |
-| **Version** | 1.21 |
+| **Version** | 1.22 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (OT/NERC-CIP) |
@@ -298,14 +298,16 @@ The following table maps this standard's major requirement areas to applicable r
 
 ## 11. Exceptions and Escalation
 
-No control in this standard may be waived without a documented exception. Exceptions to BES Cyber System requirements carry additional obligations.
+No control in this standard may be waived without a documented exception. OT patch deferral and exposure-treatment deferral follow [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) §7.4. Exceptions to BES Cyber System requirements carry additional obligations and may require a NERC-CIP deviation or mitigation plan in addition to CERG risk/exception records.
 
-| **Exception Type** | **Approval Required** | **Process** | **Review Cycle** |
+| **Exception / Deferral Type** | **Approval Required** | **Process** | **Review Cycle** |
 |---|---|---|---|
-| Standard exception (non-BES OT) | CISO | Submit risk acceptance via risk register with compensating control documentation. Engineering must review compensating controls before CISO approval. | Annual |
-| BES Cyber System - compliance posture unaffected | CISO | Same as above, plus notation in NERC-CIP evidence library. Exception must not create a compliance gap. | Annual |
-| BES Cyber System - CIP compliance impact | CISO + NERC-CIP deviation process | Initiate CIP deviation and mitigation plan. Notify regulatory liaison. Document mitigation plan with timeline. | Per mitigation plan milestones |
-| Emergency exception (operational necessity) | CISO (post-hoc within 24 hours) | Operational team may take emergency exception to prevent grid disturbance. Document immediately. CISO reviews and either approves formal exception or directs expedited remediation. 30-day maximum duration. | 30 days maximum |
+| Non-BES OT operational window | Risk Pillar Leader within PRC-VM flexibility; CISO if longer deferral or High/Critical residual risk | Schedule treatment in next approved OT maintenance window; document compensating controls, owner, and verification method. Longer deferral routes to Risk Acceptance Record under RMF-001 §9.7. | Next maintenance window; at least monthly until closure |
+| BES Cyber System - compliance posture unaffected | CISO + NERC-CIP Compliance Manager concurrence | Confirm no CIP compliance gap is created or extended; document BES asset identifier, CIP applicability note, compensating controls, and evidence-library location. | At least every 30 days until closure |
+| BES Cyber System - CIP compliance impact | CISO + NERC-CIP deviation process | Initiate CIP deviation and mitigation plan. Notify regulatory liaison as required. Risk acceptance does not replace the CIP deviation process. | Per mitigation plan milestones and regulatory deadline |
+| Emergency operational exception | CISO post-hoc within 24 hours | Operational team may delay or alter treatment only to prevent safety, reliability, or grid disturbance. Document immediately, preserve evidence, and convert to the appropriate non-BES/BES route if residual risk continues. | 30 days maximum unless converted to formal deferral / deviation path |
+
+Every OT deferral must state why non-patch treatment options (segmentation, path blocking, configuration change, compensating monitoring, vendor isolation, or service removal) cannot close the exposure sooner. Deferral does not close the finding; closure requires verified treatment or a reviewed risk/exception posture.
 
 ---
 
@@ -314,16 +316,17 @@ No control in this standard may be waived without a documented exception. Except
 | | |
 |---|---|
 | **Document ID** | CERG-STD-OT-001 |
-| **Version** | 1.21 |
+| **Version** | 1.22 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / Upon Significant Change / CIP Standard Revision |
-| **Change Log** | 1.0 - Initial publication. BES and non-BES OT environments. |
+| **Change Log** | 1.22 - Added OT/BES patch deferral and exposure-treatment routing aligned to PRC-VM §7.4. 1.0 - Initial publication. BES and non-BES OT environments. |
 
 
 ### Revision History
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.22 | 2026-06-18 | Governance Pillar Leader | Added explicit OT/BES deferral routes for non-BES maintenance windows, BES compliance-unaffected deferrals, BES compliance-impacting deviations, and emergency operational exceptions. |
 | 1.0 DRAFT | 2025 | CERG Governance | Initial release - BES and non-BES OT environments |
 
 ### Review Triggers
