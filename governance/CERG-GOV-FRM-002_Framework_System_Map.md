@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-FRM-002 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -177,6 +177,7 @@ Story 8 ([CERG Lite - Maria and the Tuesday scanner report](../examples/day-in-t
 | Prepare for audit | [AUD-001](CERG-GOV-AUD-001_Evidence_Quality_Standard.md) | [PRC-AUD-001](../procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md), operational package for the regulator |
 | Stand up risk management | [RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md) | [PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md), [TMPL-RM-001](../templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) |
 | Start exposure management | [PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | [RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md), [CAT-002](CERG-GOV-CAT-002_Record_Catalog.md) |
+| Defer an OT/BES patch or exposure treatment | [PRC-VM-001 §7.4](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md#74-otbes-patch-deferral-routing) | [STD-OT-001 §11](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md#11-exceptions-and-escalation), [RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md), [PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
 | Review a new system or SaaS | [PRC-AR-001](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | [TMPL-AR-001](../templates/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md), [PRC-TPRM-001](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
 | Show how CERG runs in practice | [Day in the Life examples](../examples/day-in-the-life/README.md) | [FLOW-001](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md), [OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) |
 | Onboard a new team member | [Day in the Life examples](../examples/day-in-the-life/README.md), [ONB-001](CERG-GOV-ONB-001_Onboarding_and_Integration_Program.md) | [RAC-001](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) |
@@ -254,7 +255,7 @@ For regulator-facing walkthroughs, see the [Day in the Life examples](../example
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-FRM-002 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Approved By** | CISO |
 | **Owner** | Governance Pillar Leader |
@@ -264,6 +265,7 @@ For regulator-facing walkthroughs, see the [Day in the Life examples](../example
 
 | **Version** | **Date** | **Author** | **Change** |
 |---|---|---|---|
+| 1.1 | 2026-06-18 | Governance Pillar Leader | Added direct practitioner navigation for OT/BES patch and exposure-treatment deferral routing. |
 | 1.0 | 2026-06-13 | Governance Pillar Leader | Initial publication. Adds a front-door system map for CERG navigation, adoption, and document relationships. |
 
 ### Review Triggers
