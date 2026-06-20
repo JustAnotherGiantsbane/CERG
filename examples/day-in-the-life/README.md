@@ -19,6 +19,8 @@ These examples show how CERG flows, roles, records, and evidence come together d
 
 These stories are illustrative, not normative. They may reference documents or stories that are planned for a future V1.x release. Where they do, the link or marker says so.
 
+**Inventory note:** Stories 1-7 and 11 are embedded below for fast scanning. Stories 8-10 are standalone files because they are longer adoption narratives. This README is the authoritative examples index for the day-in-the-life set.
+
 ## Stories at a glance
 
 | # | Story | Primary flow | Best for |
