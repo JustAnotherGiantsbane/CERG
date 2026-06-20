@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-002 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -232,7 +232,7 @@ Every tailoring decision — every document deferred, every role consolidated, e
 | Decision | Consolidate Governance Pillar Leader, Risk Register Owner, and Evidence Librarian into one person. |
 | Rationale | 5-person security team. Cannot staff three separate governance roles. Workload assessment confirms one person can perform all three functions at current organizational scale. |
 | Alternatives Considered | (1) Leave roles unfilled — rejected because register and evidence functions are critical. (2) Outsource evidence management — rejected due to cost. |
-| Risk Created | Self-review risk: the same person manages the risk register and the evidence that supports risk decisions. Mitigated by CISO review of all risk acceptance decisions. |
+| Risk Created | Self-review risk: the same person manages the risk register and the evidence that supports risk decisions. Mitigated by CISO review and independent Business Owner / Executive Sponsor acknowledgement for risk acceptance decisions. |
 | Documents Affected | OM-001 §6.1 role roster (annotated). RAC-001 accountability assignments (annotated). Per-role files for consolidated roles. |
 | Approver | CISO |
 | Review Date | Semi-annual; escalate if team grows beyond 8 people |
@@ -275,6 +275,8 @@ Every risk acceptance must have an expiration date. The defaults below apply unl
 - An expired acceptance with no renewal creates a Finding Record (severity: High).
 - The business owner must sign the acceptance. Security cannot accept risk on behalf of the business.
 - Acceptance records must document: the risk scenario, the rationale for acceptance over treatment, the compensating controls in place (if any), the residual risk, the expiration date, and the named approver.
+
+**Small-team separation rule:** role consolidation does not collapse business consequence acceptance into the security assessor. If the same person performs CISO, Risk, and Governance work in CERG Lite, an independent Business Owner or Executive Sponsor must still acknowledge the business consequence for accepted risk. If no independent business approver exists, CERG may be used as planning guidance but should not be declared authoritative for risk acceptance.
 
 ### Risk Acceptance Is Not Remediation
 
@@ -442,7 +444,7 @@ Changing these breaks the operating model. If you must change them, document the
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-002 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -459,6 +461,7 @@ Changing these breaks the operating model. If you must change them, document the
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-06-18 | Governance Pillar Leader | Added explicit small-team separation rule for business-risk consequence acceptance when security roles are consolidated. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Adoption pre-requisites, anti-patterns, decision log template, risk acceptance guardrails, regulatory honesty guidance, role collision guide, and safe/dangerous tailoring boundaries. |
 
 ### Review Triggers
