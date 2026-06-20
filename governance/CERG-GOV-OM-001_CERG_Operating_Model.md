@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
-| **Version** | 1.25 |
+| **Version** | 1.26 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
@@ -383,7 +383,7 @@ Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leade
 | **Threat Intelligence Analyst** | Risk | "Threat Intelligence Analyst" | Threat-actor tracking; advisories; intel-to-detection translation. |
 | **Vendor Risk Analyst** | Risk | "Vendor Risk Analyst," "Vendor Risk Analyst" | Operates [`CERG-PRC-TPRM-001`](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md); SCCT participation. |
 | **OT Risk Analyst** | Risk | - | OT-safe vuln assessment, ICS threat intelligence. |
-| **Identity Risk Analyst** | Risk | - | UEBA, identity-threat detection, OAuth and token risk. |
+| **Identity Risk Analyst** | Risk | - | UEBA, identity-threat detection, OAuth and token risk. Mature-program specialization; in small teams the Detection Engineer or Risk Pillar Leader covers the work. |
 | **Detection Engineer** | Risk | "Detection Engineer," "Detection Engineer" | Detection-rule authoring; ATT&CK coverage; tuning lifecycle. |
 | **Governance Pillar Leader** | Governance | "Governance Pillar Leader," "Governance Pillar Leader" (when speaking of the lead) | Pillar accountability; regulator and auditor liaison; CISO reporting; Low and Informational severity risk-acceptance authority per RMF §9.7. |
 | **NERC-CIP Compliance Manager** | Governance | "NERC-CIP Compliance Manager" | OT and BES Cyber System compliance posture. |
@@ -423,7 +423,7 @@ Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leade
 | Adversarial Testing Lead (Red Team) | Internal or partner-managed offensive validation. |
 | Vendor / Third-Party Risk Analyst | Vendor assessment and continuous monitoring. |
 | OT Risk Analyst | OT-safe vulnerability assessment; ICS threat intelligence. |
-| Identity Risk Analyst | UEBA, identity-threat detection, OAuth / token risk. |
+| Identity Risk Analyst | UEBA, identity-threat detection, OAuth / token risk. Mature-program specialization; consolidated under Detection Engineer / Risk Pillar Leader in smaller teams. |
 
 ### 6.4 Cyber Governance: Typical Roles
 
@@ -628,7 +628,7 @@ This ensures that "no single point of failure" is not just a claim about org-cha
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
-| **Version** | 1.25 |
+| **Version** | 1.26 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
@@ -644,6 +644,7 @@ This ensures that "no single point of failure" is not just a claim about org-cha
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.26 | 2026-06-18 | Governance Pillar Leader | Clarified Identity Risk Analyst as a mature-program specialization covered by Detection Engineer or Risk Pillar Leader in smaller teams. |
 | 1.25 | 2026-06-18 | Governance Pillar Leader | Clarified Security Awareness as an adjacent function: Awareness owns training operations while CERG coordinates content alignment, evidence quality, and threat context. |
 | 1.24 | 2026-06-18 | Governance Pillar Leader | Updated §4.4 COG membership with explicit standing-core and dynamic-per-agenda members (Business Unit Risk Owner for systems on agenda, Engineering/Risk pillar leaders as needed). Added COG Agenda Template with dynamic attendee section. |
 | 1.23 | 2026-06-14 | Governance Pillar Leader | Removed residual IR Plan Steward language and clarified that CERG provides IR support while the standing IR team owns the IR plan, exercises, notification clocks, and incident command. |
