@@ -8,7 +8,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-TMPL-RM-004 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |
@@ -78,11 +78,22 @@ This form records a formal **risk acceptance** decision under the authority fram
 | Acceptance Period | `[Start date to expiration date]` |
 | Acceptance Type | `[Time-bound / Standing]` |
 
-### 3.2 Business Rationale
+### 3.2 Business Decision Box
+
+| **Decision Question** | **Business Owner / Required Authority Response** |
+|---|---|
+| What residual business consequence is being accepted? | `[Plain-language consequence]` |
+| Why is acceptance preferable to immediate treatment? | `[Cost / schedule / operational / reliability / contractual rationale]` |
+| What funding or resourcing decision would retire this acceptance? | `[Decision, owner, estimate, and timing]` |
+| What conditions must remain true for this acceptance to stay valid? | `[Controls, monitoring, scope limits, review triggers]` |
+| What event would require immediate re-review or revocation? | `[Trigger]` |
+| Who owns treatment after acceptance? | `[Named business or technical owner]` |
+
+### 3.3 Business Rationale
 
 `[Explain why acceptance is the appropriate treatment compared with mitigation, transfer, or avoidance. Address: cost-to-fix vs. residual risk, operational constraints, compensating control adequacy, and regulatory implications.]`
 
-### 3.3 Alternatives Considered
+### 3.4 Alternatives Considered
 
 | **Alternative** | **Reason Not Selected** |
 |---|---|
@@ -90,7 +101,7 @@ This form records a formal **risk acceptance** decision under the authority fram
 | `[Transfer — insurance or vendor]` | `[Reason]` |
 | `[Avoid — cease the activity]` | `[Reason]` |
 
-### 3.4 Risk Assessment (Prepared by CERG Risk)
+### 3.5 Risk Assessment (Prepared by CERG Risk)
 
 | **Area** | **Assessment** |
 |---|---|
@@ -102,13 +113,13 @@ This form records a formal **risk acceptance** decision under the authority fram
 | Affected Data or Process | `[Scope]` |
 | Business Consequence if Unaddressed | `[Consequence]` |
 
-### 3.5 Conditions of Acceptance
+### 3.6 Conditions of Acceptance
 
 | **Condition** | **Owner** | **Evidence / Monitoring** | **Review Cadence** |
 |---|---|---|---|
 | `[Condition]` | `[Owner]` | `[Evidence]` | `[Cadence]` |
 
-### 3.6 Expiration and Review
+### 3.7 Expiration and Review
 
 | **Field** | **Value** |
 |---|---|
@@ -142,7 +153,7 @@ Approval authority follows [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_R
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-TMPL-RM-004 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-18 |
 | **Classification** | Public |
@@ -159,6 +170,7 @@ Approval authority follows [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_R
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.2 | 2026-06-18 | Governance Pillar Leader | Added business-facing decision box for residual consequence, treatment funding, validity conditions, and re-review triggers. |
 | 1.1 | 2026-06-18 | Governance Pillar Leader | Aligned acceptance type and related-template wording with RMF-001 authority; clarified that TMPL-RM-003 is supporting only and that Executive Sponsor accepts Critical business consequence. |
 | 1.0 | 2026-06-18 | Governance Pillar Leader | Initial release. Establishes Risk Acceptance Request Form as the distinct workflow for risk acceptances (Business Owner + per-RMF-001 authority), separate from Security Exception Requests (TMPL-RM-002). |
 
@@ -187,4 +199,4 @@ Approval authority follows [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_R
 
 ---
 
-*CERG-TMPL-RM-004 · Version 1.1 · Public*
+*CERG-TMPL-RM-004 · Version 1.2 · Public*
