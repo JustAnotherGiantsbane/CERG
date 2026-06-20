@@ -7,7 +7,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-MTR-001 |
-| **Version** | 1.31 |
+| **Version** | 1.32 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Reporting) |
@@ -329,6 +329,26 @@ QUARTERLY CYBER OVERSIGHT GROUP BRIEF - Q<n> <YYYY>
 
 The brief is published five business days before the meeting. Slides are read-ahead; the meeting is for discussion of the Asks.
 
+### 6.1 Control Funding Decision Brief Pattern
+
+Use this one-page pattern when a control gap, repeated metric miss, overdue treatment, or risk acceptance requires a business funding or prioritization decision. The brief is a decision aid, not a replacement for the risk register, control baseline, or acceptance form.
+
+| **Field** | **Content** |
+|---|---|
+| Decision Needed | `[Fund / defer / reduce scope / accept residual risk / retire service / other]` |
+| Control or Risk Link | `[CB-001 control ID, risk ID, finding ID, or metric ID]` |
+| Business Capability Affected | `[System, process, customer obligation, regulatory scope]` |
+| Current Exposure | `[Plain-language consequence and residual rating]` |
+| Recommended Treatment | `[Control, project, staffing, tool, vendor, process change]` |
+| Funding / Capacity Ask | `[Amount, FTE, team capacity, vendor spend, schedule slot]` |
+| Options Considered | `[Option A/B/C with risk and cost tradeoff]` |
+| Decision Deadline | `[Date and reason: SLA, audit date, contract, threat activity, go-live]` |
+| If Approved | `[Expected risk reduction, metric movement, evidence produced]` |
+| If Deferred or Declined | `[Risk acceptance required? expiration? escalation?]` |
+| Named Owners | `[Business Owner, treatment owner, CERG reviewer]` |
+
+If the decision is to defer treatment while residual risk remains, route the resulting acceptance through [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) and [`CERG-TMPL-RM-004`](../templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md). Funding denial is not itself a risk acceptance; the Business Owner or required RMF-001 authority must explicitly accept the consequence.
+
 ---
 
 ## 7. Monthly CERG Leadership Report Template
@@ -488,8 +508,8 @@ Threshold changes are recorded as improvement register entries (IMPREG-001, type
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-MTR-001 |
-| **Version** | 1.31 |
+| **Version** | 1.32 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / metrics-platform change |
-| **Change Log** | 1.0 - Initial publication. Establishes dictionary, source map, CISO dashboard, briefs, and anti-shallow guardrails. · 1.1 - Added Section 3.7 Predictive and Leading Indicators (PL-001 through PL-007). · 1.2 - Restored Section 9 Cadence and Ownership. · 1.3 - Added Section 10 Threshold Calibration: cadence, triggers, rules, change log, and improvement register integration. |
+| **Change Log** | 1.0 - Initial publication. Establishes dictionary, source map, CISO dashboard, briefs, and anti-shallow guardrails. · 1.1 - Added Section 3.7 Predictive and Leading Indicators (PL-001 through PL-007). · 1.2 - Restored Section 9 Cadence and Ownership. · 1.3 - Added Section 10 Threshold Calibration: cadence, triggers, rules, change log, and improvement register integration. · 1.32 - Added §6.1 Control Funding Decision Brief pattern for business funding/prioritization decisions tied to control gaps and risk treatments. |
 
