@@ -148,7 +148,7 @@ These are the canonical role names used across CERG artifacts. Roles collapse on
 - **NERC-CIP Compliance Manager**
 - **CMMC / Federal Compliance Manager**
 - **SOX ITGC Lead**
-- **Policy and Standards Manager**
+- **Policy & Standards Manager**
 - **Risk Register Owner**
 - **Evidence Librarian**
 
