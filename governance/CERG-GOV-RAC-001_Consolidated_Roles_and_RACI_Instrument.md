@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-RAC-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
@@ -38,9 +38,9 @@
 
 [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1 establishes the canonical role roster, the single source of truth for role names. §9 of that document gives three sample RACI patterns and states plainly that "specific RACI matrices are maintained per process." That sentence describes a document that did not exist. This is that document.
 
-This instrument consolidates, in one place: the canonical role reference, a master RACI covering every CERG artifact and every standing process, a normalized description for each canonical role, and the scaling map that shows how the roles consolidate onto fewer people as a team gets smaller.
+This instrument consolidates, in one place: the canonical role reference, a master RACI for governed artifact stewardship and standing processes, a normalized description for each canonical role, and the scaling map that shows how the roles consolidate onto fewer people as a team gets smaller.
 
-It applies program-wide. It is the authoritative answer to two questions a CERG program is asked constantly: "who owns this?" and "who does what when this process runs?"
+It applies program-wide. It is the authoritative answer to two questions a CERG program is asked constantly: "who is accountable for this work?" and "who does what when this process runs?" It is not the authoritative artifact inventory, lifecycle-status register, or document-approval matrix; those are owned by [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md).
 
 > **One RACI, So the Answer Is Always the Same**
 >
@@ -55,10 +55,11 @@ The division of labor is deliberate and must stay clean.
 | **Document** | **Owns** |
 |---|---|
 | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1 | The canonical role roster: the authoritative list of role *names* and their synonyms. |
-| This instrument (`CERG-GOV-RAC-001`) | The consolidated RACI and the normalized role *descriptions*: who is Responsible, Accountable, Consulted, and Informed across every artifact and process. |
-| Each standard, procedure, and plan | Its own subject matter. It may carry a local roles table for the reader's convenience, but that table conforms to this instrument. |
+| [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | The authoritative artifact inventory, document ID scheme, lifecycle status, review tier, and approval authority by document type. |
+| This instrument (`CERG-GOV-RAC-001`) | The consolidated RACI and normalized role *descriptions*: who is Responsible, Accountable, Consulted, and Informed for recurring work and for stewardship of governed artifact families. |
+| Each standard, procedure, and plan | Its own subject matter. It may carry a local roles table for the reader's convenience, but that table conforms to this instrument and to the catalog authority model. |
 
-The Operating Model names the roles. This instrument assigns the work. No new role is introduced here; if a role is needed that the roster does not contain, the roster is amended first, in the Operating Model, and only then does this instrument reference it.
+The Operating Model names the roles. CAT-001 inventories the artifacts and states document-type approval authority. This instrument assigns operating work and stewardship accountability. No new role is introduced here; if a role is needed that the roster does not contain, the roster is amended first, in the Operating Model, and only then does this instrument reference it.
 
 ---
 
@@ -99,7 +100,7 @@ The two Adjacent roles belong to the standing Incident Response team, not to CER
 
 ## 5. Master RACI: Document Ownership
 
-This RACI assigns accountability for each artifact in the CERG library: who owns it (A), who drafts and maintains it (R), and who is Consulted and Informed on its content. Approval authority by document type follows [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) §4; this table shows the working RACI underneath that authority.
+This RACI assigns stewardship accountability for major governed artifact families and high-use artifacts: who maintains content (R), who is accountable for upkeep (A), and who is Consulted and Informed. The complete authoritative inventory, lifecycle status, and document-type approval authority remain in [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) §§4-5. If CAT-001 and this table appear to disagree about whether an artifact exists, its status, owner metadata, or formal approval path, CAT-001 governs; this table is then updated to align.
 
 Columns are abbreviated: **ENG-L** Engineering Pillar Leader, **RISK-L** Risk Pillar Leader, **GOV-L** Governance Pillar Leader, **P&S** Policy & Standards Manager, **CISO** Chief Information Security Officer.
 
@@ -315,8 +316,8 @@ Risk-acceptance authority does not consolidate freely. The separation of the per
 
 ## 9. Maintaining This Instrument
 
-1. **A new artifact is added to Section 5.** When an artifact is registered in [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md), a row is added to the Section 5 RACI in the same change.
-2. **A new process is added to Section 6.** When a new standing process is established by a standard or procedure, its RACI row is added to Section 6.
+1. **A new artifact is registered in CAT-001.** [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) is updated first because it is the inventory and lifecycle authority. Section 5 of this instrument is updated in the same change only when the new artifact creates a new stewardship pattern or changes accountability for an existing artifact family.
+2. **A new process is added to Section 6.** When a new standing process is established by a standard or procedure, its RACI row is added to Section 6 unless the process is fully local to a single procedure and already covered by an existing standing-process row.
 3. **A roster change flows from the Operating Model.** A role is never added, renamed, or retired here. That happens in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1, and this instrument is then updated to match.
 4. **Subordinate documents conform to this instrument.** A standard or procedure whose local roles table disagrees with this instrument is corrected on its next revision, per the precedence rule in Section 1.
 5. **The instrument is reviewed annually.** The review confirms every row still has exactly one A, every role is still canonical, and the scaling map still reflects the role roster.
@@ -328,7 +329,7 @@ Risk-acceptance authority does not consolidate freely. The separation of the per
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-RAC-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-05-21 |
 | **Classification** | Public |
@@ -345,11 +346,12 @@ Risk-acceptance authority does not consolidate freely. The separation of the per
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-06-18 | Governance Pillar Leader | Clarified that CAT-001 owns artifact inventory, lifecycle status, and document-type approval authority while RAC-001 owns role and process accountability. |
 | 1.0 | 2026-05-21 | Cyber Governance | Initial release. Consolidates the per-process RACI that CERG-GOV-OM-001 §9 deferred. Establishes RACI definitions and rules, a canonical role reference, a master RACI for document ownership, a master RACI for standing processes across engagement, risk, governance, and operations, normalized descriptions for all 27 canonical roles, and a scaling map showing role consolidation onto a five-person team. |
 
 ### Review Triggers
 
-- A new artifact registered in [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md)
+- A new artifact registered in [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) that changes a stewardship pattern or artifact-family accountability
 - A new standing process established by a standard or procedure
 - Any change to the canonical role roster in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1
 - A change to the risk-acceptance authority table in [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7
@@ -363,6 +365,6 @@ Governance owns this document. The Governance Pillar Leader (Policy & Standards)
 |---|---|---|
 | Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
 | CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Authoritative canonical role roster; the sample RACI this instrument completes |
-| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Artifact inventory; per-type approval authority |
+| Document Catalog and Naming Convention | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Authoritative artifact inventory, lifecycle status, review tier, and per-type approval authority |
 | Risk Management Framework | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk-acceptance authority that this instrument does not override |
 | Implementation and Adaptation Guide | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Role-consolidation principle that the scaling map makes concrete |
