@@ -29,7 +29,7 @@
 
 ## 1. Purpose and Scope
 
-This document defines what qualifies as acceptable evidence in the CERG operating model. It extends the evidence quality tiers (E1/E2/E3) defined in [FLOW-001 §16](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) with specific quality rules, sampling methodology, and freshness requirements.
+This document defines what qualifies as acceptable evidence in the CERG operating model. It extends the evidence quality tiers (E1/E2/E3) defined in [FLOW-001 §17](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) with specific quality rules, sampling methodology, and freshness requirements.
 
 This standard applies to every CERG artifact that produces or references evidence: the Unified Control Baseline (CB-001), the Audit and Evidence Management Procedure (PRC-AUD-001), the Risk Register and Exception Process (PRC-RM-001), and all standards and procedures that define evidence requirements.
 
