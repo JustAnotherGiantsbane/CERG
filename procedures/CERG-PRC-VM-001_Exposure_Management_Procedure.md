@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-VM-001 |
-| **Version** | 2.01 |
+| **Version** | 2.02 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Exposure Management Lead |
@@ -234,6 +234,19 @@ SLAs are measured from classification to verified closure. The SLA tier is drive
 | **SOX-Relevant Systems** | Remediation evidence captured for ITGC. |
 | **Tier 1 SaaS Posture Drift** | Provider-responsible: finding stays open against provider; escalation via vendor incident channel. |
 
+### 7.4 OT/BES Patch Deferral Routing
+
+OT patch deferral is a routing decision, not a blanket waiver from exposure treatment. Use the table below when a vendor-tested patch, operational maintenance window, safety constraint, or reliability concern prevents treatment within the governing SLA.
+
+| Scenario | Required route | Required records / evidence | Approval and review |
+|---|---|---|---|
+| **Non-BES OT, operational window needed** | Schedule treatment in the next approved OT maintenance window; preserve compensating controls until completion. | Finding Record or Exposure Backlog Item; maintenance-window date; compensating-control validation; owner attestation. | Risk Pillar Leader may approve windowing within the ≤25% flexibility. Longer deferral requires Risk Acceptance Record under RMF-001 §9.7. |
+| **BES Cyber System, CIP compliance unaffected** | Confirm that the deferral does not create or extend a CIP compliance gap; track treatment and evidence in the NERC-CIP evidence library. | Finding Record; BES asset identifier; CIP applicability note; compensating-control evidence; Evidence Index Entry. | CISO approval with Governance/NERC-CIP Compliance Manager concurrence; review at least every 30 days until closure. |
+| **BES Cyber System, CIP compliance impacted** | Initiate CIP deviation / mitigation plan in addition to the exposure record. Do not treat the risk acceptance path as a substitute for CIP deviation. | Finding Record; NERC-CIP deviation or mitigation plan; Risk Register Entry; compensating-control validation; regulatory evidence package. | CISO + NERC-CIP Compliance Manager; milestones follow the mitigation plan and any applicable regulatory deadline. |
+| **Emergency operational exception** | Operations may delay or alter treatment only to prevent safety, reliability, or grid disturbance. Document immediately and formalize within 24 hours. | Emergency decision log; Finding Record; operational impact rationale; post-hoc Security Exception Record or Risk Acceptance Record if residual risk continues. | CISO post-hoc approval within 24 hours; maximum 30-day review window unless converted to the BES/CIP route above. |
+
+For every OT deferral, document why a non-patch treatment (path block, segmentation, configuration change, monitoring, vendor isolation, or service removal) cannot close the exposure sooner. Deferral does not close the finding; closure requires verified treatment or a valid, reviewed risk/exception posture.
+
 ---
 
 ## 8. Step 5 — Select Treatment
@@ -339,7 +352,7 @@ When treatment cannot meet SLA, the owning team requests risk acceptance through
 - Risk owner (business) and approver
 - Expiration date and re-evaluation triggers
 
-**PPR-tier exposures are not eligible for risk acceptance** except in OT operational windowing scenarios where the CIP deviation process is the sole approved path.
+**PPR-tier exposures are not eligible for ordinary risk acceptance.** The only exception is OT operational windowing under §7.4. For BES Cyber Systems, the CIP deviation / mitigation route is mandatory when compliance is impacted and cannot be replaced by a generic acceptance memo.
 
 ---
 
@@ -429,7 +442,7 @@ Immediate escalation to CISO:
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-VM-001 |
-| **Version** | 2.01 |
+| **Version** | 2.02 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Exposure Management Lead |
@@ -446,6 +459,7 @@ Immediate escalation to CISO:
 
 | Version | Date | Author | Change Summary |
 |---------|------|--------|---------------|
+| 2.02 | 2026-06-18 | Governance Pillar Leader | Added OT/BES patch deferral routing for non-BES OT, BES compliance-unaffected deferrals, BES compliance-impacting deviations, and emergency operational exceptions. |
 | 2.01 | 2026-06-14 | Governance Pillar Leader | Aligned CISO risk-acceptance role language to the canonical RMF authority table. |
 | 2.0 | 2026-06 | CERG Risk | Major revision: shift from exposure management to exposure management. Introduced 6-step state model (Observed→Verified), classification taxonomy (Non-issue/Hygiene Debt/Confirmed Flaw/Confirmed Exposure/Material Risk), separation of patch hygiene from exposure management, new exposure-focused metrics. |
 | 1.0 | 2026-05 | CERG Risk | Initial release |
@@ -476,4 +490,4 @@ Annual review or upon: material tooling change, regulatory SLA change, internal 
 
 ---
 
-_CERG-PRC-VM-001 · Version 2.01 · PUBLIC_
+_CERG-PRC-VM-001 · Version 2.02 · PUBLIC_
