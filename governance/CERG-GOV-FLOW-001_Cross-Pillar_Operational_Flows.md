@@ -213,7 +213,7 @@ All workflows should terminate in one of the following decision classes:
 
 ## 8. Shared State Models
 
-### 7.1 Project Security Review State Model
+### 8.1 Project Security Review State Model
 
 Allowed states:
 
@@ -227,7 +227,7 @@ Allowed states:
 - Blocked pending prerequisite
 - Closed
 
-### 7.2 Finding Lifecycle State Model
+### 8.2 Finding Lifecycle State Model
 
 Allowed states:
 
@@ -242,7 +242,7 @@ Allowed states:
 - Residual monitoring
 - Closed
 
-### 7.3 Asset Coverage Lifecycle
+### 8.3 Asset Coverage Lifecycle
 
 Allowed states:
 
@@ -255,7 +255,7 @@ Allowed states:
 - Coverage gap open
 - Decommissioned
 
-### 7.4 Incident Lifecycle
+### 8.4 Incident Lifecycle
 
 Allowed states:
 
@@ -269,7 +269,7 @@ Allowed states:
 - Corrective action open
 - Closed
 
-### 7.5 Control Change Lifecycle
+### 8.5 Control Change Lifecycle
 
 Allowed states:
 
@@ -1115,8 +1115,8 @@ If a local tool cannot use the CAT-002 canonical name directly, store the canoni
 
 ### Phase 1
 Implement:
-- Global contract (§1-6)
-- Shared state models (§7)
+- Global contract (§1-7)
+- Shared state models (§8)
 - Flow F-02 (Project Intake / Architecture Review / Threat Model)
 - Flow F-03 (Asset Registration / Coverage Validation)
 - Flow F-04 (Finding to Remediation / Exception / Risk)
