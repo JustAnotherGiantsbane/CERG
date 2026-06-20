@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
-| **Version** | 1.23 |
+| **Version** | 1.25 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
@@ -478,7 +478,7 @@ CERG operates inside a broader organizational ecosystem. The following interface
 | **Function** | **Interface** |
 |---|---|
 | **Incident Response (standing team)** | Owns [`CERG-PLN-IR-001`](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md). CERG feeds detection telemetry, vulnerability context, asset documentation, and post-incident risk-register entries. During an active incident, CERG provides Lead Investigator (Risk), Engineering Lead, and Governance Lead roles per the IR team's call. |
-| **Security Awareness** | Coordinated with Governance for content alignment; Risk provides phishing simulation operations and threat-actor context for targeted campaigns. |
+| **Security Awareness** | Awareness owns training program design, delivery cadence, completion evidence, and phishing-simulation communications. Governance coordinates policy/control content alignment and evidence quality; Risk provides threat-actor context and may support phishing-simulation analysis. CERG does not own enterprise training completion or awareness campaign operations. |
 | **Internal Audit** | Receives evidence from Governance; engages SMEs from Engineering and Risk; findings tracked in the risk register. |
 | **Legal** | Engaged at activation for Sev 1/2 incidents; engaged for regulatory interpretation, breach notification, customer contractual obligations, and privilege judgments. |
 | **Privacy / DPO** | Coordinates with Governance on Restricted-data handling and breach notification under GDPR / HIPAA / state laws. |
@@ -628,7 +628,7 @@ This ensures that "no single point of failure" is not just a claim about org-cha
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
-| **Version** | 1.23 |
+| **Version** | 1.25 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
@@ -644,6 +644,7 @@ This ensures that "no single point of failure" is not just a claim about org-cha
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.25 | 2026-06-18 | Governance Pillar Leader | Clarified Security Awareness as an adjacent function: Awareness owns training operations while CERG coordinates content alignment, evidence quality, and threat context. |
 | 1.24 | 2026-06-18 | Governance Pillar Leader | Updated §4.4 COG membership with explicit standing-core and dynamic-per-agenda members (Business Unit Risk Owner for systems on agenda, Engineering/Risk pillar leaders as needed). Added COG Agenda Template with dynamic attendee section. |
 | 1.23 | 2026-06-14 | Governance Pillar Leader | Removed residual IR Plan Steward language and clarified that CERG provides IR support while the standing IR team owns the IR plan, exercises, notification clocks, and incident command. |
 | 1.0 | 2026-05-01 | CISO + Cyber Governance | Initial release. Establishes the three pillars, decision rights, engagement models, the canonical role roster (§6.1), the Cyber Oversight Group (§4.4), the standing coordination cadence aligned with CERG-RMF §8.2, and the maturity indicator set cross-referenced to CERG-GOV-MTR-001. Clarifies that the Incident Response plan and capability are owned by a standing IR team outside CERG; CERG provides liaison roles and feeds data into the IR program. |
