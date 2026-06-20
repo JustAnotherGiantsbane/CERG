@@ -59,7 +59,7 @@ End of month 1 deliverables:
 - Risk appetite defaults approved (Priya proposed, board ratified)
 - Cyber Oversight Group formed (Priya chairs, Tomás and Sara attend, vCISO joins as observer)
 - First exposure backlog reviewed (the 23 scanner findings are now 6 open, all triaged)
-- Exception and risk acceptance authority mapped (Priya for High and Critical, Sara for Medium with Priya notification)
+- Exception and risk acceptance authority mapped to RMF-001: Business Owners accept consequence, Priya approves High/Critical where required, and the Executive Sponsor / board are named for Critical or board-notified items.
 - 30-day improvement backlog seeded
 
 Priya logs every decision in the Decision Log per IMP-002 §4. The log is a simple spreadsheet. It has 11 entries at the end of month 1.
@@ -76,13 +76,13 @@ End of month 2 deliverables:
 
 - First metrics dashboard. Three metrics: open Critical/High findings, exceptions expiring in 30 days, vendor assessments current. All three are green.
 - First board update. Priya presents the metrics dashboard, the top 10 risks, and the SOC 2 readiness status to the board. The board approves the next quarter's hiring plan: one additional Engineering security engineer and one Risk analyst.
-- First risk acceptance memo. Tomás and Sara identify one Medium-risk decision (deferring a configuration baseline update until next quarter) and route it through Priya for acceptance. The memo has a named owner, an expiration date, and a remediation plan.
+- First risk acceptance package. Tomás and Sara identify one Medium-risk decision (deferring a configuration baseline update until next quarter), Risk recommends the disposition, and the affected Business Owner accepts the consequence under the RMF authority path. Priya reviews the package for visibility and escalation readiness. The package has a named owner, an expiration date, and a remediation plan.
 
 ## Day 61-90: First audit lands, first exception, first quarterly review
 
 Week 9: A SOC 2 readiness assessment (pre-audit gap analysis by an external firm) lands. The firm identifies 12 gaps across 8 control families. Each gap becomes a Finding Record. Each Finding Record has an owner (Sara or Tomás), a remediation deadline, and an evidence plan. None of the 12 gaps are Critical SLA. All are Medium or Low with 90-day windows. The quarterly SOC 2 audit is in 5 months; this is the work that closes the gaps.
 
-Week 10: An enterprise customer's auditor requests live evidence of a quarterly access review for a Meridian system. Meridian has not been running quarterly access reviews (Risk #4 from day 7). Tomás runs an out-of-cycle review to satisfy the auditor. The review identifies 4 stale privileged accounts and 1 contractor account whose engagement ended 6 weeks ago. Engineering removes all 5. Priya opens an Exception Record with a 60-day expiration noting that the next scheduled quarterly review will happen on time. The auditor accepts the response.
+Week 10: An enterprise customer's auditor requests live evidence of a quarterly access review for a Meridian system. Meridian has not been running quarterly access reviews (Risk #4 from day 7). Tomás runs an out-of-cycle review to satisfy the auditor. The review identifies 4 stale privileged accounts and 1 contractor account whose engagement ended 6 weeks ago. Engineering removes all 5. Sara records the Exception Record with a 60-day expiration, Priya reviews it as CISO, and the Business Owner confirms the next scheduled quarterly review will happen on time. The auditor accepts the response.
 
 Week 11-12: Priya runs the first quarterly review per IMP-003's quarterly half-day cadence. The review covers:
 
@@ -98,10 +98,10 @@ End of month 3 deliverables (matches IMP-006 §3.3):
 
 - First metrics dashboard reviewed by the CISO and approved for ongoing use.
 - Control implementation snapshot reviewed. Of the 22 CERG control intents in [CB-001](../../governance/CERG-GOV-CB-001_Unified_Control_Baseline.md), Meridian now has authoritative evidence for 14 and is working evidence plans for the remaining 8.
-- Adoption expansion decision. The board approves expanding to CERG Regulated overlay for [CERG-PLN-SOX-001](../../plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) readiness, even though Meridian is not yet SOX-relevant, because the next enterprise customer audit will require it.
+- Adoption expansion decision. Priya recommends expanding to the CERG Regulated overlay for [CERG-PLN-SOX-001](../../plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md) readiness, and the board approves the scope and funding, even though Meridian is not yet SOX-relevant, because the next enterprise customer audit will require it.
 - Open high risks reviewed. 2 of the original 10 are closed. 8 remain, all with owners and dates.
 - Expired exceptions reviewed. The one exception from week 10 has a renewal decision: extend 60 days because the automated access review tool will not be live for another 60 days.
-- Resourcing decisions approved. One Engineering security engineer and one Risk analyst hired, starting in month 4.
+- Resourcing decisions approved by the board / Executive Sponsor. One Engineering security engineer and one Risk analyst hired, starting in month 4.
 
 ## What this story shows
 
@@ -122,7 +122,7 @@ The CISO does not deliver the program. The CISO convenes it. The CISO's job in t
 7. Surface one Decision Log entry per material decision.
 8. Produce one metrics dashboard for the board before the board asks.
 
-By day 90, Meridian has 5 authoritative CERG artifacts (Policy, RMF, Operating Model, Risk Register, Document Catalog), 3 standards adopted (Access, Logging, Asset Management), 4 procedures in operation (Risk Register, TPRM, Architecture Review, Access Management Runbook), 12 records in the evidence library, 23 Decision Log entries, and one quarterly metrics report. The team has remediated 21 findings, opened 1 exception, filed 1 risk acceptance memo, and passed one customer audit without follow-up.
+By day 90, Meridian has 5 authoritative CERG artifacts (Policy, RMF, Operating Model, Risk Register, Document Catalog), 3 standards adopted (Access, Logging, Asset Management), 4 procedures in operation (Risk Register, TPRM, Architecture Review, Access Management Runbook), 12 records in the evidence library, 23 Decision Log entries, and one quarterly metrics report. The team has remediated 21 findings, opened 1 exception, filed 1 business-owned risk acceptance package, and passed one customer audit without follow-up.
 
 The SOC 2 Type II renewal in month 7 is now a finishing exercise, not a panic.
 
