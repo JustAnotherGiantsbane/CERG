@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-TMPL-RM-002 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |
@@ -60,10 +60,11 @@ This form captures a temporary security exception or waiver request. It is used 
 | Request Date | `[Date]` |
 | Requester | `[Name / Role]` |
 | Affected System / Asset | `[Asset ID or system]` |
-| Business Owner | `[Executive Sponsor or owner]` |
+| Business Owner / Residual Risk Owner | `[Executive Sponsor or owner who accepts residual consequence]` |
 | Control / Requirement | `[Control ID and title]` |
 | Exception Type | `[Temporary waiver / delayed implementation / compensating control / emergency exception]` |
 | Requested Expiration Date | `[Date]` |
+| Next Review Date | `[Date; must be on or before requested expiration and any shorter regulatory/procedure clock]` |
 | Related Risk ID | `[Risk ID]` |
 
 ### 3.2 Exception Rationale
@@ -83,9 +84,9 @@ This form captures a temporary security exception or waiver request. It is used 
 
 ### 3.4 Compensating Controls
 
-| **Control** | **Owner** | **Evidence** | **Monitoring Cadence** |
-|---|---|---|---|
-| `[Control]` | `[Owner]` | `[Evidence]` | `[Cadence]` |
+| **Control** | **Owner** | **Compensating Control Evidence Link** | **Last Validated Date** | **Monitoring Cadence** |
+|---|---|---|---|---|
+| `[Control]` | `[Owner]` | `[Evidence link]` | `[Date]` | `[Cadence]` |
 
 ### 3.5 Expiration and Exit Plan
 
@@ -95,7 +96,8 @@ This form captures a temporary security exception or waiver request. It is used 
 | Remediation Plan | `[Plan]` |
 | POA&M ID | `[POA&M ID if applicable]` |
 | Renewal Allowed | `[Yes / No. If yes, state criteria.]` |
-| Exit Evidence | `[Evidence needed to close]` |
+| Closure Verification Date | `[Date closure conditions were validated, or Not Applicable until closure]` |
+| Exit Evidence / Closure Evidence Link | `[Evidence needed to close and link to evidence when closed]` |
 
 ---
 
@@ -103,8 +105,9 @@ This form captures a temporary security exception or waiver request. It is used 
 
 | **Reviewer / Approver** | **Review Meaning** | **Name / Date** |
 |---|---|---|
-| Risk Register Owner | Confirms record completeness and register linkage. | `[Name / Date]` |
-| Risk Pillar Leader | Approves Low or Medium exceptions where authorized. | `[Name / Date]` |
+| Risk Register Owner | Confirms record completeness, register linkage, next review date, and evidence links. | `[Name / Date]` |
+| Risk Pillar Leader | Confirms residual risk scoring and approves Low or Medium exceptions where authorized. | `[Name / Date]` |
+| Business Owner / Residual Risk Owner | Accepts the operational consequence created by the temporary deviation. | `[Name / Date]` |
 | Chief Information Security Officer (CISO) | Approves High or Critical exceptions and material regulated-scope deviations. | `[Name / Date]` |
 
 Completed templates are reviewed at the cadence defined by their parent procedure or plan. Material changes require a new review.
@@ -116,7 +119,7 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-TMPL-RM-002 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
@@ -133,7 +136,8 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.0 Draft | 2026-05-22 | Cyber Governance | Initial release. Establishes a standalone fill-in template for security exception request form. |
+| 1.1 | 2026-06-20 | Governance Pillar Leader | Added Definition of Done fields for residual risk owner, compensating-control evidence, last validation, next review, closure verification, and closure evidence. |
+| 1.0 | 2026-05-22 | Cyber Governance | Initial release. Establishes a standalone fill-in template for security exception request form. |
 
 ### Review Triggers
 
