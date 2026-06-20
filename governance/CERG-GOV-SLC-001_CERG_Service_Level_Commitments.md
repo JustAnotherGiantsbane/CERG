@@ -88,9 +88,9 @@ The turnaround values below are **preliminary defaults requiring organizational 
 
 ### 3.4 Program Oversight and Risk Decisions (Governance-Led, OM-001 §5.4)
 
-|| Request type | Tier / trigger | CERG commitment (preliminary default) | Escalation if missed | Metric |
-|---|---|---|---|---|---|
-|| Exception / risk-acceptance request intake | All | Acknowledge and route to the correct approver within 3 business days | Risk Register Owner | SR-004 |
+| Request type | Tier / trigger | CERG commitment (preliminary default) | Escalation if missed | Metric |
+|---|---|---|---|---|
+| Exception / risk-acceptance request intake | All | Acknowledge and route to the correct approver within 3 business days | Risk Register Owner | SR-004 |
 
 > **Intake clock, not decision clock.** The commitment in §3.4 is to acknowledge and route the request promptly. The decision authority and the substantive risk judgment remain with the approver named in [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. SLC commitments govern CERG's responsiveness; they never compress or override a risk decision.
 
