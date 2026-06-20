@@ -17,7 +17,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md
   source_file: CERG-GOV-AUD-001_Evidence_Quality_Standard.md
-  source_hash: 593e3fc66ee2141b3badd1a0299ecd611a6af34b7deab593288723b3e0af6e15
+  source_hash: 5388b14cdc519d7ea53f1cb8b713483446e77647b4a387f0c1a4b44a528941f9
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md
   llm_include: true
   llm_priority: medium
@@ -68,7 +68,7 @@
   title: Document Catalog and Naming Convention
   document_type: governance_instrument
   domain: CAT
-  version: 1.44
+  version: 1.45
   status: Approved
   classification: Public
   publication_profile: public
@@ -77,7 +77,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  source_hash: 0082a165246412a50b6d3b0b5ec95702a90346fc513cbbcd2f8506dab55138e5
+  source_hash: c8453554498e36bbe7e349228a910330c333c3fd7f345153baebf9750361efac
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   llm_include: true
   llm_priority: high
@@ -88,7 +88,7 @@
   title: Record Catalog
   document_type: governance_instrument
   domain: CAT
-  version: 1.1
+  version: 1.2
   status: Approved
   classification: Public
   publication_profile: public
@@ -97,7 +97,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CAT-002_Record_Catalog.md
   source_file: CERG-GOV-CAT-002_Record_Catalog.md
-  source_hash: bf93c51a834b51cb8e72aa4ef8aaf1f29001e547c125d965077143acba9f9b05
+  source_hash: 95e2276ae9abbe7f1bd2952b038243d26f36745b5d56292f144474629f478501
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-002_Record_Catalog.md
   llm_include: true
   llm_priority: medium
@@ -257,7 +257,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md
   source_file: CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md
-  source_hash: 689e94161ccf70357a9b739a622a34258e84595720ce6d55c00e63cb9c7b9d79
+  source_hash: 2d6fa51de71fb6c7c56f49d5ade948b236a03a424883470e594bedf7651ed058
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md
   llm_include: true
   llm_priority: medium
@@ -357,7 +357,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md
   source_file: CERG-GOV-IMP-002_Adoption_Safety_Guide.md
-  source_hash: e75bc08069c1713fd977589236d97c7e87de7d09e2402f66550779c4c4625877
+  source_hash: 0b8f03d7b86d6ee9de5d23a179b2299584a0230655e5e4b67b0c665004b51fb5
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md
   llm_include: true
   llm_priority: medium
@@ -377,7 +377,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md
   source_file: CERG-GOV-IMP-003_Small_Team_Adoption_Path.md
-  source_hash: c93f137490eaad9bc4ddaf8de7aa0ed96bb0e3daba4e49c1a920f8ce7cbaba5b
+  source_hash: ffb12f3cd426dc6a5c77fa53e5a301c67926aa0f0e98086bd002e4721ada0884
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md
   llm_include: true
   llm_priority: medium
@@ -457,7 +457,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-007_Role_Reader_Paths.md
   source_file: CERG-GOV-IMP-007_Role_Reader_Paths.md
-  source_hash: d84005166154c30e085f6b33ac67f19260770c44c26a7aa49ab3e6109e00b27a
+  source_hash: 26aa8ca700fec254f3d041c310597d7143dc049da5d0323249fba8e71b9c6611
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-007_Role_Reader_Paths.md
   llm_include: true
   llm_priority: medium
@@ -717,7 +717,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-STY-002_Style_Compliance_Tracker.md
   source_file: CERG-GOV-STY-002_Style_Compliance_Tracker.md
-  source_hash: e44a68d4658af59f82e5e19e42842ffc276238419e45437241220c14f09a2449
+  source_hash: acafc96250ae9f9ea20722354cdb1bf165ca6fe7faa2f3fc4c4483bae8c0341c
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-STY-002_Style_Compliance_Tracker.md
   llm_include: true
   llm_priority: medium
@@ -768,7 +768,7 @@
   title: Control to Procedure Traceability Matrix
   document_type: governance_instrument
   domain: TRC
-  version: 1.1
+  version: 1.2
   status: Approved
   classification: Public
   publication_profile: public
@@ -777,7 +777,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md
   source_file: CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md
-  source_hash: 6890e81d1b2a469fab6dab2f1d4a4edee8352de9aecc92761bbf5890a99d4e04
+  source_hash: e6544524c6bc169c8eb44380ec23046d64bc2f78a039b007822f5e2fdb737761
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md
   llm_include: true
   llm_priority: medium
@@ -2408,7 +2408,7 @@
   title: Risk Register Templates and Reporting
   document_type: template
   domain: RM
-  version: 1.22
+  version: 1.23
   status: Approved
   classification: Public
   publication_profile: public
@@ -2417,7 +2417,7 @@
   parent_artifact: ''
   source_path: templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md
   source_file: CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md
-  source_hash: 7ec3c4529e7fa1568c060121d8e95eb76b79e5810146df7aa9f1cfbbd44ad222
+  source_hash: 20febb56405a7c99ede8a428b0d17cd8e6c50f95bb74d14204ee33c71175b605
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md
   llm_include: true
   llm_priority: high
@@ -2428,7 +2428,7 @@
   title: Security Exception Request Form
   document_type: template
   domain: RM
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -2437,7 +2437,7 @@
   parent_artifact: 'CERG-PRC-RM-001 — Risk Register and Exception Process'
   source_path: templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md
   source_file: CERG-TMPL-RM-002_Security_Exception_Request_Form.md
-  source_hash: a94f2cf720504f64f252f927d2e9ba453b2d29daab821d5dcfe621794ac8f990
+  source_hash: 0648210038f67102e6c385b43a04c7d851b73d81cbf0c290d9e7b2982dc9b9e1
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md
   llm_include: true
   llm_priority: medium
@@ -2524,6 +2524,26 @@
   normative_weight: supporting
   pillar: governance
   summary: SBOM Evidence Collection Checklist
+- document_id: CERG-TMPL-SCP-001
+  title: System Control Profile Template
+  document_type: template
+  domain: SCP
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Engineering Pillar Leader
+  approval_authority: Engineering Pillar Leader
+  parent_artifact: 'CERG-GOV-CAT-002 — Record Catalog'
+  source_path: templates/CERG-TMPL-SCP-001_System_Control_Profile_Template.md
+  source_file: CERG-TMPL-SCP-001_System_Control_Profile_Template.md
+  source_hash: 645d2effa2035a9af73712be44defb3c77b250eff1cb89b67aac5425bcfa5d71
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-SCP-001_System_Control_Profile_Template.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: System Control Profile Template
 - document_id: CERG-TMPL-TPRM-001
   title: Vendor Security Questionnaire and Assessment Template
   document_type: template
