@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-JF-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
@@ -33,6 +33,20 @@
 This document establishes the formal Job Family structure for CERG's workforce architecture. It groups the 27 canonical CERG roles into five job families, defines career progression tiers within each family, and maps those tiers to CERG's existing grade framework (S1-S4 / M1-M4).
 
 This document does NOT rename, add, or remove canonical roles. The authoritative role roster remains [OM-001 §6.1](../governance/CERG-GOV-OM-001_CERG_Operating_Model.md). Job families are a VIEW into the role architecture — a career-development and hiring lens — not a replacement for the operating model's pillar structure.
+
+### 1.1 Workforce System Map
+
+Use the workforce documents in this order:
+
+| **Question** | **Use** | **Do Not Use It For** |
+|---|---|---|
+| What roles exist and what pillar owns them? | [`CERG-GOV-OM-001`](../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1 | Career level or job-posting detail |
+| Who does what in processes and artifacts? | [`CERG-GOV-RAC-001`](../governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Changing the role roster |
+| What job family does a role belong to? | This document | Approval authority or process RACI |
+| What grade or level is the role? | [`CERG-GOV-JA-001`](../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Operating accountability |
+| What competencies and behaviors matter? | [`CERG-GOV-CMP-001`](../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) | Document ownership |
+| What does an individual role description look like? | The per-role JD under `roles/jf-*` | Rewriting CERG's operating model |
+| How does NICE map to CERG roles? | [`CERG-GOV-JF-002`](CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) | Replacing CERG role names |
 
 ---
 
@@ -214,7 +228,7 @@ Progression from one level to the next requires demonstration of capabilities. T
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-JF-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -231,6 +245,7 @@ Progression from one level to the next requires demonstration of capabilities. T
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-06-18 | Governance Pillar Leader | Added workforce system map showing which workforce document answers each role, RACI, family, grade, competency, JD, and NICE-mapping question. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Established five CERG Job Families, four-tier level structure, progression gates, and mapping to existing grade framework. |
 
 ### Review Triggers
