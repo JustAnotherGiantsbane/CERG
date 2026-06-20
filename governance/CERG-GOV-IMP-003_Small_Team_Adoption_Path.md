@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-003 |
-| **Version** | 1.01 |
+| **Version** | 1.02 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -170,6 +170,8 @@ A 5-person team covers all 27 canonical roles by consolidating them. The map bel
 | **Person 5 — Compliance / IR Liaison** | NERC-CIP Compliance Manager, CMMC/Federal Compliance Manager, SOX ITGC Lead, IR liaison (Incident Commander and Lead Investigator remain with standing IR team) | JF-GOVCOMP / JF-ADJUNCT |
 
 **If you have 3 people:** Consolidate further. Person 1 = CISO + Governance + Risk Register. Person 2 = Engineering + Cloud + Identity. Person 3 = Risk + Compliance + VM. Document every consolidation in the Decision Log per IMP-002 §4. The Role Collision Guide (IMP-002 §7) defines which consolidations require compensating controls.
+
+**Authority guardrail:** heads collapse; business consequence acceptance does not. A small team still needs a Business Owner or Executive Sponsor outside the security assessor role to acknowledge accepted residual risk. If the CISO/Risk/Governance work is held by one person, use IMP-002 §5 and RMF-001 §9.7 for independent acceptance and escalation.
 
 **If you have 1 person:** You are not ready to adopt CERG as an operating model. Use CERG as a planning reference. Hire your second person before attempting adoption.
 
@@ -523,7 +525,7 @@ Create this folder structure in your shared drive, document management system, o
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-003 |
-| **Version** | 1.01 |
+| **Version** | 1.02 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-14 |
 | **Classification** | Public |
