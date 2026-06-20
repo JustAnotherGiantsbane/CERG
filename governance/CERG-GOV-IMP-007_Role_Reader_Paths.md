@@ -1,12 +1,12 @@
 ## ROLE READER PATHS
-### Sequenced Reading Orders for New CERG Roles · CISO, Risk Lead, Engineering Lead
+### Sequenced Reading Orders for New CERG Roles · CISO, Risk Lead, Engineering Lead, Business Owner
 
 ---
 
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-007 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
@@ -25,8 +25,9 @@
 3. [CISO Reader Path](#3-ciso-reader-path)
 4. [Risk Lead Reader Path](#4-risk-lead-reader-path)
 5. [Engineering Lead Reader Path](#5-engineering-lead-reader-path)
-6. [When to Skip the Path](#6-when-to-skip-the-path)
-7. [Document Control](#7-document-control)
+6. [Business Owner / System Sponsor Reader Path](#6-business-owner--system-sponsor-reader-path)
+7. [When to Skip the Path](#7-when-to-skip-the-path)
+8. [Document Control](#8-document-control)
 
 ---
 
@@ -38,8 +39,8 @@ Each section below is a sequenced reading order for a specific role. The order i
 
 Use this document when:
 
-- A new CISO, Risk Lead, or Engineering Lead joins a team that has adopted CERG.
-- An existing leader takes on a new CERG role for the first time.
+- A new CISO, Risk Lead, Engineering Lead, Business Owner, or System Sponsor joins a team that has adopted CERG.
+- An existing leader takes on a new CERG role or accountable business-owner role for the first time.
 - An executive sponsor wants to understand what the leader they hired will be reading.
 
 This document does not replace the documents it points at. It tells the reader which document to open next and why.
@@ -142,22 +143,50 @@ The reader path is a reading list, not an action list. For action items, see the
 2. Run the weekly intake review per [`CERG-GOV-IMP-003`](CERG-GOV-IMP-003_Small_Team_Adoption_Path.md) §3.
 3. Bookmark the standards catalog ([`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) §5.3) for the standards you are most likely to apply this quarter.
 
-## 6. When to Skip the Path
+## 6. Business Owner / System Sponsor Reader Path
+
+**Read time:** 25 minutes.
+
+**Goal:** You can explain what CERG expects from a business owner or system sponsor: own the business objective, provide scope and priority, fund or accept treatment decisions, approve go-live for your system, and understand that Security/Risk recommends while the business owns residual consequence.
+
+**Sequence:**
+
+| # | Document | Time | Why this comes next |
+|---|----------|------|---------------------|
+| 1 | [`README.md`](../README.md) | 4 min | Establishes what CERG is and what it is not. Business owners need the operating-model view, not the whole corpus. |
+| 2 | [`CERG-GOV-FRM-002`](CERG-GOV-FRM-002_Framework_System_Map.md) §5 | 5 min | Shows where to go by user need: new system, risk decision, audit evidence, or exposure treatment. |
+| 3 | [`CERG-GOV-FLOW-001`](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) F-02 and F-04 | 6 min | Shows how project intake and finding remediation move across Engineering, Risk, Governance, and the business owner. |
+| 4 | [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) §§2, 5, and 9 | 5 min | Names the sponsor responsibilities for intake, go-live, handoff, and production ownership. |
+| 5 | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §§9.5 and 9.7 | 3 min | Explains treatment recommendation versus business consequence acceptance. |
+| 6 | [`CERG-TMPL-RM-004`](../templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md) | 2 min | Shows what a residual-risk decision looks like when a business owner is asked to accept consequence. |
+
+**Skip if:**
+
+- You are only funding a one-time security project and do not own a system, business process, or residual risk decision. Read [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) §3 instead.
+- You have already sponsored a CERG-governed system through intake, pre-production, and go-live. Use [`CERG-GOV-FRM-002`](CERG-GOV-FRM-002_Framework_System_Map.md) §5 as your quick reference.
+
+**After the path:**
+
+1. Confirm the named Business Owner / System Sponsor for each system or project you own.
+2. For active projects, confirm whether [`CERG-TMPL-AR-001`](../templates/CERG-TMPL-AR-001_Architecture_and_Project_Intake_Form.md) has been submitted and whether Phase 4/5 records are required.
+3. For accepted risks, confirm the treatment owner, funding decision, expiration date, and next review date.
+
+## 7. When to Skip the Path
 
 Reader paths are for new readers. Skip them if:
 
-- You are the **executive sponsor**, not a CERG role. Read [README.md](../README.md), [START-HERE.md](../START-HERE.md) Path selection, and [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) §3 (Board Reporting). Total time: 15 minutes.
+- You are the **executive sponsor** and do not own a system, project, or residual-risk decision. Read [README.md](../README.md), [START-HERE.md](../START-HERE.md) Path selection, and [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) §3 (Board Reporting). Total time: 15 minutes.
 - You are a **program-level contributor** (auditor, consultant, advisor). Read [README.md](../README.md), [`CERG-GOV-FRM-002`](CERG-GOV-FRM-002_Framework_System_Map.md), and one Day in the Life story relevant to your engagement. Total time: 20 minutes.
 - You have **already adopted CERG and run it for six months or more**. Use [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) §5 as your reference, not the reader path.
 
 The reader paths are designed for the first hour of engagement. They are not a substitute for the operating rhythm that follows.
 
-## 7. Document Control
+## 8. Document Control
 
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-007 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-18 |
 | **Classification** | Public |
@@ -174,6 +203,7 @@ The reader paths are designed for the first hour of engagement. They are not a s
 
 | **Version** | **Date** | **Author** | **Change** |
 |---|---|---|---|
+| 1.1 | 2026-06-18 | Governance Pillar Leader (Policy & Standards) | Added Business Owner / System Sponsor reader path focused on project sponsorship, go-live ownership, and residual-risk consequence decisions. |
 | 1.0 | 2026-06-18 | Governance Pillar Leader (Policy & Standards) | Initial publication. Establishes sequenced reading orders for the CISO, Risk Lead, and Engineering Lead roles. Each path totals 30-35 minutes and points at the documents the new reader needs in the order each builds on the previous. |
 
 ### Review Triggers
@@ -182,7 +212,7 @@ The reader paths are designed for the first hour of engagement. They are not a s
 - A change to the canonical cross-pillar flows in [`CERG-GOV-FLOW-001`](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md).
 - A new role added to the workforce architecture in [`roles/`](../roles/) that warrants its own reader path.
 - A material change to adoption sequencing in [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) or [`CERG-GOV-IMP-005`](CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md).
-- User feedback indicating the path is too long, too short, or in the wrong order.
+- User feedback indicating the path is too long, too short, missing a business-owner decision point, or in the wrong order.
 
 ### Related Documents
 
