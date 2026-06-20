@@ -2,7 +2,7 @@
 
 ### A Scalable, Adaptive Cybersecurity Operating Model
 
-> Designed for Adaptive [NIST CSF 2.0](https://www.nist.gov/cyberframework) maturity. Applicable to IT and OT environments. Calibrated for [CMMC](https://dodcio.defense.gov/CMMC/), NERC-CIP,, and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204).
+> Designed for Adaptive [NIST CSF 2.0](https://www.nist.gov/cyberframework) maturity. Applicable to IT and OT environments. Calibrated for [CMMC](https://dodcio.defense.gov/CMMC/), NERC-CIP, and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204).
 > 
 > _Examples in this document reference a large enterprise at the upper bound of what CERG is designed to support — the framework is scaled to fit organizations from 5 people to large regulated entities. Readers should scale down to their environment. Sector-specific illustrative profiles are available in [`/examples/`](../examples/). See also [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) for mechanical adaptation._
 
@@ -58,7 +58,7 @@ The CERG model names these activities explicitly, Engineering, Risk, and Governa
 ### Design Principles
 
 - **Scale up or down:** applicable to a 5-person team or a 500-person organization
-- **Regulatory-ready:** designed to satisfy [CMMC](https://dodcio.defense.gov/CMMC/), NERC-CIP, [NIST CSF 2.0](https://www.nist.gov/cyberframework), 800-53, 800-171,, and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)
+- **Regulatory-ready:** designed to satisfy [CMMC](https://dodcio.defense.gov/CMMC/), NERC-CIP, [NIST CSF 2.0](https://www.nist.gov/cyberframework), 800-53, 800-171, and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)
 - **IT/OT aware:** principles apply equally to enterprise IT and operational technology environments
 - **Talent resilient:** cross-pillar knowledge sharing means no single person is a point of failure
 - **Adaptive-targeted:** the framework describes what operating at [NIST CSF 2.0](https://www.nist.gov/cyberframework) Adaptive maturity looks like in practice
@@ -245,7 +245,7 @@ Governance operates from a **"yes, and..."** philosophy. The goal is never to bl
 
 - **Policy and Standard Development**: creating, maintaining, and retiring cybersecurity policies, standards, and procedures aligned to [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final), 800-171, [CSF](https://www.nist.gov/cyberframework), and applicable regulations
 - **Implementation Guidance**: translating policy requirements into practical, actionable guidance for IT and OT teams; bridging the gap between regulatory language and operational reality
-- **Compliance Management**: tracking the organization's compliance posture against NERC-CIP, [CMMC](https://dodcio.defense.gov/CMMC/),, [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204), and other applicable requirements; managing the compliance calendar
+- **Compliance Management**: tracking the organization's compliance posture against NERC-CIP, [CMMC](https://dodcio.defense.gov/CMMC/), [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204), and other applicable requirements; managing the compliance calendar
 - **Control Evidence Management**: setting standards for what constitutes acceptable evidence; collecting, organizing, and maintaining the control evidence library; coordinating audit responses
 - **Risk Treatment Tracking**: maintaining the organization's risk register; tracking open risk treatment plans to completion; escalating overdue or deteriorating items to the CISO
 - **Quality Assurance**: periodic review of Engineering deliverables and Risk outputs to ensure conformance with organizational standards; not an adversarial audit but a collaborative QA function
