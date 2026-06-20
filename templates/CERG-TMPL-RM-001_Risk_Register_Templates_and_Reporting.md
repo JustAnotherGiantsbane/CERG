@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-TMPL-RM-001 |
-| **Version** | 1.22 |
+| **Version** | 1.23 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Risk Register) |
@@ -72,6 +72,7 @@ The schema below is the system-of-record contract regardless of tool (Excel, Ser
 | Risk Statement | Free text - Section 2 form | Yes | One sentence. |
 | Source | Enum: VM · Pen Test · Vendor · Architecture Review · Audit · Threat Intel · Self-Identified · Incident | Yes | What surfaced the risk. |
 | Linked Control(s) | List of [CERG-GOV-CB-001](../governance/CERG-GOV-CB-001_Unified_Control_Baseline.md) IDs | Yes | At least one. |
+| Control Evidence Link | URI / artifact reference | Yes | Evidence that the linked control state or compensating control is implemented and independently verifiable. |
 | Affected Asset(s) | Asset inventory ID(s) | Yes | From the authoritative asset inventory. |
 | Operating Unit | Enum (OU list) | Yes | Drives CISO slice-and-dice. |
 | Regulatory Scope | Multi-select: CUI · BES · SOX · None | Yes | Drives overlay scoring. |
@@ -84,17 +85,20 @@ The schema below is the system-of-record contract regardless of tool (Excel, Ser
 | Residual Score | Likelihood × Impact | Auto | Drives approval authority per PRC-RM-001 §8. |
 | Treatment | Enum: Mitigate · Transfer · Avoid · Accept | Yes | - |
 | Treatment Plan | Free text | Yes | Specific actions, owners, dates. |
-| Risk Owner | Named role | Yes | Asset/process owner - accountable. |
+| Residual Risk Owner / Business Owner | Named role | Yes | Asset/process/business owner accountable for the residual consequence; security may coordinate but does not own business risk. |
 | CERG Coordinator | Named role | Yes | Pillar contact - keeps it moving. |
-| Approver | Named role | Yes | Per PRC-RM-001 §8 matrix. |
-| Approval Date | Date | If accepted | - |
+| Approver | Named role | Yes | Per PRC-RM-001 §8 and RMF-001 §9.7 authority. |
+| Decision Date | Date | If treatment is selected or changed | Date the treatment decision was recorded. |
+| Approval Date | Date | If accepted | Date required approval was recorded. |
 | Review Cadence | Quarterly · Semi-Annual · Annual | Yes | Driven by residual score. |
-| Next Review | Date | Yes | - |
+| Last Validated Date | Date | Yes | Last date the risk score, control/evidence state, owner, and treatment status were validated against operational reality. |
+| Next Review Date | Date | Yes | Next required review date; must align to cadence and shortest applicable regulatory/procedure clock. |
 | Status | Open · In Treatment · Accepted · Closed · Retired | Yes | - |
 | Linked Exceptions | Exception ID(s) | If exception in force | - |
 | Linked Findings | VM finding ID · Pen test finding ID · Audit finding ID | Optional | - |
 | Linked POA&M | POA&M ID | If CUI scope | - |
-| Evidence Pointer | URI / artifact reference | Yes | Where the proof lives. |
+| Evidence Pointer | URI / artifact reference | Yes | Where the complete evidence package lives; may duplicate Control Evidence Link when one artifact proves both control state and risk treatment. |
+| Closure / Validation Evidence | URI / artifact reference | If closed, accepted, or score changed | Evidence proving closure, treatment validation, score change, or accepted-residual-risk conditions. |
 | Trend Indicator | Improving · Steady · Worsening | Yes (at review) | Set at each review. |
 | Free-Form Notes | Free text | Optional | - |
 
@@ -102,6 +106,7 @@ The schema below is the system-of-record contract regardless of tool (Excel, Ser
 
 - **Residual Score** drives auto-routing to the approval queue per PRC-RM-001 §8.
 - **Review Cadence** is set by residual score: Critical/High = Quarterly, Medium = Semi-Annual, Low = Annual.
+- **Last Validated Date** is updated whenever the risk is reviewed, treatment status changes, control evidence is refreshed, closure is verified, or acceptance conditions are reapproved.
 - **Status** transitions: Open → In Treatment → (Closed | Accepted) → Retired. Retired risks are kept for audit history.
 
 ---
@@ -293,8 +298,8 @@ Additional guardrails baked into the views:
 | | |
 |---|---|
 | **Document ID** | CERG-TMPL-RM-001 |
-| **Version** | 1.22 |
+| **Version** | 1.23 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / on tooling change |
-| **Change Log** | 1.22 - Aligned scoring bands, approval authorities, and expiration guidance to RMF §9.7 / PRC-RM-001 §8. 1.0 - Initial publication. Schema, examples, exception template, scoring guide, CISO reporting views. |
+| **Change Log** | 1.23 - Added explicit Definition of Done fields for residual risk owner, control evidence, decision date, last validated date, next review date, and closure/validation evidence. 1.22 - Aligned scoring bands, approval authorities, and expiration guidance to RMF §9.7 / PRC-RM-001 §8. 1.0 - Initial publication. Schema, examples, exception template, scoring guide, CISO reporting views. |
 
