@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-RAC-001 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
@@ -256,7 +256,7 @@ A normalized one-paragraph description for each canonical role. These are the jo
 
 **OT Risk Analyst.** Owns OT-safe vulnerability assessment and industrial control system threat intelligence.
 
-**Identity Risk Analyst.** Owns identity-threat detection: user and entity behavior analytics, and OAuth and token risk.
+**Identity Risk Analyst.** Owns identity-threat detection: user and entity behavior analytics, and OAuth and token risk. This is a mature-program specialization; in smaller teams the Detection Engineer or Risk Pillar Leader carries the work without deleting the role from the canonical architecture.
 
 **Detection Engineer.** Owns detection-rule authoring, ATT&CK coverage, and the tuning lifecycle. Responsible for logging and monitoring coverage and for handing detected incidents to the standing IR team.
 
@@ -298,7 +298,7 @@ Every one of the 27 roles is held by someone. On a large team that is close to o
 |---|---|
 | 1 | Chief Information Security Officer (CISO) |
 | 2 | Governance Pillar Leader; Policy & Standards Manager; Risk Register Owner; Evidence Librarian; and the applicable Compliance Manager roles for regulators in scope |
-| 3 | Risk Pillar Leader; Exposure Management Lead; Adversarial Testing Lead; Threat Intelligence Analyst; Vendor Risk Analyst; Detection Engineer |
+| 3 | Risk Pillar Leader; Exposure Management Lead; Adversarial Testing Lead; Threat Intelligence Analyst; Vendor Risk Analyst; Detection Engineer; Identity Risk Analyst |
 | 4 | Engineering Pillar Leader; Cloud Security Engineer; Identity Engineer; Pre-production Reviewer |
 | 5 | Application Security Engineer; Endpoint Engineer; Cryptography Engineer; OT Security Engineer where OT is in scope |
 
@@ -329,7 +329,7 @@ Risk-acceptance authority does not consolidate freely. The separation of the per
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-RAC-001 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Effective Date** | 2026-05-21 |
 | **Classification** | Public |
@@ -346,6 +346,7 @@ Risk-acceptance authority does not consolidate freely. The separation of the per
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.2 | 2026-06-18 | Governance Pillar Leader | Clarified Identity Risk Analyst as a mature-program specialization carried by Detection Engineer or Risk Pillar Leader in smaller teams. |
 | 1.1 | 2026-06-18 | Governance Pillar Leader | Clarified that CAT-001 owns artifact inventory, lifecycle status, and document-type approval authority while RAC-001 owns role and process accountability. |
 | 1.0 | 2026-05-21 | Cyber Governance | Initial release. Consolidates the per-process RACI that CERG-GOV-OM-001 §9 deferred. Establishes RACI definitions and rules, a canonical role reference, a master RACI for document ownership, a master RACI for standing processes across engagement, risk, governance, and operations, normalized descriptions for all 27 canonical roles, and a scaling map showing role consolidation onto a five-person team. |
 
