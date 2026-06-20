@@ -367,7 +367,7 @@ If you do not have a GRC platform, ticketing system, or evidence management tool
 | Control ID | AC-2 | From CB-001 |
 | Control Name | Account Management | |
 | Evidence Description | JML log export for June 2026 | What the evidence shows |
-| Evidence Tier | E2 | E1/E2/E3 per FLOW-001 §16 |
+| Evidence Tier | E2 | E1/E2/E3 per FLOW-001 §17 |
 | Source System | Azure AD / HRIS feed | Where the evidence came from |
 | Generated Date | 2026-06-30 | When the evidence was produced |
 | Collected Date | 2026-07-01 | When it was added to the library |
@@ -542,6 +542,7 @@ Create this folder structure in your shared drive, document management system, o
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.02 | 2026-06-18 | Governance Pillar Leader | Added authority guardrail requiring independent Business Owner or Executive Sponsor acknowledgement for accepted residual risk in small-team role consolidations. |
 | 1.01 | 2026-06-14 | Governance Pillar Leader | Aligned the CERG Lite package to the eight-document MVC and separated adoption aids from immediate requirements. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. CERG Lite package, reduced operating rhythm for 5-person teams, role consolidation map, first 10 records, first month criteria, spreadsheet schemas for 7 record types, minimum viable evidence library structure. |
 
