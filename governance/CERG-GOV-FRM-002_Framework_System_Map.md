@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-FRM-002 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -170,6 +170,7 @@ Story 8 ([CERG Lite - Maria and the Tuesday scanner report](../examples/day-in-t
 | If you need to... | Start with | Then use |
 |---|---|---|
 | Explain CERG to executives | This document and [FRM-001](CERG-GOV-FRM-001_CERG_Framework.md) | [MTR-001](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) board reporting sections |
+| Act as a Business Owner / System Sponsor | [IMP-007 §6](CERG-GOV-IMP-007_Role_Reader_Paths.md#6-business-owner--system-sponsor-reader-path) | [PRC-AR-001](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md), [RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md), [TMPL-RM-004](../templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md) |
 | Adopt CERG for the first time | [START-HERE](../START-HERE.md) | [IMP-001](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md), [IMP-005](CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md) |
 | Run a small-team version | [IMP-003](CERG-GOV-IMP-003_Small_Team_Adoption_Path.md) | [IMP-006](CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md) |
 | Decide which documents apply | [IMP-005](CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md) | [VAR-001](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) |
@@ -255,7 +256,7 @@ For regulator-facing walkthroughs, see the [Day in the Life examples](../example
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-FRM-002 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Approved By** | CISO |
 | **Owner** | Governance Pillar Leader |
@@ -265,6 +266,7 @@ For regulator-facing walkthroughs, see the [Day in the Life examples](../example
 
 | **Version** | **Date** | **Author** | **Change** |
 |---|---|---|---|
+| 1.2 | 2026-06-18 | Governance Pillar Leader | Added navigation for Business Owner / System Sponsor reader path and decision artifacts. |
 | 1.1 | 2026-06-18 | Governance Pillar Leader | Added direct practitioner navigation for OT/BES patch and exposure-treatment deferral routing. |
 | 1.0 | 2026-06-13 | Governance Pillar Leader | Initial publication. Adds a front-door system map for CERG navigation, adoption, and document relationships. |
 
