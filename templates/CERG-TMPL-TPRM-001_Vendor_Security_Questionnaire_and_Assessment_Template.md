@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-TMPL-TPRM-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Vendor Risk Analyst |
@@ -88,6 +88,17 @@ This template captures vendor security intake, questionnaire responses, evidence
 | Required remediation | `[Actions]` | `[Owner and due date]` |
 | Approval decision | `[Approve / approve with conditions / reject / defer]` | `[Rationale]` |
 
+### 3.4 Business Decision Box
+
+| **Decision Question** | **Business Owner Response** |
+|---|---|
+| What business capability depends on this vendor? | `[Capability and priority]` |
+| What decision is being requested? | `[Proceed / proceed with conditions / renew / defer / reject / terminate]` |
+| What alternatives were considered? | `[Alternative vendors / internal option / delay / no action]` |
+| What vendor risk conditions must the business fund or enforce? | `[Contract clause / remediation / compensating control / monitoring]` |
+| What happens if the vendor is not approved or renewal is delayed? | `[Operational, financial, regulatory, or customer consequence]` |
+| Who owns vendor-risk conditions after approval? | `[Business owner and technical owner]` |
+
 ---
 
 ## 4. Review and Approval
@@ -95,6 +106,7 @@ This template captures vendor security intake, questionnaire responses, evidence
 | **Reviewer / Approver** | **Review Meaning** | **Name / Date** |
 |---|---|---|
 | Vendor Risk Analyst | Completes assessment and recommended decision. | `[Name / Date]` |
+| Business Owner | Accepts business need, owns vendor conditions, and confirms whether to proceed, defer, reject, or terminate. | `[Name / Date]` |
 | Risk Pillar Leader | Approves vendor residual-risk treatment. | `[Name / Date]` |
 | Chief Information Security Officer (CISO) | Approves High or Critical vendor risk acceptance where required. | `[Name / Date]` |
 
@@ -107,7 +119,7 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-TMPL-TPRM-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
@@ -124,7 +136,8 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.0 Draft | 2026-05-22 | Cyber Governance | Initial release. Establishes a standalone fill-in template for vendor security questionnaire and tprm assessment template. |
+| 1.1 | 2026-06-18 | Vendor Risk Analyst | Added business-facing decision box and Business Owner review line for vendor proceed/defer/reject decisions and post-approval conditions. |
+| 1.0 | 2026-05-22 | Cyber Governance | Initial release. Establishes a standalone fill-in template for vendor security questionnaire and TPRM assessment template. |
 
 ### Review Triggers
 
