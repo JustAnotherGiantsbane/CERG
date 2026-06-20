@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PLN-IR-001 |
-| **Version** | 1.22 |
+| **Version** | 1.23 |
 | **Status** | External Interface |
 | **Classification** | External Interface |
 | **Owner** | Standing IR Team / Incident Commander |
@@ -69,7 +69,7 @@ This plan applies to:
 |---|---|
 | **Event** | Any observable occurrence in a system or network. Not all events are incidents. |
 | **Incident** | An event that violates security policy, threatens confidentiality, integrity, or availability, or has the realistic potential to do so. |
-| **Significant Cyber Incident** | An incident classified Sev 1 or Sev 2 under Section 5, or any incident triggering an external notification obligation. |
+| **Significant Cyber Incident** | An incident classified P1 / Sev 1 or P2 / Sev 2 under Section 5, or any incident triggering an external notification obligation. |
 | **Reportable Cyber Incident (DFARS)** | A cyber incident that affects covered defense information or the contractor's ability to perform operationally critical support - triggers 72-hour DC3 reporting. |
 | **Reportable Cyber Security Incident (NERC-CIP)** | An incident as defined in NERC Glossary that compromises or attempts to compromise an ESP, PSP, or BES Cyber System, or disrupts BES operations. |
 | **Material Cybersecurity Incident (SEC)** | An incident determined material under SEC Item 1.05 (Form 8-K), based on reasonable-investor materiality - triggers a 4-business-day disclosure clock. |
@@ -134,10 +134,10 @@ Activate this plan upon any of the following:
 
 | **Severity** | **Engaged at Activation** | **Engaged on Escalation** |
 |---|---|---|
-| Sev 4 | SOC / Lead Investigator | - |
-| Sev 3 | Lead Investigator + Engineering Lead | IC (notified) |
-| Sev 2 | IC + Lead Investigator + Engineering Lead + Governance | Legal + Communications + Executive Sponsor |
-| Sev 1 | Full IRT incl. Legal + Communications + Executive Sponsor + Board notification | External support (forensics retainer, law enforcement liaison, breach coach) |
+| P4 / Sev 4 | SOC / Lead Investigator | - |
+| P3 / Sev 3 | Lead Investigator + Engineering Lead | IC (notified) |
+| P2 / Sev 2 | IC + Lead Investigator + Engineering Lead + Governance | Legal + Communications + Executive Sponsor |
+| P1 / Sev 1 | Full IRT incl. Legal + Communications + Executive Sponsor + Board notification | External support (forensics retainer, law enforcement liaison, breach coach) |
 
 ### 3.3 Third-Party Engagement
 
@@ -207,7 +207,7 @@ Recovery restores affected systems to operational service. Recovery is coordinat
 
 ### 4.6 Post-Incident Activity (Lessons Learned)
 
-A post-incident review is mandatory for every Sev 1 and Sev 2 incident, and recommended for Sev 3. Sev 1 reviews occur within 14 calendar days of recovery; Sev 2 within 30 days.
+A post-incident review is mandatory for every P1 / Sev 1 and P2 / Sev 2 incident, and recommended for Sev 3. P1 / Sev 1 reviews occur within 14 calendar days of recovery; P2 / Sev 2 within 30 days.
 
 The review produces:
 
@@ -227,10 +227,10 @@ Severity drives engagement, communication cadence, and notification scrutiny. Se
 
 | **Severity** | **Indicative Criteria (any of)** | **Engagement** | **Reporting** |
 |---|---|---|---|
-| **Sev 1 - Critical** | Confirmed material data loss or destruction; ransomware encrypting Tier 1 or regulated systems; confirmed compromise affecting BES Cyber System operations; broad customer / partner impact; meets reasonable-investor materiality threshold for SEC disclosure. | Full IRT, executive sponsor, board notification, external partners as needed. | Hourly IC briefing to executive leadership during active response. |
-| **Sev 2 - Significant** | Confirmed unauthorized access to Tier 1 systems or Confidential/Restricted data; ransomware contained to non-critical scope; confirmed cyber incident triggering DFARS / NERC-CIP / breach-law notification. | IC + full IRT + Legal + Communications. | At least twice-daily IC briefing during active response. |
-| **Sev 3 - Moderate** | Localized compromise (single endpoint, scoped credential), with no confirmed sensitive-data impact; significant phishing wave with successful but contained credential theft. | IC notified; Lead Investigator + Engineering active. | Daily IC update until closure. |
-| **Sev 4 - Minor** | Failed attack with no impact; isolated malware blocked by EDR; SOC-triaged anomaly with no escalation criteria met. | SOC / Risk only. | Routine SOC reporting. |
+| **P1 / Sev 1 - Critical** | Confirmed material data loss or destruction; ransomware encrypting Tier 1 or regulated systems; confirmed compromise affecting BES Cyber System operations; broad customer / partner impact; meets reasonable-investor materiality threshold for SEC disclosure. | Full IRT, executive sponsor, board notification, external partners as needed. | Hourly IC briefing to executive leadership during active response. |
+| **P2 / Sev 2 - Significant** | Confirmed unauthorized access to Tier 1 systems or Confidential/Restricted data; ransomware contained to non-critical scope; confirmed cyber incident triggering DFARS / NERC-CIP / breach-law notification. | IC + full IRT + Legal + Communications. | At least twice-daily IC briefing during active response. |
+| **P3 / Sev 3 - Moderate** | Localized compromise (single endpoint, scoped credential), with no confirmed sensitive-data impact; significant phishing wave with successful but contained credential theft. | IC notified; Lead Investigator + Engineering active. | Daily IC update until closure. |
+| **P4 / Sev 4 - Minor** | Failed attack with no impact; isolated malware blocked by EDR; SOC-triaged anomaly with no escalation criteria met. | SOC / Risk only. | Routine SOC reporting. |
 
 The IC may up- or down-grade severity at any time based on emerging information. Severity changes are logged on the incident timeline.
 
@@ -245,10 +245,10 @@ Notification is one of the highest-risk areas of incident response. Many obligat
 | **Audience** | **Trigger** | **Owner** | **Timing** |
 |---|---|---|---|
 | CISO / IC | Plan activation | SOC / on-call | Immediate |
-| Executive leadership (CEO/CIO/CFO/COO) | Sev 1 / Sev 2 activation | IC | Within 1 hour of activation |
-| Board (Audit / Risk Committee) | Sev 1; or Sev 2 with regulatory / financial implications | CISO via CEO | Within 24 hours of confirmation per board protocol |
-| Workforce communications | Sev 1; or any incident requiring workforce action | Communications + IC | As approved by IC |
-| Internal Audit | Sev 1; [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant incidents | Governance | Per [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) protocol |
+| Executive leadership (CEO/CIO/CFO/COO) | P1 / Sev 1 or P2 / Sev 2 activation | IC | Within 1 hour of activation |
+| Board (Audit / Risk Committee) | P1 / Sev 1; or P2 / Sev 2 with regulatory / financial implications | CISO via CEO | Within 24 hours of confirmation per board protocol |
+| Workforce communications | P1 / Sev 1; or any incident requiring workforce action | Communications + IC | As approved by IC |
+| Internal Audit | P1 / Sev 1; [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)-relevant incidents | Governance | Per [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) protocol |
 
 ### 6.2 External Notification (Regulator and Statutory)
 
@@ -261,7 +261,7 @@ Notification is one of the highest-risk areas of incident response. Many obligat
 | **GDPR Supervisory Authority** (where applicable) | Personal data breach with risk to data subjects | **72 hours** from awareness | Legal / DPO | GDPR Art 33 |
 | **HIPAA Breach Notification** (where applicable) | Breach of unsecured PHI | Per HIPAA timelines | Legal / Privacy | HIPAA 164.400 series |
 | **Sector / customer contractual notification** | Per contract terms (often 24–72 hours) | Per contract | IC + Legal + Account Management; Governance evidence support | Contractual |
-| **Law enforcement (FBI / Secret Service / local)** | Sev 1 events at IC / Legal discretion; mandated reporting in some jurisdictions | At IC discretion unless mandated | IC + Legal | Jurisdiction-specific |
+| **Law enforcement (FBI / Secret Service / local)** | P1 / Sev 1 events at IC / Legal discretion; mandated reporting in some jurisdictions | At IC discretion unless mandated | IC + Legal | Jurisdiction-specific |
 | **CISA voluntary reporting (and CIRCIA when in force)** | Significant cyber incidents at critical infrastructure entities | Per CIRCIA rule (72 hours for incidents; 24 hours for ransom payments) once effective | IC + Legal; Governance evidence support | CIRCIA (when final rule effective) |
 
 ### 6.3 Notification Decision Discipline
@@ -370,7 +370,7 @@ External communications during an active incident are owned by the IC, with cont
 
 ### 10.2 Privilege
 
-The Legal Lead is involved at activation for all Sev 1 and Sev 2 events. Privileged work product is created under counsel direction and labeled accordingly. Whether and how privilege applies to forensic findings is a judgment of counsel; the IRT operates with privilege awareness from the outset.
+The Legal Lead is involved at activation for all P1 / Sev 1 and P2 / Sev 2 events. Privileged work product is created under counsel direction and labeled accordingly. Whether and how privilege applies to forensic findings is a judgment of counsel; the IRT operates with privilege awareness from the outset.
 
 ### 10.3 Law Enforcement Engagement
 
@@ -382,14 +382,14 @@ Engagement with law enforcement is at the IC's discretion in consultation with L
 
 | **Activity** | **Cadence** | **Owner** |
 |---|---|---|
-| Tabletop exercise - Sev 1 scenario (cross-environment) | Annual | Incident Commander / Standing IR Team; Governance + Risk support |
+| Tabletop exercise - P1 / Sev 1 scenario (cross-environment) | Annual | Incident Commander / Standing IR Team; Governance + Risk support |
 | Tabletop exercise - OT (CIP-008) | Annual | Incident Commander / Standing IR Team + OT Ops; Governance + Risk support |
 | Tabletop exercise - CUI (DFARS 7012 reporting) | Annual | Incident Commander / Standing IR Team; Governance evidence support |
 | Functional exercise / detection validation (purple-team) | Quarterly | Incident Commander / Standing IR Team; Risk support |
 | IRT contact roster validation | Quarterly | Incident Commander / Standing IR Team; Governance repository support |
 | External retainer activation test | Annual | Incident Commander / Standing IR Team; Legal / Procurement support |
 | Playbook review | Annual; after each use | Incident Commander / Standing IR Team; Governance / Risk support |
-| This plan review | Annual; after any Sev 1 / Sev 2 incident; upon regulatory change | Incident Commander / Standing IR Team; Governance cross-reference support |
+| This plan review | Annual; after any P1 / Sev 1 or P2 / Sev 2 incident; upon regulatory change | Incident Commander / Standing IR Team; Governance cross-reference support |
 
 Exercise results, including identified gaps and corrective actions, are recorded in the risk register and tracked to closure.
 
@@ -416,6 +416,7 @@ Exercise results, including identified gaps and corrective actions, are recorded
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.23 | 2026-06-18 | Standing IR Team / Incident Commander | Standardized core incident severity labels to paired P / Sev notation. |
 | 1.22 | 2026-06-18 | Standing IR Team / Incident Commander | Clarified that the standing IR team owns notification-clock process, playbook maintenance, exercises, and plan maintenance; CERG Governance provides evidence, regulatory-mapping, repository, and improvement-routing support only. |
 | 1.0 DRAFT | 2026 | CERG Governance | Initial release |
 
@@ -423,7 +424,7 @@ Exercise results, including identified gaps and corrective actions, are recorded
 
 This plan shall be reviewed annually and upon any of the following:
 
-- Any Sev 1 or Sev 2 incident affecting the organization
+- Any P1 / Sev 1 or P2 / Sev 2 incident affecting the organization
 - Material change to applicable regulation (DFARS, CIP, SEC, breach laws, CIRCIA)
 - Material change to the organization's environments or tooling
 - IRT structural change (CISO transition, new external retainer)
