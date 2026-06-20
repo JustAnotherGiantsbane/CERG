@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-IR-002 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | External Interface |
 | **Classification** | External Interface |
 | **Owner** | Standing IR Team / Incident Commander |
@@ -91,7 +91,7 @@ This playbook set operates under [CERG-PLN-IR-001](../plans/CERG-PLN-IR-001_Inci
 | **IR Plan Stage** | **CERG Playbook Activation** | **CERG Action** |
 |---|---|---|
 | Incident declared | Incident Commander notifies CERG on-call per Section 18.1 | CERG acknowledges and stands by |
-| Severity determined (P1-P4) | Playbook selected per Section 3.1 | CERG activates at the level defined in Section 3.2 |
+| Severity determined (P1 / Sev 1 through P4 / Sev 4) | Playbook selected per Section 3.1 | CERG activates at the level defined in Section 3.2 |
 | Triage | Playbook Triage phase | CERG supplies asset context, data classification, control evidence, logging posture |
 | Containment | Playbook Containment phase | CERG supports with Engineering and Risk expertise |
 | Eradication | Playbook Eradication phase | CERG identifies control gaps and remediation paths |
@@ -178,17 +178,17 @@ All incidents are classified by severity to determine response priority, escalat
 
 | **Severity** | **Label** | **Criteria** | **CERG Activation** |
 |---|---|---|---|
-| **P1** | Critical | Active data breach of Restricted/CUI data; ransomware in production with confirmed encryption of critical systems; BES Cyber System compromise; confirmed compromise of a Crown Jewel asset; incident with safety or operational reliability impact | Full CERG activation; all pillar leaders engaged; CISO notified immediately |
-| **P2** | High | Confirmed compromise of a privileged account; CUI exposure without confirmed exfiltration; malware on systems handling regulated data; material vendor breach with downstream impact; DDoS affecting customer-facing services | CERG Engineering + Risk pillars activated; Governance engaged for regulatory scoping; CISO notified within 1 hour |
-| **P3** | Medium | Confirmed compromise of a standard user account; phishing campaign with credential submission but no confirmed account access; malware on non-regulated endpoint; policy violation with security implications | CERG supporting role; relevant pillar(s) engaged as needed; CISO notified in standing briefing |
-| **P4** | Low | Isolated security event with no confirmed compromise; failed attack attempt; routine alert requiring investigation but no incident declaration | CERG monitoring only; no activation required unless escalated by the Incident Commander |
+| **P1 / Sev 1** | Critical | Active data breach of Restricted/CUI data; ransomware in production with confirmed encryption of critical systems; BES Cyber System compromise; confirmed compromise of a Crown Jewel asset; incident with safety or operational reliability impact | Full CERG activation; all pillar leaders engaged; CISO notified immediately |
+| **P2 / Sev 2** | High | Confirmed compromise of a privileged account; CUI exposure without confirmed exfiltration; malware on systems handling regulated data; material vendor breach with downstream impact; DDoS affecting customer-facing services | CERG Engineering + Risk pillars activated; Governance engaged for regulatory scoping; CISO notified within 1 hour |
+| **P3 / Sev 3** | Medium | Confirmed compromise of a standard user account; phishing campaign with credential submission but no confirmed account access; malware on non-regulated endpoint; policy violation with security implications | CERG supporting role; relevant pillar(s) engaged as needed; CISO notified in standing briefing |
+| **P4 / Sev 4** | Low | Isolated security event with no confirmed compromise; failed attack attempt; routine alert requiring investigation but no incident declaration | CERG monitoring only; no activation required unless escalated by the Incident Commander |
 
 #### Escalation Thresholds
 
-- Any P1 or P2 incident: CISO is notified immediately. The Incident Commander and Legal determine regulatory notification obligations; Governance supplies evidence and obligation-mapping support.
+- Any P1 / Sev 1 or P2 / Sev 2 incident: CISO is notified immediately. The Incident Commander and Legal determine regulatory notification obligations; Governance supplies evidence and obligation-mapping support.
 - Any incident involving PII, CUI, or BCSI: The relevant compliance manager (CMMC / NERC-CIP) is engaged within the first hour.
 - Any incident with potential customer impact: Account Management and Legal are engaged per the Incident Response Plan.
-- Any incident lasting > 24 hours: Severity is re-evaluated; a P2 that persists > 24 hours may be elevated to P1 at the Incident Commander's discretion.
+- Any incident lasting > 24 hours: Severity is re-evaluated; a P2 / Sev 2 that persists > 24 hours may be elevated to P1 / Sev 1 at the Incident Commander's discretion.
 
 ---
 
@@ -516,10 +516,10 @@ CERG maintains an on-call rotation for incident support. The rotation schedule i
 1. **Declaration**: The Incident Commander (or delegate) declares an incident and determines severity per Section 3.2.
 2. **CERG Notification**: The Incident Commander or SOC notifies the CERG on-call contact through the designated channel (secure messaging, phone).
 3. **Pillar Activation**:
-   - P1/P2: Engineering Pillar Leader and Risk Pillar Leader are activated immediately. Governance Pillar Leader is activated for evidence support and regulatory mapping at IC / Legal direction.
-   - P3: Relevant pillar leader(s) activated as needed.
-   - P4: CERG monitors; no activation unless escalated.
-4. **Acknowledgment**: Activated CERG roles acknowledge within 30 minutes (P1), 1 hour (P2), or 4 hours (P3).
+   - P1 / Sev 1 and P2 / Sev 2: Engineering Pillar Leader and Risk Pillar Leader are activated immediately. Governance Pillar Leader is activated for evidence support and regulatory mapping at IC / Legal direction.
+   - P3 / Sev 3: Relevant pillar leader(s) activated as needed.
+   - P4 / Sev 4: CERG monitors; no activation unless escalated.
+4. **Acknowledgment**: Activated CERG roles acknowledge within 30 minutes (P1 / Sev 1), 1 hour (P2 / Sev 2), or 4 hours (P3 / Sev 3).
 5. **Stand-down**: The Incident Commander declares stand-down; CERG returns to normal operations and begins post-incident actions per Section 17.
 
 #### Escalation Contacts
@@ -527,8 +527,8 @@ CERG maintains an on-call rotation for incident support. The rotation schedule i
 | **Role** | **Escalation Contact** | **When to Escalate** |
 |---|---|---|
 | On-call CERG responder | Engineering Pillar Leader or Risk Pillar Leader | Unable to resolve within capability; incident severity escalates |
-| Engineering Pillar Leader | CISO | P1 incident; urgent technical containment or recovery decision needed; executive decision needed |
-| Risk Pillar Leader | CISO | P1 incident; risk acceptance required during active response |
+| Engineering Pillar Leader | CISO | P1 / Sev 1 incident; urgent technical containment or recovery decision needed; executive decision needed |
+| Risk Pillar Leader | CISO | P1 / Sev 1 incident; risk acceptance required during active response |
 | Governance Pillar Leader | Incident Commander / Legal; CISO if unresolved | Evidence preservation, regulatory mapping, or repository-support dispute |
 | CISO | Executive Sponsor / Board | Material business impact; SEC disclosure consideration; safety consequence |
 
@@ -557,7 +557,7 @@ The following templates support incident communications. Templates are populated
 INCIDENT NOTIFICATION - IR-YYYY-NNNN
 Classification: [per incident classification]
 Date/Time: [declaration timestamp]
-Severity: [P1/P2/P3/P4]
+Severity: [P1 / Sev 1 / P2 / Sev 2 / P3 / Sev 3 / P4 / Sev 4]
 
 Incident Commander: [name]
 CERG Lead: [name]
@@ -669,7 +669,7 @@ Reviewed by: [Incident Commander, CISO]
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-PRC-IR-002 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | External Interface |
 | **Effective Date** | 2026-05-22 |
 | **Classification** | External Interface |
@@ -686,6 +686,7 @@ Reviewed by: [Incident Commander, CISO]
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.2 | 2026-06-18 | Standing IR Team / Incident Commander | Standardized core playbook severity labels to paired P / Sev notation. |
 | 1.1 | 2026-06-18 | Standing IR Team / Incident Commander | Clarified that the standing IR team owns this playbook set, exercises, notification-clock process, and scenario execution; CERG Governance provides repository, evidence, regulatory-mapping, and post-incident improvement support only. |
 | 1.0 Draft | 2026-05-22 | Cyber Governance | Initial release. Establishes CERG-facing incident playbooks for ransomware, business email compromise, data breach or exfiltration, phishing campaign, distributed denial of service, insider threat, and cloud account compromise. Preserves the Operating Model boundary that the standing Incident Response team owns active incident command while CERG supplies control, evidence, risk, and recovery support. |
 
