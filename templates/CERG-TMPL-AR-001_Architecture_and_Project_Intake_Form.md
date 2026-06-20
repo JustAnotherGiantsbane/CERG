@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-TMPL-AR-001 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
@@ -116,6 +116,17 @@ This template does **not** replace the full architecture review record, threat m
 | Risk Acceptance Packet Required | `[Yes / No; link when created]` |
 | Intake Decision Rationale | `[Brief rationale for review path and required follow-on records]` |
 
+### 3.6 Business Decision Box
+
+| **Decision Question** | **Business Owner / System Sponsor Response** |
+|---|---|
+| What business outcome justifies this project or change? | `[Outcome and priority]` |
+| What decision is needed from CERG now? | `[Route only / architecture review / go-live support / risk acceptance / other]` |
+| What date is the business asking CERG to support? | `[Target date and driver]` |
+| What happens if CERG identifies blocking findings? | `[Delay / reduce scope / fund remediation / request risk acceptance]` |
+| Who can approve scope, funding, schedule, or residual-risk decisions? | `[Named role(s)]` |
+| What is the business consequence if the project does not proceed? | `[Consequence]` |
+
 ---
 
 ## 4. Review and Approval
@@ -137,7 +148,7 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-TMPL-AR-001 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
@@ -154,6 +165,7 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.2 | 2026-06-18 | Engineering Pillar Leader | Added business-facing decision box for project outcome, requested CERG decision, blocking-finding options, and sponsor authority. |
 | 1.1 | 2026-06-18 | Engineering Pillar Leader | Clarified that TMPL-AR-001 is the front-door intake artifact and added follow-on record routing fields. |
 | 1.0 | 2026-05-22 | Cyber Governance | Initial release. Establishes a standalone fill-in template for architecture and project intake form. |
 
