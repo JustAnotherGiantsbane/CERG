@@ -114,7 +114,7 @@ The reader path is a reading list, not an action list. For action items, see the
 
 1. Open the risk register and the exposure backlog. Read both before the next weekly cadence.
 2. Run the biweekly vulnerability SLA review per [`CERG-GOV-IMP-003`](CERG-GOV-IMP-003_Small_Team_Adoption_Path.md) §3.
-3. Bookmark [`CERG-GOV-FLOW-001`](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) §1 (Operating Principles) for reference.
+3. Bookmark [`CERG-GOV-FLOW-001`](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) §2 (Operating Principles) for reference.
 
 ## 5. Engineering Lead Reader Path
 
