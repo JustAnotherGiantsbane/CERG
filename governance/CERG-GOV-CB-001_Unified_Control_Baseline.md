@@ -153,6 +153,7 @@ Section 6 entries below are organized by family and reference the subordinate st
 | AU-6 Audit Review                    | Review and respond to alerts generated from your system logs, and correct coverage or tuning gaps identified by Risk.                                                       | Hardware, Software, Network, Cloud, Data, Process | Risk      | Detection coverage report, triage queue metrics | Continuous   | STD-LM-001 |
 | AU-9 Protection of Audit Information | Protect your system's audit logs from alteration or deletion, and make sure administrative changes to logging are also logged.                                              | Software, Cloud, Data, Process                    | Risk      | Storage policy, admin-action review             | Quarterly    | STD-LM-001 |
 | AU-11 Audit Record Retention         | Keep audit records for the required retention period, including 13 months hot / 7 years cold by default and BES minimums when applicable; verify a sample can be retrieved. | Hardware, Software, Network, Cloud, Data, Process | Risk      | Retention policy, sample retrieval              | Annual       | STD-LM-001 |
+| AU-12 Audit Record Generation        | Configure systems to generate the required security, administrative, authentication, and privileged-activity audit records; verify sample events are produced and parsable. | Hardware, Software, Network, Cloud, Data          | Risk      | Log generation configuration, sample event test | Annual       | STD-LM-001 |
 
 ### 6.3 Configuration Management (CM)
 
@@ -160,6 +161,7 @@ Section 6 entries below are organized by family and reference the subordinate st
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- | ------------------ | ------------------------------------------ | ------------ | ----------------------- |
 | CM-2 Baseline Configuration     | Apply the correct DISH baseline for your platform class and keep evidence showing the baseline was applied.                                                                                           | Hardware, Software, Network, Cloud                | Engineering        | DISH baseline catalog, scan report         | Continuous   | STD-CFG-001             |
 | CM-3 Change Control             | Submit production changes through change management before implementation and include security review when required.                                                                                  | Hardware, Software, Network, Cloud, Data, Process | Engineering        | CAB minutes, change records                | Continuous   | STD-IT-001 / STD-OT-001 |
+| CM-5 Access Restrictions for Change | Restrict who can make production changes or modify approved baselines; review elevated change authority and emergency-change use for appropriateness.                                                  | Hardware, Software, Network, Cloud, Data, Process | Engineering        | Change-authority roster, emergency-change review | Quarterly | STD-CFG-001 / PRC-CHG-001 |
 | CM-6 Configuration Settings     | Create and confirm a system baseline so cyber can detect and remediate drift; document and route exceptions through Section 4.                                                                        | Hardware, Software, Network, Cloud                | Engineering        | Drift report, exception register           | Continuous   | STD-CFG-001             |
 | CM-7 Least Functionality        | Disable unnecessary services and ports, and make sure only approved software is installed.                                                                                                            | Hardware, Software, Network, Cloud                | Engineering        | App allowlist, port scan report            | Quarterly    | STD-CFG-001             |
 | CM-8 System Component Inventory | Make sure your hardware, software, cloud resources, network devices, data stores, and process owners are recorded in the correct CMDB or authoritative inventory with all applicable fields complete. | Hardware, Software, Network, Cloud, Data, Process | Engineering / Risk | Asset inventory export, reconciliation log | Monthly      | STD-IT-001 / STD-OT-001 |
@@ -192,6 +194,67 @@ Section 6 entries below are organized by family and reference the subordinate st
 | SR-2 Supply Chain Risk Management Plan     | Make sure each vendor or service supporting your system or process is tiered, tier-specific evidence requirements are understood, contract clauses match the tier, and required SCCT information is collected. | Hardware, Software, Network, Cloud, Data, Process | Risk (TPRM)        | TPRM register, SCCT roster                | Continuous   | PRC-TPRM-001             |
 | SR-3 Supply Chain Controls and Processes   | Do not allow international access unless the country-risk exception is approved and documented.                                                                                                                | Software, Network, Cloud, Data, Process           | Risk (TPRM)        | Country-risk register, exception register | Quarterly    | PRC-TPRM-001             |
 
+### 6.7 System and Communications Protection (SC)
+
+| **Control** | **Statement** | **System Applicability** | **Owner** | **Evidence** | **Min Freq** | **Std** |
+|---|---|---|---|---|---|---|
+| SC-7 Boundary Protection | Make sure network boundaries, cloud security groups, OT ESP/EAP boundaries, and inter-zone paths are explicitly defined, approved, filtered, logged, and reviewed; direct bypass paths are prohibited. | Network, Cloud, Data, Process | Engineering | Segmentation diagram, firewall rule review, cloud security group export | Quarterly / On change | STD-NET-001 / STD-OT-001 |
+| SC-8 Transmission Confidentiality and Integrity | Protect sensitive data and administrative traffic in transit with approved cryptographic protocols; prohibit cleartext protocols for Restricted, CUI, and administrative paths unless formally risk accepted. | Network, Cloud, Data | Engineering | TLS / certificate scan, exception register | Continuous / Annual | STD-CR-001 / STD-CUI-001 |
+| SC-28 Protection of Information at Rest | Encrypt Restricted, CUI, backup, and crown-jewel data at rest using approved platform controls or customer-managed keys where required; document inheritance when provider encryption is used. | Hardware, Software, Cloud, Data | Engineering | Encryption configuration export, KMS key inventory, inheritance package | Quarterly | STD-CR-001 / STD-DG-001 / STD-CUI-001 |
+
+### 6.8 Assessment, Authorization, and Monitoring (CA)
+
+| **Control** | **Statement** | **System Applicability** | **Owner** | **Evidence** | **Min Freq** | **Std** |
+|---|---|---|---|---|---|---|
+| CA-2 Control Assessment | Assess implemented controls on the defined cadence using self-assessment, evidence review, and independent validation where required; record findings, owners, and remediation due dates. | Hardware, Software, Network, Cloud, Data, Process | Governance / Risk | Maturity scorecard, control test worksheet, findings register | Annual / Quarterly high-risk | GOV-MAT-001 / TMPL-AUD-001 |
+| CA-8 Penetration Testing | Conduct adversarial validation for in-scope systems per risk tier; document scope, rules of engagement, findings, remediation ownership, and validation retest. | Hardware, Software, Network, Cloud, Data, Process | Risk | Test plan, findings report, retest evidence | Annual / After material change | PRC-AV-001 |
+
+### 6.9 Awareness and Training (AT)
+
+| **Control** | **Statement** | **System Applicability** | **Owner** | **Evidence** | **Min Freq** | **Std** |
+|---|---|---|---|---|---|---|
+| AT-2 Literacy Training and Awareness | Make sure workforce members with cyber-relevant access complete role-appropriate security training before access and on the required refresh cadence; track exceptions to closure. | Process, Data, Cloud, Software | Governance | Training completion report, role curriculum mapping | Annual / On role assignment | GOV-TRN-001 / GOV-ONB-001 |
+
+### 6.10 Incident Response (IR)
+
+| **Control** | **Statement** | **System Applicability** | **Owner** | **Evidence** | **Min Freq** | **Std** |
+|---|---|---|---|---|---|---|
+| IR-2 Incident Response Training | Train incident-response participants and CERG support roles on escalation, evidence handling, communications, and playbook execution before they are assigned incident duties. | Process, Data, Cloud, Network | Risk / Governance | Exercise attendance, role training completion | Annual / Per exercise | PLN-IR-001 / PRC-IR-002 |
+| IR-4 Incident Handling | Triage, contain, investigate, eradicate, recover, and communicate incidents using approved playbooks while preserving evidence and recording decisions. | Hardware, Software, Network, Cloud, Data, Process | Risk | Incident case record, timeline, evidence package | Continuous | PLN-IR-001 / PRC-IR-002 |
+| IR-8 Incident Response Plan | Maintain an approved incident-response plan, playbook set, contacts, severity model, and escalation path; update after exercises, material incidents, or organizational changes. | Process, Data, Cloud, Network | Risk / Governance | Approved IR plan, playbook review, after-action report | Annual / After material incident | PLN-IR-001 / PRC-IR-002 |
+
+### 6.11 Physical and Environmental Protection (PE)
+
+| **Control** | **Statement** | **System Applicability** | **Owner** | **Evidence** | **Min Freq** | **Std** |
+|---|---|---|---|---|---|---|
+| PE-2 Physical Access Authorizations | Maintain authorized physical access lists for cyber-relevant facilities, OT PSPs, and CUI work areas; grant and remove physical access through an approved workflow. | Hardware, Network, Data, Process | Governance / Engineering | Badge access roster, PSP access list | Quarterly | STD-OT-001 / PLN-CIP-001 |
+| PE-3 Physical Access Control | Enforce, log, and review physical entry to cyber-relevant facilities; require visitor escort and investigate unauthorized or anomalous access attempts. | Hardware, Network, Data, Process | Governance / Engineering | Badge logs, visitor logs, PSP inspection record | Monthly / Quarterly | STD-OT-001 / PLN-CIP-001 |
+
+### 6.12 Planning (PL)
+
+| **Control** | **Statement** | **System Applicability** | **Owner** | **Evidence** | **Min Freq** | **Std** |
+|---|---|---|---|---|---|---|
+| PL-1 Policy and Procedures | Maintain the approved policy, standard, procedure, plan, and template hierarchy with named owners, review cycles, status, and change history. | Process | Governance | Document catalog, review record, approval history | Annual / On major change | GOV-CAT-001 / GOV-STY-001 |
+
+### 6.13 Program Management (PM)
+
+| **Control** | **Statement** | **System Applicability** | **Owner** | **Evidence** | **Min Freq** | **Std** |
+|---|---|---|---|---|---|---|
+| PM-1 Information Security Program Plan | Maintain the CERG operating model, program scope, accountable pillars, service commitments, and reporting model so leadership can understand how the program is run. | Process | Governance | Operating model, service commitments, board report | Quarterly | GOV-OM-001 / GOV-MTR-001 / GOV-SLC-001 |
+| PM-9 Risk Management Strategy | Maintain the risk management strategy, taxonomy, appetite/tolerance guidance, and treatment workflow; ensure risk decisions are visible to accountable leadership. | Process, Data, Cloud, Network | Governance / Risk | RMF, risk taxonomy, risk register summary | Annual / Quarterly | GOV-RMF-001 / GOV-TAX-001 / PRC-RM-001 |
+| PM-14 Testing, Training, and Monitoring | Maintain an integrated calendar for control tests, evidence refresh, training, assessments, reporting, and regulatory milestones; track overdue actions to closure. | Process | Governance | Annual calendar, completion tracker, compliance review minutes | Monthly / Annual planning | GOV-CAL-001 / GOV-MTR-001 |
+
+### 6.14 Personnel Security (PS)
+
+| **Control** | **Statement** | **System Applicability** | **Owner** | **Evidence** | **Min Freq** | **Std** |
+|---|---|---|---|---|---|---|
+| PS-2 Position Risk Designation | Designate role and position risk based on privileged access, CUI/BES scope, regulatory responsibility, and crown-jewel impact; verify required screening and authorization before access. | Process, Data, Cloud, Network | Governance | Role risk designation matrix, access precondition record | Annual / Before access | GOV-JA-001 / GOV-ONB-001 |
+
+### 6.15 System and Services Acquisition (SA)
+
+| **Control** | **Statement** | **System Applicability** | **Owner** | **Evidence** | **Min Freq** | **Std** |
+|---|---|---|---|---|---|---|
+| SA-9 External System Services | Make sure external systems and service providers meet documented security requirements, shared-responsibility obligations, evidence requirements, incident-notification terms, and flow-down clauses before use. | Software, Network, Cloud, Data, Process | Risk (TPRM) | Contract security clauses, vendor assessment, shared responsibility matrix | Continuous / Annual reassessment | PRC-TPRM-001 |
 
 ## 7. Control Status Decision Tree
 
@@ -312,8 +375,10 @@ The discipline rule is unchanged from §2: a control without a named evidence ar
 | AU-6 Audit Review | Detection coverage report; triage queue metrics | MTR-001 DT-001 dashboard; SOC ticketing | Continuous | Risk (Detection) |
 | AU-9 Protection of Audit Information | Storage policy; admin-action review | SIEM admin audit log; storage configuration export | Quarterly | Risk (Detection) |
 | AU-11 Audit Record Retention | Retention policy; sample retrieval evidence | Storage configuration export; quarterly sample-retrieval ticket | Annual | Risk (Detection) |
+| AU-12 Audit Record Generation | Log generation configuration; sample event test | System logging configuration; SIEM sample event evidence | Annual; Continuous monitoring | Risk (Detection) |
 | CM-2 Baseline Configuration | DISH baseline catalog; DISH scan report | CERG-STD-CFG-001 baseline catalog; DISH scan results in CMDB | Continuous (scan); Annual (baseline review) | Engineering (Platforms) |
 | CM-3 Change Control | CAB minutes; change records | Change-management system export | Continuous | Engineering |
+| CM-5 Access Restrictions for Change | Change-authority roster; emergency-change review | Change-management system; IGA / PAM role export | Quarterly | Engineering |
 | CM-6 Configuration Settings | Drift report; exception register | DISH drift detection; CERG-TMPL-RM-001 exception register | Continuous | Engineering (Platforms) |
 | CM-7 Least Functionality | Application allowlist; port-scan report | EDR / allowlist platform; vuln scanner port view | Quarterly | Engineering |
 | CM-8 System Component Inventory | Asset inventory export; reconciliation log | CMDB / authoritative inventory; reconciliation tickets | Monthly | Engineering / Risk |
@@ -330,6 +395,23 @@ The discipline rule is unchanged from §2: a control without a named evidence ar
 | SI-4 System Monitoring | Coverage report | MTR-001 DT-001 ATT&CK coverage report | Continuous | Risk (Detection) |
 | SR-2 Supply Chain Risk Management Plan | TPRM register; SCCT roster | CERG-PRC-TPRM-001 register; SCCT membership roster | Continuous | Risk (TPRM) |
 | SR-3 Supply Chain Controls and Processes | Country-risk register; exception register | CERG-PRC-TPRM-001 §10 register; CERG-PRC-RM-001 exception register | Quarterly | Risk (TPRM) |
+| SC-7 Boundary Protection | Segmentation diagram; firewall rule review; cloud security group export | Network management platform; cloud control plane; OT ESP/EAP evidence repository | Quarterly; On change | Engineering (Network / OT) |
+| SC-8 Transmission Confidentiality and Integrity | TLS / certificate scan; exception register | Certificate inventory; scanner output; CERG-PRC-RM-001 exception register | Continuous; Annual validation | Engineering (Cryptography / Network) |
+| SC-28 Protection of Information at Rest | Encryption configuration export; KMS key inventory; inheritance package | Cloud console export; KMS / HSM; Inheritance Evidence Package | Quarterly | Engineering (Cryptography / Data) |
+| CA-2 Control Assessment | Maturity scorecard; control test worksheet; findings register | CERG-GOV-MAT-001 scorecard; CERG-TMPL-AUD-001 worksheet; findings tracker | Annual; Quarterly high-risk | Governance / Risk |
+| CA-8 Penetration Testing | Test plan; findings report; retest evidence | CERG-PRC-AV-001 engagement package; findings tracker | Annual; After material change | Risk (Adversarial Validation) |
+| AT-2 Literacy Training and Awareness | Training completion report; role curriculum mapping | LMS export; onboarding record; role reader path | Annual; On role assignment | Governance (Training) |
+| IR-2 Incident Response Training | Exercise attendance; role training completion | Exercise roster; LMS / onboarding record | Annual; Per exercise | Risk / Governance |
+| IR-4 Incident Handling | Incident case record; timeline; evidence package | Case-management platform; evidence repository | Continuous | Risk (Incident Interface) |
+| IR-8 Incident Response Plan | Approved IR plan; playbook review; after-action report | CERG-PLN-IR-001; CERG-PRC-IR-002; exercise repository | Annual; After material incident | Risk / Governance |
+| PE-2 Physical Access Authorizations | Badge access roster; PSP access list | Badge system; NERC-CIP evidence repository | Quarterly | Governance / Engineering |
+| PE-3 Physical Access Control | Badge logs; visitor logs; PSP inspection record | Badge system; visitor-management system; NERC-CIP evidence repository | Monthly; Quarterly review | Governance / Engineering |
+| PL-1 Policy and Procedures | Document catalog; review record; approval history | CERG-GOV-CAT-001; document repository; approval workflow | Annual; On major change | Governance (Document Control) |
+| PM-1 Information Security Program Plan | Operating model; service commitments; board report | CERG-GOV-OM-001; CERG-GOV-SLC-001; reporting deck | Quarterly | Governance |
+| PM-9 Risk Management Strategy | RMF; risk taxonomy; risk register summary | CERG-GOV-RMF-001; CERG-GOV-TAX-001; risk register | Annual; Quarterly review | Governance / Risk |
+| PM-14 Testing, Training, and Monitoring | Annual calendar; completion tracker; compliance review minutes | CERG-GOV-CAL-001; CERG-GOV-MTR-001; governance review minutes | Monthly; Annual planning | Governance |
+| PS-2 Position Risk Designation | Role risk designation matrix; access precondition record | Job architecture; onboarding record; access approval workflow | Annual; Before access | Governance / HR interface |
+| SA-9 External System Services | Contract security clauses; vendor assessment; shared responsibility matrix | TPRM platform; contract repository; SCCT register | Continuous; Annual reassessment | Risk (TPRM) |
 
 ### 9.2 Evidence Discipline
 
@@ -373,8 +455,10 @@ The [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) Compliance Matri
 | AU-6 Audit Review | 03.03.03 | CIP-007 R4 | AU.L2-3.3.5 | Operations |
 | AU-9 Protection of Audit Information | 03.03.05, 03.03.06 | CIP-007 R4 | AU.L2-3.3.8, AU.L2-3.3.9 | Operations |
 | AU-11 Audit Record Retention | 03.03.04 | CIP-007 R4.3 | AU.L2-3.3.4 | Operations |
+| AU-12 Audit Record Generation | 03.03.01, 03.03.02 | CIP-007 R4 | AU.L2-3.3.1, AU.L2-3.3.2 | Operations |
 | CM-2 Baseline Configuration | 03.04.01, 03.04.02 | CIP-010 R1 | CM.L2-3.4.1, CM.L2-3.4.2 | Change |
 | CM-3 Change Control | 03.04.03 | CIP-010 R1, R2 | CM.L2-3.4.3 | Change |
+| CM-5 Access Restrictions for Change | 03.04.05 | CIP-010 R1, R2 | CM.L2-3.4.5 | Change |
 | CM-6 Configuration Settings | 03.04.06 | CIP-010 R1 | CM.L2-3.4.6 | Change |
 | CM-7 Least Functionality | 03.04.06, 03.04.07 | CIP-007 R1 | CM.L2-3.4.7 | n/a |
 | CM-8 System Component Inventory | 03.04.10 | CIP-002, CIP-010 R1 | CM.L2-3.4.10 | Operations |
@@ -382,15 +466,32 @@ The [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) Compliance Matri
 | CP-4 Contingency Plan Testing | 03.06.03 | CIP-009 R2 | IR.L2-3.6.3 | Operations |
 | CP-9 System Backup | 03.08.09 | CIP-009 R1 | MP.L2-3.8.9 | Operations |
 | CP-10 Information System Recovery | 03.06.02, 03.06.03 | CIP-009 R2, R3 | IR.L2-3.6.2 | Operations |
+| IR-2 Incident Response Training | 03.06.02 | CIP-008 R2 | IR.L2-3.6.2 | Operations |
+| IR-4 Incident Handling | 03.06.01, 03.06.03 | CIP-008 R1, R2, R3 | IR.L2-3.6.1, IR.L2-3.6.3 | Operations |
+| IR-8 Incident Response Plan | 03.06.01 | CIP-008 R1 | IR.L2-3.6.1 | Operations |
 | IA-2 Identification and Authentication | 03.05.03, 03.05.04 | CIP-005 R2.3, CIP-007 R5 | IA.L1-3.5.1, IA.L1-3.5.2, IA.L2-3.5.3 | Access |
 | IA-3 Device Identification and Authentication | 03.05.02 | CIP-005, CIP-007 | IA.L2-3.5.5 | n/a |
 | IA-5 Authenticator Management | 03.05.07-03.05.12 | CIP-007 R5 | IA.L2-3.5.7 through IA.L2-3.5.10 | Access |
 | RA-3 Risk Assessment | 03.11.01 | CIP-003, CIP-014 | RA.L2-3.11.1 | n/a |
+| CA-2 Control Assessment | 03.12.01, 03.12.02 | CIP-003, CIP-010 R3 | CA.L2-3.12.1, CA.L2-3.12.2 | Operations |
+| CA-8 Penetration Testing | 03.12.01, 03.11.02 | CIP-007 R2, CIP-010 R3 | CA.L2-3.12.1 | n/a |
 | RA-5 Vulnerability Monitoring and Scanning | 03.11.02, 03.11.03 | CIP-007 R2, CIP-010 R3 | RA.L2-3.11.2, RA.L2-3.11.3 | n/a |
 | SI-2 Flaw Remediation | 03.14.01 | CIP-007 R2 | SI.L1-3.14.1 | Change |
 | SI-4 System Monitoring | 03.14.06, 03.14.07 | CIP-007 R4 | SI.L2-3.14.6, SI.L2-3.14.7 | n/a |
 | SR-2 Supply Chain Risk Management Plan | 03.17.01 | CIP-013 R1 | SR.L2 family | n/a |
 | SR-3 Supply Chain Controls and Processes | 03.17.02, 03.17.03 | CIP-013 R2 | SR.L2 family | n/a |
+| SA-9 External System Services | 03.16.01, 03.16.02, 03.16.03 | CIP-013 R1 | SR.L2 family | Vendor / SOC report reliance |
+| SC-7 Boundary Protection | 03.13.01, 03.13.05 | CIP-005 R1, R2 | SC.L2-3.13.1, SC.L2-3.13.5 | Network / Access |
+| SC-8 Transmission Confidentiality and Integrity | 03.13.08 | CIP-005 R2, CIP-011 R1 | SC.L2-3.13.8 | n/a |
+| SC-28 Protection of Information at Rest | 03.13.16 | CIP-011 R1 | SC.L2-3.13.16 | n/a |
+| AT-2 Literacy Training and Awareness | 03.02.01, 03.02.02 | CIP-004 R2 | AT.L2-3.2.1, AT.L2-3.2.2 | n/a |
+| PE-2 Physical Access Authorizations | 03.10.01 | CIP-006 R1 | PE.L1-3.10.1 | Data center / facility access |
+| PE-3 Physical Access Control | 03.10.01, 03.10.03 | CIP-006 R1, R2 | PE.L1-3.10.1, PE.L2-3.10.3 | Data center / facility access |
+| PL-1 Policy and Procedures | 03.12.04 | CIP-003 R1 | CA.L2-3.12.4 | Policy / governance |
+| PM-1 Information Security Program Plan | Organization-defined | CIP-003 R1 | CA.L2-3.12.4 | Entity-level control |
+| PM-9 Risk Management Strategy | 03.11.01 | CIP-003, CIP-014 | RA.L2-3.11.1 | Entity-level risk |
+| PM-14 Testing, Training, and Monitoring | 03.12.01, 03.12.03 | CIP-003, CIP-004, CIP-010 | CA.L2-3.12.1, CA.L2-3.12.3 | Compliance monitoring |
+| PS-2 Position Risk Designation | 03.09.01 | CIP-004 R3, R4 | PS.L2-3.9.1 | n/a |
 
 > **Reading the Crosswalk**
 >
@@ -419,52 +520,51 @@ The §8 overlays carry additional crosswalks. Subordinate operational packages o
 |---|---|---|---|
 | 1 | Know what you own: authoritative asset inventory | CM-8 | [`CERG-STD-IT-001`](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md); [`CERG-STD-OT-001`](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) (CIP-002 categorization) |
 | 2 | Identify and remediate vulnerabilities on schedule | RA-5, SI-2 | [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) §5.2 (canonical SLAs) |
-| 3 | Control who can access what: least privilege | AC-3, AC-6 | [`CERG-STD-AC-001`](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
+| 3 | Control who can access what: least privilege | AC-2, AC-3, AC-6, AC-7, AC-19 | [`CERG-STD-AC-001`](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
 | 4 | Authenticate users and systems | IA-2, IA-3, IA-5 | [`CERG-STD-AC-001`](../standards/CERG-STD-AC-001_Access_Management_Standard.md); [`CERG-STD-CR-001`](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) (authenticators) |
 | 5 | Harden systems | CM-2, CM-6, CM-7 | [`CERG-STD-CFG-001`](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) (DISH baselines) |
-| 6 | Protect data in transit and at rest | IA-5 (key mgmt) | [`CERG-STD-CR-001`](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) (full SC-8 / SC-28 detail); SC family controls covered there |
-| 7 | Segment networks | AC-3, AC-17 | [`CERG-STD-IT-001`](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md); [`CERG-STD-OT-001`](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) (ESP/EAP); SC family controls implemented there |
-| 8 | Manage vendor and third-party risk | SR-2, SR-3 | [`CERG-PRC-TPRM-001`](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
-| 9 | Control and log privileged / remote access | AC-6, AC-17, AU-2, AU-6 | [`CERG-STD-AC-001`](../standards/CERG-STD-AC-001_Access_Management_Standard.md); [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
-| 10 | Conduct adversarial testing | _CA-8 / RA-5(8) not detailed in §6_ | [`CERG-PRC-AV-001`](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) (pen test, red team, purple team); CA-8 implementation lives here |
-| 11 | Train and background-check personnel | _AT and PS families not detailed in §6_ | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) Principle 2; Security Awareness function (training); HR (background check) per [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §8 |
-| 12 | Write and maintain policies | _PL family not detailed in §6_ | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md); [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) (document lifecycle) |
-| 13 | Manage configuration changes | CM-3 | [`CERG-STD-CFG-001`](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md); [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) (pre-production gate) |
-| 14 | Collect, protect, and retain audit evidence | AU-2, AU-6, AU-9, AU-11; this doc §9 evidence catalog | [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) (retention) |
-| 15 | Assess your own security posture | RA-3; _CA family not detailed in §6_ | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §6 (assessment portfolio); CA-2 / CA-7 implementation lives here |
-| 16 | Manage risk formally | RA-3, SI-2 (exception register) | [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md); [`CERG-TMPL-RM-001`](../templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md); [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 (canonical approval table) |
-| 17 | Protect physical access | _PE family not detailed in §6_ | [`CERG-STD-OT-001`](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) (CIP-006 PSP); Facilities (non-cyber per [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4) |
-| 18 | Monitor threats continuously | SI-4; AU-6 | [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) (Day-One Detection Set; 70% ATT&CK target) |
-| 19 | Plan and practice incident response | _IR family not detailed in §6_ | [`CERG-PLN-IR-001`](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md) (owned by standing IR team) |
+| 6 | Protect data in transit and at rest | SC-8, SC-28, IA-5 | [`CERG-STD-CR-001`](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md); [`CERG-STD-CUI-001`](../standards/CERG-STD-CUI-001_CUI_Handling_Standard.md); [`CERG-STD-DG-001`](../standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) |
+| 7 | Segment networks | SC-7, AC-17 | [`CERG-STD-NET-001`](../standards/CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md); [`CERG-STD-OT-001`](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) (ESP/EAP) |
+| 8 | Manage vendor and third-party risk | SA-9, SR-2, SR-3 | [`CERG-PRC-TPRM-001`](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
+| 9 | Control and log privileged / remote access | AC-6, AC-17, AU-2, AU-6, AU-12 | [`CERG-STD-AC-001`](../standards/CERG-STD-AC-001_Access_Management_Standard.md); [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) |
+| 10 | Conduct adversarial testing | CA-8, RA-5 | [`CERG-PRC-AV-001`](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) |
+| 11 | Train and background-check personnel | AT-2, PS-2 | [`CERG-GOV-TRN-001`](CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md); [`CERG-GOV-ONB-001`](CERG-GOV-ONB-001_Onboarding_and_Integration_Program.md) |
+| 12 | Write and maintain policies | PL-1, PM-1 | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md); [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md); [`CERG-GOV-STY-001`](CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md) |
+| 13 | Manage configuration changes | CM-3, CM-5 | [`CERG-STD-CFG-001`](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md); [`CERG-PRC-CHG-001`](../procedures/CERG-PRC-CHG-001_Security_Change_Management_Procedure.md); [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) |
+| 14 | Collect, protect, and retain audit evidence | AU-2, AU-6, AU-9, AU-11, AU-12; this doc §9 evidence catalog | [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) (retention) |
+| 15 | Assess your own security posture | CA-2, RA-3 | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md); [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md); [`CERG-TMPL-AUD-001`](../templates/CERG-TMPL-AUD-001_Control_Evidence_and_Test_Worksheet.md) |
+| 16 | Manage risk formally | RA-3, PM-9, SI-2 (exception register) | [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md); [`CERG-TMPL-RM-001`](../templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md); [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 |
+| 17 | Protect physical access | PE-2, PE-3 | [`CERG-STD-OT-001`](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) (CIP-006 PSP); [`CERG-PLN-CIP-001`](../plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) |
+| 18 | Monitor threats continuously | SI-4, AU-6, IR-4 | [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) (Day-One Detection Set; 70% ATT&CK target) |
+| 19 | Plan and practice incident response | IR-2, IR-4, IR-8 | [`CERG-PLN-IR-001`](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md); [`CERG-PRC-IR-002`](../procedures/CERG-PRC-IR-002_Incident_Response_Playbook_Set.md) |
 | 20 | Manage recovery | CP-2, CP-4, CP-9, CP-10 | [`CERG-STD-RES-001`](../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) |
 | 21 | Manage accounts through lifecycle | AC-2, AC-7, IA-2, IA-5 | [`CERG-STD-AC-001`](../standards/CERG-STD-AC-001_Access_Management_Standard.md); [`CERG-PRC-AC-002`](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md) (JML runbook) |
-| 22 | Define and enforce a compliance calendar | _PM-9 / PM-30 not detailed in §6_ | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §7 (coordination cadence); [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md); Governance compliance calendar |
+| 22 | Define and enforce a compliance calendar | PM-14, PM-9, CA-2 | [`CERG-GOV-CAL-001`](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md); [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md); [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) |
 
 > **Reading the Bridge**
 >
-> Italicized "not detailed in §6" markers identify intents whose implementation is intentionally housed in subordinate documents rather than the central baseline. The intent is still in scope; the control implementation just lives where the operational detail belongs. This is by design - §6 carries the core control set; subordinate standards and procedures carry the depth.
+> The bridge is intentionally implementation-oriented. Every Compliance Matrix intent now points to at least one §6 baseline control row, and the final column points to the documents that carry the deeper operational parameters.
 
 ### 10.4 Family Coverage Note
 
-The CERG control family spine in §3 lists 19 NIST 800-53 families. §6 details rows for AC, AU, CM, CP, IA, and a combined RA / SI / SR section. The following families are deliberately handled in subordinate documents rather than restated here:
+The CERG control family spine in §3 lists 19 NIST 800-53 families. §6 now includes explicit baseline rows for every family needed by the 22 Compliance Matrix intents, while still keeping environment-specific parameter depth in subordinate standards and procedures.
 
-| **Family** | **Why Handled Elsewhere** | **Authoritative Location** |
+| **Family** | **Baseline Role in §6** | **Authoritative Implementation Detail** |
 |---|---|---|
-| AT (Awareness and Training) | Operated by the Security Awareness function, not CERG | Awareness program; [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) Principle coverage |
-| CA (Assessment, Authorization, Monitoring) | Continuous assurance is operated by Risk (RA-5, SI-4) and Governance (POA&M, CA-7) | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §6; this doc §9 |
-| IR (Incident Response) | Standing IR team outside CERG owns the plan and operates the capability | [`CERG-PLN-IR-001`](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md) |
-| MA (Maintenance) | Detail lives in OT operations (vendor-managed maintenance windows) and IT change management | [`CERG-STD-OT-001`](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md); CM-3 above |
-| MP (Media Protection) | CUI / Restricted-data media handling lives in the CUI standard | [`CERG-STD-CUI-001`](../standards/CERG-STD-CUI-001_CUI_Handling_Standard.md) |
-| PE (Physical / Environmental) | Cyber dependency on physical; facilities-owned for non-OT, NERC-CIP CIP-006 for OT | [`CERG-STD-OT-001`](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md); Facilities |
-| PL (Planning) | SSPs and authorization packages live in the operational packages | [`CERG-PLN-CUI-001`](../plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md); [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §7.3 |
-| PM (Program Management) | The CERG program itself - reporting, metrics, governance | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md); [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) |
-| PS (Personnel Security) | Screening and access-tied personnel controls operated by HR with Governance interface | HR; [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) coverage |
-| SA (System and Services Acquisition) | Procurement / vendor / SDLC controls split across TPRM and architecture review | [`CERG-PRC-TPRM-001`](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md); [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) |
-| SC (System and Communications Protection) | Network segmentation and cryptography are detailed in IT/OT standards and crypto standard | [`CERG-STD-IT-001`](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md); [`CERG-STD-OT-001`](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md); [`CERG-STD-CR-001`](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) |
+| AC, IA | Identity, access enforcement, least privilege, remote access, account lifecycle, and authenticators. | [`CERG-STD-AC-001`](../standards/CERG-STD-AC-001_Access_Management_Standard.md); [`CERG-PRC-AC-002`](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md) |
+| AT, PS | Training and position-risk designation are baseline controls because access and CUI/BES scope depend on them. | [`CERG-GOV-TRN-001`](CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md); [`CERG-GOV-ONB-001`](CERG-GOV-ONB-001_Onboarding_and_Integration_Program.md) |
+| AU, SI | Logging, audit review, retention, event generation, monitoring, and flaw remediation. | [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md); [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) |
+| CA, RA | Control assessment, adversarial validation, risk assessment, and exposure management. | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md); [`CERG-PRC-AV-001`](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md); [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
+| CM | Baselines, configuration settings, change control, change authority, least functionality, and inventories. | [`CERG-STD-CFG-001`](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md); [`CERG-PRC-CHG-001`](../procedures/CERG-PRC-CHG-001_Security_Change_Management_Procedure.md) |
+| CP, IR | Recovery planning, backup, restoration, incident handling, training, and playbooks. | [`CERG-STD-RES-001`](../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md); [`CERG-PLN-IR-001`](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md); [`CERG-PRC-IR-002`](../procedures/CERG-PRC-IR-002_Incident_Response_Playbook_Set.md) |
+| PE | Physical access authorization and control for cyber-relevant facilities, PSPs, and CUI spaces. | [`CERG-STD-OT-001`](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md); [`CERG-PLN-CIP-001`](../plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) |
+| PL, PM | Policy hierarchy, operating model, risk strategy, calendar, metrics, testing, training, and monitoring. | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md); [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md); [`CERG-GOV-CAL-001`](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md) |
+| SA, SR | External services, supply chain risk management, third-party evidence, and country-risk controls. | [`CERG-PRC-TPRM-001`](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md); [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) |
+| SC | Boundary protection, cryptographic protection in transit, and data-at-rest protection. | [`CERG-STD-NET-001`](../standards/CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md); [`CERG-STD-OT-001`](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md); [`CERG-STD-CR-001`](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) |
 
-> **Why a Minimum-Surface §6**
+> **Baseline vs. Parameter Detail**
 >
-> The baseline carries the controls that need a **single, cross-environment, regulator-facing** statement (access, audit, change, contingency, identity, risk, vuln, supply chain). Families that are inherently environment-specific (PE, MA) or operationally owned by a non-CERG function (AT, IR, PS) live in their authoritative document. The bridge in §10.3 ensures the Compliance Matrix reader can still find them.
+> §6 names the auditable control, owner, evidence, cadence, and implementation document. Subordinate standards and procedures carry the detailed parameter values, workflows, and environment-specific exceptions. If there is a conflict, the stricter requirement applies unless Governance approves a documented exception.
 
 ## 11. Governance, Change, and Versioning
 
