@@ -74,4 +74,4 @@ CERG does not determine legal obligations or certification readiness. Validate r
 
 ## License
 
-[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) · Fork freely, adapt openly, attribute generously.
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) · Fork freely - adapt openly - attribute generously :)
