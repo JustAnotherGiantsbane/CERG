@@ -262,7 +262,7 @@ Engineering implements controls to the following baselines, maintained as living
 
 ### 6.1 Objective
 
-Assessment validates that implemented controls are working as intended. In CERG, assessment is Cyber Risk's core function, executed continuously through exposure management and threat intelligence, and periodically through structured security assessments and penetration testing.
+Assessment validates that implemented controls are working as intended. In CERG, assessment is Cyber Risk's core function, executed continuously through exposure management and threat intelligence, and periodically through structured security assessments and adversarial validation.
 
 ### 6.2 Assessment Portfolio
 
@@ -270,9 +270,10 @@ Assessment validates that implemented controls are working as intended. In CERG,
 |---|---|---|---|
 | **Continuous Vulnerability Scanning** | Continuous (authenticated scan weekly; unauthenticated daily) | Risk | Prioritized finding register with SLA tracking; remediation evidence. |
 | **OT / ICS Vulnerability Assessment** | Quarterly minimum; OT-safe passive scanning methods | Risk + Engineering | OT-specific finding register; compensating control documentation for unpatchable findings. |
-| **Penetration Testing - External** | Annual minimum; after significant architecture changes | Risk (internal) / Third Party | Pen test report; findings tracked to closure with Engineering review. |
-| **Penetration Testing - Internal** | Annual minimum; includes lateral movement and privilege escalation testing | Risk | Internal pen test report; architecture remediation recommendations for Engineering. |
-| **OT / ICS Red Team** | Biennial minimum (or as required by NERC-CIP or contract) | Risk + Third Party | Red team report; OT-specific findings require CISO review before disclosure. |
+| **Adversarial Validation - External Pen Test** | Annual minimum; after significant architecture changes | Risk (internal) / Third Party | Pen test report; findings tracked to closure with Engineering review. |
+| **Adversarial Validation - Internal Pen Test** | Annual minimum; includes lateral movement and privilege escalation testing | Risk | Internal pen test report; architecture remediation recommendations for Engineering. |
+| **Adversarial Validation - Purple Team** | Quarterly minimum for detection validation where detection engineering is in scope | Risk + Incident Response | Detection validation results; tuned analytics and control-improvement actions. |
+| **Adversarial Validation - OT / ICS Red Team** | Biennial minimum (or as required by NERC-CIP or contract) | Risk + Third Party | Red team report; OT-specific findings require CISO review before disclosure. |
 | **Vendor / Third-Party Risk Assessment** | At onboarding; annually for Critical vendors; triggered by incidents or contract changes | Risk | Vendor risk rating; contract risk terms; ongoing monitoring requirements. |
 | **Security Control Assessment (SCA)** | Annual; scope aligned to regulatory cycle | Risk + Governance | SCA report; POA&M updates; evidence for authorization decision. |
 | **Threat Intelligence Review** | Continuous ingestion; structured analysis weekly; strategic briefing monthly | Risk | Threat intel products: tactical (IOCs), operational (TTPs), strategic (threat landscape). |
@@ -281,7 +282,7 @@ Assessment validates that implemented controls are working as intended. In CERG,
 
 All findings from assessment activities are assigned a severity rating and a remediation SLA. Exceptions to SLAs require documented risk acceptance per the process in [§9.7 Risk Acceptance Authority](#97-risk-acceptance-authority-canonical).
 
-The authoritative remediation-SLA table lives in [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) §5. The values published there govern every CERG-managed scan, pen test, and assessment finding across IT, cloud, SaaS, and (with the BES schedule overlay) OT environments. Pillar dashboards and KRIs in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) measure compliance against PRC-VM-001's SLA values, not against a separate table.
+The authoritative remediation-SLA table lives in [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) §5. The values published there govern every CERG-managed scan, adversarial validation, and assessment finding across IT, cloud, SaaS, and (with the BES schedule overlay) OT environments. Pillar dashboards and KRIs in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) measure compliance against PRC-VM-001's SLA values, not against a separate table.
 
 > **One Source of Truth**
 >
