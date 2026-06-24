@@ -12,9 +12,6 @@
 | **Frameworks** | NIST CSF 2.0 |
 | **Regulations** | Cross-cutting |
 | **Environments** | All CERG-managed documentation |
-
-
-
 ---
 
 **Purpose:** Track known STY-001 and governance compliance gaps across the CERG corpus.

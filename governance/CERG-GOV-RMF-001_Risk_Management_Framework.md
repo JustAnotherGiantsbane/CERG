@@ -854,7 +854,7 @@ Mapping the ALE bands to the existing 5×5 scoring framework for this example or
 | **Status** | Approved |
 | **Effective Date** | 2026-06-14 |
 | **Classification** | Public |
-| **Document Owner** | Cyber Governance (CERG Pillar) |
+| **Document Owner** | Governance Pillar Leader |
 | **Approved By** | CISO |
 | **Review Cycle** | Annual; triggered by significant regulatory change or organizational change |
 | **Next Scheduled Review** | 2027-05-26 |
