@@ -137,7 +137,7 @@ Observations arrive from many sources. They are aggregated into a single pipelin
 | OT passive monitoring | Vulnerabilities from passive OT network analysis | Risk |
 | Vendor advisories | Patches, fixes, bulletins | Risk |
 | ISAC / regulator feeds | E-ISAC, CISA, ICS-CERT | Risk |
-| Penetration test / red team | Manual adversarial findings | Risk |
+| Adversarial validation | Pen test, red-team, purple-team, cloud, OT-safe, or other authorized adversarial findings | Risk |
 | Bug bounty / external researcher | Responsible disclosure | Risk |
 | Incident-driven discovery | Vulnerabilities identified during/after incidents | Risk / Engineering |
 | SBOM | Vulnerabilities in third-party components | Risk |
