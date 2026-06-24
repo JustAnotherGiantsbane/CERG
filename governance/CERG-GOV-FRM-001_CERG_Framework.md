@@ -98,7 +98,7 @@ Internal security consultants who partner with IT and business leaders to design
 
 **Know your exposure. Manage it deliberately. Never be surprised.**
 
-Continuous assessment and management of the organization's exposure through exposure management, penetration testing, vendor risk assessment, and threat intelligence.
+Continuous assessment and management of the organization's exposure through exposure management, adversarial validation, vendor risk assessment, and threat intelligence.
 
 ---
 
@@ -123,7 +123,7 @@ CERG pillars are not sequential. They operate simultaneously and continuously, w
 |Production deployment|Engineering|Governance and Risk assume post-production monitoring|
 |Ongoing compliance monitoring|Governance|Risk tracks patch status and emerging CVEs; Engineering supports remediation|
 |Audit and evidence collection|Governance|Engineering and Risk produce artifacts from their daily work|
-|Penetration test / red team|Risk|Engineering reviews findings for architectural impact; Governance logs findings|
+|Adversarial validation: pen test / red team / purple team|Risk|Engineering reviews findings for architectural impact; Governance logs findings|
 |Regulatory exam or audit|Governance|All pillars provide evidence; Engineering and Risk support responses|
 
 ---
@@ -185,14 +185,14 @@ Engineering operates on a lightweight internal consulting model. The goal is to 
 
 ### 4.1 Mission
 
-The Cyber Risk team is responsible for understanding the organization's threat landscape and exposure at all times. Risk does not wait for problems to surface, it hunts for them. Through continuous exposure management, periodic penetration testing, vendor risk assessment, and threat intelligence, Risk produces the clearest possible picture of what is threatening the organization and how severe those threats are.
+The Cyber Risk team is responsible for understanding the organization's threat landscape and exposure at all times. Risk does not wait for problems to surface, it hunts for them. Through continuous exposure management, adversarial validation, vendor risk assessment, and threat intelligence, Risk produces the clearest possible picture of what is threatening the organization and how severe those threats are.
 
 Risk serves both a pre-production function (finding issues before systems go live) and a post-production function (tracking drift, emerging CVEs, and changes in the threat environment after systems are in operation).
 
 ### 4.2 Core Functions
 
 - **Exposure Management**: continuous scanning of IT and OT environments; prioritization of findings by criticality, exploitability, and asset value; tracking remediation to closure
-- **Penetration Testing**: periodic adversarial testing of systems, networks, and applications; coordination of external red team engagements; findings fed back to Engineering and Governance
+- **Adversarial Validation**: authorized testing of controls under adversary-like conditions, including penetration testing, red-team operations, purple-team detection validation, cloud attack simulation, and OT-safe assessment where in scope; findings fed back to Engineering and Governance
 - **Threat Intelligence**: monitoring of threat actor activity, emerging CVEs, and sector-specific intelligence (including ICS/SCADA threats for OT environments); distribution of actionable intelligence to Engineering, IR, and Governance
 - **Vendor and Third-Party Risk**: security review of vendor contracts, SaaS solutions, and third-party integrations; contract redline support for security requirements
 - **Pre-Production Assessment**: vulnerability scanning and risk analysis of systems prior to go-live; classification of findings by severity; coordination with Engineering on remediation
@@ -427,7 +427,7 @@ This is an intentionally large example. The goal is to show what CERG looks like
 
 At this scale, the workload is substantial across all three pillars. Engineering carries approximately 125 active project engagements per year with roughly 40 running concurrently, spanning infrastructure, enterprise applications, cloud migrations, and third-party integrations. Engineers are aligned to specific business verticals and develop fluency in the systems they support, not just the security controls that apply to them.
 
-Risk operates at equivalent velocity. The vendor risk program may cover thousands of active vendors and an extended workforce of remote contractors. Exposure management may span 100,000+ assets across enterprise IT, OT networks, and cloud environments. Penetration testing and red team operations run on continuous cycles. Threat intelligence is a production function producing actionable intelligence distributed to Engineering, Incident Response, and leadership.
+Risk operates at equivalent velocity. The vendor risk program may cover thousands of active vendors and an extended workforce of remote contractors. Exposure management may span 100,000+ assets across enterprise IT, OT networks, and cloud environments. Adversarial validation runs on continuous cycles across pen test, red-team, purple-team, cloud, and OT-safe activities where in scope. Threat intelligence is a production function producing actionable intelligence distributed to Engineering, Incident Response, and leadership.
 
 Governance operates as a domain-expert function. Subject matter experts carry deep technical knowledge — network security, identity and access management, cloud security, OT/ICS security, cryptography — and translate expertise into implementation guidance that engineering and operations teams use. The compliance portfolio may span multiple regulatory frameworks simultaneously. The evidence library is a living system, not a pre-audit scramble. The policy and standards catalog is actively maintained, version-controlled, and tied to regulatory citation.
 
@@ -440,11 +440,11 @@ A representative staffing structure for a CERG of this scale:
 |Senior Cyber Engineer - OT/ICS (×3)|Engineering|Generation, transmission, and distribution vertical leads; SCADA and substation security architecture; CIP-005/CIP-010 design consultation; OT modernization advisory|
 |Senior Cyber Engineer - IT/Cloud (×3)|Engineering|Enterprise IT and cloud vertical leads; application and infrastructure security architecture; identity and access design; pre-production assessment leadership|
 |Cyber Engineer (×8)|Engineering|Project-level security consultation across assigned verticals; pre-production coordination with Risk; vendor solution review; risk treatment plan drafting; handoff documentation|
-|Risk Pillar Leader|Risk|Program ownership across vuln management, pen testing, threat intel, and vendor risk; OT risk strategy; executive risk reporting|
+|Risk Pillar Leader|Risk|Program ownership across vuln management, adversarial validation, threat intel, and vendor risk; OT risk strategy; executive risk reporting|
 |Senior Risk Analyst - Exposure Management (×3)|Risk|Enterprise vuln scan operations; OT-safe scanning program; finding prioritization and triage; SLA tracking and escalation; remediation verification|
 |Threat Intelligence Analyst (×2)|Risk|Threat actor tracking; ICS/OT-specific intelligence production; E-ISAC and ICS-CERT liaison; intelligence distribution to Engineering and IR|
 |Senior Risk Analyst - Vendor & Third-Party Risk (×2)|Risk|Vendor security assessment program; contractor access risk; contract redline support; supply chain risk reporting|
-|Risk Analyst - Penetration Testing & Red Team (×3)|Risk|Internal pen test execution; external red team coordination; OT adversarial testing; findings documentation and tracking|
+|Risk Analyst - Adversarial Testing (×3)|Risk|Internal pen test execution; external red team coordination; purple-team support; OT adversarial testing; findings documentation and tracking|
 |Risk Analyst (×5)|Risk|Day-to-day vuln tracking and owner follow-up; vendor assessment support; threat feed monitoring; finding remediation documentation|
 |Governance Pillar Leader|Governance|Policy and standard ownership; NERC-CIP compliance program leadership; regulatory and audit liaison; risk register governance; Governance team development|
 |NERC-CIP Compliance Manager (×3)|Governance|BES Cyber System compliance; CIP deviation and mitigation management; NERC-CIP evidence library; regulatory exam coordination; reliability-security interface|
