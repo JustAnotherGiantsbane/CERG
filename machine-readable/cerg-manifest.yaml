@@ -297,7 +297,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-FRM-001_CERG_Framework.md
   source_file: CERG-GOV-FRM-001_CERG_Framework.md
-  source_hash: 7fe1d3890e96be89bb82423254ffac70954e456b3b300bcb33358449359400f9
+  source_hash: 88c4c0a7fef20b8cac9f79f3a94e8c1fa27b7ba2476d15cb4dd95e3fee6fdaf8
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-FRM-001_CERG_Framework.md
   llm_include: true
   llm_priority: high
@@ -357,7 +357,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md
   source_file: CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md
-  source_hash: 7023d39773d9081327348dfd22cad22b18876119f4c7508cb4b83d4c29ed8eed
+  source_hash: 2f9d785878b64d92cb6c7fe4c67095411faa0b2296abf150a6ecd933c2a758a5
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md
   llm_include: true
   llm_priority: medium
@@ -397,7 +397,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md
   source_file: CERG-GOV-IMP-003_Small_Team_Adoption_Path.md
-  source_hash: ffb12f3cd426dc6a5c77fa53e5a301c67926aa0f0e98086bd002e4721ada0884
+  source_hash: bacdc3eb7180af6bd6c39dae518b6f3034d8fd6905ec32eac36e62aeb06b89ae
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md
   llm_include: true
   llm_priority: medium
@@ -517,7 +517,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md
   source_file: CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md
-  source_hash: 20c396f60cd74d45da9547f1c5c5575f1ac7e56adb1cd0caf9334c57e96d3820
+  source_hash: 88906ea0ea3160a325bd35fa36098536cac81eebff4fc845dc25ed1bf2fde62d
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md
   llm_include: true
   llm_priority: medium
@@ -597,7 +597,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   source_file: CERG-GOV-OM-001_CERG_Operating_Model.md
-  source_hash: d24c19f9f3853ed0d1157cb85382eec8aaddd94b6df17cfbe0b4e6411dadb78e
+  source_hash: cf5fbb6c89a1b95b3e3f2742ddf91f19f06979bfa8265dc8e39b1184d7ed41dd
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   llm_include: true
   llm_priority: high
@@ -637,7 +637,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md
   source_file: CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md
-  source_hash: 688f4ac24a95ee0df00471a9f5a6b69f7abfbf555e453b7ab35368b0602051af
+  source_hash: b7a6cc7b6a8f73cc86e90b5b82f4c3f147075fec814e4182d3886d5dab84722f
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md
   llm_include: true
   llm_priority: medium
@@ -677,7 +677,7 @@
   parent_artifact: 'CERG-POL-001 — CERG Cybersecurity Policy'
   source_path: governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
   source_file: CERG-GOV-RMF-001_Risk_Management_Framework.md
-  source_hash: 7ee7ee162fd660fc1794a8e73e1043148f53a74513c6296511f6c55cbe22786f
+  source_hash: 13f085bc88b535a1da07f087ddfc0c4cc2a404aeedbdf2a1414ce1bf33085313
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
   llm_include: true
   llm_priority: high
@@ -697,7 +697,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md
   source_file: CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md
-  source_hash: 6266d334cbc69877dbf3e7654ec3ddce44bc29ed4b1b456bc4842f47ce0b10d1
+  source_hash: 5cb9366f5564333e3d5c16503fe9ea3b60c061d5746009c1830ce6bc2982f836
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md
   llm_include: true
   llm_priority: medium
@@ -757,7 +757,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-SUCC-001_Succession_Planning_and_Talent_Review_Framework.md
   source_file: CERG-GOV-SUCC-001_Succession_Planning_and_Talent_Review_Framework.md
-  source_hash: d1b7f19bdfd42bb11aa0caaf5e127947aaecfaf365f2a09ce4017f84d0612980
+  source_hash: a103c4b9c26419736b70bd84c79cfe2ac71da643160d8f3ed65bb9f7e33c0885
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-SUCC-001_Succession_Planning_and_Talent_Review_Framework.md
   llm_include: false
   llm_priority: medium
@@ -857,7 +857,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-WFP-001_Workforce_Planning_and_Capacity_Model.md
   source_file: CERG-GOV-WFP-001_Workforce_Planning_and_Capacity_Model.md
-  source_hash: c868e7b46f236ca2a9d3862a8b2b19d0393a337ab7ffda63566b45773be965f4
+  source_hash: af7956d6e3273b42627e8aa5be5a0ea72d2a9cdbd2734b3d4872d6ca6928be47
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-WFP-001_Workforce_Planning_and_Capacity_Model.md
   llm_include: true
   llm_priority: medium
