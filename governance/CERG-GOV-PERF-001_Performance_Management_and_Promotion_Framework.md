@@ -39,7 +39,7 @@
 
 The Job Architecture and Grade Framework (CERG-GOV-JA-001) defines the grade structure. The Competency Model (CERG-GOV-CMP-001) defines what good looks like at each grade. What neither defines is the mechanism: how a manager evaluates performance, how often, with what documentation, and how that evaluation leads to a promotion decision that is consistent across pillars.
 
-This document defines that mechanism. It establishes the performance management cadence, the evaluation dimensions, the calibration process that prevents pillar-to-pillar inconsistency, the promotion process from initiation through approval, and the documentation standard that makes every decision defensible. It is designed to be lightweight enough for a 5-person CERG team and rigorous enough for a 60-person organization facing a regulatory audit of its personnel practices.
+This document defines that mechanism. It establishes the performance management cadence, the evaluation dimensions, the calibration process that prevents pillar-to-pillar inconsistency, the promotion process from initiation through approval, and the documentation standard that makes every decision defensible. It is designed to be lightweight enough for a small CERG team and rigorous enough for a full-scale organization facing a regulatory audit of its personnel practices.
 
 It applies to every CERG team member, manager, and pillar leader. It does not apply to the CISO, whose performance management is governed by the executive evaluation framework of the organization, or to Adjacent Incident Response roles, which belong to the standing IR team.
 
@@ -59,7 +59,7 @@ It applies to every CERG team member, manager, and pillar leader. It does not ap
 
 4. **Documentation is evidence, not bureaucracy.** The performance record exists so that a decision can be explained to the person, to a calibration panel, to HR, and to a regulator or auditor if challenged. It should be thorough enough to survive those audiences and no longer.
 
-5. **Scales without breaking.** A 5-person CERG with no Managers and a 60-person CERG with a full management hierarchy both use the same framework. The forms are the same; the number of people in the calibration room changes.
+5. **Scales without breaking.** A small CERG with no Managers and a full-scale CERG with a management hierarchy both use the same framework. The forms are the same; the number of people in the calibration room changes.
 
 ---
 
