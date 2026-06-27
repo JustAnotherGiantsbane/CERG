@@ -1,5 +1,5 @@
 # CERG Publication Eligibility Manifest
-# Generated from document metadata | 130 artifacts
+# Generated from document metadata | 129 artifacts
 # Separates lifecycle approval from public-release eligibility
 
 - document_id: CERG-GOV-ANTI-001
@@ -506,17 +506,6 @@
   full_text_public_allowed: true
   redaction_required: false
   approved_public_release_by: NERC-CIP Compliance Manager
-  release_date: 2026-06-27
-
-- document_id: CERG-PLN-CON-001
-  source_path: plans/CERG-PLN-CON-001_Consulting_Services_Operating_Plan.md
-  status: Approved
-  classification: Public
-  publication_profile: public
-  public_summary_allowed: true
-  full_text_public_allowed: true
-  redaction_required: false
-  approved_public_release_by: Governance Pillar Leader
   release_date: 2026-06-27
 
 - document_id: CERG-PLN-CUI-001

@@ -450,7 +450,6 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-PLN-BC-001`](../plans/CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md) | Business Continuity and Disaster Recovery Plan | Governance Pillar Leader | Approved |
 | [`CERG-PLN-ISO-001`](../plans/CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md) | ISO/IEC 27001 Operational Package | Governance Pillar Leader | Approved |
 | [`CERG-PLN-PRIV-001`](../plans/CERG-PLN-PRIV-001_Privacy_and_Data_Protection_Operational_Package.md) | Privacy and Data Protection Operational Package | Governance Pillar Leader | Approved |
-| [`CERG-PLN-CON-001`](../plans/CERG-PLN-CON-001_Consulting_Services_Operating_Plan.md) | Consulting Services Operating Plan | Governance Pillar Leader (Practice Enablement) | Approved |
 
 ### 5.6 Templates
 
