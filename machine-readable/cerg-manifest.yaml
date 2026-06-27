@@ -1,6 +1,6 @@
 # cerg-manifest.yaml
 # DERIVED ARTIFACT — authoritative source is the CERG markdown corpus
-# Generated: 2026-06-24 | Owner: Governance Pillar Leader (Document Control)
+# Generated: 2026-06-27 | Owner: Governance Pillar Leader (Document Control)
 # Regenerate on any change to source documents
 # See METADATA.yaml for full governance information
 
@@ -277,7 +277,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-FRM-001_CERG_Framework.md
   source_file: CERG-GOV-FRM-001_CERG_Framework.md
-  source_hash: 1ec0884c3d59573dadce2b87160f346f6837ec025c4977969d064e1dd1531592
+  source_hash: 7fe1d3890e96be89bb82423254ffac70954e456b3b300bcb33358449359400f9
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-FRM-001_CERG_Framework.md
   llm_include: true
   llm_priority: high
@@ -348,7 +348,7 @@
   title: Adoption Safety Guide
   document_type: governance_instrument
   domain: IMP
-  version: 1.1
+  version: 1.2
   status: Approved
   classification: Public
   publication_profile: public
@@ -357,7 +357,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md
   source_file: CERG-GOV-IMP-002_Adoption_Safety_Guide.md
-  source_hash: 0b8f03d7b86d6ee9de5d23a179b2299584a0230655e5e4b67b0c665004b51fb5
+  source_hash: e7f219bbd64289f48866949aa1589c46f807c5bf28c183beb15da5bc238d5e25
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md
   llm_include: true
   llm_priority: medium
@@ -497,7 +497,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md
   source_file: CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md
-  source_hash: 1039c78d6286d2726c4b3534f0e77e26038c6aab1b67a7302c1da4e973bdd35c
+  source_hash: 20c396f60cd74d45da9547f1c5c5575f1ac7e56adb1cd0caf9334c57e96d3820
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md
   llm_include: true
   llm_priority: medium
@@ -1257,7 +1257,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/CERG-GOV-JF-001_Job_Families_Overview.md
   source_file: CERG-GOV-JF-001_Job_Families_Overview.md
-  source_hash: db8dd963aee3edc987a73f2e915d6e9ac76d7893bd72f1f7800c016c00fa024b
+  source_hash: 3cbb530c7d8961a38a3098a99baefd79b9845b98dbf3737831f7f9a98ba0b5d0
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/CERG-GOV-JF-001_Job_Families_Overview.md
   llm_include: true
   llm_priority: low
