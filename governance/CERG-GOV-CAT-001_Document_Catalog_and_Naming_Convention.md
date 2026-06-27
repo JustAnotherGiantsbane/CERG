@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.45 |
+| **Version** | 1.46 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -139,6 +139,7 @@ Files are named `<DocumentID>_<Short_Title>.md` using underscore-separated title
 | `CJ` | Crown jewels and loss-scenario library |
 | `SLC` | CERG service-level commitments (CERG-to-business) |
 | `GEN` | Cross-cutting reference material (glossary, term definitions, foundational index) |
+| `ANTI` | Anti-pattern catalog and failure-mode reference |
 
 New domains are added only by amendment to this catalog.
 
@@ -365,6 +366,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) | Compliance Matrix | Governance Pillar Leader | Approved |
 | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Implementation and Adaptation Guide | Governance Pillar Leader | Approved |
 | [`CERG-GOV-IMP-002`](CERG-GOV-IMP-002_Adoption_Safety_Guide.md) | Adoption Safety Guide | Governance Pillar Leader | Approved |
+| [`CERG-GOV-ANTI-001`](CERG-GOV-ANTI-001_CERG_Anti_Pattern_Catalog.md) | CERG Anti-Pattern Catalog | Governance Pillar Leader | Approved |
 | [`CERG-GOV-IMP-003`](CERG-GOV-IMP-003_Small_Team_Adoption_Path.md) | Small Team Adoption Path | Governance Pillar Leader | Approved |
 | [`CERG-GOV-IMP-004`](CERG-GOV-IMP-004_Implementation_Cards.md) | Implementation Cards | Governance Pillar Leader | Approved |
 | [`CERG-GOV-IMP-005`](CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md) | Adoption Decision Tree and Dependency Matrix | Governance Pillar Leader | Approved |
@@ -600,7 +602,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CAT-001 |
-| **Version** | 1.45 |
+| **Version** | 1.46 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-18 |
 | **Classification** | Public |
@@ -617,6 +619,7 @@ No F2-F4 governance instruments remain planned. The Annual Security and Governan
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.46 | 2026-06-24 | Governance Pillar Leader | Registered domain code `ANTI` and `CERG-GOV-ANTI-001` Anti-Pattern Catalog in §5.2 as the cross-domain reference for adoption, workforce, capability, evidence, and compliance failure modes. |
 | 1.45 | 2026-06-20 | Governance Pillar Leader | Registered `CERG-TMPL-SCP-001` System Control Profile Template in §5.6 as the structured per-system control implementation, evidence, validation, and review record. |
 | 1.44 | 2026-06-18 | Governance Pillar Leader | Registered domain code `GEN` (cross-cutting reference material) in §2.1. Registered `CERG-GOV-GEN-001` (CERG Glossary) in §5.2 as the canonical reference for CERG terms, record types, conversion rules, and role names. Glossary content extracted from FLOW-001 §2 (Operating Principles, Record Type Definitions) and from CB-001, RMF-001, OM-001, and roles/ cross-references. |
 | 1.43 | 2026-06-18 | Governance Pillar Leader | Registered `CERG-GOV-IMP-007` (Role Reader Paths) in §5.2 as the sequenced 30-35 minute reading order for the CISO, Risk Lead, and Engineering Lead roles. |

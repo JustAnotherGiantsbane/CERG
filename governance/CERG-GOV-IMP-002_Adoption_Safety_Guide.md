@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-002 |
-| **Version** | 1.3 |
+| **Version** | 1.4 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -105,7 +105,7 @@ The following artifacts are not adopted (they are templates or surveys), but the
 
 ## 3. Adoption Anti-Patterns
 
-These are the ways CERG adoption fails. If you recognize your organization in any of these, stop and fix the pattern before continuing.
+These are the ways CERG adoption fails. If you recognize your organization in any of these, stop and fix the pattern before continuing. The broader cross-domain anti-pattern reference is [`CERG-GOV-ANTI-001`](CERG-GOV-ANTI-001_CERG_Anti_Pattern_Catalog.md).
 
 ### Anti-Pattern 1: Fork-and-Declare
 
@@ -462,7 +462,7 @@ Changing these breaks the operating model. If you must change them, document the
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-002 |
-| **Version** | 1.3 |
+| **Version** | 1.4 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -479,6 +479,7 @@ Changing these breaks the operating model. If you must change them, document the
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.4 | 2026-06-24 | Governance Pillar Leader | Linked the Adoption Safety Guide to the central Anti-Pattern Catalog for cross-domain failure-mode reference. |
 | 1.3 | 2026-06-24 | Governance Pillar Leader | Added tool-versus-capability adoption anti-pattern and evidence test for capability claims. |
 | 1.2 | 2026-06-24 | Governance Pillar Leader | Removed older example-specific language for utility branding, fixed hard-coded role and headcount examples, and updated adversarial-validation terminology. |
 | 1.1 | 2026-06-18 | Governance Pillar Leader | Added explicit small-team separation rule for business-risk consequence acceptance when security roles are consolidated. |
@@ -499,6 +500,7 @@ Governance owns this document. The Governance Pillar Leader is responsible for i
 |---|---|---|
 | Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
 | Implementation and Adaptation Guide | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | How to adapt CERG; this document defines the safety rules for doing so |
+| Anti-Pattern Catalog | [`CERG-GOV-ANTI-001`](CERG-GOV-ANTI-001_CERG_Anti_Pattern_Catalog.md) | Cross-domain catalog of adoption, workforce, capability, evidence, and compliance failure modes |
 | Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role roster and scaling map |
 | Risk Management Framework | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk acceptance authority and expiration |
 | Consolidated Roles and RACI | [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Role accountability and separation of duties |
