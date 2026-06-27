@@ -1,0 +1,49 @@
+# CERG Organization Adaptation Profile — AnyTech
+# Single source of truth for AnyTech's CERG token values.
+# Fill in, then run:
+#     python3 tools/cerg-render.py --profile cerg-org-profile-anytech.yml --source . --out rendered-anytech
+#
+# AnyTech: 8-person cyber team as a program office overseeing
+# MSSP (SOC/IR, US + India offices) and MSP (IT operations).
+# No CISO — tower leaders report to IT Director.
+# Awareness/training handled by 3rd party vendor.
+
+# --- 4.1 Organization Identity ---------------------------------------------
+organization:
+  org_name: "AnyTech"
+  org_legal_name: "AnyTech, Inc."
+  org_short_name: "AnyTech"
+  org_sector: "technology services"
+  org_content_repo: "https://github.com/JustAnotherGiantsbane/CERG"
+
+# --- 4.2 Program Identity --------------------------------------------------
+program:
+  program_name: "AnyTech CERG"
+  program_acronym: "CERG"
+
+# --- 4.3 Scale and Structure -----------------------------------------------
+scale:
+  total_employees: "200"
+  protected_population: "500"
+  cerg_team_size: "8"
+  eng_staff: "3"
+  risk_staff: "3"
+  gov_staff: "2"
+  scale_tier: "small"
+
+# --- 4.4 Oversight and Standing Teams --------------------------------------
+oversight:
+  cog_name: "IT Director Review"
+  ir_team_name: "AnyTech MSSP IR Team"
+  exec_body_name: "IT Director"
+
+# --- 4.5 Regulatory Context ------------------------------------------------
+regulatory:
+  regulators: "None currently in scope"
+  primary_regulator: "None"
+
+# --- 4.6 Contact and Control -----------------------------------------------
+contact:
+  security_contact: "security@anytech.com"
+  doc_control_contact: "cerg-docs@anytech.com"
+  adoption_date: "2026-06-21"
