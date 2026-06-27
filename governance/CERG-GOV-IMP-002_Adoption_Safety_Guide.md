@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-002 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -29,7 +29,7 @@
 
 ## 1. Before You Start
 
-CERG is an operating-model and document corpus for standing up a cybersecurity program. It is not a control checklist, a compliance certificate, or a substitute for organizational commitment.
+CERG is an operating model and document corpus for standing up a cybersecurity program. It is not a control checklist, a compliance certificate, or a substitute for organizational commitment.
 
 Before you fork, edit, or adopt any CERG artifact as authoritative, you must have:
 
@@ -117,7 +117,7 @@ These are the ways CERG adoption fails. If you recognize your organization in an
 
 ### Anti-Pattern 2: Delete Roles Instead of Consolidating
 
-**What it looks like:** "We only have 5 people, so we deleted the other 22 roles."
+**What it looks like:** "We only have a small team, so we deleted the roles we cannot staff separately."
 
 **Why it fails:** The canonical roles define the work that needs to be done, not the headcount. When you delete a role, you delete the accountability for that work. The work still exists — it just has no owner.
 
@@ -151,7 +151,7 @@ These are the ways CERG adoption fails. If you recognize your organization in an
 
 **What it looks like:** The Risk function runs the vulnerability scanner. That is its entire job description.
 
-**Why it fails:** Risk owns threat intelligence, adversarial testing, vendor risk, detection engineering, identity risk, OT risk, and the risk register. Reducing Risk to vulnerability scanning leaves most of the organization's exposure unmanaged.
+**Why it fails:** Risk owns threat intelligence, adversarial validation, vendor risk, detection engineering, identity risk, OT risk, and the risk register. Reducing Risk to vulnerability scanning leaves most of the organization's exposure unmanaged.
 
 **Fix:** Staff Risk for its full scope, or document which Risk functions are deferred and why. A small team may consolidate Risk roles, but the functions they cover should be explicit.
 
@@ -412,14 +412,14 @@ When you tailor CERG, some changes are safe. Some are dangerous. This section de
 
 You can (and should) change these without compromising the framework's integrity:
 
-- **Organization name and branding** — replace "CERG" or the utility example with your organization
+- **Organization name and branding** — use your organization's name, internal program label, and house style while preserving CERG document IDs where cross-references depend on them
 - **Role assignments** — assign canonical roles to actual people or job titles
 - **Tool names** — replace generic references with your actual tools
 - **Regulatory scope** — adopt only the regulatory packages that apply; defer or remove the rest
 - **Meeting cadences** — adjust schedules within the bounds defined by review cycles
 - **Dollar thresholds** — calibrate risk appetite values to your organization's finances
 - **Evidence repository locations** — specify where your evidence is actually stored
-- **Team size examples** — replace the 60-person example with your actual headcount
+- **Illustrative examples and staffing profiles** — replace sector-specific examples and headcount assumptions with your actual operating context
 - **Asset classification tiers** — define tiers that match your business criticality
 
 ### Dangerous to Change
@@ -444,7 +444,7 @@ Changing these breaks the operating model. If you must change them, document the
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-002 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -461,6 +461,7 @@ Changing these breaks the operating model. If you must change them, document the
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.2 | 2026-06-24 | Governance Pillar Leader | Removed older example-specific language for utility branding, fixed hard-coded role and headcount examples, and updated adversarial-validation terminology. |
 | 1.1 | 2026-06-18 | Governance Pillar Leader | Added explicit small-team separation rule for business-risk consequence acceptance when security roles are consolidated. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Adoption pre-requisites, anti-patterns, decision log template, risk acceptance guardrails, regulatory honesty guidance, role collision guide, and safe/dangerous tailoring boundaries. |
 
