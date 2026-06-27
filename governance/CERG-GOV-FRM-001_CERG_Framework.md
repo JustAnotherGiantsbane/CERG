@@ -59,10 +59,10 @@ The CERG model names these activities explicitly, Engineering, Risk, and Governa
 ### Design Principles
 
 - **Scale up or down:** applicable to a 5-person team or a 500-person organization
-- **Regulatory-ready:** designed to satisfy [CMMC](https://dodcio.defense.gov/CMMC/), NERC-CIP, [NIST CSF 2.0](https://www.nist.gov/cyberframework), 800-53, 800-171, and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)
+- **Regulatory-ready:** designed to satisfy CMMC, NERC-CIP, NIST CSF 2.0, 800-53, 800-171, and SOX
 - **IT/OT aware:** principles apply equally to enterprise IT and operational technology environments
 - **Talent resilient:** cross-pillar knowledge sharing means no single person is a point of failure
-- **Adaptive-targeted:** the framework describes what operating at [NIST CSF 2.0](https://www.nist.gov/cyberframework) Adaptive maturity looks like in practice
+- **Adaptive-targeted:** the framework describes what operating at NIST CSF 2.0 Adaptive maturity looks like in practice
 - **"Yes, and..." oriented:** Governance enables the business through risk treatment, not reflexive refusal
 - **Definition of Done:** A CERG task is not done when a meeting happened, a document was approved, a ticket moved columns, a scanner showed fewer highs, or someone said "accepted risk." A CERG task is done when all of the following are true: (1) an owner is named, (2) a decision is recorded, (3) evidence is linked and independently verifiable, (4) residual risk is understood and documented, (5) the control state or register entry is updated, (6) a next review date exists, and (7) the system of record agrees with the operational reality. This standard applies to every CERG-managed workflow, finding, exception, risk acceptance, architecture review, and metric. If the Definition of Done cannot be satisfied because the organization lacks the tooling or discipline, CERG adoption is not complete.
 
@@ -243,12 +243,12 @@ Engineering operates on a lightweight internal consulting model. The goal is to 
 
 |NIST Framework|Relevant Controls / Functions|Engineering Role|
 |---|---|---|
-|[NIST CSF 2.0](https://www.nist.gov/cyberframework)|GOVERN, IDENTIFY (Asset Mgmt, Risk Assessment), PROTECT (Identity Mgmt, Data Security, Platform Security)|Primary driver of PROTECT function; co-owner of IDENTIFY|
-|[NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)|SA (System & Services Acquisition), CM (Configuration Mgmt), SI (System & Info Integrity)|Implements SA and CM controls during project delivery|
-|[NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final)|3.13 System & Communications Protection, 3.14 System & Info Integrity|Ensures CUI protection controls are designed into systems handling federal data|
+|NIST CSF 2.0|GOVERN, IDENTIFY (Asset Mgmt, Risk Assessment), PROTECT (Identity Mgmt, Data Security, Platform Security)|Primary driver of PROTECT function; co-owner of IDENTIFY|
+|NIST 800-53|SA (System & Services Acquisition), CM (Configuration Mgmt), SI (System & Info Integrity)|Implements SA and CM controls during project delivery|
+|NIST 800-171|3.13 System & Communications Protection, 3.14 System & Info Integrity|Ensures CUI protection controls are designed into systems handling federal data|
 |NIST RMF|Steps 2 (Select), 3 (Implement), 4 (Assess - pre-production)|Leads control selection and implementation; supports pre-production assessment|
 |NERC-CIP|CIP-005 (Electronic Security Perimeters), CIP-007 (Systems Security Mgmt), CIP-010 (Config Mgmt)|Designs systems to conform to CIP requirements from the start|
-|[CMMC](https://dodcio.defense.gov/CMMC/)|Level 2: Access Control, Configuration Mgmt, Identification & Auth|Ensures [CMMC](https://dodcio.defense.gov/CMMC/) practices are implemented in applicable systems|
+|CMMC|Level 2: Access Control, Configuration Mgmt, Identification & Auth|Ensures CMMC practices are implemented in applicable systems|
 
 ---
 
@@ -282,7 +282,7 @@ Risk serves both a pre-production function (finding issues before systems go liv
 |Pre-production, Low/Medium severity|Engineering remediates with project team before go-live. Tracked to closure by Risk.|
 |Pre-production, High/Critical severity|Engineering and Risk jointly assess. If unremediated, a risk treatment plan is required with VP+ sign-off before go-live.|
 |Post-production, Low/Medium severity|Tracked in vulnerability register. Assigned to appropriate owner (IT/OT ops) with SLA. Governance monitors SLA compliance.|
-|Post-production, High/Critical severity|Escalated immediately. CISO notified. Risk treatment plan required. Engineering may be re-engaged for architectural remediation. NERC-CIP and [CMMC](https://dodcio.defense.gov/CMMC/) deviation processes invoked as applicable.|
+|Post-production, High/Critical severity|Escalated immediately. CISO notified. Risk treatment plan required. Engineering may be re-engaged for architectural remediation. NERC-CIP and CMMC deviation processes invoked as applicable.|
 |Vendor/Third-party finding|Risk documents and includes in vendor risk register. Governance tracks contractual remediation commitments. Engineering consulted if architectural change is needed.|
 
 ### 5.4 Illustrative Example: Electrical Utility
@@ -295,12 +295,12 @@ Risk serves both a pre-production function (finding issues before systems go liv
 
 |NIST Framework|Relevant Controls / Functions|Risk Team Role|
 |---|---|---|
-|[NIST CSF 2.0](https://www.nist.gov/cyberframework)|GOVERN (Risk Strategy), IDENTIFY (Risk Assessment, Improvement), DETECT (Adverse Event Analysis)|Primary driver of IDENTIFY and DETECT; co-owner of GOVERN risk functions|
-|[NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)|RA (Risk Assessment), CA (Assessment & Authorization), PM (Program Mgmt), SI-2 (Flaw Remediation)|Executes RA and CA controls; owns SI-2 for patch and vuln tracking|
-|[NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final)|3.11 Risk Assessment|Performs periodic assessments of CUI-handling environments|
+|NIST CSF 2.0|GOVERN (Risk Strategy), IDENTIFY (Risk Assessment, Improvement), DETECT (Adverse Event Analysis)|Primary driver of IDENTIFY and DETECT; co-owner of GOVERN risk functions|
+|NIST 800-53|RA (Risk Assessment), CA (Assessment & Authorization), PM (Program Mgmt), SI-2 (Flaw Remediation)|Executes RA and CA controls; owns SI-2 for patch and vuln tracking|
+|NIST 800-171|3.11 Risk Assessment|Performs periodic assessments of CUI-handling environments|
 |NIST RMF|Step 4 (Assess), Step 6 (Monitor)|Primary executor of continuous monitoring; supports periodic assessments|
 |NERC-CIP|CIP-007 (Patch Mgmt), CIP-010 (Vuln Assessments), CIP-011 (Info Protection)|Manages CIP-007 patch tracking; conducts CIP-010 annual vuln assessments|
-|[CMMC](https://dodcio.defense.gov/CMMC/)|Level 2: Risk Assessment (RA), Audit & Accountability (AU)|Performs [CMMC](https://dodcio.defense.gov/CMMC/) risk assessments; supports audit log review program|
+|CMMC|Level 2: Risk Assessment (RA), Audit & Accountability (AU)|Performs CMMC risk assessments; supports audit log review program|
 
 ---
 
@@ -316,9 +316,9 @@ Governance operates from a **"yes, and..."** philosophy. The goal is never to bl
 
 ### 6.2 Core Functions
 
-- **Policy and Standard Development**: creating, maintaining, and retiring cybersecurity policies, standards, and procedures aligned to [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final), 800-171, [CSF](https://www.nist.gov/cyberframework), and applicable regulations
+- **Policy and Standard Development**: creating, maintaining, and retiring cybersecurity policies, standards, and procedures aligned to NIST 800-53, 800-171, CSF, and applicable regulations
 - **Implementation Guidance**: translating policy requirements into practical, actionable guidance for IT and OT teams; bridging the gap between regulatory language and operational reality
-- **Compliance Management**: tracking the organization's compliance posture against NERC-CIP, [CMMC](https://dodcio.defense.gov/CMMC/), [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204), and other applicable requirements; managing the compliance calendar
+- **Compliance Management**: tracking the organization's compliance posture against NERC-CIP, CMMC, SOX, and other applicable requirements; managing the compliance calendar
 - **Control Evidence Management**: setting standards for what constitutes acceptable evidence; collecting, organizing, and maintaining the control evidence library; coordinating audit responses
 - **Risk Treatment Tracking**: maintaining the organization's risk register; tracking open risk treatment plans to completion; escalating overdue or deteriorating items to the CISO
 - **Quality Assurance**: periodic review of Engineering deliverables and Risk outputs to ensure conformance with organizational standards; not an adversarial audit but a collaborative QA function
@@ -326,7 +326,7 @@ Governance operates from a **"yes, and..."** philosophy. The goal is never to bl
 
 ### 6.3 The "Yes, And..." Standard
 
-Governance reserves the right to say no, particularly for significant NERC-CIP deviations or [CMMC](https://dodcio.defense.gov/CMMC/) non-conformances where regulatory exposure is material. But the default orientation is enabling the business with guardrails, not closing doors. CERG publishes and reports against its own service-level commitments ([`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md)), so that a fast, safe yes is a measured obligation: a slow yes is a no the business routes around.
+Governance reserves the right to say no, particularly for significant NERC-CIP deviations or CMMC non-conformances where regulatory exposure is material. But the default orientation is enabling the business with guardrails, not closing doors. CERG publishes and reports against its own service-level commitments ([`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md)), so that a fast, safe yes is a measured obligation: a slow yes is a no the business routes around.
 
 |Situation|"Yes, And..." Response|
 |---|---|
@@ -344,29 +344,29 @@ Governance sets the evidence standard, what constitutes acceptable proof that a 
 - **Risk produces:** vulnerability scan reports, penetration test findings, threat intelligence reports, vendor risk assessments, patch tracking records
 - **Governance produces:** policy documents, compliance matrices, audit reports, risk register entries, regulatory correspondence, exception approvals
 
-Governance maintains the evidence library and ensures that evidence is organized, dated, attributed, and retained per regulatory requirements, NERC-CIP requires evidence retention for specified periods; [CMMC](https://dodcio.defense.gov/CMMC/) requires evidence available for assessment.
+Governance maintains the evidence library and ensures that evidence is organized, dated, attributed, and retained per regulatory requirements, NERC-CIP requires evidence retention for specified periods; CMMC requires evidence available for assessment.
 
 ### 6.5 Illustrative Example: Electrical Utility
 
-> **Scenario: [CMMC](https://dodcio.defense.gov/CMMC/) Level 2 Assessment Preparation**
+> **Scenario: CMMC Level 2 Assessment Preparation**
 > 
-> The utility has a contract with the Department of Energy that requires [CMMC](https://dodcio.defense.gov/CMMC/) Level 2 compliance. Governance leads the preparation effort. They map all 110 [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) practices to the organization's existing controls, identifying 14 gaps. Governance works with Engineering to remediate 9 of the gaps through technical implementation. Three gaps are addressed through policy and procedure updates that Governance drafts. Two gaps require Risk to perform additional scanning and document compensating controls. Governance manages the evidence package, pulling architecture review records from Engineering, vulnerability reports from Risk, and policy documents from its own library. When the C3PAO assessment team arrives, Governance coordinates the logistics, manages the information requests, and tracks findings to closure post-assessment.
+> The utility has a contract with the Department of Energy that requires CMMC Level 2 compliance. Governance leads the preparation effort. They map all 110 NIST 800-171 practices to the organization's existing controls, identifying 14 gaps. Governance works with Engineering to remediate 9 of the gaps through technical implementation. Three gaps are addressed through policy and procedure updates that Governance drafts. Two gaps require Risk to perform additional scanning and document compensating controls. Governance manages the evidence package, pulling architecture review records from Engineering, vulnerability reports from Risk, and policy documents from its own library. When the C3PAO assessment team arrives, Governance coordinates the logistics, manages the information requests, and tracks findings to closure post-assessment.
 
 ### 6.6 NIST Framework Alignment: Governance
 
 |NIST Framework|Relevant Controls / Functions|Governance Role|
 |---|---|---|
-|[NIST CSF 2.0](https://www.nist.gov/cyberframework)|GOVERN (all functions), IDENTIFY (Improvement), RESPOND (Improvements)|Primary owner of the GOVERN function across all six sub-functions|
-|[NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)|PL (Planning), PM (Program Mgmt), CA (Assessment), PS (Personnel Security)|Owns PL and PM control families; coordinates CA; sets PS standards|
-|[NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final)|3.12 Security Assessment, all documentation requirements|Manages 800-171 assessment readiness and documentation compliance|
+|NIST CSF 2.0|GOVERN (all functions), IDENTIFY (Improvement), RESPOND (Improvements)|Primary owner of the GOVERN function across all six sub-functions|
+|NIST 800-53|PL (Planning), PM (Program Mgmt), CA (Assessment), PS (Personnel Security)|Owns PL and PM control families; coordinates CA; sets PS standards|
+|NIST 800-171|3.12 Security Assessment, all documentation requirements|Manages 800-171 assessment readiness and documentation compliance|
 |NIST RMF|Step 1 (Categorize), Step 2 (Select - policy), Step 5 (Authorize), Step 6 (Monitor - compliance)|Leads categorization; co-leads authorization; owns compliance monitoring|
 |NERC-CIP|CIP-003 (Security Mgmt Controls), CIP-004 (Personnel Training), CIP-014 (Physical Security Policy)|Primary owner of CIP-003; coordinates CIP-004 with Awareness team; maintains all deviation records|
-|[CMMC](https://dodcio.defense.gov/CMMC/)|All documentation and evidence requirements across all domains|Manages assessment readiness, evidence collection, and C3PAO coordination|
-|[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC|IT General Controls documentation, change management evidence|Maintains ITGC control library; coordinates with external auditors|
+|CMMC|All documentation and evidence requirements across all domains|Manages assessment readiness, evidence collection, and C3PAO coordination|
+|SOX ITGC|IT General Controls documentation, change management evidence|Maintains ITGC control library; coordinates with external auditors|
 
 ---
 
-## 7. Targeting [NIST CSF 2.0](https://www.nist.gov/cyberframework) Adaptive Maturity
+## 7. Targeting NIST CSF 2.0 Adaptive Maturity
 
 ### 7.1 What Adaptive Means
 
@@ -374,7 +374,7 @@ The NIST Cybersecurity Framework defines four tiers of organizational maturity: 
 
 At the Adaptive tier, an organization does not just respond to the threat environment, it anticipates it. Risk management is integrated into the fabric of business decision-making. Cybersecurity considerations are part of every significant investment, acquisition, and operational change. The security function continuously learns from internal events and external intelligence, and updates its practices accordingly.
 
-|[CSF](https://www.nist.gov/cyberframework) Tier|What It Looks Like in Practice|
+|CSF Tier|What It Looks Like in Practice|
 |---|---|
 |**Partial (Tier 1)**|Ad hoc processes. Risk decisions made reactively. Limited awareness of threats. No consistent policy or evidence collection.|
 |**Informed (Tier 2)**|Policies exist but are not consistently applied. Risk management happens in silos. Some awareness of threat environment. Inconsistent evidence.|
@@ -395,11 +395,11 @@ The CERG model is designed to produce Adaptive-tier behavior through its structu
 |Cybersecurity is viewed as a value driver|Engineering's consulting model and "yes, and..." Governance orientation build organizational trust. The business experiences security as an enabler, not an obstacle.|All|
 |Cross-pillar knowledge transfer prevents single points of failure|CERG roles are designed with deliberate left-right knowledge sharing. Engineers learn Risk thinking; Risk analysts understand Governance requirements; Governance understands operational constraints.|All|
 
-### 7.3 [CSF](https://www.nist.gov/cyberframework) Core Function Coverage
+### 7.3 CSF Core Function Coverage
 
-The [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) Core consists of six functions. CERG provides primary or strong supporting ownership for all six.
+The NIST CSF 2.0 Core consists of six functions. CERG provides primary or strong supporting ownership for all six.
 
-|[CSF](https://www.nist.gov/cyberframework) Function|Primary Owner|CERG Coverage|
+|CSF Function|Primary Owner|CERG Coverage|
 |---|---|---|
 |**GOVERN**|Governance|Governance owns the risk strategy, policy, roles, and accountability structures. Risk contributes risk appetite data. Engineering ensures operational compliance.|
 |**IDENTIFY**|Risk + Engineering|Risk owns asset, risk, and improvement identification. Engineering contributes asset documentation through project handoffs.|
@@ -429,23 +429,23 @@ NERC-CIP is the primary regulatory framework for bulk electric system (BES) cybe
 |**CIP-013:** Supply Chain Risk Management|Risk leads vendor risk assessment. Governance maintains the supply chain risk management plan. Engineering applies controls to vendor-supplied systems.|
 |**CIP-014:** Physical Security (Transmission)|Governance maintains risk assessment documentation. Engineering consults on physical-cyber interdependencies.|
 
-### 8.2 [CMMC](https://dodcio.defense.gov/CMMC/): Cybersecurity Maturity Model Certification
+### 8.2 CMMC: Cybersecurity Maturity Model Certification
 
-[CMMC](https://dodcio.defense.gov/CMMC/) Level 2 requires implementation and assessment of all 110 practices in [NIST SP 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final). For organizations handling Controlled Unclassified Information (CUI) on behalf of the federal government, [CMMC](https://dodcio.defense.gov/CMMC/) certification is a contract requirement. CERG provides the operational backbone for [CMMC](https://dodcio.defense.gov/CMMC/) compliance.
+[CMMC](https://dodcio.defense.gov/CMMC/) Level 2 requires implementation and assessment of all 110 practices in [NIST SP 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final). For organizations handling Controlled Unclassified Information (CUI) on behalf of the federal government, CMMC certification is a contract requirement. CERG provides the operational backbone for CMMC compliance.
 
-- **Engineering** implements the technical controls across the 14 [CMMC](https://dodcio.defense.gov/CMMC/) domains, access control, configuration management, system and communications protection, and others, during project delivery
-- **Risk** performs the periodic assessments required by [CMMC](https://dodcio.defense.gov/CMMC/) practice CA.2.157 and manages the Plan of Action & Milestones (POA&M) for open findings
+- **Engineering** implements the technical controls across the 14 CMMC domains, access control, configuration management, system and communications protection, and others, during project delivery
+- **Risk** performs the periodic assessments required by CMMC practice CA.2.157 and manages the Plan of Action & Milestones (POA&M) for open findings
 - **Governance** maintains the System Security Plan (SSP), manages the evidence library, coordinates C3PAO assessment logistics, and tracks POA&M items to closure
 
-### 8.3 [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204)
+### 8.3 SOX
 
 For organizations subject to [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC requirements, CERG provides the structural foundation for compliance without requiring a separate compliance team.
 
-- **[SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC:** Governance owns the IT General Controls framework and evidence library. Engineering ensures change management controls are embedded in deployment processes. Risk monitors access and configuration integrity in financial systems.
+- **SOX ITGC:** Governance owns the IT General Controls framework and evidence library. Engineering ensures change management controls are embedded in deployment processes. Risk monitors access and configuration integrity in financial systems.
 
 > **The Regulatory Advantage of CERG**
 > 
-> Organizations with multiple regulatory obligations, a utility managing NERC-CIP, [CMMC](https://dodcio.defense.gov/CMMC/), and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) simultaneously, typically struggle with duplicated effort and conflicting timelines. CERG centralizes the regulatory function in Governance while ensuring that Engineering and Risk produce compliance evidence as a byproduct of their daily work, not as a separate compliance exercise. One team, one evidence library, one compliance posture.
+> Organizations with multiple regulatory obligations, a utility managing NERC-CIP, CMMC, and SOX simultaneously, typically struggle with duplicated effort and conflicting timelines. CERG centralizes the regulatory function in Governance while ensuring that Engineering and Risk produce compliance evidence as a byproduct of their daily work, not as a separate compliance exercise. One team, one evidence library, one compliance posture.
 
 ---
 
@@ -522,8 +522,8 @@ A representative staffing structure for a CERG of this scale:
 |Governance Pillar Leader|Governance|Policy and standard ownership; NERC-CIP compliance program leadership; regulatory and audit liaison; risk register governance; Governance team development|
 |NERC-CIP Compliance Manager (×3)|Governance|BES Cyber System compliance; CIP deviation and mitigation management; NERC-CIP evidence library; regulatory exam coordination; reliability-security interface|
 |Senior Governance Analyst - Technical Domains (×4)|Governance|Domain SME coverage across network security, IAM, cloud, and cryptography; implementation guidance production; standard development; Engineering QA reviews|
-|CMMC / Federal Compliance Manager (×3)|Governance|[CMMC](https://dodcio.defense.gov/CMMC/) SSP and POA&M management; 800-171 control tracking; C3PAO coordination; federal contract compliance calendar|
-|Governance / Compliance Analyst - Commercial Frameworks (×3)|Governance|and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC compliance; external audit coordination; evidence collection and library management; compliance calendar|
+|CMMC / Federal Compliance Manager (×3)|Governance|CMMC SSP and POA&M management; 800-171 control tracking; C3PAO coordination; federal contract compliance calendar|
+|Governance / Compliance Analyst - Commercial Frameworks (×3)|Governance|and SOX ITGC compliance; external audit coordination; evidence collection and library management; compliance calendar|
 |Policy & Standards Manager (×3)|Governance|Policy and procedure documentation; version control and review cycles; cross-pillar QA reviews; training content support for Security Awareness|
 
 This distributes the 60-person team across approximately 14 Engineering staff, 15 Risk staff, and 13 Governance staff, with the CISO and pillar managers rounding out the team. The specific allocation will shift based on organizational priorities: a cloud migration program will weight Engineering more heavily; a regulatory audit cycle will weight Governance.
@@ -562,7 +562,7 @@ The first priority is standing up the CERG structure and establishing the baseli
 
 - **Engineering:** Document the active project portfolio. Identify any in-flight projects that should receive a retroactive engineering review. Establish the lightweight intake process.
 - **Risk:** Stand up or audit the exposure management program. Ensure IT and OT environments are covered with appropriate scanning approaches. Inventory threat intelligence feeds.
-- **Governance:** Conduct a policy gap assessment against [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) and applicable regulatory frameworks. Identify the three to five most critical missing or out-of-date policies. Build or inherit the risk register.
+- **Governance:** Conduct a policy gap assessment against NIST 800-53 and applicable regulatory frameworks. Identify the three to five most critical missing or out-of-date policies. Build or inherit the risk register.
 
 ### 11.2 Phase 2: Operate (Months 4–9)
 
@@ -571,7 +571,7 @@ With the structure in place, the focus shifts to operating CERG as a team and bu
 - Establish a regular CERG operating cadence, weekly pillar syncs, monthly cross-pillar review, quarterly CISO briefing
 - Engineering begins processing the project intake queue and building the first round of handoff documentation
 - Risk begins producing regular vulnerability reports with prioritized findings and tracking remediation to SLA
-- Governance completes the first compliance self-assessment against NERC-CIP and [CMMC](https://dodcio.defense.gov/CMMC/); begins building the evidence library
+- Governance completes the first compliance self-assessment against NERC-CIP and CMMC; begins building the evidence library
 - All pillars begin practicing the "yes, and..." model on real business requests
 
 ### 11.3 Phase 3: Mature (Months 10–18)
@@ -581,7 +581,7 @@ The CERG model begins demonstrating Repeatable behavior. The path to Adaptive re
 - Risk begins producing structured threat intelligence reports distributed to Engineering, IR, and leadership
 - Governance launches a formal QA cycle, quarterly reviews of Engineering and Risk work products against defined standards
 - Engineering demonstrates consistent early engagement on projects, present at business requirements stage, not called in at go-live
-- First external validation: coordinate a NERC-CIP compliance audit or [CMMC](https://dodcio.defense.gov/CMMC/) readiness assessment to measure progress and identify gaps
+- First external validation: coordinate a NERC-CIP compliance audit or CMMC readiness assessment to measure progress and identify gaps
 - Begin building the metrics program, vulnerability SLA adherence, time-to-engage on new projects, evidence collection completeness, policy currency
 
 ### 11.4 Adaptive Indicators
