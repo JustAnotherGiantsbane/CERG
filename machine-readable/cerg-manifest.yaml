@@ -4,6 +4,26 @@
 # Regenerate on any change to source documents
 # See METADATA.yaml for full governance information
 
+- document_id: CERG-GOV-ANTI-001
+  title: CERG Anti Pattern Catalog
+  document_type: governance_instrument
+  domain: ANTI
+  version: 1.0
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
+  source_path: governance/CERG-GOV-ANTI-001_CERG_Anti_Pattern_Catalog.md
+  source_file: CERG-GOV-ANTI-001_CERG_Anti_Pattern_Catalog.md
+  source_hash: 6d0303c6f1ffb3baad0faa6ce11466c383c20a6893b8e56dca12cbed29c70e1d
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-ANTI-001_CERG_Anti_Pattern_Catalog.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: CERG Anti Pattern Catalog
 - document_id: CERG-GOV-AUD-001
   title: Evidence Quality Standard
   document_type: governance_instrument
@@ -68,7 +88,7 @@
   title: Document Catalog and Naming Convention
   document_type: governance_instrument
   domain: CAT
-  version: 1.45
+  version: 1.46
   status: Approved
   classification: Public
   publication_profile: public
@@ -77,7 +97,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  source_hash: fbb3f2f7c1aeb6aa800d6a980d2ac191639a63fb96ed27c11019c4db0201adfe
+  source_hash: 489b1ac5b8061eac55b5de3798c19b88f62d9d929cf30887a43a756ca788b858
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   llm_include: true
   llm_priority: high
@@ -348,7 +368,7 @@
   title: Adoption Safety Guide
   document_type: governance_instrument
   domain: IMP
-  version: 1.3
+  version: 1.4
   status: Approved
   classification: Public
   publication_profile: public
@@ -357,7 +377,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md
   source_file: CERG-GOV-IMP-002_Adoption_Safety_Guide.md
-  source_hash: 720859dba79682a281036fe75898ea2a28efddaaf39618d81e70b65ef04c3f76
+  source_hash: 323b217830636ef1f45d3345e4da515df6cd1e0ce5b631c9385beba4e061c364
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md
   llm_include: true
   llm_priority: medium
