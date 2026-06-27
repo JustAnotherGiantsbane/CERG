@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-002 |
-| **Version** | 1.2 |
+| **Version** | 1.3 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -186,6 +186,24 @@ These are the ways CERG adoption fails. If you recognize your organization in an
 **Why it fails:** A risk register that is not reviewed is a tombstone, not a management tool. Risks age. Treatments stall. Acceptances expire. The register becomes a historical record instead of an operational instrument.
 
 **Fix:** Schedule the first risk register review before creating the register. The review cadence is non-negotiable. If the review is missed, create a Finding Record (per FLOW-001 F-07 mandatory rules).
+
+### Anti-Pattern 11: Buying Tools Instead of Building Capability
+
+**What it looks like:** The organization buys a SIEM, scanner, GRC platform, CSPM, or ticketing workflow and declares the capability implemented.
+
+**Why it fails:** A tool can support a capability, but it is not the capability. Detection requires tuned analytics, triage ownership, response paths, and validation. Exposure management requires asset coverage, prioritization, owner follow-up, SLA tracking, and risk treatment. Governance requires decision rights, evidence quality, review cadence, and accountable owners. Without the operating model around the tool, the purchase becomes another source of alerts, dashboards, and status meetings.
+
+**Fix:** For every tool adopted, name the capability it supports, the procedure it feeds, the owner who acts on its output, and the evidence that proves the capability operates.
+
+| Tool or Platform | Capability It May Support | Evidence the Capability Exists |
+|---|---|---|
+| Vulnerability scanner | Exposure management | Coverage report, triaged finding records, SLA dashboard, validated closure evidence |
+| SIEM / detection platform | Detection and monitoring | Source inventory, detection coverage record, alert triage metrics, purple-team validation results |
+| GRC platform | Governance and evidence management | Approved risk decisions, exception records, evidence index, retrieval test results |
+| CSPM / SSPM | Cloud and SaaS posture management | Posture findings, assigned owners, remediation records, exception or acceptance decisions |
+| Ticketing workflow | Work tracking | Linked owners, due dates, closure evidence, escalation history |
+
+A capability exists only when the organization can perform the work, produce evidence, and improve from what it learns. If the tool is present but those outputs are absent, the capability is still Ad Hoc.
 
 ---
 
@@ -444,7 +462,7 @@ Changing these breaks the operating model. If you must change them, document the
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-002 |
-| **Version** | 1.2 |
+| **Version** | 1.3 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -461,6 +479,7 @@ Changing these breaks the operating model. If you must change them, document the
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.3 | 2026-06-24 | Governance Pillar Leader | Added tool-versus-capability adoption anti-pattern and evidence test for capability claims. |
 | 1.2 | 2026-06-24 | Governance Pillar Leader | Removed older example-specific language for utility branding, fixed hard-coded role and headcount examples, and updated adversarial-validation terminology. |
 | 1.1 | 2026-06-18 | Governance Pillar Leader | Added explicit small-team separation rule for business-risk consequence acceptance when security roles are consolidated. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Adoption pre-requisites, anti-patterns, decision log template, risk acceptance guardrails, regulatory honesty guidance, role collision guide, and safe/dangerous tailoring boundaries. |
