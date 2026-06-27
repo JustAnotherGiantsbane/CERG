@@ -77,24 +77,24 @@ A Job Family is a grouping of similar roles that share a core competency profile
 ```
                     ┌──────────────────────────────────────┐
                     │         JF-EXEC (CISO)               │
-                    │  Entry: Executive | Terminal: Exec    │
+                    │  Entry: Executive | Terminal: Exec   │
                     └──────────────────────────────────────┘
                                       ▲
           ┌───────────────────────────┼───────────────────────────┐
           │                           │                           │
-┌─────────┴─────────┐     ┌──────────┴──────────┐     ┌──────────┴──────────┐
+┌─────────┴─────────┐     ┌───────────┴──────────┐     ┌──────────┴──────────┐
 │  JF-SECENG        │     │   JF-RISKOPS         │     │   JF-GOVCOMP        │
-│  Security Eng.    │◄───►│   Risk Operations    │◄───►│   Governance &       │
+│  Security Eng.    │◄───►│   Risk Operations    │◄───►│   Governance &      │
 │  S1→S4            │     │   S1→S4/M3           │     │   Compliance        │
-│                    │     │                      │     │   S1→S4/M3          │
-└─────────┬─────────┘     └──────────┬───────────┘     └──────────┬──────────┘
+│                   │     │                      │     │   S1→S4/M3          │
+└─────────┬─────────┘     └───────────┬──────────┘     └──────────┬──────────┘
           │                           │                           │
           └───────────────────────────┼───────────────────────────┘
                                       │
                           ┌───────────┴───────────┐
-                          │   JF-ADJUNCT           │
-                          │   Incident Response    │
-                          │   S2→S4/M4             │
+                          │   JF-ADJUNCT          │
+                          │   Incident Response   │
+                          │   S2→S4/M4            │
                           └───────────────────────┘
 ```
 
