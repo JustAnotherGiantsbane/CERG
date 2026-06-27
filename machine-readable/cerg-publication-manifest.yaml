@@ -1,6 +1,17 @@
 # CERG Publication Eligibility Manifest
-# Generated from document metadata | 128 artifacts
+# Generated from document metadata | 129 artifacts
 # Separates lifecycle approval from public-release eligibility
+
+- document_id: CERG-GOV-ANTI-001
+  source_path: governance/CERG-GOV-ANTI-001_CERG_Anti_Pattern_Catalog.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-06-27
 
 - document_id: CERG-GOV-AUD-001
   source_path: governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md
