@@ -8,7 +8,7 @@
 | **Document ID** | CERG-PRC-VM-001 |
 | **Version** | 1.0 (AnyTech Adaptation) |
 | **Status** | Approved |
-| **Classification** | Internal |
+| **Classification** | Public |
 | **Owner** | Risk Pillar Leader (AnyTech CERG) |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy_AnyTech.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / On major provider change |
@@ -573,7 +573,7 @@ Immediate escalation to IT Director:
 | **Document ID** | CERG-PRC-VM-001 |
 | **Version** | 1.0 (AnyTech Adaptation) |
 | **Status** | Approved |
-| **Classification** | Internal |
+| **Classification** | Public |
 | **Owner** | Risk Pillar Leader (AnyTech CERG) |
 | **Approved By** | IT Director (AnyTech) |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy_AnyTech.md) - Cybersecurity Policy |
@@ -611,7 +611,7 @@ The Risk Pillar Leader owns this document. Changes require IT Director approval.
 | Audit and Evidence Management Procedure | [CERG-PRC-AUD-001](../../procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) | Evidence collection procedure; applies to provider evidence |
 | Metrics Dashboard and Reporting | [CERG-GOV-MTR-001](CERG-GOV-OM-001_Operating_Model_AnyTech.md) | EM and PH metrics definitions |
 | Document Catalog and Naming Convention | [CERG-GOV-CAT-001](CERG-GOV-CAT-001_Document_Catalog_AnyTech.md) | Authoritative inventory of every CERG artifact |
-| Unified Control Baseline | [CERG-GOV-CB-001](.. (deferred - see CAT-001)) | Control spine for mapping provider-delivered controls |
+| Unified Control Baseline | CERG-GOV-CB-001) | Control spine for mapping provider-delivered controls |
 
 ---
 

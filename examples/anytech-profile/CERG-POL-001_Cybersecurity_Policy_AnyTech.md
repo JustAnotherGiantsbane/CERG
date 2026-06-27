@@ -11,7 +11,7 @@
 | **Document ID** | CERG-POL-001 |
 | **Version** | 1.0 (AnyTech Adaptation) |
 | **Status** | Approved |
-| **Classification** | Internal |
+| **Classification** | Public |
 | **Owner** | Governance Pillar Leader (AnyTech CERG) |
 | **Parent Policy** | Not applicable; this is the parent policy |
 | **Review Cycle** | Annual / On significant provider change |

@@ -7,9 +7,9 @@
 | **Document ID** | CERG-PRC-RM-001 |
 | **Version** | 1.0 (AnyTech Adaptation) |
 | **Status** | Approved |
-| **Classification** | Internal |
+| **Classification** | Public |
 | **Owner** | Risk Pillar Leader (AnyTech CERG) |
-| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy_AnyTech.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / On significant change |
 | **Frameworks** | NIST CSF 2.0 (GOVERN); NIST 800-53r5; NIST RMF |
 | **Regulations** | None currently in scope |
@@ -35,7 +35,7 @@
 
 ## 1. Purpose and Scope
 
-This procedure operationalizes Risk Management Framework Principle 6 of [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md). It defines how AnyTech identifies, documents, scores, treats, reviews, and reports cybersecurity risks, and how exceptions to established controls are requested, approved, tracked, and reviewed.
+This procedure operationalizes Risk Management Framework Principle 6 of [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy_AnyTech.md). It defines how AnyTech identifies, documents, scores, treats, reviews, and reports cybersecurity risks, and how exceptions to established controls are requested, approved, tracked, and reviewed.
 
 The risk register is the single, authoritative record of cybersecurity risk at AnyTech. The exception process is the single, authoritative record of intentional deviations from established controls.
 
@@ -43,7 +43,7 @@ The risk register is the single, authoritative record of cybersecurity risk at A
 
 This procedure applies to:
 - All cybersecurity risks affecting AnyTech assets, data, or operations — regardless of whether the asset is managed by CERG directly or by a provider
-- All deviations from controls established in [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) and its subordinate documents
+- All deviations from controls established in [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy_AnyTech.md) and its subordinate documents
 - All risk-related decisions requiring documentation: acceptance, transfer, avoidance, and reduction
 - All CERG team members, anyTech personnel, and providers operating within AnyTech scope
 
@@ -290,7 +290,7 @@ Providers themselves may be entries in AnyTech's risk register. For example:
 
 | Document | ID | Relationship |
 |----------|-----|-------------|
-| Cybersecurity Policy | [POL-001](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| Cybersecurity Policy | [POL-001](CERG-POL-001_Cybersecurity_Policy_AnyTech.md) | Parent policy |
 | Risk Management Framework | [RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework_AnyTech.md) | Risk scoring and acceptance model |
 | Third-Party Risk Procedure | [PRC-TPRM-001](CERG-PRC-TPRM-001_Third_Party_Risk_Procedure_AnyTech.md) | Provider risk inputs |
 | Exposure Management Procedure | [PRC-VM-001](CERG-PRC-VM-001_Exposure_Management_Procedure_AnyTech.md) | Vulnerability-to-risk linkage |

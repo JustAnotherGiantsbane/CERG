@@ -8,7 +8,7 @@
 | **Document ID** | CERG-PRC-TPRM-001 |
 | **Version** | 1.0 (AnyTech Adaptation) |
 | **Status** | Approved |
-| **Classification** | Internal |
+| **Classification** | Public |
 | **Owner** | Governance Pillar Leader (AnyTech CERG) |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy_AnyTech.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / On new critical vendor onboarding |
@@ -476,7 +476,7 @@ The IT Director is the final risk acceptance authority for all severities above 
 | **Document ID** | CERG-PRC-TPRM-001 |
 | **Version** | 1.0 (AnyTech Adaptation) |
 | **Status** | Approved |
-| **Classification** | Internal |
+| **Classification** | Public |
 | **Owner** | Governance Pillar Leader (AnyTech CERG) |
 | **Approved By** | IT Director (AnyTech) |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy_AnyTech.md) - Cybersecurity Policy |
@@ -515,7 +515,7 @@ The Governance Pillar Leader owns this document. Changes require IT Director app
 | Exposure Management Procedure | [CERG-PRC-VM-001](../../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) | Vulnerability management; data sourced from MSSP/MSP |
 | Threat Intelligence Procedure | [CERG-PRC-TI-001](../../procedures/CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) | Intel consumption process; feed sourced from MSSP |
 | Document Catalog and Naming Convention | [CERG-GOV-CAT-001](CERG-GOV-CAT-001_Document_Catalog_AnyTech.md) | Authoritative inventory of every CERG artifact |
-| Unified Control Baseline | [CERG-GOV-CB-001](.. (deferred - see CAT-001)) | Control spine for mapping provider-delivered controls |
+| Unified Control Baseline | CERG-GOV-CB-001) | Control spine for mapping provider-delivered controls |
 
 ---
 

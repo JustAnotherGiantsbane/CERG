@@ -10,9 +10,9 @@
 | **Document ID** | CERG-GOV-RMF-001 |
 | **Version** | 1.0 (AnyTech Adaptation) |
 | **Status** | Approved |
-| **Classification** | Internal |
+| **Classification** | Public |
 | **Owner** | Risk Pillar Leader (AnyTech CERG) |
-| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) — Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy_AnyTech.md) — Cybersecurity Policy |
 | **Review Cycle** | Annual / On material change |
 | **Frameworks** | NIST CSF 2.0; NIST SP 800-37 (RMF) |
 | **Regulations** | None currently in scope |
@@ -467,12 +467,12 @@ The quarterly provider risk posture review (per §7.1) examines:
 | **Version** | 1.0 (AnyTech Adaptation) |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-21 |
-| **Classification** | Internal |
+| **Classification** | Public |
 | **Document Owner** | Risk Pillar Leader (AnyTech CERG) |
 | **Approved By** | IT Director (AnyTech) |
 | **Review Cycle** | Annual; triggered by significant provider change, material incident, or IT Director request |
 | **Next Scheduled Review** | 2027-06-21 |
-| **Parent Document** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) — Cybersecurity Policy |
+| **Parent Document** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy_AnyTech.md) — Cybersecurity Policy |
 
 ### 9.1 Revision History
 
@@ -495,7 +495,7 @@ This document shall be reviewed outside the standard annual cycle when any of th
 
 | Document ID | Title | Relationship |
 |---|---|---|
-| [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) | Cybersecurity Policy | Parent policy; establishes the CERG program |
+| [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy_AnyTech.md) | Cybersecurity Policy | Parent policy; establishes the CERG program |
 | [CERG-GOV-OM-001](CERG-GOV-OM-001_Operating_Model_AnyTech.md) | Operating Model | Defines pillar roles and provider interaction model |
 | [CERG-GOV-FRM-001](CERG-GOV-FRM-001_CERG_Framework_AnyTech.md) | CERG Framework | Top-level framework reference |
 | [CERG-PRC-RM-001](CERG-PRC-RM-001_Risk_Register_and_Exception_Process_AnyTech.md) | Risk Register and Exception Process | Operational procedure for risk register management |

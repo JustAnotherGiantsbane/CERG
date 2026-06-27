@@ -5,9 +5,9 @@
 | **Document ID** | CERG-GOV-IMP-001 |
 | **Version** | 1.0 (AnyTech Adaptation) |
 | **Status** | Approved |
-| **Classification** | Internal |
+| **Classification** | Public |
 | **Owner** | Governance Pillar Leader (AnyTech CERG) |
-| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy_AnyTech.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / On profile token change |
 | **Frameworks** | NIST CSF 2.0 |
 | **Regulations** | None currently in scope |
@@ -31,7 +31,7 @@
 
 ## 1. Purpose and Scope
 
-This guide describes how AnyTech implements the adapted CERG framework. It is a companion to the [AnyTech CERG Lite adoption pack](../adoption-packs/anytech-lite/README.md) and the [Organization Adaptation Profile](../../cerg-org-profile-anytech.yml).
+This guide describes how AnyTech implements the adapted CERG framework. It is a companion to the [AnyTech CERG Lite adoption pack](../../adoption-packs/anytech-lite/README.md) and the [Organization Adaptation Profile](../../cerg-org-profile-anytech.yml).
 
 ### 1.1 What This Guide Covers
 
@@ -236,6 +236,6 @@ These decisions must be made within the first week of adoption. Document each in
 | Document | ID | Relationship |
 |----------|-----|-------------|
 | Organization Adaptation Profile | CERG-GOV-VAR-001 | Token scheme reference |
-| AnyTech CERG Lite adoption pack | ../adoption-packs/anytech-lite/README.md | Companion guide |
+| AnyTech CERG Lite adoption pack | ../../adoption-packs/anytech-lite/README.md | Companion guide |
 | Document Catalog | [CAT-001](CERG-GOV-CAT-001_Document_Catalog_AnyTech.md) | Full document inventory |
 | Operating Model | [OM-001](CERG-GOV-OM-001_Operating_Model_AnyTech.md) | Operating description |

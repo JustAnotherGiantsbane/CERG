@@ -8,7 +8,7 @@
 | **Document ID** | CERG-GOV-OM-001 |
 | **Version** | 1.0 (AnyTech Adaptation) |
 | **Status** | Approved |
-| **Classification** | Internal |
+| **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (AnyTech CERG) |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy_AnyTech.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / On provider change |
@@ -148,7 +148,7 @@ At AnyTech, Governance does not deliver training, conduct audits of employees, o
 - **SLA tracking.** Track provider SLAs defined in contracts and the Provider SLA Framework (§10). Flag misses. Report SLA performance to IT Director monthly.
 - **Provider performance management.** Lead quarterly provider business reviews. Maintain provider scorecards. Escalate chronic underperformance per contract terms.
 - **Compliance oversight.** Map provider-delivered controls to the AnyTech control baseline. Identify coverage gaps. Manage corrective action plans.
-- **Document control.** Maintain version control, review cycles, metadata consistency per [CERG-GOV-STY-001](.. style follows upstream CERG STY-001). Own the Document Catalog.
+- **Document control.** Maintain version control, review cycles, metadata consistency per CERG-GOV-STY-001. Own the Document Catalog.
 - **Audit and assessor liaison.** Serve as primary point of contact for external auditors and assessors. Coordinate evidence production across CERG pillars and providers.
 
 **Engagement default.** Program oversight and advisory. Governance is engaged when SLA performance, evidence production, compliance posture, or provider contract terms are in play.
@@ -684,7 +684,7 @@ The improvement register is reviewed quarterly. Items that age beyond planned da
 | **Document ID** | CERG-GOV-OM-001 |
 | **Version** | 1.0 (AnyTech Adaptation) |
 | **Status** | Approved |
-| **Classification** | Internal |
+| **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (AnyTech CERG) |
 | **Approved By** | IT Director (AnyTech) |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy_AnyTech.md) - Cybersecurity Policy |
@@ -720,11 +720,11 @@ The Engineering Pillar Leader owns this document. Governance maintains it on beh
 | Risk Register and Exception Process | [CERG-PRC-RM-001](../../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Risk register operating procedure; applies to AnyTech with provider-sourced data |
 | Third-Party and Supply Chain Risk Procedure | [CERG-PRC-TPRM-001](../../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Provider risk assessment methodology; directly applied to MSSP, MSP, training vendor |
 | Architecture Review and Project Intake Procedure | [CERG-PRC-AR-001](../../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) | Pre-production engagement; adapted for provider-proposed changes |
-| Document Authoring and Style Guide | [CERG-GOV-STY-001](.. style follows upstream CERG STY-001) | Document formatting and metadata conventions |
+| Document Authoring and Style Guide | CERG-GOV-STY-001 | Document formatting and metadata conventions |
 | Document Catalog and Naming Convention | [CERG-GOV-CAT-001](CERG-GOV-CAT-001_Document_Catalog_AnyTech.md) | Authoritative inventory of every CERG artifact |
-| Metrics, Dashboard, and CISO/Board Reporting | [CERG-GOV-MTR-001](.. monitoring section below) | KRIs, KPIs, CISO dashboard; adapted for IT Director reporting |
+| Metrics, Dashboard, and CISO/Board Reporting | CERG-GOV-MTR-001 | KRIs, KPIs, CISO dashboard; adapted for IT Director reporting |
 | Risk Management Framework | [CERG-GOV-RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework_AnyTech.md) | Risk lifecycle, scoring methodology |
-| Unified Control Baseline | [CERG-GOV-CB-001](.. (deferred - see CAT-001)) | Control spine for mapping provider-delivered controls |
+| Unified Control Baseline | CERG-GOV-CB-001) | Control spine for mapping provider-delivered controls |
 | Adversarial Validation Procedure | [CERG-PRC-AV-001](../../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) | Penetration testing; delivered by MSSP under CERG oversight |
 | Security Change Management Procedure | [CERG-PRC-CHG-001](../../procedures/CERG-PRC-CHG-001_Security_Change_Management_Procedure.md) | Change review procedure for provider-proposed changes |
 | Audit and Evidence Management Procedure | [CERG-PRC-AUD-001](../../procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) | Evidence collection procedure; applies to provider evidence |

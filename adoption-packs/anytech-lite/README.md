@@ -28,10 +28,12 @@ Use this pack if your team looks like AnyTech:
 - Your team's core competency is **vendor oversight and risk ownership**, not
   hands-on security operations
 
-## What's Included (10 Adapted Documents)
+## What's Included (10 Adapted Documents + 6 Supplemental Artifacts)
+
+### Adapted CERG Documents
 
 | # | Doc ID | Title | Adapts |
-|---|--------|-------|--------|
+|---|---|---|---|
 | 1 | POL-001 | Cybersecurity Policy | IT Director sign-off, stripped to 6 vendor-relevant principles |
 | 2 | FRM-001 | CERG Framework | Three pillars reframed for vendor-oversight model |
 | 3 | OM-001 | Operating Model | **Full rewrite** — program office, MSSP/MSP as delivery partners |
@@ -42,6 +44,17 @@ Use this pack if your team looks like AnyTech:
 | 8 | PRC-TPRM-001 | Third-Party Risk | **Heavily stripped** — MSSP+MSP core only |
 | 9 | PRC-VM-001 | Exposure Management | Oversight model — cyber team tracks, MSP patches |
 | 10 | IMP-001 | Implementation Guide | References AnyTech profile |
+
+### Supplemental AnyTech Artifacts (New)
+
+| # | Artifact ID | Title | What It Covers |
+|---|---|---|---|
+| 11 | ANYTECH-MSSP-001 | MSSP Engagement Playbook | Validation framework, evidence sampling schedule, SLA breach escalation, joint exercise calendar, alert quality review procedure |
+| 12 | ANYTECH-RACI-001 | Provider RACI Extension | Full capability-to-provider RACI matrix across 7 domains, validation rights, RACI change management |
+| 13 | ANYTECH-REVIEW-001 | Quarterly Provider Review Kit | Structured agenda, provider scorecards, decision templates, annual deep-dive rotations |
+| 14 | ANYTECH-IR-001 | Incident Business Ownership Procedure | CERG/MSSP boundary, business impact assessment, regulatory notification, remediation tracking, lessons learned |
+| 15 | ANYTECH-TRANS-001 | Vendor Transition Playbook | MSSP/MSP phased transition, parallel run procedures, knowledge transfer, rollback criteria |
+| 16 | ANYTECH-ANTI-001 | Provider Anti-Patterns | 15 vendor-oversight-specific failure modes across oversight, RACI, relationship, and transition domains |
 
 ## What We Cut (50+ Docs, All Deferred)
 

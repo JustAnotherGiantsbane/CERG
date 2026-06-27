@@ -5,9 +5,9 @@
 | **Document ID** | CERG-TMPL-RM-001 |
 | **Version** | 1.0 (AnyTech Adaptation) |
 | **Status** | Approved |
-| **Classification** | Internal |
+| **Classification** | Public |
 | **Owner** | Risk Pillar Leader (AnyTech CERG) |
-| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy_AnyTech.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / On risk register format change |
 | **Frameworks** | NIST CSF 2.0 |
 | **Regulations** | None currently in scope |

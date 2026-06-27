@@ -5,9 +5,9 @@
 | **Document ID** | CERG-GOV-CAT-001 |
 | **Version** | 1.0 (AnyTech Adaptation) |
 | **Status** | Approved |
-| **Classification** | Internal |
+| **Classification** | Public |
 | **Owner** | Governance Pillar Leader (AnyTech CERG) |
-| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy_AnyTech.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual / On document status change |
 | **Frameworks** | NIST CSF 2.0 |
 | **Regulations** | None currently in scope |
@@ -173,6 +173,6 @@ These documents describe practices that require more administrative overhead tha
 
 | Document | ID | Relationship |
 |----------|-----|-------------|
-| Cybersecurity Policy | [POL-001](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| Cybersecurity Policy | [POL-001](CERG-POL-001_Cybersecurity_Policy_AnyTech.md) | Parent policy |
 | Operating Model | [OM-001](CERG-GOV-OM-001_Operating_Model_AnyTech.md) | Defines operating context |
 | Small Team Adoption Path | CERG-GOV-IMP-003 | Reference for consolidation patterns |

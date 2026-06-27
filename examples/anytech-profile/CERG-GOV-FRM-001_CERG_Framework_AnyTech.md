@@ -7,9 +7,9 @@
 | **Document ID** | CERG-GOV-FRM-001 |
 | **Version** | 1.0 (AnyTech Adaptation) |
 | **Status** | Approved |
-| **Classification** | Internal |
+| **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (AnyTech CERG) |
-| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
+| **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy_AnyTech.md) - Cybersecurity Policy |
 | **Review Cycle** | Annual; and on material change to the framework |
 | **Frameworks** | NIST CSF 2.0 |
 | **Regulations** | None currently in scope |
@@ -208,7 +208,7 @@ AnyTech's target is **Tier 3 (Repeatable) in the first two quarters, Tier 4 (Ada
 
 | Document | ID | Relationship |
 |----------|-----|-------------|
-| Cybersecurity Policy | [POL-001](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
+| Cybersecurity Policy | [POL-001](CERG-POL-001_Cybersecurity_Policy_AnyTech.md) | Parent policy |
 | Operating Model | [OM-001](CERG-GOV-OM-001_Operating_Model_AnyTech.md) | Operating description |
 | Risk Management Framework | [RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework_AnyTech.md) | Risk scoring and acceptance |
 | Document Catalog | [CAT-001](CERG-GOV-CAT-001_Document_Catalog_AnyTech.md) | Full document inventory |
