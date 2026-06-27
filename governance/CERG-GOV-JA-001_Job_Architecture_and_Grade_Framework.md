@@ -60,7 +60,7 @@ It applies to every canonical CERG role defined in [`CERG-GOV-OM-001`](CERG-GOV-
 
 4. **Span of control is explicit.** Management grades define the scope a manager is expected to lead. A Manager running a 15-person team without the title or compensation to match is a retention risk. This framework makes that mismatch visible.
 
-5. **Scales down without breaking.** A 5-person CERG team has no Principal Managers and probably no Managers at all. The grade definitions still hold: the CISO knows that the person running all of Risk is performing at a Director-level scope and should be treated accordingly, even if the organization uses a flat title.
+5. **Scales down without breaking.** A small CERG team has no Principal Managers and probably no Managers at all. The grade definitions still hold: the CISO knows that the person running all of Risk is performing at a Director-level scope and should be treated accordingly, even if the organization uses a flat title.
 
 ---
 
@@ -302,7 +302,7 @@ Roles are not locked into a single grade. A "Threat Intelligence Analyst" can be
 
 **Terminal grade means ceiling.** A Detection Engineer at S4 who wants to grow further has two paths: transition to a broader Advisor role that spans multiple Risk domains, or move to the Management track by leading a detection engineering team.
 
-**Dual-track roles flex with the organization.** Several Governance roles show both SME and Management tracks. In a 5-person CERG, the NERC-CIP Compliance Manager is an individual contributor. In a 60-person CERG, that same role may lead a team of three compliance analysts. The role title is the same; the grade and track reflect the scope.
+**Dual-track roles flex with the organization.** Several Governance roles show both SME and Management tracks. In a small CERG, a compliance manager may be an individual contributor. In a full-scale CERG, that same role may lead a team of analysts. The role title is the same; the grade and track reflect the scope.
 
 ---
 
@@ -354,7 +354,7 @@ Movement between CERG and the adjacent teams (Security Awareness, Incident Respo
 | Manager (M1) | 3 | 5-7 | 8 | Below 3, the role may not justify full-time management. Above 8, 1:1 frequency and quality degrade. |
 | Senior Manager (M2) | 8 (total) | 12-16 (total) | 20 | Counts all reports, direct and indirect. A Senior Manager with 3 Managers each carrying 5 ICs is at 18 and well within range. |
 | Principal Manager (M3) | 15 (total) | 25-35 (total) | 40 | At this scale, the Principal Manager's direct reports should be primarily M2s and senior ICs. |
-| Director (M4) | Pillar-dependent | Pillar-dependent | Pillar-dependent | Director span is measured in organizational scope, not headcount. A 60-person Engineering pillar and a 13-person Governance pillar both require a Director. |
+| Director (M4) | Pillar-dependent | Pillar-dependent | Pillar-dependent | Director span is measured in organizational scope, not headcount. A large Engineering pillar and a smaller Governance pillar may both require a Director when each carries pillar-level accountability. |
 
 ### 9.2 When to Create a Management Role
 

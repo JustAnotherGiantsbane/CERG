@@ -108,7 +108,7 @@ The commitment values in §3.1–§3.4 are mature-program targets. New adopters 
 
 ### 3.6 What a missed commitment looks like in practice
 
-The SLA commitments above are not abstractions. They show up in real meetings. The worked example below is a fictional but realistic Tuesday morning scenario at a 60-person SaaS company in the second quarter of CERG Standard adoption. It illustrates what the §4 escalation path actually produces.
+The SLA commitments above are not abstractions. They show up in real meetings. The worked example below is a fictional but realistic Tuesday morning scenario at a growing SaaS company in the second quarter of CERG Standard adoption. It illustrates what the §4 escalation path actually produces.
 
 A product team submits a T1 architecture review intake for a new customer-facing analytics feature on a Tuesday at 9 a.m. The intake is logged in the Project Intake Record, tiered T1 because the workload is internet-facing and handles customer data, and routed to Engineering. Per §3.5 Gate 2, the SR-001 commitment is a 10-business-day architecture review turnaround.
 

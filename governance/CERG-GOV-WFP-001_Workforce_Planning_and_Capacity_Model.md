@@ -38,7 +38,7 @@
 
 A CISO walks into a budget meeting and says "I need three more Cloud Security Engineers." The CFO asks "why three, and why Cloud Security Engineers specifically?" The CISO who cannot answer that question with a methodology will get zero, or one, or a contractor for six months with no renewal path. The CISO who produces a capacity model built on workload drivers, not headcount comparisons, will get a conversation about which assumptions the CFO disagrees with. A conversation about assumptions is a negotiation. A conversation without assumptions is a request.
 
-This document provides the methodology. It defines the workload drivers for each pillar, translates them into staffing formulas, and provides the scaling guidance that supports a headcount request from a 5-person startup CERG to a 60-person enterprise function. It is designed to be a live tool: organizations plug in their numbers and get a recommended staffing range with documented rationale.
+This document provides the methodology. It defines the workload drivers for each pillar, translates them into staffing formulas, and provides the scaling guidance that supports a headcount request from a small startup CERG to a full-scale enterprise function. It is designed to be a live tool: organizations plug in their numbers and get a recommended staffing range with documented rationale.
 
 It applies to every CERG role. It does not prescribe exact headcount; it prescribes the method for arriving at a defensible headcount. The output is a range, not a single number, because judgment about organizational context, team composition, and automation maturity always matters.
 
@@ -124,10 +124,10 @@ The ceiling brackets ⌈...⌉ indicate rounding up to the nearest whole person.
 
 ### 4.2 The Role Consolidation Rule
 
-The scaling map in CERG-GOV-RAC-001 §8 shows how 27 canonical roles consolidate onto as few as 5 people. This model respects that consolidation. When the formula produces less than 1.0 FTE for a role, the role is consolidated onto an adjacent role rather than fractionalized:
+The scaling map in CERG-GOV-RAC-001 §8 shows how canonical roles consolidate onto a small team. This model respects that consolidation. When the formula produces less than 1.0 FTE for a role, the role is consolidated onto an adjacent role rather than fractionalized:
 
 - If the model says 0.4 Detection Engineers and 0.6 Threat Intelligence Analysts, both roles consolidate onto one person who splits their time, or the Detection Engineering work is absorbed by the Exposure Management Lead
-- Pillar Leader roles consolidate downward: in a 5-person CERG, the CISO directly manages all pillars, and the senior-most practitioner in each pillar operates as a player-coach at S3-S4
+- Pillar Leader roles consolidate downward: in a small CERG, the CISO may directly manage all pillars, and the senior-most practitioner in each pillar may operate as a player-coach at S3-S4
 
 The model reports both the unconsolidated headcount (what the formula says) and the consolidated headcount (how roles combine for organizations below a certain scale).
 
@@ -407,7 +407,7 @@ The table below applies the capacity model to four illustrative organization pro
 | **Management Overhead** | 0 | 0.5 | 3 | 5 |
 | **Consolidated Total** | **5** | **15** | **30** | **49** |
 
-*In a 5-person organization, these roles are consolidated per the RACI scaling map (RAC-001 §8). The CISO manages all pillars directly. The senior-most practitioner in each pillar operates at S3-S4 level with expanded scope covering adjacent roles.
+*In a small organization, these roles are consolidated per the RACI scaling map (RAC-001 §8). The CISO may manage all pillars directly. The senior-most practitioner in each pillar operates at S3-S4 level with expanded scope covering adjacent roles.
 
 ### 8.2 When to Split a Role
 
@@ -494,7 +494,7 @@ A team of predominantly S3-S4 practitioners handles more throughput per person t
 | CERG Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Pillar structure and canonical role roster |
 | RACI Instrument | [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Role consolidation scaling map |
 | Job Architecture | [`CERG-GOV-JA-001`](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) | Grade-level experience adjustments |
-| CERG Framework | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | Illustrative 60-person staffing model |
+| CERG Framework | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | Illustrative full-scale staffing model |
 | Maturity Assessment | [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) | Automation maturity context |
 | Document Catalog | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact |
 
