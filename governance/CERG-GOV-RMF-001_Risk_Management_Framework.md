@@ -5,7 +5,7 @@
 | **Version** | 1.33 |
 | **Status** | Approved |
 | **Classification** | Public |
-| **Owner** | Cyber Governance (CERG Pillar) |
+| **Owner** | Governance Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - CERG Cybersecurity Policy |
 | **Review Cycle** | Annual; triggered by significant regulatory change or organizational change |
 | **Frameworks** | NIST SP 800-37 (RMF); NIST SP 800-53r5; NIST CSF 2.0 |
@@ -854,7 +854,7 @@ Mapping the ALE bands to the existing 5×5 scoring framework for this example or
 | **Status** | Approved |
 | **Effective Date** | 2026-06-14 |
 | **Classification** | Public |
-| **Document Owner** | Cyber Governance (CERG Pillar) |
+| **Document Owner** | Governance Pillar Leader |
 | **Approved By** | CISO |
 | **Review Cycle** | Annual; triggered by significant regulatory change or organizational change |
 | **Next Scheduled Review** | 2027-05-26 |

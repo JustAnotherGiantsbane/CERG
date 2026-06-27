@@ -652,12 +652,12 @@
   status: Approved
   classification: Public
   publication_profile: public
-  owner_role: 'Cyber Governance (CERG Pillar)'
-  approval_authority: 'Cyber Governance (CERG Pillar)'
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
   parent_artifact: 'CERG-POL-001 — CERG Cybersecurity Policy'
   source_path: governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
   source_file: CERG-GOV-RMF-001_Risk_Management_Framework.md
-  source_hash: 4cfb4089a54f7757992b3f1d9c12fe46c415884ed32ee8445ca3ae2e449dc6e5
+  source_hash: 7ee7ee162fd660fc1794a8e73e1043148f53a74513c6296511f6c55cbe22786f
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
   llm_include: true
   llm_priority: high
@@ -717,7 +717,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-STY-002_Style_Compliance_Tracker.md
   source_file: CERG-GOV-STY-002_Style_Compliance_Tracker.md
-  source_hash: acafc96250ae9f9ea20722354cdb1bf165ca6fe7faa2f3fc4c4483bae8c0341c
+  source_hash: 93bd36e4647c68aa325d55554935232acd5fbcb420de3317cef11ec8bb6cadaa
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-STY-002_Style_Compliance_Tracker.md
   llm_include: true
   llm_priority: medium
@@ -757,7 +757,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-TAX-001_Risk_Taxonomy.md
   source_file: CERG-GOV-TAX-001_Risk_Taxonomy.md
-  source_hash: 4066d4d1b95d26759a7958e1af72f011d3e985976ea3faaf53d1444c574708a1
+  source_hash: 9f7b7782f1e70c94a6e50cc6607bfb019122dfcd7cc8c97662cdba06bc5ca0e1
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-TAX-001_Risk_Taxonomy.md
   llm_include: true
   llm_priority: medium

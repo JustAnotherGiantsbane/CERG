@@ -362,7 +362,7 @@
   public_summary_allowed: true
   full_text_public_allowed: true
   redaction_required: false
-  approved_public_release_by: 'Cyber Governance (CERG Pillar)'
+  approved_public_release_by: Governance Pillar Leader
   release_date: 2026-06-24
 
 - document_id: CERG-GOV-SLC-001
