@@ -11,7 +11,7 @@
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) - Cybersecurity Policy |
-| **Supporting Documents** | [`CERG-GOV-IMP-002`](CERG-GOV-IMP-002_Adoption_Safety_Guide.md) · [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) · [`CERG-GOV-JA-001`](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) · [`CERG-GOV-AUD-001`](CERG-GOV-AUD-001_Evidence_Quality_Standard.md) · [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) · [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) · [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) · [`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md) · [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) |
+| **Supporting Documents** | [`CERG-GOV-IMP-002`](CERG-GOV-IMP-002_Adoption_Safety_Guide.md) · [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) · [`CERG-GOV-JA-001`](CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) · [`CERG-GOV-AUD-001`](CERG-GOV-AUD-001_Evidence_Quality_Standard.md) · [`CERG-GOV-CMX-001`](CERG-GOV-CMX-001_Compliance_Matrix.md) · [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) · [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) · [`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md) · [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) · [`CERG-STD-AI-001`](../standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) · [`CERG-PLN-IR-001`](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md) |
 | **Review Cycle** | Annual / On material adoption feedback |
 | **Frameworks** | NIST CSF 2.0 (GOVERN, IDENTIFY, PROTECT, DETECT, RESPOND, RECOVER) |
 | **Regulations** | Cross-cutting |
@@ -88,7 +88,7 @@ The catalog is intentionally blunt. The goal is not to shame teams. The goal is 
 | ANTI-COMP-003 | Regulation-First Operating Model | Compliance | Teams organize around frameworks instead of reusable capabilities and evidence | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) §12 |
 | ANTI-IR-001 | Restore-and-Declare-Resolved | Incident Response | Systems recovered, root cause unidentified, same incident repeats | [`CERG-PRC-IR-002`](../procedures/CERG-PRC-IR-002_Incident_Response_Playbook_Set.md) |
 | ANTI-IR-002 | Tabletop Read-Through | Incident Response | Exercise is a script read-aloud with no injects, decisions, or communication breakdowns | [`CERG-GOV-CEF-001`](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) |
-| ANTI-IR-003 | Incident Commander by Rotation | Incident Response | IC role rotates through people with no authority to make resource calls | [`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md) |
+| ANTI-IR-003 | Incident Commander by Rotation | Incident Response | IC role rotates through people with no authority to make resource calls | [`CERG-PLN-IR-001`](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md) · [`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md) · [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) |
 | ANTI-VEND-001 | MSSP as Black Box | Vendor | Provider treated as sealed unit; no validation of alert triage or SLA compliance | [`CERG-GOV-AUD-001`](CERG-GOV-AUD-001_Evidence_Quality_Standard.md) |
 | ANTI-VEND-002 | Questionnaire-as-Due-Diligence | Vendor | 300-question assessment replaces understanding the provider's actual operating model | [`CERG-PRC-TPRM-001`](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
 | ANTI-VEND-003 | Contract-as-Control | Vendor | SLA language treated as proof of operating capability without measurement | [`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md) |
@@ -100,9 +100,9 @@ The catalog is intentionally blunt. The goal is not to shame teams. The goal is 
 | ANTI-METRIC-001 | Green Dashboard | Metrics | Thresholds calibrated to always show green; dashboard is compliance theater | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) |
 | ANTI-METRIC-002 | Activity as Outcome | Metrics | Activity counts reported as proof of capability effectiveness | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) |
 | ANTI-METRIC-003 | Vanity SLA | Metrics | SLA targets set to match observed performance; no stretch, no improvement pressure | [`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md) |
-| ANTI-AI-001 | AI-as-Headcount | AI / Automation | AI tool deployed, staffing gap declared closed; no review of AI output or edge cases | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) §3 |
-| ANTI-AI-002 | Prompt-as-Policy | AI / Automation | Security decisions outsourced to LLM via single-engineer system prompt with no change management | [`CERG-PRC-AUD-001`](../procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) |
-| ANTI-AI-003 | AI Hallucination as Evidence | AI / Automation | LLM-generated compliance mapping or risk assessment enters evidence chain unvalidated | [`CERG-GOV-AUD-001`](CERG-GOV-AUD-001_Evidence_Quality_Standard.md) |
+| ANTI-AI-001 | AI-as-Headcount | AI / Automation | AI tool deployed, staffing gap declared closed; no review of AI output or edge cases | [`CERG-STD-AI-001`](../standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) |
+| ANTI-AI-002 | Prompt-as-Policy | AI / Automation | Security decisions outsourced to LLM via single-engineer system prompt with no change management | [`CERG-STD-AI-001`](../standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) · [`CERG-PRC-AUD-001`](../procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) |
+| ANTI-AI-003 | AI Hallucination as Evidence | AI / Automation | LLM-generated compliance mapping or risk assessment enters evidence chain unvalidated | [`CERG-STD-AI-001`](../standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) · [`CERG-GOV-AUD-001`](CERG-GOV-AUD-001_Evidence_Quality_Standard.md) |
 | ANTI-ORG-001 | Do-More-with-Less as Strategy | Organizational | Permanent austerity treated as a strategy; no risk acceptance for unfunded mandates | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) |
 | ANTI-ORG-002 | Good News Only Chain | Organizational | Bad news filtered at every level; executives surprised by avoidable failures | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) |
 | ANTI-ORG-003 | Responsibility Without Authority | Organizational | Role carries accountability but no budget, hiring, or decision power | [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) |
@@ -227,6 +227,8 @@ The catalog is intentionally blunt. The goal is not to shame teams. The goal is 
 
 ## 7. Incident Response Anti-Patterns
 
+CERG treats incident response as an adjacent function owned by the standing IR team. The patterns below describe failure modes in the CERG / IR boundary — how CERG capabilities support IR through evidence provision, asset and exposure context, lessons-learned routing, and procedure synchronization. They are not intended as an IR governance framework; the Incident Response Plan ([`CERG-PLN-IR-001`](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md)) and playbook set ([`CERG-PRC-IR-002`](../procedures/CERG-PRC-IR-002_Incident_Response_Playbook_Set.md)) serve that role.
+
 ### 7.1 ANTI-IR-001 — Restore-and-Declare-Resolved
 
 **What it looks like:** Systems are restored, the incident ticket is closed, and remediation is declared complete. Root cause analysis is skipped or deferred. Lessons learned are not conducted. Procedure updates are not made. The same incident pattern repeats the next quarter.
@@ -249,7 +251,7 @@ The catalog is intentionally blunt. The goal is not to shame teams. The goal is 
 
 **Why it fails:** An IC who cannot commit resources, authorize containment actions, or override normal business approval cycles cannot command the response. The bottleneck shifts from technical response to managerial approval, and containment timelines slip.
 
-**Corrective action:** Define IC authority explicitly in the service-level commitments at [`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md). The IC must have pre-delegated authority to commit resources, authorize containment, and make risk decisions within defined thresholds during an active incident. Test this authority in exercises, not only in the policy document.
+**Corrective action:** Define IC authority explicitly in the Incident Response Plan ([`CERG-PLN-IR-001`](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md)) and service-level commitments at [`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md), with IC role boundaries and delegation rules documented in the operating model at [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md). The IC must have pre-delegated authority to commit resources, authorize containment, and make risk decisions within defined thresholds during an active incident. Test this authority in exercises, not only in the policy document.
 
 ---
 
@@ -285,9 +287,9 @@ The catalog is intentionally blunt. The goal is not to shame teams. The goal is 
 
 ### 9.1 ANTI-RISK-001 — Risk Register as Cemetery
 
-**What it looks like:** Risks enter the register and never leave. No treatment tracking, no reassessment cadence, no trigger for re-evaluation. The register grows with every quarterly review but no risk is ever retired, accepted, or mitigated to closure. The oldest entries become noise that drowns out current concerns.
+**What it looks like:** Risks enter the register and never leave. No treatment tracking, no reassessment cadence, no closure criteria, no retirement process. The register grows with every quarterly review but no risk is ever retired, accepted, or mitigated to closure. The oldest entries become noise that drowns out current concerns.
 
-**Why it fails:** A register that accumulates without closure becomes an inventory problem rather than a risk management tool. Owners stop reviewing it because it is too large and too stale. Material risks are buried under entries that should have been closed, accepted, or escalated long ago.
+**Why it fails:** This is a lifecycle and closure failure, distinct from a cadence failure (where risks exist but are never reviewed). A cemetery register may be reviewed quarterly yet still accumulate — entries are discussed but never resolved. It becomes an inventory problem rather than a risk management tool. Owners stop distinguishing material from stale, and material risks are buried under entries that should have been closed, accepted, or escalated long ago.
 
 **Corrective action:** Every risk in the register must have a treatment plan, reassessment interval, and exit criteria. Use the risk management framework at [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) to define lifecycle stages. Archive or close risks whose circumstances have changed. If a risk has had no owner action for two consecutive review cycles, escalate it as a governance concern.
 
@@ -365,7 +367,7 @@ The catalog is intentionally blunt. The goal is not to shame teams. The goal is 
 
 **Why it fails:** AI tools augment capability; they do not create independent capability. An AI code scanner finds the patterns it was trained to find and misses everything else. An AI SOC analyst cannot exercise judgment about novel attack patterns, handle communication with stakeholders, or take responsibility for a missed detection. Treating AI as headcount creates capability gaps that are invisible until they fail.
 
-**Corrective action:** For every AI tool, define the human oversight role, edge-case handling path, false-negative review cadence, and accountability assignment. Use the capability model in [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) §3 to distinguish tool support from capability ownership. An AI tool reduces workload; it does not replace accountable ownership.
+**Corrective action:** For every AI tool, define the human oversight role, edge-case handling path, false-negative review cadence, and accountability assignment. Use the AI security standard at [`CERG-STD-AI-001`](../standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) for AI use categorization, output review requirements, and model governance, and the capability model in [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) §3 to distinguish tool support from capability ownership. An AI tool reduces workload; it does not replace accountable ownership.
 
 ### 12.2 ANTI-AI-002 — Prompt-as-Policy
 
@@ -373,7 +375,7 @@ The catalog is intentionally blunt. The goal is not to shame teams. The goal is 
 
 **Why it fails:** A prompt is not a policy. It is a set of natural-language instructions that an LLM interprets probabilistically. Without change control, the prompt drifts silently. Without audit, the organization cannot reconstruct why a particular decision was made. The model's output may look authoritative while being consistently wrong in ways that are hard to detect.
 
-**Corrective action:** Treat AI system prompts as controlled artifacts subject to the same change management and audit requirements as written policy. Version-control prompts, require review before deployment, and maintain an audit trail linking each model output to the prompt version used. Use the audit and evidence procedure at [`CERG-PRC-AUD-001`](../procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) for prompt governance requirements. If the prompt determines compliance or risk decisions, treat it as a control and validate its outputs periodically.
+**Corrective action:** Treat AI system prompts as controlled artifacts subject to the same change management and audit requirements as written policy. Version-control prompts, require review before deployment, and maintain an audit trail linking each model output to the prompt version used. The AI security standard at [`CERG-STD-AI-001`](../standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) provides AI use categories and governance requirements; the audit and evidence procedure at [`CERG-PRC-AUD-001`](../procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) defines the change management and audit processes for prompt governance.
 
 ### 12.3 ANTI-AI-003 — AI Hallucination as Evidence
 
@@ -381,7 +383,7 @@ The catalog is intentionally blunt. The goal is not to shame teams. The goal is 
 
 **Why it fails:** LLMs produce plausible-sounding outputs that can be factually wrong in subtle ways. A hallucinated compliance mapping can misrepresent audit posture. A hallucinated control description creates a false evidence record. Once in the evidence chain, errors propagate across reviews, audits, and decisions. The organization discovers the error during an audit or incident, when correction is most expensive.
 
-**Corrective action:** Every AI-generated artifact that enters the evidence chain must be validated by a competent human reviewer before acceptance. Define validation criteria per artifact type: for compliance mappings, spot-check a sample against the source framework; for risk assessments, verify factual claims against system data; for evidence summaries, trace each claim to an originating record. Use the evidence quality standard at [`CERG-GOV-AUD-001`](CERG-GOV-AUD-001_Evidence_Quality_Standard.md). Treat AI-generated evidence as draft evidence requiring review, not as final evidence.
+**Corrective action:** Every AI-generated artifact that enters the evidence chain must be validated by a competent human reviewer before acceptance. The AI security standard at [`CERG-STD-AI-001`](../standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) defines AI output review requirements and AI use categories; the evidence quality standard at [`CERG-GOV-AUD-001`](CERG-GOV-AUD-001_Evidence_Quality_Standard.md) defines evidence chain hygiene. Define validation criteria per artifact type: for compliance mappings, spot-check a sample against the source framework; for risk assessments, verify factual claims against system data; for evidence summaries, trace each claim to an originating record. Treat AI-generated evidence as draft evidence requiring review, not as final evidence.
 
 ---
 
@@ -453,7 +455,7 @@ If the same anti-pattern appears in two consecutive reviews, it must be tracked 
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.1 | 2026-06-27 | Governance Pillar Leader | Expanded catalog from 15 to 35 anti-patterns across 6 new domains: incident response, vendor and third-party management, risk management, people and culture, metrics and reporting, AI governance, and organizational dynamics. Updated Supporting Documents, Frameworks, and TOC. |
+| 1.1 | 2026-06-27 | Governance Pillar Leader | Expanded catalog from 15 to 35 anti-patterns across 7 new domains: incident response, vendor and third-party management, risk management, people and culture, metrics and reporting, AI governance, and organizational dynamics. Updated Supporting Documents, Frameworks, TOC, corrective anchors, and Related Documents. |
 | 1.0 | 2026-06-24 | Governance Pillar Leader | Initial release. Establishes the cross-domain anti-pattern catalog, including workforce, capability, evidence, and compliance failure modes. |
 
 ### Review Triggers
@@ -482,6 +484,8 @@ If the same anti-pattern appears in two consecutive reviews, it must be tracked 
 | Consolidated Roles and RACI | [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Role accountability, authority profile, and separation of duties |
 | Competency Model and Behavioral Anchors | [`CERG-GOV-CMP-001`](CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) | Role-specific competency expectations and demonstrated-assessment guidance |
 | Program Improvement Register | [`CERG-GOV-IMPREG-001`](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) | Tracks recurring anti-pattern correction actions |
+| AI Security Standard | [`CERG-STD-AI-001`](../standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) | AI use categorization, output review, model governance, and prompt governance requirements |
+| Incident Response Plan | [`CERG-PLN-IR-001`](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md) | IR governance framework, IC authority, and role boundaries |
 | Incident Response Playbook Set | [`CERG-PRC-IR-002`](../procedures/CERG-PRC-IR-002_Incident_Response_Playbook_Set.md) | IR lifecycle guidance for restore-and-declare anti-pattern |
 | Audit and Evidence Management Procedure | [`CERG-PRC-AUD-001`](../procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) | Prompt governance and AI-generated evidence handling procedure |
 | Third Party and Supply Chain Risk Procedure | [`CERG-PRC-TPRM-001`](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) | Vendor risk assessment tiers and evidence expectations |
