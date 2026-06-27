@@ -30,7 +30,7 @@
 3. [The Adoption Model](#3-the-adoption-model)
 4. [Minimum Viable CERG](#4-minimum-viable-cerg)
 5. [The 30/60/90-Day Rollout](#5-the-306090-day-rollout)
-6. [Scaling the Model: 5 People to 60](#6-scaling-the-model-5-people-to-60)
+6. [Scaling the Model: Consolidate, Then Split](#6-scaling-the-model-consolidate-then-split)
 7. [Adapting the Documents](#7-adapting-the-documents)
 8. [First-Adoption Sign-Off Workflow](#8-first-adoption-sign-off-workflow)
 9. [Common Adoption Pitfalls](#9-common-adoption-pitfalls)
@@ -91,6 +91,21 @@ What you do change by hand is judgment: which optional standards apply, which re
 ### 3.3 Run
 
 A program runs when work is happening on the cadence the documents describe: intake reviews, risk register updates, vulnerability SLAs, metrics reporting. Adoption is complete not when the files are edited but when the first cycle of that cadence has been completed and reported. Section 5 sequences the first cycle.
+
+### 3.4 Operating Leverage Test
+
+CERG adoption should reduce coordination drag. If adoption creates more meetings, more manual status chasing, or more ambiguous ownership, the organization is probably adopting documents without adopting the operating model.
+
+Look for operating leverage by the end of the first cycle:
+
+- recurring decisions have named owners and records;
+- common security questions stop being re-litigated because standards answer them;
+- evidence is produced by normal work instead of reconstructed later;
+- handoffs between Engineering, Risk, and Governance are visible;
+- staffing conversations are based on workload and capability gaps, not vague pressure;
+- fewer issues require heroics from the same senior person.
+
+If CERG is not creating leverage, stop adding artifacts and fix the workflow that is creating drag.
 
 > **One Source, Many Exports**
 >
@@ -177,9 +192,9 @@ By day 90 every pillar is producing work, the CISO is reporting on a cadence, an
 
 ---
 
-## 6. Scaling the Model: 5 People to 60
+## 6. Scaling the Model: Consolidate, Then Split
 
-The README promises a five-person team runs the same model as a sixty-person team. This section shows how. The mechanism is role consolidation, not document deletion.
+A small team and a full-scale security function run the same model at different density. This section shows how. The mechanism is role consolidation, not document deletion.
 
 ### 6.1 The Principle
 
@@ -193,7 +208,7 @@ The canonical role roster in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_
 
 These are starting points, not mandates. Adjust to the skills you actually have.
 
-**Five-person team.** Every person carries a pillar plus shared duties.
+**Small-team example.** Every person carries a pillar plus shared duties.
 
 | **Person** | **Holds These Canonical Roles** |
 |---|---|
@@ -203,16 +218,16 @@ These are starting points, not mandates. Adjust to the skills you actually have.
 | 4 | Engineering Pillar Leader; Cloud Security Engineer; Identity Engineer; Pre-production Reviewer |
 | 5 | Application Security Engineer; Endpoint Engineer; Cryptography Engineer; Detection Engineer |
 
-**Fifteen-person team.** Pillar leaders are dedicated; senior practitioners own a domain each; the rest are individual contributors. Compliance manager roles are assigned only for regulators in scope.
+**Mid-size team example.** Pillar leaders are dedicated; senior practitioners own a domain each; the rest are individual contributors. Compliance manager roles are assigned only for regulators in scope.
 
-**Sixty-person team.** The full roster maps roughly one role to one person, with sub-role domain qualifiers (for example, Engineering Pillar Leader - Cloud and Engineering Pillar Leader - OT) split out as described in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
+**Full-scale function example.** The full roster maps roughly one role to one person, with sub-role domain qualifiers (for example, Engineering Pillar Leader - Cloud and Engineering Pillar Leader - OT) split out as described in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
 
 ### 6.3 What Does Not Scale Down
 
 Two things hold regardless of headcount.
 
-1. **Separation of approval authority.** The person who accepts a risk cannot be the only person who assessed it. Even on a five-person team, risk acceptance follows the authority table in [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. If one person genuinely holds every role, the Executive Sponsor provides the second set of eyes on High and Critical acceptance.
-2. **The cadence.** A five-person team still runs the Monthly Risk Register Review and the Quarterly Cyber Oversight Group brief. The meetings are shorter. They are not skipped.
+1. **Separation of approval authority.** The person who accepts a risk cannot be the only person who assessed it. Even on a small team, risk acceptance follows the authority table in [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. If one person genuinely holds every role, the Executive Sponsor provides the second set of eyes on High and Critical acceptance.
+2. **The cadence.** A small team still runs the Monthly Risk Register Review and the Quarterly Cyber Oversight Group brief. The meetings are shorter. They are not skipped.
 
 ---
 

@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-002 |
-| **Version** | 1.1 |
+| **Version** | 1.4 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -29,7 +29,7 @@
 
 ## 1. Before You Start
 
-CERG is an operating-model and document corpus for standing up a cybersecurity program. It is not a control checklist, a compliance certificate, or a substitute for organizational commitment.
+CERG is an operating model and document corpus for standing up a cybersecurity program. It is not a control checklist, a compliance certificate, or a substitute for organizational commitment.
 
 Before you fork, edit, or adopt any CERG artifact as authoritative, you must have:
 
@@ -105,7 +105,7 @@ The following artifacts are not adopted (they are templates or surveys), but the
 
 ## 3. Adoption Anti-Patterns
 
-These are the ways CERG adoption fails. If you recognize your organization in any of these, stop and fix the pattern before continuing.
+These are the ways CERG adoption fails. If you recognize your organization in any of these, stop and fix the pattern before continuing. The broader cross-domain anti-pattern reference is [`CERG-GOV-ANTI-001`](CERG-GOV-ANTI-001_CERG_Anti_Pattern_Catalog.md).
 
 ### Anti-Pattern 1: Fork-and-Declare
 
@@ -117,7 +117,7 @@ These are the ways CERG adoption fails. If you recognize your organization in an
 
 ### Anti-Pattern 2: Delete Roles Instead of Consolidating
 
-**What it looks like:** "We only have 5 people, so we deleted the other 22 roles."
+**What it looks like:** "We only have a small team, so we deleted the roles we cannot staff separately."
 
 **Why it fails:** The canonical roles define the work that needs to be done, not the headcount. When you delete a role, you delete the accountability for that work. The work still exists — it just has no owner.
 
@@ -151,7 +151,7 @@ These are the ways CERG adoption fails. If you recognize your organization in an
 
 **What it looks like:** The Risk function runs the vulnerability scanner. That is its entire job description.
 
-**Why it fails:** Risk owns threat intelligence, adversarial testing, vendor risk, detection engineering, identity risk, OT risk, and the risk register. Reducing Risk to vulnerability scanning leaves most of the organization's exposure unmanaged.
+**Why it fails:** Risk owns threat intelligence, adversarial validation, vendor risk, detection engineering, identity risk, OT risk, and the risk register. Reducing Risk to vulnerability scanning leaves most of the organization's exposure unmanaged.
 
 **Fix:** Staff Risk for its full scope, or document which Risk functions are deferred and why. A small team may consolidate Risk roles, but the functions they cover should be explicit.
 
@@ -186,6 +186,24 @@ These are the ways CERG adoption fails. If you recognize your organization in an
 **Why it fails:** A risk register that is not reviewed is a tombstone, not a management tool. Risks age. Treatments stall. Acceptances expire. The register becomes a historical record instead of an operational instrument.
 
 **Fix:** Schedule the first risk register review before creating the register. The review cadence is non-negotiable. If the review is missed, create a Finding Record (per FLOW-001 F-07 mandatory rules).
+
+### Anti-Pattern 11: Buying Tools Instead of Building Capability
+
+**What it looks like:** The organization buys a SIEM, scanner, GRC platform, CSPM, or ticketing workflow and declares the capability implemented.
+
+**Why it fails:** A tool can support a capability, but it is not the capability. Detection requires tuned analytics, triage ownership, response paths, and validation. Exposure management requires asset coverage, prioritization, owner follow-up, SLA tracking, and risk treatment. Governance requires decision rights, evidence quality, review cadence, and accountable owners. Without the operating model around the tool, the purchase becomes another source of alerts, dashboards, and status meetings.
+
+**Fix:** For every tool adopted, name the capability it supports, the procedure it feeds, the owner who acts on its output, and the evidence that proves the capability operates.
+
+| Tool or Platform | Capability It May Support | Evidence the Capability Exists |
+|---|---|---|
+| Vulnerability scanner | Exposure management | Coverage report, triaged finding records, SLA dashboard, validated closure evidence |
+| SIEM / detection platform | Detection and monitoring | Source inventory, detection coverage record, alert triage metrics, purple-team validation results |
+| GRC platform | Governance and evidence management | Approved risk decisions, exception records, evidence index, retrieval test results |
+| CSPM / SSPM | Cloud and SaaS posture management | Posture findings, assigned owners, remediation records, exception or acceptance decisions |
+| Ticketing workflow | Work tracking | Linked owners, due dates, closure evidence, escalation history |
+
+A capability exists only when the organization can perform the work, produce evidence, and improve from what it learns. If the tool is present but those outputs are absent, the capability is still Ad Hoc.
 
 ---
 
@@ -412,14 +430,14 @@ When you tailor CERG, some changes are safe. Some are dangerous. This section de
 
 You can (and should) change these without compromising the framework's integrity:
 
-- **Organization name and branding** — replace "CERG" or the utility example with your organization
+- **Organization name and branding** — use your organization's name, internal program label, and house style while preserving CERG document IDs where cross-references depend on them
 - **Role assignments** — assign canonical roles to actual people or job titles
 - **Tool names** — replace generic references with your actual tools
 - **Regulatory scope** — adopt only the regulatory packages that apply; defer or remove the rest
 - **Meeting cadences** — adjust schedules within the bounds defined by review cycles
 - **Dollar thresholds** — calibrate risk appetite values to your organization's finances
 - **Evidence repository locations** — specify where your evidence is actually stored
-- **Team size examples** — replace the 60-person example with your actual headcount
+- **Illustrative examples and staffing profiles** — replace sector-specific examples and headcount assumptions with your actual operating context
 - **Asset classification tiers** — define tiers that match your business criticality
 
 ### Dangerous to Change
@@ -444,7 +462,7 @@ Changing these breaks the operating model. If you must change them, document the
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-002 |
-| **Version** | 1.1 |
+| **Version** | 1.4 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -461,6 +479,9 @@ Changing these breaks the operating model. If you must change them, document the
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.4 | 2026-06-24 | Governance Pillar Leader | Linked the Adoption Safety Guide to the central Anti-Pattern Catalog for cross-domain failure-mode reference. |
+| 1.3 | 2026-06-24 | Governance Pillar Leader | Added tool-versus-capability adoption anti-pattern and evidence test for capability claims. |
+| 1.2 | 2026-06-24 | Governance Pillar Leader | Removed older example-specific language for utility branding, fixed hard-coded role and headcount examples, and updated adversarial-validation terminology. |
 | 1.1 | 2026-06-18 | Governance Pillar Leader | Added explicit small-team separation rule for business-risk consequence acceptance when security roles are consolidated. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Adoption pre-requisites, anti-patterns, decision log template, risk acceptance guardrails, regulatory honesty guidance, role collision guide, and safe/dangerous tailoring boundaries. |
 
@@ -479,6 +500,7 @@ Governance owns this document. The Governance Pillar Leader is responsible for i
 |---|---|---|
 | Cybersecurity Policy | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) | Parent policy |
 | Implementation and Adaptation Guide | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | How to adapt CERG; this document defines the safety rules for doing so |
+| Anti-Pattern Catalog | [`CERG-GOV-ANTI-001`](CERG-GOV-ANTI-001_CERG_Anti_Pattern_Catalog.md) | Cross-domain catalog of adoption, workforce, capability, evidence, and compliance failure modes |
 | Operating Model | [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) | Canonical role roster and scaling map |
 | Risk Management Framework | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) | Risk acceptance authority and expiration |
 | Consolidated Roles and RACI | [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) | Role accountability and separation of duties |
