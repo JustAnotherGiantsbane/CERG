@@ -924,6 +924,26 @@
   normative_weight: supporting
   pillar: governance
   summary: NERC CIP Operational Package
+- document_id: CERG-PLN-CON-001
+  title: Consulting Services Operating Plan
+  document_type: plan
+  domain: CON
+  version: ''
+  status: Approved
+  classification: Public
+  publication_profile: public
+  owner_role: Governance Pillar Leader
+  approval_authority: Governance Pillar Leader
+  parent_artifact: ''
+  source_path: plans/CERG-PLN-CON-001_Consulting_Services_Operating_Plan.md
+  source_file: CERG-PLN-CON-001_Consulting_Services_Operating_Plan.md
+  source_hash: dff793b106aa4e420109816f6a58a1c333434970fcd711f9ff27871619c012b3
+  canonical_url: https://github.com/m0dernz/CERG/blob/main/plans/CERG-PLN-CON-001_Consulting_Services_Operating_Plan.md
+  llm_include: true
+  llm_priority: medium
+  normative_weight: supporting
+  pillar: governance
+  summary: Consulting Services Operating Plan
 - document_id: CERG-PLN-CUI-001
   title: CUI CMMC Operational Package
   document_type: plan
