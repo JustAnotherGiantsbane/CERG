@@ -1,6 +1,6 @@
 # cerg-manifest.yaml
 # DERIVED ARTIFACT — authoritative source is the CERG markdown corpus
-# Generated: 2026-09-03 | Owner: Governance Pillar Leader (Document Control)
+# Generated: 2026-10-27 | Owner: Governance Pillar Leader (Document Control)
 # Regenerate on any change to source documents
 # See METADATA.yaml for full governance information
 
@@ -108,7 +108,7 @@
   title: Document Catalog and Naming Convention
   document_type: governance_instrument
   domain: CAT
-  version: 1.46
+  version: 1.48
   status: Approved
   classification: Public
   publication_profile: public
@@ -117,7 +117,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  source_hash: 6ade58f8e755227c7941757225be44f3318a85bf70064def12cfb87156d310b7
+  source_hash: 7946d786654098a0b2a0c31db2b46912b2522ec28918967c988cf92584d0dd8b
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   llm_include: true
   llm_priority: high
@@ -608,7 +608,7 @@
   title: Metrics Dashboard and Reporting
   document_type: governance_instrument
   domain: MTR
-  version: 1.35
+  version: 1.36
   status: Approved
   classification: Public
   publication_profile: public
@@ -617,7 +617,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
   source_file: CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
-  source_hash: 3a9d091661b4f0a29020bb64581fb23071f313aaedfe74f9e539a383834a39bd
+  source_hash: 296539bea011aa49972362d85ca0db3e6b56cdf604f32b065ce134020294fd7b
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
   llm_include: true
   llm_priority: medium
@@ -948,7 +948,7 @@
   title: NERC CIP Operational Package
   document_type: plan
   domain: CIP
-  version: 1.22
+  version: 1.23
   status: Approved
   classification: Public
   publication_profile: public
@@ -957,7 +957,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md
   source_file: CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md
-  source_hash: 78396ff6af30c3ac0d7051abe6507a59fc0a944df1bb58bab09e889d276dd2e8
+  source_hash: a39d3133f9369722427e21a87b1863d316261751bf376d6cbc29993fb3fb33cf
   canonical_url: https://github.com/m0dernz/CERG/blob/main/plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md
   llm_include: true
   llm_priority: medium
@@ -2228,7 +2228,7 @@
   title: Grid Control Systems Security Standard
   document_type: standard
   domain: OT
-  version: 1.22
+  version: 1.23
   status: Approved
   classification: Public
   publication_profile: public
@@ -2237,7 +2237,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md
   source_file: CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md
-  source_hash: 13fae41687bbb55e4853cea5a72420aed3e075041097a2285b18cbf67bd237e8
+  source_hash: 387510e663e3092d0cf1889d0aade0a26503b6db0444fcb5340e2dac555e88a8
   canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md
   llm_include: true
   llm_priority: medium
@@ -2308,7 +2308,7 @@
   title: Sanctioned AI Tools Register Template
   document_type: template
   domain: AI
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -2317,7 +2317,7 @@
   parent_artifact: 'CERG-STD-AI-001 — Artificial Intelligence Security Standard'
   source_path: templates/CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md
   source_file: CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md
-  source_hash: 17fb4104edc7c35cbc43317b36cf371dc699476e7c70fb1a2b0cc3557af7c5f8
+  source_hash: 1b1e0439f9e0adbf1981cfa94abd926b146941952bc147744a4170a7cb3e2fce
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md
   llm_include: true
   llm_priority: medium
@@ -2328,7 +2328,7 @@
   title: AI System and Model Register Template
   document_type: template
   domain: AI
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -2337,7 +2337,7 @@
   parent_artifact: 'CERG-STD-AI-001 — Artificial Intelligence Security Standard'
   source_path: templates/CERG-TMPL-AI-003_AI_System_and_Model_Register_Template.md
   source_file: CERG-TMPL-AI-003_AI_System_and_Model_Register_Template.md
-  source_hash: 7e493d1e83ae7540365b828e20374753a8f0236be9c0a976abadc0dc68bf2f54
+  source_hash: ade724aff61344447c877aabc6624ae60fc31f632324797c2964fd52bb823bcd
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-AI-003_AI_System_and_Model_Register_Template.md
   llm_include: true
   llm_priority: medium
