@@ -6,7 +6,7 @@
 
 ## Decision Requested
 
-Adopt a consistent boundary between CERG's second-line role and security operations performed by internal teams or a managed security service provider (MSSP); select one of the operating-model options in [Section 3](#3-operating-model-options); and approve the proposed direction, scope, and transition approach before updating controlled documents.
+Adopt a consistent, provider-neutral boundary between CERG's second-line role and first-line security operations; confirm the recommended assurance-led operating model in [Section 3](#3-operating-model-options); and approve the proposed direction, safeguards, scope, and transition approach before updating controlled documents.
 
 ## 1. Problem
 
@@ -29,6 +29,7 @@ A title, reporting line, or employment relationship does not determine the line 
 4. **Existing authority is reused.** `OM-001` owns operating boundaries, `RAC-001` owns RACI, `PRC-VM-001` owns exposure workflow and clocks, `STD-LM-001` owns logging and detection requirements, and `PRC-TPRM-001` owns provider controls. This RFC does not propose a new permanent role, record type, or control catalog.
 5. **CERG remains technically credible.** Second-line assurance includes technical validation, adversarial testing, requirement-setting, evidence review, and challenge. It is not administrative observation from a distance.
 6. **Incident command remains with the standing IR team.** An alert queue may route an event to IR; it does not give CERG incident-command authority.
+7. **CTEM is an operating-model property, not a new CERG layer.** CERG's allocation of who scopes, discovers, prioritizes, validates, mobilizes, and assures exposure work makes continuous threat exposure management trustworthy without creating a new lifecycle, role, control catalog, or tool dependency.
 
 ## 3. Operating-Model Options
 
@@ -44,7 +45,7 @@ This option is most appropriate where a separate SOC, infrastructure security te
 
 ### Option B — Assurance-Led Second Line (recommended)
 
-CERG may develop reference designs, requirements, candidate detection content, test cases, and acceptance criteria. A first-line team or MSSP operates production platforms, deploys approved content under its change process, staffs queues, and runs response handoffs. CERG independently validates coverage, control effectiveness, and selected outcomes.
+CERG may develop reference designs, requirements, candidate detection content, test cases, and acceptance criteria. A first-line team, operating division, or provider operates production platforms, deploys approved content under its change process, staffs queues, and runs response handoffs. CERG independently validates coverage, control effectiveness, and selected outcomes when it meets the independence, technical-capability, and evidence-currency conditions in Section 4.1.
 
 | Benefits | Costs / safeguards |
 |---|---|
@@ -60,7 +61,7 @@ CERG continues to operate scanners, SIEM/CSPM/SSPM, and alert triage while also 
 |---|---|
 | Lowest transition cost; may fit a very small organization temporarily | Does not meet the intended true-second-line model without a separately resourced independent assessor; makes assurance claims vulnerable to self-review |
 
-If retained, this must be described honestly as a hybrid first-/second-line function, not as a wholly second-line CERG model. It is not recommended as the target state.
+If retained, this must be described honestly as a hybrid first-/second-line function, not as a wholly second-line CERG model. CERG may not issue or approve the independent technical-effectiveness claim for a standing production service it operates; its independent assessor and review route must be named. It is not recommended as the target state.
 
 ## 4. Proposed Boundary
 
@@ -72,7 +73,19 @@ The following language is proposed for incorporation into `CERG-GOV-OM-001` afte
 >
 > Under the assurance-led model, CERG may supply reference designs, requirements, candidate detection content, and test cases. First line accepts and deploys production content through its change process. CERG independently validates coverage and effectiveness and must not approve its own production operation.
 
-### 4.1 Work Allocation
+### 4.1 Conditions for an Independent Technical-Effectiveness Claim
+
+A CERG technical-effectiveness claim rests on all three conditions below:
+
+1. **Independence.** The claimant did not produce the control state or work being approved. A CERG practitioner who authored detection content or operated the tested service cannot be the sole approver of an effectiveness claim that supports a compensated-exposure disposition or other consequential risk decision.
+2. **Technical capability.** CERG has a service-appropriate ability to produce independent technical evidence: for example, read/query access, sampling or re-test rights, and the capacity to interpret the result. The applicable method authority defines what is appropriate for its service family — for example, `CERG-STD-LM-001` for detection, `CERG-PRC-VM-001` for exposure, and `CERG-PRC-AV-001` for adversarial and recovery validation. Capability is recorded per assured service and re-asserted after a material change to its operator, tooling, access model, or scope.
+3. **Evidence currency.** The claim states the period and scope of its evidence. Evidence that predates the current control state, is out of scope, or is otherwise stale cannot support an effectiveness claim.
+
+Where a condition is absent, CERG labels the output at the point of claim as **conformance or operating-evidence review only**, names the missing capability or evidence condition, and does not use the output to support a compensated-exposure or comparable effectiveness disposition. The capability deficiency enters `CERG-GOV-IMPREG-001`; material residual exposure follows `CERG-PRC-RM-001` and the RMF authority route. A deficiency that persists through two review cycles is a decision to operate without that assurance capability and requires formal risk acceptance under the applicable RMF authority.
+
+For a small team, the independent approver may be another qualified person, an independent provider, or another documented independent route. The capability floor is access- and tooling-shaped, not headcount-shaped; self-approval of consequential claims is the non-consolidable element.
+
+### 4.2 Work Allocation
 
 | Activity | First-line service owner | First-line operator / MSSP | CERG Engineering | CERG Risk | CERG Governance | Standing IR team |
 |---|---|---|---|---|---|---|
@@ -89,7 +102,7 @@ The following language is proposed for incorporation into `CERG-GOV-OM-001` afte
 
 **RACI interpretation:** the internal service owner may also be the operator in a fully internal model, in which case it is R/A. If an MSSP operates the service, the internal owner remains A and the MSSP is R. The table separates service operation from risk classification deliberately: Risk can be accountable for an independent exposure decision without becoming accountable for running the scanner that produced the observation.
 
-### 4.2 Detection Engineering Versus SOC Operations
+### 4.3 Detection Engineering Versus SOC Operations
 
 The current term *Detection Engineer* spans two distinct activities. The intended boundary is:
 
@@ -113,9 +126,12 @@ No new permanent CERG record is proposed. For each operated security service, ca
 | Required operational records and evidence location | Ensures CERG can assure actual operation |
 | Production-change and acceptance authority | Prevents ambiguous deployment authority |
 | CERG assurance cadence, method, and sampling population | Makes oversight repeatable rather than ad hoc |
+| Applicable assurance-method authority and capability basis | Identifies the service-specific query, sample, re-test, replay, or recovery-challenge capability required for an effectiveness claim |
+| Independent assessor and review route | Makes hybrid-service and small-team independence auditable |
+| Evidence period, scope, and current-control-state check | Prevents a stale or out-of-scope result from being represented as effective |
 | Provider access, data ownership, exit, and kill-switch provisions | Preserves the existing TPRM control model |
 
-For an MSSP, the assurance plan should at least include monthly service reporting, quarterly samples of closed alerts and exposure dispositions, independent escalation-SLA checks, source-health/coverage review, annual joint exercise, and tracked corrective actions for provider failures.
+For an MSSP, the assurance plan should at least include monthly service reporting, direct read/query access or an equivalent independently testable evidence route, sampling and re-test rights, quarterly samples of closed alerts and exposure dispositions, independent escalation-SLA checks, source-health/coverage review, annual joint exercise, and tracked corrective actions for provider failures. The same interface applies to an internal operator; contractual language is the provider-specific implementation of the provider-neutral model.
 
 ## 6. Proposed Controlled-Document Changes
 
@@ -123,10 +139,12 @@ For an MSSP, the assurance plan should at least include monthly service reportin
 
 | Artifact | Proposed change |
 |---|---|
-| `governance/CERG-GOV-OM-001_CERG_Operating_Model.md` | Add the boundary in Section 2; recast Engineering as design/guardrail/handoff support; recast Risk as exposure governance and independent validation; move SOC, tool operations, and alert triage explicitly to first line; update its sample RACIs. |
+| `governance/CERG-GOV-OM-001_CERG_Operating_Model.md` | Add the purpose-based boundary and the three conditions for an independent technical-effectiveness claim in Section 2; state the hybrid consequence; recast Engineering as design/guardrail/handoff support; recast Risk as exposure governance and independent validation; move SOC, tool operations, and alert triage explicitly to first line; update its sample RACIs. |
 | `governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md` | Add First-Line Service Owner and First-Line Operator/MSSP interface columns for operational processes. Replace the current Risk R/A assignments for exposure scanning and alert handoff with split rows that distinguish operation, classification, treatment performance, and independent verification. |
-| `procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md` | Make observation-source operation first-line; retain Risk ownership of independent validation, classification, SLA measurement, challenge, and exposure reporting. Require source provenance/coverage status and distinguish provider treatment evidence from independent closure verification. |
-| `governance/CERG-GOV-FRM-001_CERG_Framework.md` | Revise the lifecycle narrative, capability ownership, Risk core functions, illustrative staffing model, and regulatory descriptions to avoid stating that Risk performs continuous scans or owns standing monitoring. |
+| `procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md` | Make observation-source operation first-line; retain Risk ownership of independent validation, classification, SLA measurement, challenge, and exposure reporting. Require source provenance/coverage status and distinguish provider treatment evidence from independent closure verification; prohibit reliance on operating evidence alone for a compensated disposition. |
+| `governance/CERG-GOV-FRM-001_CERG_Framework.md` | Add concise CTEM positioning as an operating-model property; revise the lifecycle narrative, capability ownership, Risk core functions, illustrative staffing model, and regulatory descriptions to avoid stating that Risk performs continuous scans or owns standing monitoring. |
+
+**Phase 1 scope constraints.** The boundary also applies at design time: first-line delivery teams perform project threat modeling and supply design facts, while CERG Engineering independently reviews material architectures and CERG Risk consumes results to target validation. Phase 1 reuses the existing Adversarial Validation Record for test scope, results, and remediation evidence. Any OT adversarial test or recovery challenge follows `CERG-PRC-AV-001` OT-safety rules and requires its named OT Safety Officer with binding stop authority.
 
 ### Phase 2 — Direct Operational Consumers
 
@@ -134,8 +152,9 @@ For an MSSP, the assurance plan should at least include monthly service reportin
 |---|---|
 | `standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md` | Name the SOC/MSSP as the triage operator and first-line owner as accountable; distinguish detection requirements/validation from production deployment and queue operation. |
 | `governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md` | Replace the statement that Risk conducts post-production monitoring with an assurance/independent-validation statement; add operational-service handoffs to F-03/F-04/F-06 as needed. |
-| `procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md` | Add MSSP operating-performance assurance to the existing access, log ownership, and kill-switch requirements. |
-| `roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md` and `roles/jf-riskops/CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md` | Replace production-tool operation, scanner schedules, alert triage, and rule deployment as CERG responsibilities with requirements, validation, challenge, and assurance responsibilities. |
+| `procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md` | Add MSSP operating-performance assurance to the existing access, log ownership, and kill-switch requirements, including the provider/client obligations needed for the service interface. |
+| `procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md` | Require independent review of test plans for CERG-authored candidate detection content; add the first-line tuning-backlog and targeted-retest trigger after a purple-team validation. |
+| `roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md` and `roles/jf-riskops/CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md` | Replace production-tool operation, scanner schedules, alert triage, and rule deployment as CERG responsibilities with requirements, validation, challenge, and assurance responsibilities; add service-appropriate technical capability expectations. |
 
 ### Phase 3 — Consistency Sweep
 
@@ -152,11 +171,11 @@ Reconcile workforce planning, implementation cards/checklists, compliance matrix
 
 ## 8. Review Questions
 
-1. Is Option B sufficiently independent to describe CERG as a true second-line model, or should the framework choose Option A for stricter separation?
-2. Should CERG Detection Engineering retain candidate-rule authoring, or should it only specify requirements and validate first-line-produced content?
-3. Which duties must remain inside first-line operations even in small organizations, and what compensating independent review is realistic where roles are consolidated?
-4. Is the proposed distinction between exposure classification (CERG Risk) and scanner operation (first line) clear and usable?
-5. Are the proposed MSSP assurance activities proportionate and implementable for smaller adopters?
+1. Do the three conditions in Section 4.1 make Option B sufficiently independent and technically credible as a true second-line model?
+2. Are the named method authorities and material-change triggers sufficient to prevent “service-appropriate” capability from becoming an unenforceable preference?
+3. Is the consequence for missing capability or stale evidence proportionate, including the two-review-cycle risk-acceptance trigger?
+4. Are the proposed service-interface fields practical for internal teams, operating divisions, and providers alike?
+5. Is the Phase 1/Phase 2 boundary appropriately sequenced, particularly the OT-safety constraint and design-time scope statement?
 6. Are there regulatory or sector interpretations that require a different allocation for NERC-CIP, CMMC, SOX, or another overlay?
 
 ## 9. Out of Scope
