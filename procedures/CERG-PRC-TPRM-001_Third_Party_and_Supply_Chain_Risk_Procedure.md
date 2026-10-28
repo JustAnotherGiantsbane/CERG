@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-TPRM-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Vendor Risk Analyst |
@@ -172,6 +172,19 @@ Not every provider relationship allows the organization to configure, monitor, p
 
 The control level is recorded per provider in the Approved Provider Catalog and re-assessed at each annual review. A provider at Contractual or Opaque levels must have a documented kill-switch procedure tested at least annually.
 
+**Observable contractual control.** Contractual Control divides by what the organization can
+independently verify, and the division is recorded per provider alongside the control level. Where the
+contract grants query, sampling, replay and re-test rights over the provider's own telemetry, within the
+latency stated in the service interface, the relationship is *observable*: CERG can reach its own
+conclusion about the service. Where the only instrument is a periodic attestation, reliance is
+*attestation-only*: it supports operating evidence, and claims about that service stop at the
+operating-evidence class. A consequential claim about a provider-operated service requires the
+observable subtype.
+
+In shorthand, Direct and Shared Control are *required*, observable Contractual Control is *observed*,
+and attestation-only contractual reliance and Opaque Dependency are *hoped for*. The shorthand is
+explanatory and is not a second classification.
+
 > **CERG does not pretend to control what it cannot control.** The distinction between "we require this" and "we hope this" is not a compliance failure — it is operational honesty. Document the gap, monitor what is visible, plan the exit.
 
 ### 6.2 MSP and MSSP Hard Requirements
@@ -188,8 +201,9 @@ Managed Service Providers and Managed Security Service Providers operate inside 
 | **Kill-switch procedure tested quarterly** | A documented procedure exists to revoke all provider access within 60 minutes of activation. The procedure is tested at least quarterly and test results are logged. The machine-readable kill-switch schema in [`machine-readable/`](../machine-readable/) provides the artifact format. | Quarterly test log; time-to-revoke measurement |
 | **Provider access reviewed like privileged internal access** | Provider access is subject to the same access review cadence, recertification requirements, and anomalous-access detection as internal privileged users per [CERG-PRC-AC-002](CERG-PRC-AC-002_Access_Management_Runbook.md). | Access review records; recertification status |
 | **Separate incident path for provider compromise** | A documented incident response path exists for "provider compromise with uncertain blast radius." This path is distinct from standard incident response — it assumes the attacker may have visibility into the organization's incident coordination channels if the provider's systems are compromised. | SCCT activation records; annual tabletop exercise |
+| **Assurance rights held and exercised** | The contract grants query, sampling, replay and re-test rights over provider telemetry for services CERG assures, within the service-interface latency and the stated retention period. Where CERG issues a consequential claim, a third-party attestation report does not satisfy this requirement. | Rights exercised once before go-live — one query and one sampled re-test, results logged; the service interface names the operator and the independent assessor. |
 
-**MSP/MSSP onboarding requires:** contract language covering all eight requirements, evidence of the provider's own security posture (SOC 2 Type II or equivalent), a completed shared responsibility matrix, and a successful kill-switch test before production access is granted.
+**MSP/MSSP onboarding requires:** contract language covering all nine requirements, evidence of the provider's own security posture (SOC 2 Type II or equivalent), a completed shared responsibility matrix, and a successful kill-switch test before production access is granted.
 
 **MSP/MSSP offboarding requires:** revocation of all access within 24 hours of contract termination, confirmation that provider-owned artifacts (logs, configurations, credentials) have been returned or destroyed, and a final access review confirming no residual access paths remain.
 
@@ -237,6 +251,7 @@ CERG provides Legal with a clause library; Legal owns negotiation. Clauses below
 | Flow-down | CUI subcontractors | DFARS 252.204-7012 / [CMMC](https://dodcio.defense.gov/CMMC/) requirements flowed to sub-tier. |
 | CIP-013 | OT vendors in BES scope | Participation in supply chain security plan including software integrity, incident notification, coordination of access controls. |
 | International access | T2+ where international access proposed | Country-of-access disclosure; right to refuse non-approved geographies. |
+| Assurance access and independent verification | T1/T2 service providers; T3+ where CERG issues a consequential claim about the service | Provider grants query access to raw or derived telemetry for the in-scope service on the client's request, within the latency stated in the service interface, for the retention period stated there; and sampling, replay and re-test rights over material the provider produced, with the client selecting the sample. A third-party attestation report does not satisfy this clause. These are access rights only and confer no operating duty on the client: an operating obligation — availability, coverage delivery, triage, escalation or remediation — would make the client the operator of the service and disqualify its own claim. |
 
 ---
 
@@ -258,6 +273,8 @@ Every T2+ cloud / SaaS provider has a Shared Responsibility Matrix on file. Wher
 | Subprocessor management | Provider | Customer accepts / refuses | Sub-processor list |
 
 The matrix is the single source of truth for cross-team conversations about "who handles X."
+
+This matrix governs technology providers, where the question is which layer of a platform each party controls. A service provider that operates a security service is governed by the service interface in its System Control Profile and by the assurance clauses in Section 8; where both apply to one provider, this matrix answers the platform question and the service interface answers the operating question.
 
 ---
 
@@ -602,7 +619,7 @@ Assessment results are recorded in the TPRM tool and reviewed at each re-assessm
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-TPRM-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / TPRM platform change |
-| **Change Log** | 1.0 - Initial publication. Tiering, evidence by tier, shared responsibility, international access denial-by-default, SBOM, CIP-013, CUI flow-down, FedRAMP equivalency, SCCT. |
+| **Change Log** | 1.0 - Initial publication. Tiering, evidence by tier, shared responsibility, international access denial-by-default, SBOM, CIP-013, CUI flow-down, FedRAMP equivalency, SCCT. · 1.1 - Contractual Control gains the observable subtype, distinguished from attestation-only reliance; Section 6.2 adds a ninth hard requirement for assurance rights; Section 8 adds an assurance access and independent verification clause; Section 9 is scoped to technology providers. No new classification, record type, or metric. |
