@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The Identity Engineer defines identity and access requirements, reference designs, candidate policy content, and assurance methods for the identity provider, multi-factor authentication, single sign-on, privileged access management, federation, and machine identities. They review first-line evidence and validate whether the deployed state meets those requirements. Named first-line service owners and operators run the platforms, provision access, perform access reviews, operate joiner/mover/leaver and emergency-access workflows, and deploy policy changes. The engineer authors technical content for the Access Management Standard; Governance holds approval authority.
+The Identity Engineer defines identity and access requirements, reference designs, candidate policy content, and assurance methods for the identity provider, multi-factor authentication, single sign-on, privileged access management, federation, and machine identities. They review first-line evidence and validate whether the deployed state meets those requirements. Named first-line service owners and operators run the platforms, provision access, perform access reviews, operate joiner/mover/leaver and emergency-access workflows, and deploy policy changes. The engineer does not operate the platforms or execute access provisioning. The engineer authors technical content for the Access Management Standard; Governance holds approval authority.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -48,7 +48,7 @@ The Identity Engineer defines identity and access requirements, reference design
 
 - Define identity-platform requirements and reference designs for IdP, MFA, SSO, federation, PAM, and machine identities; first-line owners and operators configure, deploy, and run the platforms.
 - Define privileged-access, credential-vaulting, session-management, just-in-time-access, and privilege-elevation requirements; review first-line evidence and validate the resulting state.
-- Define machine-identity and secrets-access requirements with the Cryptography Engineer; first-line operators execute credential lifecycle and rotation.
+- Define machine-identity and secrets-access requirements for API keys, service accounts, certificates, and machine credentials with the Cryptography Engineer; first-line operators execute credential lifecycle and rotation.
 - Define least-privilege requirements for access provisioning and periodic review; review first-line evidence and validate outcomes. First-line operators execute provisioning and review.
 - Author technical workflow requirements for joiner, mover, leaver, emergency-access, and break-glass processes; first-line operators run them.
 - Define conditional-access requirements and candidate policy content based on device posture, location, and risk signals; first-line operators deploy, tune, and operate the policies.
@@ -135,7 +135,7 @@ Competency expectations for this role follow the Engineering pillar behavioral a
 
 ## 10. Success Profile
 
-An Identity Engineer is successful when first-line teams receive usable identity requirements, reference designs, and candidate policy content before expensive implementation decisions. Review and validation establish whether first-line evidence supports the stated access and policy requirements or exposes a gap; the resulting decision is to remediate, provide better evidence, or route residual risk through the existing authority. Platform availability, provisioning execution, access-review completion, and policy operation remain first-line measures.
+An Identity Engineer is successful when first-line teams receive usable identity requirements, reference designs, and candidate policy content before expensive implementation decisions. Review and validation establish whether first-line evidence supports the stated access and policy requirements or exposes a gap; the resulting decision is to remediate, provide better evidence, or route residual risk through [RMF-001 §9.7](../../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md#97-risk-acceptance-authority). Platform availability, provisioning execution, access-review completion, and policy operation remain first-line measures.
 
 ## 11. Career Path
 

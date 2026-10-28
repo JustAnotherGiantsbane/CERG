@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The Cryptography Engineer defines cryptography and key-management requirements, reference designs, and assurance methods for KMS/HSM, secrets platforms, certificate authorities, transport security, and FIPS compliance. They review first-line evidence and validate whether the deployed state meets those requirements. Named first-line service owners and operators run KMS/HSM, secrets, and certificate services and execute key, certificate, and secret lifecycle work.
+The Cryptography Engineer defines cryptography and key-management requirements, reference designs, and assurance methods for KMS/HSM, secrets platforms, certificate authorities, transport security, and FIPS compliance criteria. They review first-line evidence and validate whether the deployed state meets those requirements. Named first-line service owners and operators run KMS/HSM, secrets, and certificate services and execute key, certificate, and secret lifecycle work. The engineer does not operate those platforms or execute lifecycle work.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -51,7 +51,7 @@ The Cryptography Engineer defines cryptography and key-management requirements, 
 - Define transport-security requirements for TLS versions, cipher suites, and certificate validation; review first-line evidence and validate the resulting state.
 - Define secrets-lifecycle requirements for machine identities, API keys, and service accounts; first-line operators execute rotation, access administration, and lifecycle work.
 - Define FIPS 140-2/140-3 compliance criteria for regulated cryptographic modules and validate evidence against them.
-- Conduct cryptographic assessments of new systems, applications, and vendor products in approved scope.
+- Conduct cryptographic assessments of new systems, applications, and vendor products in approved scope; state a technical disposition while the accountable owner decides go-live.
 - Provide cryptography-specific technical input to the standing Incident Response team for exposed-secret and certificate/key-compromise response; first-line operators execute rotation and recovery.
 - Author technical content for the Cryptography and Key Management Standard; Governance holds approval authority.
 - Advise Engineering and IT teams on cryptographic design decisions.
@@ -135,7 +135,7 @@ Competency expectations for this role follow the Engineering pillar behavioral a
 
 ## 10. Success Profile
 
-A Cryptography Engineer is successful when first-line teams receive usable cryptographic requirements and reference designs before platform or application decisions become expensive. Review and validation establish whether first-line evidence supports the stated cryptographic requirements or exposes a gap; the resulting decision is to remediate, provide better evidence, or route residual risk through the existing authority. KMS/HSM availability, certificate lifecycle execution, secrets rotation, and TLS configuration operation remain first-line measures.
+A Cryptography Engineer is successful when first-line teams receive usable cryptographic requirements and reference designs before platform or application decisions become expensive. Review and validation establish whether first-line evidence supports the stated cryptographic requirements or exposes a gap; the resulting decision is to remediate, provide better evidence, or route residual risk through [RMF-001 §9.7](../../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md#97-risk-acceptance-authority). KMS/HSM availability, certificate lifecycle execution, secrets rotation, and TLS configuration operation remain first-line measures.
 
 ## 11. Career Path
 

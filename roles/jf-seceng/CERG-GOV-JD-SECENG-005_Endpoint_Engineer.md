@@ -49,12 +49,12 @@ The Endpoint Engineer defines endpoint and mobile security requirements, baselin
 - Define endpoint-security baselines for Windows, macOS, and Linux; first-line operators deploy and maintain the resulting configurations.
 - Define EDR requirements, detection-use-case requirements, and assurance methods; review first-line output and validate the resulting state. First-line operators deploy agents, tune policies, triage alerts, and operate the platform.
 - Define MDM and mobile-threat-defense requirements and configuration baselines; first-line operators configure and run the services.
-- Define device-posture requirements and candidate policy content for conditional access; first-line operators deploy, tune, and operate the policies.
+- Define device-posture requirements and candidate policy content for conditional access, including patch level, disk encryption, firewall status, and EDR health; first-line operators deploy, tune, and operate the policies.
 - Define configuration-drift requirements, review first-line drift evidence, and validate remediation; first-line operators detect and remediate deviations.
 - Author technical content for the Endpoint and Mobile Security Standard and endpoint hardening guidance for the Secure Configuration Baseline Standard; Governance holds approval authority.
 - Support architecture review for endpoint and mobile components, stating a technical disposition while the business or service owner decides go-live.
 - Provide endpoint-specific technical input to the standing Incident Response team during malware execution, credential theft, and lateral-movement investigation and response.
-- Partner with IT operations so endpoint deployment, patching, and lifecycle practices implement the stated requirements.
+- Partner with IT operations so first-line endpoint operators deploy, patch, and manage the device lifecycle against the stated requirements.
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
@@ -135,7 +135,7 @@ Competency expectations for this role follow the Engineering pillar behavioral a
 
 ## 10. Success Profile
 
-An Endpoint Engineer is successful when first-line teams receive usable baselines, posture requirements, and detection-use-case requirements before deployment decisions. Review and validation establish whether first-line evidence supports the stated requirements or exposes a gap; the resulting decision is to remediate, provide better evidence, or route residual risk through the existing authority. EDR coverage, agent health, patch compliance, drift remediation, and MDM operation remain first-line measures.
+An Endpoint Engineer is successful when first-line teams receive usable baselines, posture requirements, and detection-use-case requirements before deployment decisions. Review and validation establish whether first-line evidence supports the stated requirements or exposes a gap; the resulting decision is to remediate, provide better evidence, or route residual risk through [RMF-001 §9.7](../../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md#97-risk-acceptance-authority). EDR coverage, agent health, patch compliance, drift remediation, and MDM operation remain first-line measures.
 
 ## 11. Career Path
 
