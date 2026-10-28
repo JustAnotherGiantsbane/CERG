@@ -1237,7 +1237,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
   source_file: CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
-  source_hash: bef7fdff9b7a2c5a01181f9876d44c78f9f06bd1a416a1791849e0aa6442b679
+  source_hash: f137ff27b7ca3c9a36fcf77d43c36a8f9384c0f0c3a02325847b6e6ec57d7398
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
   llm_include: true
   llm_priority: medium
@@ -2557,7 +2557,7 @@
   parent_artifact: 'CERG-GOV-CAT-002 — Record Catalog'
   source_path: templates/CERG-TMPL-SCP-001_System_Control_Profile_Template.md
   source_file: CERG-TMPL-SCP-001_System_Control_Profile_Template.md
-  source_hash: 76bc0259bb98b6f6ee55c2ee934a37224a7072e3856de66f544cf711ed225a1a
+  source_hash: 267a66a849984d49076882f744b6b6f45a58f6308dca2213f16217e640b18c2c
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-SCP-001_System_Control_Profile_Template.md
   llm_include: true
   llm_priority: medium
