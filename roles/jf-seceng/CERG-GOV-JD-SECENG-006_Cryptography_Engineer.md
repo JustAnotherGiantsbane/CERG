@@ -130,7 +130,7 @@ Competency expectations for this role follow the Engineering pillar behavioral a
 
 ## 10. Success Profile
 
-A Cryptography Engineer is successful when the requirements and architectures they define change what platform teams deploy, and when validation establishes whether first-line evidence supports the stated design or exposes a gap. Key indicators: algorithm and key-size minimums are enforceable as written; rotation and expiry requirements are specified tightly enough for lifecycle automation to execute without interpretation; assessments of new designs and vendor products arrive before build decisions; a validated claim states its assessor, scope, and evidence period. Success is not measured by certificate expiry count or estate-wide scan grades, which describe the first-line owners and operators who run the platforms.
+A Cryptography Engineer is successful when the requirements and architectures they define change what platform teams deploy, and when validation establishes whether first-line evidence supports the stated design or exposes a gap. Key indicators: algorithm and key-size minimums are enforceable as written. rotation and expiry requirements are specified tightly enough for lifecycle automation to execute without interpretation. assessments of new designs and vendor products arrive before build decisions. a validated claim states its assessor, scope, and evidence period.. Success is not measured by certificate expiry count or estate-wide scan grades, which describe the first-line owners and operators who run the platforms.
 
 ## 11. Career Path
 
