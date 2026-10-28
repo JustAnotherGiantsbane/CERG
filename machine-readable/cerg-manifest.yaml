@@ -1,6 +1,6 @@
 # cerg-manifest.yaml
 # DERIVED ARTIFACT — authoritative source is the CERG markdown corpus
-# Generated: 2026-10-27 | Owner: Governance Pillar Leader (Document Control)
+# Generated: 2026-10-28 | Owner: Governance Pillar Leader (Document Control)
 # Regenerate on any change to source documents
 # See METADATA.yaml for full governance information
 
@@ -288,7 +288,7 @@
   title: CERG Framework
   document_type: governance_instrument
   domain: FRM
-  version: 1.23
+  version: 1.24
   status: Approved
   classification: Public
   publication_profile: public
@@ -297,7 +297,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-FRM-001_CERG_Framework.md
   source_file: CERG-GOV-FRM-001_CERG_Framework.md
-  source_hash: 26114a73c0254a9c2082a210e3cb256d77a5891587a65e22541e3c73084a0236
+  source_hash: 10a09a020c83e710c569c27ff210a6e8c333c5780d5c7353cb9da67facdf5af4
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-FRM-001_CERG_Framework.md
   llm_include: true
   llm_priority: high
@@ -588,7 +588,7 @@
   title: CERG Operating Model
   document_type: governance_instrument
   domain: OM
-  version: 1.26
+  version: 1.27
   status: Approved
   classification: Public
   publication_profile: public
@@ -597,7 +597,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   source_file: CERG-GOV-OM-001_CERG_Operating_Model.md
-  source_hash: 35b15f315ba3ac0f250fa3d8fc39793855a733eeef140ba36a55de968d3b4007
+  source_hash: 2c58dd31e5dfe99233ee21f87d0a147cf281f91b69a3804cfea9ffc96686fa56
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   llm_include: true
   llm_priority: high
@@ -648,7 +648,7 @@
   title: Consolidated Roles and RACI Instrument
   document_type: governance_instrument
   domain: RAC
-  version: 1.3
+  version: 1.4
   status: Approved
   classification: Public
   publication_profile: public
@@ -657,7 +657,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md
   source_file: CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md
-  source_hash: 24eed88fb32858b4eb16e1756c0cf3e49c624853c871606075d4e0d05d96c4b8
+  source_hash: 3284f59a4421a36170893b3e51741c03eea56aa1085dad23224c614300a9b444
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md
   llm_include: true
   llm_priority: medium
@@ -1248,7 +1248,7 @@
   title: Exposure Management Procedure
   document_type: procedure
   domain: VM
-  version: 2.03
+  version: 2.04
   status: Approved
   classification: Public
   publication_profile: public
@@ -1257,7 +1257,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md
   source_file: CERG-PRC-VM-001_Exposure_Management_Procedure.md
-  source_hash: dd195fe63a1ad283c176ec9c0cfb3d08f9aecbfd681078664479110ecfa89040
+  source_hash: c78244ee29b3cdfd18e1b3630fc33ff6024aab498cc159d88e514ed1c7afbe35
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md
   llm_include: true
   llm_priority: high
