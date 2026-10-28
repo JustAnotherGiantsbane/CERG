@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-002 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The Identity Engineer owns identity and access engineering: the identity provider, multi-factor authentication, single sign-on, privileged access management, secrets management, and federation. They are accountable for the technical implementation of the Access Management Standard and the Access Management Runbook. They ensure that every identity, human or machine, accessing a CERG-protected system is authenticated, authorized, and auditable.
+The Identity Engineer defines identity and access requirements and reference designs: IdP, MFA, SSO, federation, PAM, secrets management, and access-review rule sets. They review first-line identity output, validate the deployed state against the design, and challenge material dispositions. First-line service owners and operators run the identity platforms and execute provisioning, review, and runbook workflows. The engineer does not operate the IdP, MFA, SSO, or PAM platforms, and cannot validate a claim for a production state they deployed. They are accountable for the technical requirements of the Access Management Standard and Runbook; Governance holds approval authority. They ensure that every identity, human or machine, accessing a CERG-protected system is authenticated, authorized, and auditable.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -46,7 +46,15 @@ The Identity Engineer owns identity and access engineering: the identity provide
 
 ### 4.1 Core Responsibilities (All Grades)
 
-- Design, implement, and maintain the identity provider (IdP), MFA, SSO, and federation infrastructure - Own privileged access management (PAM): credential vaulting, session management, just-in-time access, and privilege elevation workflows - Manage secrets: rotation, access control, and lifecycle for API keys, service accounts, certificates, and machine credentials - Govern access provisioning and periodic access review, ensuring least-privilege principles are maintained - Operate the Access Management Runbook: joiner, mover, leaver workflows, emergency access procedures, and break-glass accounts - Design and enforce conditional access policies based on device posture, location, and risk signals - Support architecture review for projects with identity components, ensuring authentication and authorization patterns meet the standard - Contribute to the Access Management Standard and maintain its technical requirements - Support incident response for identity-compromise scenarios: token theft, session hijacking, credential dumping
+- Design the identity provider (IdP), MFA, SSO, and federation architecture: reference patterns, authentication and authorization requirements, and test cases
+- Validate deployed identity infrastructure against the design; production deployment and operation of IdP, MFA, SSO, and federation platforms is first-line work under the named identity service owner and operator
+- Design privileged access management (PAM): vaulting architecture, session-management rules, just-in-time access, and privilege-elevation workflows
+- Design secrets-management requirements: rotation, access control, and lifecycle rules for API keys, service accounts, certificates, and machine credentials; executing rotation in production is first-line work
+- Own the access-provisioning and periodic-access-review rules; executing provisioning and running the reviews in production is first-line work under the identity service owner and operator
+- Design the Access Management Runbook workflows: joiner, mover, leaver, emergency access, and break-glass procedures; operating the runbook is first-line work
+- Design conditional access policies from device posture, location, and risk signals; enforcing them in the production tenant is first-line work
+- Support architecture review for projects with identity components, ensuring authentication and authorization patterns meet the standard
+- Author and maintain the technical content of the Access Management Standard; Governance holds approval authority - Support incident response for identity-compromise scenarios: token theft, session hijacking, credential dumping
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
@@ -127,7 +135,7 @@ Competency expectations for this role follow the Engineering pillar behavioral a
 
 ## 10. Success Profile
 
-An Identity Engineer is successful when the identity and access control infrastructure is invisible to legitimate users and impenetrable to attackers. Key indicators: access decisions are made in milliseconds against authoritative data; privilege escalation attempts are detected in real time; user access certifications complete on schedule with minimal exceptions; the identity architecture scales without redesign as the organization grows. The engineer's work means that when an auditor asks "who has access to what," the answer is immediate, complete, and accurate.
+An Identity Engineer is successful when the requirements and reference designs they produce change what first-line identity teams deploy, and when validation establishes whether first-line evidence supports the stated design or exposes a gap. Key indicators: provisioning and review rules are implementable as written; runbook designs cover joiner, mover, leaver, and break-glass without an undocumented path; a validated claim states its assessor, scope, and evidence period; access findings are challenged with evidence, and the disposition changes when the challenge is right. Success is not measured by provisioning volume, review completion percentage, or sign-on latency, which describe the first-line owners and operators who run the platforms.
 
 ## 11. Career Path
 
@@ -165,7 +173,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-002 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -182,6 +190,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-10-28 | Engineering Pillar Leader / Governance Pillar Leader | Recast against the aligned authority layer per #253 and the ratified #258 model, following the pattern proven in #261 and #263: boundary stated once in the summary, one retained duty per bullet with first-line qualifiers in place, platform operation, provisioning execution, review running, rotation execution, and runbook operation named as first-line work, success profile limited to the role's own work with first-line metrics disclaimed. Standard-content bullet states authorship with Governance holding approval authority. No records, metrics, capability floors, or shared-block changes. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Extracted from monolithic JD-001 into enhanced per-role format with NICE mapping, KPI sections, and competency anchor sections. |
 
 ### Review Triggers
