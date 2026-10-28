@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
-| **Version** | 1.27 |
+| **Version** | 1.28 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
@@ -88,7 +88,9 @@ The line of defense follows the purpose of the activity, not the technique, the 
 
 Where a condition is absent, CERG labels the output at the point of claim as conformance or operating-evidence review only, names the missing condition, and does not use the output to support a compensated-exposure or comparable disposition. The deficiency enters [CERG-GOV-IMPREG-001](CERG-GOV-IMPREG-001_Program_Improvement_Register.md); material residual exposure follows [CERG-PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) and the risk-acceptance authority in [CERG-GOV-RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md). A deficiency that persists through two review cycles is a decision to operate without that assurance capability and requires formal risk acceptance under the applicable RMF authority.
 
-Where CERG operates a standing production service, it may not issue or approve the independent technical-effectiveness claim for that service; the independent assessor and review route are named in the service's control profile. For a small team, the independent approver may be another qualified person, an independent provider, or another documented independent route. The capability floor is access- and tooling-shaped, not headcount-shaped. Self-approval of consequential claims is the non-consolidable element.
+**State authorship and service operation.** CERG may author candidate content and validate an independently deployed state. When a CERG action changes a live service's coverage, availability, routing, or enforcement, it is a first-line operational action for the affected scope. The independent technical-effectiveness claim for that scope is suspended until the named independent assessor verifies the outcome. Emergency or break-glass action remains first-line operation at the moment of action; retrospective approval does not restore the claim.
+
+Where CERG holds ongoing service-level obligations — availability, coverage delivery, triage, escalation, or remediation — it operates that service and may not issue or approve its independent technical-effectiveness claim. The service control profile names the independent assessor and review route. For a small team, the independent approver may be another qualified person, an independent provider, or another documented independent route. The capability floor is access- and tooling-shaped, not headcount-shaped. Self-approval of consequential claims is the non-consolidable element.
 
 
 **Independent assurance and external scrutiny** consume those outputs differently. Internal Audit, where established, provides independent assurance. External auditors and assessors test or attest; regulators supervise and enforce; insurers underwrite; and the board governs and challenges through CISO reporting. CERG makes these engagements efficient by maintaining decision-useful evidence, defensible risk records, and clear control and regulatory mappings.
@@ -657,7 +659,7 @@ This ensures that "no single point of failure" is not just a claim about org-cha
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
-| **Version** | 1.27 |
+| **Version** | 1.28 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
@@ -673,6 +675,7 @@ This ensures that "no single point of failure" is not just a claim about org-cha
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.28 | 2026-10-28 | Governance Pillar Leader | Clarified state authorship in §2.4: live CERG changes suspend the affected effectiveness claim until independent verification; break-glass approval does not restore it. Clarified that ongoing service obligations make CERG the service operator for the hybrid rule. |
 | 1.27 | 2026-10-28 | Governance Pillar Leader | Added second-line operating boundary in 2.4: first-line service operation, conditions for an independent technical-effectiveness claim (independence, capability, currency), consequence ladder, and hybrid rule. Added Engineering operating boundary and design-time statement in 3.1, conformed Risk core activities and OT safety constraint in 3.2, and standing security-operations services bullet in 3.4. Per second-line boundary RFC. |
 | 1.26 | 2026-06-18 | Governance Pillar Leader | Clarified Identity Risk Analyst as a mature-program specialization covered by Detection Engineer or Risk Pillar Leader in smaller teams. |
 | 1.25 | 2026-06-18 | Governance Pillar Leader | Clarified Security Awareness as an adjacent function: Awareness owns training operations while CERG coordinates content alignment, evidence quality, and threat context. |
