@@ -11,7 +11,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-FRM-001 |
-| **Version** | 1.23 |
+| **Version** | 1.24 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | CISO |
@@ -118,14 +118,16 @@ CERG pillars are not sequential. They operate simultaneously and continuously, w
 |Lifecycle Stage|Primary Pillar|Supporting Pillars|
 |---|---|---|
 |Business requirement / new project|Engineering|Governance sets standards; Risk flags vendor/solution concerns|
-|Design and architecture review|Engineering|Risk performs threat modeling and vendor assessment|
-|Pre-production vulnerability scan|Risk|Engineering remediates findings pre-launch|
+|Design and architecture review|Engineering (independent review gate)|Delivery teams perform project threat modeling; CERG Engineering reviews material architectures; Risk consumes results to target validation|
+|Pre-production vulnerability scan|First line (delivery acceptance)|Risk and Engineering consume findings for exposure validation and remediation|
 |Risk acceptance (if vuln unresolvable)|Engineering + Risk|Governance provides risk treatment plan template; CISO/leadership signs off on High/Critical|
-|Production deployment|Engineering|Governance and Risk assume post-production monitoring|
+|Production deployment|Engineering|First-line owners operate and monitor; Risk independently validates exposure and control effectiveness|
 |Ongoing standards conformance assurance|Governance|Risk validates exposure and control weakness; Engineering and accountable owners remediate gaps|
 |Evidence assurance and audit readiness|Governance|First-line owners, Engineering, and Risk produce artifacts from their daily work|
 |Adversarial validation: pen test / red team / purple team|Risk|Engineering reviews findings for architectural impact; Governance logs findings|
 |Regulatory exam or audit|Governance|All pillars provide evidence; Engineering and Risk support responses|
+
+CERG's operating boundary makes continuous threat exposure management (CTEM) an operating-model property rather than a program to install: first-line owners and providers perform discovery, treatment, and recovery; CERG independently frames scope, classifies exposure, validates whether controls hold, and challenges treatment closure. This allocation of who scopes, who discovers, who prioritizes, who validates, who mobilizes, and who assures is what makes continuous exposure management trustworthy. It creates no new lifecycle, role, record type, metric set, or tool dependency; exposure and validation remain governed by [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md), [CERG-PRC-AV-001](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md), [CERG-GOV-CEF-001](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md), and [CERG-GOV-MTR-001](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md).
 
 ---
 
@@ -264,7 +266,7 @@ Risk serves both a pre-production function (finding issues before systems go liv
 
 ### 5.2 Core Functions
 
-- **Exposure Management**: continuous scanning of IT and OT environments; prioritization of findings by criticality, exploitability, and asset value; tracking remediation to closure
+- **Exposure Management**: independent validation and classification of exposure across IT and OT environments; prioritization of findings by criticality, exploitability, and asset value; challenge and tracking of remediation to closure. Observation-source operation (scanning, CSPM, SSPM) is a first-line service
 - **Adversarial Validation**: authorized testing of controls under adversary-like conditions, including penetration testing, red-team operations, purple-team detection validation, cloud attack simulation, and OT-safe assessment where in scope; findings fed back to Engineering and Governance
 - **Threat Intelligence**: monitoring of threat actor activity, emerging CVEs, and sector-specific intelligence (including ICS/SCADA threats for OT environments); distribution of actionable intelligence to Engineering, IR, and Governance
 - **Vendor and Third-Party Risk**: security review of vendor contracts, SaaS solutions, and third-party integrations; contract redline support for security requirements
@@ -504,7 +506,7 @@ This is an intentionally large example. The goal is to show what CERG looks like
 
 At this scale, the workload is substantial across all three pillars. Engineering carries approximately 125 active project engagements per year with roughly 40 running concurrently, spanning infrastructure, enterprise applications, cloud migrations, and third-party integrations. Engineers are aligned to specific business verticals and develop fluency in the systems they support, not just the security controls that apply to them.
 
-Risk operates at equivalent velocity. The vendor risk program may cover thousands of active vendors and an extended workforce of remote contractors. Exposure management may span 100,000+ assets across enterprise IT, OT networks, and cloud environments. Adversarial validation runs on continuous cycles across pen test, red-team, purple-team, cloud, and OT-safe activities where in scope. Threat intelligence is a production function producing actionable intelligence distributed to Engineering, Incident Response, and leadership.
+Risk operates at equivalent velocity. The vendor risk program may cover thousands of active vendors and an extended workforce of remote contractors. Exposure management may span 100,000+ assets across enterprise IT, OT networks, and cloud environments. Adversarial validation runs on continuous cycles across pen test, red-team, purple-team, cloud, and OT-safe activities where in scope. Threat intelligence is a risk-intelligence function producing actionable intelligence distributed to Engineering, first-line security operations, the standing Incident Response team, and leadership.
 
 Governance operates as a domain-expert function. Subject matter experts carry deep technical knowledge in network security, identity and access management, cloud security, OT/ICS security, and cryptography, then translate expertise into implementation guidance that engineering and operations teams use. The regulated scope may span multiple frameworks simultaneously, but the rules and evidence remain one operating model. The evidence library is a living system, not a pre-audit scramble. The policy and standards catalog is actively maintained, version-controlled, and tied to applicable obligations.
 
@@ -623,7 +625,7 @@ This is where CERG can beat traditional GRC: compliance becomes exhaust from goo
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-FRM-001 |
-| **Version** | 1.23 |
+| **Version** | 1.24 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | CISO |
@@ -637,6 +639,7 @@ This is where CERG can beat traditional GRC: compliance becomes exhaust from goo
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.24 | 2026-10-28 | Governance Pillar Leader | Added CTEM operating-model property paragraph in 2; conformed lifecycle table and Risk core functions in 5.2 and 10 to the second-line boundary (first-line scanning and monitoring, independent Risk validation). |
 | 1.23 | 2026-09-01 | Cyber Governance | Clarified Cyber Governance as CERG's second-line authority: it sets standards and assurance expectations, while first-line owners, Engineering, and Risk produce operating evidence and remediate or validate control gaps. Reframed regulatory alignment as an output of the normal CERG assurance loop. |
 | 1.0 | 2026-05-01 | CISO + Cyber Governance | Initial release. Narrative description of the CERG framework, pillars, and operating model. |
 | 1.21 | 2026-05-22 | Cyber Governance | Updated framework references and pillar descriptions. |
