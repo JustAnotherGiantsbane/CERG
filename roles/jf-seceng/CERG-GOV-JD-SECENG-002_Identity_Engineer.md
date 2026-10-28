@@ -135,7 +135,7 @@ Competency expectations for this role follow the Engineering pillar behavioral a
 
 ## 10. Success Profile
 
-An Identity Engineer is successful when the requirements and reference designs they produce change what first-line identity teams deploy, and when validation establishes whether first-line evidence supports the stated design or exposes a gap. Key indicators: provisioning and review rules are implementable as written; runbook designs cover joiner, mover, leaver, and break-glass without an undocumented path; a validated claim states its assessor, scope, and evidence period; access findings are challenged with evidence, and the disposition changes when the challenge is right. Success is not measured by provisioning volume, review completion percentage, or sign-on latency, which describe the first-line owners and operators who run the platforms.
+An Identity Engineer is successful when the requirements and reference designs they produce change what first-line identity teams deploy, and when validation establishes whether first-line evidence supports the stated design or exposes a gap. Key indicators: provisioning and review rules are implementable as written. runbook designs cover joiner, mover, leaver, and break-glass without an undocumented path. a validated claim states its assessor, scope, and evidence period. access findings are challenged with evidence, and the disposition changes when the challenge is right.. Success is not measured by provisioning volume, review completion percentage, or sign-on latency, which describe the first-line owners and operators who run the platforms.
 
 ## 11. Career Path
 
