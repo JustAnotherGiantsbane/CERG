@@ -168,7 +168,7 @@
   title: Crown Jewel Register and Scenario Library
   document_type: governance_instrument
   domain: CJ
-  version: 1.4
+  version: 1.5
   status: Approved
   classification: Public
   publication_profile: public
@@ -177,7 +177,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md
   source_file: CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md
-  source_hash: 935b82fdb8bda5b5e16d0a26f9776301bd7a05921e5ffb7ccf1abc9d136da899
+  source_hash: 236a85a8d24754d8c760a6fbafb7e24a932cbc2abf372619f6bcacba94e8edda
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md
   llm_include: true
   llm_priority: medium
