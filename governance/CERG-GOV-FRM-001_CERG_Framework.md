@@ -11,7 +11,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-FRM-001 |
-| **Version** | 1.24 |
+| **Version** | 1.25 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | CISO |
@@ -64,7 +64,7 @@ The CERG model names these activities explicitly, Engineering, Risk, and Governa
 - **Talent resilient:** cross-pillar knowledge sharing means no single person is a point of failure
 - **Adaptive-targeted:** the framework describes what operating at NIST CSF 2.0 Adaptive maturity looks like in practice
 - **"Yes, and..." oriented:** Governance enables the business through risk treatment, not reflexive refusal
-- **Definition of Done:** A CERG task is not done when a meeting happened, a document was approved, a ticket moved columns, a scanner showed fewer highs, or someone said "accepted risk." A CERG task is done when all of the following are true: (1) an owner is named, (2) a decision is recorded, (3) evidence is linked and independently verifiable, (4) residual risk is understood and documented, (5) the control state or register entry is updated, (6) a next review date exists, and (7) the system of record agrees with the operational reality. This standard applies to every CERG-managed workflow, finding, exception, risk acceptance, architecture review, and metric. If the Definition of Done cannot be satisfied because the organization lacks the tooling or discipline, CERG adoption is not complete.
+- **Definition of Done:** A CERG task is done when its stated decision or output exists, a named owner carries it, and the evidence its governing method requires is linked. Completion is set by the authority that governs the activity, not by a universal checklist. An architecture review closes at its go/no-go decision. A risk acceptance closes when the Risk Acceptance Record is signed per [RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. A metric closes when it is published on its cycle. A meeting, an approved document, a moved ticket, a lower scanner count, or the words "accepted risk" complete nothing. Where no authority defines a completion condition, the task is not yet specified.
 
 ---
 
@@ -99,7 +99,7 @@ Internal security consultants who partner with IT and business leaders to design
 
 **Know your exposure. Manage it deliberately. Never be surprised.**
 
-Continuous assessment and management of the organization's exposure through exposure management, adversarial validation, vendor risk assessment, and threat intelligence.
+Continuous independent assessment of the organization's exposure through exposure management, adversarial validation, vendor risk assessment, and threat intelligence. Operation of the sources that feed it is first-line work.
 
 ---
 
@@ -166,9 +166,9 @@ The following reference set establishes the capability naming pattern. Capabilit
 | CAP-ENG-SECIN-001 | Secure systems are reviewed before production go-live. | Cyber Engineering | [PRC-AR-001](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md), [PRC-TM-001](../procedures/CERG-PRC-TM-001_Threat_Modeling_Procedure.md), [CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) SA controls | Architecture review record, threat model record, pre-production checklist, risk acceptance package when needed | Quarterly sample of project records and go-live decisions |
 | CAP-ENG-CONFIG-001 | Approved configuration baselines are implemented and drift is detected. | Cyber Engineering | [STD-CFG-001](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md), [STD-AM-001](../standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md), [PRC-CHG-001](../procedures/CERG-PRC-CHG-001_Security_Change_Management_Procedure.md) | Baseline record, asset coverage report, drift finding, change record | Automated configuration scan and quarterly drift review |
 | CAP-ENG-RES-001 | Critical systems can be restored within defined recovery expectations. | Cyber Engineering + IR / BCDR | [STD-RES-001](../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md), [PLN-BC-001](../plans/CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md), [PLN-IR-001](../plans/CERG-PLN-IR-001_Incident_Response_Plan.md) | Backup evidence, restore test record, DR exercise package, recovery gap report | Restore test and DR exercise cadence by recovery tier |
-| CAP-RSK-EXP-001 | Critical and High exposure is triaged, treated, or accepted within defined SLAs. | Cyber Risk | [PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md), [GOV-RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md), [PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) | Finding record, SLA report, treatment plan, risk acceptance or exception record | Monthly SLA review and quarterly risk-register sample |
+| CAP-RSK-EXP-001 | CERG can state, from current evidence, whether Critical and High exposure is classified, independently validated, and driven to a decision. SLA delivery is first-line operating health, not a CERG result. | Cyber Risk | [PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md), [GOV-RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md), [PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md), [GOV-OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) §2.4 | Classification and independent validation result, challenge record, decision | Independent validation sample of first-line output; SLA read from [MTR-001](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) §3.2c |
 | CAP-RSK-ADV-001 | Controls are validated under adversary-like conditions. | Cyber Risk | [PRC-AV-001](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md), [STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md), [GOV-CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) CA-8 | Rules of engagement, engagement report, detection validation results, retest evidence | Annual adversarial validation plan with pen test, red-team, purple-team, cloud, application, or OT-safe activities as in scope |
-| CAP-RSK-DET-001 | Required telemetry and detections cover priority attack paths. | Cyber Risk + Incident Response | [STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md), [PRC-TI-001](../procedures/CERG-PRC-TI-001_Threat_Intelligence_Procedure.md), [PRC-AV-001](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) | Detection coverage record, source inventory, tuning record, ATT&CK coverage gap | Purple-team validation or automated adversary emulation |
+| CAP-RSK-DET-001 | CERG can state, from current evidence, whether required telemetry and detections cover priority attack paths. Telemetry and detection operation is first-line. CERG sets requirements, assures coverage, and validates independently. | Cyber Risk | [STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md), [PRC-TI-001](../procedures/CERG-PRC-TI-001_Threat_Intelligence_Procedure.md), [PRC-AV-001](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md), [GOV-OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) §2.4 | Coverage mapping, source provenance, independent validation result | Purple-team or adversary-emulation validation of the coverage claim |
 | CAP-RSK-TPRM-001 | Third-party and supply-chain risk is tiered, evidenced, and tracked. | Cyber Risk | [PRC-TPRM-001](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md), [GOV-EDG-001](CERG-GOV-EDG-001_Edge_Register.md), [CB-001](CERG-GOV-CB-001_Unified_Control_Baseline.md) SR controls | Vendor assessment record, tiering record, contract clauses, shared-responsibility matrix | Vendor sample review and critical-vendor refresh cadence |
 | CAP-GOV-RISK-001 | Risk decisions are recorded with owners, treatment, authority, and review dates. | Cyber Governance | [GOV-RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md), [PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md), [TMPL-RM-001](../templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) | Risk record, acceptance memo, exception record, review history | Monthly register review and overdue-risk escalation |
 | CAP-GOV-EVID-001 | Control evidence is complete, organized, attributable, and retrievable. | Cyber Governance | [PRC-AUD-001](../procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md), [GOV-AUD-001](CERG-GOV-AUD-001_Evidence_Quality_Standard.md), [GOV-CAT-002](CERG-GOV-CAT-002_Record_Catalog.md) | Evidence index, evidence quality score, retrieval log, audit request package | Unannounced evidence spot-check by control family |
@@ -266,12 +266,14 @@ Risk serves both a pre-production function (finding issues before systems go liv
 
 ### 5.2 Core Functions
 
-- **Exposure Management**: independent validation and classification of exposure across IT and OT environments; prioritization of findings by criticality, exploitability, and asset value; challenge and tracking of remediation to closure. Observation-source operation (scanning, CSPM, SSPM) is a first-line service
+CERG does not operate scanners, CSPM or SSPM, detection platforms, or live queues. That is first-line work under [OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) §2.4. The functions below state what CERG does with the output.
+
+- **Exposure Management**: independent validation and classification of exposure across IT and OT environments; prioritization of findings by criticality, exploitability, and asset value; challenge and tracking of remediation to closure. Observation-source operation, including scanning, CSPM, and SSPM, is a first-line service under [OM-001](CERG-GOV-OM-001_CERG_Operating_Model.md) §2.4.
 - **Adversarial Validation**: authorized testing of controls under adversary-like conditions, including penetration testing, red-team operations, purple-team detection validation, cloud attack simulation, and OT-safe assessment where in scope; findings fed back to Engineering and Governance
 - **Threat Intelligence**: monitoring of threat actor activity, emerging CVEs, and sector-specific intelligence (including ICS/SCADA threats for OT environments); distribution of actionable intelligence to Engineering, IR, and Governance
 - **Vendor and Third-Party Risk**: security review of vendor contracts, SaaS solutions, and third-party integrations; contract redline support for security requirements
-- **Pre-Production Assessment**: vulnerability scanning and risk analysis of systems prior to go-live; classification of findings by severity; coordination with Engineering on remediation
-- **Risk Treatment and Acceptance**: for findings that cannot be immediately remediated, Risk co-develops treatment plans with Engineering and provides analysis to support leadership sign-off decisions
+- **Pre-Production Assessment**: independent risk analysis of systems before go-live, using first-line scan output; classification of findings by severity; coordination with Engineering on remediation
+- **Risk Treatment Options**: for findings that cannot be immediately remediated, Risk develops treatment options and the analysis that supports a leadership decision. Executing treatment stays with the asset owner.
 
 ### 5.3 Pre-Production vs. Post-Production Risk
 
@@ -291,16 +293,16 @@ Risk serves both a pre-production function (finding issues before systems go liv
 
 > **Scenario: NERC-CIP Vulnerability in a BES Cyber System**
 > 
-> During monthly vulnerability scanning, the Risk team identifies that a critical relay management workstation, classified as a BES Cyber System under NERC-CIP CIP-002, is running an operating system version with a known critical vulnerability (CVSS 9.1). The asset cannot be patched within the standard 35-day window due to vendor testing requirements. Risk identifies a potential CIP-007-6 deviation and validates the residual exposure. The system owner documents the deviation and treatment plan; Engineering adds network monitoring as a compensating control. Governance assures that the exception path, evidence, approval, and escalation requirements are met. The CISO and VP of Operations sign the deviation. Risk tracks the patch to closure within the extended timeline and validates the compensating-control evidence.
+> During its monthly vulnerability scan, the first-line operations team surfaces a critical relay management workstation, classified as a BES Cyber System under NERC-CIP CIP-002, is running an operating system version with a known critical vulnerability (CVSS 9.1). The asset cannot be patched within the standard 35-day window due to vendor testing requirements. Risk identifies a potential CIP-007-6 deviation and validates the residual exposure. The system owner documents the deviation and treatment plan; Engineering adds network monitoring as a compensating control. Governance assures that the exception path, evidence, approval, and escalation requirements are met. The CISO and VP of Operations sign the deviation. Risk tracks the patch to closure within the extended timeline and validates the compensating-control evidence.
 
 ### 5.5 NIST Framework Alignment: Risk
 
 |NIST Framework|Relevant Controls / Functions|Risk Team Role|
 |---|---|---|
 |NIST CSF 2.0|GOVERN (Risk Strategy), IDENTIFY (Risk Assessment, Improvement), DETECT (Adverse Event Analysis)|Primary driver of IDENTIFY and DETECT; co-owner of GOVERN risk functions|
-|NIST 800-53|RA (Risk Assessment), CA (Assessment & Authorization), PM (Program Mgmt), SI-2 (Flaw Remediation)|Executes RA and CA controls; owns SI-2 for patch and vuln tracking|
+|NIST 800-53|RA (Risk Assessment), CA (Assessment & Authorization), PM (Program Mgmt), SI-2 (Flaw Remediation)|Performs RA and CA assessments; tracks SI-2 remediation and validates remediation claims|
 |NIST 800-171|3.11 Risk Assessment|Performs periodic assessments of CUI-handling environments|
-|NIST RMF|Step 4 (Assess), Step 6 (Monitor)|Primary executor of continuous monitoring; supports periodic assessments|
+|NIST RMF|Step 4 (Assess), Step 6 (Monitor)|Independent assessor in Step 4; reads Step 6 monitoring output produced by first-line services|
 |NERC-CIP|CIP-007 (Patch Mgmt), CIP-010 (Vuln Assessments), CIP-011 (Info Protection)|Manages CIP-007 patch tracking; conducts CIP-010 annual vuln assessments|
 |CMMC|Level 2: Risk Assessment (RA), Audit & Accountability (AU)|Performs CMMC risk assessments; supports audit log review program|
 
@@ -345,7 +347,7 @@ Governance sets the evidence standard: acceptable proof that a control is design
 
 - **First-line system and business owners produce:** operational records, owner attestations, implementation decisions, and remediation evidence for systems they operate
 - **Engineering produces:** architecture review documentation, pre-production checklists, configuration baselines, guardrail implementation records, and technical handoff evidence
-- **Risk produces:** vulnerability scan reports, penetration test findings, threat intelligence assessments, vendor risk assessments, and exposure-validation records
+- **Risk produces:** exposure-validation records, penetration test findings, threat intelligence assessments, vendor risk assessments, and challenge records. Scan output is produced by the first line and consumed here.
 - **Governance produces:** policies, standards, control and evidence criteria, decision records, exception approvals, assurance results, and improvement records
 
 Governance assures the evidence library rather than performing every collection activity. It tests whether evidence is organized, dated, attributable, retrievable, and retained for the required period; accountable owners correct evidence gaps or control deficiencies.
@@ -478,7 +480,7 @@ The push to modernize OT infrastructure is real. Utilities are evaluating advanc
 
 The Risk team's approach to OT environments differs from IT in several important ways:
 
-- **Scanning must be OT-safe:** active network scanning of OT environments can disrupt control processes. Risk uses passive monitoring, vendor-provided scan tools, and approved active scanning windows coordinated with OT operations.
+- **Scanning must be OT-safe:** active network scanning of OT environments can disrupt control processes. CERG sets the OT-safe method requirements and the rules of engagement. The first-line OT operator runs passive monitoring, vendor scan tools, and approved active scan windows.
 - **Patch windows are constrained:** OT systems often cannot be patched on standard IT timelines due to vendor testing requirements, operational windows, and redundancy limitations. Risk tracks OT patch exposure and validates the residual risk when a standard cannot be met; Governance assures the exception path and evidence requirements.
 - **Availability is the primary objective:** in OT environments, availability often outranks confidentiality in the risk calculus. Risk team members must understand this trade-off and communicate findings in terms of operational impact, not just CVSS scores.
 - **Threat intelligence must include ICS-specific sources:** Risk maintains subscriptions to ICS-CERT advisories, E-ISAC threat intelligence, and vendor-specific security bulletins for all OT platforms in use.
@@ -506,7 +508,7 @@ This is an intentionally large example. The goal is to show what CERG looks like
 
 At this scale, the workload is substantial across all three pillars. Engineering carries approximately 125 active project engagements per year with roughly 40 running concurrently, spanning infrastructure, enterprise applications, cloud migrations, and third-party integrations. Engineers are aligned to specific business verticals and develop fluency in the systems they support, not just the security controls that apply to them.
 
-Risk operates at equivalent velocity. The vendor risk program may cover thousands of active vendors and an extended workforce of remote contractors. Exposure management may span 100,000+ assets across enterprise IT, OT networks, and cloud environments. Adversarial validation runs on continuous cycles across pen test, red-team, purple-team, cloud, and OT-safe activities where in scope. Threat intelligence is a risk-intelligence function producing actionable intelligence distributed to Engineering, first-line security operations, the standing Incident Response team, and leadership.
+Risk works at equivalent velocity. The vendor risk program may cover thousands of active vendors and an extended workforce of remote contractors. Exposure management may span 100,000+ assets across enterprise IT, OT networks, and cloud environments. Adversarial validation runs on continuous cycles across pen test, red-team, purple-team, cloud, and OT-safe activities where in scope. Threat intelligence is a risk-intelligence function producing actionable intelligence distributed to Engineering, first-line security operations, the standing Incident Response team, and leadership.
 
 Governance operates as a domain-expert function. Subject matter experts carry deep technical knowledge in network security, identity and access management, cloud security, OT/ICS security, and cryptography, then translate expertise into implementation guidance that engineering and operations teams use. The regulated scope may span multiple frameworks simultaneously, but the rules and evidence remain one operating model. The evidence library is a living system, not a pre-audit scramble. The policy and standards catalog is actively maintained, version-controlled, and tied to applicable obligations.
 
@@ -520,11 +522,11 @@ A representative staffing structure for a CERG of this scale:
 |Senior Cyber Engineer - IT/Cloud (×3)|Engineering|Enterprise IT and cloud vertical leads; application and infrastructure security architecture; identity and access design; pre-production assessment leadership|
 |Cyber Engineer (×8)|Engineering|Project-level security consultation across assigned verticals; pre-production coordination with Risk; vendor solution review; risk treatment plan drafting; handoff documentation|
 |Risk Pillar Leader|Risk|Program ownership across vuln management, adversarial validation, threat intel, and vendor risk; OT risk strategy; executive risk reporting|
-|Senior Risk Analyst - Exposure Management (×3)|Risk|Enterprise vuln scan operations; OT-safe scanning program; finding prioritization and triage; SLA tracking and escalation; remediation verification|
+|Senior Risk Analyst - Exposure Management (×3)|Risk|Exposure classification and independent validation; OT-safe assessment requirements and rules of engagement; finding prioritization and challenge; remediation verification; first-line SLA performance read and reported|
 |Threat Intelligence Analyst (×2)|Risk|Threat actor tracking; ICS/OT-specific intelligence production; E-ISAC and ICS-CERT liaison; intelligence distribution to Engineering and IR|
 |Senior Risk Analyst - Vendor & Third-Party Risk (×2)|Risk|Vendor security assessment program; contractor access risk; contract redline support; supply chain risk reporting|
 |Risk Analyst - Adversarial Testing (×3)|Risk|Internal pen test execution; external red team coordination; purple-team support; OT adversarial testing; findings documentation and tracking|
-|Risk Analyst (×5)|Risk|Day-to-day vuln tracking and owner follow-up; vendor assessment support; threat feed monitoring; finding remediation documentation|
+|Risk Analyst (×5)|Risk|Day-to-day vuln tracking and owner follow-up; vendor assessment support; threat feed consumption; finding remediation documentation|
 |Governance Pillar Leader|Governance|Policy, standards, and control-assurance ownership; regulated-overlay assurance; risk-register governance; Governance team development|
 |NERC-CIP Compliance Manager (×3)|Governance|BES Cyber System standards conformance; CIP exception and mitigation assurance; NERC-CIP evidence quality; reliability-security interface|
 |Senior Governance Analyst - Technical Domains (×4)|Governance|Domain SME coverage across network security, IAM, cloud, and cryptography; implementation guidance production; standard development; Engineering QA reviews|
@@ -567,7 +569,7 @@ In practice, this means that a new Cyber Engineer can learn the organization's s
 The first priority is standing up the CERG structure and establishing the baseline work products each pillar needs to function.
 
 - **Engineering:** Document the active project portfolio. Identify any in-flight projects that should receive a retroactive engineering review. Establish the lightweight intake process.
-- **Risk:** Stand up or audit the exposure management program. Ensure IT and OT environments are covered with appropriate scanning approaches. Inventory threat intelligence feeds.
+- **Risk:** Stand up or audit the exposure management program. Assure that first-line scanning covers IT and OT environments with appropriate methods. Inventory threat intelligence feeds.
 - **Governance:** Conduct a policy gap assessment against NIST 800-53 and applicable regulatory frameworks. Identify the three to five most critical missing or out-of-date policies. Build or inherit the risk register.
 
 ### 11.2 Phase 2: Operate (Months 4–9)
@@ -576,7 +578,7 @@ With the structure in place, the focus shifts to operating CERG as a team and bu
 
 - Establish a regular CERG operating cadence, weekly pillar syncs, monthly cross-pillar review, quarterly CISO briefing
 - Engineering begins processing the project intake queue and building the first round of handoff documentation
-- Risk begins producing regular vulnerability reports with prioritized findings and tracking remediation to SLA
+- Risk begins publishing regular exposure assessments that prioritize first-line scan findings, and reports SLA performance as first-line operating health
 - Governance completes the first standards-conformance assessment against NERC-CIP and CMMC overlays; begins assuring the evidence library
 - All pillars begin practicing the "yes, and..." model on real business requests
 
@@ -588,7 +590,7 @@ The CERG model begins demonstrating Repeatable behavior. The path to Adaptive re
 - Governance launches a formal QA cycle, quarterly reviews of Engineering and Risk work products against defined standards
 - Engineering demonstrates consistent early engagement on projects, present at business requirements stage, not called in at go-live
 - First external validation: coordinate a NERC-CIP compliance audit or CMMC readiness assessment to measure progress and identify gaps
-- Begin building the metrics program, vulnerability SLA adherence, time-to-engage on new projects, evidence collection completeness, policy currency
+- Begin building the metrics program: first-line SLA performance, time-to-engage on new projects, evidence collection completeness, policy currency
 
 ### 11.4 Adaptive Indicators
 
@@ -625,7 +627,7 @@ This is where CERG can beat traditional GRC: compliance becomes exhaust from goo
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-FRM-001 |
-| **Version** | 1.24 |
+| **Version** | 1.25 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | CISO |
@@ -639,6 +641,7 @@ This is where CERG can beat traditional GRC: compliance becomes exhaust from goo
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.25 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Front door made second line: authority-conditional Definition of Done; exposure and detection capabilities stated as assurance outcomes over first-line operation; scanning, triage, live monitoring and treatment execution removed from Risk core functions, OT method wording, NIST role rows and the staffing plan. Links OM-001 §2.4 as the boundary authority. | #248 |
 | 1.24 | 2026-10-28 | Governance Pillar Leader | Added CTEM operating-model property paragraph in 2; conformed lifecycle table and Risk core functions in 5.2 and 10 to the second-line boundary (first-line scanning and monitoring, independent Risk validation). |
 | 1.23 | 2026-09-01 | Cyber Governance | Clarified Cyber Governance as CERG's second-line authority: it sets standards and assurance expectations, while first-line owners, Engineering, and Risk produce operating evidence and remediate or validate control gaps. Reframed regulatory alignment as an output of the normal CERG assurance loop. |
 | 1.0 | 2026-05-01 | CISO + Cyber Governance | Initial release. Narrative description of the CERG framework, pillars, and operating model. |
