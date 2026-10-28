@@ -228,7 +228,7 @@
   title: Contractor and Non-Employee Staff Integration Guide
   document_type: governance_instrument
   domain: CON
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -237,7 +237,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CON-001_Contractor_and_Non-Employee_Staff_Integration_Guide.md
   source_file: CERG-GOV-CON-001_Contractor_and_Non-Employee_Staff_Integration_Guide.md
-  source_hash: 5e0fa08023c97a87f71e432bd77d97a3c342cfca1c6dd55baef497e35e86ed60
+  source_hash: 08af01daca3498cf8f61ba28fff8084558019da4773648bd8ad6afb825791534
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CON-001_Contractor_and_Non-Employee_Staff_Integration_Guide.md
   llm_include: true
   llm_priority: medium
@@ -588,7 +588,7 @@
   title: CERG Operating Model
   document_type: governance_instrument
   domain: OM
-  version: 1.27
+  version: 1.28
   status: Approved
   classification: Public
   publication_profile: public
@@ -597,7 +597,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   source_file: CERG-GOV-OM-001_CERG_Operating_Model.md
-  source_hash: 2c58dd31e5dfe99233ee21f87d0a147cf281f91b69a3804cfea9ffc96686fa56
+  source_hash: f0c8d50f6aadee99aa6896963f844986e670a3fba2aa7da67a527248dac55c57
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   llm_include: true
   llm_priority: high
@@ -648,7 +648,7 @@
   title: Consolidated Roles and RACI Instrument
   document_type: governance_instrument
   domain: RAC
-  version: 1.4
+  version: 1.5
   status: Approved
   classification: Public
   publication_profile: public
@@ -657,7 +657,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md
   source_file: CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md
-  source_hash: 3284f59a4421a36170893b3e51741c03eea56aa1085dad23224c614300a9b444
+  source_hash: 4425120bf1a1d67df23a0ebdbeaab21964a5083a54924da72bda0394d5f28e77
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md
   llm_include: true
   llm_priority: medium
@@ -2548,7 +2548,7 @@
   title: System Control Profile Template
   document_type: template
   domain: SCP
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -2557,7 +2557,7 @@
   parent_artifact: 'CERG-GOV-CAT-002 — Record Catalog'
   source_path: templates/CERG-TMPL-SCP-001_System_Control_Profile_Template.md
   source_file: CERG-TMPL-SCP-001_System_Control_Profile_Template.md
-  source_hash: 645d2effa2035a9af73712be44defb3c77b250eff1cb89b67aac5425bcfa5d71
+  source_hash: f083701ab9439197a3d252df8a47f7710233319589177c1bffe6c847e106d9ca
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-SCP-001_System_Control_Profile_Template.md
   llm_include: true
   llm_priority: medium
