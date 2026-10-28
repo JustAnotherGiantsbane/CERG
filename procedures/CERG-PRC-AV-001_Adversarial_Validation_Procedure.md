@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AV-001 |
-| **Version** | 1.4 |
+| **Version** | 1.5 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Adversarial Testing Lead |
@@ -361,7 +361,7 @@ The following are prohibited absent a documented exception with engineering and 
 - Engineering-supervised authenticated checks in a defined window.
 - Tabletop / scenario-based assessment with OT operators.
 
-A load-bearing chain link validated through a permitted approach above constitutes the alternative independent validation that a CJ-001 bounded defense claim requires only when the final report states assessor, method (which permitted approach), and evidence period for that link. Without those three stated in the record, the validation is not evidenced.
+A load-bearing chain link validated through a permitted approach above constitutes the alternative independent validation that a [`CERG-GOV-CJ-001`](../governance/CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md) bounded defense claim requires only when the final report states assessor, method (which permitted approach), and evidence period for that link, and the assessor is independent of the operator and state author for the asserted scope per CJ-001 Section 5.5. Without those stated in the record, the validation is not evidenced.
 
 ### 9.3 Authority and Safety Officer
 
@@ -603,7 +603,7 @@ Final reports are distributed under the confidentiality terms in the RoE. Full r
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AV-001 |
-| **Version** | 1.4 |
+| **Version** | 1.5 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / on material program change |
-| **Change Log** | 1.0 - Initial publication. Engagement types, RoE, charter, purple, cloud, app, OT safety, rating/routing, evidence retention. · 1.1 - Added Section 11 Systemic Analysis and Program Feedback Loop: post-engagement systemic analysis, systemic finding routing, prevention verification, and annual trend analysis. · 1.2 - Restored Section 12 Roles and Responsibilities. Renumbered Evidence Retention to Section 13, Regulatory to 14, Document Control to 15. · 1.3 - Clarified that PRC-VM-001 governs exposure treatment timelines while PRC-AV-001 governs adversarial validation rating, routing, retest, and escalation discipline. · 1.4 - RoE objectives name the scenario ID and asserted protected-system scope where an engagement is commissioned against a CJ-001 scenario; a Section 9.2 permitted approach evidences a load-bearing link only when the final report states assessor, method, and evidence period. Evidence mechanics only; the three-state outcome rule stays in CJ-001. |
+| **Change Log** | 1.0 - Initial publication. Engagement types, RoE, charter, purple, cloud, app, OT safety, rating/routing, evidence retention. · 1.1 - Added Section 11 Systemic Analysis and Program Feedback Loop: post-engagement systemic analysis, systemic finding routing, prevention verification, and annual trend analysis. · 1.2 - Restored Section 12 Roles and Responsibilities. Renumbered Evidence Retention to Section 13, Regulatory to 14, Document Control to 15. · 1.3 - Clarified that PRC-VM-001 governs exposure treatment timelines while PRC-AV-001 governs adversarial validation rating, routing, retest, and escalation discipline. · 1.4 - RoE objectives name the scenario ID and asserted protected-system scope where an engagement is commissioned against a CJ-001 scenario; a Section 9.2 permitted approach evidences a load-bearing link only when the final report states assessor, method, and evidence period. Evidence mechanics only; the three-state outcome rule stays in CJ-001. · 1.5 - Scoped-independence clause added to the 9.2 evidence sentence per review: the assessor must be independent of the operator and state author for the asserted scope per CJ-001 5.5; CJ-001 now linked for referential checking. |
