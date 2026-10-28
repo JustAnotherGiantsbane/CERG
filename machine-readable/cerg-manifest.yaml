@@ -168,7 +168,7 @@
   title: Crown Jewel Register and Scenario Library
   document_type: governance_instrument
   domain: CJ
-  version: 1.0
+  version: 1.4
   status: Approved
   classification: Public
   publication_profile: public
@@ -177,7 +177,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md
   source_file: CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md
-  source_hash: 8e8c6c01cda0f0b107f38f26ef98bf07133b0587cf150b8d035a72884b4f3daf
+  source_hash: 935b82fdb8bda5b5e16d0a26f9776301bd7a05921e5ffb7ccf1abc9d136da899
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md
   llm_include: true
   llm_priority: medium
@@ -1228,7 +1228,7 @@
   title: Third Party and Supply Chain Risk Procedure
   document_type: procedure
   domain: TPRM
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -1237,7 +1237,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
   source_file: CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
-  source_hash: c0d784e43415df50ff0d91c8131a96895cefaefac7085681f115f493d1d40630
+  source_hash: bef7fdff9b7a2c5a01181f9876d44c78f9f06bd1a416a1791849e0aa6442b679
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
   llm_include: true
   llm_priority: medium
@@ -2548,7 +2548,7 @@
   title: System Control Profile Template
   document_type: template
   domain: SCP
-  version: 1.1
+  version: 1.2
   status: Approved
   classification: Public
   publication_profile: public
@@ -2557,7 +2557,7 @@
   parent_artifact: 'CERG-GOV-CAT-002 — Record Catalog'
   source_path: templates/CERG-TMPL-SCP-001_System_Control_Profile_Template.md
   source_file: CERG-TMPL-SCP-001_System_Control_Profile_Template.md
-  source_hash: f083701ab9439197a3d252df8a47f7710233319589177c1bffe6c847e106d9ca
+  source_hash: 76bc0259bb98b6f6ee55c2ee934a37224a7072e3856de66f544cf711ed225a1a
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-SCP-001_System_Control_Profile_Template.md
   llm_include: true
   llm_priority: medium
