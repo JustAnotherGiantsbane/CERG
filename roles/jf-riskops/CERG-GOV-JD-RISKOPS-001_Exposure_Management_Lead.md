@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-JD-RISKOPS-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The Exposure Management Lead operates the Exposure Management Procedure. They own the observation intake, scanner integration, exposure validation, finding triage, remediation SLAs, and exposure posture metrics that feed the CISO dashboard. They ensure that every material exposure is known, prioritized, assigned, tracked to treatment, and reported.
+The Exposure Management Lead owns the assurance side of the Exposure Management Procedure: exposure classification, validation-state criteria, remediation SLA measurement, exposure-path assessment, observation-source provenance and coverage assurance, and the exposure posture metrics that feed the CISO dashboard. The role's line of defense is per activity and scope, not a role-wide designation: classification, criteria, measurement, verification, and challenge are second-line assurance work; operating and maintaining observation sources and their state changes are first-line work under the service owner and operator. They ensure that every material exposure is known, prioritized, assigned, tracked to treatment, and reported.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -46,7 +46,15 @@ The Exposure Management Lead operates the Exposure Management Procedure. They ow
 
 ### 4.1 Core Responsibilities (All Grades)
 
-- Operate and maintain exposure observation sources across IT, cloud, and OT environments, including vulnerability scanners, CSPM, SSPM, SCA, and OT passive monitoring - Define and enforce triage criteria: validation state, reachability, exploitability, asset criticality, and exposure classification - Own remediation SLAs and track compliance, escalating overdue findings per the defined process - Report exposure posture metrics: open findings by severity and age, SLA compliance, mean time to remediate, coverage gaps - Coordinate with IT, OT, and Engineering teams to drive remediation - Manage scanner-artifact triage and tuning to maintain signal quality - Govern OT-safe scanning procedures, ensuring scan techniques do not introduce operational risk - Contribute to exposure management tooling selection, configuration, and optimization - Support incident response with vulnerability and exposure context for compromised systems
+- Own observation-source provenance and coverage assurance: verify that the sources the first line operates are healthy, current, and complete, and query them independently; operating and maintaining scanners, CSPM, SSPM, SCA, and OT passive monitoring is first-line work under the service owner and operator
+- Define and enforce triage criteria: validation state, reachability, exploitability, asset criticality, and exposure classification
+- Own remediation SLA measurement and track compliance, escalating overdue findings per the defined process
+- Report exposure posture metrics: open findings by severity and age, SLA compliance, mean time to remediate, coverage gaps
+- Coordinate with IT, OT, and Engineering teams to drive treatment
+- Own scanning signal-quality requirements and review scanner-artifact triage outcomes; operating scanner tuning and connector health is first-line work
+- Own OT-safe scanning requirements and rules of engagement, ensuring scan techniques do not introduce operational risk; executing scans is first-line work under the OT system owner
+- Contribute to exposure management tooling requirements and selection; configuration and optimization of operated tooling is first-line work
+- Support incident response with vulnerability and exposure context for compromised systems
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
@@ -56,7 +64,7 @@ Grade-level responsibility differentiation for this role is defined in [JA-001 Â
 
 ### 5.1 Domain Expertise
 
-- Deep expertise in exposure management platforms: Tenable, Qualys, Rapid7, CrowdStrike Spotlight, or equivalent - Vulnerability scoring and prioritization: CVSS, EPSS, CISA KEV, asset-contextual risk scoring - Understanding of remediation workflows and the operational constraints on patching - OT/ICS exposure management awareness (if the organization has OT) - Data analysis and reporting: ability to produce actionable metrics from scan data - Scripting and automation: Python, PowerShell, or equivalent
+- Working expertise in exposure management platforms (e.g., Tenable, Qualys, Rapid7, CrowdStrike Spotlight) sufficient to set requirements, assess source health, and query independently; platform operation and configuration are first-line work - Vulnerability scoring and prioritization: CVSS, EPSS, CISA KEV, asset-contextual risk scoring - Understanding of remediation workflows and the operational constraints on patching - OT/ICS exposure management awareness (if the organization has OT) - Data analysis and reporting: ability to produce actionable metrics from scan data - Scripting and automation: Python, PowerShell, or equivalent
 
 ### 5.2 Technical Skills
 
@@ -82,7 +90,7 @@ The following Task, Knowledge, and Skill statements are extracted from the NIST 
 | Knowledge | K0675 | Knowledge of risk management processes | Foundational knowledge for this role |
 | Knowledge | K0676 | Knowledge of cybersecurity laws and regulations | Foundational knowledge for this role |
 | Knowledge | K0677 | Knowledge of cybersecurity policies and procedures | Foundational knowledge for this role |
-| Skill | S0543 | Skill in scanning for vulnerabilities | Core capability for this role |
+| Skill | S0543 | Skill in scanning for vulnerabilities | Capability basis for scan requirements and independent query; scan execution is first-line work under the service owner/operator |
 | Skill | S0483 | Skill in identifying software communications vulnerabilities | Core capability for this role |
 | Skill | S0492 | Skill in performing threat environment analysis | Core capability for this role |
 | Skill | S0532 | Skill in analyzing software configurations | Core capability for this role |
@@ -114,11 +122,11 @@ Competency expectations for this role follow the Risk pillar behavioral anchors 
 
 | Competency Domain (CMP-001) | L1 Expectation | L2 Expectation | L3 Expectation | L4 Expectation |
 |-----------------------------|----------------|----------------|----------------|----------------|
-| Technical Depth | Operates the Risk pillar's tools (vulnerability scanner, CSPM platform, threat intel platform, detection pipeline) under supervision. Triages alerts following established procedures. Recognizes false positives and true positives with increasing accuracy. | Owns a Risk domain (e.g., exposure management for a platform class, vendor assessments for a business unit, a set of detection rules). Tunes tools to reduce noise and improve signal. Independently investigates findings and determines root cause. | Shapes the Risk pillar's approach to exposure management. Designs assessment methodologies. Correlates findings across tools to identify systemic weaknesses that individual alerts miss. | Sets the analytical bar for the entire Risk pillar. Called upon for the hardest exposure questions. Represents the organization's risk posture to regulators, auditors, and industry peers. |
+| Technical Depth | Produces and interprets independent technical evidence for exposure and risk decisions within their domain's method authority, under supervision. Triages findings following established procedures. Recognizes false positives and true positives with increasing accuracy. | Owns a Risk domain (e.g., exposure management for a platform class, vendor assessments for a business unit, a set of detection rules). Reviews tool output and tuning evidence to reduce noise and improve signal. Independently investigates findings and determines root cause. | Shapes the Risk pillar's approach to exposure management. Designs assessment methodologies. Correlates findings across tools to identify systemic weaknesses that individual alerts miss. | Sets the analytical bar for the entire Risk pillar. Called upon for the hardest exposure questions. Represents the organization's risk posture to regulators, auditors, and industry peers. |
 | Cross-Pillar Fluency | Understands that Engineering builds systems and Governance owns compliance. Reads architecture review outputs and compliance standards that affect their risk assessments. | Delivers risk findings in a format Engineering can act on. Understands what evidence Governance needs from Risk assessments and provides it proactively. Participates in cross-pillar threat modeling sessions. | Collaborates with Engineering to design controls that address risk findings, not just report them. Feeds risk intelligence into Governance's compliance calendar. Anticipates which risk findings will become audit findings. | Operates fluently across all three pillars. Contributes to Engineering architecture decisions and Governance standards as a peer. The person a pillar leader calls when a risk question spans all three pillars. |
 | Risk Judgment | Applies the risk taxonomy correctly when triaging findings. Distinguishes between Critical, High, Medium, and Low severity using the defined criteria. Escalates findings that exceed SLA without delay. | Independently assesses the business impact of findings in their domain. Adjusts risk ratings based on context and documents the rationale. Produces risk assessments that the Risk Pillar Leader accepts without material revision. | Assesses systemic risk: identifies patterns across individual findings that indicate a deeper weakness. Evaluates risk from new technologies, vendors, or business initiatives before they are operational. | Shapes the organization's risk appetite. Called upon by the CISO for independent risk evaluation on material decisions. Their risk judgment on novel or ambiguous situations is treated as authoritative. |
 | Communication | Writes clear finding descriptions with reproducible steps, impact statements, and remediation guidance. Updates stakeholders on finding status without being prompted. | Delivers risk briefings to business owners and project teams. Translates vulnerability data into business risk without losing technical accuracy. Writes vendor risk assessment reports that procurement and legal can act on. | Presents risk posture to executive audiences. Communicates threat landscape changes and their organizational implications. Writes threat intelligence products consumed by leadership. | Communicates organizational risk posture to the board, regulators, and external stakeholders. Represents the organization's risk position in industry forums. |
-| Operational Discipline | Triages findings within SLA. Documents assessment results in the designated system. Follows the exposure management and risk register procedures. | Owns operational SLAs for their domain. Ensures risk register entries are current and complete. Maintains scanning schedules, detection rule lifecycles, or vendor assessment cadences without gaps. | Designs risk assessment workflows that produce consistent, auditable output. Ensures the Risk pillar's operational cadence is documented, measured, and improving. Identifies and automates repetitive risk assessment tasks. | Sets operational standards for the Risk pillar. Defines what "defensible" risk assessment looks like under regulatory scrutiny. |
+| Operational Discipline | Triages findings within SLA. Documents assessment results in the designated system. Follows the exposure management and risk register procedures. | Owns operational SLAs for their domain. Ensures risk register entries are current and complete. Maintains assessment and evidence-currency cadences for their domain without gaps. | Designs risk assessment workflows that produce consistent, auditable output. Ensures the Risk pillar's operational cadence is documented, measured, and improving. Identifies and automates repetitive risk assessment tasks. | Sets operational standards for the Risk pillar. Defines what "defensible" risk assessment looks like under regulatory scrutiny. |
 | Influence and Mentorship | Learns from senior analysts. Asks good questions about methodology and judgment. Shares interesting findings with the team. | Trains new analysts on Risk tools and procedures. Peer-reviews risk assessments and detection rules. Their analytical judgment is sought by other team members. | Mentors analysts across Risk domains. Leads cross-functional risk initiatives. Their risk assessments shape how Engineering and business owners prioritize remediation. | Develops the analytical capability of the entire Risk team. Sets the quality bar for risk assessment, threat intelligence, and detection engineering. Influences organizational risk culture. |
 | Compliance and Regulatory Literacy | Knows which regulatory frameworks apply and can describe how Risk assessments support compliance. | Understands the specific regulatory requirements that govern their Risk domain. Produces risk assessments that meet the evidence standards of the relevant frameworks. | Anticipates how regulatory changes will affect the Risk program's scope and cadence. Advises Governance on the risk implications of compliance findings. | Contributes to the organization's regulatory strategy from a risk perspective. Engages with regulators on risk methodology. |
 | Continuous Learning | Completes assigned training. Pursues foundational certifications. Learns the organization's threat landscape. | Maintains current certifications. Tracks the threat actors, TTPs, and vulnerabilities relevant to the organization's industry. | Pursues advanced certifications. Contributes threat research or methodology improvements adopted by the team. Represents the organization in threat-sharing communities. | Recognized externally for risk or threat expertise. Contributes to industry threat intelligence, risk methodology, or detection frameworks. |
@@ -165,7 +173,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-JD-RISKOPS-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -182,6 +190,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Second-line boundary first slice per #234: role recast to the per-activity/scope boundary. Retained second-line: classification, criteria, SLA measurement, provenance and coverage assurance, challenge. Moved to first line: observation-source operation and maintenance, scanner tuning and connector health, scan execution, tooling configuration. NICE S0543 annotated; shared competency blocks updated to family-neutral evidence language. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Extracted from monolithic JD-001 into enhanced per-role format with NICE mapping, KPI sections, and competency anchor sections. |
 
 ### Review Triggers
