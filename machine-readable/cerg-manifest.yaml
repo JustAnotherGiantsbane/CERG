@@ -1248,7 +1248,7 @@
   title: Exposure Management Procedure
   document_type: procedure
   domain: VM
-  version: 2.04
+  version: 2.05
   status: Approved
   classification: Public
   publication_profile: public
@@ -1257,7 +1257,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md
   source_file: CERG-PRC-VM-001_Exposure_Management_Procedure.md
-  source_hash: c78244ee29b3cdfd18e1b3630fc33ff6024aab498cc159d88e514ed1c7afbe35
+  source_hash: f1ef31edaff7b5adeb19cc27198f2aa527b18976786d5adc462336732b5907fe
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md
   llm_include: true
   llm_priority: high
@@ -2548,7 +2548,7 @@
   title: System Control Profile Template
   document_type: template
   domain: SCP
-  version: 1.2
+  version: 1.3
   status: Approved
   classification: Public
   publication_profile: public
@@ -2557,7 +2557,7 @@
   parent_artifact: 'CERG-GOV-CAT-002 — Record Catalog'
   source_path: templates/CERG-TMPL-SCP-001_System_Control_Profile_Template.md
   source_file: CERG-TMPL-SCP-001_System_Control_Profile_Template.md
-  source_hash: 267a66a849984d49076882f744b6b6f45a58f6308dca2213f16217e640b18c2c
+  source_hash: 13714cd52694ba34773fba7c51f09cb5056394be19049798efabfe9b1dfd29ec
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-SCP-001_System_Control_Profile_Template.md
   llm_include: true
   llm_priority: medium

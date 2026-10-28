@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-TMPL-SCP-001 |
-| **Version** | 1.2 |
+| **Version** | 1.3 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
@@ -44,7 +44,7 @@ Use this template when an implementation needs to prove control state for a syst
 
 1. Store SCP records as YAML using the schema at [`../machine-readable/schemas/system-control-profile.schema.json`](../machine-readable/schemas/system-control-profile.schema.json).
 2. Use one SCP per system or per clearly bounded system class. A security service or observation source (for example, a SOC, scanner estate, CSPM tenant, or OT passive-monitoring deployment) is a system class and may have its own SCP.
-3. Use stable asset IDs from the authoritative asset inventory. A service SCP uses a stable service ID; protected-system SCPs reference the applicable service SCP IDs rather than duplicating service ownership, assurance rights, or operating obligations.
+3. Use stable asset IDs from the authoritative asset inventory. A service SCP uses a stable service ID; where it represents an observation source, its `system_id` is the Exposure Source ID used by `CERG-PRC-VM-001` intake. Protected-system SCPs reference the applicable service SCP IDs rather than duplicating service ownership, assurance rights, operating obligations, or coverage claims.
 4. Use control IDs from [`CERG-GOV-CB-001`](../governance/CERG-GOV-CB-001_Unified_Control_Baseline.md).
 5. Link each control entry to evidence that is independently verifiable under [`CERG-GOV-AUD-001`](../governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md).
 6. Record `last_validated` and `next_review` for every control entry.
@@ -162,7 +162,7 @@ Completed SCP records are reviewed at the cadence defined by their system classi
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-TMPL-SCP-001 |
-| **Version** | 1.2 |
+| **Version** | 1.3 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-20 |
 | **Classification** | Public |
@@ -179,7 +179,7 @@ Completed SCP records are reviewed at the cadence defined by their system classi
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.2 | 2026-10-28 | Engineering Pillar Leader | Added operator and independent assessor rows to the review and approval table for service SCPs, marked N/A on protected-system SCPs: the operator acknowledges operating terms, the assessor accepts the scoped assessment assignment, and neither approves the effectiveness claim. |
+| 1.3 | 2026-10-28 | Engineering Pillar Leader | Defined an observation-source service SCP's `system_id` as the Exposure Source ID used by VM intake; protected-system references explicitly express expected coverage rather than asserting coverage. |
 | 1.1 | 2026-10-28 | Engineering Pillar Leader | Added service-SCP guidance, a service interface block, and protected-system service references for the first-line service boundary experiment. |
 | 1.0 | 2026-06-20 | Engineering Pillar Leader | Initial publication. Establishes the System Control Profile as a structured per-system control implementation, evidence, validation, and review record. |
 
