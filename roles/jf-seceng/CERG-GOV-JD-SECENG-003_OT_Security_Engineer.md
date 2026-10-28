@@ -55,8 +55,8 @@ The OT Security Engineer defines OT security requirements and reference design f
 - Support NERC-CIP compliance activities: CIP-005 (electronic security perimeter), CIP-007 (systems security management), CIP-010 (configuration management and vulnerability assessments).
 - Review OT projects through the architecture review process, providing OT-specific threat and control analysis.
 - Validate that the enforced OT configuration state matches the stated design, within approved access and re-test rights.
-- Contribute to the Grid Control Systems Security Standard and maintain its technical requirements.
-- Support OT incident response: containment within the ESP, forensics without disrupting operations, evidence preservation for regulatory reporting.
+- Author and maintain the technical content of the Grid Control Systems Security Standard; Governance holds approval authority.
+- Provide OT-specific technical input to the standing Incident Response team during OT investigation and response, respecting operational safety and the Incident Commander's authority.
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
@@ -137,7 +137,7 @@ Competency expectations for this role follow the Engineering pillar behavioral a
 
 ## 10. Success Profile
 
-An OT Security Engineer is successful when the requirements, baselines, and reference design they produce change what OT operations deploys, and when validation finds what the operating environment would not have surfaced on its own. Key indicators: BES Cyber System baselines are implementable as written and align to the CIP requirements without a standing deviation; discovery and control requirements are precise enough for OT operations to execute without a safety question; independent validation confirms the enforced state matches the stated design; a risk disposition changes when challenged with evidence; operations teams consult the engineer before changing the environment rather than after. Success is not measured by a complete asset inventory, enforced segmentation, or incidents avoided, which describe OT operations and the Risk validation route.
+An OT Security Engineer is successful when the requirements, baselines, and reference design they produce change what OT operations deploys, and when validation establishes whether first-line evidence supports the stated design, or exposes a gap. Key indicators: BES Cyber System baselines are implementable as written and align to the CIP requirements without a standing deviation; discovery and control requirements are precise enough for OT operations to execute without a safety question; independent validation confirms the enforced state matches the stated design; a risk disposition changes when challenged with evidence; operations teams consult the engineer before changing the environment rather than after. Success is not measured by a complete asset inventory, enforced segmentation, or incidents avoided, which describe OT operations and the Risk validation route.
 
 ## 11. Career Path
 
