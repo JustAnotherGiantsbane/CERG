@@ -3,7 +3,7 @@
   "generated": "2026-10-28",
   "source": "local markdown corpus",
   "total_documents": 151,
-  "total_tokens_estimate": 1006547,
+  "total_tokens_estimate": 1006668,
   "by_type": {
     "readme": 15,
     "governance-instrument": 42,
@@ -827,8 +827,8 @@
         15057
       ],
       "lines_count": 378,
-      "chars": 34419,
-      "tokens": 9834,
+      "chars": 34842,
+      "tokens": 9955,
       "summary": "CERG GOV document: Consolidated Roles and RACI Instrument"
     },
     {

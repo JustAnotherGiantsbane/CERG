@@ -231,17 +231,17 @@ A normalized one-paragraph description for each canonical role. These are the jo
 
 **Engineering Pillar Leader.** Accountable for Engineering's project intake, reference architecture, technical review service, and technical standards. Resolves technical software-risk-tier disputes and escalates material disagreement; does not own the secure build, production operation, or go-live decision for a first-line service.
 
-**Cloud Security Engineer.** Owns cloud and SaaS platform security: infrastructure-as-code, cloud posture management, the landing zone, cloud network security, and the email and messaging platforms where they are SaaS. Responsible for shadow-IT and shadow-AI discovery through cloud signals.
+**Cloud Security Engineer.** Defines cloud and SaaS platform security requirements and reference patterns: infrastructure-as-code content, cloud posture requirements and test cases, landing-zone design, cloud network security, and the email and messaging security requirements where those platforms are SaaS. First-line service owners and operators run the cloud, SaaS, and messaging platforms and their posture tooling. Responsible for shadow-IT and shadow-AI discovery requirements through cloud signals.
 
 **Identity Engineer.** Supplies identity and access engineering: reference designs and guardrails for the identity provider, multi-factor authentication, single sign-on, privileged access management, secrets management, and federation. First-line service owners and operators perform production access provisioning and review; the Identity Engineer supports their design and assurance needs.
 
-**OT Security Engineer.** Owns operational technology security engineering: IT/OT convergence, the electronic security perimeter, the IT/OT boundary design, and BES Cyber System baselines. Responsible for OT-safe asset discovery and transient cyber asset control.
+**OT Security Engineer.** Defines OT security requirements and reference design: IT/OT convergence, the electronic security perimeter, the IT/OT boundary design, and BES Cyber System baselines. OT operations executes discovery and transient cyber asset control; the OT Security Engineer sets their requirements and validates the resulting state.
 
 **Application Security Engineer.** Defines application-security requirements, candidate SAST/DAST/SCA content, secure-development gate criteria, and technical review and test methods for in-house and embedded AI systems. First-line pipeline owners and operators deploy, tune, and run the tools and gates; the engineer reviews output and independently tests in approved scope.
 
-**Endpoint Engineer.** Owns endpoint and mobile security: endpoint and mobile baselines, the management and endpoint detection and response platforms, and the device posture signal consumed by the network and access standards. Accountable for the Endpoint and Mobile Security Standard.
+**Endpoint Engineer.** Defines endpoint and mobile security requirements and baselines, and the device-posture signal consumed by the network and access standards. The first-line operator runs the endpoint management and EDR platforms. Accountable for the Endpoint and Mobile Security Standard.
 
-**Cryptography Engineer.** Owns cryptography and key management: the key management and secrets platforms, the certificate authority hierarchy, transport security posture, and FIPS compliance. Supports rotation of exposed secrets.
+**Cryptography Engineer.** Defines cryptography and key-management requirements: key-management and secrets platform requirements, the certificate authority hierarchy design, transport-security posture, and FIPS compliance criteria. The first-line operator runs the key-management and secrets platforms and executes rotation of exposed secrets.
 
 **Pre-production Reviewer.** A rotated Engineering role. Conducts the pre-production technical review and states its disposition, confirming whether findings are remediated or follow the existing risk-acceptance route. The business or service owner decides go-live.
 
@@ -349,7 +349,7 @@ Risk-acceptance authority does not consolidate freely. The separation of the per
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.6 | 2026-10-28 | Governance Pillar Leader | Added accountable first-line owner and operator columns to engagement and build work; assigned pipeline enforcement, release, inventory onboarding, and vulnerability remediation to first line; recast Engineering/AppSec/pre-production authority as requirements, review, and escalation rather than operation or go-live approval. |
+| 1.6 | 2026-10-28 | Governance Pillar Leader | Added accountable first-line owner and operator columns to engagement and build work; assigned pipeline enforcement, release, inventory onboarding, and vulnerability remediation to first line; recast all Engineering summaries as requirements, review, validation, and escalation rather than platform operation or go-live approval. |
 | 1.5 | 2026-10-28 | Governance Pillar Leader | Added separate First-Line Service Owner and First-Line Operator interface columns to operational RACI rows; made first-line access provisioning and IR operation explicit; aligned Identity Engineer and incident-handoff descriptions to the state-authorship boundary. |
 | 1.4 | 2026-10-28 | Governance Pillar Leader | Split exposure scanning, threat intelligence, and detection rows into first-line operation and CERG validation in 6.2 and 6.4; conformed Exposure Management Lead, Threat Intelligence Analyst, Identity Risk Analyst, and Detection Engineer descriptions in 7.3 to the second-line boundary. |
 | 1.3 | 2026-07-24 | Governance Pillar Leader | Clarified adversarial validation RACI: Adversarial Testing Lead is responsible for execution while Risk Pillar Leader is accountable for the program; broadened the process label beyond pen test and red team to include purple-team, cloud, application, and OT-safe testing where in scope. |

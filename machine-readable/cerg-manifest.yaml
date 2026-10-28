@@ -657,7 +657,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md
   source_file: CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md
-  source_hash: 097a449f484e6c26afd8b8fb3d8296b57fef08d55f8cd195593c28946cbe1c46
+  source_hash: f1f9e8f980d39527057233dec1e10f68c0f9b9186cf834762f94435e4d67b250
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md
   llm_include: true
   llm_priority: medium
