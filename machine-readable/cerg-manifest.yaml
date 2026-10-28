@@ -1228,7 +1228,7 @@
   title: Third Party and Supply Chain Risk Procedure
   document_type: procedure
   domain: TPRM
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -1237,7 +1237,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
   source_file: CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
-  source_hash: c0d784e43415df50ff0d91c8131a96895cefaefac7085681f115f493d1d40630
+  source_hash: c65bf5124c70b6653529bd195e0f8f35625ff41d06a674c6f17dbcfbbaab05ff
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
   llm_include: true
   llm_priority: medium
@@ -2548,7 +2548,7 @@
   title: System Control Profile Template
   document_type: template
   domain: SCP
-  version: 1.1
+  version: 1.2
   status: Approved
   classification: Public
   publication_profile: public
@@ -2557,7 +2557,7 @@
   parent_artifact: 'CERG-GOV-CAT-002 — Record Catalog'
   source_path: templates/CERG-TMPL-SCP-001_System_Control_Profile_Template.md
   source_file: CERG-TMPL-SCP-001_System_Control_Profile_Template.md
-  source_hash: f083701ab9439197a3d252df8a47f7710233319589177c1bffe6c847e106d9ca
+  source_hash: 267a66a849984d49076882f744b6b6f45a58f6308dca2213f16217e640b18c2c
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-SCP-001_System_Control_Profile_Template.md
   llm_include: true
   llm_priority: medium
