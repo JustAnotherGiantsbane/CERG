@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-006 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The Cryptography Engineer owns cryptography and key management: the key management platforms, the certificate authority hierarchy, the transport security posture, and FIPS compliance. They ensure that encryption is correctly implemented, keys are protected, certificates do not expire unexpectedly, and cryptographic standards are met across the estate.
+The Cryptography Engineer defines cryptographic and key-management requirements: key-management and CA-hierarchy architecture, transport-security standards, rotation policy, and FIPS criteria. They review first-line platform output, assess designs and vendor products, and validate the enforced state against the design. First-line service owners and operators run the KMS, HSM, secrets, and CA platforms and execute key and certificate lifecycle operations. The engineer does not operate those platforms or perform production rotation. They ensure that encryption is correctly implemented, keys are protected, certificates do not expire unexpectedly, and cryptographic standards are met across the estate.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -46,7 +46,10 @@ The Cryptography Engineer owns cryptography and key management: the key manageme
 
 ### 4.1 Core Responsibilities (All Grades)
 
-- Design, implement, and maintain the enterprise key management infrastructure (HSM, cloud KMS, secrets vaults) - Govern the certificate authority (CA) hierarchy: internal CA, public CA integrations, certificate lifecycle automation - Define and enforce transport security requirements: TLS versions, cipher suites, certificate validation - Manage secrets rotation for machine identities, API keys, and service accounts - Ensure FIPS 140-2/140-3 compliance for cryptographic modules in regulated environments - Conduct cryptographic assessments of new systems, applications, and vendor products - Support the rotation of exposed secrets during incident response - Contribute to the Cryptography and Key Management Standard and maintain its technical requirements - Advise Engineering and IT teams on cryptographic design decisions
+- Design the enterprise key-management architecture: HSM, cloud KMS, and secrets-vault requirements and patterns; operating the platforms is first-line work under the named cryptography service owner and operator
+- Design the certificate authority hierarchy: internal CA, public-CA integrations, and certificate lifecycle automation requirements; issuing certificates and executing lifecycle operations is first-line work
+- Define transport-security requirements: TLS versions, cipher suites, and certificate validation
+- Design secrets-rotation policy for machine identities, API keys, and service accounts; executing rotation in production is first-line work - Ensure FIPS 140-2/140-3 compliance for cryptographic modules in regulated environments - Conduct cryptographic assessments of new systems, applications, and vendor products - Support incident response for exposed secrets with rotation design and expedited procedures; executing emergency rotation is first-line work - Author and maintain the technical content of the Cryptography and Key Management Standard; Governance holds approval authority - Advise Engineering and IT teams on cryptographic design decisions
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
@@ -127,7 +130,7 @@ Competency expectations for this role follow the Engineering pillar behavioral a
 
 ## 10. Success Profile
 
-A Cryptography Engineer is successful when the organization's cryptographic posture is correct by design and sustainable over time. Key indicators: all cryptographic keys are managed through a centralized key management system with full lifecycle tracking; certificate expiry is never an emergency; TLS configurations across the estate score A+ on every assessment; cryptographic algorithms and key lengths are consistent with current best practice. The engineer makes crypto "boring" — it works correctly, automatically, and nobody has to think about it.
+A Cryptography Engineer is successful when the requirements and architectures they define change what platform teams deploy, and when validation establishes whether first-line evidence supports the stated design or exposes a gap. Key indicators: algorithm and key-size minimums are enforceable as written; rotation and expiry requirements are specified tightly enough for lifecycle automation to execute without interpretation; assessments of new designs and vendor products arrive before build decisions; a validated claim states its assessor, scope, and evidence period. Success is not measured by certificate expiry count or estate-wide scan grades, which describe the first-line owners and operators who run the platforms.
 
 ## 11. Career Path
 
@@ -165,7 +168,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-006 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -182,6 +185,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-10-28 | Engineering Pillar Leader / Governance Pillar Leader | Recast against the aligned authority layer per #253 and the ratified #258 model, following the pattern proven in #261 and #263: boundary stated once in the summary, one retained duty per bullet with first-line qualifiers in place, platform operation, certificate and key lifecycle execution, production rotation, and emergency rotation named as first-line work, success profile limited to the role's own work with first-line metrics disclaimed. Standard-content bullet states authorship with Governance holding approval authority. No records, metrics, capability floors, or shared-block changes. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Extracted from monolithic JD-001 into enhanced per-role format with NICE mapping, KPI sections, and competency anchor sections. |
 
 ### Review Triggers
