@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-VM-001 |
-| **Version** | 2.04 |
+| **Version** | 2.05 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Exposure Management Lead |
@@ -145,11 +145,26 @@ Observations arrive from many sources. They are aggregated into a single pipelin
 
 Observation-source operation, including the scanning, posture, pipeline, and passive-monitoring sources above, is a first-line service. Where CERG operates a source, the hybrid rule in [CERG-GOV-OM-001](../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §2.4 applies and the independent assessor is named. For every source, CERG requires provenance and coverage status as intake metadata: the environments and asset classes covered, known blind spots, and current source health. A source's coverage claim is a validation input, not an assumption; CERG samples observations and coverage exports to verify the claim independently, and provider operating evidence does not close an exposure by itself.
 
+For an operated source, its **Exposure Source ID** is the stable `system_id` of its service System Control Profile (SCP). A scanner estate, CSPM tenant, SSPM deployment, SOC intake service, or OT passive-monitoring deployment may each have a source SCP; the ID identifies that bounded operated source, not a generic product name. This does not create a source register or second identifier. The native tool finding or event ID remains separate. For an external advisory, researcher report, or feed with no source SCP, use the publisher or native identifier for provenance and cite its existing canonical record when one is created; do not create a fictional service SCP.
+
+A protected-system SCP's `security_service_references[]` identifies the source services expected to cover it; it is not a coverage assertion. Current coverage and source-health evidence, plus independent sampling, determine whether the expectation holds. An unresolvable source ID, missing coverage evidence, or expected-versus-asserted coverage mismatch does not alter the observation's severity or stop triage. Preserve the observation and open or reuse an Asset Coverage Record where coverage is absent, or a Finding Record where source health or provenance is defective.
+
 Adversarial validation findings enter this workflow through the existing Adversarial Validation Record defined in [CERG-PRC-AV-001](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md), which remains the artifact for test scope, results, and remediation evidence. No new record type is introduced by the operating boundary; test plans for CERG-authored candidate detection content receive independent review per that procedure.
 
 ### 4.2 Observation Intake
 
 All observations enter the pipeline with source metadata, a timestamp, and the raw severity/score reported by the tool. No SLA clock starts at this point. The clock starts at confirmation (Step 4).
+
+| Intake metadata | Required content |
+|---|---|
+| `observation_source_id` | The source service SCP `system_id` for an operated source; otherwise the publisher or native origin identifier. |
+| `source_class` | The applicable source class in Section 4.1. |
+| `source_event_id` | The native tool, advisory, or test identifier used for deduplication and replay. |
+| `observed_at` | The time the source observed or issued the signal. |
+| `coverage_evidence_reference` | Current coverage or source-health evidence for the asserted period, where the source is operated. |
+| `origin_record_reference` | The related Adversarial Validation, Threat Intelligence, Incident, Vendor Risk, or other canonical record where one exists. |
+
+The record fields may be implemented as native tool fields, evidence-index metadata, or an intake-integration mapping; the canonical names above must remain traceable. An origin record is cited when it exists and is not a prerequisite for external intake.
 
 ### 4.3 External Reports and Supply Chain
 
@@ -453,7 +468,7 @@ Immediate escalation to CISO:
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-VM-001 |
-| **Version** | 2.04 |
+| **Version** | 2.05 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Exposure Management Lead |
@@ -470,6 +485,7 @@ Immediate escalation to CISO:
 
 | Version | Date | Author | Change Summary |
 |---------|------|--------|---------------|
+| 2.05 | 2026-10-28 | Governance Pillar Leader | Defined stable Exposure Source IDs without a source register: operated sources use their service SCP `system_id`; observation intake records source class, native event, time, coverage evidence, and origin record where available; protected-system references express expected coverage only; provenance and coverage gaps use existing Asset Coverage or Finding Records. |
 | 2.04 | 2026-10-28 | Governance Pillar Leader | Observation-source operation moved to first line in 4.1 with provenance and coverage intake metadata; Exposure Management Lead recast to validation, classification, SLA measurement, and challenge in 3; compensated dispositions require an independent technical-effectiveness claim per OM-001 2.4. Per second-line boundary RFC. |
 | 2.03 | 2026-10-27 | Governance Pillar Leader | Semi-annual review completed. Confirmed the six-step exposure workflow, treatment routing, regulatory overlays, adversarial-validation handoff, and metrics references remain current. Aligned the front-matter review cycle to the authoritative semi-annual Procedure Control cadence. |
 | 2.02 | 2026-06-18 | Governance Pillar Leader | Added OT/BES patch deferral routing for non-BES OT, BES compliance-unaffected deferrals, BES compliance-impacting deviations, and emergency operational exceptions. |
