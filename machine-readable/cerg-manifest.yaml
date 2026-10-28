@@ -1688,7 +1688,7 @@
   title: OT Risk Analyst
   document_type: job_description
   domain: JD-RISKOPS
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -1697,7 +1697,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-005_OT_Risk_Analyst.md
   source_file: CERG-GOV-JD-RISKOPS-005_OT_Risk_Analyst.md
-  source_hash: f27dd32a9544c37159834209d393a1226dbabb89bc6e3aaa9f1220ad0327299c
+  source_hash: 1f0d0fd9c245b9a1bb49aef521bfd8379ce923206a1cfe3b9ba97777333c9eb9
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-005_OT_Risk_Analyst.md
   llm_include: true
   llm_priority: low
@@ -1708,7 +1708,7 @@
   title: Identity Risk Analyst
   document_type: job_description
   domain: JD-RISKOPS
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -1717,7 +1717,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-006_Identity_Risk_Analyst.md
   source_file: CERG-GOV-JD-RISKOPS-006_Identity_Risk_Analyst.md
-  source_hash: ef68f7456d0bdf6e9ea9b30adbf0cb111981a87aab86789139bd46e369861579
+  source_hash: 33d6d56dd06d8aea7fe1510905359b73ecf84247bd178fdf22253fc5d848e4cc
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-006_Identity_Risk_Analyst.md
   llm_include: true
   llm_priority: low
