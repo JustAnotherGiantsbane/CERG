@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The Cloud Security Engineer owns cloud and SaaS platform security. They design, implement, and govern security controls across IaaS, PaaS, and SaaS environments, including infrastructure-as-code security, cloud posture management, landing zone architecture, cloud network security, and the security of email and messaging platforms where delivered as SaaS. They are the organization's authority on what a secure cloud deployment looks like and the person who ensures that authority is embedded in the platforms Engineering and IT teams use every day.
+The Cloud Security Engineer defines cloud and SaaS platform security requirements and reference patterns: infrastructure-as-code content, cloud posture requirements and test cases, landing-zone design, cloud network security, and the security requirements for email and messaging platforms where delivered as SaaS. They are the organization's authority on what a secure cloud deployment looks like, and they validate whether first-line platform owners and their providers achieved it. First-line service owners and operators run the cloud, SaaS, and messaging platforms and their posture tooling.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -46,7 +46,15 @@ The Cloud Security Engineer owns cloud and SaaS platform security. They design, 
 
 ### 4.1 Core Responsibilities (All Grades)
 
-- Design and maintain cloud security reference architecture, including landing zone controls, network segmentation, identity integration, and logging - Govern cloud security posture management (CSPM): policy definition, alert triage, and remediation tracking - Review infrastructure-as-code (Terraform, CloudFormation, Bicep) for security adequacy before deployment - Own the security configuration of SaaS platforms, including email, messaging, and collaboration tools - Discover and assess shadow-IT and shadow-AI usage through cloud signals and CASB tooling - Partner with IT and DevOps teams to embed security controls into CI/CD pipelines - Contribute to the IT / Cloud / SaaS Security Standard and maintain its cloud-specific requirements - Support architecture review for projects with cloud components, providing cloud-specific threat and control analysis - Investigate and respond to cloud security incidents in coordination with the Incident Response team
+- Design and maintain cloud security reference architecture, including landing zone controls, network segmentation, identity integration, and logging.
+- Define CSPM policy and posture requirements; review first-line triage output and validate remediation evidence. First-line operators run CSPM and triage its alerts.
+- Review infrastructure-as-code (Terraform, CloudFormation, Bicep) for security adequacy before deployment, and independently test the deployed posture in approved scope.
+- Define SaaS, email, messaging, and collaboration security requirements and configuration baselines; the first-line platform owner configures and operates the tenants.
+- Define shadow-IT and shadow-AI discovery requirements and review first-line cloud-signal and CASB output; the first-line operator runs the discovery tooling.
+- Partner with IT and DevOps teams, and supply candidate policy-as-code content so requirements are implementable; first-line pipeline owners embed and operate the controls.
+- Contribute to the IT / Cloud / SaaS Security Standard and maintain its cloud-specific requirements.
+- Support architecture review for projects with cloud components, providing cloud-specific threat and control analysis.
+- Provide cloud-specific technical input to the standing Incident Response team during cloud incident investigation and response.
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
@@ -127,7 +135,7 @@ Competency expectations for this role follow the Engineering pillar behavioral a
 
 ## 10. Success Profile
 
-A Cloud Security Engineer is successful when cloud and SaaS platforms are designed, deployed, and operated with security embedded, not bolted on. Key indicators: every cloud landing zone ships with guardrails, not gates; CSPM posture is green and findings are triaged within SLA; IaC reviews are fast, consistent, and rarely find the same issue twice; Engineering teams treat security as part of the deployment pipeline, not a separate review step. The engineer is the person project teams seek out for cloud security advice — and that advice is actioned, not debated.
+A Cloud Security Engineer is successful when the requirements and reference patterns they produce change what first-line teams deploy, and when independent validation finds what the platform tooling missed. Key indicators: landing-zone and IaC requirements are implementable as written and adopted without a standing exception list; posture requirements catch the misconfiguration classes the standard names; independent testing produces findings the operator could not have produced; a triage disposition changes when challenged with evidence; project teams seek cloud security input before the design is fixed. Success is not measured by green posture, findings triaged within SLA, or pipeline adoption, which describe the first-line owners and operators who run the platforms.
 
 ## 11. Career Path
 
@@ -165,7 +173,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -183,6 +191,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Extracted from monolithic JD-001 into enhanced per-role format with NICE mapping, KPI sections, and competency anchor sections. |
+| 1.1 | 2026-10-28 | Engineering Pillar Leader | Recast per-activity responsibilities for the second-line boundary: cloud and OT architecture, requirements, review, and validation remain with Engineering; first-line owners and operators run CSPM, CASB, discovery, production configuration, and remediation. |
 
 ### Review Triggers
 
