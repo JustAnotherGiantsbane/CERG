@@ -1817,7 +1817,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-002_Identity_Engineer.md
   source_file: CERG-GOV-JD-SECENG-002_Identity_Engineer.md
-  source_hash: 54eaa3fd41bdf20238e050dc72e9ffad1c2d640a8bd9d8242e782024e16e0f8f
+  source_hash: cec252a06a0eb6fc4bb8dc968ceff2e6010fb1c17ea18348c3e122d1462a6ac9
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-002_Identity_Engineer.md
   llm_include: true
   llm_priority: low
@@ -1877,7 +1877,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md
   source_file: CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md
-  source_hash: 0a03fabdbe9391f3d3cd2abeaba5c0bcfb288e4d505877c678e9c5f18afc431a
+  source_hash: 4c6e5d5dbe861e123d410d5faa33cd21f0a6746716cda3a0aaaef678b0bb94de
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md
   llm_include: true
   llm_priority: low
@@ -1897,7 +1897,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-006_Cryptography_Engineer.md
   source_file: CERG-GOV-JD-SECENG-006_Cryptography_Engineer.md
-  source_hash: 5620dec3a137cd2dcb5a2fec78802df848cd91da052142aa9c29857f5e1157c8
+  source_hash: 1af6c3f736b2d3b54421b143094ab7137dfa744cb6e91233deadc945dafb0472
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-006_Cryptography_Engineer.md
   llm_include: true
   llm_priority: low
