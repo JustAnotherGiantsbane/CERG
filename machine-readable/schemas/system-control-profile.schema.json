@@ -39,6 +39,13 @@
     },
     "last_profile_review": { "type": "string", "format": "date" },
     "next_profile_review": { "type": "string", "format": "date" },
+    "service_interface": { "$ref": "#/$defs/service_interface" },
+    "security_service_references": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true,
+      "default": []
+    },
     "controls_applied": {
       "type": "array",
       "minItems": 1,
@@ -46,6 +53,40 @@
     }
   },
   "$defs": {
+    "service_interface": {
+      "type": "object",
+      "required": [
+        "service_model",
+        "first_line_service_owner",
+        "first_line_operator",
+        "operational_boundaries",
+        "assurance_method_authority",
+        "assurance_rights",
+        "independent_assessor",
+        "evidence_currency_rule"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "service_model": {
+          "type": "string",
+          "enum": ["internal_function", "operating_division", "provider"]
+        },
+        "first_line_service_owner": { "type": "string", "minLength": 1 },
+        "first_line_operator": { "type": "string", "minLength": 1 },
+        "tool_or_tenant_owner": { "type": "string", "minLength": 1 },
+        "operational_boundaries": { "type": "string", "minLength": 1 },
+        "assurance_method_authority": { "type": "string", "minLength": 1 },
+        "assurance_rights": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "independent_assessor": { "type": "string", "minLength": 1 },
+        "evidence_currency_rule": { "type": "string", "minLength": 1 },
+        "provider_contract_reference": { "type": "string", "minLength": 1 }
+      }
+    },
     "control_entry": {
       "type": "object",
       "required": [
