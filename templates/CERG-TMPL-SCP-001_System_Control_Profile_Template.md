@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-TMPL-SCP-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
@@ -43,8 +43,8 @@ Use this template when an implementation needs to prove control state for a syst
 ## 2. Template Instructions
 
 1. Store SCP records as YAML using the schema at [`../machine-readable/schemas/system-control-profile.schema.json`](../machine-readable/schemas/system-control-profile.schema.json).
-2. Use one SCP per system or per clearly bounded system class.
-3. Use stable asset IDs from the authoritative asset inventory.
+2. Use one SCP per system or per clearly bounded system class. A security service or observation source (for example, a SOC, scanner estate, CSPM tenant, or OT passive-monitoring deployment) is a system class and may have its own SCP.
+3. Use stable asset IDs from the authoritative asset inventory. A service SCP uses a stable service ID; protected-system SCPs reference the applicable service SCP IDs rather than duplicating service ownership, assurance rights, or operating obligations.
 4. Use control IDs from [`CERG-GOV-CB-001`](../governance/CERG-GOV-CB-001_Unified_Control_Baseline.md).
 5. Link each control entry to evidence that is independently verifiable under [`CERG-GOV-AUD-001`](../governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md).
 6. Record `last_validated` and `next_review` for every control entry.
@@ -69,6 +69,20 @@ regulatory_scope:
 profile_status: "[Draft / Approved / Superseded / Retired]"
 last_profile_review: "[YYYY-MM-DD]"
 next_profile_review: "[YYYY-MM-DD]"
+# Complete once when this profile represents an operated security service or source.
+service_interface:
+  service_model: "[internal_function / operating_division / provider]"
+  first_line_service_owner: "[named internal individual]"
+  first_line_operator: "[team or provider]"
+  tool_or_tenant_owner: "[organization or provider]"
+  operational_boundaries: "[service obligations retained by the operator]"
+  assurance_method_authority: "[CERG document and section]"
+  assurance_rights: ["[read/query]", "[sampling]", "[re-test/replay]", "[closure verification]"]
+  independent_assessor: "[role or independent provider]"
+  evidence_currency_rule: "[period, scope, and material-change trigger]"
+  provider_contract_reference: "[optional provider package or contract ID]"
+# Protected systems use references and local scope only; they do not repeat the service interface.
+security_service_references: []
 controls_applied:
   - control: "[control ID]"
     implementation: "[how this system implements the control]"
@@ -100,6 +114,8 @@ regulatory_scope:
 profile_status: Approved
 last_profile_review: 2026-03-31
 next_profile_review: 2026-06-30
+security_service_references:
+  - OT-PASSIVE-MONITORING-001
 controls_applied:
   - control: AC-2
     implementation: AD group S47-Operators controls operator access; quarterly access review performed by the System Owner.
@@ -144,7 +160,7 @@ Completed SCP records are reviewed at the cadence defined by their system classi
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-TMPL-SCP-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-20 |
 | **Classification** | Public |
@@ -161,6 +177,7 @@ Completed SCP records are reviewed at the cadence defined by their system classi
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-10-28 | Engineering Pillar Leader | Added service-SCP guidance, a service interface block, and protected-system service references for the first-line service boundary experiment. |
 | 1.0 | 2026-06-20 | Engineering Pillar Leader | Initial publication. Establishes the System Control Profile as a structured per-system control implementation, evidence, validation, and review record. |
 
 ### Review Triggers
