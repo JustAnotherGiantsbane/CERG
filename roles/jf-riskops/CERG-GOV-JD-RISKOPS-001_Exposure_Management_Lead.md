@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-JD-RISKOPS-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The Exposure Management Lead operates the Exposure Management Procedure. They own the observation intake, scanner integration, exposure validation, finding triage, remediation SLAs, and exposure posture metrics that feed the CISO dashboard. They ensure that every material exposure is known, prioritized, assigned, tracked to treatment, and reported.
+The Exposure Management Lead owns the assurance side of the Exposure Management Procedure: exposure classification, validation-state criteria, remediation SLA measurement, exposure-path assessment, observation-source provenance and coverage assurance, and the exposure posture metrics that feed the CISO dashboard. The role's line of defense is per activity and scope, not a role-wide designation: classification, criteria, measurement, verification, and challenge are second-line assurance work; operating and maintaining observation sources and their state changes are first-line work under the service owner and operator. They ensure that every material exposure is known, prioritized, assigned, tracked to treatment, and reported.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -46,7 +46,15 @@ The Exposure Management Lead operates the Exposure Management Procedure. They ow
 
 ### 4.1 Core Responsibilities (All Grades)
 
-- Operate and maintain exposure observation sources across IT, cloud, and OT environments, including vulnerability scanners, CSPM, SSPM, SCA, and OT passive monitoring - Define and enforce triage criteria: validation state, reachability, exploitability, asset criticality, and exposure classification - Own remediation SLAs and track compliance, escalating overdue findings per the defined process - Report exposure posture metrics: open findings by severity and age, SLA compliance, mean time to remediate, coverage gaps - Coordinate with IT, OT, and Engineering teams to drive remediation - Manage scanner-artifact triage and tuning to maintain signal quality - Govern OT-safe scanning procedures, ensuring scan techniques do not introduce operational risk - Contribute to exposure management tooling selection, configuration, and optimization - Support incident response with vulnerability and exposure context for compromised systems
+- Own observation-source provenance and coverage assurance: verify that the sources the first line operates are healthy, current, and complete, and query them independently; operating and maintaining scanners, CSPM, SSPM, SCA, and OT passive monitoring is first-line work under the service owner and operator
+- Define and enforce triage criteria: validation state, reachability, exploitability, asset criticality, and exposure classification
+- Own remediation SLA measurement and track compliance, escalating overdue findings per the defined process
+- Report exposure posture metrics: open findings by severity and age, SLA compliance, mean time to remediate, coverage gaps
+- Coordinate with IT, OT, and Engineering teams to drive treatment
+- Own scanning signal-quality requirements and review scanner-artifact triage outcomes; operating scanner tuning and connector health is first-line work
+- Own OT-safe scanning requirements and rules of engagement, ensuring scan techniques do not introduce operational risk; executing scans is first-line work under the OT system owner
+- Contribute to exposure management tooling requirements and selection; configuration and optimization of operated tooling is first-line work
+- Support incident response with vulnerability and exposure context for compromised systems
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
@@ -56,7 +64,7 @@ Grade-level responsibility differentiation for this role is defined in [JA-001 Â
 
 ### 5.1 Domain Expertise
 
-- Deep expertise in exposure management platforms: Tenable, Qualys, Rapid7, CrowdStrike Spotlight, or equivalent - Vulnerability scoring and prioritization: CVSS, EPSS, CISA KEV, asset-contextual risk scoring - Understanding of remediation workflows and the operational constraints on patching - OT/ICS exposure management awareness (if the organization has OT) - Data analysis and reporting: ability to produce actionable metrics from scan data - Scripting and automation: Python, PowerShell, or equivalent
+- Working expertise in exposure management platforms (e.g., Tenable, Qualys, Rapid7, CrowdStrike Spotlight) sufficient to set requirements, assess source health, and query independently; platform operation and configuration are first-line work - Vulnerability scoring and prioritization: CVSS, EPSS, CISA KEV, asset-contextual risk scoring - Understanding of remediation workflows and the operational constraints on patching - OT/ICS exposure management awareness (if the organization has OT) - Data analysis and reporting: ability to produce actionable metrics from scan data - Scripting and automation: Python, PowerShell, or equivalent
 
 ### 5.2 Technical Skills
 
@@ -82,7 +90,7 @@ The following Task, Knowledge, and Skill statements are extracted from the NIST 
 | Knowledge | K0675 | Knowledge of risk management processes | Foundational knowledge for this role |
 | Knowledge | K0676 | Knowledge of cybersecurity laws and regulations | Foundational knowledge for this role |
 | Knowledge | K0677 | Knowledge of cybersecurity policies and procedures | Foundational knowledge for this role |
-| Skill | S0543 | Skill in scanning for vulnerabilities | Core capability for this role |
+| Skill | S0543 | Skill in scanning for vulnerabilities | Capability basis for scan requirements and independent query; scan execution is first-line work under the service owner/operator |
 | Skill | S0483 | Skill in identifying software communications vulnerabilities | Core capability for this role |
 | Skill | S0492 | Skill in performing threat environment analysis | Core capability for this role |
 | Skill | S0532 | Skill in analyzing software configurations | Core capability for this role |
@@ -110,7 +118,7 @@ KPIs for this role are defined in [MTR-001](../../governance/CERG-GOV-MTR-001_Me
 
 ## 9. Competency Expectations by Grade
 
-Competency expectations for this role follow the Risk pillar behavioral anchors from [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md). Each cell describes observable behavior demonstrating the competency at that grade. Anchors are cumulative: an L3 expectation includes the L1 and L2 anchors.
+Competency expectations for this role follow the Risk pillar behavioral anchors from [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md). Each cell describes observable behavior demonstrating the competency at that grade. Anchors are cumulative: an L3 expectation includes the L1 and L2 anchors. Competency statements describe capability, not assigned duty; operational duties are stated in Section 4 (Key Responsibilities).
 
 | Competency Domain (CMP-001) | L1 Expectation | L2 Expectation | L3 Expectation | L4 Expectation |
 |-----------------------------|----------------|----------------|----------------|----------------|
@@ -165,7 +173,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-JD-RISKOPS-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -182,6 +190,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Second-line boundary first slice per #234: role recast to the per-activity/scope boundary. Retained second-line: classification, criteria, SLA measurement, provenance and coverage assurance, challenge. Moved to first line: observation-source operation and maintenance, scanner tuning and connector health, scan execution, tooling configuration. NICE S0543 annotated; competency statements annotated as capability, not assigned duty. The shared competency block is left intact so the deferred A.5 sweep remains a single-variant, six-file edit. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Extracted from monolithic JD-001 into enhanced per-role format with NICE mapping, KPI sections, and competency anchor sections. |
 
 ### Review Triggers

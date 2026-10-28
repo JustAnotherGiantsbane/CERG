@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-JD-RISKOPS-004 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The Detection Engineer owns detection-rule authoring, MITRE ATT&CK coverage, and the detection tuning lifecycle. They turn threat intelligence, vulnerability data, and red team findings into detection content that finds adversaries before the adversary achieves their objective. They are the bridge between knowing what threats exist and being able to see them in the environment.
+The Detection Engineer owns candidate detection content: authoring, test cases, MITRE ATT&CK coverage mapping, tuning evidence review, and validation. The role's line of defense is per activity and scope, not a role-wide designation: authoring, testing, coverage mapping, and validation review are second-line assurance work; production deployment, tuning changes, and queue operation are first-line work under the service owner and operator. They turn threat intelligence, vulnerability data, and red team findings into detection content that finds adversaries before the adversary achieves their objective. They are the bridge between knowing what threats exist and being able to see them in the environment.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -46,7 +46,15 @@ The Detection Engineer owns detection-rule authoring, MITRE ATT&CK coverage, and
 
 ### 4.1 Core Responsibilities (All Grades)
 
-- Author, test, and deploy detection rules across SIEM, EDR, NDR, and cloud detection platforms - Map detection coverage to MITRE ATT&CK and maintain the coverage matrix - Tune detection rules to reduce false positives while maintaining true-positive sensitivity - Translate threat intelligence into detection content: new rules, updated logic, expanded data sources - Incorporate adversarial testing findings: write detections for the TTPs the red team successfully executed - Govern the detection lifecycle: new rule authoring, testing, deployment, performance monitoring, tuning, and retirement - Hand off confirmed detections to the Incident Response team per the defined procedure - Maintain and improve the logging and monitoring coverage required to support detection content - Contribute to the Logging, Monitoring, and Detection Standard
+- Author and test candidate detection rules across SIEM, EDR, NDR, and cloud detection platforms; production deployment is first-line work under the service owner and operator
+- Map detection coverage to MITRE ATT&CK and own the coverage matrix
+- Own tuning evidence review: candidate tuning changes that reduce false positives while maintaining true-positive sensitivity are authored here; applying changes in production is first-line work
+- Translate threat intelligence into candidate detection content: new rules, updated logic, expanded data source requirements
+- Incorporate adversarial testing findings: author detections for the TTPs the red team successfully executed
+- Own the candidate content lifecycle: authoring, test cases, coverage mapping, validation, and retirement recommendations; production deployment, performance monitoring, and tuning operation are first-line work
+- Hand off confirmed detections to the Incident Response team per the defined procedure
+- Own the logging and monitoring coverage requirements that support detection content; operating and maintaining the logging and monitoring estate is first-line work
+- Contribute to the Logging, Monitoring, and Detection Standard
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
@@ -84,7 +92,7 @@ The following Task, Knowledge, and Skill statements are extracted from the NIST 
 | Knowledge | K0951 | Knowledge of Intrusion Prevention System (IPS) tools and techniques | Foundational knowledge for this role |
 | Skill | S0859 | Skill in performing event correlation | Core capability for this role |
 | Skill | S0566 | Skill in developing signatures | Core capability for this role |
-| Skill | S0567 | Skill in deploying signatures | Core capability for this role |
+| Skill | S0567 | Skill in deploying signatures | Capability basis for authoring and testing candidate signatures; production deployment is first-line work under the service owner/operator |
 | Skill | S0627 | Skill in reading signatures | Core capability for this role |
 | Skill | S0712 | Skill in evaluating data source quality | Core capability for this role |
 
@@ -110,7 +118,7 @@ KPIs for this role are defined in [MTR-001](../../governance/CERG-GOV-MTR-001_Me
 
 ## 9. Competency Expectations by Grade
 
-Competency expectations for this role follow the Risk pillar behavioral anchors from [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md). Each cell describes observable behavior demonstrating the competency at that grade. Anchors are cumulative: an L3 expectation includes the L1 and L2 anchors.
+Competency expectations for this role follow the Risk pillar behavioral anchors from [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md). Each cell describes observable behavior demonstrating the competency at that grade. Anchors are cumulative: an L3 expectation includes the L1 and L2 anchors. Competency statements describe capability, not assigned duty; operational duties are stated in Section 4 (Key Responsibilities).
 
 | Competency Domain (CMP-001) | L1 Expectation | L2 Expectation | L3 Expectation | L4 Expectation |
 |-----------------------------|----------------|----------------|----------------|----------------|
@@ -165,7 +173,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-JD-RISKOPS-004 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -182,6 +190,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.2 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Second-line boundary first slice per #234: role recast to the per-activity/scope boundary. Retained second-line: candidate content authoring, test cases, ATT&CK coverage mapping, tuning evidence review, purple validation. Moved to first line: production deployment, tuning changes, queue operation, logging estate operation. NICE S0567 annotated; competency statements annotated as capability, not assigned duty. The shared competency block is left intact so the deferred A.5 sweep remains a single-variant, six-file edit. |
 | 1.1 | 2026-06-18 | Governance Pillar Leader | Corrected role body content so Detection Engineer responsibilities, KSAs, qualifications, and profile align to detection engineering rather than vendor risk. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Extracted from monolithic JD-001 into enhanced per-role format with NICE mapping, KPI sections, and competency anchor sections. |
 

@@ -225,7 +225,7 @@ If the observation matches a CISA Known Exploited Vulnerabilities (KEV) entry an
 
 ## 7. Step 4 — Classify
 
-After validation and reachability assessment, every observation is classified into exactly one category. This classification drives treatment priority, not CVSS score.
+After validation and reachability assessment, every observation is classified into exactly one category. This classification drives treatment priority, not CVSS score. Each classification records the version of the Threat Intelligence relevance criteria in force when it was made (criteria owned per [`CERG-GOV-RAC-001`](../governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) Section 6.2) — the same currency pattern as evidence, applied to the criteria — so classification decisions are auditable against the criteria that produced them.
 
 ### 7.1 Classification Taxonomy
 
@@ -485,7 +485,7 @@ Immediate escalation to CISO:
 
 | Version | Date | Author | Change Summary |
 |---------|------|--------|---------------|
-| 2.05 | 2026-10-28 | Governance Pillar Leader | Defined stable Exposure Source IDs without a source register: operated sources use their service SCP `system_id`; observation intake records source class, native event, time, coverage evidence, and origin record where available; protected-system references express expected coverage only; provenance and coverage gaps use existing Asset Coverage or Finding Records. |
+| 2.05 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Defined stable Exposure Source IDs without a source register: operated sources use their service SCP `system_id`; observation intake records source class, native event, time, coverage evidence, and origin record where available; protected-system references express expected coverage only; provenance and coverage gaps use existing Asset Coverage or Finding Records. Classification currency per #234: Section 7 requires each classification to record the Threat Intelligence relevance-criteria version in force when made (criteria owned per RAC-001 6.2), the evidence-currency pattern applied to the criteria. |
 | 2.04 | 2026-10-28 | Governance Pillar Leader | Observation-source operation moved to first line in 4.1 with provenance and coverage intake metadata; Exposure Management Lead recast to validation, classification, SLA measurement, and challenge in 3; compensated dispositions require an independent technical-effectiveness claim per OM-001 2.4. Per second-line boundary RFC. |
 | 2.03 | 2026-10-27 | Governance Pillar Leader | Semi-annual review completed. Confirmed the six-step exposure workflow, treatment routing, regulatory overlays, adversarial-validation handoff, and metrics references remain current. Aligned the front-matter review cycle to the authoritative semi-annual Procedure Control cadence. |
 | 2.02 | 2026-06-18 | Governance Pillar Leader | Added OT/BES patch deferral routing for non-BES OT, BES compliance-unaffected deferrals, BES compliance-impacting deviations, and emergency operational exceptions. |

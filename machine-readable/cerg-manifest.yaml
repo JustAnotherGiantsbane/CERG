@@ -1257,7 +1257,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md
   source_file: CERG-PRC-VM-001_Exposure_Management_Procedure.md
-  source_hash: f1ef31edaff7b5adeb19cc27198f2aa527b18976786d5adc462336732b5907fe
+  source_hash: aa7b363d63767967c6c8bc55a9ea4604f7c7de1c0cfde678f9a72ea9de8cef5d
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md
   llm_include: true
   llm_priority: high
@@ -1608,7 +1608,7 @@
   title: Exposure Management Lead
   document_type: job_description
   domain: JD-RISKOPS
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -1617,7 +1617,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md
   source_file: CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md
-  source_hash: e63d46c0c4229fe59354e533d9f4319f7f375c2783218d98163b8e34fc460e3b
+  source_hash: 651c106f0f89a6cc8de3de6fbd6a06852177b83ebe7fb0b1a94dedbe7d571f3e
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md
   llm_include: true
   llm_priority: low
@@ -1668,7 +1668,7 @@
   title: Detection Engineer
   document_type: job_description
   domain: JD-RISKOPS
-  version: 1.1
+  version: 1.2
   status: Approved
   classification: Public
   publication_profile: public
@@ -1677,7 +1677,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md
   source_file: CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md
-  source_hash: 846e8a3be2c4c8783b2fa202fcef82529e771e439c4741052d91c8555df39d73
+  source_hash: f0e6d7e2f9c11f815211d0079f9dd8aaffaf964c7a4f26632e93b077f32e5164
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md
   llm_include: true
   llm_priority: low
