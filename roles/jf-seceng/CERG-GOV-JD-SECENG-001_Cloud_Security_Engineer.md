@@ -52,7 +52,7 @@ The Cloud Security Engineer defines cloud and SaaS platform security requirement
 - Define SaaS, email, messaging, and collaboration security requirements and configuration baselines; the first-line platform owner configures and operates the tenants.
 - Define shadow-IT and shadow-AI discovery requirements and review first-line cloud-signal and CASB output; the first-line operator runs the discovery tooling.
 - Partner with IT and DevOps teams, and supply candidate policy-as-code content so requirements are implementable; first-line pipeline owners embed and operate the controls.
-- Contribute to the IT / Cloud / SaaS Security Standard and maintain its cloud-specific requirements.
+- Author and maintain the technical content of the IT / Cloud / SaaS Security Standard, including its cloud-specific requirements; Governance holds approval authority.
 - Support architecture review for projects with cloud components, providing cloud-specific threat and control analysis.
 - Provide cloud-specific technical input to the standing Incident Response team during cloud incident investigation and response.
 
@@ -135,7 +135,7 @@ Competency expectations for this role follow the Engineering pillar behavioral a
 
 ## 10. Success Profile
 
-A Cloud Security Engineer is successful when the requirements and reference patterns they produce change what first-line teams deploy, and when independent validation finds what the platform tooling missed. Key indicators: landing-zone and IaC requirements are implementable as written and adopted without a standing exception list; posture requirements catch the misconfiguration classes the standard names; independent testing produces findings the operator could not have produced; a triage disposition changes when challenged with evidence; project teams seek cloud security input before the design is fixed. Success is not measured by green posture, findings triaged within SLA, or pipeline adoption, which describe the first-line owners and operators who run the platforms.
+A Cloud Security Engineer is successful when the requirements and reference patterns they produce change what first-line teams deploy, and when independent validation establishes whether first-line evidence supports the stated requirement and design, or exposes a gap. Key indicators: landing-zone and IaC requirements are implementable as written and adopted without a standing exception list; posture requirements catch the misconfiguration classes the standard names; a validated claim states its assessor, scope, and evidence period, and does not outrun the evidence behind it; a triage disposition changes when challenged with evidence; project teams seek cloud security input before the design is fixed. Success is not measured by green posture, findings triaged within SLA, or pipeline adoption, which describe the first-line owners and operators who run the platforms.
 
 ## 11. Career Path
 
