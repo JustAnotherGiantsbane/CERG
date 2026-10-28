@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CON-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
@@ -137,7 +137,7 @@ The contractor or consulting firm delivers a defined scope of work against a sta
 
 ### 4.3 Managed Service
 
-An external provider operates a CERG function or sub-function on an ongoing basis. For example, a managed security service provider (MSSP) operating the SIEM and detection pipeline, or a third-party risk management firm conducting vendor assessments.
+This section governs delegation of a **CERG second-line function** to an external provider under CERG supervision. For example, a third-party risk-management firm may conduct vendor assessments on CERG's behalf. A first-line security service operated by an internal team, operating division, or provider — including SOC/SIEM operation, scanning, identity-threat monitoring, alert triage, or production detection deployment — is governed by the first-line service interface in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §2.4, not this section.
 
 **Best for:** Functions that are important but not core to the organization's differentiated security capability, or functions where the organization cannot recruit and retain the necessary expertise.
 
@@ -299,7 +299,7 @@ An engagement that is renewed more than twice should trigger a review of whether
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CON-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-05-27 |
 | **Classification** | Public |
@@ -316,7 +316,8 @@ An engagement that is renewed more than twice should trigger a review of whether
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.0 Draft | 2026-05-27 | Cyber Governance | Initial release. Defines role eligibility matrix identifying which CERG roles can be contractor-filled and which must remain employee-only. Establishes three engagement models (staff augmentation, project-based, managed service), the named supervisor rule, knowledge retention and artifact handoff protocols, condensed contractor onboarding program, mandatory offboarding checklist with post-departure verification, and contractor performance evaluation and renewal criteria. |
+| 1.1 | 2026-10-28 | Governance Pillar Leader | Scoped Managed Service to providers delivering CERG second-line functions; clarified that first-line security services are governed by OM-001 §2.4. |
+| 1.0 | 2026-05-27 | Cyber Governance | Initial release. Defines role eligibility matrix identifying which CERG roles can be contractor-filled and which must remain employee-only. Establishes three engagement models (staff augmentation, project-based, managed service), the named supervisor rule, knowledge retention and artifact handoff protocols, condensed contractor onboarding program, mandatory offboarding checklist with post-departure verification, and contractor performance evaluation and renewal criteria. |
 
 ### Review Triggers
 
