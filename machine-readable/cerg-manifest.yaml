@@ -588,7 +588,7 @@
   title: CERG Operating Model
   document_type: governance_instrument
   domain: OM
-  version: 1.28
+  version: 1.29
   status: Approved
   classification: Public
   publication_profile: public
@@ -597,7 +597,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   source_file: CERG-GOV-OM-001_CERG_Operating_Model.md
-  source_hash: f0c8d50f6aadee99aa6896963f844986e670a3fba2aa7da67a527248dac55c57
+  source_hash: 2757a01356675e4452090dc6243ae0b27da7d7ad735602ff0b721986cc84d3dd
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   llm_include: true
   llm_priority: high
@@ -1088,7 +1088,7 @@
   title: Adversarial Validation Procedure
   document_type: procedure
   domain: AV
-  version: 1.5
+  version: 1.6
   status: Approved
   classification: Public
   publication_profile: public
@@ -1097,7 +1097,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md
   source_file: CERG-PRC-AV-001_Adversarial_Validation_Procedure.md
-  source_hash: 753c048985b0c7e93c24e42c0613fd069f5b977ad19b0d814ea490c246ea984d
+  source_hash: a569cc95fe97cb4b5447843bfda36d31fe0a46735ee96349116e53b6a132a627
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md
   llm_include: true
   llm_priority: medium
