@@ -135,7 +135,7 @@ Competency expectations for this role follow the Engineering pillar behavioral a
 
 ## 10. Success Profile
 
-An Identity Engineer is successful when first-line teams receive usable identity requirements, reference designs, and candidate policy content before expensive implementation decisions. Review and validation establish whether first-line evidence supports the stated access and policy requirements or exposes a gap; the resulting decision is to remediate, provide better evidence, or route residual risk through [RMF-001 §9.7](../../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md#97-risk-acceptance-authority). Platform availability, provisioning execution, access-review completion, and policy operation remain first-line measures.
+An Identity Engineer is successful when first-line teams receive usable identity requirements, reference designs, and candidate policy content before expensive implementation decisions. Review and validation establish whether first-line evidence supports the stated access and policy requirements or exposes a gap; the resulting decision is to remediate, provide better evidence, or route residual risk through [RMF-001 §9.7](../../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md). Platform availability, provisioning execution, access-review completion, and policy operation remain first-line measures.
 
 ## 11. Career Path
 

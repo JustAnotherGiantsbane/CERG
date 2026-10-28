@@ -135,7 +135,7 @@ Competency expectations for this role follow the Engineering pillar behavioral a
 
 ## 10. Success Profile
 
-An Endpoint Engineer is successful when first-line teams receive usable baselines, posture requirements, and detection-use-case requirements before deployment decisions. Review and validation establish whether first-line evidence supports the stated requirements or exposes a gap; the resulting decision is to remediate, provide better evidence, or route residual risk through [RMF-001 §9.7](../../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md#97-risk-acceptance-authority). EDR coverage, agent health, patch compliance, drift remediation, and MDM operation remain first-line measures.
+An Endpoint Engineer is successful when first-line teams receive usable baselines, posture requirements, and detection-use-case requirements before deployment decisions. Review and validation establish whether first-line evidence supports the stated requirements or exposes a gap; the resulting decision is to remediate, provide better evidence, or route residual risk through [RMF-001 §9.7](../../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md). EDR coverage, agent health, patch compliance, drift remediation, and MDM operation remain first-line measures.
 
 ## 11. Career Path
 

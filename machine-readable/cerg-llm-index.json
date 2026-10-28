@@ -3,7 +3,7 @@
   "generated": "2026-10-28",
   "source": "local markdown corpus",
   "total_documents": 151,
-  "total_tokens_estimate": 1009651,
+  "total_tokens_estimate": 1009626,
   "by_type": {
     "readme": 15,
     "governance-instrument": 42,
@@ -2647,8 +2647,8 @@
         42471
       ],
       "lines_count": 211,
-      "chars": 23867,
-      "tokens": 6819,
+      "chars": 23838,
+      "tokens": 6811,
       "summary": "CERG JD document: Identity Engineer"
     },
     {
@@ -2707,8 +2707,8 @@
         43112
       ],
       "lines_count": 211,
-      "chars": 23651,
-      "tokens": 6757,
+      "chars": 23622,
+      "tokens": 6749,
       "summary": "CERG JD document: Endpoint Engineer"
     },
     {
@@ -2727,8 +2727,8 @@
         43325
       ],
       "lines_count": 211,
-      "chars": 23494,
-      "tokens": 6713,
+      "chars": 23465,
+      "tokens": 6704,
       "summary": "CERG JD document: Cryptography Engineer"
     },
     {
