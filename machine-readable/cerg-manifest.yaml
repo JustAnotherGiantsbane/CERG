@@ -1088,7 +1088,7 @@
   title: Adversarial Validation Procedure
   document_type: procedure
   domain: AV
-  version: 1.4
+  version: 1.5
   status: Approved
   classification: Public
   publication_profile: public
@@ -1097,7 +1097,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md
   source_file: CERG-PRC-AV-001_Adversarial_Validation_Procedure.md
-  source_hash: ce22863e09c5b133ec917bbd8106e93aa7e2042e2323b2107da2287d47903bd4
+  source_hash: 753c048985b0c7e93c24e42c0613fd069f5b977ad19b0d814ea490c246ea984d
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md
   llm_include: true
   llm_priority: medium

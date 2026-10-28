@@ -3,7 +3,7 @@
   "generated": "2026-10-28",
   "source": "local markdown corpus",
   "total_documents": 150,
-  "total_tokens_estimate": 995723,
+  "total_tokens_estimate": 995844,
   "by_type": {
     "readme": 15,
     "governance-instrument": 42,
@@ -1418,7 +1418,7 @@
       "type": "procedure",
       "pillar": "risk",
       "status": "Approved",
-      "version": "1.4",
+      "version": "1.5",
       "classification": "Public",
       "owner": "Adversarial Testing Lead",
       "path": "procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md",
@@ -1427,8 +1427,8 @@
         26436
       ],
       "lines_count": 609,
-      "chars": 38306,
-      "tokens": 10945,
+      "chars": 38732,
+      "tokens": 11066,
       "summary": "CERG PRC document: Adversarial Validation Procedure"
     },
     {
