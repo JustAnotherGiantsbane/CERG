@@ -133,7 +133,7 @@ Competency expectations for this role follow the Engineering pillar behavioral a
 
 ## 10. Success Profile
 
-An Endpoint Engineer is successful when the baselines and requirements they define change what IT and security operations deploy, and when validation establishes whether first-line evidence supports the stated baseline or exposes a gap. Key indicators: baselines are implementable as written across all three platform families; posture requirements map to signals the platforms can actually produce; drift reporting is precise enough to act on without a follow-up question; a validated claim states its assessor, scope, and evidence period. Success is not measured by coverage percentage, stale-agent count, or patch compliance, which describe the first-line owners and operators who run the platforms.
+An Endpoint Engineer is successful when the baselines and requirements they define change what IT and security operations deploy, and when validation establishes whether first-line evidence supports the stated baseline or exposes a gap. Key indicators: baselines are implementable as written across all three platform families. posture requirements map to signals the platforms can actually produce. drift reporting is precise enough to act on without a follow-up question. a validated claim states its assessor, scope, and evidence period.. Success is not measured by coverage percentage, stale-agent count, or patch compliance, which describe the first-line owners and operators who run the platforms.
 
 ## 11. Career Path
 
