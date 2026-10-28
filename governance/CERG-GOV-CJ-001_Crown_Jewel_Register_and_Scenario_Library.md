@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CJ-001 |
-| **Version** | 1.3 |
+| **Version** | 1.4 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader / Governance Pillar Leader |
@@ -210,7 +210,7 @@ Each pressure-test assembles a **bounded defense claim**: the sentence a service
 
 **Independence for the asserted scope.** A consequential defense claim requires an independent technical challenge of at least the load-bearing chain links. The challenge must be independent of the operator and state author **for the asserted scope**: the same practitioner may be independent for one scope and a state author for another. The report states assessor, method, asserted scope, evidence period, and exclusions, so it cannot imply a broader claim than the pairing supports. A state walk alone is conformance evidence; it is not the independent claim.
 
-**Load-bearing links.** Load-bearing links are the chain-breaking controls whose absence alone allows the scenario to complete. The report names them, and names any load-bearing link not challenged, with the reason and who accepted the residual. An unchallenged load-bearing link cannot support a fully defensible consequential claim: it must have alternative independent validation explicitly bounded to that link, or it becomes a gap and routes to the residual-risk path. A reason alone does not keep the claim green.
+**Load-bearing links.** Load-bearing links are the chain-breaking controls whose absence alone allows the scenario to complete. The report names them. A load-bearing link that was not challenged cannot support a fully defensible claim for that scenario: it must either carry alternative independent validation bounded to that link — assessor, method, and evidence period stated — or the claim records the link as a gap and follows the residual-risk path. A reason and an accepter downgrade the claim; they do not restore it.
 
 **Decision wiring.** The claim is put to the service owner or CISO as a decision question, not filed as an assessment. Where the claim carries business consequence, the decision is recorded as an Oversight Decision Record per [`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md); where the cap rule scopes the claim to the technical service, the decision routes to the system owner. The Oversight Decision Record may fund treatment, assign action, or route an acceptance request — it does not itself accept residual risk. Acceptance follows the full existing chain: the claim's finding creates or updates a Risk Register Entry per [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md), and the Risk Acceptance Record attaches to that entry per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 (TMPL-RM-004), accepted by the Business Owner or Executive Sponsor with CISO approval where required — an acceptance never floats as a memo or only as an Oversight Decision Record. A material residual change re-scores per RMF-001 Section 9.
 
@@ -222,7 +222,7 @@ Each pressure-test assembles a **bounded defense claim**: the sentence a service
 
 > "If our identity provider tenant is taken over tomorrow, can the attacker mint administrative access to [named business service], and would we catch it before privilege spreads? Current evidence: [per-link outcome, with dates and challenge evidence]. If not fully defensible: do you accept operating that way until [date] with [named compensations], or do you fund [named treatment]?"
 
-The two load-bearing links are challenged under [`CERG-PRC-AV-001`](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md): phishing-resistant MFA enforcement on privileged identity paths, and post-takeover session and token containment, which are the paths that ID-009 and ID-010 test currency in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) already measure. Gaps route to Finding Records per FLOW-001 F-04 and re-score per RMF-001 Section 9; the decision routes to an Oversight Decision Record; and any acceptance follows the same chain the structure defines — the finding creates or updates a Risk Register Entry per [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md), and the Risk Acceptance Record attaches to that entry per RMF-001 §9.7. Bracketed names are generic: the adopting organization supplies the service, dates, compensations, and treatments.
+The two load-bearing links are challenged under [`CERG-PRC-AV-001`](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md): phishing-resistant MFA enforcement on privileged identity paths, and post-takeover session and token containment, which are the paths that ID-009 and ID-010 test currency in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) already measure. Gaps route to Finding Records per FLOW-001 F-04 and re-score per RMF-001 Section 9; the decision routes to an Oversight Decision Record; and any acceptance follows the same chain the structure defines — the finding creates or updates a Risk Register Entry per [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md), and the Risk Acceptance Record attaches to that entry per RMF-001 §9.7. In the cap-scoped technical variant, the system owner's disposition is recorded on the Finding Record itself, with decision, date, and closure rationale. Bracketed names are generic: the adopting organization supplies the service, dates, compensations, and treatments.
 
 ---
 
@@ -261,7 +261,7 @@ This document is connective tissue. Its value is in the cross-references below; 
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CJ-001 |
-| **Version** | 1.3 |
+| **Version** | 1.4 |
 | **Status** | Approved |
 | **Approved By** | CISO |
 | **Owner** | Risk Pillar Leader / Governance Pillar Leader |
@@ -271,6 +271,7 @@ This document is connective tissue. Its value is in the cross-references below; 
 
 | **Version** | **Date** | **Author** | **Change** |
 |---|---|---|---|
+| 1.4 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Review adoption: load-bearing paragraph replaced with cragin-security's wording (three states — challenged, independently validated by another bounded method, gap on the residual path; a reason and an accepter downgrade, never restore); SCN-05 worked example shows the cap-scoped technical variant with disposition on the Finding Record. |
 | 1.3 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Record-chain completions: acceptance stated as the full existing chain (Finding Record, then Risk Register Entry per PRC-RM-001, then Risk Acceptance Record attached per RMF-001 §9.7 — never floating); cap-scoped technical disposition recorded in the existing Finding Record or Exposure Backlog Item with decision, date, and closure rationale; an unchallenged load-bearing link requires alternative independent validation bounded to the link or routes to the residual-risk path. |
 | 1.2 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Review corrections: obligation reference corrected to the §3.2 register field set (four consequence dimensions and `regulated_scope`) with the two-hop reference path through the protected-system SCP and `security_service_references[]`; load-bearing links defined; decision routing split — Oversight Decision Record for consequential claims, system owner for cap-scoped technical claims, and acceptance of residual risk recorded via the RMF-001 §9.7 Risk Acceptance Record, never the Oversight Decision Record. |
 | 1.1 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Second-line boundary experiment pilot: defines the bounded defense claim structure (5.5) with the consequence cap rule and scoped independence; publishes the pressure-test report as an Evidence Index Entry attached to the Crown Jewel Scenario Record; requires an independent challenge for consequential claims; wires decisions to the Oversight Decision Record; adds threat-event retest triggers and the SCN-05 worked generic pilot. No new record types; MTR-001 unchanged. |
