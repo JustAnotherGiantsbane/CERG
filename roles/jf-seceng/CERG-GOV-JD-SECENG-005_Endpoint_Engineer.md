@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-005 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The Endpoint Engineer owns endpoint and mobile security: the operating system baselines, the endpoint detection and response platform, the mobile device management controls, and the device posture signal that feeds network and access decisions. They ensure that every device accessing CERG-protected resources, whether corporate-managed or BYOD, meets a defined security baseline.
+The Endpoint Engineer defines endpoint and mobile security requirements: baselines, EDR and MDM control requirements, the device-posture signal, and drift-detection rules. They review first-line platform output and validate the enforced state against the design. First-line service owners and operators run the endpoint management and EDR platforms. The engineer does not deploy agents, tune production policy, or work alert queues. They ensure that every device accessing CERG-protected resources, whether corporate-managed or BYOD, meets a defined security baseline.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -46,7 +46,13 @@ The Endpoint Engineer owns endpoint and mobile security: the operating system ba
 
 ### 4.1 Core Responsibilities (All Grades)
 
-- Design, implement, and maintain endpoint security baselines for Windows, macOS, and Linux - Govern the endpoint detection and response (EDR) platform: agent deployment, policy tuning, alert triage, and investigation support - Own mobile device management (MDM) and mobile threat defense (MTD) configuration - Define and enforce device posture requirements for conditional access (patch level, disk encryption, firewall status, EDR health) - Manage endpoint configuration drift: detect, report, and remediate deviations from the baseline - Contribute to the Endpoint and Mobile Security Standard and maintain its technical requirements - Support the Secure Configuration Baseline Standard with endpoint-specific hardening guidance - Investigate endpoint-compromise scenarios: malware execution, credential theft, lateral movement from compromised endpoints - Partner with IT operations on endpoint deployment, patching, and lifecycle management
+- Design endpoint security baselines for Windows, macOS, and Linux; applying and maintaining them on production endpoints is first-line work
+- Own EDR requirements and deployment-policy design; agent deployment, production policy tuning, and alert-triage queues are first-line work under the named endpoint service owner and operator
+- Review EDR tuning evidence and triage quality against the requirements
+- Define MDM and MTD control requirements and enrollment-policy design; configuring and operating the MDM and MTD platforms is first-line work
+- Define device-posture requirements for conditional access (patch level, disk encryption, firewall status, EDR health) and the test cases that validate them
+- Define drift-detection requirements and review drift reports; detecting and remediating drift in production is first-line work
+- Contribute to the Endpoint and Mobile Security Standard and maintain its technical requirements; Governance holds approval authority - Support the Secure Configuration Baseline Standard with endpoint-specific hardening guidance - Investigate endpoint-compromise scenarios: malware execution, credential theft, lateral movement from compromised endpoints - Partner with IT operations on endpoint deployment, patching, and lifecycle management
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
@@ -127,7 +133,7 @@ Competency expectations for this role follow the Engineering pillar behavioral a
 
 ## 10. Success Profile
 
-An Endpoint Engineer is successful when every managed device is a controlled, defensible platform regardless of its location or user. Key indicators: endpoint configuration drift is detected and remediated automatically within hours; EDR coverage is complete with zero stale agents; patch compliance for critical vulnerabilities exceeds 95% within the defined window; mobile and remote devices are indistinguishable from office devices in their security posture. The engineer's work is measured in coverage percentage and response time, not tickets closed.
+An Endpoint Engineer is successful when the baselines and requirements they define change what IT and security operations deploy, and when validation establishes whether first-line evidence supports the stated baseline or exposes a gap. Key indicators: baselines are implementable as written across all three platform families; posture requirements map to signals the platforms can actually produce; drift reporting is precise enough to act on without a follow-up question; a validated claim states its assessor, scope, and evidence period. Success is not measured by coverage percentage, stale-agent count, or patch compliance, which describe the first-line owners and operators who run the platforms.
 
 ## 11. Career Path
 
@@ -165,7 +171,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-005 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -182,6 +188,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-10-28 | Engineering Pillar Leader / Governance Pillar Leader | Recast against the aligned authority layer per #253 and the ratified #258 model, following the pattern proven in #261 and #263: boundary stated once in the summary, one retained duty per bullet with first-line qualifiers in place, agent deployment, production tuning, alert queues, MDM operation, and drift remediation named as first-line work, success profile limited to the role's own work with first-line metrics disclaimed. Standard-content bullet states authorship with Governance holding approval authority. No records, metrics, capability floors, or shared-block changes. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Extracted from monolithic JD-001 into enhanced per-role format with NICE mapping, KPI sections, and competency anchor sections. |
 
 ### Review Triggers
