@@ -3,7 +3,7 @@
   "generated": "2026-10-28",
   "source": "local markdown corpus",
   "total_documents": 151,
-  "total_tokens_estimate": 997768,
+  "total_tokens_estimate": 997834,
   "by_type": {
     "readme": 15,
     "governance-instrument": 42,
@@ -2867,8 +2867,8 @@
         44299
       ],
       "lines_count": 85,
-      "chars": 6521,
-      "tokens": 1863,
+      "chars": 6753,
+      "tokens": 1929,
       "summary": "CERG META document: story-12-bounded-defense-claim"
     },
     {
