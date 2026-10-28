@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-STD-OT-001 |
-| **Version** | 1.23 |
+| **Version** | 1.24 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (OT/NERC-CIP) |
@@ -72,7 +72,7 @@ The three CERG pillars operate in grid and control system environments with the 
 | **CERG Pillar** | **OT-Specific Responsibilities** |
 |---|---|
 | **Engineering** | Architects and validates security controls for new and modified OT systems before deployment. Conducts pre-production security reviews for all OT integrations, grid modernization projects, and IT/OT convergence initiatives. Defines and maintains secure configuration baselines for each OT platform class. Serves as the OT security SME in vendor selection and system acquisition. Ensures CIP-010 configuration management controls are embedded in project delivery. |
-| **Risk** | Operates the OT exposure management program using passive monitoring, vendor-provided scan tools, and approved active scanning windows that do not introduce operational risk. Tracks OT patch compliance separately from IT, with NERC-CIP deviation workflows initiated when SLAs cannot be met. Conducts OT-specific adversarial testing coordinated with operational teams. Maintains ICS/OT-specific threat intelligence from E-ISAC, ICS-CERT, and vendor security advisories. Manages the CIP-013 supply chain risk program for OT vendors and integrators. |
+| **Risk** | Operates OT exposure validation, classification, and remediation challenge from first-line observation output. Does not operate standing discovery or scanning sources: OT operations runs them, with active scanning permitted only in approved maintenance windows that do not introduce operational risk. Tracks OT patch compliance separately from IT, with NERC-CIP deviation workflows initiated when SLAs cannot be met. Conducts OT-specific adversarial testing coordinated with operational teams. Maintains ICS/OT-specific threat intelligence from E-ISAC, ICS-CERT, and vendor security advisories. Manages the CIP-013 supply chain risk program for OT vendors and integrators. |
 | **Governance** | Owns the NERC-CIP compliance program including BES Cyber System inventory (CIP-002), CIP deviation and mitigation plan processes, and the NERC-CIP evidence library. Maintains this standard and all subordinate OT procedures. Coordinates regulatory examinations and self-certifications. Produces implementation guidance that translates CIP requirements into actionable technical direction for Engineering and IT/OT operations teams. Tracks all OT security findings and remediation commitments in the risk register. |
 
 > **The Operational Priority Rule**
@@ -316,7 +316,7 @@ Every OT deferral must state why non-patch treatment options (segmentation, path
 | | |
 |---|---|
 | **Document ID** | CERG-STD-OT-001 |
-| **Version** | 1.23 |
+| **Version** | 1.24 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / Upon Significant Change / CIP Standard Revision |
 | **Change Log** | 1.23 - Clarified that the NERC-CIP Evidence Library Procedure is embedded and authoritative in PLN-CIP-001; its reserved identifier is not a planned standalone artifact. 1.22 - Added OT/BES patch deferral and exposure-treatment routing aligned to PRC-VM §7.4. 1.0 - Initial publication. BES and non-BES OT environments. |
@@ -326,6 +326,7 @@ Every OT deferral must state why non-patch treatment options (segmentation, path
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.24 | 2026-10-28 | Governance Pillar Leader | Corrected the §2 Risk-pillar description: Risk operates OT exposure validation, classification, and remediation challenge from first-line observation output, and does not operate standing discovery or scanning sources, which OT operations runs. Aligns with `OM-001` §3.4 and `RAC-001` §6.2. |
 | 1.23 | 2026-09-25 | Governance Pillar Leader | Clarified the authoritative embedded location of the NERC-CIP Evidence Library Procedure and removed the implication that its reserved identifier is a planned standalone artifact. |
 | 1.22 | 2026-06-18 | Governance Pillar Leader | Added explicit OT/BES deferral routes for non-BES maintenance windows, BES compliance-unaffected deferrals, BES compliance-impacting deviations, and emergency operational exceptions. |
 | 1.0 DRAFT | 2025 | CERG Governance | Initial release - BES and non-BES OT environments |
