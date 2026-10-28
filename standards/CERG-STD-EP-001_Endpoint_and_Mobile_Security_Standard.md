@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-STD-EP-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Endpoint) |
@@ -160,8 +160,8 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](../governance/
 
 | **Role** | **Endpoint and Mobile Responsibility** |
 |---|---|
-| **Endpoint Engineer** | Owns this standard. Owns endpoint and mobile baselines, the management and EDR platforms, and the device posture signal. |
-| **Engineering Pillar Leader** | Accountable for endpoint security across the pillar; approves BYOD terms and privileged-access endpoint design. |
+| **Endpoint Engineer** | Owns this standard. Defines endpoint and mobile baselines and the device-posture signal requirements. The first-line operator runs the endpoint management and EDR platforms. |
+| **Engineering Pillar Leader** | Accountable for endpoint security across the pillar. Authors BYOD terms and privileged-access endpoint design; Governance holds approval authority for this standard per Document Control. |
 | **Identity Engineer** | Consumes the posture signal for conditional access; owns just-in-time elevation of local administrative rights. |
 | **Detection Engineer** | Owns endpoint detection content; consumes EDR telemetry. |
 | **OT Security Engineer** | Owns transient cyber asset control where devices connect to OT. |
@@ -191,7 +191,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](../governance/
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-STD-EP-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-05-21 |
 | **Classification** | Public |
@@ -208,6 +208,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](../governance/
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-10-28 | Engineering Pillar Leader | Recast the roles table per the second-line boundary ruling on #253: the Endpoint Engineer defines baselines and posture-signal requirements while the first-line operator runs the endpoint management and EDR platforms (matching RAC-001 7.2); BYOD terms are authored by the Engineering Pillar Leader with Governance holding approval authority, resolving the inconsistency with Document Control. Operating-mode provisions unchanged. |
 | 1.0 | 2026-05-21 | Cyber Engineering | Initial release. Establishes endpoint classes, baseline endpoint protection including removal of standing local administrator rights, endpoint detection and response, the device posture signal consumed by the network and access standards, mobile device management, bounded bring-your-own-device terms, and control of transient and removable devices. |
 
 ### Review Triggers
