@@ -173,13 +173,19 @@ Not every provider relationship allows the organization to configure, monitor, p
 The control level is recorded per provider in the Approved Provider Catalog and re-assessed at each annual review. A provider at Contractual or Opaque levels must have a documented kill-switch procedure tested at least annually.
 
 **Observable contractual control.** Contractual Control divides by what the organization can
-independently verify, and the division is recorded per provider alongside the control level. Where the
-contract grants query, sampling, replay and re-test rights over the provider's own telemetry, within the
-latency stated in the service interface, the relationship is *observable*: CERG can reach its own
-conclusion about the service. Where the only instrument is a periodic attestation, reliance is
-*attestation-only*: it supports operating evidence, and claims about that service stop at the
-operating-evidence class. A consequential claim about a provider-operated service requires the
-observable subtype.
+independently verify, and the division is recorded against the asserted service rather than against the
+provider as a whole. Where the contract grants query, sampling, replay and re-test rights over the
+provider's own telemetry for a provider-operated security service named by a service System Control
+Profile, within the latency stated in that profile, the relationship is *observable* for that service:
+CERG can reach its own conclusion about it. Where the only instrument is a periodic attestation, reliance
+is *attestation-only*: it supports operating evidence, and claims about that service stop at the
+operating-evidence class. A consequential claim about a provider-operated security service requires the
+observable subtype for that service.
+
+The subtype does not extend to the rest of the provider relationship. An unrelated T1/T2 ERP or SaaS
+provider that grants none of these rights is unaffected: CERG assesses the customer-side controls the
+organization owns, and the absence of replay rights over the vendor's platform is a fact about the
+dependency rather than a gap in that assessment.
 
 In shorthand, Direct and Shared Control are *required*, observable Contractual Control is *observed*,
 and attestation-only contractual reliance and Opaque Dependency are *hoped for*. The shorthand is
@@ -251,7 +257,7 @@ CERG provides Legal with a clause library; Legal owns negotiation. Clauses below
 | Flow-down | CUI subcontractors | DFARS 252.204-7012 / [CMMC](https://dodcio.defense.gov/CMMC/) requirements flowed to sub-tier. |
 | CIP-013 | OT vendors in BES scope | Participation in supply chain security plan including software integrity, incident notification, coordination of access controls. |
 | International access | T2+ where international access proposed | Country-of-access disclosure; right to refuse non-approved geographies. |
-| Assurance access and independent verification | T1/T2 service providers; T3+ where CERG issues a consequential claim about the service | Provider grants query access to raw or derived telemetry for the in-scope service on the client's request, within the latency stated in the service interface, for the retention period stated there; and sampling, replay and re-test rights over material the provider produced, with the client selecting the sample. A third-party attestation report does not satisfy this clause. These are access rights only and confer no operating duty on the client: an operating obligation — availability, coverage delivery, triage, escalation or remediation — would make the client the operator of the service and disqualify its own claim. |
+| Assurance access and independent verification | Provider-operated security services named by a service System Control Profile where CERG issues a consequential claim; not required for unrelated T1/T2 technology providers | Provider grants query access to raw or derived telemetry for the asserted service on the client's request, within the latency stated in the service interface, for the retention period stated there; and sampling, replay and re-test rights over material the provider produced, with the client selecting the sample. Rights are exercised only within agreed scope, on authorization, and subject to the safety constraints and rules of engagement governing the affected environment, including [`CERG-PRC-AV-001`](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) Section 9 for OT. The provider may produce evidence and cooperate with a client-selected sample or re-test; it may not serve as the independent assessor for the service it operates and may not approve the effectiveness claim for that service. A third-party attestation report does not satisfy this clause. This clause supplements rather than replaces right to audit: a current SOC 2, ISO 27001 or FedRAMP report remains acceptable evidence of the provider's generic control environment, and never substitutes for the access granted here. These are access rights only and confer no operating duty on the client: an operating obligation — availability, coverage delivery, triage, escalation or remediation — would make the client the operator of the service and disqualify its own claim. |
 
 ---
 
