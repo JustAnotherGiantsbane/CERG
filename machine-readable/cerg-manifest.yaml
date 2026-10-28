@@ -1697,7 +1697,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-005_OT_Risk_Analyst.md
   source_file: CERG-GOV-JD-RISKOPS-005_OT_Risk_Analyst.md
-  source_hash: ac697f95c38b348b8cddcbf737e67af8ac71078cc35f4e7b4fca32da55b75b95
+  source_hash: f4eca3d48598b4bd8f17104f68a1a8a39d9d8a4208f333a64af4954b6d7dc8de
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-005_OT_Risk_Analyst.md
   llm_include: true
   llm_priority: low
@@ -1717,7 +1717,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-006_Identity_Risk_Analyst.md
   source_file: CERG-GOV-JD-RISKOPS-006_Identity_Risk_Analyst.md
-  source_hash: 699e9ae48bc0589bd5407e1f67248864ce8786a1ae551433528b1d7e3e49e23d
+  source_hash: 492dea267d8eab1f50d598ded676af4bed0ad86be1caa535568f2ef7f7ab7cb5
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-006_Identity_Risk_Analyst.md
   llm_include: true
   llm_priority: low

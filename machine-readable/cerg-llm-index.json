@@ -3,7 +3,7 @@
   "generated": "2026-10-28",
   "source": "local markdown corpus",
   "total_documents": 151,
-  "total_tokens_estimate": 1005332,
+  "total_tokens_estimate": 1005330,
   "by_type": {
     "readme": 15,
     "governance-instrument": 42,
@@ -2527,8 +2527,8 @@
         41294
       ],
       "lines_count": 203,
-      "chars": 22824,
-      "tokens": 6521,
+      "chars": 22821,
+      "tokens": 6520,
       "summary": "CERG JD document: OT Risk Analyst"
     },
     {
@@ -2547,8 +2547,8 @@
         41499
       ],
       "lines_count": 203,
-      "chars": 23230,
-      "tokens": 6637,
+      "chars": 23227,
+      "tokens": 6636,
       "summary": "CERG JD document: Identity Risk Analyst"
     },
     {
