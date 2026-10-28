@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-JD-RISKOPS-004 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The Detection Engineer owns detection-rule authoring, MITRE ATT&CK coverage, and the detection tuning lifecycle. They turn threat intelligence, vulnerability data, and red team findings into detection content that finds adversaries before the adversary achieves their objective. They are the bridge between knowing what threats exist and being able to see them in the environment.
+The Detection Engineer owns candidate detection content: authoring, test cases, MITRE ATT&CK coverage mapping, tuning evidence review, and validation. The role's line of defense is per activity and scope, not a role-wide designation: authoring, testing, coverage mapping, and validation review are second-line assurance work; production deployment, tuning changes, and queue operation are first-line work under the service owner and operator. They turn threat intelligence, vulnerability data, and red team findings into detection content that finds adversaries before the adversary achieves their objective. They are the bridge between knowing what threats exist and being able to see them in the environment.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -46,7 +46,15 @@ The Detection Engineer owns detection-rule authoring, MITRE ATT&CK coverage, and
 
 ### 4.1 Core Responsibilities (All Grades)
 
-- Author, test, and deploy detection rules across SIEM, EDR, NDR, and cloud detection platforms - Map detection coverage to MITRE ATT&CK and maintain the coverage matrix - Tune detection rules to reduce false positives while maintaining true-positive sensitivity - Translate threat intelligence into detection content: new rules, updated logic, expanded data sources - Incorporate adversarial testing findings: write detections for the TTPs the red team successfully executed - Govern the detection lifecycle: new rule authoring, testing, deployment, performance monitoring, tuning, and retirement - Hand off confirmed detections to the Incident Response team per the defined procedure - Maintain and improve the logging and monitoring coverage required to support detection content - Contribute to the Logging, Monitoring, and Detection Standard
+- Author and test candidate detection rules across SIEM, EDR, NDR, and cloud detection platforms; production deployment is first-line work under the service owner and operator
+- Map detection coverage to MITRE ATT&CK and own the coverage matrix
+- Own tuning evidence review: candidate tuning changes that reduce false positives while maintaining true-positive sensitivity are authored here; applying changes in production is first-line work
+- Translate threat intelligence into candidate detection content: new rules, updated logic, expanded data source requirements
+- Incorporate adversarial testing findings: author detections for the TTPs the red team successfully executed
+- Own the candidate content lifecycle: authoring, test cases, coverage mapping, validation, and retirement recommendations; production deployment, performance monitoring, and tuning operation are first-line work
+- Hand off confirmed detections to the Incident Response team per the defined procedure
+- Own the logging and monitoring coverage requirements that support detection content; operating and maintaining the logging and monitoring estate is first-line work
+- Contribute to the Logging, Monitoring, and Detection Standard
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
@@ -84,7 +92,7 @@ The following Task, Knowledge, and Skill statements are extracted from the NIST 
 | Knowledge | K0951 | Knowledge of Intrusion Prevention System (IPS) tools and techniques | Foundational knowledge for this role |
 | Skill | S0859 | Skill in performing event correlation | Core capability for this role |
 | Skill | S0566 | Skill in developing signatures | Core capability for this role |
-| Skill | S0567 | Skill in deploying signatures | Core capability for this role |
+| Skill | S0567 | Skill in deploying signatures | Capability basis for authoring and testing candidate signatures; production deployment is first-line work under the service owner/operator |
 | Skill | S0627 | Skill in reading signatures | Core capability for this role |
 | Skill | S0712 | Skill in evaluating data source quality | Core capability for this role |
 
@@ -114,11 +122,11 @@ Competency expectations for this role follow the Risk pillar behavioral anchors 
 
 | Competency Domain (CMP-001) | L1 Expectation | L2 Expectation | L3 Expectation | L4 Expectation |
 |-----------------------------|----------------|----------------|----------------|----------------|
-| Technical Depth | Operates the Risk pillar's tools (vulnerability scanner, CSPM platform, threat intel platform, detection pipeline) under supervision. Triages alerts following established procedures. Recognizes false positives and true positives with increasing accuracy. | Owns a Risk domain (e.g., exposure management for a platform class, vendor assessments for a business unit, a set of detection rules). Tunes tools to reduce noise and improve signal. Independently investigates findings and determines root cause. | Shapes the Risk pillar's approach to exposure management. Designs assessment methodologies. Correlates findings across tools to identify systemic weaknesses that individual alerts miss. | Sets the analytical bar for the entire Risk pillar. Called upon for the hardest exposure questions. Represents the organization's risk posture to regulators, auditors, and industry peers. |
+| Technical Depth | Produces and interprets independent technical evidence for exposure and risk decisions within their domain's method authority, under supervision. Triages findings following established procedures. Recognizes false positives and true positives with increasing accuracy. | Owns a Risk domain (e.g., exposure management for a platform class, vendor assessments for a business unit, a set of detection rules). Reviews tool output and tuning evidence to reduce noise and improve signal. Independently investigates findings and determines root cause. | Shapes the Risk pillar's approach to exposure management. Designs assessment methodologies. Correlates findings across tools to identify systemic weaknesses that individual alerts miss. | Sets the analytical bar for the entire Risk pillar. Called upon for the hardest exposure questions. Represents the organization's risk posture to regulators, auditors, and industry peers. |
 | Cross-Pillar Fluency | Understands that Engineering builds systems and Governance owns compliance. Reads architecture review outputs and compliance standards that affect their risk assessments. | Delivers risk findings in a format Engineering can act on. Understands what evidence Governance needs from Risk assessments and provides it proactively. Participates in cross-pillar threat modeling sessions. | Collaborates with Engineering to design controls that address risk findings, not just report them. Feeds risk intelligence into Governance's compliance calendar. Anticipates which risk findings will become audit findings. | Operates fluently across all three pillars. Contributes to Engineering architecture decisions and Governance standards as a peer. The person a pillar leader calls when a risk question spans all three pillars. |
 | Risk Judgment | Applies the risk taxonomy correctly when triaging findings. Distinguishes between Critical, High, Medium, and Low severity using the defined criteria. Escalates findings that exceed SLA without delay. | Independently assesses the business impact of findings in their domain. Adjusts risk ratings based on context and documents the rationale. Produces risk assessments that the Risk Pillar Leader accepts without material revision. | Assesses systemic risk: identifies patterns across individual findings that indicate a deeper weakness. Evaluates risk from new technologies, vendors, or business initiatives before they are operational. | Shapes the organization's risk appetite. Called upon by the CISO for independent risk evaluation on material decisions. Their risk judgment on novel or ambiguous situations is treated as authoritative. |
 | Communication | Writes clear finding descriptions with reproducible steps, impact statements, and remediation guidance. Updates stakeholders on finding status without being prompted. | Delivers risk briefings to business owners and project teams. Translates vulnerability data into business risk without losing technical accuracy. Writes vendor risk assessment reports that procurement and legal can act on. | Presents risk posture to executive audiences. Communicates threat landscape changes and their organizational implications. Writes threat intelligence products consumed by leadership. | Communicates organizational risk posture to the board, regulators, and external stakeholders. Represents the organization's risk position in industry forums. |
-| Operational Discipline | Triages findings within SLA. Documents assessment results in the designated system. Follows the exposure management and risk register procedures. | Owns operational SLAs for their domain. Ensures risk register entries are current and complete. Maintains scanning schedules, detection rule lifecycles, or vendor assessment cadences without gaps. | Designs risk assessment workflows that produce consistent, auditable output. Ensures the Risk pillar's operational cadence is documented, measured, and improving. Identifies and automates repetitive risk assessment tasks. | Sets operational standards for the Risk pillar. Defines what "defensible" risk assessment looks like under regulatory scrutiny. |
+| Operational Discipline | Triages findings within SLA. Documents assessment results in the designated system. Follows the exposure management and risk register procedures. | Owns operational SLAs for their domain. Ensures risk register entries are current and complete. Maintains assessment and evidence-currency cadences for their domain without gaps. | Designs risk assessment workflows that produce consistent, auditable output. Ensures the Risk pillar's operational cadence is documented, measured, and improving. Identifies and automates repetitive risk assessment tasks. | Sets operational standards for the Risk pillar. Defines what "defensible" risk assessment looks like under regulatory scrutiny. |
 | Influence and Mentorship | Learns from senior analysts. Asks good questions about methodology and judgment. Shares interesting findings with the team. | Trains new analysts on Risk tools and procedures. Peer-reviews risk assessments and detection rules. Their analytical judgment is sought by other team members. | Mentors analysts across Risk domains. Leads cross-functional risk initiatives. Their risk assessments shape how Engineering and business owners prioritize remediation. | Develops the analytical capability of the entire Risk team. Sets the quality bar for risk assessment, threat intelligence, and detection engineering. Influences organizational risk culture. |
 | Compliance and Regulatory Literacy | Knows which regulatory frameworks apply and can describe how Risk assessments support compliance. | Understands the specific regulatory requirements that govern their Risk domain. Produces risk assessments that meet the evidence standards of the relevant frameworks. | Anticipates how regulatory changes will affect the Risk program's scope and cadence. Advises Governance on the risk implications of compliance findings. | Contributes to the organization's regulatory strategy from a risk perspective. Engages with regulators on risk methodology. |
 | Continuous Learning | Completes assigned training. Pursues foundational certifications. Learns the organization's threat landscape. | Maintains current certifications. Tracks the threat actors, TTPs, and vulnerabilities relevant to the organization's industry. | Pursues advanced certifications. Contributes threat research or methodology improvements adopted by the team. Represents the organization in threat-sharing communities. | Recognized externally for risk or threat expertise. Contributes to industry threat intelligence, risk methodology, or detection frameworks. |
@@ -165,7 +173,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-JD-RISKOPS-004 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -182,6 +190,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.2 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Second-line boundary first slice per #234: role recast to the per-activity/scope boundary. Retained second-line: candidate content authoring, test cases, ATT&CK coverage mapping, tuning evidence review, purple validation. Moved to first line: production deployment, tuning changes, queue operation, logging estate operation. NICE S0567 annotated; shared competency blocks updated to family-neutral evidence language. |
 | 1.1 | 2026-06-18 | Governance Pillar Leader | Corrected role body content so Detection Engineer responsibilities, KSAs, qualifications, and profile align to detection engineering rather than vendor risk. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Extracted from monolithic JD-001 into enhanced per-role format with NICE mapping, KPI sections, and competency anchor sections. |
 
