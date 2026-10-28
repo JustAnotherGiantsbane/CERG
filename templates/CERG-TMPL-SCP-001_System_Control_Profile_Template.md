@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-TMPL-SCP-001 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
@@ -150,6 +150,8 @@ controls_applied:
 | Engineering Pillar Leader | Confirms control implementation and coverage profile. | `[Name / Date]` |
 | Governance Pillar Leader | Confirms evidence quality, regulatory traceability, and retention route. | `[Name / Date]` |
 | Risk Pillar Leader | Confirms linked risk, exception, or accepted-risk entries where residual exposure remains. | `[Name / Date]` |
+| Operator (first-line, internal or provider) | **Service SCPs only; N/A on protected-system SCPs.** Acknowledges the operating terms recorded in the service interface — obligations, escalation, evidence period — and does not approve the effectiveness claim. | `[Name / Date]` |
+| Independent assessor | **Service SCPs only; N/A on protected-system SCPs.** Accepts the scoped assessment assignment: assessor, method, evidence period and exclusions on which the claim rests. Acceptance is not approval of the service's effectiveness. | `[Name / Date]` |
 
 Completed SCP records are reviewed at the cadence defined by their system classification, regulatory scope, and related control requirements. Material system change, control baseline change, ownership change, regulatory-scope change, or major evidence failure requires an SCP refresh.
 
@@ -160,7 +162,7 @@ Completed SCP records are reviewed at the cadence defined by their system classi
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-TMPL-SCP-001 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-20 |
 | **Classification** | Public |
@@ -177,6 +179,7 @@ Completed SCP records are reviewed at the cadence defined by their system classi
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.2 | 2026-10-28 | Engineering Pillar Leader | Added operator and independent assessor rows to the review and approval table for service SCPs, marked N/A on protected-system SCPs: the operator acknowledges operating terms, the assessor accepts the scoped assessment assignment, and neither approves the effectiveness claim. |
 | 1.1 | 2026-10-28 | Engineering Pillar Leader | Added service-SCP guidance, a service interface block, and protected-system service references for the first-line service boundary experiment. |
 | 1.0 | 2026-06-20 | Engineering Pillar Leader | Initial publication. Establishes the System Control Profile as a structured per-system control implementation, evidence, validation, and review record. |
 
