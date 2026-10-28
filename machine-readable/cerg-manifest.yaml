@@ -168,7 +168,7 @@
   title: Crown Jewel Register and Scenario Library
   document_type: governance_instrument
   domain: CJ
-  version: 1.0
+  version: 1.4
   status: Approved
   classification: Public
   publication_profile: public
@@ -177,7 +177,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md
   source_file: CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md
-  source_hash: 8e8c6c01cda0f0b107f38f26ef98bf07133b0587cf150b8d035a72884b4f3daf
+  source_hash: 935b82fdb8bda5b5e16d0a26f9776301bd7a05921e5ffb7ccf1abc9d136da899
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md
   llm_include: true
   llm_priority: medium
@@ -568,7 +568,7 @@
   title: Metrics Dashboard and Reporting
   document_type: governance_instrument
   domain: MTR
-  version: 1.36
+  version: 1.37
   status: Approved
   classification: Public
   publication_profile: public
@@ -577,7 +577,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
   source_file: CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
-  source_hash: 296539bea011aa49972362d85ca0db3e6b56cdf604f32b065ce134020294fd7b
+  source_hash: 7071d179c0f20815fd14ebab31605b5529fa36fb8781df2321abb428d4804714
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
   llm_include: true
   llm_priority: medium
