@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-JD-RISKOPS-006 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The Identity Risk Analyst owns identity-threat detection: user and entity behavior analytics, OAuth and token risk, and the detection of identity-based attacks. They focus on what happens after authentication: anomalous behavior, privilege escalation, lateral movement, and credential misuse that bypasses preventive controls.
+The Identity Risk Analyst owns the assurance side of identity-threat work: identity exposure validation, non-human identity (NHI) exposure analysis, identity attack-path validation, and the detection content that finds identity-based attacks. The role's line of defense is per activity and scope, not a role-wide designation: detection-content authorship, exposure and attack-path validation, investigation, and challenge are second-line assurance work; UEBA platform operation and tuning, and live monitoring of identity event streams, are first-line work under the named service owner and operator. They focus on what happens after authentication: anomalous behavior, privilege escalation, lateral movement, and credential misuse that bypasses preventive controls.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -46,7 +46,7 @@ The Identity Risk Analyst owns identity-threat detection: user and entity behavi
 
 ### 4.1 Core Responsibilities (All Grades)
 
-- Operate and tune user and entity behavior analytics (UEBA) platforms - Monitor for identity-based threats: compromised credentials, token theft, session hijacking, MFA fatigue, OAuth application abuse - Develop and maintain identity-risk detection rules and alerts - Investigate identity-related security events and escalate confirmed compromises to Incident Response - Assess OAuth and API token risk: excessive permissions, unused tokens, suspicious grant patterns - Monitor privileged account usage and detect anomalous privileged behavior - Partner with the Identity Engineer to ensure identity security controls are informed by observed attack patterns - Contribute identity-threat intelligence to the Threat Intelligence Analyst - Support incident response for identity-compromise scenarios
+- Own UEBA detection requirements and signal-quality rules, and review tuning evidence against them; operating and tuning UEBA platforms in production is first-line work under the service owner and operator - Author and validate identity-threat detection content for compromised credentials, token theft, session hijacking, MFA fatigue, and OAuth application abuse; live monitoring of identity event streams is first-line work - Develop and maintain identity-risk detection rules and alerts - Investigate identity-related security events and escalate confirmed compromises to Incident Response - Assess OAuth and API token risk: excessive permissions, unused tokens, suspicious grant patterns - Own anomalous-privileged-behavior detection content and validate exposure findings against privileged-account usage evidence; live monitoring of privileged-account activity is first-line work - Partner with the Identity Engineer to ensure identity security controls are informed by observed attack patterns - Contribute identity-threat intelligence to the Threat Intelligence Analyst - Support incident response for identity-compromise scenarios
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
@@ -56,7 +56,7 @@ Grade-level responsibility differentiation for this role is defined in [JA-001 Â
 
 ### 5.1 Domain Expertise
 
-- Identity platforms: Entra ID / Azure AD, Okta, Ping, Active Directory - UEBA platforms: Microsoft Advanced Threat Analytics, Splunk UBA, Exabeam, or equivalent - Authentication protocols and their abuse: OAuth 2.0, SAML, Kerberos, NTLM - Identity attack techniques: Golden Ticket, Silver Ticket, Pass-the-Hash, Pass-the-Ticket, token replay, MFA fatigue - Cloud identity threats: Azure AD Connect compromise, cross-tenant attacks, B2B trust abuse - SIEM and log analysis for identity data sources
+- Identity platforms: Entra ID / Azure AD, Okta, Ping, Active Directory - UEBA platforms (e.g., Microsoft Advanced Threat Analytics, Splunk UBA, Exabeam) sufficient to author detection requirements, assess signal quality, and query independently; platform operation is first-line work - Authentication protocols and their abuse: OAuth 2.0, SAML, Kerberos, NTLM - Identity attack techniques: Golden Ticket, Silver Ticket, Pass-the-Hash, Pass-the-Ticket, token replay, MFA fatigue - Cloud identity threats: Azure AD Connect compromise, cross-tenant attacks, B2B trust abuse - SIEM and log analysis for identity data sources
 
 ### 5.2 Technical Skills
 
@@ -86,7 +86,7 @@ The following Task, Knowledge, and Skill statements are extracted from the NIST 
 | Skill | S0483 | Skill in identifying software communications vulnerabilities | Core capability for this role |
 | Skill | S0490 | Skill in recreating network topologies | Core capability for this role |
 | Skill | S0509 | Skill in evaluating security products | Core capability for this role |
-| Skill | S0543 | Skill in scanning for vulnerabilities | Core capability for this role |
+| Skill | S0543 | Skill in scanning for vulnerabilities | Capability basis for assessment requirements and independent query; scan execution is first-line work under the service owner/operator |
 
 > **Full TKS Reference:** The complete TKS statement set for the primary NICE Work Role (PR-CDA-001 â†’ PD-WRL-001) is in the NICE Framework Components v2.2.0 dataset ([download](https://csrc.nist.gov/csrc/media/Projects/cprt/documents/nice/v2-2-0_nf_components.json)). JF-002 contains the complete CERG-to-NICE crosswalk with secondary role mappings.
 
@@ -165,7 +165,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-JD-RISKOPS-006 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -182,6 +182,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Second-line boundary second slice per #234 assignment: per-activity/scope boundary stated in the role summary. Retained second-line: identity exposure validation, NHI exposure analysis, identity attack-path validation, detection-content authorship, investigation. Moved to first line: UEBA operation and tuning, live monitoring of identity event streams and privileged-account activity. NICE S0543 annotated; domain expertise annotated as capability basis, not assigned duty. No capability floors, roles, records, or metrics; shared competency blocks untouched per the deferred A.5 sweep. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Extracted from monolithic JD-001 into enhanced per-role format with NICE mapping, KPI sections, and competency anchor sections. |
 
 ### Review Triggers
