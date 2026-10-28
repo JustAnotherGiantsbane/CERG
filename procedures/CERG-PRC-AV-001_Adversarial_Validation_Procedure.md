@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AV-001 |
-| **Version** | 1.5 |
+| **Version** | 1.6 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Adversarial Testing Lead |
@@ -392,7 +392,7 @@ Findings are rated using a uniform schema regardless of engagement type, alignin
 | **Source of Finding** | **Routes To** |
 |---|---|
 | Specific software / asset vulnerability | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Exposure_Management_Procedure.md) finding + risk register entry per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) if Critical/High |
-| Control / design weakness | Risk register entry directly per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
+| Control / design weakness | Risk register entry directly per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). Where the engagement is commissioned against a [`CERG-GOV-CJ-001`](../governance/CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md) scenario, the weakness enters as a Finding Record per [`CERG-GOV-FLOW-001`](../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) F-04 and promotes to a Risk Register Entry where material; the direct-register route applies only to engagements not commissioned against a scenario. |
 | Detection gap | Detection backlog + risk register if material |
 | Process / runbook weakness | Owning procedure (AR / IR / TPRM) + risk register if material |
 | Vendor / supply chain weakness | TPRM record per [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
@@ -603,7 +603,7 @@ Final reports are distributed under the confidentiality terms in the RoE. Full r
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AV-001 |
-| **Version** | 1.5 |
+| **Version** | 1.6 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / on material program change |
-| **Change Log** | 1.0 - Initial publication. Engagement types, RoE, charter, purple, cloud, app, OT safety, rating/routing, evidence retention. · 1.1 - Added Section 11 Systemic Analysis and Program Feedback Loop: post-engagement systemic analysis, systemic finding routing, prevention verification, and annual trend analysis. · 1.2 - Restored Section 12 Roles and Responsibilities. Renumbered Evidence Retention to Section 13, Regulatory to 14, Document Control to 15. · 1.3 - Clarified that PRC-VM-001 governs exposure treatment timelines while PRC-AV-001 governs adversarial validation rating, routing, retest, and escalation discipline. · 1.4 - RoE objectives name the scenario ID and asserted protected-system scope where an engagement is commissioned against a CJ-001 scenario; a Section 9.2 permitted approach evidences a load-bearing link only when the final report states assessor, method, and evidence period. Evidence mechanics only; the three-state outcome rule stays in CJ-001. · 1.5 - Scoped-independence clause added to the 9.2 evidence sentence per review: the assessor must be independent of the operator and state author for the asserted scope per CJ-001 5.5; CJ-001 now linked for referential checking. |
+| **Change Log** | 1.0 - Initial publication. Engagement types, RoE, charter, purple, cloud, app, OT safety, rating/routing, evidence retention. · 1.1 - Added Section 11 Systemic Analysis and Program Feedback Loop: post-engagement systemic analysis, systemic finding routing, prevention verification, and annual trend analysis. · 1.2 - Restored Section 12 Roles and Responsibilities. Renumbered Evidence Retention to Section 13, Regulatory to 14, Document Control to 15. · 1.3 - Clarified that PRC-VM-001 governs exposure treatment timelines while PRC-AV-001 governs adversarial validation rating, routing, retest, and escalation discipline. · 1.4 - RoE objectives name the scenario ID and asserted protected-system scope where an engagement is commissioned against a CJ-001 scenario; a Section 9.2 permitted approach evidences a load-bearing link only when the final report states assessor, method, and evidence period. Evidence mechanics only; the three-state outcome rule stays in CJ-001. · 1.5 - Scoped-independence clause added to the 9.2 evidence sentence per review: the assessor must be independent of the operator and state author for the asserted scope per CJ-001 5.5; CJ-001 now linked for referential checking. · 1.6 - Scenario-commissioned control/design weaknesses enter the existing Finding Record path and promote to risk where material; direct risk-entry routing remains for non-scenario engagements. |

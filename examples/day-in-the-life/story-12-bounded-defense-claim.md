@@ -56,7 +56,7 @@ The Oversight Decision Record does not accept residual risk. If the business acc
 Two clocks remain separate:
 
 1. **Remediation retest** — [`PRC-AV-001`](../../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) Section 10.3 governs: Critical findings are retested within 30 days of a remediation claim, High findings within 60 days, and the finding closes only after the retest demonstrates remediation.
-2. **Scenario claim retest** — the claim is re-walked and re-challenged when its threat model changes, a material control/identity change occurs, or the scheduled scenario review arrives.
+2. **Scenario claim retest** — the claim is re-walked and re-challenged when its threat model changes, a material change occurs to the controls, identity paths, or crown-jewel population, or the scheduled scenario review arrives.
 
 A closed finding does not by itself make the broader scenario claim current.
 

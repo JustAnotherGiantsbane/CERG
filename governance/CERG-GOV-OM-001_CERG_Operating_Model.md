@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
-| **Version** | 1.28 |
+| **Version** | 1.29 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
@@ -313,9 +313,9 @@ Used for ongoing exposure management across the entire estate.
 CERG commits to a time-to-coverage target for bringing a new asset under vulnerability and CSPM coverage after go-live, per [`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md).
 
 - Exposure management operates as a standing service per [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md).
-- CSPM / SSPM operates continuously across approved cloud and SaaS.
+- CSPM and SSPM coverage is consumed continuously as first-line-operated sources; CERG verifies coverage and provenance rather than operating the platforms.
 - Threat intelligence consumption produces standing detection and posture work.
-- Identity-threat detection operates continuously.
+- Identity-threat monitoring outcomes are independently validated on a continuous basis; the monitoring platform is first-line-operated.
 
 Continuous services do not require project tickets. Business teams are partners in remediation rather than initiators of the work.
 
@@ -446,7 +446,7 @@ Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leade
 |---|---|
 | Risk Pillar Leader | Pillar accountability; exposure posture reporting. |
 | Exposure Management Lead | Operates [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md); owns the SLAs and posture metrics. |
-| Detection Engineer | CSPM / SSPM operations and detection rules. |
+| Detection Engineer | Candidate detection content, ATT&CK coverage mapping, tuning evidence review, and independent validation of deployed detection; production deployment and platform operation are first-line. |
 | Threat Intelligence Analyst | Source curation, internal advisories, detection translation. |
 | Adversarial Testing Lead (Red Team) | Internal or partner-managed offensive validation. |
 | Vendor / Third-Party Risk Analyst | Vendor assessment and continuous monitoring. |
@@ -659,7 +659,7 @@ This ensures that "no single point of failure" is not just a claim about org-cha
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
-| **Version** | 1.28 |
+| **Version** | 1.29 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
@@ -675,6 +675,7 @@ This ensures that "no single point of failure" is not just a claim about org-cha
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.29 | 2026-10-28 | Governance Pillar Leader | Trace correction: §5.2 identifies CSPM, SSPM, and identity-threat monitoring as first-line-operated sources whose coverage/provenance or outcomes CERG independently validates; §6.3 aligns Detection Engineer work with the per-activity boundary and role recast. |
 | 1.28 | 2026-10-28 | Governance Pillar Leader | Clarified state authorship in §2.4: live CERG changes suspend the affected effectiveness claim until independent verification; break-glass approval does not restore it. Clarified that ongoing service obligations make CERG the service operator for the hybrid rule. |
 | 1.27 | 2026-10-28 | Governance Pillar Leader | Added second-line operating boundary in 2.4: first-line service operation, conditions for an independent technical-effectiveness claim (independence, capability, currency), consequence ladder, and hybrid rule. Added Engineering operating boundary and design-time statement in 3.1, conformed Risk core activities and OT safety constraint in 3.2, and standing security-operations services bullet in 3.4. Per second-line boundary RFC. |
 | 1.26 | 2026-06-18 | Governance Pillar Leader | Clarified Identity Risk Analyst as a mature-program specialization covered by Detection Engineer or Risk Pillar Leader in smaller teams. |
