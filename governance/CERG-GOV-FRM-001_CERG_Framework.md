@@ -447,7 +447,7 @@ NERC-CIP is the primary regulatory framework for bulk electric system (BES) cybe
 
 For organizations subject to [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC requirements, CERG provides the structural foundation for compliance without requiring a separate compliance team.
 
-- **SOX ITGC:** Governance owns the IT General Controls framework and evidence library. Engineering ensures change management controls are embedded in deployment processes. Risk monitors access and configuration integrity in financial systems.
+- **SOX ITGC:** Governance owns the IT General Controls framework and evidence library. Engineering ensures change management controls are embedded in deployment processes. Risk assures access and configuration integrity in financial systems, using first-line monitoring output.
 
 > **The Regulatory Advantage of CERG**
 > 
@@ -641,7 +641,7 @@ This is where CERG can beat traditional GRC: compliance becomes exhaust from goo
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.25 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Front door made second line: authority-conditional Definition of Done; exposure and detection capabilities stated as assurance outcomes over first-line operation; scanning, triage, live monitoring and treatment execution removed from Risk core functions, OT method wording, NIST role rows and the staffing plan. Links OM-001 §2.4 as the boundary authority. | #248 |
+| 1.25 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Front door made second line: authority-conditional Definition of Done; exposure and detection capabilities stated as assurance outcomes over first-line operation; scanning, triage, live monitoring and treatment execution removed from Risk core functions, OT method wording, NIST role rows and the staffing plan. Links OM-001 §2.4 as the boundary authority. SOX blurb states assurance over first-line monitoring. | #248 |
 | 1.24 | 2026-10-28 | Governance Pillar Leader | Added CTEM operating-model property paragraph in 2; conformed lifecycle table and Risk core functions in 5.2 and 10 to the second-line boundary (first-line scanning and monitoring, independent Risk validation). |
 | 1.23 | 2026-09-01 | Cyber Governance | Clarified Cyber Governance as CERG's second-line authority: it sets standards and assurance expectations, while first-line owners, Engineering, and Risk produce operating evidence and remediate or validate control gaps. Reframed regulatory alignment as an output of the normal CERG assurance loop. |
 | 1.0 | 2026-05-01 | CISO + Cyber Governance | Initial release. Narrative description of the CERG framework, pillars, and operating model. |

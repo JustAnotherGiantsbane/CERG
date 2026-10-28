@@ -297,7 +297,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-FRM-001_CERG_Framework.md
   source_file: CERG-GOV-FRM-001_CERG_Framework.md
-  source_hash: 6ae60eaeefa814f87996741bd4c433575808f55a156d35fdc10534d8dd009fa6
+  source_hash: 94d5da3643d917c0c7f86d4c5a984aaba6e9bf1d7bdc9306a93b2c20e98ad2fa
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-FRM-001_CERG_Framework.md
   llm_include: true
   llm_priority: high
