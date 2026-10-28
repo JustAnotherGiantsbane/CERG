@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CJ-001 |
-| **Version** | 1.4 |
+| **Version** | 1.5 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader / Governance Pillar Leader |
@@ -212,6 +212,8 @@ Each pressure-test assembles a **bounded defense claim**: the sentence a service
 
 **Load-bearing links.** Load-bearing links are the chain-breaking controls whose absence alone allows the scenario to complete. The report names them. A load-bearing link that was not challenged cannot support a fully defensible claim for that scenario: it must either carry alternative independent validation bounded to that link — assessor, method, and evidence period stated — or the claim records the link as a gap and follows the residual-risk path. A reason and an accepter downgrade the claim; they do not restore it.
 
+**Provider-right capability.** Where a consequential claim relies on query, sampling, replay, or re-test rights for a provider-operated security service, the Adversarial Validation Record cites retained, attributable output from the claimant's or independent assessor's exercise of that right in the asserted period; the Evidence Index Entry links that output. Provider-produced exports do not establish capability, and exercising a right does not make the provider the independent assessor.
+
 **Decision wiring.** The claim is put to the service owner or CISO as a decision question, not filed as an assessment. Where the claim carries business consequence, the decision is recorded as an Oversight Decision Record per [`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md); where the cap rule scopes the claim to the technical service, the decision routes to the system owner. The Oversight Decision Record may fund treatment, assign action, or route an acceptance request — it does not itself accept residual risk. Acceptance follows the full existing chain: the claim's finding creates or updates a Risk Register Entry per [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md), and the Risk Acceptance Record attaches to that entry per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 (TMPL-RM-004), accepted by the Business Owner or Executive Sponsor with CISO approval where required — an acceptance never floats as a memo or only as an Oversight Decision Record. A material residual change re-scores per RMF-001 Section 9.
 
 ### 5.6 Retest Triggers and the Worked Generic Pilot
@@ -261,7 +263,7 @@ This document is connective tissue. Its value is in the cross-references below; 
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CJ-001 |
-| **Version** | 1.4 |
+| **Version** | 1.5 |
 | **Status** | Approved |
 | **Approved By** | CISO |
 | **Owner** | Risk Pillar Leader / Governance Pillar Leader |
@@ -271,6 +273,7 @@ This document is connective tissue. Its value is in the cross-references below; 
 
 | **Version** | **Date** | **Author** | **Change** |
 |---|---|---|---|
+| 1.5 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | A provider right relied on by a consequential claim must be exercised by the claimant or independent assessor in the asserted period, with retained output linked through the existing Evidence Index Entry; no new record, field, or recurring check. |
 | 1.4 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Review adoption: load-bearing paragraph replaced with cragin-security's wording (three states — challenged, independently validated by another bounded method, gap on the residual path; a reason and an accepter downgrade, never restore); SCN-05 worked example shows the cap-scoped technical variant with disposition on the Finding Record. |
 | 1.3 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Record-chain completions: acceptance stated as the full existing chain (Finding Record, then Risk Register Entry per PRC-RM-001, then Risk Acceptance Record attached per RMF-001 §9.7 — never floating); cap-scoped technical disposition recorded in the existing Finding Record or Exposure Backlog Item with decision, date, and closure rationale; an unchallenged load-bearing link requires alternative independent validation bounded to the link or routes to the residual-risk path. |
 | 1.2 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Review corrections: obligation reference corrected to the §3.2 register field set (four consequence dimensions and `regulated_scope`) with the two-hop reference path through the protected-system SCP and `security_service_references[]`; load-bearing links defined; decision routing split — Oversight Decision Record for consequential claims, system owner for cap-scoped technical claims, and acceptance of residual risk recorded via the RMF-001 §9.7 Risk Acceptance Record, never the Oversight Decision Record. |
