@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-006 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The Cryptography Engineer owns cryptography and key management: the key management platforms, the certificate authority hierarchy, the transport security posture, and FIPS compliance. They ensure that encryption is correctly implemented, keys are protected, certificates do not expire unexpectedly, and cryptographic standards are met across the estate.
+The Cryptography Engineer defines cryptography and key-management requirements, reference designs, and assurance methods for KMS/HSM, secrets platforms, certificate authorities, transport security, and FIPS compliance. They review first-line evidence and validate whether the deployed state meets those requirements. Named first-line service owners and operators run KMS/HSM, secrets, and certificate services and execute key, certificate, and secret lifecycle work.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -46,7 +46,15 @@ The Cryptography Engineer owns cryptography and key management: the key manageme
 
 ### 4.1 Core Responsibilities (All Grades)
 
-- Design, implement, and maintain the enterprise key management infrastructure (HSM, cloud KMS, secrets vaults) - Govern the certificate authority (CA) hierarchy: internal CA, public CA integrations, certificate lifecycle automation - Define and enforce transport security requirements: TLS versions, cipher suites, certificate validation - Manage secrets rotation for machine identities, API keys, and service accounts - Ensure FIPS 140-2/140-3 compliance for cryptographic modules in regulated environments - Conduct cryptographic assessments of new systems, applications, and vendor products - Support the rotation of exposed secrets during incident response - Contribute to the Cryptography and Key Management Standard and maintain its technical requirements - Advise Engineering and IT teams on cryptographic design decisions
+- Define enterprise key-management requirements and reference designs for HSM, cloud KMS, and secrets vaults; first-line operators deploy, run, and maintain the platforms.
+- Define certificate-authority hierarchy and lifecycle requirements for internal and public CA integrations; first-line operators execute certificate issuance, renewal, and lifecycle automation.
+- Define transport-security requirements for TLS versions, cipher suites, and certificate validation; review first-line evidence and validate the resulting state.
+- Define secrets-lifecycle requirements for machine identities, API keys, and service accounts; first-line operators execute rotation, access administration, and lifecycle work.
+- Define FIPS 140-2/140-3 compliance criteria for regulated cryptographic modules and validate evidence against them.
+- Conduct cryptographic assessments of new systems, applications, and vendor products in approved scope.
+- Provide cryptography-specific technical input to the standing Incident Response team for exposed-secret and certificate/key-compromise response; first-line operators execute rotation and recovery.
+- Author technical content for the Cryptography and Key Management Standard; Governance holds approval authority.
+- Advise Engineering and IT teams on cryptographic design decisions.
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
@@ -127,7 +135,7 @@ Competency expectations for this role follow the Engineering pillar behavioral a
 
 ## 10. Success Profile
 
-A Cryptography Engineer is successful when the organization's cryptographic posture is correct by design and sustainable over time. Key indicators: all cryptographic keys are managed through a centralized key management system with full lifecycle tracking; certificate expiry is never an emergency; TLS configurations across the estate score A+ on every assessment; cryptographic algorithms and key lengths are consistent with current best practice. The engineer makes crypto "boring" — it works correctly, automatically, and nobody has to think about it.
+A Cryptography Engineer is successful when first-line teams receive usable cryptographic requirements and reference designs before platform or application decisions become expensive. Review and validation establish whether first-line evidence supports the stated cryptographic requirements or exposes a gap; the resulting decision is to remediate, provide better evidence, or route residual risk through the existing authority. KMS/HSM availability, certificate lifecycle execution, secrets rotation, and TLS configuration operation remain first-line measures.
 
 ## 11. Career Path
 
@@ -165,7 +173,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-006 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -182,6 +190,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-10-28 | Engineering Pillar Leader | Recast per-activity responsibilities for the second-line boundary: cryptographic requirements, reference design, assessment, review, and validation remain; first-line owners and operators run key, certificate, and secrets services and execute lifecycle work, while the accountable owner decides go-live. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Extracted from monolithic JD-001 into enhanced per-role format with NICE mapping, KPI sections, and competency anchor sections. |
 
 ### Review Triggers

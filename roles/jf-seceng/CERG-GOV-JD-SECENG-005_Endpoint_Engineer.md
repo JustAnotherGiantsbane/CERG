@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-005 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The Endpoint Engineer owns endpoint and mobile security: the operating system baselines, the endpoint detection and response platform, the mobile device management controls, and the device posture signal that feeds network and access decisions. They ensure that every device accessing CERG-protected resources, whether corporate-managed or BYOD, meets a defined security baseline.
+The Endpoint Engineer defines endpoint and mobile security requirements, baselines, detection and posture requirements, and assurance methods for corporate-managed and BYOD devices. They review first-line evidence and validate whether the deployed state meets those requirements. Named first-line service owners and operators run endpoint-management, EDR, MDM, and mobile-threat-defense platforms; deploy and tune policies; patch devices; and remediate configuration drift.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -46,7 +46,15 @@ The Endpoint Engineer owns endpoint and mobile security: the operating system ba
 
 ### 4.1 Core Responsibilities (All Grades)
 
-- Design, implement, and maintain endpoint security baselines for Windows, macOS, and Linux - Govern the endpoint detection and response (EDR) platform: agent deployment, policy tuning, alert triage, and investigation support - Own mobile device management (MDM) and mobile threat defense (MTD) configuration - Define and enforce device posture requirements for conditional access (patch level, disk encryption, firewall status, EDR health) - Manage endpoint configuration drift: detect, report, and remediate deviations from the baseline - Contribute to the Endpoint and Mobile Security Standard and maintain its technical requirements - Support the Secure Configuration Baseline Standard with endpoint-specific hardening guidance - Investigate endpoint-compromise scenarios: malware execution, credential theft, lateral movement from compromised endpoints - Partner with IT operations on endpoint deployment, patching, and lifecycle management
+- Define endpoint-security baselines for Windows, macOS, and Linux; first-line operators deploy and maintain the resulting configurations.
+- Define EDR requirements, detection-use-case requirements, and assurance methods; review first-line output and validate the resulting state. First-line operators deploy agents, tune policies, triage alerts, and operate the platform.
+- Define MDM and mobile-threat-defense requirements and configuration baselines; first-line operators configure and run the services.
+- Define device-posture requirements and candidate policy content for conditional access; first-line operators deploy, tune, and operate the policies.
+- Define configuration-drift requirements, review first-line drift evidence, and validate remediation; first-line operators detect and remediate deviations.
+- Author technical content for the Endpoint and Mobile Security Standard and endpoint hardening guidance for the Secure Configuration Baseline Standard; Governance holds approval authority.
+- Support architecture review for endpoint and mobile components, stating a technical disposition while the business or service owner decides go-live.
+- Provide endpoint-specific technical input to the standing Incident Response team during malware execution, credential theft, and lateral-movement investigation and response.
+- Partner with IT operations so endpoint deployment, patching, and lifecycle practices implement the stated requirements.
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
@@ -127,7 +135,7 @@ Competency expectations for this role follow the Engineering pillar behavioral a
 
 ## 10. Success Profile
 
-An Endpoint Engineer is successful when every managed device is a controlled, defensible platform regardless of its location or user. Key indicators: endpoint configuration drift is detected and remediated automatically within hours; EDR coverage is complete with zero stale agents; patch compliance for critical vulnerabilities exceeds 95% within the defined window; mobile and remote devices are indistinguishable from office devices in their security posture. The engineer's work is measured in coverage percentage and response time, not tickets closed.
+An Endpoint Engineer is successful when first-line teams receive usable baselines, posture requirements, and detection-use-case requirements before deployment decisions. Review and validation establish whether first-line evidence supports the stated requirements or exposes a gap; the resulting decision is to remediate, provide better evidence, or route residual risk through the existing authority. EDR coverage, agent health, patch compliance, drift remediation, and MDM operation remain first-line measures.
 
 ## 11. Career Path
 
@@ -165,7 +173,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-005 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -182,6 +190,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-10-28 | Engineering Pillar Leader | Recast per-activity responsibilities for the second-line boundary: endpoint requirements, baselines, detection-use-case requirements, review, and validation remain; first-line owners and operators run EDR/MDM, deploy and tune policies, patch, and remediate drift, while the accountable owner decides go-live. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Extracted from monolithic JD-001 into enhanced per-role format with NICE mapping, KPI sections, and competency anchor sections. |
 
 ### Review Triggers
