@@ -2188,7 +2188,7 @@
   title: Grid Control Systems Security Standard
   document_type: standard
   domain: OT
-  version: 1.23
+  version: 1.24
   status: Approved
   classification: Public
   publication_profile: public
@@ -2197,7 +2197,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md
   source_file: CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md
-  source_hash: 387510e663e3092d0cf1889d0aade0a26503b6db0444fcb5340e2dac555e88a8
+  source_hash: 5e8f12cd87318aac736bb378b4bcba4af77f4855d1e6a0e6f2ca1837d6bba7d7
   canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md
   llm_include: true
   llm_priority: medium
