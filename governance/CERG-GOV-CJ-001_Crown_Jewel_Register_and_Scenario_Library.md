@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CJ-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader / Governance Pillar Leader |
@@ -191,7 +191,36 @@ Every gap a pressure-test surfaces is logged as a **Finding Record per FLOW-001 
 
 ### 5.4 Cadence
 
-Scenario pressure-tests are scheduled in [`CERG-GOV-CAL-001`](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md). The recommended cadence is semi-annual for the full library, with any individual scenario re-walked when the threat landscape, the crown-jewel population, or a material control change warrants it. Each pressure-test produces a Scenario Pressure-Test Report and the associated Finding Records.
+Scenario pressure-tests are scheduled in [`CERG-GOV-CAL-001`](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md). The recommended cadence is semi-annual for the full library, with any individual scenario re-walked when the threat landscape, the crown-jewel population, or a material control change warrants it. Each pressure-test produces a Scenario Pressure-Test Report and the associated Finding Records. The report is published as an **Evidence Index Entry** attached to the scenario's Crown Jewel Scenario Record per [`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md), so its evidence inherits the attributable, current, retrievable, and scope-defined attributes of [`CERG-GOV-AUD-001`](CERG-GOV-AUD-001_Evidence_Quality_Standard.md) rather than report prose. No new record type is created.
+
+### 5.5 Pressure-Test Output: the Bounded Defense Claim
+
+Each pressure-test assembles a **bounded defense claim**: the sentence a service owner or the CISO can act on. The report carries the claim with this structure:
+
+| Element | Content | Source |
+|---|---|---|
+| Business service and obligation at stake | The named business service and the obligation it carries (revenue, safety, regulatory, contractual) that the scenario threatens | Referenced from the crown-jewel register context (§3.2); joined to the service interface by the stable shared inventory identifier (the SCP `system_id` by value, not field name). The report cites; it does not restate consequence in prose. |
+| Scenario and expected outcome | Scenario ID plus one sentence: the expected prevent / detect / contain / recover outcome against the obligation clock | §4 library record |
+| Chain-link state walk | Per-link outcome of the §5.1 questions, with evidence dates | [`CERG-GOV-CEF-001`](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) effectiveness evidence, per control |
+| Independent challenge | Commissioned challenge of the load-bearing chain links, recorded in the Adversarial Validation Record | [`CERG-PRC-AV-001`](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) |
+| Decision | Accept the residual with named compensations and a date, or fund treatment | Oversight Decision Record ([`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md)) |
+| Retest trigger | The threat events that re-open the claim | §5.6 |
+
+**The cap rule.** Where the business service or obligation cannot be named because the identifier does not resolve to a register entry, the claim is scoped to the technical service and cannot support a compensated-exposure or comparable consequential disposition. The loop still runs; it cannot lie upward.
+
+**Independence for the asserted scope.** A consequential defense claim requires an independent technical challenge of at least the load-bearing chain links. The challenge must be independent of the operator and state author **for the asserted scope**: the same practitioner may be independent for one scope and a state author for another. The report states assessor, method, asserted scope, evidence period, and exclusions, so it cannot imply a broader claim than the pairing supports. A state walk alone is conformance evidence; it is not the independent claim.
+
+**Decision wiring.** The claim is put to the service owner or CISO as a decision question, not filed as an assessment. The decision is recorded as an Oversight Decision Record per [`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md); a material residual change re-scores per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) Section 9.
+
+### 5.6 Retest Triggers and the Worked Generic Pilot
+
+**Retest triggers.** A claim is re-walked and re-challenged when a technique class enters the threat model for the scenario's chain (KEV addition, adversary tradecraft shift, or an incident finding on an asset in the blast radius); when a material change occurs to the controls, identity paths, or crown-jewel population; or when the [`CERG-GOV-CAL-001`](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md) scheduled review arrives. The threat event is the clock; the calendar is the backstop. A recurring per-quarter or per-two-quarter technique-class floor is deliberately **not** introduced here: a general cadence rule requires separate calibration, particularly for OT scopes and teams of three or fewer.
+
+**Worked generic pilot — SCN-05 (identity provider or federation compromise).** The decision question the service owner receives:
+
+> "If our identity provider tenant is taken over tomorrow, can the attacker mint administrative access to [named business service], and would we catch it before privilege spreads? Current evidence: [per-link outcome, with dates and challenge evidence]. If not fully defensible: do you accept operating that way until [date] with [named compensations], or do you fund [named treatment]?"
+
+The two load-bearing links are challenged under [`CERG-PRC-AV-001`](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md): phishing-resistant MFA enforcement on privileged identity paths, and post-takeover session and token containment, which are the paths that ID-009 and ID-010 test currency in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) already measure. Gaps route to Finding Records per FLOW-001 F-04 and re-score per RMF-001 Section 9; the decision routes to an Oversight Decision Record. Bracketed names are generic: the adopting organization supplies the service, dates, compensations, and treatments.
 
 ---
 
@@ -208,6 +237,7 @@ This document is connective tissue. Its value is in the cross-references below; 
 | **Metrics** | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | EM-006 (exposures on crown jewels) cites this register as its source; RM-007 (Scenario Defense Coverage) measures the fraction of scenarios fully defended. |
 | **Board reporting** | [`CERG-TMPL-MTR-001`](../templates/CERG-TMPL-MTR-001_Board_and_CISO_Reporting_Deck_Template.md) | A Scenario Defense Posture view gives the board the top-down framing alongside the bottom-up top risks. |
 | **Cadence and maturity** | [`CERG-GOV-CAL-001`](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md), [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) | The pressure-test is scheduled and the program's scenario coverage is scored as a maturity domain. |
+| **Decision routing** | [`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md) | A consequential defense claim is decided by the service owner or CISO and recorded as an Oversight Decision Record; the claim cites the register context and never restates it. |
 | **Machine-readable** | `machine-readable/cerg-crown-jewel-schema.yaml` | The schema is the derived form of this register; this document is authoritative and the schema is regenerated from it. |
 
 ---
@@ -229,7 +259,7 @@ This document is connective tissue. Its value is in the cross-references below; 
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CJ-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Approved By** | CISO |
 | **Owner** | Risk Pillar Leader / Governance Pillar Leader |
@@ -239,6 +269,7 @@ This document is connective tissue. Its value is in the cross-references below; 
 
 | **Version** | **Date** | **Author** | **Change** |
 |---|---|---|---|
+| 1.1 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Second-line boundary experiment pilot: defines the bounded defense claim structure (5.5) with the consequence cap rule and scoped independence; publishes the pressure-test report as an Evidence Index Entry attached to the Crown Jewel Scenario Record; requires an independent challenge for consequential claims; wires decisions to the Oversight Decision Record; adds threat-event retest triggers and the SCN-05 worked generic pilot. No new record types; MTR-001 unchanged. |
 | 1.0 | 2026-06-12 | Risk Pillar Leader / Governance Pillar Leader | Initial publication. Establishes the crown-jewel register as authoritative, defines the Tier 0/1 minimum control profile, and creates the named loss scenario library with the pressure-test process. |
 
 ### Review Triggers
@@ -254,6 +285,7 @@ This document is connective tissue. Its value is in the cross-references below; 
 - [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) - Unified Control Baseline (chain-breaking controls, Crown-Jewel Overlay)
 - [`CERG-GOV-FLOW-001`](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) - Cross-Pillar Operational Flows (F-02, F-03, F-04)
 - [`CERG-GOV-CEF-001`](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) - Control Effectiveness Framework (effectiveness test in pressure-test)
+- [`CERG-PRC-AV-001`](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) - Adversarial Validation Procedure (independent challenge of load-bearing chain links)
 - [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) - Metrics and Reporting (EM-006, RM-007)
 - [`CERG-PLN-BC-001`](../plans/CERG-PLN-BC-001_Business_Continuity_and_Disaster_Recovery_Plan.md) - Business Continuity and DR (recovery paths)
 - [`CERG-GOV-EDG-001`](CERG-GOV-EDG-001_Edge_Register.md) - Edge Register (vendor and SaaS edges in scenarios)
