@@ -1948,7 +1948,7 @@
   title: Access Management Standard
   document_type: standard
   domain: AC
-  version: 1.23
+  version: 1.24
   status: Approved
   classification: Public
   publication_profile: public
@@ -1957,7 +1957,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: standards/CERG-STD-AC-001_Access_Management_Standard.md
   source_file: CERG-STD-AC-001_Access_Management_Standard.md
-  source_hash: 2f365f92d8c5bb99f493b5eb08b498da19f6e733659f5a6b95c24eacce74eb32
+  source_hash: 3613f38622fd1f20d2ad48d1a45842e8d34da028816c5dfd974dc9adf52ea3fd
   canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-AC-001_Access_Management_Standard.md
   llm_include: true
   llm_priority: medium
@@ -2028,7 +2028,7 @@
   title: Cryptography and Key Management Standard
   document_type: standard
   domain: CR
-  version: 1.21
+  version: 1.22
   status: Approved
   classification: Public
   publication_profile: public
@@ -2037,7 +2037,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md
   source_file: CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md
-  source_hash: ae9f21688ca4c5885f4081210600a7186cd6fd44d690a53e28b74822774c109d
+  source_hash: a1e480dec4d5bd2334aae44ad2eb759c20ca1a1690238e0b5e58cfb30da7aa44
   canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md
   llm_include: true
   llm_priority: medium
@@ -2088,7 +2088,7 @@
   title: Endpoint and Mobile Security Standard
   document_type: standard
   domain: EP
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -2097,7 +2097,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: standards/CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md
   source_file: CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md
-  source_hash: ff5dde9f5428666305e53c5c624ebf6ec9f0a345cd1d36570b2dcee543fbdc0d
+  source_hash: 2847e75932e1b5d8e0cfb831f02603d0d1a5acdc563a44c0252750058f719e4e
   canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md
   llm_include: true
   llm_priority: medium

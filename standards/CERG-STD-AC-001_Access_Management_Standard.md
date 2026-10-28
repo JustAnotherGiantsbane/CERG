@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-STD-AC-001 |
-| **Version** | 1.23 |
+| **Version** | 1.24 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -116,9 +116,9 @@ A complete package that does not match the environment is not current; it is fal
 
 | **Requirement** | **CERG Owner** | **Regulatory Reference** |
 |---|---|---|
-| Maintain an authoritative source for each identity class: HRIS for employees, a contractor management system for contractors, an asset / configuration system for machine identities, and a vendor management record for third-party identities. | Engineering / Governance | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) IA-4, AC-2 |
-| Provision and deprovision workforce accounts only from authoritative sources via automated workflows. Manual account creation is an exception case requiring documented justification. | Engineering | [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC · [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) AC-2(1) |
-| Reconcile downstream systems (IdP, directory, applications) with authoritative sources on at least a daily cadence. Discrepancies are flagged and resolved within defined SLAs. | Engineering / Risk | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) AC-2(4), CA-7 |
+| An authoritative source exists for each identity class: HRIS for employees, a contractor management system for contractors, an asset / configuration system for machine identities, and a vendor management record for third-party identities. | Engineering / Governance | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) IA-4, AC-2 |
+| Workforce accounts are provisioned and deprovisioned only from authoritative sources via automated workflows, executed by the IAM operator defined in Section 2. Manual account creation is an exception case requiring documented justification. | Engineering | [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC · [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) AC-2(1) |
+| Downstream systems (IdP, directory, applications) are reconciled with authoritative sources on at least a daily cadence by the IAM operator defined in Section 2. Discrepancies are flagged and resolved within defined SLAs. | Engineering / Risk | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) AC-2(4), CA-7 |
 
 ### 3.2 Identity Federation and SSO
 
@@ -406,7 +406,7 @@ The following access types shall be treated as privileged and subject to the con
 | | |
 |---|---|
 | **Document ID** | CERG-STD-AC-001 |
-| **Version** | 1.23 |
+| **Version** | 1.24 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / Upon Significant Change |
 | **Change Log** | 1.23 - Added identity assurance package accuracy requirement. 1.22 - Added identity operating models, assurance package, expanded control-plane scope, OAuth / token / session requirements, and clarified non-CERG IAM ownership. 1.0 - Initial publication. Identity, authentication, authorization, lifecycle. |
@@ -416,6 +416,7 @@ The following access types shall be treated as privileged and subject to the con
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.24 | 2026-10-28 | Governance Pillar Leader | Recast the 3.1 requirement rows as outcome statements with the executing actor named as the IAM operator defined in Section 2, separating requirement ownership (CERG Owner column) from first-line execution per the second-line boundary ruling on #253. No operating-mode provision changed. |
 | 1.23 | 2026-07-03 | CERG Governance | Added assurance package accuracy sampling so package completeness does not mask stale or false evidence. |
 | 1.22 | 2026-07-02 | CERG Governance | Added identity operating models, minimum assurance package, control-plane scope, OAuth / token / session requirements, and clarified CERG assurance role when IAM is operated by IT, MSP, or SaaS providers. |
 | 1.0 DRAFT | 2026 | CERG Governance | Initial release - identity, authentication, authorization, lifecycle |
