@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
-| **Version** | 1.26 |
+| **Version** | 1.27 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
@@ -78,6 +78,19 @@ CERG's pillars describe cybersecurity capabilities, not who operates every contr
 
 CERG is an integrated **second-line cybersecurity function**. Engineering supplies technical design authority, practical guardrails, and viable alternatives; Risk maintains exposure visibility and validates whether controls hold up under attack; Governance is the second-line authority for control intent, evidence criteria, decisions, and assurance. Engineering, Risk, and Governance each produce evidence from their work, while Governance assures that the combined evidence is attributable, current, retrievable, and fit for decisions or scrutiny.
 
+The line of defense follows the purpose of the activity, not the technique, the tool, or the reporting line. First-line system, service, business, IT, and OT owners, and any operator or provider they engage, perform and operate security services: vulnerability and exposure scanning, SIEM and EDR platforms, CSPM and SSPM, identity-threat monitoring, alert acknowledgement and triage, and production detection deployment. CERG does not own the standing production operation of these services. CERG defines outcomes and evidence criteria, evaluates exposure, performs independent validation and adversarial testing, challenges control performance, and escalates material deficiencies. An alert queue may route an event to the standing Incident Response team; it does not give CERG incident-command authority.
+
+**Conditions for an independent technical-effectiveness claim.** A CERG technical-effectiveness claim requires all three conditions:
+
+1. **Independence.** The claimant did not produce the control state or the work being approved. A practitioner who authored the content or operated the tested service cannot be the sole approver of an effectiveness claim that supports a compensated-exposure disposition or another consequential risk decision.
+2. **Capability.** CERG holds a service-appropriate ability to produce independent technical evidence: read or query access, sampling or re-test rights, and the capacity to interpret the result. The applicable method authority defines what is appropriate for its service family: [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) for detection, [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) for exposure, and [CERG-PRC-AV-001](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) for adversarial and recovery validation. Capability is recorded per assured service and re-asserted after a material change to its operator, tooling, access model, or scope.
+3. **Currency.** The claim states the period and scope of its evidence. Evidence that predates the current control state, or falls outside the claim's scope, cannot support the claim.
+
+Where a condition is absent, CERG labels the output at the point of claim as conformance or operating-evidence review only, names the missing condition, and does not use the output to support a compensated-exposure or comparable disposition. The deficiency enters [CERG-GOV-IMPREG-001](CERG-GOV-IMPREG-001_Program_Improvement_Register.md); material residual exposure follows [CERG-PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) and the risk-acceptance authority in [CERG-GOV-RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md). A deficiency that persists through two review cycles is a decision to operate without that assurance capability and requires formal risk acceptance under the applicable RMF authority.
+
+Where CERG operates a standing production service, it may not issue or approve the independent technical-effectiveness claim for that service; the independent assessor and review route are named in the service's control profile. For a small team, the independent approver may be another qualified person, an independent provider, or another documented independent route. The capability floor is access- and tooling-shaped, not headcount-shaped. Self-approval of consequential claims is the non-consolidable element.
+
+
 **Independent assurance and external scrutiny** consume those outputs differently. Internal Audit, where established, provides independent assurance. External auditors and assessors test or attest; regulators supervise and enforce; insurers underwrite; and the board governs and challenges through CISO reporting. CERG makes these engagements efficient by maintaining decision-useful evidence, defensible risk records, and clear control and regulatory mappings.
 
 ---
@@ -101,19 +114,23 @@ CERG is an integrated **second-line cybersecurity function**. Engineering suppli
 
 **Engagement default.** Project-aligned engagement. Engineering is engaged early in project planning and follows the work through go-live.
 
+**Operating boundary.** Engineering supplies reference designs, requirements, candidate detection content, and test cases. First-line teams or providers accept and deploy production content through their own change process. Engineering does not operate production security platforms, own alert queues, or deploy production content. First-line delivery teams perform project threat modeling and supply architecture, data-flow, identity, and deployment facts; CERG Engineering independently reviews material architectures through [CERG-PRC-AR-001](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md).
+
 ### 3.2 Cyber Risk
 
 **Mandate.** Maintain continuous visibility into organizational exposure. Drive the work that reduces it. Test that controls hold up under attack.
 
 **Core activities.**
 
-- Exposure management (scanning, prioritization, remediation tracking) per **[CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md)**
+- Exposure management (independent validation, classification, prioritization, remediation challenge and tracking) per **[CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md)**
 - Adversarial validation: penetration testing, red-team operations, purple-team detection validation
 - Threat intelligence consumption and translation into detection and posture controls
 - Vendor and third-party security risk assessment
-- Cloud security posture management (CSPM) and SaaS security posture management (SSPM)
-- Identity-threat detection and continuous identity-risk monitoring
+- Cloud and SaaS posture analysis from first-line-operated CSPM and SSPM sources
+- Identity-risk analysis and independent validation of identity-threat monitoring outcomes
 - Risk-register intake from technical sources
+
+OT adversarial testing and OT recovery challenges execute only under [CERG-PRC-AV-001](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) OT-safety rules, with a named OT Safety Officer holding stop authority.
 
 **Engagement default.** Continuous service. Risk is always on; engagement is by exposure type, not by ticket.
 
@@ -143,6 +160,7 @@ The following functions are intentionally outside CERG and operate under separat
 - **Physical Security (non-cyber).** Owned by Facilities; CERG coordinates for assets within CIP-006 / PE-family scope.
 - **Privacy program.** A distinct function under Legal / Privacy leadership; coordinates with Governance for breach notification and Restricted-data handling.
 - **Business Continuity (non-cyber).** Owned by Enterprise Risk / Operations; CERG coordinates for cyber-driven business continuity activations.
+- **Standing security-operations platform services.** Scanners, SIEM, EDR, CSPM, SSPM, identity-threat monitoring platforms, alert triage, and production detection deployment are operated by first-line internal teams or providers. A named internal service owner remains accountable. CERG independently validates coverage and effectiveness and may not approve the operation of a service it operates.
 
 ---
 
@@ -639,7 +657,7 @@ This ensures that "no single point of failure" is not just a claim about org-cha
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
-| **Version** | 1.26 |
+| **Version** | 1.27 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
@@ -655,6 +673,7 @@ This ensures that "no single point of failure" is not just a claim about org-cha
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.27 | 2026-10-28 | Governance Pillar Leader | Added second-line operating boundary in 2.4: first-line service operation, conditions for an independent technical-effectiveness claim (independence, capability, currency), consequence ladder, and hybrid rule. Added Engineering operating boundary and design-time statement in 3.1, conformed Risk core activities and OT safety constraint in 3.2, and standing security-operations services bullet in 3.4. Per second-line boundary RFC. |
 | 1.26 | 2026-06-18 | Governance Pillar Leader | Clarified Identity Risk Analyst as a mature-program specialization covered by Detection Engineer or Risk Pillar Leader in smaller teams. |
 | 1.25 | 2026-06-18 | Governance Pillar Leader | Clarified Security Awareness as an adjacent function: Awareness owns training operations while CERG coordinates content alignment, evidence quality, and threat context. |
 | 1.24 | 2026-06-18 | Governance Pillar Leader | Updated §4.4 COG membership with explicit standing-core and dynamic-per-agenda members (Business Unit Risk Owner for systems on agenda, Engineering/Risk pillar leaders as needed). Added COG Agenda Template with dynamic attendee section. |
