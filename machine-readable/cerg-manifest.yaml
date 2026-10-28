@@ -1237,7 +1237,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
   source_file: CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
-  source_hash: f137ff27b7ca3c9a36fcf77d43c36a8f9384c0f0c3a02325847b6e6ec57d7398
+  source_hash: c65bf5124c70b6653529bd195e0f8f35625ff41d06a674c6f17dbcfbbaab05ff
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
   llm_include: true
   llm_priority: medium
