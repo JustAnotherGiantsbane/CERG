@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CJ-001 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader / Governance Pillar Leader |
@@ -199,18 +199,20 @@ Each pressure-test assembles a **bounded defense claim**: the sentence a service
 
 | Element | Content | Source |
 |---|---|---|
-| Business service and obligation at stake | The named business service and the obligation it carries (revenue, safety, regulatory, contractual) that the scenario threatens | Referenced from the crown-jewel register context (§3.2); joined to the service interface by the stable shared inventory identifier (the SCP `system_id` by value, not field name). The report cites; it does not restate consequence in prose. |
+| Business service and obligation at stake | The named business service and the obligation it carries that the scenario threatens | Referenced from the crown-jewel register context (§3.2): the `business_service` value, the four consequence dimensions (`operational_impact`, `safety_impact`, `financial_reporting_impact`, `customer_impact`), and `regulated_scope`. The claim cites these values and does not restate or extend them. The reference path to a service interface is two-hop: the register entry joins to its protected-system SCP by the stable identifier (`system_id`), and that SCP reaches any enterprise security-service SCP it names in `security_service_references[]` — one service may support many protected systems, so the join is never direct from a crown-jewel asset to a service interface. |
 | Scenario and expected outcome | Scenario ID plus one sentence: the expected prevent / detect / contain / recover outcome against the obligation clock | §4 library record |
 | Chain-link state walk | Per-link outcome of the §5.1 questions, with evidence dates | [`CERG-GOV-CEF-001`](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) effectiveness evidence, per control |
 | Independent challenge | Commissioned challenge of the load-bearing chain links, recorded in the Adversarial Validation Record | [`CERG-PRC-AV-001`](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) |
-| Decision | Accept the residual with named compensations and a date, or fund treatment | Oversight Decision Record ([`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md)) |
+| Decision | Fund treatment, assign action, or route an acceptance request — acceptance itself is never recorded here | Oversight Decision Record ([`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md)) for claims carrying business consequence; Risk Acceptance Record per RMF-001 §9.7 for acceptance; system owner for cap-scoped technical claims |
 | Retest trigger | The threat events that re-open the claim | §5.6 |
 
 **The cap rule.** Where the business service or obligation cannot be named because the identifier does not resolve to a register entry, the claim is scoped to the technical service and cannot support a compensated-exposure or comparable consequential disposition. The loop still runs; it cannot lie upward.
 
 **Independence for the asserted scope.** A consequential defense claim requires an independent technical challenge of at least the load-bearing chain links. The challenge must be independent of the operator and state author **for the asserted scope**: the same practitioner may be independent for one scope and a state author for another. The report states assessor, method, asserted scope, evidence period, and exclusions, so it cannot imply a broader claim than the pairing supports. A state walk alone is conformance evidence; it is not the independent claim.
 
-**Decision wiring.** The claim is put to the service owner or CISO as a decision question, not filed as an assessment. The decision is recorded as an Oversight Decision Record per [`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md); a material residual change re-scores per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) Section 9.
+**Load-bearing links.** Load-bearing links are the chain-breaking controls whose absence alone allows the scenario to complete. The report names them, and names any load-bearing link not challenged, with the reason and who accepted the residual.
+
+**Decision wiring.** The claim is put to the service owner or CISO as a decision question, not filed as an assessment. Where the claim carries business consequence, the decision is recorded as an Oversight Decision Record per [`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md); where the cap rule scopes the claim to the technical service, the decision routes to the system owner. The Oversight Decision Record may fund treatment, assign action, or route an acceptance request — it does not itself accept residual risk. Acceptance is recorded and approved through the canonical route: a Risk Acceptance Record per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 (TMPL-RM-004), accepted by the Business Owner or Executive Sponsor with CISO approval where required. A material residual change re-scores per RMF-001 Section 9.
 
 ### 5.6 Retest Triggers and the Worked Generic Pilot
 
@@ -220,7 +222,7 @@ Each pressure-test assembles a **bounded defense claim**: the sentence a service
 
 > "If our identity provider tenant is taken over tomorrow, can the attacker mint administrative access to [named business service], and would we catch it before privilege spreads? Current evidence: [per-link outcome, with dates and challenge evidence]. If not fully defensible: do you accept operating that way until [date] with [named compensations], or do you fund [named treatment]?"
 
-The two load-bearing links are challenged under [`CERG-PRC-AV-001`](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md): phishing-resistant MFA enforcement on privileged identity paths, and post-takeover session and token containment, which are the paths that ID-009 and ID-010 test currency in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) already measure. Gaps route to Finding Records per FLOW-001 F-04 and re-score per RMF-001 Section 9; the decision routes to an Oversight Decision Record. Bracketed names are generic: the adopting organization supplies the service, dates, compensations, and treatments.
+The two load-bearing links are challenged under [`CERG-PRC-AV-001`](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md): phishing-resistant MFA enforcement on privileged identity paths, and post-takeover session and token containment, which are the paths that ID-009 and ID-010 test currency in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) already measure. Gaps route to Finding Records per FLOW-001 F-04 and re-score per RMF-001 Section 9; the decision routes to an Oversight Decision Record, and any acceptance of the residual is recorded as a Risk Acceptance Record per RMF-001 §9.7. Bracketed names are generic: the adopting organization supplies the service, dates, compensations, and treatments.
 
 ---
 
@@ -237,7 +239,7 @@ This document is connective tissue. Its value is in the cross-references below; 
 | **Metrics** | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | EM-006 (exposures on crown jewels) cites this register as its source; RM-007 (Scenario Defense Coverage) measures the fraction of scenarios fully defended. |
 | **Board reporting** | [`CERG-TMPL-MTR-001`](../templates/CERG-TMPL-MTR-001_Board_and_CISO_Reporting_Deck_Template.md) | A Scenario Defense Posture view gives the board the top-down framing alongside the bottom-up top risks. |
 | **Cadence and maturity** | [`CERG-GOV-CAL-001`](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md), [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) | The pressure-test is scheduled and the program's scenario coverage is scored as a maturity domain. |
-| **Decision routing** | [`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md) | A consequential defense claim is decided by the service owner or CISO and recorded as an Oversight Decision Record; the claim cites the register context and never restates it. |
+| **Decision routing** | [`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md) | Consequential claims are recorded as Oversight Decision Records; cap-scoped technical claims route to the system owner. Acceptance of residual risk stays on the RMF-001 §9.7 route, never the Oversight Decision Record. The claim cites the register context and never restates it. |
 | **Machine-readable** | `machine-readable/cerg-crown-jewel-schema.yaml` | The schema is the derived form of this register; this document is authoritative and the schema is regenerated from it. |
 
 ---
@@ -259,7 +261,7 @@ This document is connective tissue. Its value is in the cross-references below; 
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CJ-001 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Approved By** | CISO |
 | **Owner** | Risk Pillar Leader / Governance Pillar Leader |
@@ -269,6 +271,7 @@ This document is connective tissue. Its value is in the cross-references below; 
 
 | **Version** | **Date** | **Author** | **Change** |
 |---|---|---|---|
+| 1.2 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Review corrections: obligation reference corrected to the §3.2 register field set (four consequence dimensions and `regulated_scope`) with the two-hop reference path through the protected-system SCP and `security_service_references[]`; load-bearing links defined; decision routing split — Oversight Decision Record for consequential claims, system owner for cap-scoped technical claims, and acceptance of residual risk recorded via the RMF-001 §9.7 Risk Acceptance Record, never the Oversight Decision Record. |
 | 1.1 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Second-line boundary experiment pilot: defines the bounded defense claim structure (5.5) with the consequence cap rule and scoped independence; publishes the pressure-test report as an Evidence Index Entry attached to the Crown Jewel Scenario Record; requires an independent challenge for consequential claims; wires decisions to the Oversight Decision Record; adds threat-event retest triggers and the SCN-05 worked generic pilot. No new record types; MTR-001 unchanged. |
 | 1.0 | 2026-06-12 | Risk Pillar Leader / Governance Pillar Leader | Initial publication. Establishes the crown-jewel register as authoritative, defines the Tier 0/1 minimum control profile, and creates the named loss scenario library with the pressure-test process. |
 
