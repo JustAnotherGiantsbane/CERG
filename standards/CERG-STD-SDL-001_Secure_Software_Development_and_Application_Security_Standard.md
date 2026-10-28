@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-STD-SDL-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Application Security) |
@@ -42,9 +42,9 @@
 
 The Cyber Engineering pillar exists to build securely. Its mission statement, set in [`CERG-GOV-FRM-001`](../governance/CERG-GOV-FRM-001_CERG_Framework.md), is "build securely, deploy confidently, consult continuously." Until this standard, the program had no document that said what building securely actually requires. The architecture review procedure [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) governs the engagement; this standard governs the code.
 
-This standard establishes the requirements for secure software development across the CERG-managed estate: how software moves through a secure development lifecycle, the security gates it passes, the code review and automated testing it is subject to, how secrets and dependencies are handled, and how the build pipeline that produces it is itself secured.
+This standard establishes the requirements for secure software development across the in-scope estate: how software moves through a secure development lifecycle, the security gates it passes, the code review and automated testing it is subject to, how secrets and dependencies are handled, and how the build pipeline that produces it is itself secured.
 
-It applies to every piece of software CERG-managed teams write or materially modify: customer-facing and internal applications, microservices and APIs, scripts and automation, integration and glue code, and infrastructure-as-code. It does not govern the security of purchased software, which is handled by [`CERG-PRC-TPRM-001`](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md), except where purchased components are embedded as dependencies (Section 8).
+It applies to every piece of in-scope software first-line teams or their providers write or materially modify: customer-facing and internal applications, microservices and APIs, scripts and automation, integration and glue code, and infrastructure-as-code. CERG sets and reviews the security requirements; it does not operate the resulting software-delivery services. Purchased software is handled by [`CERG-PRC-TPRM-001`](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md), except where purchased components are embedded as dependencies (Section 8).
 
 > **The Standard Is a Floor, Applied by Risk Tier**
 >
@@ -58,7 +58,7 @@ Six principles govern secure development in CERG.
 
 1. **Shift left, but do not shift blind.** Security findings are cheapest to fix before code is written and most expensive after release. Testing, review, and threat modeling happen as early as the lifecycle allows. But early testing that no one acts on is theater; every gate has an owner and a consequence.
 2. **The pipeline is the enforcement point.** A requirement that depends on a developer remembering it will be forgotten. Security requirements are enforced by the build pipeline wherever a machine can enforce them. Human review is reserved for what a machine cannot judge.
-3. **Build securely; do not own the result.** Consistent with the Engineering pillar mission, Engineering builds software securely and hands it off. Engineering does not become the permanent operator of every application it helps build. Security posture travels with the handoff.
+3. **Set security requirements; do not operate the result.** CERG Engineering supplies requirements, reference patterns, candidate content, review, and independent testing. First-line delivery teams or providers build, deploy, and operate the resulting software-delivery services. Security posture travels with the handoff.
 4. **A finding is a risk until it is closed or accepted.** An open security finding is not a backlog item that quietly ages out. It is closed, or it is risk-accepted through [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). There is no third option.
 5. **Provenance is part of the product.** Software that cannot be traced to its source, its dependencies, and its build is not trusted. Every release carries a Software Bill of Materials and a verifiable build provenance.
 6. **Secrets never live in code.** This principle is absolute and has no risk-tier exception. Section 7.
@@ -73,12 +73,12 @@ Secure development is not a phase bolted onto delivery. Security activity is def
 
 | **Phase** | **Security Activity** | **Primary Owner** |
 |---|---|---|
-| Requirements | Security and abuse-case requirements captured; data classification per [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) identified. | Application Security Engineer |
-| Design | Threat modeling; architecture review intake per [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). | Application Security Engineer |
-| Implementation | Secure coding practice; SAST and SCA in the developer loop; secrets scanning. | Engineering Pillar Leader |
-| Verification | DAST; code review gate; pre-production review per [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). | Pre-production Reviewer |
-| Release | Build provenance and SBOM generated; release gate cleared. | Application Security Engineer |
-| Operation and handoff | Security posture documented; dependency monitoring active; ownership transferred. | Engineering Pillar Leader |
+| Requirements | Security and abuse-case requirements captured; data classification per [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) identified. | First-line project team; Application Security Engineer provides technical requirements |
+| Design | Threat modeling; architecture review intake per [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). | First-line project team; CERG provides technical review |
+| Implementation | Secure coding practice; SAST and SCA in the developer loop; secrets scanning. | First-line build-team or pipeline operator |
+| Verification | DAST; code review gate; pre-production review per [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md). | First-line operator; CERG performs technical review or approved independent testing |
+| Release | Build provenance and SBOM generated; release gate enforced. | First-line pipeline operator |
+| Operation and handoff | Security posture documented; dependency monitoring active; ownership transferred. | Named first-line service owner and operator |
 
 ### 3.2 Software Risk Tiers
 
@@ -112,7 +112,7 @@ A security gate is a checkpoint software must clear to advance. Gates are enforc
 | DAST clean | Required | Recommended | Not required | Any unresolved High or Critical finding |
 | SBOM generated | Required | Required | Required | Missing SBOM |
 | Build provenance attested | Required | Required | Recommended | Unverifiable build |
-| Pre-production review signed | Required | Required | Not required | Unsigned go-live readiness per [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) |
+| Pre-production technical disposition recorded | Required | Required | Not required | Required technical review absent per [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) |
 
 ### 4.2 Gate Bypass
 
@@ -138,7 +138,7 @@ A gate is bypassed only through a risk exception filed under [`CERG-PRC-RM-001`]
 
 ### 6.1 Static Application Security Testing (SAST)
 
-SAST runs on every commit to a protected branch and in the developer loop where the toolchain supports it. SAST findings at High or Critical block the SAST gate. The SAST ruleset is owned by the Application Security Engineer and reviewed at least annually. False positives are suppressed with a recorded, reviewable justification, not by disabling the rule.
+SAST runs on every commit to a protected branch and in the developer loop where the toolchain supports it. SAST findings at High or Critical block the SAST gate. The Application Security Engineer defines ruleset requirements and candidate content; the first-line pipeline operator configures, deploys, tunes, and retains output from the live ruleset. False positives are suppressed with a recorded, reviewable justification, not by disabling the rule.
 
 ### 6.2 Dynamic Application Security Testing (DAST)
 
@@ -219,12 +219,12 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](../governance/
 
 | **Role** | **Secure Development Responsibility** |
 |---|---|
-| **Application Security Engineer** | Owns this standard. Owns the SAST/DAST/SCA rulesets, threat modeling, the gate definitions, and the software risk-tier decision. Reviews security-sensitive changes. |
-| **Engineering Pillar Leader** | Accountable for secure development across the pillar. Owns implementation-phase practice and the operation-and-handoff phase. Resolves risk-tier disputes. |
-| **Pre-production Reviewer** | Owns the verification-phase pre-production review and signs go-live readiness for Tier 1 and Tier 2 software. |
-| **Cloud Security Engineer** | Owns pipeline and build security where the pipeline runs on cloud infrastructure; owns IaC misconfiguration scanning. |
-| **Cryptography Engineer** | Owns the secrets management platform that software retrieves credentials from; supports rotation of exposed secrets. |
-| **Exposure Management Lead** | Operates the post-production software vulnerability SLAs per [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md). |
+| **Application Security Engineer** | Authors this standard's technical content; defines SAST/DAST/SCA requirements, candidate rules, test cases, and gate criteria; contributes technical context to threat modeling; reviews security-sensitive changes; and independently tests in approved scope. Does not operate the tools, gates, or release process. |
+| **Engineering Pillar Leader** | Accountable for Engineering's technical requirements, reference patterns, and review service; resolves technical risk-tier disagreements and escalates material disagreement. Does not own implementation or operation-and-handoff. |
+| **Pre-production Reviewer** | Conducts the verification-phase technical review for Tier 1 and Tier 2 software and states its disposition. Does not approve go-live. |
+| **Cloud Security Engineer** | Defines pipeline and build-security requirements for cloud-hosted delivery services and reviews IaC evidence; the first-line operator runs the platform and scans. |
+| **Cryptography Engineer** | Defines secrets-management requirements and reviews evidence; the first-line operator runs the secrets-management platform and executes secret rotation. |
+| **Exposure Management Lead** | Independently validates and challenges post-production software-vulnerability treatment per [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md); the first-line service owner and operator remediate. |
 | **Governance Pillar Leader** | Maintains the exceptions register for gate bypasses; tracks audit-facing evidence; cross-references this standard with the control baseline. |
 | **Policy & Standards Manager** | Maintains this document, its version, and its review cycle. |
 
@@ -249,7 +249,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](../governance/
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-STD-SDL-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-05-21 |
 | **Classification** | Public |
@@ -260,12 +260,13 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](../governance/
 | **Next Scheduled Review** | 2027-05-21 |
 | **Frameworks** | NIST SSDF 800-218; NIST 800-53r5 (SA, SI, CM); OWASP ASVS / SAMM; NIST 800-161r1; SLSA |
 | **Regulations** | CMMC L2 / 800-171r3; SOX ITGC; NERC-CIP where applicable |
-| **Environments** | All CERG-managed software |
+| **Environments** | All in-scope first-line software delivery services |
 
 ### Revision History
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-10-28 | Engineering Pillar Leader | Reconciled secure-development decision rights with the second-line boundary: CERG defines requirements, candidate content, review, and approved independent testing; first-line owners and operators run delivery platforms, gates, releases, handoff, and remediation. |
 | 1.0 | 2026-05-21 | Cyber Engineering | Initial release. Establishes the secure SDLC, software risk tiers, the security gate set, code review requirements, SAST/DAST/SCA testing requirements, the absolute no-secrets-in-code rule, dependency and SBOM requirements, pipeline and build security, infrastructure-as-code coverage, and software vulnerability handling. |
 
 ### Review Triggers

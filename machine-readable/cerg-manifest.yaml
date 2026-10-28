@@ -588,7 +588,7 @@
   title: CERG Operating Model
   document_type: governance_instrument
   domain: OM
-  version: 1.29
+  version: 1.30
   status: Approved
   classification: Public
   publication_profile: public
@@ -597,7 +597,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   source_file: CERG-GOV-OM-001_CERG_Operating_Model.md
-  source_hash: 2757a01356675e4452090dc6243ae0b27da7d7ad735602ff0b721986cc84d3dd
+  source_hash: f2d9aa4ef4b910ea615da7f9399f50a761c5d146e0af76122b226ddd3905d409
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   llm_include: true
   llm_priority: high
@@ -648,7 +648,7 @@
   title: Consolidated Roles and RACI Instrument
   document_type: governance_instrument
   domain: RAC
-  version: 1.5
+  version: 1.6
   status: Approved
   classification: Public
   publication_profile: public
@@ -657,7 +657,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md
   source_file: CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md
-  source_hash: 4425120bf1a1d67df23a0ebdbeaab21964a5083a54924da72bda0394d5f28e77
+  source_hash: 097a449f484e6c26afd8b8fb3d8296b57fef08d55f8cd195593c28946cbe1c46
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md
   llm_include: true
   llm_priority: medium
@@ -1048,7 +1048,7 @@
   title: Architecture Review and Project Intake Procedure
   document_type: procedure
   domain: AR
-  version: 1.2
+  version: 1.3
   status: Approved
   classification: Public
   publication_profile: public
@@ -1057,7 +1057,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
   source_file: CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
-  source_hash: 47975d44ca15a8fa3030a9fbea0ffc01484a5a36fae2efbf05025780c2520a7d
+  source_hash: 49b24fc8efdb0b630fa20b0548a4461d0d5b3bdda35ec16f0671a3e3abb331f8
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
   llm_include: true
   llm_priority: medium
@@ -2228,7 +2228,7 @@
   title: Secure Software Development and Application Security Standard
   document_type: standard
   domain: SDL
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -2237,7 +2237,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md
   source_file: CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md
-  source_hash: 5db7a9b07ef25488f6ab62c81bf6fbe06cb6954ecf7f8c2fde1a47c0f3d04551
+  source_hash: 0f5670617860fca81720446ef5520ffa4334c55a01dfd4fc7880ebc127ec1aad
   canonical_url: https://github.com/m0dernz/CERG/blob/main/standards/CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md
   llm_include: true
   llm_priority: medium

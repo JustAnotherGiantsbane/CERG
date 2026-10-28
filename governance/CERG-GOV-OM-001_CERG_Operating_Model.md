@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
-| **Version** | 1.29 |
+| **Version** | 1.30 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
@@ -107,12 +107,12 @@ Where CERG holds ongoing service-level obligations — availability, coverage de
 
 - Pre-production security architecture review for all in-scope projects
 - Reference architectures, landing zones, and configuration baselines per platform class
-- Security infrastructure-as-code, policy-as-code, and admission control
+- Security requirements, reference patterns, candidate infrastructure-as-code and policy-as-code, and admission-control test cases
 - IT/OT convergence advisory and Electronic Security Perimeter design
-- Identity platform engineering (IdP, MFA, SSO, PAM, secrets management)
-- Cryptography and key management platform engineering
-- Endpoint, server, container, and cloud security tooling engineering
-- Operational handoff documentation that supports Governance compliance evidence
+- Identity-platform reference design and technical requirements (IdP, MFA, SSO, PAM, secrets management), not production operation
+- Cryptography and key-management reference design and technical requirements, not platform operation
+- Endpoint, server, container, and cloud security-tooling requirements and test cases, not standing service operation
+- Handoff documentation that identifies first-line operational ownership and supports Governance compliance evidence
 
 **Engagement default.** Project-aligned engagement. Engineering is engaged early in project planning and follows the work through go-live.
 
@@ -184,7 +184,7 @@ The three pillars report to the CISO through pillar leaders (Manager / Director 
 | Exception approval | Per [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) §8, which routes to RMF §9.7 for approval authority |
 | Incident classification & containment | Incident Commander (CISO or designee), per the standing IR team (see §3.4) |
 | External notification (regulator, public) | IC + CISO + Legal |
-| Pre-production go/no-go for in-scope projects | Engineering pillar leader with Risk input; escalation to CISO if business and CERG disagree |
+| Pre-production go/no-go for in-scope projects | Business or service owner decides, with CERG technical review. CERG may escalate to the CISO where CERG and the business disagree. |
 | Vendor onboarding approval (Tier 1) | Risk pillar leader; CISO for material risk exceptions |
 | New SaaS / cloud service approval | Governance + Engineering; CISO for Restricted-data placements |
 | Budget allocation across pillars | CISO |
@@ -404,7 +404,7 @@ Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leade
 | **Application Security Engineer** | Engineering | "Application Security Engineer," "Application Security Engineer" | SAST/DAST, SDLC controls, threat modeling. |
 | **Endpoint Engineer** | Engineering | "Endpoint Engineer" | Endpoint, EDR, OS baselines. |
 | **Cryptography Engineer** | Engineering | "Cryptography Engineer" | Key management, CA hierarchy, TLS posture, FIPS compliance. |
-| **Pre-production Reviewer** | Engineering (rotated) | - | Owns the pre-production checklist; signs off on go-live readiness. |
+| **Pre-production Reviewer** | Engineering (rotated) | - | Conducts the pre-production technical review and states its disposition; the business or service owner decides go-live. |
 | **Risk Pillar Leader** | Risk | "Risk Pillar Leader" (when speaking of the lead), "Risk Manager" | Pillar accountability; exposure posture reporting; Medium severity risk-acceptance authority per RMF §9.7. |
 | **Exposure Management Lead** | Risk | "Exposure Management Lead" | Operates [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md); owns SLAs and posture metrics. |
 | **Adversarial Testing Lead** | Risk | "Adversarial Testing Lead," "Adversarial Testing Lead" | Operates [`CERG-PRC-AV-001`](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md); pen test, red team, purple team. |
@@ -659,7 +659,7 @@ This ensures that "no single point of failure" is not just a claim about org-cha
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
-| **Version** | 1.29 |
+| **Version** | 1.30 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
@@ -675,6 +675,7 @@ This ensures that "no single point of failure" is not just a claim about org-cha
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.30 | 2026-10-28 | Governance Pillar Leader | Reconciled Engineering decision rights with the second-line operating boundary: §3.1 distinguishes requirements and candidate content from platform operation; §4.2 gives go/no-go to the business or service owner with CERG review and CISO escalation; the pre-production roster entry states a technical disposition rather than a go-live sign-off. |
 | 1.29 | 2026-10-28 | Governance Pillar Leader | Trace correction: §5.2 identifies CSPM, SSPM, and identity-threat monitoring as first-line-operated sources whose coverage/provenance or outcomes CERG independently validates; §6.3 aligns Detection Engineer work with the per-activity boundary and role recast. |
 | 1.28 | 2026-10-28 | Governance Pillar Leader | Clarified state authorship in §2.4: live CERG changes suspend the affected effectiveness claim until independent verification; break-glass approval does not restore it. Clarified that ongoing service obligations make CERG the service operator for the hybrid rule. |
 | 1.27 | 2026-10-28 | Governance Pillar Leader | Added second-line operating boundary in 2.4: first-line service operation, conditions for an independent technical-effectiveness claim (independence, capability, currency), consequence ladder, and hybrid rule. Added Engineering operating boundary and design-time statement in 3.1, conformed Risk core activities and OT safety constraint in 3.2, and standing security-operations services bullet in 3.4. Per second-line boundary RFC. |
