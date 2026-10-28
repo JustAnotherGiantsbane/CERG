@@ -708,7 +708,7 @@
   title: Document Authoring and Style Guide
   document_type: governance_instrument
   domain: STY
-  version: 1.02
+  version: 1.03
   status: Approved
   classification: Public
   publication_profile: public
@@ -717,7 +717,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md
   source_file: CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md
-  source_hash: 344df83f9d87594c147c1071d9dbfe4325e2f3b173fc9976b45fb9b0974e970a
+  source_hash: 5b57981e269479440895a7ec1d874ed27c83973a88ff1825625c3ed7a7c3d7f0
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md
   llm_include: true
   llm_priority: medium

@@ -24,6 +24,7 @@ Preserve these boundaries when interpreting or changing the framework:
 - Do not turn CERG into a context-free control checklist, vendor/tool catalog, universal lifecycle, or mandatory GRC-tool schema. Preserve outcome-based, tool-neutral guidance and let adopters implement local records and tooling.
 - Before proposing a new top-level artifact, control, role, record type, or metric, identify the concrete gap and check whether an existing standard, procedure, catalog, flow, or template already owns it. Prefer improving the existing owner over duplicating an inventory.
 - Do not create a second source of truth for role names, RACI, control detail, risk acceptance, document lifecycle, or record definitions. Extend the authoritative source and update dependent artifacts in the same change.
+- Write for a busy operator: lead with the decision, action, owner, or boundary; use short paragraphs and tables only when they speed comparison; remove rationale already held by a cited authority. Every sentence must change a decision, action, or interpretation. Do not inflate a concise rule into an essay.
 - Regulatory overlays add or tighten requirements; they do not silently relax the organizational baseline. When multiple rules apply, use the most stringent applicable requirement or shortest applicable clock.
 
 ## Directory Layout
