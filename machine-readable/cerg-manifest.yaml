@@ -168,7 +168,7 @@
   title: Crown Jewel Register and Scenario Library
   document_type: governance_instrument
   domain: CJ
-  version: 1.0
+  version: 1.4
   status: Approved
   classification: Public
   publication_profile: public
@@ -177,7 +177,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md
   source_file: CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md
-  source_hash: 8e8c6c01cda0f0b107f38f26ef98bf07133b0587cf150b8d035a72884b4f3daf
+  source_hash: 935b82fdb8bda5b5e16d0a26f9776301bd7a05921e5ffb7ccf1abc9d136da899
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md
   llm_include: true
   llm_priority: medium
@@ -1088,7 +1088,7 @@
   title: Adversarial Validation Procedure
   document_type: procedure
   domain: AV
-  version: 1.3
+  version: 1.5
   status: Approved
   classification: Public
   publication_profile: public
@@ -1097,7 +1097,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md
   source_file: CERG-PRC-AV-001_Adversarial_Validation_Procedure.md
-  source_hash: d41b542d59c6d194a04036c2dce7c6467fff1b576480bd3fd0c86970f437c60c
+  source_hash: 753c048985b0c7e93c24e42c0613fd069f5b977ad19b0d814ea490c246ea984d
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md
   llm_include: true
   llm_priority: medium
