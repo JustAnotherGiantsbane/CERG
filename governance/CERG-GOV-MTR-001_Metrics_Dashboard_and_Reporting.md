@@ -7,7 +7,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-MTR-001 |
-| **Version** | 1.37 |
+| **Version** | 1.38 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Reporting) |
@@ -84,6 +84,15 @@ it beside the count of scenarios in the period where every chain-breaking link w
 bounded alternative validation ([`CJ-001`](CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md)
 §5.5). Where the two numbers diverge, the gap is assurance debt and it is the number worth discussing.
 No threshold is set on either.
+
+**Definition — challenged-scenario count.** Counts named scenarios in the register for which a current
+pressure-test Evidence Index Entry demonstrates that every chain-breaking link was directly challenged,
+or carried bounded alternative independent validation, under
+[`CJ-001`](CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md) §5.5. Each count is reported
+with the evidence period its entries cover and a named exception list of scenarios where a link was
+recorded as a gap on the residual path. A scenario with no entry, or with an entry whose evidence has
+expired, is not counted. No threshold is set and no second metric ID is created; the definition exists so
+that two reporters cannot count different things.
 
 ### 3.2 Exposure Management Metrics (Owner: Cyber Risk)
 
@@ -273,21 +282,38 @@ They are experimental, scoped to the pilot, and withdrawn if they do not change 
 
 Counts per period, from records that already exist. No percentage, no score, no target.
 
-| Item | Source |
+Three signal classes, reported separately and never summed into a single "exploited" figure, because two
+of the three are corroboration rather than observation in this organization:
+
+| Signal class | What it establishes | Source |
+|---|---|---|
+| External KEV designation with a reachable path | The exposure class is being exploited somewhere comparable — not that it was exploited here | EM-004 |
+| Internal incident finding | Exploitation observed in this organization | Incident record, Finding Record |
+| AV-confirmed path | The path is exploitable under tested conditions — a path, not its prevalence | Adversarial Validation Record |
+
+| Tally item | Definition |
 |---|---|
 | Exposures CERG ranked in the period's highest band | `VM-001` classification output |
-| Of those, subsequently observed in exploitation | EM-004 KEV with reachable path; incident findings; AVR results |
-| Exposures observed in exploitation that CERG had ranked low | same sources, reverse direction |
-| Denominator: observations classified in the period | `VM-001` |
+| Of those, later matched by a signal of each class | joined on the exposure identifier, class by class |
+| Inverse — signals that join to an exposure CERG had ranked low | the same join, in reverse |
+| Denominator — observations classified in the period | `VM-001` |
 
-Six limits, stated with the tally rather than discovered after it:
+A signal that cannot be joined to a prior classification is reported as a **coverage and mapping
+limitation**. It is evidence that the tally's own inputs are incomplete, and it is never counted as
+evidence that CERG ranked something low.
+
+Seven limits, stated with the tally rather than discovered after it:
 
 1. Small N — one period cannot distinguish judgement from luck.
 2. Selection bias — the top band is itself a judgement, so a flattering result may only show CERG ranked its own favourites.
-3. Attribution ambiguity — an exposure may be remediated between ranking and exploitation, turning a hit into a near-miss or the reverse.
-4. KEV lag — additions trail exploitation, so recent periods are systematically undercounted.
-5. Adversarial validation samples technique classes, not prevalence.
-6. It is not a rate without exposure-time; a percentage invites arithmetic the data cannot support.
+3. Proxy substitution — a KEV designation describes an exposure class, not this estate; only the internal-incident class is direct observation.
+4. Attribution ambiguity — an exposure may be remediated between ranking and the signal, turning a hit into a near-miss or the reverse.
+5. KEV lag — additions trail exploitation, so recent periods are systematically undercounted.
+6. Adversarial validation samples technique classes, not prevalence.
+7. No exposure-time denominator — reporting a percentage would invite arithmetic the data cannot support.
+
+Join coverage is reported beside the tally: the share of signals that resolved to a prior classification.
+Without it, a low matched count is indistinguishable from a mapping gap.
 
 Reporting rule: counts plus a short narrative. Three periods minimum before anyone interprets it. If
 three periods do not distinguish ranking quality from luck, the tally is withdrawn rather than defended.
@@ -576,8 +602,8 @@ Threshold changes are recorded as improvement register entries (IMPREG-001, type
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-MTR-001 |
-| **Version** | 1.37 |
+| **Version** | 1.38 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / metrics-platform change |
-| **Change Log** | 1.0 - Initial publication. Establishes dictionary, source map, CISO dashboard, briefs, and anti-shallow guardrails. · 1.1 - Added Section 3.7 Predictive and Leading Indicators (PL-001 through PL-007). · 1.2 - Restored Section 9 Cadence and Ownership. · 1.3 - Added Section 10 Threshold Calibration: cadence, triggers, rules, change log, and improvement register integration. · 1.32 - Added §6.1 Control Funding Decision Brief pattern for business funding/prioritization decisions tied to control gaps and risk treatments. · 1.33 - Expanded identity metrics ID-005 through ID-008 for identity assurance package currency, external identity staleness, NHI compliance, and session/token containment readiness. · 1.34 - Split session/token containment into documented-path and tested-path metrics, and added identity assurance package accuracy spot-check metric. · 1.35 - Defined DT-001 to exclude data-blind detections from ATT&CK coverage and show impacted coverage as Red. · 1.36 - Restored DT-002 purple-validation and DT-003 mandatory-log-source-onboarding definitions with explicit scoped denominators. · 1.37 - EM-007 and EM-008 reclassified to Section 3.2c first-line operating health, definitions and bands unchanged; RM-007 demoted from a thresholded coverage score to a paired count with the challenged-scenario count; Section 3.10 added as time-boxed experimental pilot reporting. No threshold, formula, or SLA change. |
+| **Change Log** | 1.0 - Initial publication. Establishes dictionary, source map, CISO dashboard, briefs, and anti-shallow guardrails. · 1.1 - Added Section 3.7 Predictive and Leading Indicators (PL-001 through PL-007). · 1.2 - Restored Section 9 Cadence and Ownership. · 1.3 - Added Section 10 Threshold Calibration: cadence, triggers, rules, change log, and improvement register integration. · 1.32 - Added §6.1 Control Funding Decision Brief pattern for business funding/prioritization decisions tied to control gaps and risk treatments. · 1.33 - Expanded identity metrics ID-005 through ID-008 for identity assurance package currency, external identity staleness, NHI compliance, and session/token containment readiness. · 1.34 - Split session/token containment into documented-path and tested-path metrics, and added identity assurance package accuracy spot-check metric. · 1.35 - Defined DT-001 to exclude data-blind detections from ATT&CK coverage and show impacted coverage as Red. · 1.36 - Restored DT-002 purple-validation and DT-003 mandatory-log-source-onboarding definitions with explicit scoped denominators. · 1.37 - EM-007 and EM-008 reclassified to Section 3.2c first-line operating health, definitions and bands unchanged; RM-007 demoted from a thresholded coverage score to a paired count with the challenged-scenario count; Section 3.10 added as time-boxed experimental pilot reporting. No threshold, formula, or SLA change. · 1.38 - Defines the challenged-scenario count that RM-007 is paired with (inclusion rule, evidence period, named exceptions); splits the pilot tally into three signal classes and counts the inverse only where a signal joins to a prior classification, with unjoined signals reported as a coverage limitation. No threshold or metric ID added. |
 
