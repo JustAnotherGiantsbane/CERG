@@ -568,7 +568,7 @@
   title: Metrics Dashboard and Reporting
   document_type: governance_instrument
   domain: MTR
-  version: 1.36
+  version: 1.38
   status: Approved
   classification: Public
   publication_profile: public
@@ -577,7 +577,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
   source_file: CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
-  source_hash: 296539bea011aa49972362d85ca0db3e6b56cdf604f32b065ce134020294fd7b
+  source_hash: 3d4bf970a6b8aaf21daf72a80f9597ad771d18ca8fba54dabf5a9d2e07aaaee6
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
   llm_include: true
   llm_priority: medium
@@ -1257,7 +1257,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md
   source_file: CERG-PRC-VM-001_Exposure_Management_Procedure.md
-  source_hash: 7b12330a0f971aa08b4f2a611b98ae143104f9ea8a705cfefb943c3ee239a027
+  source_hash: aa7b363d63767967c6c8bc55a9ea4604f7c7de1c0cfde678f9a72ea9de8cef5d
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md
   llm_include: true
   llm_priority: high
@@ -1617,7 +1617,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md
   source_file: CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md
-  source_hash: a161b3aaabfb96e7a5773a2a580055dd624f4562ecbf1872af4bc567a93c53e1
+  source_hash: 651c106f0f89a6cc8de3de6fbd6a06852177b83ebe7fb0b1a94dedbe7d571f3e
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md
   llm_include: true
   llm_priority: low
@@ -1677,7 +1677,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-riskops/CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md
   source_file: CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md
-  source_hash: ba10476fce8bd43796a581d09741f696be48450c0129f3439db713c6f8e8ceec
+  source_hash: f0e6d7e2f9c11f815211d0079f9dd8aaffaf964c7a4f26632e93b077f32e5164
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-riskops/CERG-GOV-JD-RISKOPS-004_Detection_Engineer.md
   llm_include: true
   llm_priority: low
@@ -2548,7 +2548,7 @@
   title: System Control Profile Template
   document_type: template
   domain: SCP
-  version: 1.2
+  version: 1.3
   status: Approved
   classification: Public
   publication_profile: public
@@ -2557,7 +2557,7 @@
   parent_artifact: 'CERG-GOV-CAT-002 — Record Catalog'
   source_path: templates/CERG-TMPL-SCP-001_System_Control_Profile_Template.md
   source_file: CERG-TMPL-SCP-001_System_Control_Profile_Template.md
-  source_hash: 267a66a849984d49076882f744b6b6f45a58f6308dca2213f16217e640b18c2c
+  source_hash: 13714cd52694ba34773fba7c51f09cb5056394be19049798efabfe9b1dfd29ec
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-SCP-001_System_Control_Profile_Template.md
   llm_include: true
   llm_priority: medium
