@@ -568,7 +568,7 @@
   title: Metrics Dashboard and Reporting
   document_type: governance_instrument
   domain: MTR
-  version: 1.36
+  version: 1.38
   status: Approved
   classification: Public
   publication_profile: public
@@ -577,7 +577,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
   source_file: CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
-  source_hash: 296539bea011aa49972362d85ca0db3e6b56cdf604f32b065ce134020294fd7b
+  source_hash: 3d4bf970a6b8aaf21daf72a80f9597ad771d18ca8fba54dabf5a9d2e07aaaee6
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md
   llm_include: true
   llm_priority: medium
