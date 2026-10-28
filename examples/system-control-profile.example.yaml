@@ -14,8 +14,6 @@ controls_applied:
     implementation: AD group S47-Operators controls operator access; quarterly access review performed by the System Owner.
     evidence: evidence://access-reviews/hist-47/quarterly_access_review_2026-03-31.pdf
     evidence_type: access_review_record
-    last_validated: 2026-03-31
-    next_review: 2026-06-30
     owner: Identity Engineer
     status: Implemented
     related_risks: []
@@ -24,8 +22,6 @@ controls_applied:
     implementation: DISH baseline v2.1 applied; local firewall allowlist restricts management services to the OT jump host.
     evidence: evidence://baselines/hist-47/cm7_baseline_comparison_2026-04-15.xlsx
     evidence_type: configuration_baseline_record
-    last_validated: 2026-04-15
-    next_review: 2026-07-15
     owner: OT Security Engineer
     status: Implemented
     related_risks: []

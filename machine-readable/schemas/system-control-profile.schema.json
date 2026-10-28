@@ -94,8 +94,6 @@
         "implementation",
         "evidence",
         "evidence_type",
-        "last_validated",
-        "next_review",
         "owner",
         "status"
       ],
