@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-007 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The Engineering Pillar Leader is accountable for the Cyber Engineering pillar: the internal security consulting practice that embeds engineers in projects from concept through production. They own project intake, reference architecture, and the secure build of the estate. They lead a team of domain-specialist engineers (Cloud, Identity, OT, Application, Endpoint, Cryptography) and ensure that every system going live has been reviewed, hardened, and handed off with a known security posture.
+The Engineering Pillar Leader is accountable for CERG Engineering's technical design authority, intake, reference architecture, standards content, and review service. They lead domain-specialist engineers who define requirements, candidate content, technical review, and approved independent testing across Cloud, Identity, OT, Application, Endpoint, and Cryptography. They ensure material projects receive a clear technical disposition and escalation path; named first-line owners and operators build, deploy, operate, and decide go-live for their services.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -46,7 +46,16 @@ The Engineering Pillar Leader is accountable for the Cyber Engineering pillar: t
 
 ### 4.1 Core Responsibilities (All Grades)
 
-- Own the Engineering pillar's strategy, delivery, budget, and talent - Govern the project intake and architecture review process, ensuring every material project receives appropriate security engagement - Maintain reference architecture authority for cloud, identity, OT, application, endpoint, and cryptography domains - Lead the pre-production review function and ensure go-live decisions are security-informed - Develop and maintain the technical standards authored by Engineering (configuration, resilience, cryptography, secure development, asset management, network, endpoint, AI, email security) - Align engineering resources to business verticals and ensure engineers develop genuine fluency in the systems they support - Resolve software risk-tier disputes and architectural disagreements within the pillar - Develop the Engineering leadership bench and manage team health, retention, and growth - Report Engineering posture, project portfolio status, and key risks to the CISO - Coordinate with Risk and Governance pillars to ensure threat intelligence feeds architecture decisions and standards are implementable
+- Own the Engineering pillar's strategy, technical-review service, budget, and talent.
+- Govern project intake and architecture review, ensuring every material project receives appropriate technical engagement and a clear disposition; the business or service owner decides go-live.
+- Maintain reference architecture authority for cloud, identity, OT, application, endpoint, and cryptography domains.
+- Lead the pre-production technical-review function; it identifies conditions, challenges evidence, and escalates material disagreement but does not approve go-live or accept residual risk.
+- Author and maintain the technical content of Engineering standards (configuration, resilience, cryptography, secure development, asset management, network, endpoint, AI, and email security); Governance holds approval authority.
+- Align Engineering resources to business verticals and ensure engineers develop fluency in the systems they review and assure.
+- Resolve technical software-risk-tier and architecture disagreements within the pillar; escalate unresolved business disagreement to the CISO through the established path.
+- Develop the Engineering leadership bench and manage team health, retention, and growth.
+- Report technical review themes, project-portfolio constraints, and material technical risks to the CISO without presenting first-line operating health as CERG performance.
+- Coordinate with Risk and Governance so threat intelligence informs architecture decisions and standards remain implementable by first-line owners and operators.
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
@@ -127,7 +136,7 @@ Competency expectations for this role follow the Engineering pillar behavioral a
 
 ## 10. Success Profile
 
-An Engineering Pillar Leader is successful when the engineering organization is delivering security outcomes reliably, sustainably, and measurably. Key indicators: the team's standards are published, adopted, and enforced; architecture reviews are completed within SLA with no systemic finding patterns; team members can articulate their growth trajectory; the pillar's evidence is audit-ready without fire drills. The leader is trusted by the CISO to set technical direction and by the team to advocate for the resources and conditions they need to succeed.
+An Engineering Pillar Leader is successful when Engineering gives first-line teams usable requirements, reference patterns, and timely technical dispositions before expensive design or release decisions. Standards are clear enough to implement, material disagreements reach the right decision-maker, and technical review identifies whether evidence supports the proposed path without becoming service operation or a second go-live approval. The leader is trusted to set technical direction and advocate for the resources and conditions the team needs to do that work.
 
 ## 11. Career Path
 
@@ -165,7 +174,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-007 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -182,6 +191,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-10-28 | Engineering Pillar Leader | Recast per-activity responsibilities for the second-line boundary: technical design authority, standards content, review, and escalation remain; first-line owners and operators build, deploy, operate, and decide go-live. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Extracted from monolithic JD-001 into enhanced per-role format with NICE mapping, KPI sections, and competency anchor sections. |
 
 ### Review Triggers
