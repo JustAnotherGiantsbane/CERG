@@ -3,7 +3,7 @@
   "generated": "2026-10-28",
   "source": "local markdown corpus",
   "total_documents": 151,
-  "total_tokens_estimate": 1007198,
+  "total_tokens_estimate": 1007280,
   "by_type": {
     "readme": 15,
     "governance-instrument": 42,
@@ -2687,8 +2687,8 @@
         42867
       ],
       "lines_count": 211,
-      "chars": 23741,
-      "tokens": 6783,
+      "chars": 23879,
+      "tokens": 6823,
       "summary": "CERG JD document: Application Security Engineer"
     },
     {
@@ -2747,8 +2747,8 @@
         43489
       ],
       "lines_count": 212,
-      "chars": 23669,
-      "tokens": 6763,
+      "chars": 23816,
+      "tokens": 6805,
       "summary": "CERG JD document: Engineering Pillar Leader"
     },
     {

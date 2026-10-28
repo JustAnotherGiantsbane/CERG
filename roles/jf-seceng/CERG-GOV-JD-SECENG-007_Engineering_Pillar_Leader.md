@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The Engineering Pillar Leader is accountable for CERG Engineering's technical design authority, intake, reference architecture, standards content, and review service. They lead domain-specialist engineers who define requirements, candidate content, technical review, and approved independent testing across Cloud, Identity, OT, Application, Endpoint, and Cryptography. They ensure material projects receive a clear technical disposition and escalation path; named first-line owners and operators build, deploy, operate, and decide go-live for their services.
+The Engineering Pillar Leader is accountable for CERG Engineering's technical design authority, intake, reference architecture, standards content, and review service. They lead domain-specialist engineers who define requirements, candidate content, technical review, and approved independent testing across Cloud, Identity, OT, Application, Endpoint, and Cryptography. They ensure material projects receive a clear technical disposition and escalation path; named first-line owners and operators build, deploy, and operate their services, while the accountable owner decides go-live.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -136,7 +136,7 @@ Competency expectations for this role follow the Engineering pillar behavioral a
 
 ## 10. Success Profile
 
-An Engineering Pillar Leader is successful when Engineering gives first-line teams usable requirements, reference patterns, and timely technical dispositions before expensive design or release decisions. Standards are clear enough to implement, material disagreements reach the right decision-maker, and technical review identifies whether evidence supports the proposed path without becoming service operation or a second go-live approval. The leader is trusted to set technical direction and advocate for the resources and conditions the team needs to do that work.
+An Engineering Pillar Leader is successful when Engineering gives first-line teams usable requirements, reference patterns, and timely technical dispositions before expensive design or release decisions. Standards are clear enough to implement, material disagreements reach the right decision-maker, and technical review identifies whether evidence supports the proposed path without becoming service operation or a second go-live approval. The leadership bench is deep enough that a domain can continue when its lead is unavailable. The leader is trusted to set technical direction and advocate for the resources and conditions the team needs to do that work.
 
 ## 11. Career Path
 
@@ -191,7 +191,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.1 | 2026-10-28 | Engineering Pillar Leader | Recast per-activity responsibilities for the second-line boundary: technical design authority, standards content, review, and escalation remain; first-line owners and operators build, deploy, operate, and decide go-live. |
+| 1.1 | 2026-10-28 | Engineering Pillar Leader | Recast per-activity responsibilities for the second-line boundary: technical design authority, standards content, review, and escalation remain; first-line owners and operators build, deploy, and operate, while the accountable owner decides go-live. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Extracted from monolithic JD-001 into enhanced per-role format with NICE mapping, KPI sections, and competency anchor sections. |
 
 ### Review Triggers

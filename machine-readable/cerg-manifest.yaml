@@ -1857,7 +1857,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-004_Application_Security_Engineer.md
   source_file: CERG-GOV-JD-SECENG-004_Application_Security_Engineer.md
-  source_hash: a019ce57e6aa8fea0d9a91ecfcaa76de0a32051915a10eb7fc4dd6d15fcb7f09
+  source_hash: 9718be510415b9a729e1d7515c6188bd27e41a131f7bc4b941575a3743a598c4
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-004_Application_Security_Engineer.md
   llm_include: true
   llm_priority: low
@@ -1917,7 +1917,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-007_Engineering_Pillar_Leader.md
   source_file: CERG-GOV-JD-SECENG-007_Engineering_Pillar_Leader.md
-  source_hash: 279919b69e78a8bea6916aa47806b720cd88ef84b4db1ed145f2e7005073ef7d
+  source_hash: 685d2fd390481ccbd92ce76cad05bff51db2d866345088e2214364672db57988
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-007_Engineering_Pillar_Leader.md
   llm_include: true
   llm_priority: low

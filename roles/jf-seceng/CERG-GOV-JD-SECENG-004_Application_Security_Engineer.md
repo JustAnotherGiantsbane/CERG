@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The Application Security Engineer defines application-security requirements, candidate test content, and technical review methods for in-house and embedded AI systems. They provide application architecture and threat-model input, review first-line testing output, independently test in approved scope, and challenge the treatment of material findings. First-line service owners and operators run SAST, DAST, SCA, container scanning, CI/CD gates, releases, and remediation. The engineer authors the technical content of the Secure Software Development and Artificial Intelligence Security standards; Governance approves them.
+The Application Security Engineer defines application-security requirements, candidate test content, and technical review methods for in-house and embedded AI systems. They provide application architecture and threat-model input, review first-line testing output, independently test in approved scope, and challenge the treatment of material findings. First-line service owners and operators run SAST, DAST, SCA, container scanning, CI/CD gates, releases, and remediation. The engineer does not operate the pipeline, scanner, release gate, or production deployment. The engineer authors the technical content of the Secure Software Development and Artificial Intelligence Security standards; Governance approves them.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -52,7 +52,7 @@ The Application Security Engineer defines application-security requirements, can
 - Review application architectures for security adequacy during the architecture review process and state a technical disposition; the business or service owner decides go-live.
 - Define AI-security requirements and assess in-house AI designs for prompt injection, data leakage, excessive agency, and model supply-chain risks; first-line owners and operators deploy and run the resulting services.
 - Author the technical content of the Secure Software Development and Artificial Intelligence Security standards; Governance holds approval authority.
-- Analyze and classify application-security findings, challenge the proposed disposition, and validate remediation evidence; first-line owners and operators remediate and deploy fixes or route residual risk through the existing authority.
+- Analyze and classify application-security findings, challenge the proposed disposition, and validate remediation evidence; first-line operators remediate and deploy fixes, and the accountable owner initiates the residual-risk route through the existing authority.
 - Develop secure-coding guidance and training materials for development teams.
 - Support the standing Incident Response team with application-security context for injection attacks, authentication bypass, and application-vulnerability data exfiltration.
 
@@ -190,7 +190,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.1 | 2026-10-28 | Engineering Pillar Leader | Recast per-activity responsibilities for the second-line boundary: requirements, candidate content, review, approved independent testing, and finding challenge remain; first line operates testing and delivery services, releases, remediates, and decides go-live. |
+| 1.1 | 2026-10-28 | Engineering Pillar Leader | Recast per-activity responsibilities for the second-line boundary: requirements, candidate content, review, approved independent testing, and finding challenge remain; first-line owners and operators run testing and delivery services, while the accountable owner decides go-live. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Extracted from monolithic JD-001 into enhanced per-role format with NICE mapping, KPI sections, and competency anchor sections. |
 
 ### Review Triggers
