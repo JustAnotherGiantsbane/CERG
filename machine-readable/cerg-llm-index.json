@@ -2,12 +2,12 @@
   "cerg_version": "1.49",
   "generated": "2026-10-28",
   "source": "local markdown corpus",
-  "total_documents": 150,
-  "total_tokens_estimate": 997621,
+  "total_documents": 151,
+  "total_tokens_estimate": 999611,
   "by_type": {
     "readme": 15,
     "governance-instrument": 42,
-    "meta": 6,
+    "meta": 7,
     "policy": 1,
     "standard": 15,
     "procedure": 12,
@@ -65,7 +65,7 @@
     "META": {
       "type": "Repository Metadata",
       "pillar": "cross-cutting",
-      "count": 21
+      "count": 22
     }
   },
   "prefixes": {
@@ -2824,11 +2824,11 @@
       "path": "examples/day-in-the-life/README.md",
       "lines": [
         43694,
-        44155
+        44156
       ],
-      "lines_count": 461,
-      "chars": 41614,
-      "tokens": 11890,
+      "lines_count": 462,
+      "chars": 41829,
+      "tokens": 11951,
       "summary": "CERG META document: README"
     },
     {
@@ -2843,13 +2843,33 @@
       "owner": null,
       "path": "examples/day-in-the-life/story-10-new-ciso-90-days.md",
       "lines": [
-        44157,
-        44292
+        44158,
+        44293
       ],
       "lines_count": 135,
       "chars": 14619,
       "tokens": 4177,
       "summary": "CERG META document: story-10-new-ciso-90-days"
+    },
+    {
+      "id": "story-12-bounded-defense-claim",
+      "prefix": "META",
+      "title": "story-12-bounded-defense-claim",
+      "type": "meta",
+      "pillar": "cross-cutting",
+      "status": null,
+      "version": null,
+      "classification": null,
+      "owner": null,
+      "path": "examples/day-in-the-life/story-12-bounded-defense-claim.md",
+      "lines": [
+        44295,
+        44380
+      ],
+      "lines_count": 85,
+      "chars": 6753,
+      "tokens": 1929,
+      "summary": "CERG META document: story-12-bounded-defense-claim"
     },
     {
       "id": "story-8-cerg-lite-maria",
@@ -2863,8 +2883,8 @@
       "owner": null,
       "path": "examples/day-in-the-life/story-8-cerg-lite-maria.md",
       "lines": [
-        44294,
-        44395
+        44382,
+        44483
       ],
       "lines_count": 101,
       "chars": 14184,
@@ -2883,8 +2903,8 @@
       "owner": null,
       "path": "examples/day-in-the-life/story-9-f-01-control-intent.md",
       "lines": [
-        44397,
-        44509
+        44485,
+        44597
       ],
       "lines_count": 112,
       "chars": 13135,
@@ -2903,8 +2923,8 @@
       "owner": null,
       "path": "examples/regulated-utility-profile/README.md",
       "lines": [
-        44511,
-        44573
+        44599,
+        44661
       ],
       "lines_count": 62,
       "chars": 3913,
@@ -2923,8 +2943,8 @@
       "owner": null,
       "path": "ADOPT-WITH-AN-AGENT.md",
       "lines": [
-        44575,
-        44681
+        44663,
+        44769
       ],
       "lines_count": 106,
       "chars": 5500,
@@ -2943,8 +2963,8 @@
       "owner": null,
       "path": "BEGINNER-GUIDE.md",
       "lines": [
-        44683,
-        44786
+        44771,
+        44874
       ],
       "lines_count": 103,
       "chars": 3835,
@@ -2963,8 +2983,8 @@
       "owner": null,
       "path": "CODE_OF_CONDUCT.md",
       "lines": [
-        44788,
-        44826
+        44876,
+        44914
       ],
       "lines_count": 38,
       "chars": 2023,
@@ -2983,8 +3003,8 @@
       "owner": null,
       "path": "CONTRIBUTING.md",
       "lines": [
-        44828,
-        44895
+        44916,
+        44983
       ],
       "lines_count": 67,
       "chars": 4390,
@@ -3003,8 +3023,8 @@
       "owner": null,
       "path": "SECURITY.md",
       "lines": [
-        44897,
-        44912
+        44985,
+        45000
       ],
       "lines_count": 15,
       "chars": 839,
@@ -3023,8 +3043,8 @@
       "owner": null,
       "path": "adoption-packs/cerg-lite/README.md",
       "lines": [
-        44914,
-        44992
+        45002,
+        45080
       ],
       "lines_count": 78,
       "chars": 3707,
@@ -3043,8 +3063,8 @@
       "owner": null,
       "path": "adoption-packs/cerg-lite/agent-prompt.md",
       "lines": [
-        44994,
-        45028
+        45082,
+        45116
       ],
       "lines_count": 34,
       "chars": 1516,
@@ -3063,8 +3083,8 @@
       "owner": null,
       "path": "adoption-packs/ciso-cso-briefing/README.md",
       "lines": [
-        45030,
-        45441
+        45118,
+        45529
       ],
       "lines_count": 411,
       "chars": 24317,
@@ -3083,8 +3103,8 @@
       "owner": null,
       "path": "proposals/second-line-service-boundary-rfc.md",
       "lines": [
-        45443,
-        45626
+        45531,
+        45714
       ],
       "lines_count": 183,
       "chars": 20013,
@@ -3103,8 +3123,8 @@
       "owner": null,
       "path": "tools/policy-as-code/README.md",
       "lines": [
-        45628,
-        45701
+        45716,
+        45789
       ],
       "lines_count": 73,
       "chars": 4153,
