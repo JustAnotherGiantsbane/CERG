@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-TMPL-SCP-001 |
-| **Version** | 1.3 |
+| **Version** | 1.4 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
@@ -47,7 +47,7 @@ Use this template when an implementation needs to prove control state for a syst
 3. Use stable asset IDs from the authoritative asset inventory. A service SCP uses a stable service ID; where it represents an observation source, its `system_id` is the Exposure Source ID used by `CERG-PRC-VM-001` intake. Protected-system SCPs reference the applicable service SCP IDs rather than duplicating service ownership, assurance rights, operating obligations, or coverage claims.
 4. Use control IDs from [`CERG-GOV-CB-001`](../governance/CERG-GOV-CB-001_Unified_Control_Baseline.md).
 5. Link each control entry to evidence that is independently verifiable under [`CERG-GOV-AUD-001`](../governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md).
-6. Record `last_validated` and `next_review` for every control entry.
+6. Use `last_validated` and `next_review` only where the governing regulatory or assessment method requires control-level dates. Evidence freshness stays with the linked evidence; claim freshness stays with the applicable validation record.
 7. Link related risks, exceptions, POA&M items, and findings instead of embedding their full content.
 8. Store the completed SCP in the evidence library and index it as a **System Control Profile Record** per [`CERG-GOV-CAT-002`](../governance/CERG-GOV-CAT-002_Record_Catalog.md).
 
@@ -88,8 +88,6 @@ controls_applied:
     implementation: "[how this system implements the control]"
     evidence: "[evidence link or evidence index ID]"
     evidence_type: "[export / report / ticket / configuration / attestation / test result / SCP-linked package]"
-    last_validated: "[YYYY-MM-DD]"
-    next_review: "[YYYY-MM-DD]"
     owner: "[control owner for this system]"
     status: "[Implemented / Partially Implemented / Planned / Inherited / Exception / Accepted Risk]"
     related_risks: []
@@ -121,8 +119,6 @@ controls_applied:
     implementation: AD group S47-Operators controls operator access; quarterly access review performed by the System Owner.
     evidence: evidence://access-reviews/hist-47/quarterly_access_review_2026-03-31.pdf
     evidence_type: access_review_record
-    last_validated: 2026-03-31
-    next_review: 2026-06-30
     owner: Identity Engineer
     status: Implemented
     related_risks: []
@@ -131,8 +127,6 @@ controls_applied:
     implementation: DISH baseline v2.1 applied; local firewall allowlist restricts management services to the OT jump host.
     evidence: evidence://baselines/hist-47/cm7_baseline_comparison_2026-04-15.xlsx
     evidence_type: configuration_baseline_record
-    last_validated: 2026-04-15
-    next_review: 2026-07-15
     owner: OT Security Engineer
     status: Implemented
     related_risks: []
@@ -162,7 +156,7 @@ Completed SCP records are reviewed at the cadence defined by their system classi
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-TMPL-SCP-001 |
-| **Version** | 1.3 |
+| **Version** | 1.4 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-20 |
 | **Classification** | Public |
@@ -179,7 +173,9 @@ Completed SCP records are reviewed at the cadence defined by their system classi
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.4 | 2026-10-28 | Engineering Pillar Leader | Removed universal control-level validation and review dates. The profile review, linked evidence freshness, claim-specific validation, and regulatory methods retain their own clocks; the dates remain available where those methods require them. |
 | 1.3 | 2026-10-28 | Engineering Pillar Leader | Defined an observation-source service SCP's `system_id` as the Exposure Source ID used by VM intake; protected-system references explicitly express expected coverage rather than asserting coverage. |
+| 1.2 | 2026-10-28 | Engineering Pillar Leader | Added operator and independent assessor rows to the review and approval table for service SCPs, marked N/A on protected-system SCPs; neither role approves the effectiveness claim. |
 | 1.1 | 2026-10-28 | Engineering Pillar Leader | Added service-SCP guidance, a service interface block, and protected-system service references for the first-line service boundary experiment. |
 | 1.0 | 2026-06-20 | Engineering Pillar Leader | Initial publication. Establishes the System Control Profile as a structured per-system control implementation, evidence, validation, and review record. |
 

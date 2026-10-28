@@ -2548,7 +2548,7 @@
   title: System Control Profile Template
   document_type: template
   domain: SCP
-  version: 1.3
+  version: 1.4
   status: Approved
   classification: Public
   publication_profile: public
@@ -2557,7 +2557,7 @@
   parent_artifact: 'CERG-GOV-CAT-002 — Record Catalog'
   source_path: templates/CERG-TMPL-SCP-001_System_Control_Profile_Template.md
   source_file: CERG-TMPL-SCP-001_System_Control_Profile_Template.md
-  source_hash: 13714cd52694ba34773fba7c51f09cb5056394be19049798efabfe9b1dfd29ec
+  source_hash: 3f502a775a5880da9e1f0464b8a71fbdad2920a5d4a01364ac588464685fd317
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-SCP-001_System_Control_Profile_Template.md
   llm_include: true
   llm_priority: medium
