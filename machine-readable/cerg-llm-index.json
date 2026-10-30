@@ -154,8 +154,8 @@
       "owner": null,
       "path": "AGENTS.md",
       "lines_count": 306,
-      "chars": 17028,
-      "tokens": 4865,
+      "chars": 17007,
+      "tokens": 4859,
       "summary": "Guide for AI agents working on CERG \u2014 conventions, pitfalls, tools, git workflow."
     },
     {
@@ -2249,9 +2249,9 @@
       "classification": null,
       "owner": null,
       "path": "machine-readable/README.md",
-      "lines_count": 68,
-      "chars": 6411,
-      "tokens": 1832,
+      "lines_count": 70,
+      "chars": 6875,
+      "tokens": 1964,
       "summary": "CERG META document: README"
     },
     {
