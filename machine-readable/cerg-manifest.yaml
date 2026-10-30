@@ -1177,7 +1177,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
   source_file: CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
-  source_hash: 6d04ae4c525718bf4b0b3d06ece497ba2269394eccba30d8fdcc67fb48d62a8d
+  source_hash: 1f4224a2e5bd728eaa17db5b95470cee4a95f03632f5a57e44ecff9e5929a014
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
   llm_include: true
   llm_priority: high
