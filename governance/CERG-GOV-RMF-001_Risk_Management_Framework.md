@@ -2,7 +2,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-RMF-001 |
-| **Version** | 1.35 |
+| **Version** | 1.36 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -20,12 +20,12 @@
 
 1. [Purpose and Scope](#1-purpose-and-scope)
 2. [Framework Architecture](#2-framework-architecture)
-3. [Phase 1, Categorize](#3-phase-1--categorize)
-4. [Phase 2, Select](#4-phase-2--select)
-5. [Phase 3, Implement](#5-phase-3--implement)
-6. [Phase 4, Assess](#6-phase-4--assess)
-7. [Phase 5, Authorize](#7-phase-5--authorize)
-8. [Phase 6, Monitor](#8-phase-6--monitor)
+3. [Phase 1, Categorize](#3-phase-1-categorize)
+4. [Phase 2, Select](#4-phase-2-select)
+5. [Phase 3, Implement](#5-phase-3-implement)
+6. [Phase 4, Assess](#6-phase-4-assess)
+7. [Phase 5, Authorize](#7-phase-5-authorize)
+8. [Phase 6, Monitor](#8-phase-6-monitor)
 9. [Risk Register and Risk Treatment](#9-risk-register-and-risk-treatment)
 10. [IT/OT Risk Management Considerations](#10-itot-risk-management-considerations)
 11. [Regulatory Alignment Quick Reference](#11-regulatory-alignment-quick-reference)
@@ -862,7 +862,7 @@ Mapping the ALE bands to the existing 5×5 scoring framework for this example or
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-RMF-001 |
-| **Version** | 1.35 |
+| **Version** | 1.36 |
 | **Status** | Approved |
 | **Effective Date** | 2026-09-01 |
 | **Classification** | Public |
@@ -877,6 +877,7 @@ Mapping the ALE bands to the existing 5×5 scoring framework for this example or
 
 | Version | Date | Author | Change Description |
 |---|---|---|---|
+| 1.36 | 2026-10-30 | Governance Pillar Leader | Patch (#280): repaired 6 in-page links whose anchors no longer matched their headings after earlier heading edits. No content change. |
 | 1.35 | 2026-09-01 | Governance Pillar Leader | Clarified that CERG owns cybersecurity tolerance calibration and recommendation work, while enterprise appetite is an external constraint; defined pillar accountabilities and approval boundaries. |
 | 1.34 | 2026-07-24 | Governance Pillar Leader | Removed noncanonical sub-band wording from the worked calibration example so all risk labels align to the RMF §9.5 severity bands. |
 | 1.33 | 2026-06-18 | Governance Pillar Leader | Clarified that RMF §9.5 and §9.7 remain canonical for scoring and acceptance authority, separated exception and risk-acceptance template routing, added PRC-VM exposure-SLA precedence, and constrained the calibration example so it cannot override Business Owner / Executive Sponsor acceptance. |
