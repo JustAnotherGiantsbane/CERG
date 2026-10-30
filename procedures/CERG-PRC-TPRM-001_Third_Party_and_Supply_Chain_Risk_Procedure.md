@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-TPRM-001 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Vendor Risk Analyst |
@@ -30,7 +30,7 @@
 7. [Approved Provider and SaaS Catalog](#7-approved-provider-and-saas-catalog)
 8. [Contract Security Clause Library](#8-contract-security-clause-library)
 9. [Shared Responsibility Matrix](#9-shared-responsibility-matrix)
-10. [International Access, Denied by Default](#10-international-access--denied-by-default)
+10. [International Access, Denied by Default](#10-international-access-denied-by-default)
 11. [SBOM and Software Integrity](#11-sbom-and-software-integrity)
 12. [CIP-013 Supply Chain Plan](#12-cip-013-supply-chain-plan)
 13. [CUI Subcontractor Flow-Down](#13-cui-subcontractor-flow-down)
@@ -626,7 +626,7 @@ Assessment results are recorded in the TPRM tool and reviewed at each re-assessm
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-TPRM-001 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / TPRM platform change |
-| **Change Log** | 1.0 - Initial publication. Tiering, evidence by tier, shared responsibility, international access denial-by-default, SBOM, CIP-013, CUI flow-down, FedRAMP equivalency, SCCT. · 1.1 - Contractual Control gains the observable subtype, distinguished from attestation-only reliance; Section 6.2 states an additional assurance-rights requirement that applies only to a provider-operated assured service, leaving the eight universal requirements unchanged; Section 8 adds an assurance access and independent verification clause; Section 9 is scoped to technology providers. No new classification, record type, or metric. |
+| **Change Log** | 1.0 - Initial publication. Tiering, evidence by tier, shared responsibility, international access denial-by-default, SBOM, CIP-013, CUI flow-down, FedRAMP equivalency, SCCT. · 1.1 - Contractual Control gains the observable subtype, distinguished from attestation-only reliance; Section 6.2 states an additional assurance-rights requirement that applies only to a provider-operated assured service, leaving the eight universal requirements unchanged; Section 8 adds an assurance access and independent verification clause; Section 9 is scoped to technology providers. No new classification, record type, or metric. · 1.2 - Patch (#280): repaired 1 in-page link whose anchor no longer matched its heading after earlier heading edits. No content change. |

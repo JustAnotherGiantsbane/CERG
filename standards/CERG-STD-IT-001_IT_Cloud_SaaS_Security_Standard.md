@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-STD-IT-001 |
-| **Version** | 1.21 |
+| **Version** | 1.22 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -22,12 +22,12 @@
 
 1. [Purpose and Scope](#1-purpose-and-scope)
 2. [CERG Roles in Hosted and Cloud Environments](#2-cerg-roles-in-hosted-and-cloud-environments)
-3. [GOVERN, Cloud Program Foundation and Shared Responsibility](#3-govern--cloud-program-foundation-and-shared-responsibility)
-4. [IDENTIFY, Visibility Across Estates](#4-identify--visibility-across-estates)
-5. [PROTECT, Architecture, Identity, and Data](#5-protect--architecture-identity-and-data)
-6. [DETECT, Cloud-Native and Cross-Estate Monitoring](#6-detect--cloud-native-and-cross-estate-monitoring)
-7. [RESPOND, Containment Without Crossing Tenant Boundaries](#7-respond--containment-without-crossing-tenant-boundaries)
-8. [RECOVER, Resilience in Multi-Tenant Environments](#8-recover--resilience-in-multi-tenant-environments)
+3. [GOVERN, Cloud Program Foundation and Shared Responsibility](#3-govern-cloud-program-foundation-and-shared-responsibility)
+4. [IDENTIFY, Visibility Across Estates](#4-identify-visibility-across-estates)
+5. [PROTECT, Architecture, Identity, and Data](#5-protect-architecture-identity-and-data)
+6. [DETECT, Cloud-Native and Cross-Estate Monitoring](#6-detect-cloud-native-and-cross-estate-monitoring)
+7. [RESPOND, Containment Without Crossing Tenant Boundaries](#7-respond-containment-without-crossing-tenant-boundaries)
+8. [RECOVER, Resilience in Multi-Tenant Environments](#8-recover-resilience-in-multi-tenant-environments)
 9. [Training and Personnel](#9-training-and-personnel)
 10. [Regulatory and Framework Alignment Summary](#10-regulatory-and-framework-alignment-summary)
 11. [Exceptions and Escalation](#11-exceptions-and-escalation)
@@ -326,7 +326,7 @@ No control in this standard may be waived without a documented exception. Except
 | | |
 |---|---|
 | **Document ID** | CERG-STD-IT-001 |
-| **Version** | 1.21 |
+| **Version** | 1.22 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / Upon Significant Change / Material Cloud Service Adoption |
 | **Change Log** | 1.0 - Initial publication. Owned data center, leased, IaaS, PaaS, SaaS. |
@@ -336,6 +336,7 @@ No control in this standard may be waived without a documented exception. Except
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.22 | 2026-10-30 | Governance Pillar Leader | Patch (#280): repaired 6 in-page links whose anchors no longer matched their headings after earlier heading edits. No content change. |
 | 1.0 DRAFT | 2026 | CERG Governance | Initial release - owned data center, leased, IaaS, PaaS, SaaS |
 
 ### Review Triggers

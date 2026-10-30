@@ -11,7 +11,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-FRM-001 |
-| **Version** | 1.26 |
+| **Version** | 1.27 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | CISO |
@@ -35,7 +35,7 @@
 9. [IT/OT Considerations](#9-itot-considerations)
 10. [Team Structure and Talent Model](#10-team-structure-and-talent-model)
 11. [Getting Started, The Path to Adaptive](#11-getting-started-the-path-to-adaptive)
-12. [Compliance as Exhaust — Evidence Factories](#12-compliance-as-exhaust-evidence-factories)
+12. [Compliance as Exhaust — Evidence Factories](#12-compliance-as-exhaust--evidence-factories)
 13. [Document Control](#13-document-control)
 
 ---
@@ -627,7 +627,7 @@ This is where CERG can beat traditional GRC: compliance becomes exhaust from goo
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-FRM-001 |
-| **Version** | 1.26 |
+| **Version** | 1.27 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | CISO |
@@ -641,6 +641,7 @@ This is where CERG can beat traditional GRC: compliance becomes exhaust from goo
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.27 | 2026-10-30 | Governance Pillar Leader | Patch (#280): repaired 1 in-page link whose anchor no longer matched its heading after earlier heading edits. No content change. |
 | 1.26 | 2026-10-30 | Risk Pillar Leader / Governance Pillar Leader | Corrected lifecycle authority (#271): business risk owners accept residual risk under RMF-001 §9.7; first-line service owners and operators deploy, operate, and monitor; accountable owners remediate; Engineering provides requirements and design input, while Risk validates exposure and control weakness. |
 | 1.25 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Front door made second line (#248): authority-conditional Definition of Done; exposure and detection capabilities stated as assurance outcomes over first-line operation; scanning, triage, live monitoring and treatment execution removed from Risk core functions, OT method wording, NIST role rows and the staffing plan. Links OM-001 §2.4 as the boundary authority. SOX blurb states assurance over first-line monitoring. |
 | 1.24 | 2026-10-28 | Governance Pillar Leader | Added CTEM operating-model property paragraph in 2; conformed lifecycle table and Risk core functions in 5.2 and 10 to the second-line boundary (first-line scanning and monitoring, independent Risk validation). |

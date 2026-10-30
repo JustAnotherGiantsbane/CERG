@@ -7,7 +7,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-CMX-001 |
-| **Version** | 1.21 |
+| **Version** | 1.22 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -45,7 +45,7 @@
 22. [Define and enforce a compliance calendar: no surprises at audit time](#22-define-and-enforce-a-compliance-calendar-no-surprises-at-audit-time)
 23. [Quick Reference: Pillar Summary](#quick-reference-pillar-summary)
 24. [Key Consolidation Opportunities](#key-consolidation-opportunities)
-23. [Document Control](#document-control)
+23. [Document Control](#23-document-control)
 
 ## 1. Know what you own: maintain an authoritative asset inventory
 
@@ -396,7 +396,7 @@ These control areas produce evidence satisfying four or more frameworks simultan
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-CMX-001 |
-| **Version** | 1.21 |
+| **Version** | 1.22 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -412,6 +412,7 @@ These control areas produce evidence satisfying four or more frameworks simultan
 |---|---|---|---|
 | 1.0 | 2026-05-01 | Cyber Governance | Initial release. Compliance matrix mapping security intents to NIST, CMMC, NERC-CIP, and SOX frameworks. |
 | 1.21 | 2026-05-22 | Cyber Governance | Updated framework references and pillar alignments. |
+| 1.22 | 2026-10-30 | Governance Pillar Leader | Patch (#280): repaired 1 in-page link whose anchor no longer matched its heading after earlier heading edits. No content change. |
 
 ### Review Triggers
 
