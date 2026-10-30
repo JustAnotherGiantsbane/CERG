@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-STD-OT-001 |
-| **Version** | 1.24 |
+| **Version** | 1.25 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (OT/NERC-CIP) |
@@ -22,12 +22,12 @@
 
 1. [Purpose and Scope](#1-purpose-and-scope)
 2. [CERG Roles in Grid and Control System Security](#2-cerg-roles-in-grid-and-control-system-security)
-3. [GOVERN, Program Foundation and Risk Management](#3-govern--program-foundation-and-risk-management)
-4. [IDENTIFY, Visibility Into Assets and Threats](#4-identify--visibility-into-assets-and-threats)
-5. [PROTECT, Reduce Attack Surface and Limit Blast Radius](#5-protect--reduce-attack-surface-and-limit-blast-radius)
-6. [DETECT, Find Threats Before They Find the Grid](#6-detect--find-threats-before-they-find-the-grid)
-7. [RESPOND, React Without Making It Worse](#7-respond--react-without-making-it-worse)
-8. [RECOVER, Restore Operations and Capture Learning](#8-recover--restore-operations-and-capture-learning)
+3. [GOVERN, Program Foundation and Risk Management](#3-govern-program-foundation-and-risk-management)
+4. [IDENTIFY, Visibility Into Assets and Threats](#4-identify-visibility-into-assets-and-threats)
+5. [PROTECT, Reduce Attack Surface and Limit Blast Radius](#5-protect-reduce-attack-surface-and-limit-blast-radius)
+6. [DETECT, Find Threats Before They Find the Grid](#6-detect-find-threats-before-they-find-the-grid)
+7. [RESPOND, React Without Making It Worse](#7-respond-react-without-making-it-worse)
+8. [RECOVER, Restore Operations and Capture Learning](#8-recover-restore-operations-and-capture-learning)
 9. [Training and Personnel Security](#9-training-and-personnel-security)
 10. [Regulatory and Framework Alignment Summary](#10-regulatory-and-framework-alignment-summary)
 11. [Exceptions and Escalation](#11-exceptions-and-escalation)
@@ -316,7 +316,7 @@ Every OT deferral must state why non-patch treatment options (segmentation, path
 | | |
 |---|---|
 | **Document ID** | CERG-STD-OT-001 |
-| **Version** | 1.24 |
+| **Version** | 1.25 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / Upon Significant Change / CIP Standard Revision |
 | **Change Log** | 1.23 - Clarified that the NERC-CIP Evidence Library Procedure is embedded and authoritative in PLN-CIP-001; its reserved identifier is not a planned standalone artifact. 1.22 - Added OT/BES patch deferral and exposure-treatment routing aligned to PRC-VM §7.4. 1.0 - Initial publication. BES and non-BES OT environments. |
@@ -326,6 +326,7 @@ Every OT deferral must state why non-patch treatment options (segmentation, path
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.25 | 2026-10-30 | Governance Pillar Leader | Patch (#280): repaired 6 in-page links whose anchors no longer matched their headings after earlier heading edits. No content change. |
 | 1.24 | 2026-10-28 | Governance Pillar Leader | Corrected the §2 Risk-pillar description: Risk operates OT exposure validation, classification, and remediation challenge from first-line observation output, and does not operate standing discovery or scanning sources, which OT operations runs. Aligns with `OM-001` §3.4 and `RAC-001` §6.2. |
 | 1.23 | 2026-09-25 | Governance Pillar Leader | Clarified the authoritative embedded location of the NERC-CIP Evidence Library Procedure and removed the implication that its reserved identifier is a planned standalone artifact. |
 | 1.22 | 2026-06-18 | Governance Pillar Leader | Added explicit OT/BES deferral routes for non-BES maintenance windows, BES compliance-unaffected deferrals, BES compliance-impacting deviations, and emergency operational exceptions. |
