@@ -4,6 +4,23 @@ You just found CERG. You have a repo full of Markdown. What do you actually do o
 
 **This page is your first 48 hours.** Read it before you read anything else.
 
+## If you were just assigned to CERG
+
+Ten minutes, no corpus knowledge. Read these three, in this order, then stop:
+
+1. **[Cybersecurity Policy](governance/CERG-POL-001_Cybersecurity_Policy.md)**: the authority. Nothing is authoritative until an Executive Sponsor signs this.
+2. **[CERG Framework](governance/CERG-GOV-FRM-001_CERG_Framework.md)**: the three pillars, and which one you sit in.
+3. **[Operating Model](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6**: the roles, and which decisions each one owns.
+
+Then answer four questions about your own scope. The one you cannot answer is the next thing you read.
+
+- **Decision.** Which decisions are yours to make, and which are not yours at all?
+- **Owner.** Who is accountable for the outcome when it is not you?
+- **Boundary.** CERG defines requirements, reviews evidence, independently validates, and escalates. First-line owners and operators deploy, operate, monitor, and remediate. Executing live service is not CERG's work.
+- **Exception path.** If a control cannot be met as written, or residual risk is within appetite, the route is the [Risk Register and Exception Process](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) §7.1. That section decides which of the two paths applies and who approves it; [RMF-001 §9.7](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) is the canonical acceptance authority.
+
+If you have been handed a risk to accept or an exception to grant, §7.1 is the whole answer and this page has nothing further to add.
+
 ---
 
 ## Step 0: Is CERG right for you right now?
@@ -46,6 +63,7 @@ Use these rules:
 | “We have CUI, NERC-CIP, SOX, ISO, privacy, OT, or AI scope.” | The relevant overlay in [Path 3: CERG Regulated](#path-3-cerg-regulated-nerc-cip-cmmc-sox-ot-environments) | Name which conditional documents apply and which can be deferred. |
 | “I am designing roles or hiring.” | [Job Families Overview](roles/CERG-GOV-JF-001_Job_Families_Overview.md) and [Workforce Planning](governance/CERG-GOV-WFP-001_Workforce_Planning_and_Capacity_Model.md) | Map responsibilities to roles without hiding accountabilities. |
 | “I am a business owner or system sponsor.” | [Business Owner / System Sponsor Reader Path](governance/CERG-GOV-IMP-007_Role_Reader_Paths.md#6-business-owner--system-sponsor-reader-path) | Understand what decisions and evidence the business owner must provide. |
+| “Someone has handed me a risk to accept or an exception to grant.” | [Risk Register and Exception Process](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) §7.1 and [Risk Management Framework](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 | Name which of the two decisions you are being asked for, who co-signs it, its deadline, and what happens if you decline. |
 | “I am using an AI or coding agent.” | [ADOPT-WITH-AN-AGENT.md](ADOPT-WITH-AN-AGENT.md) and [`machine-readable/cerg-llm-index.json`](machine-readable/cerg-llm-index.json) | Load only the documents needed for the task. |
 
 If you are still unsure where to begin, use these helpers before diving into the full library:
