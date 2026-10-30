@@ -63,19 +63,42 @@ def test_every_document_retains_the_data_needed_to_derive_them():
             )
 
 
-def test_layout_stays_contiguous_so_the_derivation_holds():
-    documents = load_index()["documents"]
-    ranges = derive_ranges(documents)
-    previous_end = 0
-    for doc in documents:
-        start, end = ranges[doc["id"]]
-        assert end - start == doc["lines_count"]
-        if previous_end:
-            assert start == previous_end + BOUNDARY_LINES, (
-                f"{doc['id']} starts at {start}, expected {previous_end + BOUNDARY_LINES}; "
-                "document order and lines_count no longer describe a contiguous corpus"
-            )
-        previous_end = end
+def test_layout_matches_source_and_emission_order():
+    """The derivation is true only if `lines_count` matches source and order is preserved.
+
+    An earlier version of this test rebuilt each range from `lines_count` and then asserted the
+    rebuild used the same formula, which could never fail: inflating a document's `lines_count` by
+    50 and swapping two documents both left it green. These two properties are the ones that
+    actually hold the derivation up, and both can fail.
+    """
+    index = load_index()
+    for doc in index["documents"]:
+        path = ROOT / doc["path"]
+        assert path.exists(), f"{doc['id']}: indexed path does not exist: {doc['path']}"
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        assert doc["chars"] == len(text), (
+            f"{doc['id']}: chars {doc['chars']} but source is {len(text)}"
+        )
+        assert doc["lines_count"] == len(text.splitlines()), (
+            f"{doc['id']}: lines_count {doc['lines_count']} but source has {len(text.splitlines())}"
+        )
+
+    # Emission order is part of the contract: re-sorting documents[] by path invalidates every
+    # rebuilt range after the first move.
+    order = ["README.md", "START-HERE.md", "AGENTS.md", "governance", "standards", "procedures",
+             "plans", "templates", "roles", "machine-readable", "examples"]
+
+    def sort_key(doc):
+        rel = doc["path"]
+        first = rel.split("/", 1)[0]
+        rank = order.index(rel) if rel in order else (order.index(first) if first in order else 99)
+        return (rank, rel)
+
+    emitted = [doc["id"] for doc in index["documents"]]
+    expected = [doc["id"] for doc in sorted(index["documents"], key=sort_key)]
+    assert emitted == expected, (
+        "documents[] is not in emitter order; rebuilt line ranges would be wrong past the first move"
+    )
 
 
 def test_removed_aggregate_is_reconstructible_from_retained_data():
