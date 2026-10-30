@@ -98,7 +98,7 @@ Contains Revision History (a table), Review Triggers, Related Documents.
 
 `machine-readable/cerg-llm-index.json` contains:
 
-- Per‑document metadata (id, title, type, pillar, status, version, owner, repo-relative path, virtual local-corpus line range, token estimate, summary)
+- Per‑document metadata (id, title, type, pillar, status, version, owner, repo-relative path, line count, token estimate, summary)
 - Prefix registry (POL, STD, PRC, GOV, PLN, TMPL, JF, JD meanings)
 - Pillar breakdowns
 - Document counts
