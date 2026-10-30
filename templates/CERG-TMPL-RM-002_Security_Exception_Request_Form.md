@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-TMPL-RM-002 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |
@@ -106,9 +106,10 @@ This form captures a temporary security exception or waiver request. It is used 
 | **Reviewer / Approver** | **Review Meaning** | **Name / Date** |
 |---|---|---|
 | Risk Register Owner | Confirms record completeness, register linkage, next review date, and evidence links. | `[Name / Date]` |
-| Risk Pillar Leader | Confirms residual risk scoring and approves Low or Medium exceptions where authorized. | `[Name / Date]` |
-| Business Owner / Residual Risk Owner | Accepts the operational consequence created by the temporary deviation. | `[Name / Date]` |
-| Chief Information Security Officer (CISO) | Approves High or Critical exceptions and material regulated-scope deviations. | `[Name / Date]` |
+| Risk Pillar Leader | Confirms residual risk scoring; co-signs Medium acceptance as the Pillar Leader named in `RMF-001` §9.7, where the Business Owner accepts the consequence. | `[Name / Date]` |
+| Business Owner / Residual Risk Owner | Accepts the operational consequence created by the temporary deviation at every rating that carries residual risk, co-signed per `RMF-001` §9.7 (Low: with the Risk Register Owner; Medium: with a Pillar Leader or the Governance Pillar Leader; High: with the CISO). | `[Name / Date]` |
+| Executive Sponsor | Accepts the business consequence at Critical, with the CISO per `RMF-001` §9.7. | `[Name / Date]` |
+| Chief Information Security Officer (CISO) | Co-signs High acceptance with the Business Owner and Critical with the Executive Sponsor; approves material regulated-scope deviations. | `[Name / Date]` |
 
 Completed templates are reviewed at the cadence defined by their parent procedure or plan. Material changes require a new review.
 
@@ -119,7 +120,7 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-TMPL-RM-002 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Effective Date** | 2026-05-22 |
 | **Classification** | Public |
@@ -136,6 +137,7 @@ Completed templates are reviewed at the cadence defined by their parent procedur
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.2 | 2026-10-30 | Governance Pillar Leader | Authority reconciliation (#280): approver rows now match RMF-001 §9.7 and PRC-RM-001 §8. The Business Owner accepts at every rating carrying residual risk, the Risk Pillar Leader co-signs Medium, the Executive Sponsor accepts at Critical, and the CISO co-signs High and Critical rather than approving exceptions outright. |
 | 1.1 | 2026-06-20 | Governance Pillar Leader | Added Definition of Done fields for residual risk owner, compensating-control evidence, last validation, next review, closure verification, and closure evidence. |
 | 1.0 | 2026-05-22 | Cyber Governance | Initial release. Establishes a standalone fill-in template for security exception request form. |
 

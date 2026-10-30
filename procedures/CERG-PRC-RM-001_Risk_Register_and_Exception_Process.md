@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-RM-001 |
-| **Version** | 1.06 |
+| **Version** | 1.07 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |
@@ -435,11 +435,13 @@ EXCEPTION REQUEST FORM - EXC-YYYY-NNNN
 8. APPROVAL
    | Role | Name | Decision | Date |
    |---|---|---|---|
-   | Business Owner (Risk Owner) | | Approve / Deny / Conditional | |
-   | Engineering Pillar Leader | | Approve / Deny / Conditional | |
-   | Governance Pillar Leader | | Approve / Deny / Conditional | |
-   | CISO (if High or Critical) | | Approve / Deny / Conditional | |
-   | Executive Sponsor (if Critical) | | Approve / Deny / Conditional | |
+   | Business Owner (every rating that carries residual risk) | | Approve / Deny / Conditional | |
+   | Risk Register Owner (Low) | | Co-sign / Conditional | |
+   | Risk Pillar Leader or Governance Pillar Leader (Medium) | | Co-sign / Conditional | |
+   | Engineering Pillar Leader (technical input) | | Approve / Deny / Conditional | |
+   | Governance Pillar Leader (procedural exception) | | Approve / Deny / Conditional | |
+   | CISO (High and Critical) | | Co-sign / Conditional | |
+   | Executive Sponsor (Critical) | | Accept / Deny / Conditional | |
 
 9. RISK REGISTER LINKAGE
    Risk Register Entry ID:
@@ -561,7 +563,7 @@ The register is not a parallel system to these programs. It is the connective ti
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-RM-001 |
-| **Version** | 1.06 |
+| **Version** | 1.07 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |
@@ -578,6 +580,7 @@ The register is not a parallel system to these programs. It is the connective ti
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.07 | 2026-10-30 | Governance Pillar Leader | Authority reconciliation (#280): the inline exception form's signer list now carries every signer §8 requires, including the Risk Register Owner at Low and a Pillar Leader or Governance Pillar Leader at Medium, and separates acceptance from co-signature. |
 | 1.06 | 2026-10-30 | Governance Pillar Leader | Reader pilot (#246): §1 opens with a six-line entry for the Business Owner asked to decide, pointing to the sections that carry each rule. Aligned three restatements to RMF-001 §9.7 and §9.7a: the §2 approver chain and the §7.1 approval cell now point to §8; §7.1 no longer says acceptance plans no further treatment; §7.3 step 4 requires Business Owner approval at every residual-risk rating; the §7.1 exception path names that approval. §8 now says no acceptance renews automatically, where it said none expires automatically, which read as acceptances never lapsing. §5's Accept row names the Executive Sponsor by rating rather than as an alternative. |
 | 1.05 | 2026-07-24 | Governance Pillar Leader | Aligned quantitative tolerance labels to the canonical RMF-001 severity bands and removed noncanonical residual-risk sub-band wording. |
 | 1.04 | 2026-06-18 | Governance Pillar Leader | Added funding/capacity decision brief routing and clarified that funding deferral does not itself accept residual risk. |
@@ -620,4 +623,4 @@ Governance owns this procedure. The Risk Register Owner is responsible for revis
 
 ---
 
-_CERG-PRC-RM-001 · Version 1.06 · Public_
+_CERG-PRC-RM-001 · Version 1.07 · Public_

@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AR-001 |
-| **Version** | 1.5 |
+| **Version** | 1.6 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
@@ -65,7 +65,7 @@ The standalone [`CERG-TMPL-AR-001`](../templates/CERG-TMPL-AR-001_Architecture_a
 | **Vendor Risk Analyst** | Performs third-party and supply-chain assessment per [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) when vendors, SaaS providers, MSPs, software suppliers, or external integrations are involved. |
 | **Governance Pillar Leader** | Maps the project into the regulatory scope (CUI / BES / SOX) and triggers the relevant overlay reviewers. |
 | **Engineering Pillar Leader** | Reviews the Engineering technical disposition and proposed compensating controls; escalates material disagreement. The business or service owner initiates any residual-risk route, and only the authority named in [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 accepts it. |
-| **CISO** | Decides escalated go-live disagreements and accepts residual risk only where the canonical authority table names the CISO. |
+| **CISO** | Settles escalated technical dispositions. A CERG or CISO escalation cannot itself authorize, deny, or compel a go-live decision, which remains the accountable owner's. Accepts residual risk only where the canonical authority table names the CISO. |
 | **IT Change Advisory Board (CAB)** | Hosts the go-live conversation; CERG review status is a CAB input, not a substitute for change management. |
 
 ---
@@ -487,7 +487,7 @@ An appeal may be filed for:
 | 2 | CERG Pre-Production Reviewer re-evaluates with the project team; may consult additional subject matter experts | Within 5 business days |
 | 3 | If resolved: decision is updated and recorded. If not resolved: escalates to Risk Pillar Leader. | - |
 | 4 | Risk Pillar Leader reviews the appeal and the CERG position; makes a determination or escalates to CISO | Within 5 business days |
-| 5 | CISO makes final determination. CISO's decision is binding and is recorded in the review record. | Within 10 business days of escalation |
+| 5 | CISO makes the final technical determination, which is binding as the CERG disposition. It settles the technical question and is recorded in the review record; it does not itself authorize or prevent go-live, and any residual risk the owner carries follows `RMF-001` §9.7. | Within 10 business days of escalation |
 
 #### Criteria for Overturning a Decision
 
@@ -609,7 +609,7 @@ Good governance makes projects faster because teams can design correctly before 
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AR-001 |
-| **Version** | 1.5 |
+| **Version** | 1.6 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / on platform or process change |
 | **Change Log** | 1.3 - Reconciled technical review, go-live, gate, and first-line operating authority. 1.2 - Clarified standalone intake template authority and procedure-owned closure records. 1.1 - Added Appendix A worked example. 1.0 - Initial publication. Establishes intake, review, threat-model, build-time, pre-prod, and handoff phases with the citizen-development carve-out. |
@@ -618,6 +618,7 @@ Good governance makes projects faster because teams can design correctly before 
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.6 | 2026-10-30 | Governance Pillar Leader | Authority reconciliation (#280): CISO escalation settles the technical disposition and cannot itself authorize, deny, or compel go-live, which is the accountable owner's decision. Appendix A.7 sign-offs now route the KMS key type acceptance to the Business Owner co-signed per RMF-001 §9.7, matching A.4 and A.6. |
 | 1.5 | 2026-10-30 | Engineering Pillar Leader | Reconciled the go-live decision with the canonical RACI. The roles table claimed the Project Sponsor / Business Owner owns the go-live decision unconditionally, while §6.4, §8.3, the §9 sign-off list and OM-001 §9 all say the business or service owner decides, and RAC-001 §6.1 assigns the accountable role to the First-Line Service Owner. The roles table now names the residual-risk ownership only and defers the go-live decision to RAC-001 §6.1. No authority changed; one claim stopped contradicting four others. |
 | 1.4 | 2026-10-30 | Engineering Pillar Leader | Named the two disposition sets by phase: §6.4 now defines its three Phase 2 design dispositions beside §8.3's three Phase 4 pre-production dispositions, so one set can no longer be read for the other. §6.4's definitions no longer use "blocking", which §7.3 uses for a severity rating. Corrected the third spelling `Ready-with-Acceptance` in the §12 Phase 4 metric. Moved two example artifacts off reviewer authority and onto `RMF-001` §9.7: finding F04 in the Phase 2 example routes a Medium finding for Business Owner acceptance, co-signed, instead of recording the reviewer accepting it, while the Phase 4 example records the KMS acceptance as completed so its `Ready-with-Risk-Acceptance` disposition is supported by its own evidence row. |
 | 1.3 | 2026-10-28 | Engineering Pillar Leader | Reconciled technical review with first-line service operation: CERG review states technical dispositions and escalates; named business or service owners decide go-live; first-line operators enforce gates and make releases; residual risk follows RMF authority. |
@@ -797,7 +798,7 @@ THREAT MODEL - CloudApp Migration               AR-2026-0001 - TM-001
 | Risk Acceptances | RA-2026-0001 (KMS key type — expiration 2027-06-30); RA-2026-0002 (SendGrid assessment conditional — re-review 2026-12-31) |
 | Ongoing Controls | Weekly exposure scan, monthly access review, quarterly SOX control evidence refresh, annual pen test |
 | Run-book | Confluence link: RUN-CloudApp-001; On-call: IT Ops rotation via PagerDuty |
-| Sign-offs | Engineering Reviewer: Cloud Security Engineer; Risk Reviewer: Risk Analyst; Governance (SOX): SOX ITGC Lead; Engineering Pillar Leader; CISO (KMS risk acceptance); Business Owner: CFO Designee |
+| Sign-offs | Engineering Reviewer: Cloud Security Engineer; Risk Reviewer: Risk Analyst; Governance (SOX): SOX ITGC Lead; Engineering Pillar Leader; CISO (co-sign per `RMF-001` §9.7); Business Owner: CFO Designee (KMS key type acceptance) |
 
 ### A.8 Key Takeaways for First-Time Adopters
 

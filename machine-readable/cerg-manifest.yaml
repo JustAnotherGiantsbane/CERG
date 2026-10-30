@@ -588,7 +588,7 @@
   title: CERG Operating Model
   document_type: governance_instrument
   domain: OM
-  version: 1.32
+  version: 1.33
   status: Approved
   classification: Public
   publication_profile: public
@@ -597,7 +597,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   source_file: CERG-GOV-OM-001_CERG_Operating_Model.md
-  source_hash: bb2c63d63cabf543359dd2281eed0051509d49eaebff97db5ed11c23535b0c6d
+  source_hash: 5c5ab5442fa9f4c144460804eddbee6f0a21d6093d61fe0b32c673fbfdd0cd17
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   llm_include: true
   llm_priority: high
@@ -668,7 +668,7 @@
   title: Risk Management Framework
   document_type: governance_instrument
   domain: RMF
-  version: 1.36
+  version: 1.37
   status: Approved
   classification: Public
   publication_profile: public
@@ -677,7 +677,7 @@
   parent_artifact: 'CERG-POL-001 — CERG Cybersecurity Policy'
   source_path: governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
   source_file: CERG-GOV-RMF-001_Risk_Management_Framework.md
-  source_hash: ae949acc534896b0d18d3c4323f3cd44e96fd37b846e6a7d849e7434767e23a0
+  source_hash: 4290f2eb1cb5defaf8ecb6b673e6891d150ee9a0c0eb0a9f47e2b25dc2dd3c11
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
   llm_include: true
   llm_priority: high
@@ -1048,7 +1048,7 @@
   title: Architecture Review and Project Intake Procedure
   document_type: procedure
   domain: AR
-  version: 1.5
+  version: 1.6
   status: Approved
   classification: Public
   publication_profile: public
@@ -1057,7 +1057,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
   source_file: CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
-  source_hash: e8bf4ba6df92c2e5a2bc42da380cb254342568cc5bccd277f675bcbbf467723f
+  source_hash: 5a88a997c26b26d7e58809bb84721c65992f4e06190314f6603ec45d7d3d2deb
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
   llm_include: true
   llm_priority: medium
@@ -1168,7 +1168,7 @@
   title: Risk Register and Exception Process
   document_type: procedure
   domain: RM
-  version: 1.06
+  version: 1.07
   status: Approved
   classification: Public
   publication_profile: public
@@ -1177,7 +1177,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
   source_file: CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
-  source_hash: 891a72084789a654458bb922f1155b64f7f99fc9bb949c55a9aa5560aea7b152
+  source_hash: dd32338fb43949d9c1e3c1f035cf619778c2b3a2a94b9e959522819d37665bd6
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
   llm_include: true
   llm_priority: high
@@ -2448,7 +2448,7 @@
   title: Security Exception Request Form
   document_type: template
   domain: RM
-  version: 1.1
+  version: 1.2
   status: Approved
   classification: Public
   publication_profile: public
@@ -2457,7 +2457,7 @@
   parent_artifact: 'CERG-PRC-RM-001 — Risk Register and Exception Process'
   source_path: templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md
   source_file: CERG-TMPL-RM-002_Security_Exception_Request_Form.md
-  source_hash: 0648210038f67102e6c385b43a04c7d851b73d81cbf0c290d9e7b2982dc9b9e1
+  source_hash: 3e0cb346f01439e5d5b2fef915c1401bc211dce11e292dfeb01de36be623c517
   canonical_url: https://github.com/m0dernz/CERG/blob/main/templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md
   llm_include: true
   llm_priority: medium

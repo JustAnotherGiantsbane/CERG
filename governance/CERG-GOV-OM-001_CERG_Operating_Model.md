@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
-| **Version** | 1.32 |
+| **Version** | 1.33 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
@@ -396,7 +396,7 @@ Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leade
 | Canonical Role | Pillar / Group | Common Synonyms (Do Not Use) | Primary Responsibilities |
 |---|---|---|---|
 | **Chief Information Security Officer (CISO)** | Executive | - | Strategy, board reporting, final authority on High and Critical risk acceptance per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. |
-| **Executive Sponsor** | Business / Executive | "VP," "Executive Sponsor," "Leadership" | Concurrence for Critical risk acceptance per RMF §9.7; business representative on the COG; named per system in the categorization register. |
+| **Executive Sponsor** | Business / Executive | "VP," "Executive Sponsor," "Leadership" | Accepts the business consequence at Critical per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7, where the acceptance is CISO + Executive Sponsor; business representative on the COG; named per system in the categorization register. Not a CERG roster position: an organization-side party. |
 | **Engineering Pillar Leader** | Engineering | "Engineering Pillar Leader," "Engineering Manager" (when speaking of the pillar lead) | Pillar accountability; project intake; reference-architecture authority. |
 | **Cloud Security Engineer** | Engineering | "Cloud Security Engineer" | Cloud platforms, IaC, CSPM gating, landing-zone authority. |
 | **Identity Engineer** | Engineering | "Identity Engineer," "Identity Engineer" | IdP, MFA, SSO, PAM, secrets management, federation. |
@@ -405,7 +405,7 @@ Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leade
 | **Endpoint Engineer** | Engineering | "Endpoint Engineer" | Endpoint, EDR, OS baselines. |
 | **Cryptography Engineer** | Engineering | "Cryptography Engineer" | Key management, CA hierarchy, TLS posture, FIPS compliance. |
 | **Pre-production Reviewer** | Engineering (rotated) | - | Conducts the pre-production technical review and states its disposition; the business or service owner decides go-live. |
-| **Risk Pillar Leader** | Risk | "Risk Pillar Leader" (when speaking of the lead), "Risk Manager" | Pillar accountability; exposure posture reporting; Medium severity risk-acceptance authority per RMF §9.7. |
+| **Risk Pillar Leader** | Risk | "Risk Pillar Leader" (when speaking of the lead), "Risk Manager" | Pillar accountability; exposure posture reporting; co-signs Medium risk acceptance as the Pillar Leader named in [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7, where the Business Owner accepts the business consequence. |
 | **Exposure Management Lead** | Risk | "Exposure Management Lead" | Operates [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md); owns SLAs and posture metrics. |
 | **Adversarial Testing Lead** | Risk | "Adversarial Testing Lead," "Adversarial Testing Lead" | Operates [`CERG-PRC-AV-001`](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md); pen test, red team, purple team. |
 | **Threat Intelligence Analyst** | Risk | "Threat Intelligence Analyst" | Threat-actor tracking; advisories; intel-to-detection translation. |
@@ -413,7 +413,7 @@ Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leade
 | **OT Risk Analyst** | Risk | - | OT-safe vuln assessment, ICS threat intelligence. |
 | **Identity Risk Analyst** | Risk | - | UEBA, identity-threat detection, OAuth and token risk. Mature-program specialization; in small teams the Detection Engineer or Risk Pillar Leader covers the work. |
 | **Detection Engineer** | Risk | "Detection Engineer," "Detection Engineer" | Detection-rule authoring; ATT&CK coverage; tuning lifecycle. |
-| **Governance Pillar Leader** | Governance | "Governance Pillar Leader," "Governance Pillar Leader" (when speaking of the lead) | Pillar accountability; regulator and auditor liaison; CISO reporting; Low and Informational severity risk-acceptance authority per RMF §9.7. |
+| **Governance Pillar Leader** | Governance | "Governance Pillar Leader," "Governance Pillar Leader" (when speaking of the lead) | Pillar accountability; regulator and auditor liaison; CISO reporting; approves procedural exceptions and maintains the Low and Informational acceptance records required by [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7, where the Business Owner accepts at Low. |
 | **NERC-CIP Compliance Manager** | Governance | "NERC-CIP Compliance Manager" | OT and BES Cyber System compliance posture. |
 | **CMMC / Federal Compliance Manager** | Governance | "CMMC / Federal Compliance Manager" | CUI posture; SSP and POA&M maintenance. |
 | **SOX ITGC Lead** | Governance | "SOX ITGC Lead" | ITGC control evidence and audit coordination. |
@@ -524,10 +524,10 @@ The following patterns illustrate how the pillars typically distribute work. Spe
 | **Activity** | **Engineering** | **Risk** | **Governance** | **Business Owner** | **CISO** |
 |---|---|---|---|---|---|
 | Approve architecture and landing-zone selection | **R / A** | C | C | C | I |
-| Implement IAM, network, monitoring controls | **R** | C | I | C | I |
+| Set IAM, network, and monitoring requirements for the workload | **R / A** | C | I | C | I |
 | Pre-production vulnerability assessment | C | **R / A** | I | C | I |
-| Approve go-live | **R** | C | C | **A** | I |
-| Onboard to CSPM and exposure management | C | **R / A** | I | I | I |
+| Decide go-live on CERG's disposition | C | C | C | **A** | I |
+| Verify the workload in CSPM and the exposure inventory | C | **R / A** | I | I | I |
 | Add to compliance evidence library | C | I | **R / A** | I | I |
 
 ### 9.2 Open High Vulnerability Past SLA
@@ -650,7 +650,7 @@ This ensures that "no single point of failure" is not just a claim about org-cha
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
-| **Version** | 1.32 |
+| **Version** | 1.33 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
@@ -666,6 +666,7 @@ This ensures that "no single point of failure" is not just a claim about org-cha
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.33 | 2026-10-30 | Governance Pillar Leader | Authority reconciliation (#280): §9.1 sample RACI no longer assigns first-line implementation, go-live approval, or CSPM onboarding to CERG pillars; the activities now describe CERG's own work and the go-live decision sits with the Business Owner. Executive Sponsor, Risk Pillar Leader and Governance Pillar Leader authority cells now match RMF-001 §9.7 instead of restating it loosely. |
 | 1.32 | 2026-10-30 | Governance Pillar Leader | Conformed the §5.1 CERG Activity column to the second-line boundary: CERG supplies requirements and candidate gate content, validates baseline conformance, and validates first-line monitoring output; first-line owners and operators configure gates, implement requirements, deploy, operate, monitor, and remediate (#276). Lead Pillar column unchanged. |
 | 1.31 | 2026-10-29 | Governance Pillar Leader | Removed the duplicate Cyber Engineering role table in §6.2 and retained a pointer to the canonical roster in §6.1, preventing a second role statement from drifting on decision rights. |
 | 1.30 | 2026-10-28 | Governance Pillar Leader | Reconciled Engineering decision rights with the second-line operating boundary: §3.1 distinguishes requirements and candidate content from platform operation; §4.2 gives go/no-go to the business or service owner with CERG review and CISO escalation; the pre-production roster entry states a technical disposition rather than a go-live sign-off. |
