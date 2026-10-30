@@ -1808,7 +1808,7 @@
   title: Identity Engineer
   document_type: job_description
   domain: JD-SECENG
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -1817,7 +1817,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-002_Identity_Engineer.md
   source_file: CERG-GOV-JD-SECENG-002_Identity_Engineer.md
-  source_hash: f38079a25eac2aea0869e33fc966f9420c538c8ccf26384b09a47cc076285713
+  source_hash: 02791fac98ca5fd048e9b71920310cdafab0b860c981115335231199bc28deff
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-002_Identity_Engineer.md
   llm_include: true
   llm_priority: low
@@ -1868,7 +1868,7 @@
   title: Endpoint Engineer
   document_type: job_description
   domain: JD-SECENG
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -1877,7 +1877,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md
   source_file: CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md
-  source_hash: 85e4f69f39a9bbe6a1e17abc83bc852af719a5738dc348a10187a1686d4d478f
+  source_hash: 0e2ded061156564d825e7ac5a5ef84bb5c12008f1da4c56d4d186787f6d87255
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md
   llm_include: true
   llm_priority: low
@@ -1888,7 +1888,7 @@
   title: Cryptography Engineer
   document_type: job_description
   domain: JD-SECENG
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -1897,7 +1897,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-006_Cryptography_Engineer.md
   source_file: CERG-GOV-JD-SECENG-006_Cryptography_Engineer.md
-  source_hash: d513c6598c7605c09e0518db50f997ca4004050526a8a53818b112b78903b559
+  source_hash: de25c9c5984894e34cb3745e38391ca65f70937610c17c10cecce9e843d71d6d
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-006_Cryptography_Engineer.md
   llm_include: true
   llm_priority: low
