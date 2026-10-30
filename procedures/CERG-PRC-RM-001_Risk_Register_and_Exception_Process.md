@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-RM-001 |
-| **Version** | 1.05 |
+| **Version** | 1.06 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |
@@ -37,6 +37,15 @@
 ---
 
 ## 1. Purpose and Scope
+
+**If you have been asked to decide on a risk or an exception, start here.** Each line points to the section that carries the rule.
+
+- **Your decision.** Choose one treatment: reduce, transfer, avoid, or accept (§5). Treatment is decided by the risk owner with input from CERG and approved per §8.
+- **Your path.** If a control or standard cannot be met as written, the path is a Security Exception. If residual risk is something the organization chooses to live with, the path is a Risk Acceptance. Both can apply to the same gap (§7.1; [RMF-001](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7a).
+- **Who signs.** A business risk owner signs at every rating where business impact exists: you, or the Executive Sponsor at Critical. Co-signers depend on the residual rating (§8, summarising the canonical table in [RMF-001](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7).
+- **What is not yours.** Security assesses, recommends, and validates; the business owner owns the consequence (§8). Acceptance does not transfer accountability to security, remove the entry from the register, or satisfy a regulatory requirement by itself ([RMF-001](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.8.2).
+- **Your deadline.** Every acceptance and exception expires, and none renews automatically (§8, §7.4.1). Duration cannot exceed [RMF-001](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 or the treatment horizons in §1.3.
+- **Your next action.** For a risk acceptance, complete [`CERG-TMPL-RM-004`](../templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md). For a security exception, the requester submits [`CERG-TMPL-RM-002`](../templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md) and you sign its approval block (§7.3, §7.6).
 
 This procedure operationalizes the risk management principle established in **[CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) Principle 9**. It defines how the organization identifies, documents, scores, treats, reviews, and reports cybersecurity risks, and how exceptions to established controls are requested, approved, tracked, and reviewed.
 
@@ -101,7 +110,7 @@ The board or an authorized board committee reviews and affirms the organization'
 | **Risk Pillar Leader** | Identifies risks through exposure management, threat intelligence, vendor assessment, adversarial testing, and continuous monitoring. Records risks in the register and recommends scoring and treatment. |
 | **Engineering Pillar Leader** | Identifies risks through architecture review and pre-production assessment. Recommends compensating controls. Implements risk-reduction treatments on assets it supports. |
 | **Business / Asset Owners (Risk Owners)** | Accountable for the risks associated with the systems and processes they own. Authorize treatment decisions for their scope. Sign on risk acceptances. |
-| **Approvers (Engineering Pillar Leader → CISO → Executive Sponsor)** | Apply the approval matrix in Section 8. Approvers do not own risks; they authorize the treatment decision against organizational policy. |
+| **Approvers (per Section 8)** | Apply the approval matrix in Section 8. Approvers do not own risks; they authorize the treatment decision against organizational policy. |
 | **CISO** | Approves High and Critical risk acceptances and material exceptions. Owns escalation to executive leadership and the board. Owns the overall organizational risk posture. |
 | **Internal Audit and Compliance Partners** | Consume the register as evidence of risk management activity. Verify integrity of the process through periodic audit. |
 
@@ -310,7 +319,7 @@ Per [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_Risk_Management_Framewor
 | **Path** | **Description** | **Form** | **Approval** | **Register** |
 |---|---|---|---|---|
 | **Security Exception** (Governance-tracked) | A specific control or standard cannot be met as written. The deviation is temporary, with compensating controls, expiration, and a remediation plan. | [`CERG-TMPL-RM-002`](../templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md) — Security Exception Request Form | Governance approves within authority per §8. Assessment by Risk and Engineering. | Exception register; linked to risk register entry |
-| **Risk Acceptance** (Business Owner + RMF-001 §9.7) | The residual risk after controls is within appetite. No further treatment is planned beyond monitoring. The Business Owner explicitly accepts the business consequence. | [`CERG-TMPL-RM-004`](../templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md) — Risk Acceptance Request Form | Per RMF-001 §9.7 authority table: Business Owner at all levels; CISO for High; CISO + Executive Sponsor for Critical. | Risk register (accepted status) |
+| **Risk Acceptance** (Business Owner + RMF-001 §9.7) | The residual risk after controls is within appetite. The acceptance is standing or time-bound (§5.3), and a time-bound acceptance can run alongside treatment and an exception (RMF-001 §9.7a). The Business Owner explicitly accepts the business consequence. | [`CERG-TMPL-RM-004`](../templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md) — Risk Acceptance Request Form | Per the RMF-001 §9.7 authority table, summarised in §8. | Risk register (accepted status) |
 
 **Routing rule:** If the trigger is a control or standard that cannot be met → Security Exception (TMPL-RM-002). If the trigger is residual risk the organization chooses to live with → Risk Acceptance (TMPL-RM-004). When in doubt, route as Security Exception; the Risk Register Owner may reclassify during triage.
 
@@ -332,7 +341,7 @@ An exception is required whenever a system, person, or process intentionally dev
 | 1 | Requester submits exception with: control reference, business / operational justification, affected systems, proposed compensating controls, risk owner, and proposed duration. | Requester |
 | 2 | Engineering reviews proposed compensating controls. | Engineering |
 | 3 | Risk assesses likelihood and impact of the residual risk; provides a written risk finding. | Risk |
-| 4 | Governance applies the approval matrix (Section 8); routes for approval. Business owner approval is required for any exception carrying residual risk above Low. | Governance |
+| 4 | Governance applies the approval matrix (Section 8); routes for approval. Business Owner approval is required for any exception carrying residual risk, with co-signers per Section 8. | Governance |
 | 5 | Approver decides: approve, approve with conditions, deny, or return for additional information. | Approver |
 | 6 | Approved exception is entered into the exception register and linked to the risk register when residual exposure exists; compensating controls are tracked. | Governance |
 | 7 | At expiration, the exception is re-evaluated. Renewal requires a new approval cycle. Renewals shall not be granted by default. | Governance |
@@ -552,7 +561,7 @@ The register is not a parallel system to these programs. It is the connective ti
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-RM-001 |
-| **Version** | 1.05 |
+| **Version** | 1.06 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |
@@ -569,6 +578,7 @@ The register is not a parallel system to these programs. It is the connective ti
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.06 | 2026-10-30 | Governance Pillar Leader | Reader pilot (#246): §1 opens with a six-line entry for the Business Owner asked to decide, pointing to the sections that carry each rule. Aligned three restatements to RMF-001 §9.7 and §9.7a: the §2 approver chain and the §7.1 approval cell now point to §8; §7.1 no longer says acceptance plans no further treatment; §7.3 step 4 requires Business Owner approval at every residual-risk rating. |
 | 1.05 | 2026-07-24 | Governance Pillar Leader | Aligned quantitative tolerance labels to the canonical RMF-001 severity bands and removed noncanonical residual-risk sub-band wording. |
 | 1.04 | 2026-06-18 | Governance Pillar Leader | Added funding/capacity decision brief routing and clarified that funding deferral does not itself accept residual risk. |
 | 1.03 | 2026-06-18 | Governance Pillar Leader | Made RMF-001 the explicit source of truth for scoring and acceptance authority, removed competing local calibration thresholds, clarified Business Owner consequence acceptance, and constrained TMPL-RM-003 to a supporting memo role. |
@@ -610,4 +620,4 @@ Governance owns this procedure. The Risk Register Owner is responsible for revis
 
 ---
 
-_CERG-PRC-RM-001 · Version 1.05 · Public_
+_CERG-PRC-RM-001 · Version 1.06 · Public_
