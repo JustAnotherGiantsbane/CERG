@@ -11,7 +11,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-FRM-001 |
-| **Version** | 1.25 |
+| **Version** | 1.26 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | CISO |
@@ -115,14 +115,14 @@ The second-line authority for policies, standards, control assurance, evidence q
 
 CERG pillars are not sequential. They operate simultaneously and continuously, with structured handoffs and shared accountability for outcomes.
 
-|Lifecycle Stage|Primary Pillar|Supporting Pillars|
+|Lifecycle Stage|Primary Owner|Supporting Pillars|
 |---|---|---|
 |Business requirement / new project|Engineering|Governance sets standards; Risk flags vendor/solution concerns|
 |Design and architecture review|Engineering (independent review gate)|Delivery teams perform project threat modeling; CERG Engineering reviews material architectures; Risk consumes results to target validation|
 |Pre-production vulnerability scan|First line (delivery acceptance)|Risk and Engineering consume findings for exposure validation and remediation|
-|Risk acceptance (if vuln unresolvable)|Engineering + Risk|Governance provides risk treatment plan template; CISO/leadership signs off on High/Critical|
-|Production deployment|Engineering|First-line owners operate and monitor; Risk independently validates exposure and control effectiveness|
-|Ongoing standards conformance assurance|Governance|Risk validates exposure and control weakness; Engineering and accountable owners remediate gaps|
+|Risk acceptance (if vuln unresolvable)|Business risk owner, co-signed per [RMF-001 §9.7](CERG-GOV-RMF-001_Risk_Management_Framework.md); the CISO co-signs High and Critical|Risk provides written risk assessment; Engineering supplies compensating-control design input; Governance structures the acceptance package|
+|Production deployment|First line (service owner)|First-line operators deploy, operate, and monitor; Engineering defines baselines and requirements; Risk independently validates exposure and control effectiveness|
+|Ongoing standards conformance assurance|Governance|Risk validates exposure and control weakness; accountable owners remediate gaps; Engineering supplies requirement and design corrections|
 |Evidence assurance and audit readiness|Governance|First-line owners, Engineering, and Risk produce artifacts from their daily work|
 |Adversarial validation: pen test / red team / purple team|Risk|Engineering reviews findings for architectural impact; Governance logs findings|
 |Regulatory exam or audit|Governance|All pillars provide evidence; Engineering and Risk support responses|
@@ -627,7 +627,7 @@ This is where CERG can beat traditional GRC: compliance becomes exhaust from goo
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-FRM-001 |
-| **Version** | 1.25 |
+| **Version** | 1.26 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | CISO |
@@ -641,7 +641,8 @@ This is where CERG can beat traditional GRC: compliance becomes exhaust from goo
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.25 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Front door made second line: authority-conditional Definition of Done; exposure and detection capabilities stated as assurance outcomes over first-line operation; scanning, triage, live monitoring and treatment execution removed from Risk core functions, OT method wording, NIST role rows and the staffing plan. Links OM-001 §2.4 as the boundary authority. SOX blurb states assurance over first-line monitoring. | #248 |
+| 1.26 | 2026-10-30 | Risk Pillar Leader / Governance Pillar Leader | Corrected lifecycle authority (#271): business risk owners accept residual risk under RMF-001 §9.7; first-line service owners and operators deploy, operate, and monitor; accountable owners remediate; Engineering provides requirements and design input, while Risk validates exposure and control weakness. |
+| 1.25 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Front door made second line (#248): authority-conditional Definition of Done; exposure and detection capabilities stated as assurance outcomes over first-line operation; scanning, triage, live monitoring and treatment execution removed from Risk core functions, OT method wording, NIST role rows and the staffing plan. Links OM-001 §2.4 as the boundary authority. SOX blurb states assurance over first-line monitoring. |
 | 1.24 | 2026-10-28 | Governance Pillar Leader | Added CTEM operating-model property paragraph in 2; conformed lifecycle table and Risk core functions in 5.2 and 10 to the second-line boundary (first-line scanning and monitoring, independent Risk validation). |
 | 1.23 | 2026-09-01 | Cyber Governance | Clarified Cyber Governance as CERG's second-line authority: it sets standards and assurance expectations, while first-line owners, Engineering, and Risk produce operating evidence and remediate or validate control gaps. Reframed regulatory alignment as an output of the normal CERG assurance loop. |
 | 1.0 | 2026-05-01 | CISO + Cyber Governance | Initial release. Narrative description of the CERG framework, pillars, and operating model. |
