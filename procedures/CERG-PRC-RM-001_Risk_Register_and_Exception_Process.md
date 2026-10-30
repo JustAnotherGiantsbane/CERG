@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-RM-001 |
-| **Version** | 1.07 |
+| **Version** | 1.08 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |
@@ -44,7 +44,7 @@
 - **Your path.** If a control or standard cannot be met as written, the path is a Security Exception. If residual risk is something the organization chooses to live with, the path is a Risk Acceptance. Both can apply to the same gap (§7.1; [RMF-001](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7a). If unsure, route it as a Security Exception; the Risk Register Owner may reclassify it during triage.
 - **Who signs.** A business risk owner signs at every rating where business impact exists: you, or the Executive Sponsor at Critical. Co-signers depend on the residual rating (§8, summarising the canonical table in [RMF-001](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7).
 - **What is not yours.** Security assesses, recommends, and validates; the business owner owns the consequence (§8). Acceptance does not transfer accountability to security, remove the entry from the register, or satisfy a regulatory requirement by itself ([RMF-001](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.8.2).
-- **Time limits.** Every acceptance and exception expires, and none renews automatically (§8, §7.4.1). Duration cannot exceed [RMF-001](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 or the treatment horizons in §1.3. After an emergency exception, the CISO decides within 24 hours, and any continuing acceptance needs you (§8).
+- **Time limits.** Every acceptance and exception expires, and none renews automatically (§8, §7.4.1). Duration cannot exceed [RMF-001](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 or the treatment horizons in §1.3. After an emergency exception, the CISO decides within 24 hours, and any continuing acceptance needs you (§8). If you decline an acceptance, the risk must be treated (§1.3).
 - **Your next action.** For a risk acceptance, complete [`CERG-TMPL-RM-004`](../templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md). For a security exception, the requester submits [`CERG-TMPL-RM-002`](../templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md) and you sign its approval block (§7.3, §7.6).
 
 This procedure operationalizes the risk management principle established in **[CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) Principle 9**. It defines how the organization identifies, documents, scores, treats, reviews, and reports cybersecurity risks, and how exceptions to established controls are requested, approved, tracked, and reviewed.
@@ -122,7 +122,7 @@ A risk is a potential event that could adversely affect organizational assets, o
 
 ### 3.1 Sources of Risk
 
-Risks are identified continuously from the following sources, each of which feeds the register:
+Each identified risk must be documented in the risk register, as [CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) Principle 9 requires. The following sources identify candidate risks and feed the register:
 
 | **Source** | **Examples** |
 |---|---|
@@ -563,7 +563,7 @@ The register is not a parallel system to these programs. It is the connective ti
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-RM-001 |
-| **Version** | 1.07 |
+| **Version** | 1.08 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |
@@ -580,6 +580,7 @@ The register is not a parallel system to these programs. It is the connective ti
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.08 | 2026-10-30 | Governance Pillar Leader | Final reader-path correction (#280): §1 states that declining acceptance requires treatment; §3 now carries Policy Principle 9's requirement that each identified risk is documented in the register. No trigger or deadline was added. |
 | 1.07 | 2026-10-30 | Governance Pillar Leader | Authority reconciliation (#280): the inline exception form's signer list now carries every signer §8 requires, including the Risk Register Owner at Low and a Pillar Leader or Governance Pillar Leader at Medium, and separates acceptance from co-signature. |
 | 1.06 | 2026-10-30 | Governance Pillar Leader | Reader pilot (#246): §1 opens with a six-line entry for the Business Owner asked to decide, pointing to the sections that carry each rule. Aligned three restatements to RMF-001 §9.7 and §9.7a: the §2 approver chain and the §7.1 approval cell now point to §8; §7.1 no longer says acceptance plans no further treatment; §7.3 step 4 requires Business Owner approval at every residual-risk rating; the §7.1 exception path names that approval. §8 now says no acceptance renews automatically, where it said none expires automatically, which read as acceptances never lapsing. §5's Accept row names the Executive Sponsor by rating rather than as an alternative. |
 | 1.05 | 2026-07-24 | Governance Pillar Leader | Aligned quantitative tolerance labels to the canonical RMF-001 severity bands and removed noncanonical residual-risk sub-band wording. |
@@ -623,4 +624,4 @@ Governance owns this procedure. The Risk Register Owner is responsible for revis
 
 ---
 
-_CERG-PRC-RM-001 · Version 1.07 · Public_
+_CERG-PRC-RM-001 · Version 1.08 · Public_

@@ -348,7 +348,7 @@
   title: Implementation and Adaptation Guide
   document_type: governance_instrument
   domain: IMP
-  version: 1.11
+  version: 1.13
   status: Approved
   classification: Public
   publication_profile: public
@@ -357,7 +357,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md
   source_file: CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md
-  source_hash: 2f9d785878b64d92cb6c7fe4c67095411faa0b2296abf150a6ecd933c2a758a5
+  source_hash: 43dd54f572859d76bdf9bbd358704fecc1482a8704be5f9615729761c743ddaa
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md
   llm_include: true
   llm_priority: medium
@@ -668,7 +668,7 @@
   title: Risk Management Framework
   document_type: governance_instrument
   domain: RMF
-  version: 1.37
+  version: 1.38
   status: Approved
   classification: Public
   publication_profile: public
@@ -677,7 +677,7 @@
   parent_artifact: 'CERG-POL-001 — CERG Cybersecurity Policy'
   source_path: governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
   source_file: CERG-GOV-RMF-001_Risk_Management_Framework.md
-  source_hash: 4290f2eb1cb5defaf8ecb6b673e6891d150ee9a0c0eb0a9f47e2b25dc2dd3c11
+  source_hash: 674897293ba69fbb363cf1702aba764b1d7a5738440d28cf37e512ce9ad6b1d2
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
   llm_include: true
   llm_priority: high
@@ -1168,7 +1168,7 @@
   title: Risk Register and Exception Process
   document_type: procedure
   domain: RM
-  version: 1.07
+  version: 1.08
   status: Approved
   classification: Public
   publication_profile: public
@@ -1177,7 +1177,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
   source_file: CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
-  source_hash: dd32338fb43949d9c1e3c1f035cf619778c2b3a2a94b9e959522819d37665bd6
+  source_hash: 6d415831af4f797ceef8664d7474c65d29b0fb08555c21d50d3af75d8fc6ddb6
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
   llm_include: true
   llm_priority: high

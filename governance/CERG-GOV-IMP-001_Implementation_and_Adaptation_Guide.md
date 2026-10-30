@@ -10,7 +10,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-001 |
-| **Version** | 1.11 |
+| **Version** | 1.13 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -60,7 +60,7 @@ CERG adoption needs four things in place. None of them is a tool or a budget lin
 | **Prerequisite** | **Why It Matters** | **Minimum Bar** |
 |---|---|---|
 | A named accountable owner | Someone has to own the program. Ambiguous ownership is the failure mode CERG exists to fix. | One person carries the **Chief Information Security Officer (CISO)** role, even part-time, even if the title is informal. |
-| Executive endorsement | The "yes, and..." operating model only works if leadership backs the guardrails. | One **Executive Sponsor** who will sign the adopted Cybersecurity Policy. |
+| Executive endorsement | The "yes, and..." operating model only works if leadership backs the guardrails. | One **Executive Sponsor** who will endorse the Cybersecurity Policy after CISO approval. |
 | A content repository | CERG is Markdown. It needs a home where versions are tracked. | A Git repository, a wiki with history, or a controlled document store. |
 | Honest scope | You cannot protect what you have not named. | A rough list of systems, business units, and regulators in scope. |
 
@@ -436,7 +436,7 @@ Organizations adopting CERG should consider adding a "Working in Our CERG Team" 
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-001 |
-| **Version** | 1.11 |
+| **Version** | 1.13 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-14 |
 | **Classification** | Public |
@@ -453,6 +453,7 @@ Organizations adopting CERG should consider adding a "Working in Our CERG Team" 
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.13 | 2026-10-30 | Governance Pillar Leader | Final reader-path correction (#280): §2 now says that the Executive Sponsor endorses the policy after CISO approval; it no longer assigns the Sponsor a signing authority that belongs to the CISO. |
 | 1.12 | 2026-06-18 | Governance Pillar Leader | Added Gate 2→3 transition criteria reference at §5.3 linking to CERG-GOV-IMP-005 §6 Gate 2→3 Transition Test as prerequisite before standard-layer adoption. |
 | 1.11 | 2026-06-14 | Governance Pillar Leader | Aligned core-standard guidance with the adoption decision tree and clarified that the IR plan is an adjacent-function requirement, not a CERG-owned package. |
 | 1.1 | 2026-05-27 | Cyber Governance | Added §10 Employer Brand and Talent Attraction: CERG employee value proposition, role-specific candidate messaging, structured interview guide aligned to CMP-001 competency domains, candidate evaluation rubric, and careers page guidance. Updated supporting documents to reference JA-001, CMP-001, and JD-001. |
