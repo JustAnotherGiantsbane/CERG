@@ -6,7 +6,7 @@ You just found CERG. You have a repo full of Markdown. What do you actually do o
 
 ## If you were just assigned to CERG
 
-Ten minutes, no corpus knowledge. Read these three, in this order, then stop:
+Ten minutes, no corpus knowledge. Read these three, in this order. That is your first ten minutes.
 
 1. **[Cybersecurity Policy](governance/CERG-POL-001_Cybersecurity_Policy.md)**: the authority. Nothing is authoritative until an Executive Sponsor signs this.
 2. **[CERG Framework](governance/CERG-GOV-FRM-001_CERG_Framework.md)**: the three pillars, and which one you sit in.
@@ -14,8 +14,8 @@ Ten minutes, no corpus knowledge. Read these three, in this order, then stop:
 
 Then answer four questions about your own scope. The one you cannot answer is the next thing you read.
 
-- **Decision.** Which decisions are yours to make, and which are not yours at all?
-- **Owner.** Who is accountable for the outcome when it is not you?
+- **Decision.** Which decisions are yours to make, and which are not yours at all? The §6.1 roster names the role that owns each decision.
+- **Owner.** Who is accountable for the outcome when it is not you? Name the role, not the person doing the work.
 - **Boundary.** CERG defines requirements, reviews evidence, independently validates, and escalates. First-line owners and operators deploy, operate, monitor, and remediate. Executing live service is not CERG's work.
 - **Exception path.** If a control cannot be met as written, or residual risk is within appetite, the route is the [Risk Register and Exception Process](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) §7.1. That section decides which of the two paths applies and who approves it; [RMF-001 §9.7](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) is the canonical acceptance authority.
 
