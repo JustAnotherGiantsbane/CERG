@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
-| **Version** | 1.31 |
+| **Version** | 1.32 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
@@ -301,10 +301,10 @@ CERG commits to architecture-review intake and disposition turnaround by project
 |---|---|---|
 | Concept | Lightweight architectural consult; data classification and environment-tier discussion. | Engineering |
 | Design | Formal security architecture review; reference-architecture / landing-zone selection; threat-model session for novel components. | Engineering (+ Risk for threat modeling) |
-| Build | Engineering partner embedded with the project team; pipeline gates configured; identity / cryptography / monitoring requirements implemented. | Engineering |
+| Build | Engineering partner embedded with the project team; identity, cryptography, and monitoring requirements and candidate pipeline-gate content supplied. First-line delivery teams configure the gates and implement the requirements. | Engineering |
 | Pre-production | Pre-production security review; vulnerability assessment; pen-test where warranted; risk-register entries for any acceptance sought. | Engineering + Risk |
-| Production | Handoff to operations; baselines committed; ongoing CSPM / SSPM coverage; exposure management onboarding. | Engineering → Risk |
-| Continuous | Continuous monitoring; periodic re-review; governance evidence integration. | Risk + Governance |
+| Production | Handoff review; baseline conformance validated; new asset onboarded to exposure validation. First-line owners and operators deploy, operate, and monitor, including CSPM / SSPM coverage. | Engineering → Risk |
+| Continuous | Independent validation of first-line monitoring output; periodic evidence re-review; governance evidence integration. First-line owners and operators monitor and remediate. | Risk + Governance |
 
 ### 5.2 Continuous Service (Risk-Led)
 
@@ -650,7 +650,7 @@ This ensures that "no single point of failure" is not just a claim about org-cha
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
-| **Version** | 1.31 |
+| **Version** | 1.32 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
@@ -666,6 +666,7 @@ This ensures that "no single point of failure" is not just a claim about org-cha
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.32 | 2026-10-30 | Governance Pillar Leader | Conformed the §5.1 CERG Activity column to the second-line boundary: CERG supplies requirements and candidate gate content, validates baseline conformance, and validates first-line monitoring output; first-line owners and operators configure gates, implement requirements, deploy, operate, monitor, and remediate (#276). Lead Pillar column unchanged. |
 | 1.31 | 2026-10-29 | Governance Pillar Leader | Removed the duplicate Cyber Engineering role table in §6.2 and retained a pointer to the canonical roster in §6.1, preventing a second role statement from drifting on decision rights. |
 | 1.30 | 2026-10-28 | Governance Pillar Leader | Reconciled Engineering decision rights with the second-line operating boundary: §3.1 distinguishes requirements and candidate content from platform operation; §4.2 gives go/no-go to the business or service owner with CERG review and CISO escalation; the pre-production roster entry states a technical disposition rather than a go-live sign-off. |
 | 1.29 | 2026-10-28 | Governance Pillar Leader | Trace correction: §5.2 identifies CSPM, SSPM, and identity-threat monitoring as first-line-operated sources whose coverage/provenance or outcomes CERG independently validates; §6.3 aligns Detection Engineer work with the per-activity boundary and role recast. |
