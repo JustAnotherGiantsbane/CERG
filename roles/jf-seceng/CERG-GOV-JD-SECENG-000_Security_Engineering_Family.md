@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-000 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
@@ -26,7 +26,7 @@
 
 ## 1. Family Overview
 
-Security Engineering (JF-SECENG) — Design and build secure systems, platforms, and infrastructure.
+Security Engineering (JF-SECENG) — Define secure-system requirements, provide reference designs, and conduct technical review and validation.
 
 | Attribute | Value |
 |-----------|-------|
@@ -34,7 +34,7 @@ Security Engineering (JF-SECENG) — Design and build secure systems, platforms,
 | **Entry Grade** | S1 |
 | **Terminal Grade** | S4 |
 | **Career Track** | SME (Individual Contributor) |
-| **Number of Roles** | 6 |
+| **Number of Roles** | 8 |
 
 This family groups roles that share a core competency profile and career progression path. Members of this family progress through four levels (L1-L4), mapped to CERG's S1-S4/M1-M4 grade framework. See [JF-001](../CERG-GOV-JF-001_Job_Families_Overview.md) for the complete level definitions and progression gates.
 
@@ -44,12 +44,14 @@ This family groups roles that share a core competency profile and career progres
 
 | Role | Document | Description |
 |------|----------|-------------|
-| **Cloud Security Engineer** | [`CERG-GOV-JD-SECENG-001`](CERG-GOV-JD-SECENG-001_Cloud_Security_Engineer.md) | Owns cloud platform security architecture, IaC security, CSPM operations, and SaaS security. |
-| **Identity Engineer** | [`CERG-GOV-JD-SECENG-002`](CERG-GOV-JD-SECENG-002_Identity_Engineer.md) | Owns identity fabric: IAM architecture, PAM, federation, directory services, and access governance. |
-| **OT Security Engineer** | [`CERG-GOV-JD-SECENG-003`](CERG-GOV-JD-SECENG-003_OT_Security_Engineer.md) | Owns OT/ICS security architecture, network segmentation, secure remote access, and grid control system defense. |
-| **Application Security Engineer** | [`CERG-GOV-JD-SECENG-004`](CERG-GOV-JD-SECENG-004_Application_Security_Engineer.md) | Owns secure SDLC, SAST/DAST integration, application threat modeling, and developer security enablement. |
-| **Endpoint Engineer** | [`CERG-GOV-JD-SECENG-005`](CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md) | Owns endpoint security architecture, secure configuration baselines, EDR/XDR operations, and mobile device security. |
-| **Cryptography Engineer** | [`CERG-GOV-JD-SECENG-006`](CERG-GOV-JD-SECENG-006_Cryptography_Engineer.md) | Owns cryptography architecture, PKI, key management, encryption standards, and cryptographic agility. |
+| **Cloud Security Engineer** | [`CERG-GOV-JD-SECENG-001`](CERG-GOV-JD-SECENG-001_Cloud_Security_Engineer.md) | Defines cloud-security requirements and reference designs; reviews evidence and validates outcomes. |
+| **Identity Engineer** | [`CERG-GOV-JD-SECENG-002`](CERG-GOV-JD-SECENG-002_Identity_Engineer.md) | Defines identity requirements and reference designs; reviews evidence and validates outcomes. |
+| **OT Security Engineer** | [`CERG-GOV-JD-SECENG-003`](CERG-GOV-JD-SECENG-003_OT_Security_Engineer.md) | Defines OT-security requirements and reference designs; reviews evidence and validates outcomes. |
+| **Application Security Engineer** | [`CERG-GOV-JD-SECENG-004`](CERG-GOV-JD-SECENG-004_Application_Security_Engineer.md) | Defines application-security requirements and candidate content; reviews and independently tests approved scope. |
+| **Endpoint Engineer** | [`CERG-GOV-JD-SECENG-005`](CERG-GOV-JD-SECENG-005_Endpoint_Engineer.md) | Defines endpoint requirements and baselines; reviews evidence and validates outcomes. |
+| **Cryptography Engineer** | [`CERG-GOV-JD-SECENG-006`](CERG-GOV-JD-SECENG-006_Cryptography_Engineer.md) | Defines cryptographic requirements and reference designs; reviews evidence and validates outcomes. |
+| **Engineering Pillar Leader** | [`CERG-GOV-JD-SECENG-007`](CERG-GOV-JD-SECENG-007_Engineering_Pillar_Leader.md) | Leads Engineering's requirements, standards content, technical-review service, and escalation path. |
+| **Pre-production Reviewer** | [`CERG-GOV-JD-SECENG-008`](CERG-GOV-JD-SECENG-008_Pre-production_Reviewer.md) | Conducts technical review, records findings, and states a disposition before the accountable owner decides go-live. |
 
 ---
 
@@ -89,9 +91,9 @@ Certifications relevant to the Security Engineering family are detailed in [TRN-
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-000 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
-| **Effective Date** | 2026-06-11 |
+| **Effective Date** | 2026-10-29 |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
 | **Approved By** | CISO |
@@ -106,6 +108,7 @@ Certifications relevant to the Security Engineering family are detailed in [TRN-
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-10-29 | Engineering Pillar Leader | Completed the eight-role index and aligned role descriptions to the second-line boundary; first-line owners and operators execute service work, and accountable owners decide go-live. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Family-level index for Security Engineering (JF-SECENG). |
 
 ### Review Triggers

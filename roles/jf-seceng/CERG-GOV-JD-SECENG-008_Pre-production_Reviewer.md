@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-008 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The Pre-production Reviewer is a rotated Engineering role, not a permanent position. They own the pre-production checklist and sign off on go-live readiness: confirming that pre-production findings are remediated or risk-accepted, that handoff documentation is complete, and that the team inheriting the system knows its security posture. The role rotates among qualified Engineers to ensure cross-training and to prevent any single person from becoming a go-live bottleneck.
+The Pre-production Reviewer conducts technical reviews before production. They maintain the review checklist, review first-line evidence, record findings, and state a technical disposition. The accountable business or service owner decides go-live; the first line remediates findings and prepares the handoff. The role rotates among qualified Engineers to build cross-training without creating a decision bottleneck.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -46,7 +46,15 @@ The Pre-production Reviewer is a rotated Engineering role, not a permanent posit
 
 ### 4.1 Core Responsibilities (All Grades)
 
-- Own and maintain the pre-production review checklist, keeping it current with evolving standards and threat landscape - Conduct pre-production reviews for systems approaching go-live: verify that architecture review findings are closed, vulnerability scans are clean or accepted, threat model findings are resolved, and handoff documentation is complete - Sign off on go-live readiness, confirming that the system meets the security bar defined in the Architecture Review Procedure - Escalate unresolved pre-production findings to the Engineering Pillar Leader and the project's Executive Sponsor - Ensure the post-go-live operations team receives a complete security handoff package: known risks, accepted findings, monitoring requirements, incident response contacts, and configuration documentation - Coordinate with Risk to confirm that pre-production vulnerability scans and adversarial testing results meet the defined bar - Coordinate with Governance to confirm that compliance-required evidence is collected before go-live
+- Maintain the pre-production review checklist so it reflects current standards and relevant threats.
+- Conduct pre-production technical reviews for systems approaching go-live; review first-line evidence for architecture findings, exposure findings, threat-model findings, and handoff readiness.
+- Record review findings and state a technical disposition; the accountable business or service owner decides go-live.
+- Escalate unresolved material findings through the Engineering Pillar Leader; the accountable owner remediates them or initiates the risk-acceptance route.
+- Escalate material disagreement between CERG and the business through the Engineering Pillar Leader to the CISO, per [CERG-PRC-AR-001 ยง2](../../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md).
+- Provide the technical-review record, including open findings and findings routed for risk acceptance, as input to the first-line handoff; first-line teams prepare the operational handoff and own the service lifecycle.
+- Obtain Risk input on exposure and approved adversarial-validation results where the review requires it.
+- Obtain Governance input on regulatory-scope and compliance-evidence requirements where the review requires it.
+- Do not independently validate an asserted scope for which the reviewer authored live state; the Engineering Pillar Leader assigns an independent reviewer for that scope.
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
@@ -56,7 +64,11 @@ Grade-level responsibility differentiation for this role is defined in [JA-001 ย
 
 ### 5.1 Domain Expertise
 
-- Broad cybersecurity engineering knowledge across multiple domains (cloud, identity, application, endpoint) - Deep familiarity with the CERG Architecture Review Procedure and pre-production review process - Ability to evaluate security findings in context: what is truly blocking versus what can be accepted and tracked - Strong written communication: the pre-production review sign-off is a durable record that may be reviewed by auditors - Sufficient seniority to push back on project pressure to go live with unresolved material findings
+- Broad cybersecurity engineering knowledge across cloud, identity, application, and endpoint domains.
+- Deep familiarity with the Architecture Review Procedure and pre-production review process.
+- Ability to evaluate findings in context and distinguish technical disposition from risk acceptance.
+- Strong written communication for a durable technical-review record.
+- Sufficient seniority to challenge project pressure where material findings remain unresolved.
 
 ### 5.2 Technical Skills
 
@@ -127,7 +139,7 @@ Competency expectations for this role follow the Engineering pillar behavioral a
 
 ## 10. Success Profile
 
-A Pre-production Reviewer is successful when security issues are identified and resolved before they reach production, not after. Key indicators: architecture reviews are completed before any infrastructure is provisioned; findings are specific enough that project teams can act on them without reinterpretation; the review cycle time does not delay releases; recurring findings trigger standard updates rather than repeated manual reviews. The reviewer is seen as an enabler of secure delivery, not a gate that slows things down.
+A Pre-production Reviewer is successful when the review establishes whether first-line evidence supports the stated technical requirements or exposes a gap. Findings are specific enough for first-line teams to act on, and material disagreement reaches the accountable owner through the established route. Remediation execution, handoff completion, release timing, and go-live remain first-line measures. The reviewer provides a technical disposition; they do not approve go-live or accept residual risk.
 
 ## 11. Career Path
 
@@ -165,9 +177,9 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-JD-SECENG-008 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
-| **Effective Date** | 2026-06-11 |
+| **Effective Date** | 2026-10-29 |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
 | **Approved By** | CISO |
@@ -182,6 +194,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-10-29 | Engineering Pillar Leader | Recast the rotated pre-production-review function for the second-line boundary: technical review, findings, disposition, escalation, and evidence review remain; first-line teams remediate and hand off, while the accountable owner decides go-live. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Extracted from monolithic JD-001 into enhanced per-role format with NICE mapping, KPI sections, and competency anchor sections. |
 
 ### Review Triggers
