@@ -588,7 +588,7 @@
   title: CERG Operating Model
   document_type: governance_instrument
   domain: OM
-  version: 1.31
+  version: 1.32
   status: Approved
   classification: Public
   publication_profile: public
@@ -597,7 +597,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   source_file: CERG-GOV-OM-001_CERG_Operating_Model.md
-  source_hash: c278992f15da41f5c228311176f2821635fed5552a37dd97bcd3863e6910e2df
+  source_hash: bb2c63d63cabf543359dd2281eed0051509d49eaebff97db5ed11c23535b0c6d
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   llm_include: true
   llm_priority: high
