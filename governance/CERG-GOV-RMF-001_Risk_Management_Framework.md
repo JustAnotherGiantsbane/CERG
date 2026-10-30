@@ -2,7 +2,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-RMF-001 |
-| **Version** | 1.37 |
+| **Version** | 1.38 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -355,7 +355,7 @@ Continuous monitoring is the phase that separates Adaptive-tier programs from Re
 | Open Critical/High Findings | 0 Critical past SLA; <10 High past SLA | Risk + Governance | Any Critical past SLA; >10 High past SLA |
 | Risk Register Items Past Target Date | 0 items past target date | Governance | Any item >30 days past target; CISO briefing required if more than 3 items are past target at the monthly Risk Posture Review |
 | Policy Review Compliance | 100% of policies reviewed within defined cycle | Governance | Any policy >12 months since last review |
-| SSP / Disposition and Acceptance Currency | 100% of in-scope systems with a current CERG disposition and §9.7 acceptance record | Governance | Any in-scope system without a current disposition or acceptance record |
+| SSP / Disposition and Acceptance Currency | 100% of in-scope systems with a current CERG disposition and, where residual risk remains, a §9.7 acceptance record | Governance | Any in-scope system without a current disposition or required acceptance record |
 | Vendor Risk Assessments Current | ≥95% of Critical vendors with current assessment | Risk | <90% triggers escalation |
 | Security Training Completion | ≥95% completion within defined window | Governance (coord w/ Awareness) | <90% completion triggers escalation to CISO |
 
@@ -864,7 +864,7 @@ Mapping the ALE bands to the existing 5×5 scoring framework for this example or
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-RMF-001 |
-| **Version** | 1.37 |
+| **Version** | 1.38 |
 | **Status** | Approved |
 | **Effective Date** | 2026-09-01 |
 | **Classification** | Public |
@@ -879,6 +879,7 @@ Mapping the ALE bands to the existing 5×5 scoring framework for this example or
 
 | Version | Date | Author | Change Description |
 |---|---|---|---|
+| 1.38 | 2026-10-30 | Governance Pillar Leader | Follow-up to the #280 authority reconciliation: the Phase 6 metric now requires a §9.7 acceptance record only where residual risk remains; it does not create an acceptance record for every in-scope system. |
 | 1.37 | 2026-10-30 | Governance Pillar Leader | Authority reconciliation (#280): §7 recast from a CERG authorization to a go-live decision plus a record. CERG states the technical disposition, the named accountable business or service owner decides to operate, and residual risk is accepted under §9.7. DATO no longer compels isolation outside the risk-treatment, incident, or regulatory paths. Phase 5 RACI names the decision as outside CERG, and the §9.7 role note now separates organization-side business roles from the CERG roster. |
 | 1.36 | 2026-10-30 | Governance Pillar Leader | Patch (#280): repaired 6 in-page links whose anchors no longer matched their headings after earlier heading edits. No content change. |
 | 1.35 | 2026-09-01 | Governance Pillar Leader | Clarified that CERG owns cybersecurity tolerance calibration and recommendation work, while enterprise appetite is an external constraint; defined pillar accountabilities and approval boundaries. |

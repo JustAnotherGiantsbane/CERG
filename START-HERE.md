@@ -6,20 +6,20 @@ You just found CERG. You have a repo full of Markdown. What do you actually do o
 
 ## If you were just assigned to CERG
 
-Ten minutes, no corpus knowledge. Read these three, in this order. That is your first ten minutes.
+Use your first ten minutes to orient yourself in these three documents; do not try to finish them.
 
-1. **[Cybersecurity Policy](governance/CERG-POL-001_Cybersecurity_Policy.md)**: the authority. Nothing is authoritative until an Executive Sponsor signs this.
-2. **[CERG Framework](governance/CERG-GOV-FRM-001_CERG_Framework.md)**: the three pillars, and which one you sit in.
-3. **[Operating Model](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §6**: the roles, and which decisions each one owns.
+1. **[Cybersecurity Policy](governance/CERG-POL-001_Cybersecurity_Policy.md) §§1, 2, and 5**: the authority, operating model, and policy accountabilities. The CISO approves the policy; the Executive Sponsor endorses it.
+2. **[CERG Framework](governance/CERG-GOV-FRM-001_CERG_Framework.md) §2.2**: the three pillars and where you sit.
+3. **[Operating Model](governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §§2.4 and 4.2**: the first-line/CERG boundary and decision rights.
 
 Then answer four questions about your own scope. The one you cannot answer is the next thing you read.
 
-- **Decision.** Which decisions are yours to make, and which are not yours at all? The §6.1 roster names the role that owns each decision.
+- **Decision.** Which decisions are yours to make, and which are not yours at all? The [RAC-001 §6](governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md#6-master-raci-standing-processes) process matrices name the accountable decision role; [OM-001 §6.1](governance/CERG-GOV-OM-001_CERG_Operating_Model.md#61-canonical-role-roster) names the canonical CERG roles.
 - **Owner.** Who is accountable for the outcome when it is not you? Name the role, not the person doing the work.
 - **Boundary.** CERG defines requirements, reviews evidence, independently validates, and escalates. First-line owners and operators deploy, operate, monitor, and remediate.
-- **Exception path.** If a control cannot be met as written, or residual risk is within appetite, start at the [Risk Register and Exception Process](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) §7.1, which decides which of the two paths applies. Its §8 summarises who signs at each rating, and [RMF-001 §9.7](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) is the canonical acceptance authority.
+- **Exception path.** If a control cannot be met as written, or residual risk is within appetite, start at the [Risk Register and Exception Process](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md#1-purpose-and-scope) §1. Its §7.1 distinguishes the two paths, its §8 summarises who signs at each rating, and [RMF-001 §9.7](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md#97-risk-acceptance-authority-canonical) is the canonical acceptance authority.
 
-If you have been handed a risk to accept or an exception to grant, start at §7.1.
+If you have been handed a risk to accept or an exception to grant, start at §1.
 
 ---
 
@@ -62,8 +62,10 @@ Use these rules:
 | “Audit evidence is chaos.” | [Evidence Quality Standard](governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md), [Audit and Evidence Procedure](procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md), and [Record Catalog](governance/CERG-GOV-CAT-002_Record_Catalog.md) | Identify the record, owner, period, and evidence quality bar. |
 | “We have CUI, NERC-CIP, SOX, ISO, privacy, OT, or AI scope.” | The relevant overlay in [Path 3: CERG Regulated](#path-3-cerg-regulated-nerc-cip-cmmc-sox-ot-environments) | Name which conditional documents apply and which can be deferred. |
 | “I am designing roles or hiring.” | [Job Families Overview](roles/CERG-GOV-JF-001_Job_Families_Overview.md) and [Workforce Planning](governance/CERG-GOV-WFP-001_Workforce_Planning_and_Capacity_Model.md) | Map responsibilities to roles without hiding accountabilities. |
-| “I am a business owner or system sponsor.” | [Business Owner / System Sponsor Reader Path](governance/CERG-GOV-IMP-007_Role_Reader_Paths.md#6-business-owner--system-sponsor-reader-path) | Understand what decisions and evidence the business owner must provide. |
-| “Someone has handed me a risk to accept or an exception to grant.” | [Risk Register and Exception Process](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) §7.1 and [Risk Management Framework](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 | Name which of the two decisions you are being asked for, who co-signs it, when it expires, and what happens if you decline. |
+| “I am a business owner or system sponsor.” | [Risk Register and Exception Process](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md#1-purpose-and-scope) §1, then the [Business Owner / System Sponsor Reader Path](governance/CERG-GOV-IMP-007_Role_Reader_Paths.md#6-business-owner--system-sponsor-reader-path) | Understand what decisions and evidence the business owner must provide. |
+| “My service is approaching go-live.” | [Architecture Review and Project Intake Procedure §4](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md#4-who-needs-a-review-and-who-doesnt), then [§8.3](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md#83-outcome) and [§9](procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md#9-phase-5-production-handoff-and-go-live) | Name whether review applies, your Phase 4 disposition, who holds the go-live decision, and what happens if it is Not Ready. |
+| “I operate systems, or I am a provider, and CERG sent me requirements.” | [Operating Model §2.4](governance/CERG-GOV-OM-001_CERG_Operating_Model.md#24-lines-of-accountability-and-assurance) and [Risk Register and Exception Process §7.1](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md#71-exception-vs-risk-acceptance-which-path-to-use) | Name what you operate, what CERG validates, and the exception route for a requirement you cannot meet. |
+| “Someone has handed me a risk to accept or an exception to grant.” | [Risk Register and Exception Process §1](procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md#1-purpose-and-scope) and [Risk Management Framework §9.7](governance/CERG-GOV-RMF-001_Risk_Management_Framework.md#97-risk-acceptance-authority-canonical) | Name which of the two decisions you are being asked for, who co-signs it, when it expires, and what happens if you decline. |
 | “I am using an AI or coding agent.” | [ADOPT-WITH-AN-AGENT.md](ADOPT-WITH-AN-AGENT.md) and [`machine-readable/cerg-llm-index.json`](machine-readable/cerg-llm-index.json) | Load only the documents needed for the task. |
 
 If you are still unsure where to begin, use these helpers before diving into the full library:
@@ -101,7 +103,7 @@ If you are a one-person security function, use CERG as a planning reference and 
 
 ### First 48 hours
 
-1. **Read the [Cybersecurity Policy](governance/CERG-POL-001_Cybersecurity_Policy.md).** This is the spine. Nothing is authoritative until an Executive Sponsor signs this.
+1. **Read the [Cybersecurity Policy](governance/CERG-POL-001_Cybersecurity_Policy.md).** This is the spine. The CISO approves it; the Executive Sponsor endorses it.
 2. **Read the [CERG Framework](governance/CERG-GOV-FRM-001_CERG_Framework.md)** — the three-pillar model. You'll consolidate roles heavily; that's expected.
 3. **Read the [Small Team Adoption Path](governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md).** This is your primary guide. It covers the CERG Lite package, small-team operating rhythm, role consolidation map, first 10 records, and spreadsheet schemas.
 4. **Read the [Role-Based Implementation Checklists](governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md).** Use the small-team consolidated checklist if one person holds multiple roles.
