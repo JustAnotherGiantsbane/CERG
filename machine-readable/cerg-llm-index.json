@@ -1125,13 +1125,13 @@
       "type": "procedure",
       "pillar": "engineering",
       "status": "Approved",
-      "version": "1.4",
+      "version": "1.5",
       "classification": "Public",
       "owner": "Engineering Pillar Leader",
       "path": "procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md",
-      "lines_count": 807,
-      "chars": 58149,
-      "tokens": 16614,
+      "lines_count": 808,
+      "chars": 58863,
+      "tokens": 16818,
       "summary": "CERG PRC document: Architecture Review and Project Intake Procedure"
     },
     {

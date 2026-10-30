@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AR-001 |
-| **Version** | 1.4 |
+| **Version** | 1.5 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
@@ -57,7 +57,7 @@ The standalone [`CERG-TMPL-AR-001`](../templates/CERG-TMPL-AR-001_Architecture_a
 
 | **Role** | **Responsibility** |
 |---|---|
-| **Project Sponsor / Business Owner** | Submits intake; names the internal Service Owner before handoff where the project creates a service; owns the project's residual risk and go-live decision. |
+| **Project Sponsor / Business Owner** | Submits intake; names the internal Service Owner before handoff where the project creates a service; owns the project's residual risk. The named accountable business or service owner holds the go-live decision ([`RAC-001`](../governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) §6.1). |
 | **Project / Technical Lead** | Produces architecture artifacts and answers reviewer questions. The named first-line operator deploys, operates, and remediates the resulting service through its change process. |
 | **CERG - Pre-production Reviewer** | Conducts the technical review, records findings, and states a technical disposition. Does not approve go-live. |
 | **Application Security Engineer** | Provides application, API, SDLC, and software-architecture review input; defines candidate test content; and independently tests within approved scope. Does not operate the pipeline, scanner, release gate, or production deployment. |
@@ -609,7 +609,7 @@ Good governance makes projects faster because teams can design correctly before 
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AR-001 |
-| **Version** | 1.4 |
+| **Version** | 1.5 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / on platform or process change |
 | **Change Log** | 1.3 - Reconciled technical review, go-live, gate, and first-line operating authority. 1.2 - Clarified standalone intake template authority and procedure-owned closure records. 1.1 - Added Appendix A worked example. 1.0 - Initial publication. Establishes intake, review, threat-model, build-time, pre-prod, and handoff phases with the citizen-development carve-out. |
@@ -618,6 +618,7 @@ Good governance makes projects faster because teams can design correctly before 
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.5 | 2026-10-30 | Engineering Pillar Leader | Reconciled the go-live decision with the canonical RACI. The roles table claimed the Project Sponsor / Business Owner owns the go-live decision unconditionally, while §6.4, §8.3, the §9 sign-off list and OM-001 §9 all say the business or service owner decides, and RAC-001 §6.1 assigns the accountable role to the First-Line Service Owner. The roles table now names the residual-risk ownership only and defers the go-live decision to RAC-001 §6.1. No authority changed; one claim stopped contradicting four others. |
 | 1.4 | 2026-10-30 | Engineering Pillar Leader | Named the two disposition sets by phase: §6.4 now defines its three Phase 2 design dispositions beside §8.3's three Phase 4 pre-production dispositions, so one set can no longer be read for the other. §6.4's definitions no longer use "blocking", which §7.3 uses for a severity rating. Corrected the third spelling `Ready-with-Acceptance` in the §12 Phase 4 metric. Moved two example artifacts off reviewer authority and onto `RMF-001` §9.7: finding F04 in the Phase 2 example routes a Medium finding for Business Owner acceptance, co-signed, instead of recording the reviewer accepting it, while the Phase 4 example records the KMS acceptance as completed so its `Ready-with-Risk-Acceptance` disposition is supported by its own evidence row. |
 | 1.3 | 2026-10-28 | Engineering Pillar Leader | Reconciled technical review with first-line service operation: CERG review states technical dispositions and escalates; named business or service owners decide go-live; first-line operators enforce gates and make releases; residual risk follows RMF authority. |
 | 1.2 | 2026-06-18 | Engineering Pillar Leader | Reconciled TMPL-AR-001 as the Phase 1 front-door intake form and clarified that PRC-AR-001 owns Phase 2-5 review, handoff, and go-live risk records. |
