@@ -1048,7 +1048,7 @@
   title: Architecture Review and Project Intake Procedure
   document_type: procedure
   domain: AR
-  version: 1.4
+  version: 1.5
   status: Approved
   classification: Public
   publication_profile: public
@@ -1057,7 +1057,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
   source_file: CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
-  source_hash: 4d8942d846e47c0ffdae34c10875a847f347fba452ae79753d6179b7d07c31c4
+  source_hash: e8bf4ba6df92c2e5a2bc42da380cb254342568cc5bccd277f675bcbbf467723f
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
   llm_include: true
   llm_priority: medium
