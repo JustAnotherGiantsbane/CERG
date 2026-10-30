@@ -1057,7 +1057,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
   source_file: CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
-  source_hash: 21ed49ce0ba65d6e4d3786fd6160005c26f770827fe7419671f1e1a2cf46d6d5
+  source_hash: 4d8942d846e47c0ffdae34c10875a847f347fba452ae79753d6179b7d07c31c4
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md
   llm_include: true
   llm_priority: medium

@@ -3,7 +3,7 @@
   "generated": "2026-10-30",
   "source": "local markdown corpus",
   "total_documents": 151,
-  "total_tokens_estimate": 1010532,
+  "total_tokens_estimate": 1010591,
   "by_type": {
     "readme": 15,
     "governance-instrument": 42,
@@ -1387,8 +1387,8 @@
         25490
       ],
       "lines_count": 807,
-      "chars": 57944,
-      "tokens": 16555,
+      "chars": 58149,
+      "tokens": 16614,
       "summary": "CERG PRC document: Architecture Review and Project Intake Procedure"
     },
     {
