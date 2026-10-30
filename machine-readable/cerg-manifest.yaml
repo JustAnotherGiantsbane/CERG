@@ -1937,7 +1937,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-008_Pre-production_Reviewer.md
   source_file: CERG-GOV-JD-SECENG-008_Pre-production_Reviewer.md
-  source_hash: c4ae39f2288597394d4027c31c9e5f29bdc5053f44689ecc6d35d9bd94a75b20
+  source_hash: d9209091f4c61f81f2c02ed782177fa737fc870b437ed88da052a0c8a3c94268
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-008_Pre-production_Reviewer.md
   llm_include: true
   llm_priority: low

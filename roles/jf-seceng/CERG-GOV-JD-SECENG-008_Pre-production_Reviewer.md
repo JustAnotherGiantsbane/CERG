@@ -49,11 +49,12 @@ The Pre-production Reviewer conducts technical reviews before production. They m
 - Maintain the pre-production review checklist so it reflects current standards and relevant threats.
 - Conduct pre-production technical reviews for systems approaching go-live; review first-line evidence for architecture findings, exposure findings, threat-model findings, and handoff readiness.
 - Record review findings and state a technical disposition; the accountable business or service owner decides go-live.
-- Escalate unresolved material findings or disagreement through the Engineering Pillar Leader and the established risk route.
-- Provide the completed technical-review and handoff package; first-line teams own the operational handoff and service lifecycle.
+- Escalate unresolved material findings through the Engineering Pillar Leader; the accountable owner remediates them or initiates the risk-acceptance route.
+- Escalate material disagreement between CERG and the business through the Engineering Pillar Leader to the CISO, per [CERG-PRC-AR-001 §2](../../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md).
+- Provide the technical-review record, including open findings and findings routed for risk acceptance, as input to the first-line handoff; first-line teams prepare the operational handoff and own the service lifecycle.
 - Obtain Risk input on exposure and approved adversarial-validation results where the review requires it.
 - Obtain Governance input on regulatory-scope and compliance-evidence requirements where the review requires it.
-- Do not independently validate an asserted scope for which the reviewer authored live state; assign independent review for that scope.
+- Do not independently validate an asserted scope for which the reviewer authored live state; the Engineering Pillar Leader assigns an independent reviewer for that scope.
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
