@@ -1168,7 +1168,7 @@
   title: Risk Register and Exception Process
   document_type: procedure
   domain: RM
-  version: 1.05
+  version: 1.06
   status: Approved
   classification: Public
   publication_profile: public
@@ -1177,7 +1177,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
   source_file: CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
-  source_hash: 3271f2b3fc51f10f4855481f39fca6812bfa90a51ec0dcfb6d61ccc5d90b4362
+  source_hash: 891a72084789a654458bb922f1155b64f7f99fc9bb949c55a9aa5560aea7b152
   canonical_url: https://github.com/m0dernz/CERG/blob/main/procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
   llm_include: true
   llm_priority: high
