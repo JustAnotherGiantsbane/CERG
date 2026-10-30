@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AR-001 |
-| **Version** | 1.3 |
+| **Version** | 1.4 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
@@ -285,7 +285,10 @@ Phase 2 review (Architecture Review and Threat Model) follows the SLC tier assig
 
 ### 6.4 Phase 2 Output
 
-- Architecture Review record with technical disposition `Ready` / `Ready-with-Conditions` / `Not Ready`.
+- Architecture Review record with technical disposition `Ready` / `Ready-with-Conditions` / `Not Ready`. These three are the **Phase 2 design dispositions**; the Phase 4 pre-production dispositions in §8.3 are a different set recording a different moment.
+  - **Ready**: the review identifies no unresolved blocking condition and no condition to carry into build.
+  - **Ready-with-Conditions**: the review identifies no blocking condition and names build-time conditions for Phase 3 that the project team carries forward.
+  - **Not Ready**: conditions remain unresolved. The business or service owner decides whether to proceed; unresolved validated residual risk follows the acceptance route in `RMF-001` §9.7, not a Phase 2 record.
 - Threat model attached.
 - Findings in the risk register, scored.
 - Build-time conditions for Phase 3.
@@ -372,6 +375,8 @@ Pre-Production review is a focused, time-boxed readiness check. It produces a Pr
 Pre-Production Security Review is completed within 5 business days of the project team submitting the Pre-Production checklist evidence. Extensions may be granted by the Risk Pillar Leader where evidence review requires additional subject matter expertise.
 
 ### 8.3 Outcome
+
+These three are the **Phase 4 pre-production dispositions**. They are not the Phase 2 design dispositions in §6.4: a design review carries build conditions forward, while a pre-production review records whether acceptances exist before go-live.
 
 - **Ready**: the technical review identifies no unresolved blocking condition.
 - **Ready-with-Risk-Acceptance**: outstanding findings have risk register entries with approval under the existing risk-acceptance authority.
@@ -541,7 +546,7 @@ A completed [`CERG-TMPL-AR-001`](../templates/CERG-TMPL-AR-001_Architecture_and_
 | **Average Time - Phase 1 (Intake)** | Mean business days from intake submission to Scope Determination recorded | Intake tracker | Monthly | ≤ 3 days | 4–5 days | > 5 days |
 | **Average Time - Phase 2 (Arch Review)** | Mean business days from Phase 2 start to review record disposition | Review tracker | Monthly | ≤ 7 days | 8–10 days | > 10 days |
 | **Average Time - Phase 3 (Build-Time)** | Mean business days per build-time review cycle | Pipeline / review tracker | Monthly | ≤ 2 days | 3 days | > 3 days |
-| **Average Time - Phase 4 (Pre-Prod)** | Mean business days from Phase 4 start to disposition (Ready / Ready-with-Acceptance / Not Ready) | Review tracker | Monthly | ≤ 4 days | 5 days | > 5 days |
+| **Average Time - Phase 4 (Pre-Prod)** | Mean business days from Phase 4 start to disposition (Ready / Ready-with-Risk-Acceptance / Not Ready) | Review tracker | Monthly | ≤ 4 days | 5 days | > 5 days |
 | **Average Time - Phase 5 (Handoff)** | Mean business days from Pre-Prod Ready to handoff package signed | Review tracker | Monthly | ≤ 2 days | 3 days | > 3 days |
 | **Review Backlog Count** | Number of open reviews past their target disposition date | Review tracker | Weekly | ≤ 2 | 3–5 | > 5 |
 | **Finding Severity Distribution** | Count of findings by severity (Critical / High / Medium / Low / Info) recorded across all active reviews | Risk register | Monthly | Baseline to be established in first year of operation | | |
@@ -604,7 +609,7 @@ Good governance makes projects faster because teams can design correctly before 
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AR-001 |
-| **Version** | 1.3 |
+| **Version** | 1.4 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / on platform or process change |
 | **Change Log** | 1.3 - Reconciled technical review, go-live, gate, and first-line operating authority. 1.2 - Clarified standalone intake template authority and procedure-owned closure records. 1.1 - Added Appendix A worked example. 1.0 - Initial publication. Establishes intake, review, threat-model, build-time, pre-prod, and handoff phases with the citizen-development carve-out. |
@@ -613,6 +618,7 @@ Good governance makes projects faster because teams can design correctly before 
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.4 | 2026-10-30 | Engineering Pillar Leader | Named the two disposition sets by phase: §6.4 now defines its three Phase 2 design dispositions beside §8.3's three Phase 4 pre-production dispositions, so one set can no longer be read for the other. Corrected the third spelling `Ready-with-Acceptance` in the §12 Phase 4 metric. Moved two example artifacts off reviewer authority: finding F04 in example A.4 routes a Medium finding for Business Owner acceptance instead of recording the reviewer accepting it, and the SOX overlay names the Business Owner as accepter with ITGC compliance input. |
 | 1.3 | 2026-10-28 | Engineering Pillar Leader | Reconciled technical review with first-line service operation: CERG review states technical dispositions and escalates; named business or service owners decide go-live; first-line operators enforce gates and make releases; residual risk follows RMF authority. |
 | 1.2 | 2026-06-18 | Engineering Pillar Leader | Reconciled TMPL-AR-001 as the Phase 1 front-door intake form and clarified that PRC-AR-001 owns Phase 2-5 review, handoff, and go-live risk records. |
 | 1.1 | 2026-06-13 | Engineering Pillar Leader | Added Appendix A worked example. |
@@ -712,10 +718,10 @@ G. ASKS
 | AR-2026-0001-F01 | Identity | AWS IAM Role for ERP integration grants full DynamoDB access instead of least-privilege per table | High | Fix before go-live: scope IAM policy to specific DynamoDB tables |
 | AR-2026-0001-F02 | Network | VPC flow logs enabled but not shipped to SIEM; retention set to 7 days instead of 365 | High | Fix before go-live: configure VPC flow log delivery to SIEM; set retention to 365 days |
 | AR-2026-0001-F03 | Logging | Application logs write to CloudWatch with 14-day retention; no forwarding to central SIEM | Medium | Fix within 30 days of go-live: configure CloudWatch subscription filter to SIEM; extend retention to 1 year |
-| AR-2026-0001-F04 | Cryptography | KMS key for RDS encryption uses automatic key rotation but no CMK; key material is AWS-managed | Medium | Accept with condition: document SOX-relevant controls to confirm CMK not required; reassess at SOX evidence cycle |
+| AR-2026-0001-F04 | Cryptography | KMS key for RDS encryption uses automatic key rotation but no CMK; key material is AWS-managed | Medium | Route for risk acceptance (Business Owner per `RMF-001` §9.7), with condition: document SOX-relevant controls to confirm CMK not required; reassess at SOX evidence cycle |
 | AR-2026-0001-F05 | Third Party | SendGrid API key stored in application config file, not secrets manager | High | Fix before go-live: migrate to AWS Secrets Manager with automatic rotation |
 
-**Conditions for Phase 2 approval:**
+**Conditions attached to the Phase 2 disposition:**
 - High findings (F01, F02, F05) must be remediated before Phase 4 pre-production review
 - Medium findings (F03, F04) must have treatment plan with owner and target date by go-live
 
@@ -775,7 +781,7 @@ THREAT MODEL - CloudApp Migration               AR-2026-0001 - TM-001
 | Cryptography | TLS 1.2 minimum on ALB; KMS with automatic key rotation; Secrets Manager for all secrets | TLS scan, KMS key config |
 | Resilience | RTO 4h / RPO 1h via multi-AZ RDS; restoration test scheduled for Day +14 post-go-live | Backup config, resilience register |
 | Vendor / TPRM | AWS Tier 1 evidence current; SendGrid Tier 2 assessment complete — SOC 2 accepted with CUEC mapping; ABC Collect assessment in progress — conditional acceptance granted with 90-day re-review | TPRM tool entries |
-| SOX overlay artifacts | ERP integration controls mapped to ITGC CM-2, CM-3, CM-4; compensating control memo for KMS key type accepted by SOX ITGC Lead | SOX control mapping |
+| SOX overlay artifacts | ERP integration controls mapped to ITGC CM-2, CM-3, CM-4; compensating control memo for KMS key type, routed to the Business Owner for acceptance under `RMF-001` §9.7 with SOX ITGC Lead compliance input | SOX control mapping |
 | Phase 2 conditions cleared | F01 (IAM scoping) resolved — IAM policy updated; F02 (flow logs) resolved — SIEM delivery confirmed; F05 (Secrets Manager) resolved — SendGrid key migrated; F03 (logging retention) on track for 30-day target | Phase 2 record annotations |
 | Asset inventory | CloudApp added as ASSET-00201 (AWS): owner = IT Operations, tier = Production Tier 2, SOX scope = yes | Asset inventory |
 
