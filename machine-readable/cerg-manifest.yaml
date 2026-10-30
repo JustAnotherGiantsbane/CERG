@@ -1,6 +1,6 @@
 # cerg-manifest.yaml
 # DERIVED ARTIFACT — authoritative source is the CERG markdown corpus
-# Generated: 2026-10-28 | Owner: Governance Pillar Leader (Document Control)
+# Generated: 2026-10-30 | Owner: Governance Pillar Leader (Document Control)
 # Regenerate on any change to source documents
 # See METADATA.yaml for full governance information
 
@@ -588,7 +588,7 @@
   title: CERG Operating Model
   document_type: governance_instrument
   domain: OM
-  version: 1.30
+  version: 1.31
   status: Approved
   classification: Public
   publication_profile: public
@@ -597,7 +597,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   source_file: CERG-GOV-OM-001_CERG_Operating_Model.md
-  source_hash: f2d9aa4ef4b910ea615da7f9399f50a761c5d146e0af76122b226ddd3905d409
+  source_hash: c278992f15da41f5c228311176f2821635fed5552a37dd97bcd3863e6910e2df
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-OM-001_CERG_Operating_Model.md
   llm_include: true
   llm_priority: high
@@ -1768,7 +1768,7 @@
   title: Security Engineering Family
   document_type: job_description
   domain: JD-SECENG
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -1777,7 +1777,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-000_Security_Engineering_Family.md
   source_file: CERG-GOV-JD-SECENG-000_Security_Engineering_Family.md
-  source_hash: 735fec27adaf89d062b615f5457772962aca57c16d8b03885e37de9adc7098ee
+  source_hash: c0a94e389a54a812d2a9179efd045a1d0621cd33c72ad680217c3dcff3f67f85
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-000_Security_Engineering_Family.md
   llm_include: true
   llm_priority: low
@@ -1928,7 +1928,7 @@
   title: Pre-production Reviewer
   document_type: job_description
   domain: JD-SECENG
-  version: 1.0
+  version: 1.1
   status: Approved
   classification: Public
   publication_profile: public
@@ -1937,7 +1937,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: roles/jf-seceng/CERG-GOV-JD-SECENG-008_Pre-production_Reviewer.md
   source_file: CERG-GOV-JD-SECENG-008_Pre-production_Reviewer.md
-  source_hash: d40f744de5cc3cd4ae4b671864435d2908c460947f999fb3561909edfbf19d24
+  source_hash: c4ae39f2288597394d4027c31c9e5f29bdc5053f44689ecc6d35d9bd94a75b20
   canonical_url: https://github.com/m0dernz/CERG/blob/main/roles/jf-seceng/CERG-GOV-JD-SECENG-008_Pre-production_Reviewer.md
   llm_include: true
   llm_priority: low
