@@ -73,7 +73,7 @@ If you are still unsure where to begin, use these helpers before diving into the
 - [Adoption Decision Tree and Dependency Matrix](governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md) - which path and overlays apply, plus what must be adopted together.
 - [Role-Based Implementation Checklists](governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md) - what the CISO, Governance, Risk, and Engineering leads do first.
 - [Record Catalog](governance/CERG-GOV-CAT-002_Record_Catalog.md) - the records and minimum evidence that prove the program is operating.
-- [Day in the Life examples](examples/day-in-the-life/README.md) - eleven narrative walkthroughs showing how the three pillars produce real work during incidents, audits, intake, AI rollouts, access reviews, new-CISO adoption, and OT patch deferral. Read one before you read the standards.
+- [Day in the Life examples](examples/day-in-the-life/README.md) - twelve narrative walkthroughs showing how the three pillars produce real work during incidents, audits, intake, AI rollouts, access reviews, new-CISO adoption, and OT patch deferral. Read one before you read the standards.
 - [Role Reader Paths](governance/CERG-GOV-IMP-007_Role_Reader_Paths.md) - a sequenced 25-35 minute reading order for the CISO, Risk Lead, Engineering Lead, and Business Owner / System Sponsor if you are taking on a CERG role for the first time.
 
 ### Adoption suite map
