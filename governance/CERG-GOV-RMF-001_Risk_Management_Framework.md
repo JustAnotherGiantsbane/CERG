@@ -2,7 +2,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-RMF-001 |
-| **Version** | 1.36 |
+| **Version** | 1.37 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader |
@@ -24,7 +24,7 @@
 4. [Phase 2, Select](#4-phase-2-select)
 5. [Phase 3, Implement](#5-phase-3-implement)
 6. [Phase 4, Assess](#6-phase-4-assess)
-7. [Phase 5, Authorize](#7-phase-5-authorize)
+7. [Phase 5, Go-live Decision and Authorization Record](#7-phase-5-go-live-decision-and-authorization-record)
 8. [Phase 6, Monitor](#8-phase-6-monitor)
 9. [Risk Register and Risk Treatment](#9-risk-register-and-risk-treatment)
 10. [IT/OT Risk Management Considerations](#10-itot-risk-management-considerations)
@@ -65,7 +65,7 @@ The six phases map directly to the NIST RMF, with CERG pillar ownership assigned
 | 2. Select     | Step 2 - Select     | Governance         | Engineering        |
 | 3. Implement  | Step 3 - Implement  | Engineering        | Governance         |
 | 4. Assess     | Step 4 - Assess     | Risk               | Governance         |
-| 5. Authorize  | Step 5 - Authorize  | Governance         | Risk, Engineering  |
+| 5. Go-live decision | Step 5 - Authorize | Business or service owner | Governance (record), Risk, Engineering |
 | 6. Monitor    | Step 6 - Monitor    | Risk + Governance  | Engineering        |
 
 #### Phase RACI Sub-Matrices
@@ -112,15 +112,17 @@ The following RACI sub-matrices resolve pillar ownership ambiguity for specific 
 | Finding validation and prioritization | I | R | A |
 | Risk assessment report production | C | I | A/R |
 
-##### Phase 5: Authorize — RACI
+##### Phase 5: Disposition and Go-live Record — RACI
+
+> The go-live decision belongs to the named accountable business or service owner (§7.2) and is deliberately absent from this matrix, which covers CERG work only. No CERG pillar holds an **A** on that decision.
 
 | Activity | Governance | Engineering | Risk |
 |----------|-----------|-------------|------|
-| Authorization package assembly | A/R | C | C |
+| Disposition and decision record assembly | A/R | C | C |
 | POA&M compilation and tracking | A/R | I | C |
-| CISO recommendation preparation | A | C | R |
-| Business-owner acceptance coordination | A/R | I | I |
-| Authorization letter and recordkeeping | A/R | I | I |
+| CERG technical disposition preparation | A | C | R |
+| Acceptance record coordination under §9.7 | A/R | I | I |
+| Disposition and acceptance recordkeeping | A/R | I | I |
 
 ##### Phase 6: Monitor — RACI
 
@@ -290,24 +292,24 @@ The authoritative remediation-SLA table lives in [`CERG-PRC-VM-001`](../procedur
 
 ---
 
-## 7. Phase 5: Authorize
+## 7. Phase 5: Go-live Decision and Authorization Record
 
 ### 7.1 Objective
 
-Authorization is a formal risk acceptance decision made by an accountable leader before a system is allowed to operate or continue operating. It is the point at which residual risk is explicitly acknowledged, owned, and documented. In CERG, Governance structures and manages the authorization process; the CISO is the primary Authorizing Official (AO) for the cybersecurity program.
+Phase 5 records two different decisions, held by two different parties. **CERG states a technical disposition**: whether the evidenced state supports operating, and under what conditions. **The named accountable business or service owner decides whether to proceed**, because whether to carry a business consequence is a business decision and not a security one. **Residual risk is accepted under §9.7**, where security supplies the approval or sign-off that table requires and the Business Owner or Executive Sponsor accepts the business consequence. CERG does not authorize production, does not issue a production gate, and does not hold the go-live decision; Governance structures the record so that both decisions and the evidence behind them are auditable.
 
-### 7.2 Authorization Decision Types
+### 7.2 Outcomes and Decision Basis
 
-| Decision Type | When Applied | Authorizing Authority |
+| Outcome | When It Applies | Who Decides, and on What Basis |
 |---|---|---|
-| **Authority to Operate (ATO)** | New systems entering production after pre-production assessment. Full ATO requires all High and Critical findings resolved or risk-accepted. | CISO (with Risk and Engineering concurrence) |
-| **Interim Authority to Operate (IATO)** | Systems with residual High findings that have documented compensating controls and an approved remediation timeline (maximum 90 days). OT systems with constrained patch windows may require IATO. | CISO; must include documented compensating controls and target full ATO date |
-| **Denial of Authorization (DATO)** | Systems where residual cyber risk exceeds the approved cybersecurity tolerance and compensating controls are insufficient. System must be isolated or decommissioned. | CISO (mandatory notification to CEO and Board for business-critical systems) |
-| **Ongoing Authorization** | Systems with continuous monitoring in place that demonstrate consistent control effectiveness. Replaces periodic point-in-time reauthorization for mature, stable systems. | CISO with quarterly Risk and Governance attestation |
+| **Authority to Operate (ATO)** | New systems entering production after pre-production assessment. All High and Critical findings resolved or risk-accepted. | The named accountable business or service owner decides to operate, on CERG's technical disposition and, where residual risk remains, the acceptance recorded under §9.7. |
+| **Interim Authority to Operate (IATO)** | Systems with residual High findings that have documented compensating controls and an approved remediation timeline (maximum 90 days). OT systems with constrained patch windows follow the same form. | The accountable owner decides to operate for the interim period on that basis; CERG records the compensating controls and the remediation date, and the interim decision expires with them. |
+| **Denial of Authorization (DATO)** | Systems where residual cyber risk exceeds the approved cybersecurity tolerance and compensating controls are insufficient. | CERG states a disposition that the residual risk exceeds tolerance and compensating controls are insufficient, so the system is not operated on an accepted basis. Treatment, isolation, or removal then follows the documented risk-treatment, incident, or regulatory path. A CERG or CISO technical escalation settles the disposition; it cannot itself compel isolation or decommissioning outside those paths. |
+| **Ongoing Authorization** | Systems with continuous monitoring in place that demonstrate consistent control effectiveness. Replaces periodic point-in-time reauthorization for mature, stable systems. | The accountable owner continues to operate while the monitored evidence supports it, and CERG's periodic disposition confirms that it does. |
 
-### 7.3 Authorization Package Contents
+### 7.3 Record Contents
 
-Governance assembles the authorization package for CISO review. A complete package includes:
+Governance assembles the record that supports CERG's disposition and the accountable owner's decision. It is evidence for a decision, not a CERG approval gate. A complete package includes:
 
 - **System Security Plan (SSP)**: documents system boundary, categorization, control implementation status, and responsible parties.
 - **Risk Assessment Report (RAR)**: Risk-produced finding report from pre-authorization assessment activities.
@@ -315,9 +317,9 @@ Governance assembles the authorization package for CISO review. A complete packa
 - **Continuous Monitoring Strategy**: defines ongoing monitoring activities that will maintain risk visibility post-authorization.
 - **Regulatory Compliance Attestation**: Governance attestation that applicable regulatory controls are satisfied or that deviations are documented per regulatory process.
 
-> **Authorizing OT Systems**
+> **OT go-live decisions**
 >
-> For OT and BES Cyber Systems, authorization must explicitly address operational continuity risk alongside cybersecurity risk. A finding that would result in DATO for an IT system (e.g., unpatched Critical vulnerability) may result in IATO for a BES system if immediate isolation would cause a reliability event. The NERC-CIP deviation and mitigation plan process must be initiated in parallel. The CISO coordinates with Operations leadership and, where required, the Reliability Coordinator.
+> For OT and BES Cyber Systems, the go-live decision must explicitly address operational continuity risk alongside cybersecurity risk. A finding that would result in DATO for an IT system may be an accepted operational risk for a BES Cyber System with a documented compensating control and a deviation under the regulatory process. The accountable owner decides with that trade-off stated, not implied.
 
 ---
 
@@ -353,7 +355,7 @@ Continuous monitoring is the phase that separates Adaptive-tier programs from Re
 | Open Critical/High Findings | 0 Critical past SLA; <10 High past SLA | Risk + Governance | Any Critical past SLA; >10 High past SLA |
 | Risk Register Items Past Target Date | 0 items past target date | Governance | Any item >30 days past target; CISO briefing required if more than 3 items are past target at the monthly Risk Posture Review |
 | Policy Review Compliance | 100% of policies reviewed within defined cycle | Governance | Any policy >12 months since last review |
-| SSP / Authorization Currency | 100% of in-scope systems with current ATO/IATO | Governance | Any in-scope system without current authorization |
+| SSP / Disposition and Acceptance Currency | 100% of in-scope systems with a current CERG disposition and §9.7 acceptance record | Governance | Any in-scope system without a current disposition or acceptance record |
 | Vendor Risk Assessments Current | ≥95% of Critical vendors with current assessment | Risk | <90% triggers escalation |
 | Security Training Completion | ≥95% completion within defined window | Governance (coord w/ Awareness) | <90% completion triggers escalation to CISO |
 
@@ -489,7 +491,7 @@ Security can assess, recommend, document, validate compensating controls, and es
 >
 > No acceptance renews automatically. An acceptance at any tier requires a fresh approval cycle at expiration. An acceptance renewed more than twice without movement on the treatment plan escalates one tier above the original approver.
 
-> **Role names** below match the canonical roster in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1. If a role name disagrees with that roster, the roster wins.
+> **Role names** below match the canonical roster in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1. If a CERG role name disagrees with that roster, the roster wins. **Business Owner and Executive Sponsor are organization-side parties, not CERG roster positions.** They hold the business consequence decision because their organization gives them that accountability, and the roster governs CERG roles rather than naming them.
 
 
 ### 9.7a Policy Exception vs. Risk Acceptance
@@ -650,7 +652,7 @@ CERG's RMF is designed from the ground up to respect this reality. OT-specific a
 | **Select** | [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) Moderate/High baseline | Apply OT Safety Overlay: IEC 62443 practices; [NIST 800-82](https://csrc.nist.gov/pubs/sp/800/82/r3/final) supplemental controls; vendor-specific hardening where CIS benchmarks don't apply. |
 | **Implement** | Patch and configure to baseline | OT patch windows are defined by operational schedules (planned outages, maintenance windows). Compensating controls bridge the gap. No emergency patching without operations and safety sign-off. |
 | **Assess** | Authenticated vulnerability scans; penetration testing | OT scans use passive/OT-safe methods to avoid disrupting process operations. Active scanning requires operations coordination and maintenance window scheduling. |
-| **Authorize** | ATO/IATO per residual risk | OT authorization explicitly documents operational availability risk alongside cybersecurity risk. NERC-CIP deviation process runs in parallel for BES systems. |
+| **Go-live decision** | Disposition per residual risk; the accountable owner decides | OT go-live explicitly documents operational availability risk alongside cybersecurity risk. NERC-CIP deviation process runs in parallel for BES systems. |
 | **Monitor** | Continuous automated monitoring | OT monitoring uses passive network visibility tools (e.g., Dragos, Claroty, Nozomi). Change management is stricter; unauthorized changes carry safety implications. |
 
 > **The OT Risk Principle**
@@ -862,7 +864,7 @@ Mapping the ALE bands to the existing 5×5 scoring framework for this example or
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-RMF-001 |
-| **Version** | 1.36 |
+| **Version** | 1.37 |
 | **Status** | Approved |
 | **Effective Date** | 2026-09-01 |
 | **Classification** | Public |
@@ -877,6 +879,7 @@ Mapping the ALE bands to the existing 5×5 scoring framework for this example or
 
 | Version | Date | Author | Change Description |
 |---|---|---|---|
+| 1.37 | 2026-10-30 | Governance Pillar Leader | Authority reconciliation (#280): §7 recast from a CERG authorization to a go-live decision plus a record. CERG states the technical disposition, the named accountable business or service owner decides to operate, and residual risk is accepted under §9.7. DATO no longer compels isolation outside the risk-treatment, incident, or regulatory paths. Phase 5 RACI names the decision as outside CERG, and the §9.7 role note now separates organization-side business roles from the CERG roster. |
 | 1.36 | 2026-10-30 | Governance Pillar Leader | Patch (#280): repaired 6 in-page links whose anchors no longer matched their headings after earlier heading edits. No content change. |
 | 1.35 | 2026-09-01 | Governance Pillar Leader | Clarified that CERG owns cybersecurity tolerance calibration and recommendation work, while enterprise appetite is an external constraint; defined pillar accountabilities and approval boundaries. |
 | 1.34 | 2026-07-24 | Governance Pillar Leader | Removed noncanonical sub-band wording from the worked calibration example so all risk labels align to the RMF §9.5 severity bands. |
