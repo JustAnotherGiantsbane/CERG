@@ -3,7 +3,7 @@
   "generated": "2026-10-30",
   "source": "local markdown corpus",
   "total_documents": 151,
-  "total_tokens_estimate": 1010036,
+  "total_tokens_estimate": 1010068,
   "by_type": {
     "readme": 15,
     "governance-instrument": 42,
@@ -467,8 +467,8 @@
         7806
       ],
       "lines_count": 669,
-      "chars": 69267,
-      "tokens": 19791,
+      "chars": 69381,
+      "tokens": 19823,
       "summary": "CERG GOV document: CERG Framework"
     },
     {
