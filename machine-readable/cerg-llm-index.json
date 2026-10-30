@@ -629,13 +629,13 @@
       "type": "governance-instrument",
       "pillar": "governance",
       "status": "Approved",
-      "version": "1.31",
+      "version": "1.32",
       "classification": "Public",
       "owner": "Chief Information Security Officer",
       "path": "governance/CERG-GOV-OM-001_CERG_Operating_Model.md",
-      "lines_count": 725,
-      "chars": 63330,
-      "tokens": 18094,
+      "lines_count": 726,
+      "chars": 63995,
+      "tokens": 18284,
       "summary": "CERG GOV document: CERG Operating Model"
     },
     {
