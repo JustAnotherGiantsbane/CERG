@@ -286,9 +286,9 @@ Phase 2 review (Architecture Review and Threat Model) follows the SLC tier assig
 ### 6.4 Phase 2 Output
 
 - Architecture Review record with technical disposition `Ready` / `Ready-with-Conditions` / `Not Ready`. These three are the **Phase 2 design dispositions**; the Phase 4 pre-production dispositions in §8.3 are a different set recording a different moment.
-  - **Ready**: the review identifies no unresolved blocking condition and no condition to carry into build.
-  - **Ready-with-Conditions**: the review identifies no blocking condition and names build-time conditions for Phase 3 that the project team carries forward.
-  - **Not Ready**: conditions remain unresolved. The business or service owner decides whether to proceed; unresolved validated residual risk follows the acceptance route in `RMF-001` §9.7, not a Phase 2 record.
+  - **Ready**: the review names no condition to carry into build.
+  - **Ready-with-Conditions**: the review names conditions the project carries into build, including findings that must be remediated before the Phase 4 review.
+  - **Not Ready**: the design has unresolved conditions that cannot be carried into build. The business or service owner decides whether to proceed; unresolved validated residual risk follows the acceptance route in `RMF-001` §9.7, not a Phase 2 record.
 - Threat model attached.
 - Findings in the risk register, scored.
 - Build-time conditions for Phase 3.
@@ -618,7 +618,7 @@ Good governance makes projects faster because teams can design correctly before 
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
-| 1.4 | 2026-10-30 | Engineering Pillar Leader | Named the two disposition sets by phase: §6.4 now defines its three Phase 2 design dispositions beside §8.3's three Phase 4 pre-production dispositions, so one set can no longer be read for the other. Corrected the third spelling `Ready-with-Acceptance` in the §12 Phase 4 metric. Moved two example artifacts off reviewer authority: finding F04 in example A.4 routes a Medium finding for Business Owner acceptance instead of recording the reviewer accepting it, and the SOX overlay names the Business Owner as accepter with ITGC compliance input. |
+| 1.4 | 2026-10-30 | Engineering Pillar Leader | Named the two disposition sets by phase: §6.4 now defines its three Phase 2 design dispositions beside §8.3's three Phase 4 pre-production dispositions, so one set can no longer be read for the other. §6.4's definitions no longer use "blocking", which §7.3 uses for a severity rating. Corrected the third spelling `Ready-with-Acceptance` in the §12 Phase 4 metric. Moved two example artifacts off reviewer authority and onto `RMF-001` §9.7: finding F04 in the Phase 2 example routes a Medium finding for Business Owner acceptance, co-signed, instead of recording the reviewer accepting it, while the Phase 4 example records the KMS acceptance as completed so its `Ready-with-Risk-Acceptance` disposition is supported by its own evidence row. |
 | 1.3 | 2026-10-28 | Engineering Pillar Leader | Reconciled technical review with first-line service operation: CERG review states technical dispositions and escalates; named business or service owners decide go-live; first-line operators enforce gates and make releases; residual risk follows RMF authority. |
 | 1.2 | 2026-06-18 | Engineering Pillar Leader | Reconciled TMPL-AR-001 as the Phase 1 front-door intake form and clarified that PRC-AR-001 owns Phase 2-5 review, handoff, and go-live risk records. |
 | 1.1 | 2026-06-13 | Engineering Pillar Leader | Added Appendix A worked example. |
@@ -718,7 +718,7 @@ G. ASKS
 | AR-2026-0001-F01 | Identity | AWS IAM Role for ERP integration grants full DynamoDB access instead of least-privilege per table | High | Fix before go-live: scope IAM policy to specific DynamoDB tables |
 | AR-2026-0001-F02 | Network | VPC flow logs enabled but not shipped to SIEM; retention set to 7 days instead of 365 | High | Fix before go-live: configure VPC flow log delivery to SIEM; set retention to 365 days |
 | AR-2026-0001-F03 | Logging | Application logs write to CloudWatch with 14-day retention; no forwarding to central SIEM | Medium | Fix within 30 days of go-live: configure CloudWatch subscription filter to SIEM; extend retention to 1 year |
-| AR-2026-0001-F04 | Cryptography | KMS key for RDS encryption uses automatic key rotation but no CMK; key material is AWS-managed | Medium | Route for risk acceptance (Business Owner per `RMF-001` §9.7), with condition: document SOX-relevant controls to confirm CMK not required; reassess at SOX evidence cycle |
+| AR-2026-0001-F04 | Cryptography | KMS key for RDS encryption uses automatic key rotation but no CMK; key material is AWS-managed | Medium | Route for risk acceptance (Business Owner, co-signed per `RMF-001` §9.7), with condition: document SOX-relevant controls to confirm CMK not required; reassess at SOX evidence cycle |
 | AR-2026-0001-F05 | Third Party | SendGrid API key stored in application config file, not secrets manager | High | Fix before go-live: migrate to AWS Secrets Manager with automatic rotation |
 
 **Conditions attached to the Phase 2 disposition:**
@@ -781,7 +781,7 @@ THREAT MODEL - CloudApp Migration               AR-2026-0001 - TM-001
 | Cryptography | TLS 1.2 minimum on ALB; KMS with automatic key rotation; Secrets Manager for all secrets | TLS scan, KMS key config |
 | Resilience | RTO 4h / RPO 1h via multi-AZ RDS; restoration test scheduled for Day +14 post-go-live | Backup config, resilience register |
 | Vendor / TPRM | AWS Tier 1 evidence current; SendGrid Tier 2 assessment complete — SOC 2 accepted with CUEC mapping; ABC Collect assessment in progress — conditional acceptance granted with 90-day re-review | TPRM tool entries |
-| SOX overlay artifacts | ERP integration controls mapped to ITGC CM-2, CM-3, CM-4; compensating control memo for KMS key type, routed to the Business Owner for acceptance under `RMF-001` §9.7 with SOX ITGC Lead compliance input | SOX control mapping |
+| SOX overlay artifacts | ERP integration controls mapped to ITGC CM-2, CM-3, CM-4; compensating control memo for KMS key type accepted by the Business Owner, co-signed per `RMF-001` §9.7, with SOX ITGC Lead compliance input | SOX control mapping |
 | Phase 2 conditions cleared | F01 (IAM scoping) resolved — IAM policy updated; F02 (flow logs) resolved — SIEM delivery confirmed; F05 (Secrets Manager) resolved — SendGrid key migrated; F03 (logging retention) on track for 30-day target | Phase 2 record annotations |
 | Asset inventory | CloudApp added as ASSET-00201 (AWS): owner = IT Operations, tier = Production Tier 2, SOX scope = yes | Asset inventory |
 
