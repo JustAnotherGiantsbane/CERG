@@ -25,4 +25,4 @@ jobs:
         run: python tools/cerg-validate.py
 
       - name: Run validator tests
-        run: python -m pytest tests/test_cerg_validate.py -q
+        run: python -m pytest tests/ -q
