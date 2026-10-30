@@ -1221,13 +1221,13 @@
       "type": "procedure",
       "pillar": "risk",
       "status": "Approved",
-      "version": "1.05",
+      "version": "1.06",
       "classification": "Public",
       "owner": "Risk Register Owner",
       "path": "procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md",
-      "lines_count": 613,
-      "chars": 45998,
-      "tokens": 13142,
+      "lines_count": 623,
+      "chars": 48259,
+      "tokens": 13788,
       "summary": "CERG PRC document: Risk Register and Exception Process"
     },
     {
