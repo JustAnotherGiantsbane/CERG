@@ -63,6 +63,8 @@ For each machine-readable artifact:
 
 Core indexes and manifests are generated from the repo-local CERG Markdown corpus during the build process. `cerg-manifest.yaml` and `cerg-publication-manifest.yaml` are regenerated with `python3 tools/regenerate-machine-readable.py`. `cerg-llm-index.json` is regenerated with `python3 tools/regenerate-llm-index.py`. The requirement register is regenerated when its normative source documents change. Single-purpose schema files are maintained alongside the documents they describe.
 
+**Removed fields (#267).** The index no longer emits per-document `lines` or top-level `total_tokens_estimate`. Both were derived and had no in-repository consumer. To rebuild them, walk `documents[]` in emitted order: the first range starts at 1, each ends at its start plus `lines_count`, and the next starts at that end plus 2. The total is the sum of per-document `tokens`. The ranges addressed a virtual concatenation, not the public `llms-full.txt` mirror.
+
 ## For LLM Consumers
 
 Start with `cerg-document-tiers.yaml` when choosing what to load for an adoption task, then use `cerg-agent-extension-roadmap.yaml` before implementing automation-heavy extension ideas. Use `cerg-llm-index.json` for the complete Markdown corpus map. Use `cerg-manifest.yaml` for governed source artifacts and canonical paths, then load `cerg-content-tags.yaml` to understand what each section contains. Use `cerg-requirements.yaml` for traceable obligations after populating adoption-specific fields. Use the individual schema files for structured field definitions.
