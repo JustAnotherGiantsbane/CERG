@@ -2,7 +2,8 @@
 
 | | |
 |---|---|
-| **Document ID** | CERG-GOV-IRSP-001 (candidate; see CAT-001) |
+| **Document ID** | CERG-GOV-IR-001 |
+| **Version** | 0.1 |
 | **Status** | Draft — proposed, not approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (this page only) |
