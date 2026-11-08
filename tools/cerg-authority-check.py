@@ -30,9 +30,28 @@ def run(*args: str) -> str:
     return subprocess.run(args, capture_output=True, text=True).stdout
 
 
-def changed_md(base: str, head: str) -> list[str]:
-    out = run("git", "diff", "--name-only", f"{base}..{head}")
-    return [f.strip() for f in out.splitlines() if f.strip().endswith(".md")]
+def changed_md(base: str, head: str) -> list[tuple[str, str]]:
+    """(source_path, destination_path) for every changed Markdown file.
+
+    Renames are reported with -M so the source path survives. Keying ownership
+    on the destination alone lets a branch move a document and rewrite its
+    nameplate in the same commit: the base lookup of the new path resolves to
+    nothing, and the old, owned path is never consulted.
+    """
+    out = run("git", "diff", "--name-status", "-M", f"{base}..{head}")
+    pairs: list[tuple[str, str]] = []
+    for line in out.splitlines():
+        parts = line.split("\t")
+        if len(parts) < 2 or not parts[0]:
+            continue
+        status = parts[0][0]
+        if status in ("R", "C") and len(parts) >= 3:
+            src, dst = parts[1], parts[2]
+        else:
+            src = dst = parts[1]
+        if dst.endswith(".md") or src.endswith(".md"):
+            pairs.append((src, dst))
+    return pairs
 
 
 def metadata(text: str) -> tuple[str, str]:
@@ -72,25 +91,38 @@ def main() -> int:
 
     violations = []
     unreadable = []
-    for path in paths:
-        at_head = run("git", "show", f"{args.head}:{path}")
-        at_base = run("git", "show", f"{args.base}:{path}")
-        if not at_head and not at_base:
-            # A blob that will not resolve at either end is a finding, not a skip.
-            unreadable.append(path)
-            continue
-        # Ownership is read at both ends: a branch that edits a document and
-        # rewrites its Owner row on the way through must still be caught by the
-        # owner it had before it touched it.
-        for label, text in (("head", at_head), ("base", at_base)):
+    undeclared = 0
+    for src, dst in paths:
+        # Read every alias of the file: its path now, its path before, and the
+        # two crossed combinations, so a rename cannot hide the old nameplate.
+        candidates = [("head", dst), ("base", src), ("base", dst), ("head", src)]
+        seen: set[tuple[str, str]] = set()
+        resolved_once = False
+        declared = False
+        hit = False
+        for where, path in candidates:
+            rev = args.head if where == "head" else args.base
+            key = (rev, path)
+            if key in seen:
+                continue
+            seen.add(key)
+            text = run("git", "show", f"{rev}:{path}")
             if not text:
                 continue
+            resolved_once = True
             status, owner = metadata(text)
+            if status or owner:
+                declared = True
             if any(k in status.lower() for k in NOT_OURS_STATUS) or any(
                 k in owner.lower() for k in NOT_OURS_OWNER
             ):
-                violations.append((path, label, status, owner))
+                violations.append((f"{src} -> {dst}" if src != dst else dst, f"{where}:{path}", status, owner))
+                hit = True
                 break
+        if not resolved_once:
+            unreadable.append(f"{src} -> {dst}")
+        elif not declared and not hit:
+            undeclared += 1
 
     if unreadable:
         print(f"AUTHORITY GATE FAILED: {len(unreadable)} changed file(s) could not be read")
@@ -106,6 +138,11 @@ def main() -> int:
         return 1
 
     print(f"Authority gate passed: {len(paths)} changed Markdown file(s), all CERG-owned.")
+    if undeclared:
+        # A file with no nameplate cannot be checked for ownership. Say so,
+        # rather than letting silence read as clearance.
+        print(f"  note: {undeclared} changed file(s) carry no Status/Owner row; "
+              "authority cannot be verified for them")
     return 0
 
 
