@@ -52,3 +52,5 @@ Two CERG pages matter mid-incident, as support: [`CERG-PRC-VM-001`](../procedure
 The incident documents in this repository are complete, tested, and not ours. Editing them to make them read better would be overreach dressed as kindness. So this page does the one thing CERG can do unilaterally: it states where the authority lives, in the IR team's own words, and routes to their documents without touching a word of them.
 
 It is not an IR plan. It is not a procedure. It grants nothing and changes nothing. If it ever appears in an audit answer, the answer should still come from the IR team's pages — this is the signpost, not the road.
+
+**Naming, so nobody has to guess in a hallway.** This page is "the signpost". The plan and the playbooks are always named by their full IDs — `CERG-PLN-IR-001`, `CERG-PRC-IR-002` — because "IR-001" alone could be either document, and the one moment it gets said out loud is the moment there is no time to work out which.
