@@ -168,7 +168,7 @@ The enterprise exposure management procedure ([`CERG-PRC-VM-001`](../procedures/
 
 ## 8. BES Cyber System Access Management Overlay
 
-CERG operationalizes the CIP-004 R4 / R5 obligations as an embedded BES overlay on [`CERG-PRC-AC-002`](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md).
+The CIP-004 R4 / R5 obligations are met through an embedded BES overlay on [`CERG-PRC-AC-002`](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md).
 
 ### 8.1 Authorization
 
@@ -315,7 +315,7 @@ CERG runs this package in coordination with [`CERG-STD-RES-001`](../standards/CE
 
 ## 13. CIP-015 INSM Implementation Annex
 
-CERG tracks CIP-015 (Internal Network Security Monitoring) as a forward-looking obligation for Medium and High Impact BES Cyber Systems. This annex operationalizes the CIP-015 readiness overlay referenced in CB-001 §8 BES Overlay. Until CIP-015 becomes enforceable for the organization, CERG treats this annex as a readiness investment; upon applicability, it becomes an audit-asserted operational procedure.
+CERG tracks CIP-015 (Internal Network Security Monitoring) as a forward-looking obligation for Medium and High Impact BES Cyber Systems. This annex puts the CIP-015 readiness overlay referenced in CB-001 §8 BES Overlay into operation. Until CIP-015 becomes enforceable for the organization, CERG treats this annex as a readiness investment; upon applicability, it becomes an audit-asserted operational procedure.
 
 Once CIP-015 becomes enforceable, operators of Medium and High Impact BES Cyber Systems must demonstrate continuous internal network security monitoring. This annex exists so CERG is not scrambling on day one.
 
