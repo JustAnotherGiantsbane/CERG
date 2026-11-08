@@ -94,7 +94,7 @@ This template structures recurring CISO and board reporting. It converts control
 | Engineering Pillar Leader | Confirms technical control and resilience content. | `[Name / Date]` |
 | Chief Information Security Officer (CISO) | Approves final executive message. | `[Name / Date]` |
 
-Completed templates are reviewed at the cadence defined by their parent procedure or plan. Material changes require a new review.
+Review completed templates at the cadence set by their parent procedure or plan. Material changes require a new review.
 
 ---
 
