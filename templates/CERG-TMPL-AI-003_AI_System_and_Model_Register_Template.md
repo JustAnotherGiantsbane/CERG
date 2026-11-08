@@ -167,7 +167,7 @@ The register documents model provenance, data sources, classification, access, a
 | Detection Engineer | Confirms monitoring and detection requirements where AI-system behavior or tool use must be observed. |
 | Risk Register Owner | Links material findings, residual risk, exceptions, and acceptance decisions to the risk register. |
 
-A register entry must be reviewed when any of the following occur:
+The register owner must review a register entry when any of the following occur:
 
 - Model family, model version policy, provider, deployment location, or serving platform changes.
 - A new data source, retrieval corpus, vector store, plugin, connector, or downstream action is added.
