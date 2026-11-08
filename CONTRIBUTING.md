@@ -32,11 +32,7 @@ CERG is open source (CC BY 4.0) and contributions are welcome. This document exp
 
 ## Where work happens, and what a pull request is for
 
-**Work in your own fork. `m0dernz/CERG` keeps a single maintainer, and changes reach it as pull requests.** Direct pushes to the canonical repo are not available, by design.
-**Work in your own fork. `m0dernz/CERG` keeps a single maintainer, and changes reach it as pull requests.** Direct pushes to the canonical repo are not available, by design. `cragin-security/CERG` is a second upstream with the same rule: fetch from it if useful, but never push to it. Push only to your own fork remote.
-
-Authenticate as your own GitHub account, never an operating-system session or credentials inherited from another tool or profile. Check by account name, not by whether a command reports success - an authenticated command can still be running as the wrong identity. If a push names a different account in its permission error, the credential source is wrong, not the remote.
-
+**Work in your own fork. `m0dernz/CERG` keeps a single maintainer, and changes reach it as pull requests.** Direct pushes to the canonical repo are not available, by design. Push only to your own fork remote.
 The fork is yours to experiment in. Restructure a standard, rewrite a procedure, prototype an operating asset, try three designs and keep one. None of that needs permission, and none of it needs to look finished before you start. The fork is not a waiting room for approval. It is where the work happens.
 
 A pull request to `m0dernz` is an offer, not an exam. The maintainer decides whether a change belongs in mainline now, given what mainline is already carrying. That is a question about scope, timing, and review load, not a verdict on whether the idea is good. An excellent change can be declined because the maintainer cannot give it the review it deserves, because it targets a generation of the framework under revision, or because similar work is already in flight.
