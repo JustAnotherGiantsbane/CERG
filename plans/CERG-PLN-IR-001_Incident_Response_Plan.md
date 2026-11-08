@@ -50,7 +50,7 @@
 
 ## 1. Purpose and Scope
 
-This plan operationalizes the incident response principle established in **[CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) Principle 10**. It defines how the organization detects, contains, investigates, notifies, recovers from, and learns from cybersecurity events across all in-scope environments.
+This plan operationalizes the incident response principle established in **[CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) Principle 10**. It defines how the organization responds to cybersecurity events across all in-scope environments — detection, containment, investigation, notification, recovery, and lessons learned.
 
 The plan is intentionally cross-environment. A single incident may span enterprise IT, cloud, SaaS, OT, and CUI environments simultaneously. The plan provides one structure of authority, classification, and notification, with environment-specific overlays that reflect the operational and regulatory reality of each domain.
 
@@ -148,7 +148,7 @@ The CISO maintains the following pre-arranged external retainers, activated by t
 - **Public relations / crisis communications partner**: engaged at IC direction for material incidents
 - **Law enforcement / federal liaison contacts**: FBI, CISA, sector ISAC, and DC3 (for CUI incidents)
 
-Retainer contacts and activation procedures are maintained in the IRT contact roster, reviewed quarterly and distributed only to the standing IRT.
+The standing IR team maintains retainer contacts and activation procedures in the IRT contact roster, reviews the roster quarterly, and distributes it only to the standing IRT.
 
 ---
 
@@ -180,13 +180,11 @@ Containment objectives: stop ongoing harm, prevent lateral movement, preserve ev
 | **Long-term** | Architectural changes that prevent the same path being used during recovery (e.g., new IAM policies, network segmentation, rebuilt systems). | Implemented before declaring eradication complete. |
 | **Operational hold** | Pause of non-essential activity to focus response (e.g., temporary block on outbound SaaS connections, suspension of non-essential remote access). | Approved by IC with operations input. |
 
-> **The "Don't Tip Your Hand" Reminder**
->
-> Premature containment can warn an adversary and accelerate destructive action, particularly in ransomware or supply-chain scenarios where the attacker may be actively monitoring response. Pace containment to scope, prefer reversible isolation, and coordinate with the Lead Investigator on telemetry implications before each major action.
+Premature containment can warn an adversary and accelerate destructive action, particularly in ransomware or supply-chain scenarios where the attacker may be actively monitoring response. Pace containment to scope, prefer reversible isolation, and coordinate with the Lead Investigator on telemetry implications before each major action.
 
 ### 4.4 Eradication
 
-Eradication removes the adversary's access and the means by which it was obtained. Eradication is declared complete only when:
+Eradication removes the adversary's access and the means by which it was obtained. The IC declares eradication complete only when:
 
 - All identified persistence mechanisms (accounts, scheduled tasks, services, OAuth grants, IaC backdoors, malicious code) have been removed.
 - Underlying vulnerabilities or misconfigurations have been remediated.
@@ -195,7 +193,7 @@ Eradication removes the adversary's access and the means by which it was obtaine
 
 ### 4.5 Recovery
 
-Recovery restores affected systems to operational service. Recovery is coordinated with operations, sequenced by business priority, and monitored for indications of recurrence.
+Recovery restores affected systems to operational service. The IC coordinates recovery with operations, sequences it by business priority, and monitors it for indications of recurrence.
 
 | **Step** | **Action** | **Owner** |
 |---|---|---|
@@ -217,7 +215,7 @@ The review produces:
 - Updates to playbooks, detection rules, and this plan
 - Lessons-learned briefing to leadership and to the IRT
 
-Corrective actions are tracked to closure in the risk register with assigned owners and due dates.
+The IC tracks corrective actions to closure in the risk register, with assigned owners and due dates.
 
 ---
 
@@ -232,7 +230,7 @@ Severity drives engagement, communication cadence, and notification scrutiny. Se
 | **P3 / Sev 3 - Moderate** | Localized compromise (single endpoint, scoped credential), with no confirmed sensitive-data impact; significant phishing wave with successful but contained credential theft. | IC notified; Lead Investigator + Engineering active. | Daily IC update until closure. |
 | **P4 / Sev 4 - Minor** | Failed attack with no impact; isolated malware blocked by EDR; SOC-triaged anomaly with no escalation criteria met. | SOC / Risk only. | Routine SOC reporting. |
 
-The IC may up- or down-grade severity at any time based on emerging information. Severity changes are logged on the incident timeline.
+The IC may up- or down-grade severity at any time based on emerging information. The IC logs severity changes on the incident timeline.
 
 ---
 
@@ -266,9 +264,7 @@ Notification is one of the highest-risk areas of incident response. Many obligat
 
 ### 6.3 Notification Decision Discipline
 
-> **Two Failure Modes**
->
-> The two notification failure modes are: notifying too early on incomplete information, or notifying too late after the regulatory clock has run. Both are damaging. The discipline is: (a) start the regulatory clock log at the moment of discovery, not at the moment of confirmation; (b) make notification decisions through the IC + Legal process, using Governance for evidence and regulatory-mapping support; (c) document the rationale at each decision point. If you would not be willing to defend the rationale to a regulator after the fact, do not adopt it during the incident.
+The two notification failure modes are: notifying too early on incomplete information, or notifying too late after the regulatory clock has run. Both are damaging. The discipline is: (a) start the regulatory clock log at the moment of discovery, not at the moment of confirmation; (b) make notification decisions through the IC + Legal process, using Governance for evidence and regulatory-mapping support; (c) document the rationale at each decision point. If you would not be willing to defend the rationale to a regulator after the fact, do not adopt it during the incident.
 
 ---
 
@@ -276,13 +272,11 @@ Notification is one of the highest-risk areas of incident response. Many obligat
 
 ### 7.1 Enterprise IT / Cloud / SaaS
 
-Containment leverages cloud-native isolation (quarantine IAM, account suspension, security-group changes), conditional-access lockdowns, and SaaS admin-controlled session revocation. Forensic acquisition depends on provider-exposed artifacts; pre-staged acquisition procedures are maintained per **[CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) §7**.
+Containment uses cloud-native isolation (quarantine IAM, account suspension, security-group changes), conditional-access lockdowns, and SaaS admin-controlled session revocation. Forensic acquisition depends on provider-exposed artifacts; the standing IR team maintains pre-staged acquisition procedures per **[CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) §7**.
 
 ### 7.2 OT / BES Cyber Systems
 
-> **Operational Priority Rule**
->
-> Response in OT environments evaluates every containment action for operational impact before execution. Isolation that would be routine in IT can produce a grid disturbance in OT. OT response actions require operations-team participation in the decision, not just notification.
+Response in OT environments evaluates every containment action for operational impact before execution. Isolation that would be routine in IT can produce a grid disturbance in OT. OT response actions require operations-team participation in the decision, not just notification.
 
 OT incidents engage the operations liaison as a peer decision-maker on containment options. Containment defaults to least-disruptive options first (passive monitoring intensification, network-edge controls) before in-band actions. NERC-CIP CIP-008 reporting timelines run regardless of operational readiness; the IC owns the notification-clock process with Legal and OT Operations, while Governance supplies evidence and regulatory mapping support.
 
@@ -302,7 +296,7 @@ When the originating compromise is a third party (vendor, SaaS provider, softwar
 
 ## 8. Playbooks
 
-The plan is supported by detailed playbooks maintained by the standing IR team as living artifacts in this repository for cross-functional integration. Each playbook follows a consistent structure: trigger criteria, immediate actions, investigation steps, containment options, recovery steps, evidence checklist, and notification triggers.
+The standing IR team maintains detailed playbooks as living artifacts in this repository for cross-functional integration. Each playbook follows a consistent structure: trigger criteria, immediate actions, investigation steps, containment options, recovery steps, evidence checklist, and notification triggers.
 
 Currently maintained playbooks:
 
@@ -327,7 +321,7 @@ Currently maintained playbooks:
 | PB-17 | Business Email Compromise (BEC) |
 | PB-18 | Web Application Compromise |
 
-Playbooks are reviewed annually and updated upon material change to environment, tooling, or regulation. Playbook updates derived from post-incident reviews are tracked as Engineering / Risk / Governance backlog items.
+The standing IR team reviews playbooks annually and updates them on material change to environment, tooling, or regulation. Playbook updates derived from post-incident reviews become Engineering / Risk / Governance backlog items.
 
 ---
 
@@ -335,7 +329,7 @@ Playbooks are reviewed annually and updated upon material change to environment,
 
 ### 9.1 Internal Communications
 
-Internal communications channels for active response are pre-established and exercised. The plan assumes the possibility that organizational productivity systems (email, chat, ticketing) are compromised or unavailable.
+The standing IR team pre-establishes and exercises internal communications channels for active response. The plan assumes the possibility that organizational productivity systems (email, chat, ticketing) are compromised or unavailable.
 
 | **Channel** | **Use** |
 |---|---|
@@ -346,7 +340,7 @@ Internal communications channels for active response are pre-established and exe
 
 ### 9.2 External Communications
 
-External communications during an active incident are owned by the IC, with content prepared by Communications and reviewed by Legal. The principles are:
+The IC owns external communications during an active incident; Communications prepares the content and Legal reviews it. The principles are:
 
 - Say only what is established as fact. If a claim is not supported by current evidence, do not make it.
 - Lead with the actions being taken and the protections in place for affected parties.
@@ -370,7 +364,7 @@ External communications during an active incident are owned by the IC, with cont
 
 ### 10.2 Privilege
 
-The Legal Lead is involved at activation for all P1 / Sev 1 and P2 / Sev 2 events. Privileged work product is created under counsel direction and labeled accordingly. Whether and how privilege applies to forensic findings is a judgment of counsel; the IRT operates with privilege awareness from the outset.
+The IC brings in the Legal Lead at activation for all P1 / Sev 1 and P2 / Sev 2 events. Privileged work product is created under counsel direction and labeled accordingly. Whether and how privilege applies to forensic findings is a judgment of counsel; the IRT operates with privilege awareness from the outset.
 
 ### 10.3 Law Enforcement Engagement
 
@@ -391,7 +385,7 @@ Engagement with law enforcement is at the IC's discretion in consultation with L
 | Playbook review | Annual; after each use | Incident Commander / Standing IR Team; Governance / Risk support |
 | This plan review | Annual; after any P1 / Sev 1 or P2 / Sev 2 incident; upon regulatory change | Incident Commander / Standing IR Team; Governance cross-reference support |
 
-Exercise results, including identified gaps and corrective actions, are recorded in the risk register and tracked to closure.
+The standing IR team records exercise results, including identified gaps and corrective actions, in the risk register and tracks them to closure.
 
 ---
 
