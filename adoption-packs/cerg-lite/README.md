@@ -1,6 +1,6 @@
 # CERG Lite Adoption Pack
 
-CERG Lite is the minimum viable adoption path for a small or early security function. It is designed for teams that need a real operating loop without adopting the full CERG library at once.
+CERG Lite is the minimum viable adoption path for a small or early security function. It targets teams that need a real operating loop without adopting the full CERG library at once.
 
 ## 1. Who should use this pack
 
