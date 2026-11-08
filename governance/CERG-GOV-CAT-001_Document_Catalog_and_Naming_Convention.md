@@ -380,7 +380,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-GOV-STY-001`](CERG-GOV-STY-001_Document_Authoring_and_Style_Guide.md) | Document Authoring and Style Guide | Governance Pillar Leader (Policy & Standards) | Approved |
 | [`CERG-GOV-STY-002`](CERG-GOV-STY-002_Style_Compliance_Tracker.md) | Style Compliance Tracker | Governance Pillar Leader (Document Control) | Approved |
 | [`CERG-GOV-TRC-001`](CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md) | Control-to-Procedure Traceability Matrix | Governance Pillar Leader (Control Baseline) | Approved |
-| [`CERG-GOV-IR-001`](CERG-GOV-IR-001_Incident_Signpost.md) | Incident Signpost — CERG-owned routing page for IR-led response | Governance Pillar Leader (Document Control) | Draft — proposed, not approved |
+| [`CERG-GOV-IR-001`](CERG-GOV-IR-001_Incident_Signpost.md) | Incident Signpost — CERG-owned routing page for IR-led response | Governance Pillar Leader (Document Control) | Approved |
 | [`CERG-GOV-IMPREG-001`](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) | Program Improvement Register | Governance Pillar Leader | Approved |
 | [`CERG-GOV-CEF-001`](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md) | Control Effectiveness Framework | Governance Pillar Leader | Approved |
 | [`CERG-GOV-AUD-001`](CERG-GOV-AUD-001_Evidence_Quality_Standard.md) | Evidence Quality Standard | Governance Pillar Leader | Approved |

@@ -4,7 +4,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-IR-001 |
 | **Version** | 0.1 |
-| **Status** | Draft — proposed, not approved |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (this page only) |
 | **Parent Policy** | [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) |
