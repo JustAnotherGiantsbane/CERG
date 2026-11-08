@@ -41,7 +41,7 @@
 
 ## 1. Purpose and Scope
 
-CERG is a cybersecurity operating model starter kit — the spine, artifacts, workflows, and evidence model to run a program. What it has needed is a clear on-ramp: a single document that tells an organization which has just forked the repository what to do on Monday morning.
+CERG is a cybersecurity operating model starter kit — the spine, artifacts, workflows, and evidence model to run a program. What it has needed is a clear on-ramp: one document that tells an organization, fresh from forking the repository, what to do on Monday morning.
 
 This is that document. It is the first thing a new adopter should read after the [README](../README.md) and the [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) framework narrative.
 
@@ -68,7 +68,7 @@ If any of the four is missing, fix that first. Adopting the documents on top of 
 
 > **The Owner Comes First**
 >
-> The most common adoption failure is treating CERG as a documentation exercise. It is not. Before a single file is edited, one person must hold the CISO role and one Executive Sponsor must agree to endorse the policy. Everything else in this guide assumes those two seats are filled.
+> The most common adoption failure is treating CERG as a documentation exercise. It is not. One person must hold the CISO role, and one Executive Sponsor must agree to endorse the policy, before anyone edits a single file. Everything else in this guide assumes those two seats are filled.
 
 ---
 
@@ -78,44 +78,44 @@ CERG adoption has three moves. They are deliberately simple.
 
 ### 3.1 Fork
 
-Take a copy of the entire V1 library. Do not cherry-pick individual files on day one. The documents are interconnected; a standard cites a procedure, a procedure cites the operating model, the operating model cites the policy. A partial fork breaks cross-references and produces exactly the fragmentation CERG was built to remove.
+Take a copy of the entire V1 library. Do not cherry-pick individual files on day one. The documents are interconnected; a standard cites a procedure, a procedure cites the operating model, the operating model cites the policy. A partial fork breaks cross-references and produces exactly the fragmentation CERG exists to remove.
 
 Fork the whole thing. Decide what to defer later, in the open, as a recorded decision.
 
 ### 3.2 Adapt
 
-Adaptation is mechanical, not creative. Every place the documents name an organization, a headcount, a regulator, or an example is a variable. [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) defines the full token scheme and ships a render tool that turns the generic corpus into an organization-specific one. Use it. Do not hand-edit 28 documents.
+Adaptation is mechanical, not creative. Every place the documents name an organization, a headcount, a regulator, or an example is a variable. [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) defines the full token scheme. It also ships a render tool that turns the generic corpus into an organization-specific one. Use it. Do not hand-edit 28 documents.
 
 What you do change by hand is judgment: which optional standards apply, which regulators are in scope, where the team structure consolidates. Section 6 and Section 7 cover both.
 
 ### 3.3 Run
 
-A program runs when work is happening on the cadence the documents describe: intake reviews, risk register updates, vulnerability SLAs, metrics reporting. Adoption is complete not when the files are edited but when the first cycle of that cadence has been completed and reported. Section 5 sequences the first cycle.
+A program runs when work is happening on the cadence the documents describe: intake reviews, risk register updates, vulnerability SLAs, metrics reporting. Adoption is complete not when you finish editing the files but when the team has run the first cycle of that cadence and reported it. Section 5 sequences the first cycle.
 
 ### 3.4 Operating Leverage Test
 
 CERG adoption should reduce coordination drag. If adoption creates more meetings, more manual status chasing, or more ambiguous ownership, the organization is probably adopting documents without adopting the operating model.
 
-Look for operating leverage by the end of the first cycle:
+Run the test at the end of the first cycle:
 
 - recurring decisions have named owners and records;
 - common security questions stop being re-litigated because standards answer them;
-- evidence is produced by normal work instead of reconstructed later;
+- normal work produces evidence instead of someone reconstructing it later;
 - handoffs between Engineering, Risk, and Governance are visible;
-- staffing conversations are based on workload and capability gaps, not vague pressure;
+- staffing conversations rest on workload and capability gaps, not vague pressure;
 - fewer issues require heroics from the same senior person.
 
-If CERG is not creating leverage, stop adding artifacts and fix the workflow that is creating drag.
+If none of this is happening, stop adding artifacts and fix the workflow that is creating drag.
 
 > **One Source, Many Exports**
 >
-> The authoritative copy of every adopted CERG document is the Markdown file in your repository. Word exports, PDF deliverables, intranet pages, and regulator uploads are exports. This rule is inherited from [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) and it matters from day one. If you start editing a Word copy, you have already lost version control.
+> The authoritative copy of every adopted CERG document is the Markdown file in your repository. Word exports, PDF deliverables, intranet pages, and regulator uploads are exports. This rule comes from [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) and it matters from day one. If you start editing a Word copy, you have already lost version control.
 
 ---
 
 ## 4. Minimum Viable CERG
 
-You do not adopt 28 documents in week one. You adopt the spine first. Minimum Viable CERG (MVC) is the smallest set of artifacts that constitutes a real program. Everything else is layered on after.
+You do not adopt 28 documents in week one. You adopt the spine first. Minimum Viable CERG (MVC) is the smallest set of artifacts that constitutes a real program. You layer everything else on after.
 
 ### 4.1 The MVC Set
 
@@ -134,7 +134,7 @@ Eight artifacts. A policy, three governance instruments, a framework, two proced
 
 ### 4.2 What MVC Deliberately Defers
 
-The standards (Access Management, Logging, Cryptography, and the rest), the operational packages (NERC-CIP, CUI/CMMC, SOX), and the remaining procedures are layered in after the spine runs one full cycle. They are not optional in the long run. They are sequenced.
+The standards (Access Management, Logging, Cryptography, and the rest), the operational packages (NERC-CIP, CUI/CMMC, SOX), and the remaining procedures come in after the spine runs one full cycle. They are not optional in the long run. They are sequenced.
 
 > **Resist the Big-Bang Adoption**
 >
@@ -202,7 +202,7 @@ The canonical role roster in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_
 
 > **Consolidate Roles, Never Delete Them**
 >
-> When a role is deleted, the work it owned silently stops. When a role is consolidated onto a person already carrying three others, the work is still owned, still visible, and still re-assignable the day a fourth person is hired. Always consolidate. The role roster is fixed; only the assignment map scales.
+> Delete a role and the work it owned silently stops. Consolidate a role onto a person already carrying three others and the work stays owned, visible, and re-assignable the day someone hires a fourth person. Always consolidate. The role roster is fixed; only the assignment map scales.
 
 ### 6.2 Reference Assignment Maps
 
@@ -218,7 +218,7 @@ These are starting points, not mandates. Adjust to the skills you actually have.
 | 4 | Engineering Pillar Leader; Cloud Security Engineer; Identity Engineer; Pre-production Reviewer |
 | 5 | Application Security Engineer; Endpoint Engineer; Cryptography Engineer; Detection Engineer |
 
-**Mid-size team example.** Pillar leaders are dedicated; senior practitioners own a domain each; the rest are individual contributors. Compliance manager roles are assigned only for regulators in scope.
+**Mid-size team example.** Pillar leaders are dedicated; senior practitioners own a domain each; the rest are individual contributors. Assign compliance manager roles only for regulators in scope.
 
 **Full-scale function example.** The full roster maps roughly one role to one person, with sub-role domain qualifiers (for example, Engineering Pillar Leader - Cloud and Engineering Pillar Leader - OT) split out as described in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1.
 
@@ -235,7 +235,7 @@ Two things hold regardless of headcount.
 
 ### 7.1 Mechanical Adaptation
 
-Names, headcounts, regulators, and illustrative examples are variables. They are adapted with the token scheme and render tool defined in [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md). Do not hand-edit. Build the organization profile once, render the corpus, review the output.
+Names, headcounts, regulators, and illustrative examples are variables. You adapt them with the token scheme and render tool defined in [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md). Do not hand-edit. Build the organization profile once, render the corpus, review the output.
 
 ### 7.2 Choosing Standards
 
@@ -257,7 +257,7 @@ If you defer an applicable standard, record the decision and a target adoption d
 
 ### 7.3 Choosing Operational Packages
 
-Operational packages are adopted per regulator. Adopt only what applies to you.
+You adopt operational packages per regulator. Adopt only what applies to you.
 
 | **Package** | **ID** | **Adopt If** |
 |---|---|---|
@@ -274,7 +274,7 @@ Every adoption decision updates your copy of [`CERG-GOV-CAT-001`](CERG-GOV-CAT-0
 
 ## 8. First-Adoption Sign-Off Workflow
 
-A first adoption is approved once, as a package. After that, individual documents follow the per-type approval authority in [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) §4.
+You approve a first adoption once, as a package. After that, individual documents follow the per-type approval authority in [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) §4.
 
 | **Step** | **What Happens** | **Authority** |
 |---|---|---|
@@ -284,7 +284,7 @@ A first adoption is approved once, as a package. After that, individual document
 | 4 | CISO approves the Cybersecurity Policy. Executive Sponsor endorses it. | CISO; Executive Sponsor |
 | 5 | Governance Pillar Leader records the adoption in the catalog revision history and sets each artifact status. | Governance Pillar Leader |
 
-The adoption is complete when step 5 is recorded. Not before.
+The adoption is complete when the Governance Pillar Leader records step 5. Not before.
 
 ---
 
@@ -309,7 +309,7 @@ The adoption is complete when step 5 is recorded. Not before.
 
 The cybersecurity talent market is brutal. Organizations that cannot articulate why someone should work there lose candidates to organizations that can. CERG's structure is a genuine differentiator. Most candidates have never heard of it. The organization's job is to make them hear it and want it.
 
-CERG's employee value proposition is not "competitive salary and benefits." Every organization says that. CERG's EVP is that a CERG-structured team is a better place to practice cybersecurity than a traditionally structured team. This section articulates why, provides role-specific candidate messaging, and includes a structured interview guide aligned to the competency model.
+CERG's employee value proposition is not "competitive salary and benefits." Every organization says that. CERG's EVP: a CERG-structured team is a better place to practice cybersecurity than a traditionally structured team. This section articulates why, provides role-specific candidate messaging, and includes a structured interview guide aligned to the competency model.
 
 ### 10.2 The CERG Employee Value Proposition
 
@@ -317,20 +317,20 @@ Working in a CERG-structured team means:
 
 **You are a generalist who specializes.** In a traditional security organization, a Cloud Security Engineer reviews architectures and never sees a risk register. A Threat Intelligence Analyst writes threat reports and never touches an architecture diagram. In CERG, the left-right knowledge model means every practitioner understands the full lifecycle. You specialize in your domain, but you are not confined to it. After three years in a CERG Engineering team, you can credibly discuss risk methodology with a Risk practitioner and compliance requirements with a Governance practitioner. That breadth makes you more valuable than a specialist who has done one thing for five years.
 
-**You see the impact of your work.** A CERG architect's design decision is visible in the Risk pillar's posture report two quarters later. A CERG threat analyst's intelligence brief drives Engineering's next quarter of control improvements. The pillars are not silos; they are feedback loops. When you do your job well, the other two pillars get better. When they do their jobs well, you get better. The work you do on Tuesday is visible in the organization's security posture on Friday.
+**You see the impact of your work.** Two quarters later, the Risk pillar's posture report shows a CERG architect's design decision. A CERG threat analyst's intelligence brief drives Engineering's next quarter of control improvements. The pillars are not silos; they are feedback loops. When you do your job well, the other two pillars get better. When they do their jobs well, you get better. The work you do on Tuesday is visible in the organization's security posture on Friday.
 
-**Your career path is defined, not discovered.** JA-001 defines exactly what each grade expects across five dimensions. CMP-001 defines the specific behaviors at each level. PERF-001 defines how you are evaluated and promoted. You do not need to guess what it takes to reach the next level or hope your manager advocates for you loudly enough. The path is documented, and the promotion process is designed to be consistent regardless of which manager you report to.
+**Your career path is defined, not discovered.** JA-001 defines exactly what each grade expects across five dimensions. CMP-001 defines the specific behaviors at each level. PERF-001 defines how the organization evaluates and promotes you. You do not need to guess what it takes to reach the next level, or hope your manager advocates loudly enough for you. The path is documented, and the promotion process stays consistent no matter which manager you report to.
 
-**The best idea wins, regardless of who brings it.** CERG's "yes, and" operating philosophy and its three-pillar structure create an environment where a Specialist's well-reasoned finding carries as much weight as a Sr. Advisor's, and a Risk analyst can tell an Engineering director that a control design has a flaw without political consequence. The structure rewards rigor, not rank. Iron sharpens iron.
+**The best idea wins, regardless of who brings it.** CERG's "yes, and" operating philosophy and three-pillar structure let a Specialist's well-reasoned finding carry as much weight as a Sr. Advisor's. A Risk analyst can flag a flaw in an Engineering director's control design without political consequence. The structure rewards rigor, not rank. Iron sharpens iron.
 
-**You are building a program, not running a tool.** Many cybersecurity roles are tool-operating jobs. The organization bought a scanner; you run the scanner. The organization bought a SIEM; you stare at the SIEM. CERG roles are program-building roles. You design how the function works, not just execute it. You improve procedures, author standards, mentor incoming practitioners, and shape the organization's security posture. If you want to be told what to do, CERG is not for you. If you want to define how it is done, CERG is.
+**You are building a program, not running a tool.** Many cybersecurity roles are tool-operating jobs. The organization bought a scanner; you run the scanner. The organization bought a SIEM; you stare at the SIEM. CERG roles are program-building roles. You design how the function works, not just execute it. You improve procedures, author standards, mentor incoming practitioners, and shape the organization's security posture. If you want to be told what to do, CERG is not for you. If you want to define how the work gets done, CERG is.
 
 ### 10.3 Role-Specific Candidate Messaging
 
 The EVP above applies to every CERG role. Each role family adds specific messaging for candidates:
 
 **Engineering candidates:**
-"You will not just review architectures; you will own reference architectures. You will not just configure security tools; you will design how the organization secures its cloud, identity, and application platforms. You will work with Risk to understand how your controls perform under attack and with Governance to ensure your designs are audit-ready by design, not retrofit."
+"You will not just review architectures; you will own reference architectures. You will not just configure security tools; you will design how the organization secures its cloud, identity, and application platforms. You will work with Risk to understand how your controls perform under attack, and with Governance to keep your designs audit-ready by design, not retrofit."
 
 **Risk candidates:**
 "You will not just triage alerts; you will shape how the organization understands and responds to its exposure. Your threat assessments will drive Engineering's control priorities. Your risk judgments will inform executive decisions. You will work with Engineering to design controls that address the root cause of findings, not just ticket the symptoms."
@@ -393,7 +393,7 @@ The interview process assesses candidates against the CMP-001 competency domains
 #### Operational Discipline Questions
 
 - Walk me through how you manage your work. How do you prioritize, how do you track what is done and what is pending, how do you handle interruptions?
-- Describe a time you discovered that something you thought was done was not actually done. What had you missed, and what did you change to prevent it from happening again?
+- Describe a time you discovered that something you believed complete was not. What had you missed, and what did you change to prevent it from happening again?
 - How do you ensure your work is defensible under audit or regulatory scrutiny?
 
 #### Continuous Learning Questions
