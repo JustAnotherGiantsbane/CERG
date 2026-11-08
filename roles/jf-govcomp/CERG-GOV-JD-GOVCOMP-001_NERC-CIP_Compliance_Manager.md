@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The NERC-CIP Compliance Manager owns the organization's compliance with NERC Critical Infrastructure Protection standards. They manage the NERC-CIP evidence library, coordinate regulatory exams and audits, and track deviations and mitigation plans. The role's test of success: BES Cyber System compliance is a steady state, not a pre-audit scramble.
+The NERC-CIP Compliance Manager owns the organization's compliance with NERC Critical Infrastructure Protection standards. They manage the NERC-CIP evidence library, coordinate regulatory exams and audits, track deviations and mitigation plans, and keep BES Cyber System compliance a steady state, not a pre-audit scramble.
 
 ## 2. NICE Workforce Framework Mapping
 
