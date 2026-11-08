@@ -34,7 +34,7 @@
 
 ## 1. Purpose and Scope
 
-`CERG-GOV-CB-001` defines the unified control baseline and names evidence for each control. This matrix adds the missing operating layer: for each baseline control, it identifies the standard or procedure that operationalizes the control, the template or evidence package that proves operation, and the gap signal that should be raised when traceability is incomplete.
+`CERG-GOV-CB-001` defines the unified control baseline and names evidence for each control. This matrix adds the missing operating layer. For each baseline control it names the standard or procedure that runs the control, the template or evidence package that proves operation, and the gap signal to raise when traceability is incomplete.
 
 This document complements the Unified Control Baseline. It does not replace it. The baseline remains the authoritative source for the control statement, owning pillar, evidence name, frequency, and regulatory crosswalk. This matrix is the operational routing map that tells a control owner, auditor, or AI agent where to go to run, test, or fix the control.
 
@@ -65,10 +65,10 @@ This document complements the Unified Control Baseline. It does not replace it. 
 2. Every baseline control must map to a canonical evidence template, record type, or structured artifact.
 3. Every baseline control must map to named evidence.
 4. Evidence must be testable through `CERG-PRC-AUD-001` or an approved regulated-scope audit procedure.
-5. If a control is inherited, the inheritance evidence package from `CERG-GOV-CB-001` Section 5 must be linked.
+5. If a control is inherited, the row must link the inheritance evidence package from `CERG-GOV-CB-001` Section 5.
 6. If a control is partially implemented or planned, the POA&M and risk linkage must be present.
-7. If no CERG procedure owns an operating step, the row is flagged as a gap for the Governance Pillar Leader.
-8. This matrix is updated whenever a new standard, procedure, plan, template, or control baseline revision changes ownership or evidence flow.
+7. If no CERG procedure owns an operating step, this matrix flags the row as a gap for the Governance Pillar Leader.
+8. Update this matrix whenever a new standard, procedure, plan, template, or control baseline revision changes ownership or evidence flow.
 
 ---
 
@@ -140,8 +140,8 @@ A regulated architecture review is incomplete if any required overlay has no nam
 
 A traceability gap exists when any of the following is true:
 
-1. the baseline names a control but no standard or procedure operationalizes it;
-2. a control maps to evidence but no evidence owner is named;
+1. the baseline names a control but no standard or procedure runs it;
+2. a control maps to evidence but has no named evidence owner;
 3. a control maps to a procedure that is out of scope, retired, or missing from the catalog;
 4. a control depends on inherited control evidence but the inheritance package is missing;
 5. a control is partially implemented but has no POA&M item;
@@ -149,7 +149,7 @@ A traceability gap exists when any of the following is true:
 7. a control has evidence, but the evidence cannot be retrieved within the audit retrieval window;
 8. the catalog changes but this matrix is not reviewed.
 
-Traceability gaps are routed as follows:
+Route traceability gaps as follows:
 
 | **Gap Type** | **Route To** | **Required Action** |
 |---|---|---|
@@ -163,10 +163,10 @@ Traceability gaps are routed as follows:
 
 ## 7. Maintenance Workflow
 
-This matrix is maintained annually and whenever one of these changes occurs:
+The Governance Pillar Leader maintains this matrix annually and whenever one of these changes occurs:
 
 - `CERG-GOV-CB-001` adds, removes, or changes a control;
-- a standard, procedure, plan, or template is added or retired;
+- a standard, procedure, plan, or template added or retired;
 - audit testing finds a control without an operational procedure;
 - evidence ownership changes;
 - regulatory scope changes;
