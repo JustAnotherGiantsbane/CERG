@@ -34,7 +34,7 @@
 
 ## 1. Purpose and Use
 
-This template creates a Plan of Action and Milestones (POA&M) for security gaps, CMMC / CUI findings, assessment observations, audit findings, and planned control implementations. It is designed to be copied into a system-specific or program-specific POA&M register.
+This template creates a Plan of Action and Milestones (POA&M) for security gaps, CMMC / CUI findings, assessment observations, audit findings, and planned control implementations. Copy it into a system-specific or program-specific POA&M register.
 
 A POA&M item is not a wish list entry. It is a dated management commitment with an owner, milestones, evidence expectations, and closure validation.
 
@@ -92,7 +92,7 @@ Each POA&M item must link to at least one source: control ID, risk ID, finding I
 
 ## 4. Milestone Detail Template
 
-Every POA&M item has at least one milestone. Complex items should use multiple milestones so progress can be verified before the final due date.
+Every POA&M item has at least one milestone. Complex items should use multiple milestones so the owner can verify progress before the final due date.
 
 | **Milestone ID** | **POA&M ID** | **Description** | **Owner** | **Due Date** | **Status** | **Evidence Expected** |
 |---|---|---|---|---|---|---|
@@ -114,7 +114,7 @@ Closure evidence must prove the gap is fixed or the risk treatment is complete.
 | Technical validation | Scan result, restore test, access review result, pipeline check. |
 | Approval evidence | Risk acceptance, exception approval, CISO decision. |
 
-Evidence is stored according to `CERG-PRC-AUD-001` and linked from the POA&M row.
+Store evidence according to `CERG-PRC-AUD-001` and link it from the POA&M row.
 
 ---
 
