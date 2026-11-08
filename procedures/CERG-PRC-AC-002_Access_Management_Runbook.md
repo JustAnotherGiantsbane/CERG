@@ -41,13 +41,11 @@
 
 ## 1. Purpose and Scope
 
-The Access Management Standard explicitly says implementation details, IdP baselines, MFA enrollment, PAM workflows, recertification runbooks, are maintained separately. This runbook is that "separately." It defines the executable workflows behind every identity decision [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) requires.
+The Access Management Standard explicitly says implementation details, IdP baselines, MFA enrollment, PAM workflows, and recertification runbooks are maintained separately. This runbook is that "separately." It defines the executable workflows behind every identity decision [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) requires.
 
 The runbook covers every identity in the environment: human (employee, contractor), machine (system, service, agent), and vendor / third-party.
 
-> **One Runbook, Two Owners**
->
-> Many organizations run IAM under IT (not Cyber). The runbook is written so it is complete under either operating model: where IAM reports into CERG, this is the operational manual; where IAM reports outside CERG, this is the cyber-required content the IAM team must implement or formally diverge from with documented compensating controls.
+Many organizations run IAM under IT rather than cyber. This runbook is written to be complete under either operating model. Where IAM reports into CERG, it is the operational manual. Where IAM reports outside CERG, it is the cyber-required content the IAM team must implement or formally diverge from with documented compensating controls.
 
 ---
 
@@ -65,7 +63,7 @@ This runbook supports multiple IAM operating models. The workflow requirements d
 | Audit interface | CERG. | Shared; CERG owns cyber evidence quality and audit response coordination. |
 | Exception handling | CERG records and approves per risk authority. | Operator submits divergence; CERG records, approves, tracks, or escalates. |
 
-Where IAM is outside CERG, every requirement below is either implemented by the IAM team, or a formal documented divergence is recorded in the risk register per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md).
+Where IAM is outside CERG, the IAM team either implements every requirement below or records a formal documented divergence in the risk register per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md).
 
 ### 2.1 Cyber-Required IAM Operating Agreement
 
@@ -188,12 +186,12 @@ Same as 3.3 with all SLAs collapsed to "immediately" and the SOC alerted to moni
 
 ### 5.2 Recertification Workflow
 
-1. **Campaign launched** via IGA with named reviewers.
-2. **Reviewers presented with**: identity, current entitlements, last-used dates, role rationale.
-3. **Decision** per entitlement: Certify · Modify · Remove. "Bulk Certify" is permitted only where reviewer has reviewed actual access patterns.
-4. **Auto-removal** of Removed entitlements within 5 business days.
-5. **Audit log** captured per IGA for the cycle.
-6. **Exceptions** flagged to Engineering, Identity for follow-up.
+1. **Launch the campaign** via IGA with named reviewers.
+2. **Present reviewers with**: identity, current entitlements, last-used dates, role rationale.
+3. **Decide** per entitlement: Certify · Modify · Remove. A reviewer may use "Bulk Certify" only after reviewing actual access patterns.
+4. **Auto-remove** Removed entitlements within 5 business days.
+5. **Capture the audit log** per IGA for the cycle.
+6. **Flag exceptions** to Engineering, Identity for follow-up.
 
 ### 5.3 Anti-Rubber-Stamp Controls
 
@@ -226,7 +224,7 @@ A privileged access review is incomplete if the population is missing, the revie
 
 ### 6.1 Coverage
 
-Every privileged action across the in-scope estate is mediated by PAM. Specifically:
+PAM mediates every privileged action across the in-scope estate. Specifically:
 
 - Domain admin / cloud root / SaaS tenant admin.
 - Network device, firewall, hypervisor, storage admin.
@@ -249,7 +247,7 @@ Every privileged action across the in-scope estate is mediated by PAM. Specifica
 - No direct admin password use; PAM-only.
 - Standing privileged access avoided where JIT is supported.
 - Quarterly audit of dormant privileged accounts.
-- Session recordings sampled by Risk on a quarterly cadence; high-risk roles sampled monthly.
+- Risk samples session recordings on a quarterly cadence; high-risk roles monthly.
 
 ---
 
@@ -305,7 +303,7 @@ Break-glass accounts are the credentials of last resort, used only when normal i
 
 ## 9. Secrets, API Keys, and Tokens
 
-This section operationalizes [`CERG-STD-CR-001`](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) Section 7. See that standard for storage and rotation requirements.
+This section implements [`CERG-STD-CR-001`](../standards/CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) Section 7. See that standard for storage and rotation requirements.
 
 | **Action** | **Path** |
 |---|---|
@@ -338,7 +336,7 @@ This section operationalizes [`CERG-STD-CR-001`](../standards/CERG-STD-CR-001_Cr
 - Vendor sessions recorded per PAM policy.
 - Geographic anomalies trigger alerts.
 - Quarterly review of all active vendor access.
-- Vendor OAuth grants, delegated access, API tokens, shared mailboxes, and admin roles are included in review scope.
+- The review scope includes vendor OAuth grants, delegated access, API tokens, shared mailboxes, and admin roles.
 - Off-boarding triggered by project closeout, vendor termination, country reclassification, or vendor security incident.
 
 ### 10.3 Vendor and MSP Kill-Switch
@@ -370,7 +368,7 @@ For vendors, MSPs, and external operators with administrative or persistent acce
 
 ### 11.2 Exceptions
 
-MFA exceptions are time-bounded and tracked.
+Time-bound every MFA exception and track it.
 
 | **Exception Case** | **Treatment** |
 |---|---|
@@ -378,7 +376,7 @@ MFA exceptions are time-bounded and tracked.
 | Operational technology operator console | Engineering review required; compensating controls per [`CERG-STD-OT-001`](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md). |
 | Vendor unable to use phishing-resistant factor | Renegotiate; if unavoidable, time-bound exception with detection routing. |
 
-Phishing-resistant MFA coverage is reported as `ID-001` in [`CERG-GOV-MTR-001`](../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md).
+CERG reports phishing-resistant MFA coverage as `ID-001` in [`CERG-GOV-MTR-001`](../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md).
 
 ---
 
