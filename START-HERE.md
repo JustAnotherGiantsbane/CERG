@@ -179,7 +179,7 @@ MVC (all 8) + Access, Asset, Config Baseline, IT/Cloud/SaaS where applicable, Lo
    - CMMC / CUI → [PLN-CUI-001](plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md)
    - SOX ITGC → [PLN-SOX-001](plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md)
    - ISO 27001 → [PLN-ISO-001](plans/CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md)
-5. **Map your evidence requirements.** Each operational package links evidence to specific CERG procedures. Understanding this linkage is the key to making compliance a byproduct of operations.
+5. **Map your evidence requirements.** Each operational package links evidence to specific CERG procedures. Understand this linkage; it is the key to making compliance a byproduct of operations.
 6. **See the [Compliance Matrix](governance/CERG-GOV-CMX-001_Compliance_Matrix.md).** 22 security intents mapped to every framework simultaneously.
 
 ### Your starting set
@@ -190,7 +190,7 @@ MVC + all 15 standards + Architecture Review, TPRM, Change Management, Audit/Evi
 
 ## What CERG adoption is NOT
 
-- **Not a certification.** You can adopt CERG and still fail a regulatory assessment if controls aren't implemented and evidenced.
+- **Not a certification.** You can adopt CERG and still fail a regulatory assessment if you haven't implemented and evidenced the controls.
 - **Not a substitute for judgment.** CERG provides structure. You provide decisions, owners, scope, and risk appetite.
 - **Not a one-time exercise.** A program runs on cadence. If you're not producing evidence from real work every month, you're not running CERG.
 - **Not shelfware.** If you fork the repo, rename the company, approve everything, and walk away, you have produced exactly nothing.
@@ -201,7 +201,7 @@ CERG should create operating leverage. After the first cycle, the work should fe
 
 - owners and decision rights are easier to name;
 - recurring reviews produce records instead of status theater;
-- evidence is easier to retrieve because it was created during the work;
+- evidence is easier to retrieve because you created it during the work;
 - engineering teams receive clearer guardrails;
 - fewer problems depend on the same hero person;
 - leaders can see whether the bottleneck is capability, scope, tooling, or staffing.
@@ -210,7 +210,7 @@ If adoption mostly adds meetings, manual chasing, or ambiguity, stop adding docu
 
 ### Schedule your first stakeholder survey at month 2
 
-After one full cadence cycle (approximately 60 days), administer the [Stakeholder Perception Survey](templates/CERG-TMPL-GOV-001_Stakeholder_Perception_Survey.md). The survey is how you measure whether the program is reducing drag and confusion for the business, which is the program's stated mission. Run annually thereafter. Survey results below 3.0 on a Likert scale, or a year-over-year decline of 0.5 points or more, become entries in the [Program Improvement Register](governance/CERG-GOV-IMPREG-001_Program_Improvement_Register.md). The survey is paired with monthly [Service Responsiveness metrics](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) (SR-001 through SR-005) so friction is caught continuously, not only once a year.
+After one full cadence cycle (approximately 60 days), administer the [Stakeholder Perception Survey](templates/CERG-TMPL-GOV-001_Stakeholder_Perception_Survey.md). The survey is how you measure whether the program is reducing drag and confusion for the business, which is the program's stated mission. Run annually thereafter. Survey results below 3.0 on a Likert scale, or a year-over-year decline of 0.5 points or more, become entries in the [Program Improvement Register](governance/CERG-GOV-IMPREG-001_Program_Improvement_Register.md). Pair the survey with monthly [Service Responsiveness metrics](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) (SR-001 through SR-005) so you catch friction continuously, not only once a year.
 
 ---
 
