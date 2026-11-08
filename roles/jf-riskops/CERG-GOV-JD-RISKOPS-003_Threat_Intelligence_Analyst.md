@@ -110,7 +110,7 @@ Typical experience ranges by grade are in [JA-001 §4-5](../../governance/CERG-G
 
 ## 9. Competency Expectations by Grade
 
-Competency expectations for this role track the Risk pillar behavioral anchors in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md). Each cell names observable behavior demonstrating the competency at that grade. Anchors are cumulative: an L3 expectation includes the L1 and L2 anchors.
+Competency expectations for this role follow the Risk pillar behavioral anchors in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md). Each cell names observable behavior demonstrating the competency at that grade. Anchors are cumulative: an L3 expectation includes the L1 and L2 anchors.
 
 | Competency Domain (CMP-001) | L1 Expectation | L2 Expectation | L3 Expectation | L4 Expectation |
 |-----------------------------|----------------|----------------|----------------|----------------|
