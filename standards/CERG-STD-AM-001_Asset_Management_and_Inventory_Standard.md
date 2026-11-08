@@ -41,7 +41,7 @@
 
 Every other control in CERG assumes the program knows what it is protecting. Exposure management scans an asset list. Access management governs access to systems. The control baseline maps evidence to assets. Logging collects from sources. Each of those depends on an authoritative answer to a deceptively simple question: what do we have? Until this standard, CERG had no document that owned that question.
 
-This standard establishes the requirement for an authoritative asset inventory: the asset classes that must be tracked, the inventory itself, the attributes every asset record carries, how ownership is assigned, how assets are classified by criticality, and how assets move through a lifecycle from acquisition to secure disposal.
+This standard establishes the requirement for an authoritative asset inventory. It covers the asset classes that must be tracked, the inventory itself, the attributes every asset record carries, how ownership is assigned, how assets are classified by criticality, and how assets move through a lifecycle from acquisition to secure disposal.
 
 It applies to every in-scope asset across every environment: owned hardware, cloud and hybrid infrastructure, SaaS, operational technology, and the data assets the rest of the estate exists to serve.
 
@@ -96,7 +96,7 @@ Containers, serverless functions (AWS Lambda, Azure Functions, GCP Cloud Functio
 
 ## 4. The Authoritative Inventory
 
-1. **Each asset class has one named authoritative inventory.** The authoritative inventory for each class is recorded, with its owner, in the organization profile or an organization-specific appendix to this standard.
+1. **Each asset class has one named authoritative inventory.** The organization records the authoritative inventory for each class, with its owner, in the organization profile or an organization-specific appendix to this standard.
 2. **The inventory is a system, not a document.** For any estate beyond the smallest, the inventory is a tooled system fed by automated discovery, not a hand-maintained file. A five-person team may start with a structured file; it migrates to tooling as the estate grows.
 3. **Inventories interconnect.** A software record references the hardware or cloud asset it runs on. A data asset references the system that hosts it. An identity references what it can access. The inventory is a graph, not five disconnected lists.
 4. **The inventory feeds the program.** The inventory is the source list for exposure management scanning, the access-review population, the logging source catalog, and the control-baseline evidence mapping. Those consumers reconcile to the inventory; they do not maintain their own.
@@ -268,7 +268,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](../governance/
 - Internal audit or regulatory finding affecting asset inventory
 - Direction from the CISO
 
-Cyber Engineering owns this document. The Engineering Pillar Leader (Platforms) is responsible for initiating reviews, managing the revision cycle, and obtaining Governance Pillar Leader approval, with CISO endorsement, for all changes.
+Cyber Engineering owns this document. The Engineering Pillar Leader (Platforms) initiates reviews, manages the revision cycle, and obtains Governance Pillar Leader approval, with CISO endorsement, for all changes.
 
 ### Related Documents
 
