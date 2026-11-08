@@ -102,13 +102,13 @@ For legacy systems where full threat modeling is infeasible (e.g., undocumented 
 - **Scope**: Document known boundaries, data flows, and integrations rather than attempting to reconstruct the entire architecture.
 - **Focus**: Concentrate on trust boundaries, external interfaces, and data classification paths rather than internal component detail.
 - **Output**: A reduced threat model covering abuse cases for the top 5 risks identified from the risk register, exposure backlog, and incident history.
-- **Acceptance**: The lightweight model is accepted as "sufficient for current risk posture" with a note that a full model will be produced at the next material change or system redesign.
+- **Acceptance**: Accept the lightweight model as "sufficient for current risk posture," with a note that a full model will be produced at the next material change or system redesign.
 
 ---
 
 ## 4. Inputs
 
-The Threat Intelligence Analyst and the project team provide inputs before the session. Missing inputs do not automatically stop the model, but missing critical inputs are recorded as assumptions.
+The Threat Intelligence Analyst and the project team provide inputs before the session. Missing inputs do not automatically stop the model, but the facilitator records missing critical inputs as assumptions.
 
 | **Input** | **Source** | **Required For** |
 |---|---|---|
@@ -141,7 +141,7 @@ The abuse-case format includes a threat actor field. The following framework gui
 
 #### Actor Scoping
 
-Actors are scoped based on data classification, industry sector, system exposure, and threat intelligence from [CERG-PRC-TI-001](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md). Nation-state and competitor actors are in scope for CUI, BCSI, and strategic IP. Internet-facing systems include cybercriminal and hacktivist actors. Internal-only systems emphasize insider actors.
+Scope actors based on data classification, industry sector, system exposure, and threat intelligence from [CERG-PRC-TI-001](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md). Nation-state and competitor actors are in scope for CUI, BCSI, and strategic IP. Internet-facing systems include cybercriminal and hacktivist actors. Internal-only systems emphasize insider actors.
 
 #### Actor-to-ATT&CK Mapping
 
@@ -174,7 +174,7 @@ The goal is to state plainly what harm matters. A system cannot be threat-modele
 
 The facilitator marks trust boundaries on the architecture and data-flow diagrams. A trust boundary exists wherever control assumptions change: internet to internal, user to service, tenant to tenant, corporate to vendor, IT to OT, identity provider to application, or AI model to tool execution.
 
-Every trust-boundary crossing is reviewed for authentication, authorization, encryption, logging, and validation.
+The group reviews every trust-boundary crossing for authentication, authorization, encryption, logging, and validation.
 
 ### 5.3 Step 3: Generate Abuse Cases
 
@@ -207,7 +207,7 @@ For each abuse case, the team decides one of four dispositions:
 
 ### 5.6 Step 6: Record Findings
 
-Findings are written as control-relevant statements, not vague concerns. A good finding names the attack path, the affected asset, the missing or weak control, the likely impact, and the recommended treatment.
+Write findings as control-relevant statements, not vague concerns. A good finding names the attack path, the affected asset, the missing or weak control, the likely impact, and the recommended treatment.
 
 ---
 
@@ -239,7 +239,7 @@ For OT systems, add **L**ateral Movement as a seventh category (STRIDE-LM).
 
 ### 5.6.1 AI-Specific Abuse Case Categories
 
-When threat modeling systems that incorporate AI or ML capabilities, the following abuse case categories supplement the standard STRIDE framework. Detailed controls are defined in CERG-STD-AI-001.
+When threat modeling systems that incorporate AI or ML capabilities, the following abuse case categories supplement the standard STRIDE framework. CERG-STD-AI-001 defines the detailed controls.
 
 | **Category** | **Description** | **Example Abuse Case** |
 |---|---|---|
@@ -340,7 +340,7 @@ A go-live recommendation is not complete if required threat-model findings are u
 
 ## 8. Finding Severity and Treatment
 
-Threat-model findings are scored using the risk and exception process in [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). Severity considers both likelihood and impact, including the data classification from [`CERG-STD-DG-001`](../standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md), the asset criticality from [`CERG-STD-AM-001`](../standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md), and the system's regulatory scope.
+Score threat-model findings using the risk and exception process in [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). Severity considers both likelihood and impact, including the data classification from [`CERG-STD-DG-001`](../standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md), the asset criticality from [`CERG-STD-AM-001`](../standards/CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md), and the system's regulatory scope.
 
 A finding may be closed only when one of the following is true:
 
@@ -368,11 +368,11 @@ A five-person team still performs all four depths. One person may hold multiple 
 
 ### 9.1 Quality Assurance
 
-The Risk Pillar Leader is accountable for threat model quality. The following process ensures consistency and completeness.
+The Risk Pillar Leader is accountable for threat model quality. The following process keeps threat models consistent and complete.
 
 #### Peer Review
 
-All threat models receive a peer review by a second qualified analyst before finalization. The peer reviewer validates:
+A second qualified analyst peer-reviews all threat models before finalization. The peer reviewer validates:
 
 - All trust boundaries are identified and documented
 - All data flows are mapped
@@ -383,7 +383,7 @@ All threat models receive a peer review by a second qualified analyst before fin
 
 #### Calibration Sessions
 
-Quarterly calibration sessions are conducted using a sample threat model reviewed by all analysts. The purpose is to align severity ratings, ensure consistent abuse-case generation across analysts, and identify systematic gaps in the threat modeling process. The Risk Pillar Leader facilitates calibration and documents outcomes.
+The Risk Pillar Leader runs quarterly calibration sessions on a sample threat model, which all analysts review. The purpose is to align severity ratings, keep abuse-case generation consistent across analysts, and identify systematic gaps in the threat modeling process. The Risk Pillar Leader leads each session and documents the outcomes.
 
 #### Quality Checklist
 
@@ -399,7 +399,7 @@ Quarterly calibration sessions are conducted using a sample threat model reviewe
 
 #### Escalation
 
-Quality disputes that cannot be resolved between the analyst and peer reviewer are escalated to the Risk Pillar Leader for final determination.
+If the analyst and peer reviewer cannot resolve a quality dispute, either of them escalates it to the Risk Pillar Leader for final determination.
 
 ---
 
@@ -435,7 +435,7 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](../governance/CERG
 | Recurrence rate | % of findings that recur in subsequent threat models for the same system | Threat model repository | Annually | ≤ 10% | 11–25% | > 25% |
 | Threat model coverage rate | % of in-scope systems (per PRC-AR-001 Section 4.1) with current threat models | Asset inventory + TM repo | Quarterly | ≥ 90% | 75–89% | < 75% |
 
-> Baseline: "Baseline Y1" indicates the metric is collected for 12 months before Green/Amber/Red thresholds are established.
+> Baseline: "Baseline Y1" indicates the metric runs for 12 months before Green/Amber/Red thresholds are established.
 
 ---
 
