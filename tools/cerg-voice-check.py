@@ -41,6 +41,7 @@ FILLER = [
     "can be used to", "has the ability to",
 ]
 NOMINAL = re.compile(r"\b\w{4,}(tion|tions|ment|ments|ance|ances|ence|ences|ity|ities|ness)\b", re.I)
+SHRINK_WORDS = 800
 PASSIVE = re.compile(r"\b(is|are|was|were|be|been|being)\s+(\w+ed|shown|made|given|taken|held|kept|seen|done|written|built|set)\b", re.I)
 
 
@@ -119,7 +120,8 @@ def analyse(path: str, root: str, rules: list[dict]) -> dict:
         return {}
     body = " ".join(kept)
     words = re.findall(r"[A-Za-z']+", body)
-    n = max(len(words), 1)
+    words_count = len(words)
+    n = max(words_count, 1)
     low = body.lower()
     fill = sum(low.count(f) for f in FILLER)
     nom = len(NOMINAL.findall(body))
@@ -127,6 +129,10 @@ def analyse(path: str, root: str, rules: list[dict]) -> dict:
     breaths = [len(c.split()) for s in kept for c in re.split(r"[,;:—–]", s) if c.split()]
     long_breath = sum(1 for b in breaths if b > 18) / max(len(breaths), 1)
     score = (fill / n * 10000 + nom / n * 60 + pas / n * 50 + long_breath * 70)
+    # Shrinkage. Without it a 552-word matrix that says "operationalizes" twice
+    # outranks a 3,000-word standard with the same habit spread throughout.
+    # SHRINK_WORDS is the word count at which a file's own rate counts half.
+    shrunk = score * words_count / (words_count + SHRINK_WORDS)
     lens = [len(s.split()) for s in kept]
     return {
         "path": rel, "words": len(words), "sentences": len(kept),
@@ -135,7 +141,8 @@ def analyse(path: str, root: str, rules: list[dict]) -> dict:
         "nominal_pct": round(nom / n * 100, 1),
         "passive_per_1k": round(pas / n * 1000, 1),
         "long_breath_pct": round(long_breath * 100, 1),
-        "score": round(score, 1),
+        "score_raw": round(score, 1),
+        "score": round(shrunk, 1),
     }
 
 
@@ -165,11 +172,11 @@ def main() -> int:
 
     print(f"{len(rules)} exemption rules verified; {len(rows)} files scored, "
           f"{sum(r['words'] for r in rows)} prose words\n")
-    print(f"{'score':>6} {'words':>6} {'mean':>5} {'fill':>5} {'nom%':>5} {'pas':>5} {'brth%':>6} {'exmpt':>5}  file")
+    print(f"{'score':>6} {'raw':>5} {'words':>6} {'mean':>5} {'fill':>5} {'nom%':>5} {'pas':>5} {'brth%':>6}  file")
     for r in rows[: args.limit]:
-        print(f"{r['score']:6.1f} {r['words']:6d} {r['mean']:5.1f} {r['filler_per_1k']:5.1f} "
-              f"{r['nominal_pct']:5.1f} {r['passive_per_1k']:5.1f} {r['long_breath_pct']:6.1f} "
-              f"{r['exempted']:5d}  {r['path']}")
+        print(f"{r['score']:6.1f} {r['score_raw']:5.1f} {r['words']:6d} {r['mean']:5.1f} "
+              f"{r['filler_per_1k']:5.1f} {r['nominal_pct']:5.1f} {r['passive_per_1k']:5.1f} "
+              f"{r['long_breath_pct']:6.1f}  {r['path']}")
     q = statistics.quantiles([r["score"] for r in rows], n=4)
     print(f"\nquartiles: {q[0]:.1f} / {q[1]:.1f} / {q[2]:.1f}")
     return 0
