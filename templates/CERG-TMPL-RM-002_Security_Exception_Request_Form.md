@@ -31,7 +31,7 @@
 
 ## 1. Purpose and Use
 
-This form captures a temporary security exception or waiver request. It is used when a required control cannot be implemented as written, cannot be implemented by the due date, or must be bypassed temporarily for a justified business reason. The completed form feeds the risk register and cannot be used to create a permanent undocumented control gap.
+This form captures a temporary security exception or waiver request. Use it when a required control cannot be implemented as written, cannot be implemented by the due date, or must be bypassed temporarily for a justified business reason. The completed form feeds the risk register and cannot be used to create a permanent undocumented control gap.
 
 > **Exceptions Expire**
 >
@@ -111,7 +111,7 @@ This form captures a temporary security exception or waiver request. It is used 
 | Executive Sponsor | Accepts the business consequence at Critical, with the CISO per `RMF-001` §9.7. | `[Name / Date]` |
 | Chief Information Security Officer (CISO) | Co-signs High acceptance with the Business Owner and Critical with the Executive Sponsor; approves material regulated-scope deviations. | `[Name / Date]` |
 
-Completed templates are reviewed at the cadence defined by their parent procedure or plan. Material changes require a new review.
+Review completed templates at the cadence set by their parent procedure or plan. Material changes require a new review.
 
 ---
 
