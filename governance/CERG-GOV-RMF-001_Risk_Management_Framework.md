@@ -36,18 +36,18 @@
 
 ## 1. Purpose and Scope
 
-The CERG Risk Management Framework (CERG-RMF) defines how CERG, the Cyber Engineering, Risk, and Governance function, identifies, assesses, treats, and monitors cybersecurity risk across the enterprise. It is the connective tissue between the three CERG pillars and the foundational document that gives every risk decision a shared vocabulary, a shared process, and a clear owner.
+The CERG Risk Management Framework (CERG-RMF) says how the three CERG pillars — Cyber Engineering, Cyber Risk, Cyber Governance — identify, assess, treat, and monitor cybersecurity risk across the enterprise. Every other CERG risk document inherits its vocabulary, its process, and its owner-naming rules from this one.
 
-This framework is purpose-built to:
+This framework is built to:
 
 - Align with NIST RMF Steps 1–6 (Categorize, Select, Implement, Assess, Authorize, Monitor) while making each step operationally practical within CERG's three-pillar model.
 - Satisfy the risk management requirements of [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (Adaptive tier), [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) Rev 5, [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) Rev 3, [CMMC](https://dodcio.defense.gov/CMMC/) Level 2, NERC-CIP, and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC simultaneously.
-- Apply equally to IT and OT environments, accounting for the operational availability constraints and extended patch windows common in industrial and grid-connected systems.
-- Scale from a small team to a large organization without requiring structural changes.
+- Apply equally to IT and OT environments, accounting for the availability constraints and extended patch windows of industrial and grid-connected systems.
+- Scale from a small team to a large organization without restructuring.
 
 > **Design Intent**
 >
-> Risk management in CERG is not a periodic checkbox exercise. It is a continuous, adaptive cycle, one that feeds intelligence back into Engineering, drives accountability through Governance, and produces a risk posture the CISO can defend to regulators, auditors, and the board at any point in time.
+> Risk management in CERG does not close out at year end. It runs continuously. Engineering gets what the cycle learns, Governance keeps the accountability, and the CISO can state the organization's risk posture to a regulator, an auditor, or the board on any given Tuesday.
 
 ---
 
@@ -365,11 +365,11 @@ Continuous monitoring is the phase that separates Adaptive-tier programs from Re
 
 ### 9.1 The Risk Register
 
-The CERG Risk Register is the authoritative record of all identified, assessed, and tracked cybersecurity risks. It is owned by Governance, populated by Risk, and informed by Engineering. It is not a spreadsheet that lives on a network share, it is a living operational tool that drives accountability and informs every authorization decision.
+The risk register is the authoritative record of every cybersecurity risk the organization has identified, assessed, and agreed to track. Governance owns it, Risk populates it, Engineering informs it. A spreadsheet on a network share does not qualify: this register has to keep a name attached to every open risk, and every authorization decision has to read from it.
 
 ### 9.2 Risk Statement Format (FAIR-Aligned)
 
-Every risk entered into the register is written in a single, consistent statement format derived from the FAIR (Factor Analysis of Information Risk) model. FAIR decomposes risk into a Loss Event Frequency (LEF) and a Loss Magnitude (LM); the CERG statement format makes both halves explicit so that every register entry can be reasoned about, compared, and rolled up the same way.
+Every risk in the register is written in one statement format, taken from the FAIR (Factor Analysis of Information Risk) model. FAIR splits a loss event into two halves: how often it happens (Loss Event Frequency, LEF) and what it costs when it does (Loss Magnitude, LM). The format below forces both halves into the open so you can reason about any two entries, compare them, and roll them up the same way.
 
 **Canonical risk statement:**
 
@@ -473,7 +473,7 @@ CERG uses a 5x5 model: likelihood and impact are each rated 1-5, scored, and map
 
 This table is the single source of truth for who may accept residual risk. Every other CERG document that references acceptance authority points at this section.
 
-Security can assess, recommend, document, validate compensating controls, and escalate. But the business owner owns the consequence. Risk acceptance requires a business risk owner at every level where business impact exists. The CISO approves on behalf of the cybersecurity program; the Business Owner or Executive Sponsor accepts on behalf of the business unit that bears the operational impact.
+Security can assess, recommend, document, validate compensating controls, and escalate. But the business owner owns the consequence: wherever business impact exists, a business risk owner signs the acceptance at that level. The CISO approves on behalf of the cybersecurity program; the Business Owner or Executive Sponsor accepts on behalf of the business unit that bears the operational impact.
 
 | Residual Risk | Risk Role | Governance Role | Business Role | Acceptance By | Documentation | Default Max Duration |
 |---|---|---|---|---|---|---|
@@ -511,9 +511,9 @@ Use separate artifacts for the two paths. A policy or control exception uses the
 
 ### 9.8 Cybersecurity Risk Tolerance
 
-CERG's cybersecurity risk tolerance is expressed in two complementary ways: a qualitative posture statement that informs every treatment decision, and a quantitative loss-exposure tolerance that anchors acceptance decisions at the Critical and High bands. CERG calibrates this cybersecurity-specific model; it does not define enterprise financial, market, legal, or operational risk appetite. Governance runs the calibration process, Risk supplies exposure, loss-scenario, threat, and peer-benchmark analysis, and Engineering supplies control-feasibility and treatment-capacity input. The CISO approves the resulting cybersecurity tolerance posture and records it in the Decision Log.
+CERG states its cybersecurity risk tolerance two ways: a qualitative posture that informs every treatment decision, and a quantitative loss-exposure ceiling that anchors acceptance at the Critical and High bands. This model is cybersecurity-specific — CERG calibrates it; enterprise financial, market, legal, and operational appetite is not defined here. Governance runs the calibration. Risk brings the exposure, loss-scenario, threat, and peer-benchmark analysis; Engineering brings the view of what is actually buildable and staffable. The CISO approves the resulting cybersecurity tolerance posture and records it in the Decision Log.
 
-**Qualitative posture.** CERG operates under a "Yes, And…" orientation: the default response to a business request is "yes, and here are the conditions that make this safe." Reflexive refusal is not an acceptable risk management strategy. At the same time, three categories receive a deliberately low appetite:
+**Qualitative posture.** CERG operates under a "Yes, And…" orientation: the default response to a business request is "yes, and here are the conditions that make this safe." Reflexive refusal is not an acceptable risk management strategy. Five categories follow; three of them receive a deliberately low appetite:
 
 | Category | Appetite |
 |---|---|
