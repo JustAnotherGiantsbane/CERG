@@ -178,7 +178,6 @@ def main():
         except Exception:
             old_summaries = {}
 
-    line_cursor = 1
     docs = []
     for path in sorted([p for p in ROOT.rglob("*.md") if should_include(p)], key=sort_key):
         rel = path.relative_to(ROOT).as_posix()
@@ -191,9 +190,6 @@ def main():
         doc_type, pillar, prefix = type_and_pillar(path, doc_id)
         chars = len(text)
         tokens = round(chars / 3.5)
-        line_start = line_cursor
-        line_end = line_cursor + len(lines)
-        line_cursor = line_end + 2  # virtual boundary line
         summary = old_summaries.get(doc_id) or FALLBACK_SUMMARY.get(doc_id) or f"CERG {prefix} document: {title_for(path, doc_id, meta)}"
         docs.append({
             "id": doc_id,
@@ -206,7 +202,10 @@ def main():
             "classification": meta.get("Classification"),
             "owner": meta.get("Owner") or meta.get("Document Owner"),
             "path": rel,
-            "lines": [line_start, line_end],
+            # No `lines` field: absolute [start, end] ranges were write-only in this repository and
+            # made every addition shift the ranges of every later document, so two PRs that each
+            # regenerated this file conflicted at every line after the first change. A consumer that
+            # needs a range can accumulate `lines_count` in document order and add two per boundary.
             "lines_count": len(lines),
             "chars": chars,
             "tokens": tokens,
@@ -223,7 +222,8 @@ def main():
         "generated": date.today().isoformat(),
         "source": "local markdown corpus",
         "total_documents": len(docs),
-        "total_tokens_estimate": sum(d["tokens"] for d in docs),
+        # No `total_tokens_estimate`: no consumer in this repository, and it is sum(d["tokens"])
+        # over `documents`, which stays in the file.
         "by_type": by_type,
         "by_prefix": by_prefix,
         "prefixes": PREFIXES,

@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-STD-CUI-001 |
-| **Version** | 1.21 |
+| **Version** | 1.22 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | CMMC / Federal Compliance Manager |
@@ -22,12 +22,12 @@
 
 1. [Purpose and Scope](#1-purpose-and-scope)
 2. [CERG Roles in CUI Environments](#2-cerg-roles-in-cui-environments)
-3. [GOVERN, CUI Program Foundation](#3-govern--cui-program-foundation)
-4. [IDENTIFY, Inventory, Boundary, and Flow](#4-identify--inventory-boundary-and-flow)
-5. [PROTECT, Control Implementation for CUI](#5-protect--control-implementation-for-cui)
-6. [DETECT, Monitoring CUI Environments](#6-detect--monitoring-cui-environments)
-7. [RESPOND, Cyber Incident Reporting Under DFARS](#7-respond--cyber-incident-reporting-under-dfars)
-8. [RECOVER, Recovery and Lessons Learned](#8-recover--recovery-and-lessons-learned)
+3. [GOVERN, CUI Program Foundation](#3-govern-cui-program-foundation)
+4. [IDENTIFY, Inventory, Boundary, and Flow](#4-identify-inventory-boundary-and-flow)
+5. [PROTECT, Control Implementation for CUI](#5-protect-control-implementation-for-cui)
+6. [DETECT, Monitoring CUI Environments](#6-detect-monitoring-cui-environments)
+7. [RESPOND, Cyber Incident Reporting Under DFARS](#7-respond-cyber-incident-reporting-under-dfars)
+8. [RECOVER, Recovery and Lessons Learned](#8-recover-recovery-and-lessons-learned)
 9. [Training and Personnel](#9-training-and-personnel)
 10. [Regulatory and Framework Alignment Summary](#10-regulatory-and-framework-alignment-summary)
 11. [Exceptions, POA&M, and SSP Maintenance](#11-exceptions-poam-and-ssp-maintenance)
@@ -349,7 +349,7 @@ CUI control deficiencies do not follow the ordinary exception process. Open defi
 | | |
 |---|---|
 | **Document ID** | CERG-STD-CUI-001 |
-| **Version** | 1.21 |
+| **Version** | 1.22 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / Upon Significant Change / NIST 800-171 Revision |
 | **Change Log** | 1.0 - Initial publication. NIST 800-171r3, DFARS 252.204-7012, CMMC Level 2. |
@@ -359,6 +359,7 @@ CUI control deficiencies do not follow the ordinary exception process. Open defi
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.22 | 2026-10-30 | Governance Pillar Leader | Patch (#280): repaired 6 in-page links whose anchors no longer matched their headings after earlier heading edits. No content change. |
 | 1.0 DRAFT | 2026 | CERG Governance | Initial release - [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final), DFARS 252.204-7012, [CMMC](https://dodcio.defense.gov/CMMC/) Level 2 |
 
 ### Review Triggers

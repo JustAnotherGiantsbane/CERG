@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-VM-001 |
-| **Version** | 2.03 |
+| **Version** | 2.05 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Exposure Management Lead |
@@ -112,10 +112,11 @@ Each of these has different operational and audit implications. Collapsing them 
 
 | Role | Exposure Management Responsibility |
 |------|-----------------------------------|
-| **Exposure Management Lead** | Owns this procedure. Operates observation collection, triage, classification, and tracking. Publishes exposure posture. Drives treatment cadence. Owns SLAs. |
+| **Exposure Management Lead** | Owns this procedure: independent validation, classification, SLA measurement, treatment challenge, and exposure reporting. Publishes exposure posture and drives treatment cadence. Observation-source operation and intake tooling are first-line services. |
 | **Engineering Pillar Leader** | Implements treatments on assets it owns or supports. Defines secure configuration baselines. Provides architectural guidance for compensating controls. |
 | **System / Asset Owners** | Accountable for treatment of exposures on assets they own. Approve maintenance windows, accept residual risk. |
 | **IT / OT Operations Teams** | Execute treatment actions. Coordinate maintenance windows. Validate restoration. |
+| **First-line observation-source operators** (IT / OT operations, or a provider under the service owner's accountability) | Operate scanners, CSPM, SSPM, and intake integrations as first-line services; maintain source health; provide provenance and coverage status as intake metadata. |
 | **CISO** | Approves High and Critical risk acceptances where required by the canonical RMF authority table. Reviews exposure posture on defined cadence. |
 
 ---
@@ -128,13 +129,13 @@ Observations arrive from many sources. They are aggregated into a single pipelin
 
 | Source | Description | Owner |
 |--------|------------|-------|
-| Authenticated vulnerability scans | Network-based scans of servers, endpoints, network devices | Risk |
-| Container & image scans | Build-time and registry scans | Risk / Engineering |
-| Cloud posture (CSPM) | Cloud control-plane misconfigurations | Risk |
-| SaaS posture (SSPM) | Tier 1 SaaS configuration drift | Risk |
-| Software composition analysis (SCA) | Open-source and library vulnerabilities | Engineering / Risk |
-| SAST / DAST | Source-code and runtime application findings | Engineering / Risk |
-| OT passive monitoring | Vulnerabilities from passive OT network analysis | Risk |
+| Authenticated vulnerability scans | Network-based scans of servers, endpoints, network devices | First line |
+| Container & image scans | Build-time and registry scans | First line (delivery) |
+| Cloud posture (CSPM) | Cloud control-plane misconfigurations | First line |
+| SaaS posture (SSPM) | Tier 1 SaaS configuration drift | First line |
+| Software composition analysis (SCA) | Open-source and library vulnerabilities | First line (delivery) |
+| SAST / DAST | Source-code and runtime application findings | First line (delivery) |
+| OT passive monitoring | Vulnerabilities from passive OT network analysis | First line |
 | Vendor advisories | Patches, fixes, bulletins | Risk |
 | ISAC / regulator feeds | E-ISAC, CISA, ICS-CERT | Risk |
 | Adversarial validation | Pen test, red-team, purple-team, cloud, OT-safe, or other authorized adversarial findings | Risk |
@@ -142,9 +143,28 @@ Observations arrive from many sources. They are aggregated into a single pipelin
 | Incident-driven discovery | Vulnerabilities identified during/after incidents | Risk / Engineering |
 | SBOM | Vulnerabilities in third-party components | Risk |
 
+Observation-source operation, including the scanning, posture, pipeline, and passive-monitoring sources above, is a first-line service. Where CERG operates a source, the hybrid rule in [CERG-GOV-OM-001](../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §2.4 applies and the independent assessor is named. For every source, CERG requires provenance and coverage status as intake metadata: the environments and asset classes covered, known blind spots, and current source health. A source's coverage claim is a validation input, not an assumption; CERG samples observations and coverage exports to verify the claim independently, and provider operating evidence does not close an exposure by itself.
+
+For an operated source, its **Exposure Source ID** is the stable `system_id` of its service System Control Profile (SCP). A scanner estate, CSPM tenant, SSPM deployment, SOC intake service, or OT passive-monitoring deployment may each have a source SCP; the ID identifies that bounded operated source, not a generic product name. This does not create a source register or second identifier. The native tool finding or event ID remains separate. For an external advisory, researcher report, or feed with no source SCP, use the publisher or native identifier for provenance and cite its existing canonical record when one is created; do not create a fictional service SCP.
+
+A protected-system SCP's `security_service_references[]` identifies the source services expected to cover it; it is not a coverage assertion. Current coverage and source-health evidence, plus independent sampling, determine whether the expectation holds. An unresolvable source ID, missing coverage evidence, or expected-versus-asserted coverage mismatch does not alter the observation's severity or stop triage. Preserve the observation and open or reuse an Asset Coverage Record where coverage is absent, or a Finding Record where source health or provenance is defective.
+
+Adversarial validation findings enter this workflow through the existing Adversarial Validation Record defined in [CERG-PRC-AV-001](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md), which remains the artifact for test scope, results, and remediation evidence. No new record type is introduced by the operating boundary; test plans for CERG-authored candidate detection content receive independent review per that procedure.
+
 ### 4.2 Observation Intake
 
 All observations enter the pipeline with source metadata, a timestamp, and the raw severity/score reported by the tool. No SLA clock starts at this point. The clock starts at confirmation (Step 4).
+
+| Intake metadata | Required content |
+|---|---|
+| `observation_source_id` | The source service SCP `system_id` for an operated source; otherwise the publisher or native origin identifier. |
+| `source_class` | The applicable source class in Section 4.1. |
+| `source_event_id` | The native tool, advisory, or test identifier used for deduplication and replay. |
+| `observed_at` | The time the source observed or issued the signal. |
+| `coverage_evidence_reference` | Current coverage or source-health evidence for the asserted period, where the source is operated. |
+| `origin_record_reference` | The related Adversarial Validation, Threat Intelligence, Incident, Vendor Risk, or other canonical record where one exists. |
+
+The record fields may be implemented as native tool fields, evidence-index metadata, or an intake-integration mapping; the canonical names above must remain traceable. An origin record is cited when it exists and is not a prerequisite for external intake.
 
 ### 4.3 External Reports and Supply Chain
 
@@ -195,6 +215,8 @@ When a compensating control is used to lower an exposure classification, defer t
 
 A claimed control is not sufficient. Absent, stale, irrelevant, failed, or degraded evidence cannot support a compensated disposition. The applicable control owner addresses a failed or degraded control through the relevant control-effectiveness, adversarial-validation, Governance, and treatment processes; Exposure Management consumes that result as path context. This does not change the risk-acceptance authority in RMF-001.
 
+Operating evidence alone cannot support a compensated-exposure disposition. The disposition requires an independent technical-effectiveness claim meeting the conditions in [CERG-GOV-OM-001](../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §2.4, including a current capability basis for the service that produced the evidence.
+
 ### 6.2 KEV Acceleration
 
 If the observation matches a CISA Known Exploited Vulnerabilities (KEV) entry and the asset is confirmed real, the exposure path assessment is accelerated regardless of CVSS score. A KEV entry means active exploitation exists in the wild — the assessment shifts from "is this exploitable" to "is this already being exploited against us."
@@ -203,7 +225,7 @@ If the observation matches a CISA Known Exploited Vulnerabilities (KEV) entry an
 
 ## 7. Step 4 — Classify
 
-After validation and reachability assessment, every observation is classified into exactly one category. This classification drives treatment priority, not CVSS score.
+After validation and reachability assessment, every observation is classified into exactly one category. This classification drives treatment priority, not CVSS score. Each classification records the version of the Threat Intelligence relevance criteria in force when it was made (criteria owned per [`CERG-GOV-RAC-001`](../governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) Section 6.2) — the same currency pattern as evidence, applied to the criteria — so classification decisions are auditable against the criteria that produced them.
 
 ### 7.1 Classification Taxonomy
 
@@ -446,7 +468,7 @@ Immediate escalation to CISO:
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-VM-001 |
-| **Version** | 2.03 |
+| **Version** | 2.05 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Exposure Management Lead |
@@ -463,6 +485,8 @@ Immediate escalation to CISO:
 
 | Version | Date | Author | Change Summary |
 |---------|------|--------|---------------|
+| 2.05 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Defined stable Exposure Source IDs without a source register: operated sources use their service SCP `system_id`; observation intake records source class, native event, time, coverage evidence, and origin record where available; protected-system references express expected coverage only; provenance and coverage gaps use existing Asset Coverage or Finding Records. Classification currency per #234: Section 7 requires each classification to record the Threat Intelligence relevance-criteria version in force when made (criteria owned per RAC-001 6.2), the evidence-currency pattern applied to the criteria. |
+| 2.04 | 2026-10-28 | Governance Pillar Leader | Observation-source operation moved to first line in 4.1 with provenance and coverage intake metadata; Exposure Management Lead recast to validation, classification, SLA measurement, and challenge in 3; compensated dispositions require an independent technical-effectiveness claim per OM-001 2.4. Per second-line boundary RFC. |
 | 2.03 | 2026-10-27 | Governance Pillar Leader | Semi-annual review completed. Confirmed the six-step exposure workflow, treatment routing, regulatory overlays, adversarial-validation handoff, and metrics references remain current. Aligned the front-matter review cycle to the authoritative semi-annual Procedure Control cadence. |
 | 2.02 | 2026-06-18 | Governance Pillar Leader | Added OT/BES patch deferral routing for non-BES OT, BES compliance-unaffected deferrals, BES compliance-impacting deviations, and emergency operational exceptions. |
 | 2.01 | 2026-06-14 | Governance Pillar Leader | Aligned CISO risk-acceptance role language to the canonical RMF authority table. |

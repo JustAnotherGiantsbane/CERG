@@ -7,7 +7,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-MTR-001 |
-| **Version** | 1.36 |
+| **Version** | 1.38 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Reporting) |
@@ -75,11 +75,31 @@ The dictionary is the source-of-truth definition for every CERG metric. Each ent
 | RM-004 | Exception Backlog | Open exceptions count | Exception register | Weekly | ≤ 25 / 26–60 / > 60 | CISO Dashboard |
 | RM-005 | Exception Aging | % of open exceptions older than 12 months | Exception register | Monthly | ≤ 5% / 6–15% / > 15% | CISO Dashboard, COG Brief |
 | RM-006 | OU Risk Concentration Index | Std deviation of OU residual-score weighted sums | Risk register | Monthly | ≤ baseline / ±10% / > baseline+10% | CISO Dashboard |
-| RM-007 | Scenario Defense Coverage | % of named loss scenarios ([`CJ-001`](CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md)) where every chain-breaking control is Implemented (CB-001) AND Effective (CEF-001) | CJ-001 + CB-001 + CEF-001 | Quarterly | ≥ 90% / 75–90% / < 75% | CISO Dashboard, COG Brief, Board |
+| RM-007 | Scenario Defense Coverage (implementation state) | % of named loss scenarios ([`CJ-001`](CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md)) where every chain-breaking control is Implemented (CB-001) AND Effective (CEF-001) — a control-state statement, not evidence the controls hold | CJ-001 + CB-001 + CEF-001 | Quarterly | No bands — reported as a count with a named exception list | COG Brief, beside the challenged-scenario count |
+
+**RM-007 is reported as a pair, never as a score.** Coverage of implementation state says nothing about
+whether the controls hold: a scenario counts when every chain-breaking control is Implemented and
+Effective on paper, and it counts identically whether or not any adversary has tried the chain. Report
+it beside the count of scenarios in the period where every chain-breaking link was challenged or carried
+bounded alternative validation ([`CJ-001`](CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md)
+§5.5). Where the two numbers diverge, the gap is assurance debt and it is the number worth discussing.
+No threshold is set on either.
+
+**Definition — challenged-scenario count.** Counts named scenarios in the register for which a current
+pressure-test Evidence Index Entry demonstrates that every chain-breaking link was directly challenged,
+or carried bounded alternative independent validation, under
+[`CJ-001`](CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md) §5.5. Each count is reported
+with the evidence period its entries cover and a named exception list of scenarios where a link was
+recorded as a gap on the residual path. A scenario with no entry, or with an entry whose evidence has
+expired, is not counted. No threshold is set and no second metric ID is created; the definition exists so
+that two reporters cannot count different things.
 
 ### 3.2 Exposure Management Metrics (Owner: Cyber Risk)
 
-These metrics measure exposure reduction, not scanner activity. They track the pipeline from observation to verified closure.
+These metrics measure exposure reduction, not scanner activity. They track the pipeline from observation to
+verified closure. Two counts that used to sit in this table — SLA misses with and without a verified
+compensating control — now report as first-line operating health in Section 3.2c. Their definitions and bands
+are unchanged; what changed is who the number is about.
 
 | **ID** | **Name** | **Formula** | **Source** | **Refresh** | **G / A / R** | **Reported In** |
 |---|---|---|---|---|---|---|
@@ -89,8 +109,6 @@ These metrics measure exposure reduction, not scanner activity. They track the p
 | EM-004 | KEV with Reachable Path | Count of KEV-matched observations in "Exposure Confirmed" or "Material Risk" state | Exposure pipeline + KEV catalog | Daily | 0 / 1–5 / > 5 | CISO Dashboard |
 | EM-005 | KEV Blocked by Verified Control | Count of KEV-matched observations classified as "Confirmed Flaw, Not Exposed" due to verified compensating controls | Exposure pipeline + KEV catalog | Weekly | Watchlist; no control target | CISO Dashboard |
 | EM-006 | Exposures on Crown Jewels | Count of confirmed exposures on crown-jewel-classified assets | Exposure pipeline + CJ-001 crown-jewel register | Daily | 0 / 1–2 / > 2 | CISO Dashboard |
-| EM-007 | SLA Misses with Compensating Controls | Exposures past SLA where a verified compensating control exists | Exposure pipeline | Weekly | ≤ 5 / 6–15 / > 15 | CISO Dashboard |
-| EM-008 | SLA Misses with No Controls | Exposures past SLA with no compensating control | Exposure pipeline | Weekly | 0 / 1–3 / > 3 | CISO Dashboard, COG Brief |
 | EM-009 | Observation-to-Decision Time | Median days from observation intake to classification | Exposure pipeline | Monthly | ≤ 3d / 4–7d / > 7d | COG Brief |
 | EM-010 | Decision-to-Treatment Time | Median days from classification to treatment selection | Exposure pipeline | Monthly | ≤ 2d / 3–5d / > 5d | COG Brief |
 
@@ -111,6 +129,22 @@ Patch hygiene is a maintenance function distinct from exposure reduction. These 
 | DT-001 | ATT&CK Detection Coverage | In-scope ATT&CK techniques with at least one authored, tested, `In Production` detection in the derived `Operating` condition ÷ all in-scope ATT&CK techniques | Detection registry + SIEM source-health record | Nightly | ≥ 70% / n/a / < 70% | CISO Dashboard, COG Brief |
 | DT-002 | Purple Validation Pass Rate | Production detections due for quarterly purple-team validation with a `Pass` result ÷ all production detections due for quarterly purple-team validation. `Pass-with-Latency`, `Pass-with-Tuning-Needed`, `Fail`, and `Fail-Suppressed` do not count as `Pass`. | Adversarial Validation Record + detection registry | Quarterly | ≥ 90% / ≥ 75% and < 90% / < 75% | COG Brief |
 | DT-003 | Mandatory Log Source Onboarding | Onboarded mandatory source requirements across in-scope environments ÷ all mandatory Section 3 source requirements applicable to those environments. An approved exception remains an unmet requirement and is identified in the report. | SIEM Onboarding Record + SIEM source inventory | Monthly | ≥ 98% / ≥ 90% and < 98% / < 90% | CISO Dashboard |
+
+### 3.2c Operating Health — First Line (reported, not owned by CERG)
+
+These counts describe how well the operating party is delivering the exposure service. That is a
+legitimate operating statistic and it is not a CERG program result. Definitions, sources, refresh and
+bands are unchanged from Section 3.2 — only the reporting line moved.
+
+| **ID** | **Name** | **Formula** | **Source** | **Refresh** | **G / A / R** | **Reported In** |
+|---|---|---|---|---|---|---|
+| EM-007 | SLA Misses with Compensating Controls | Exposures past SLA where a verified compensating control exists | Exposure pipeline | Weekly | ≤ 5 / 6–15 / > 15 | First-line operating report; regulatory route where applicable |
+| EM-008 | SLA Misses with No Controls | Exposures past SLA with no compensating control | Exposure pipeline | Weekly | 0 / 1–3 / > 3 | First-line operating report; COG Brief where the count is non-zero |
+
+CERG's own exposure reporting remains the classification and decision metrics in Section 3.2: what was
+ranked, what was decided, and what closed with independent verification. Where a regulator requires the
+SLA counts — CIP-007 patching windows, SOX ITGC remediation — Governance reports them through the
+existing regulatory route. The SLAs themselves do not move and do not soften.
 
 ### 3.3 Engineering / Configuration Metrics (Owner: Cyber Engineering)
 
@@ -236,6 +270,53 @@ New adopters have no baseline. SR metrics are reported with phase context so tha
 | **Gate 3+ (Governed / Adaptive)** | Per SLC-001 §3.1 | Per SLC-001 §3.3 (3 business days) | Per SLC-001 §3.1 / §3.3 | Per SLC-001 §3.2 (5 business days) |
 
 > **Phase-Context Reporting.** The CISO Dashboard reports SR metrics with a phase-context indicator (e.g., "Gate 1 — transitional target"). The COG Brief includes the phase label in the SR-001 through SR-005 tiles. Phase advancement is recorded in the adoption gates document ([`CERG-GOV-IMP-005`](CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md)).
+
+---
+
+### 3.10 Experimental Pilot Reporting (time-boxed)
+
+These items test whether the assurance model produces findings the operator could not have produced.
+They are experimental, scoped to the pilot, and withdrawn if they do not change a decision.
+
+**3.10.1 Prioritization-Quality Tally**
+
+Counts per period, from records that already exist. No percentage, no score, no target.
+
+Three signal classes, reported separately and never summed into a single "exploited" figure, because two
+of the three are corroboration rather than observation in this organization:
+
+| Signal class | What it establishes | Source |
+|---|---|---|
+| External KEV designation with a reachable path | The exposure class is being exploited somewhere comparable — not that it was exploited here | EM-004 |
+| Internal incident finding | Exploitation observed in this organization | Incident record, Finding Record |
+| AV-confirmed path | The path is exploitable under tested conditions — a path, not its prevalence | Adversarial Validation Record |
+
+| Tally item | Definition |
+|---|---|
+| Exposures CERG ranked in the period's highest band | `VM-001` classification output |
+| Of those, later matched by a signal of each class | joined on the exposure identifier, class by class |
+| Inverse — signals that join to an exposure CERG had ranked low | the same join, in reverse |
+| Denominator — observations classified in the period | `VM-001` |
+
+A signal that cannot be joined to a prior classification is reported as a **coverage and mapping
+limitation**. It is evidence that the tally's own inputs are incomplete, and it is never counted as
+evidence that CERG ranked something low.
+
+Seven limits, stated with the tally rather than discovered after it:
+
+1. Small N — one period cannot distinguish judgement from luck.
+2. Selection bias — the top band is itself a judgement, so a flattering result may only show CERG ranked its own favourites.
+3. Proxy substitution — a KEV designation describes an exposure class, not this estate; only the internal-incident class is direct observation.
+4. Attribution ambiguity — an exposure may be remediated between ranking and the signal, turning a hit into a near-miss or the reverse.
+5. KEV lag — additions trail exploitation, so recent periods are systematically undercounted.
+6. Adversarial validation samples technique classes, not prevalence.
+7. No exposure-time denominator — reporting a percentage would invite arithmetic the data cannot support.
+
+Join coverage is reported beside the tally: the share of signals that resolved to a prior classification.
+Without it, a low matched count is indistinguishable from a mapping gap.
+
+Reporting rule: counts plus a short narrative. Three periods minimum before anyone interprets it. If
+three periods do not distinguish ranking quality from luck, the tally is withdrawn rather than defended.
 
 ---
 
@@ -521,8 +602,8 @@ Threshold changes are recorded as improvement register entries (IMPREG-001, type
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-MTR-001 |
-| **Version** | 1.36 |
+| **Version** | 1.38 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / metrics-platform change |
-| **Change Log** | 1.0 - Initial publication. Establishes dictionary, source map, CISO dashboard, briefs, and anti-shallow guardrails. · 1.1 - Added Section 3.7 Predictive and Leading Indicators (PL-001 through PL-007). · 1.2 - Restored Section 9 Cadence and Ownership. · 1.3 - Added Section 10 Threshold Calibration: cadence, triggers, rules, change log, and improvement register integration. · 1.32 - Added §6.1 Control Funding Decision Brief pattern for business funding/prioritization decisions tied to control gaps and risk treatments. · 1.33 - Expanded identity metrics ID-005 through ID-008 for identity assurance package currency, external identity staleness, NHI compliance, and session/token containment readiness. · 1.34 - Split session/token containment into documented-path and tested-path metrics, and added identity assurance package accuracy spot-check metric. · 1.35 - Defined DT-001 to exclude data-blind detections from ATT&CK coverage and show impacted coverage as Red. · 1.36 - Restored DT-002 purple-validation and DT-003 mandatory-log-source-onboarding definitions with explicit scoped denominators. |
+| **Change Log** | 1.0 - Initial publication. Establishes dictionary, source map, CISO dashboard, briefs, and anti-shallow guardrails. · 1.1 - Added Section 3.7 Predictive and Leading Indicators (PL-001 through PL-007). · 1.2 - Restored Section 9 Cadence and Ownership. · 1.3 - Added Section 10 Threshold Calibration: cadence, triggers, rules, change log, and improvement register integration. · 1.32 - Added §6.1 Control Funding Decision Brief pattern for business funding/prioritization decisions tied to control gaps and risk treatments. · 1.33 - Expanded identity metrics ID-005 through ID-008 for identity assurance package currency, external identity staleness, NHI compliance, and session/token containment readiness. · 1.34 - Split session/token containment into documented-path and tested-path metrics, and added identity assurance package accuracy spot-check metric. · 1.35 - Defined DT-001 to exclude data-blind detections from ATT&CK coverage and show impacted coverage as Red. · 1.36 - Restored DT-002 purple-validation and DT-003 mandatory-log-source-onboarding definitions with explicit scoped denominators. · 1.37 - EM-007 and EM-008 reclassified to Section 3.2c first-line operating health, definitions and bands unchanged; RM-007 demoted from a thresholded coverage score to a paired count with the challenged-scenario count; Section 3.10 added as time-boxed experimental pilot reporting. No threshold, formula, or SLA change. · 1.38 - Defines the challenged-scenario count that RM-007 is paired with (inclusion rule, evidence period, named exceptions); splits the pilot tally into three signal classes and counts the inverse only where a signal joins to a prior classification, with unjoined signals reported as a coverage limitation. No threshold or metric ID added. |
 

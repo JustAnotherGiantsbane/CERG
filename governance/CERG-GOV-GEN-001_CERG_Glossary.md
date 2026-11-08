@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-GEN-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Document Control) |
@@ -24,7 +24,7 @@
 2. [How to Use This Glossary](#2-how-to-use-this-glossary)
 3. [Canonical Terms](#3-canonical-terms)
 4. [Record Types and Their Terms](#4-record-types-and-their-terms)
-5. [Conversion Rules](#5-conversion-rules)
+5. [Conversion Rules](#5-conversion-rules-extended)
 6. [Role Names](#6-role-names)
 7. [Document Control](#7-document-control)
 
@@ -163,7 +163,7 @@ These are the canonical role names used across CERG artifacts. Roles collapse on
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-GEN-001 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-18 |
 | **Classification** | Public |
@@ -180,6 +180,7 @@ These are the canonical role names used across CERG artifacts. Roles collapse on
 
 | **Version** | **Date** | **Author** | **Change** |
 |---|---|---|---|
+| 1.1 | 2026-10-30 | Governance Pillar Leader | Patch (#280): repaired 1 in-page link whose anchor no longer matched its heading after earlier heading edits. No content change. |
 | 1.0 | 2026-06-18 | Governance Pillar Leader (Document Control) | Initial publication. Extracted canonical terms from FLOW-001 §2 (Operating Principles, Record Type Definitions) and CB-001 / RMF-001 / OM-001 cross-references. Added extended conversion rules and canonical role names per roles/ directory. |
 
 ### Review Triggers

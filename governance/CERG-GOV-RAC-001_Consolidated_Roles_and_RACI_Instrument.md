@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-RAC-001 |
-| **Version** | 1.3 |
+| **Version** | 1.6 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
@@ -78,7 +78,7 @@ Rules that govern every row in this instrument:
 2. **A and R may be the same role.** On any team, and especially a small one, the role accountable for an outcome often also does the work. That is shown as **R/A**.
 3. **The A cannot be only Informed.** A role accountable for an outcome is never merely Informed of it.
 4. **Approval authority is not overridden here.** Where a row involves risk acceptance, the accountable approver is the one named in the authority table of [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. This instrument does not change who may accept risk.
-5. **Roles are canonical.** Every role in this instrument is a canonical role from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1. No synonyms.
+5. **CERG roles are canonical.** Every CERG role in this instrument is a canonical role from [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1. First-Line Service Owner and First-Line Operator are adopter-designated adjacent actors, not new CERG canonical roles; the service control profile names them.
 
 ---
 
@@ -89,7 +89,7 @@ The 27 canonical roles, grouped by pillar, as established in [`CERG-GOV-OM-001`]
 | **Group** | **Canonical Roles** | **NICE Work Role Category** |
 |---|---|---|
 | Executive | Chief Information Security Officer (CISO); Executive Sponsor | OV (Oversee and Govern) |
-| Engineering | Engineering Pillar Leader; Cloud Security Engineer; Identity Engineer; OT Security Engineer; Application Security Engineer; Endpoint Engineer; Cryptography Engineer; Pre-production Reviewer | SP (Securely Provision), OM (Operate and Maintain) |
+| Engineering | Engineering Pillar Leader; Cloud Security Engineer; Identity Engineer; OT Security Engineer; Application Security Engineer; Endpoint Engineer; Cryptography Engineer; Pre-production Reviewer | SP (Securely Provision) |
 | Risk | Risk Pillar Leader; Exposure Management Lead; Adversarial Testing Lead; Threat Intelligence Analyst; Vendor Risk Analyst; OT Risk Analyst; Identity Risk Analyst; Detection Engineer | PR (Protect and Defend), AN (Analyze) |
 | Governance | Governance Pillar Leader; NERC-CIP Compliance Manager; CMMC / Federal Compliance Manager; SOX ITGC Lead; Policy & Standards Manager; Risk Register Owner; Evidence Librarian | OV (Oversee and Govern) |
 | Adjacent (IR team) | Incident Commander; Lead Investigator | PR (Protect and Defend), IN (Investigate) |
@@ -158,32 +158,34 @@ Columns are abbreviated: **ENG-L** Engineering Pillar Leader, **RISK-L** Risk Pi
 
 This RACI covers the recurring processes that make up the running program. It extends the three sample patterns in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §9 into a complete set.
 
-Columns: **ENG** Engineering pillar, **RISK** Risk pillar, **GOV** Governance pillar, **OWNER** Business or Asset Owner, **CISO** Chief Information Security Officer. A cell names the specific canonical role where one role within the pillar carries it.
+Columns: **ENG** Engineering pillar, **RISK** Risk pillar, **GOV** Governance pillar, **SVC OWNER** named internal accountable business or service owner, **OPERATOR** internal team or provider that performs service work, **OWNER** Business or Asset Owner, **CISO** Chief Information Security Officer. Decision and risk-routing rights attach to SVC OWNER, never to a provider; OPERATOR may be internal or external. A cell names the specific canonical role where one role within the pillar carries it.
 
 ### 6.1 Engagement and Build
 
-| **Process** | **ENG** | **RISK** | **GOV** | **OWNER** | **CISO** |
-|---|---|---|---|---|---|
-| Project intake and architecture review | **R/A** | C | C | C | I |
-| Threat modeling during design | C | **R** | I | C | I |
-| Secure development gate enforcement | **R/A** | C | I | I | I |
-| Pre-production review and go-live readiness | **R/A** Pre-production Reviewer | C | C | C | I |
-| Approve go-live | **R** | C | C | **A** | I |
-| Asset onboarding to the inventory | **R/A** | C | I | C | I |
+| **Process** | **ENG** | **RISK** | **GOV** | **SVC OWNER** | **OPERATOR** | **OWNER** | **CISO** |
+|---|---|---|---|---|---|---|---|
+| Project intake and architecture review | **R/A** | C | C | C | C | C | I |
+| Threat modeling during design | C | **R** | I | C | C | C | I |
+| Secure development gate enforcement | C | C | I | **A** First-Line Service Owner | **R** First-Line Operator | I | I |
+| Pre-production technical review | **R/A** Pre-production Reviewer | C | C | C | C | C | I |
+| Go-live decision and release | C | C | C | **A** First-Line Service Owner | **R** First-Line Operator | C | I |
+| Asset onboarding to the inventory | C | C | I | **A** First-Line Service Owner | **R** First-Line Operator | C | I |
 
 ### 6.2 Exposure and Risk
 
-| **Process** | **ENG** | **RISK** | **GOV** | **OWNER** | **CISO** |
-|---|---|---|---|---|---|
-| Exposure scanning and SLA tracking | C | **R/A** Exposure Management Lead | I | I | I |
-| Vulnerability remediation | **R** | C | I | **A** | I |
-| Adversarial validation (pen test, red team, purple team, cloud/app/OT-safe testing where in scope) | C | **R** Adversarial Testing Lead / **A** Risk Pillar Leader | I | I | I |
-| Threat intelligence collection and dissemination | C | **R/A** Threat Intelligence Analyst | C | I | I |
-| Risk register entry and curation | I | C | **R/A** Risk Register Owner | I | I |
-| Risk treatment decision | C | C | C | **A** | I (review High+) |
-| Risk acceptance approval | per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 | per RMF §9.7 | per RMF §9.7 | C | **A** for High+ |
-| Exception request and tracking | C | C | **R/A** Risk Register Owner | C | I |
-| Third-party and supply chain risk assessment | C | **R/A** Vendor Risk Analyst | C | C | I |
+| **Process** | **ENG** | **RISK** | **GOV** | **SVC OWNER** | **OPERATOR** | **OWNER** | **CISO** |
+|---|---|---|---|---|---|---|---|
+| Exposure observation-source operation and source health | C | C | I | **A** First-Line Service Owner | **R** First-Line Operator | I | I |
+| Exposure validation, classification, and SLA measurement | C | **R/A** Exposure Management Lead | I | C | C | I | I |
+| Vulnerability remediation | C | C | I | **A** First-Line Service Owner | **R** First-Line Operator | C | I |
+| Adversarial validation (pen test, red team, purple team, cloud/app/OT-safe testing where in scope) | C | **R** Adversarial Testing Lead / **A** Risk Pillar Leader | I | C | C | I | I |
+| Strategic and tactical risk intelligence, relevance criteria, and advisories | C | **R/A** Threat Intelligence Analyst | C | I | I | I | I |
+| Operational threat monitoring, hunting, and IOC action | I | C | I | **A** First-Line Service Owner | **R** First-Line Operator | I | I |
+| Risk register entry and curation | I | C | **R/A** Risk Register Owner | I | I | I | I |
+| Risk treatment decision | C | C | C | I | C | **A** | I (review High+) |
+| Risk acceptance approval | per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 | per RMF §9.7 | per RMF §9.7 | I | I | C | **A** for High+ |
+| Exception request and tracking | C | C | **R/A** Risk Register Owner | I | C | C | I |
+| Third-party and supply chain risk assessment | C | **R/A** Vendor Risk Analyst | C | I | I | C | I |
 
 ### 6.3 Governance and Assurance
 
@@ -199,18 +201,19 @@ Columns: **ENG** Engineering pillar, **RISK** Risk pillar, **GOV** Governance pi
 
 ### 6.4 Operations and Detection
 
-| **Process** | **ENG** | **RISK** | **GOV** | **OWNER** | **CISO** |
-|---|---|---|---|---|---|
-| Access provisioning and review | **R/A** Identity Engineer | C | C | C | I |
-| Detection content authoring and tuning | C | **R/A** Detection Engineer | I | I | I |
-| Logging and monitoring coverage | C | **R** Detection Engineer | **A** | I | I |
-| Incident detection handoff to the IR team | C | **R** | C | I | I |
-| Incident response operations | C (Engineering Lead) | C (Lead Investigator) | C (Governance Lead) | I | I |
-| Post-incident risk-register entry | I | C | **R/A** Risk Register Owner | I | I |
+| **Process** | **ENG** | **RISK** | **GOV** | **SVC OWNER** | **OPERATOR** | **OWNER** | **CISO** |
+|---|---|---|---|---|---|---|---|
+| Access provisioning and review | C | C | C | **A** First-Line Service Owner | **R** First-Line Operator | C | I |
+| Detection requirements, test cases, and candidate content | C | **R/A** Detection Engineer | I | I | I | I | I |
+| Production detection deployment, tuning, and source health | C | C | I | **A** First-Line Service Owner | **R** First-Line Operator | I | I |
+| Logging and monitoring coverage | C | **R** Detection Engineer | **A** | C | C | I | I |
+| Alert acknowledgement, triage, and handoff to the IR team | C | C | C | **A** First-Line Service Owner | **R** First-Line Operator | I | I |
+| Incident response operations | C (Engineering Lead) | C (Lead Investigator) | C (Governance Lead) | I | R/C as contracted | I | **A** Incident Commander |
+| Post-incident risk-register entry | I | C | **R/A** Risk Register Owner | I | I | I | I |
 
 > **Incident Response Is Supported, Not Owned**
 >
-> Section 6.4 shows incident response operations with CERG roles as Consulted, never Accountable. This is the boundary set by [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4. The standing IR team owns and runs the incident. CERG detects the incident, hands it off, supplies the Engineering Lead, Lead Investigator, and Governance Lead roles when the IR team calls for them, and afterward records the post-incident risk in the register. The Incident Commander, an Adjacent role, is Accountable for the incident itself, which is why no CERG column carries the A.
+> Section 6.4 shows incident response operations with CERG roles as Consulted, never Accountable. This is the boundary set by [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4. The standing IR team owns and runs the incident. First-line security operations detects and hands off the incident; CERG supplies the Engineering Lead, Lead Investigator, and Governance Lead roles when the IR team calls for them, and afterward records the post-incident risk in the register. The Incident Commander, an Adjacent role, is Accountable for the incident itself, which is why no CERG column carries the A.
 
 ---
 
@@ -226,39 +229,39 @@ A normalized one-paragraph description for each canonical role. These are the jo
 
 ### 7.2 Engineering
 
-**Engineering Pillar Leader.** Accountable for the Cyber Engineering pillar: project intake, reference architecture, and the secure build of the estate. Accountable for the technical standards authored by Engineering, including configuration, resilience, cryptography, secure development, asset management, network, endpoint, AI, and email security. Resolves software risk-tier disputes.
+**Engineering Pillar Leader.** Accountable for Engineering's project intake, reference architecture, technical review service, and technical standards. Resolves technical software-risk-tier disputes and escalates material disagreement; does not own the secure build, production operation, or go-live decision for a first-line service.
 
-**Cloud Security Engineer.** Owns cloud and SaaS platform security: infrastructure-as-code, cloud posture management, the landing zone, cloud network security, and the email and messaging platforms where they are SaaS. Responsible for shadow-IT and shadow-AI discovery through cloud signals.
+**Cloud Security Engineer.** Defines cloud and SaaS platform security requirements and reference patterns: infrastructure-as-code content, cloud posture requirements and test cases, landing-zone design, cloud network security, and the email and messaging security requirements where those platforms are SaaS. First-line service owners and operators run the cloud, SaaS, and messaging platforms and their posture tooling. Responsible for shadow-IT and shadow-AI discovery requirements through cloud signals.
 
-**Identity Engineer.** Owns identity and access engineering: the identity provider, multi-factor authentication, single sign-on, privileged access management, secrets management, and federation. Responsible for access provisioning and review and for the Access Management Runbook.
+**Identity Engineer.** Supplies identity and access engineering: reference designs and guardrails for the identity provider, multi-factor authentication, single sign-on, privileged access management, secrets management, and federation. First-line service owners and operators perform production access provisioning and review; the Identity Engineer supports their design and assurance needs.
 
-**OT Security Engineer.** Owns operational technology security engineering: IT/OT convergence, the electronic security perimeter, the IT/OT boundary design, and BES Cyber System baselines. Responsible for OT-safe asset discovery and transient cyber asset control.
+**OT Security Engineer.** Defines OT security requirements and reference design: IT/OT convergence, the electronic security perimeter, the IT/OT boundary design, and BES Cyber System baselines. OT operations executes discovery and transient cyber asset control; the OT Security Engineer sets their requirements and validates the resulting state.
 
-**Application Security Engineer.** Owns application security: SAST, DAST, and SCA rulesets, threat modeling, secure-development gate content, and the security of in-house and embedded AI systems. Accountable for the Secure Software Development and the Artificial Intelligence Security standards.
+**Application Security Engineer.** Defines application-security requirements, candidate SAST/DAST/SCA content, secure-development gate criteria, and technical review and test methods for in-house and embedded AI systems. First-line pipeline owners and operators deploy, tune, and run the tools and gates; the engineer reviews output and independently tests in approved scope.
 
-**Endpoint Engineer.** Owns endpoint and mobile security: endpoint and mobile baselines, the management and endpoint detection and response platforms, and the device posture signal consumed by the network and access standards. Accountable for the Endpoint and Mobile Security Standard.
+**Endpoint Engineer.** Defines endpoint and mobile security requirements and baselines, and the device-posture signal consumed by the network and access standards. The first-line operator runs the endpoint management and EDR platforms. Accountable for the Endpoint and Mobile Security Standard.
 
-**Cryptography Engineer.** Owns cryptography and key management: the key management and secrets platforms, the certificate authority hierarchy, transport security posture, and FIPS compliance. Supports rotation of exposed secrets.
+**Cryptography Engineer.** Defines cryptography and key-management requirements: key-management and secrets platform requirements, the certificate authority hierarchy design, transport-security posture, and FIPS compliance criteria. The first-line operator runs the key-management and secrets platforms and executes rotation of exposed secrets.
 
-**Pre-production Reviewer.** A rotated Engineering role. Owns the pre-production checklist and signs go-live readiness, confirming that pre-production findings are remediated or risk-accepted before a system goes live.
+**Pre-production Reviewer.** A rotated Engineering role. Conducts the pre-production technical review and states its disposition, confirming whether findings are remediated or follow the existing risk-acceptance route. The business or service owner decides go-live.
 
 ### 7.3 Risk
 
 **Risk Pillar Leader.** Accountable for the Cyber Risk pillar: the organization's exposure posture and the reporting of it. Holds Medium severity risk-acceptance authority per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7.
 
-**Exposure Management Lead.** Operates the Exposure Management Procedure. Accountable for remediation SLAs and exposure posture metrics.
+**Exposure Management Lead.** Owns the Exposure Management Procedure: independent validation, classification, SLA measurement, treatment challenge, and exposure reporting. Observation-source operation is a first-line service.
 
 **Adversarial Testing Lead.** Operates the Adversarial Validation Procedure: penetration testing, red team, and purple team exercises, and the tracking of their findings.
 
-**Threat Intelligence Analyst.** Owns threat-actor tracking, advisories, and the translation of intelligence into detection priorities. Disseminates intelligence to Engineering, Detection, and Governance.
+**Threat Intelligence Analyst.** Owns strategic and tactical risk intelligence: threat-actor tracking, advisories, relevance criteria, and the translation of intelligence into validation and detection priorities. Disseminates intelligence to Engineering, Detection, first-line security operations, and Governance. Operational monitoring, hunting, and IOC action are first line.
 
 **Vendor Risk Analyst.** Operates the Third-Party and Supply Chain Risk Procedure: vendor tiering and assessment, supply chain coordination, and the assessment of third-party AI services.
 
 **OT Risk Analyst.** Owns OT-safe vulnerability assessment and industrial control system threat intelligence.
 
-**Identity Risk Analyst.** Owns identity-threat detection: user and entity behavior analytics, and OAuth and token risk. This is a mature-program specialization; in smaller teams the Detection Engineer or Risk Pillar Leader carries the work without deleting the role from the canonical architecture.
+**Identity Risk Analyst.** Owns identity risk analysis: privileged-access risk, non-human identity exposure, identity attack-path validation, and independent validation of identity-threat monitoring outcomes. UEBA and identity-threat monitoring platform operation are first-line services. This is a mature-program specialization; in smaller teams the Detection Engineer or Risk Pillar Leader carries the work without deleting the role from the canonical architecture.
 
-**Detection Engineer.** Owns detection-rule authoring, ATT&CK coverage, and the tuning lifecycle. Responsible for logging and monitoring coverage and for handing detected incidents to the standing IR team.
+**Detection Engineer.** Owns detection requirements, candidate rule authoring, ATT&CK coverage mapping, test cases, and independent validation of deployed detections. Production deployment, tuning, and alert triage are first-line operations; detected events reach the standing IR team through first-line triage.
 
 ### 7.4 Governance
 
@@ -329,7 +332,7 @@ Risk-acceptance authority does not consolidate freely. The separation of the per
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-RAC-001 |
-| **Version** | 1.3 |
+| **Version** | 1.6 |
 | **Status** | Approved |
 | **Effective Date** | 2026-05-21 |
 | **Classification** | Public |
@@ -346,6 +349,9 @@ Risk-acceptance authority does not consolidate freely. The separation of the per
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.6 | 2026-10-28 | Governance Pillar Leader | Added accountable first-line owner and operator columns to engagement and build work; assigned pipeline enforcement, release, inventory onboarding, and vulnerability remediation to first line; recast all Engineering summaries as requirements, review, validation, and escalation rather than platform operation or go-live approval. |
+| 1.5 | 2026-10-28 | Governance Pillar Leader | Added separate First-Line Service Owner and First-Line Operator interface columns to operational RACI rows; made first-line access provisioning and IR operation explicit; aligned Identity Engineer and incident-handoff descriptions to the state-authorship boundary. |
+| 1.4 | 2026-10-28 | Governance Pillar Leader | Split exposure scanning, threat intelligence, and detection rows into first-line operation and CERG validation in 6.2 and 6.4; conformed Exposure Management Lead, Threat Intelligence Analyst, Identity Risk Analyst, and Detection Engineer descriptions in 7.3 to the second-line boundary. |
 | 1.3 | 2026-07-24 | Governance Pillar Leader | Clarified adversarial validation RACI: Adversarial Testing Lead is responsible for execution while Risk Pillar Leader is accountable for the program; broadened the process label beyond pen test and red team to include purple-team, cloud, application, and OT-safe testing where in scope. |
 | 1.2 | 2026-06-18 | Governance Pillar Leader | Clarified Identity Risk Analyst as a mature-program specialization carried by Detection Engineer or Risk Pillar Leader in smaller teams. |
 | 1.1 | 2026-06-18 | Governance Pillar Leader | Clarified that CAT-001 owns artifact inventory, lifecycle status, and document-type approval authority while RAC-001 owns role and process accountability. |

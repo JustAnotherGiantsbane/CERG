@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AV-001 |
-| **Version** | 1.3 |
+| **Version** | 1.7 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Adversarial Testing Lead |
@@ -29,7 +29,7 @@
 6. [Purple-Team Detection Validation](#6-purple-team-detection-validation)
 7. [Cloud Attack Simulation](#7-cloud-attack-simulation)
 8. [Application Penetration Test Checklist](#8-application-penetration-test-checklist)
-9. [OT Adversarial Assessment, Safety Protocol](#9-ot-adversarial-assessment--safety-protocol)
+9. [OT Adversarial Assessment, Safety Protocol](#9-ot-adversarial-assessment-safety-protocol)
 10. [Finding Rating, Routing, and Retest](#10-finding-rating-routing-and-retest)
 11. [Systemic Analysis and Program Feedback Loop](#11-systemic-analysis-and-program-feedback-loop)
 12. [Roles and Responsibilities](#12-roles-and-responsibilities)
@@ -140,6 +140,7 @@ RULES OF ENGAGEMENT - <Engagement Name>      AV-YYYY-NNNN
    What we are testing   :
    Success criteria      :
    Risk-register / control gaps this engagement is intended to validate
+   Scenario              : (where the engagement is commissioned against a CJ-001 crown-jewel scenario: the scenario ID and the asserted protected-system scope)
 
 3. SCOPE - IN
    IPs / URLs / Apps / Cloud accounts / OT segments / Identity tenants explicitly in scope
@@ -360,6 +361,8 @@ The following are prohibited absent a documented exception with engineering and 
 - Engineering-supervised authenticated checks in a defined window.
 - Tabletop / scenario-based assessment with OT operators.
 
+A load-bearing chain link validated through a permitted approach above constitutes the alternative independent validation that a [`CERG-GOV-CJ-001`](../governance/CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md) bounded defense claim requires only when the final report states assessor, method (which permitted approach), and evidence period for that link, and the assessor is independent of the operator and state author for the asserted scope per CJ-001 Section 5.5. Without those stated in the record, the validation is not evidenced.
+
 ### 9.3 Authority and Safety Officer
 
 Every OT engagement has a named OT Safety Officer (an operator with substation / process engineering authority) who can stop the test for any reason without justification. The Safety Officer's "stop" is binding.
@@ -389,7 +392,7 @@ Findings are rated using a uniform schema regardless of engagement type, alignin
 | **Source of Finding** | **Routes To** |
 |---|---|
 | Specific software / asset vulnerability | [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Exposure_Management_Procedure.md) finding + risk register entry per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) if Critical/High |
-| Control / design weakness | Risk register entry directly per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) |
+| Control / design weakness | Risk register entry directly per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). Where the engagement is commissioned against a [`CERG-GOV-CJ-001`](../governance/CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md) scenario, the weakness enters as a Finding Record per [`CERG-GOV-FLOW-001`](../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) F-04 and promotes to a Risk Register Entry where material; the direct-register route applies only to engagements not commissioned against a scenario. |
 | Detection gap | Detection backlog + risk register if material |
 | Process / runbook weakness | Owning procedure (AR / IR / TPRM) + risk register if material |
 | Vendor / supply chain weakness | TPRM record per [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) |
@@ -600,7 +603,7 @@ Final reports are distributed under the confidentiality terms in the RoE. Full r
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AV-001 |
-| **Version** | 1.3 |
+| **Version** | 1.7 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / on material program change |
-| **Change Log** | 1.0 - Initial publication. Engagement types, RoE, charter, purple, cloud, app, OT safety, rating/routing, evidence retention. · 1.1 - Added Section 11 Systemic Analysis and Program Feedback Loop: post-engagement systemic analysis, systemic finding routing, prevention verification, and annual trend analysis. · 1.2 - Restored Section 12 Roles and Responsibilities. Renumbered Evidence Retention to Section 13, Regulatory to 14, Document Control to 15. · 1.3 - Clarified that PRC-VM-001 governs exposure treatment timelines while PRC-AV-001 governs adversarial validation rating, routing, retest, and escalation discipline. |
+| **Change Log** | 1.0 - Initial publication. Engagement types, RoE, charter, purple, cloud, app, OT safety, rating/routing, evidence retention. · 1.1 - Added Section 11 Systemic Analysis and Program Feedback Loop: post-engagement systemic analysis, systemic finding routing, prevention verification, and annual trend analysis. · 1.2 - Restored Section 12 Roles and Responsibilities. Renumbered Evidence Retention to Section 13, Regulatory to 14, Document Control to 15. · 1.3 - Clarified that PRC-VM-001 governs exposure treatment timelines while PRC-AV-001 governs adversarial validation rating, routing, retest, and escalation discipline. · 1.4 - RoE objectives name the scenario ID and asserted protected-system scope where an engagement is commissioned against a CJ-001 scenario; a Section 9.2 permitted approach evidences a load-bearing link only when the final report states assessor, method, and evidence period. Evidence mechanics only; the three-state outcome rule stays in CJ-001. · 1.5 - Scoped-independence clause added to the 9.2 evidence sentence per review: the assessor must be independent of the operator and state author for the asserted scope per CJ-001 5.5; CJ-001 now linked for referential checking. · 1.6 - Scenario-commissioned control/design weaknesses enter the existing Finding Record path and promote to risk where material; direct risk-entry routing remains for non-scenario engagements. · 1.7 - Patch (#280): repaired 1 in-page link whose anchor no longer matched its heading after earlier heading edits. No content change. |

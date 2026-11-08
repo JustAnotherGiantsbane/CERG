@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-STY-001 |
-| **Version** | 1.02 |
+| **Version** | 1.03 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
@@ -60,7 +60,8 @@ CERG writing is:
 - evidence-oriented;
 - opinionated where ambiguity would create risk;
 - clear about ownership and handoffs;
-- usable by a small team without weakening the role model.
+- usable by a small team without weakening the role model;
+- briefing-first: clear enough that a busy operator can identify the decision, owner, action, and boundary on one read.
 
 CERG writing is not:
 
@@ -355,6 +356,9 @@ Use numbered lists for sequence. Use bullets for sets.
 - Name the role that owns an activity.
 - Prefer concrete nouns over vague terms.
 - Use short paragraphs.
+- Lead with the decision, action, owner, or boundary. Put rationale second and link to the authority that already holds detailed method.
+- Give each sentence a job: change a decision, action, ownership, evidence expectation, or interpretation. Delete it if it does none of these.
+- Use a compact table only when it makes comparison faster than prose.
 
 ### 9.2 Prohibited or Discouraged Style
 
@@ -364,6 +368,8 @@ Use numbered lists for sequence. Use bullets for sets.
 - Avoid generic phrases such as `best practice`, `robust security`, or `industry standard` unless immediately defined.
 - Do not cite regulations as decoration. Cite them when the artifact operationalizes a requirement.
 - Do not add AI-tool attribution in commits, comments, or document text.
+- Do not restate the same rule in a purpose statement, a table, and surrounding prose. State it once, then link to its authority.
+- Do not turn an illustrative story into a walkthrough of every conditional branch. Lead with the decision and show only the branches needed to understand it.
 
 ### 9.3 Terminology
 
@@ -438,6 +444,7 @@ Every contribution must pass these gates before commit:
 | Cross-reference discipline | Follow internal links or use a link checker when available | No dead links |
 | Status discipline | Inspect metadata and Document Control | New artifact is Draft unless approved |
 | Commit message hygiene | Review commit text | No AI-tool attribution |
+| Reader-first edit | Read the purpose, first operating section, and decision path aloud | A busy operator can identify the decision, owner, action, evidence, and boundary without re-reading; remove any sentence that does not change one of them. |
 
 A document is not complete until the catalog is amended where required.
 
@@ -534,7 +541,7 @@ When a new framework revision is published (e.g., NIST 800-53 Rev 6, NIST 800-17
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-STY-001 |
-| **Version** | 1.02 |
+| **Version** | 1.03 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-14 |
 | **Classification** | Public |
@@ -551,6 +558,7 @@ When a new framework revision is published (e.g., NIST 800-53 Rev 6, NIST 800-17
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.03 | 2026-10-28 | Governance Pillar Leader | Reader-first editing rule: lead with the decision and owner, use only decision-useful prose, avoid repeated rules, and add a concise-reader check before commit. | #243 |
 | 1.02 | 2026-06-18 | Governance Pillar Leader | Minor | Added Stable Section ID Convention (§7.1), Cross-Reference Update Procedure (§7.2), standardised Revision History columns, catalog sync reference in quality gates, and aggregated changelog tool reference. | INIT-10.1, INIT-10.3 |
 | 1.01 | 2026-06-14 | Governance Pillar Leader | Minor | Aligned status lifecycle language to CAT-001 by using Approved as the authoritative status and treating publication eligibility as separate metadata. |
 | 1.0 | 2026-05-22 | Cyber Governance | Initial release. Establishes the CERG house style, metadata and skeleton rules, role and cross-reference discipline, language rules, org-adaptation guidance, and pre-commit quality gates. |
