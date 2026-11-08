@@ -40,7 +40,7 @@
 
 CERG protects data. Every other standard is, in the end, in service of keeping the right data confidential, intact, and available. Yet the program has had no general scheme for saying how sensitive a given piece of data is. The CUI Handling Standard governs one specific regulated category exhaustively; nothing governed the rest. The Asset Management Standard requires every asset to carry a data classification but pointed at a scheme that did not yet exist. This standard is that scheme.
 
-This standard establishes the general data governance framework for CERG: the classification scheme, how data is classified and labeled, the handling requirements each classification carries, the data lifecycle, retention and disposal, and data loss prevention.
+This standard establishes the general data governance framework for CERG. It sets the classification scheme and how data is classified and labeled. It states the handling requirements each classification carries. It covers the data lifecycle, retention and disposal, and data loss prevention.
 
 It applies to all data CERG-managed systems store, process, or transmit, in every environment. It does not replace [`CERG-STD-CUI-001`](CERG-STD-CUI-001_CUI_Handling_Standard.md); CUI is a regulated category with its own exhaustive handling rules, and where data is CUI, the CUI standard governs. This standard provides the general scheme into which CUI fits as the most restrictive category.
 
@@ -93,7 +93,7 @@ CERG uses four classification levels. An organization adopting CERG may rename t
 1. **Confidential and Restricted data is labeled.** Data at the Confidential and Restricted levels carries a visible classification label wherever the format allows: document headers or footers, email subject or banner, dataset metadata.
 2. **Internal and Public labeling is recommended, not required.** Labeling Internal and Public data is encouraged for clarity but not mandatory, so the labeling effort concentrates where it matters.
 3. **Labels are machine-readable where possible.** Where the platform supports classification metadata, the label is applied as metadata, not only as visible text, so that data loss prevention (Section 9) and access controls can act on it.
-4. **An unlabeled Confidential or Restricted item is a finding.** Discovering sensitive data with no label is a handling failure and is corrected.
+4. **An unlabeled Confidential or Restricted item is a finding.** Discovering sensitive data with no label is a handling failure; correct it.
 
 ---
 
@@ -135,7 +135,7 @@ Data moves through a lifecycle, and a handling requirement applies at each stage
 
 ## 8. Retention and Disposal
 
-1. **Data has a retention period.** Each category of data has a defined retention period, set by business need and by legal and regulatory obligation. The retention schedule is maintained by Governance.
+1. **Data has a retention period.** Each category of data has a defined retention period, set by business need and by legal and regulatory obligation. Governance maintains the retention schedule.
 2. **Retention is enforced.** Data is kept for its retention period and is disposed of at the end of it. Keeping data indefinitely "in case" is not a retention decision; it is the absence of one, and it grows the breach surface every year.
 3. **Legal hold overrides retention.** Data subject to a legal hold is preserved regardless of its retention period until the hold is lifted. Legal hold is the one authorized reason to retain data past its schedule.
 4. **Disposal is secure and evidenced.** Disposal of Confidential and Restricted data is secure, sanitization appropriate to the medium and classification, and produces a retained disposal record. Disposal of data assets is coordinated with asset disposal per [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md) §9.
@@ -152,8 +152,8 @@ Data moves through a lifecycle, and a handling requirement applies at each stage
 1. **DLP monitors Confidential and Restricted data.** Data loss prevention monitors for Confidential and Restricted data moving in ways its classification does not permit: leaving the organization by email, upload, or removable media.
 2. **DLP enforces, it does not only observe.** For Confidential and Restricted data, DLP blocks or quarantines unauthorized movement, not merely logs it after the fact.
 3. **DLP uses the classification labels.** DLP acts on the machine-readable labels from Section 5 and on content inspection. This is why labeling sensitive data is required, not optional.
-4. **DLP events are detection signals.** A DLP block or alert is a signal delivered to the detection platform per [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md). A pattern of DLP events involving one user or one dataset is investigated.
-5. **DLP coverage spans the data paths.** DLP covers the realistic exfiltration paths for the estate: email, web upload, cloud storage sync, and removable media. Coverage gaps are recorded as accepted risk until closed.
+4. **DLP events are detection signals.** A DLP block or alert is a signal; DLP delivers it to the detection platform per [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md). Detection engineering investigates any pattern of DLP events involving one user or one dataset.
+5. **DLP coverage spans the data paths.** DLP covers the realistic exfiltration paths for the estate: email, web upload, cloud storage sync, and removable media. Record coverage gaps as accepted risk until closed.
 
 ---
 
@@ -222,7 +222,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](../governance/
 - Internal audit or regulatory finding affecting data governance
 - Direction from the CISO
 
-Cyber Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO endorsement for all changes.
+Cyber Governance owns this document. The Governance Pillar Leader (Policy & Standards) initiates reviews, manages the revision cycle, and obtains CISO endorsement for all changes.
 
 ### Related Documents
 
