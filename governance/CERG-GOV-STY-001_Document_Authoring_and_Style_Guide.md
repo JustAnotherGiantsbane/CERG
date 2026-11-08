@@ -40,7 +40,7 @@
 
 ## 1. Purpose and Scope
 
-This guide defines how CERG documents are authored, reviewed, and kept consistent. It is the companion to the catalog. The catalog governs IDs, registration, status, and cross-reference discipline. This guide governs the writing pattern, metadata pattern, document skeleton, role discipline, quality gates, and house voice.
+This guide defines how authors write, review, and keep CERG documents consistent. It is the companion to the catalog. The catalog governs IDs, registration, status, and cross-reference discipline. This guide governs the writing pattern, metadata pattern, document skeleton, role discipline, quality gates, and house voice.
 
 It applies to every new or revised CERG policy, governance instrument, standard, procedure, plan, template, and operational package.
 
@@ -160,7 +160,7 @@ Do not rename existing files casually. Links, catalog rows, and references depen
 | External Interface | Adjacent-function artifact included for cross-reference only; not CERG-governed. |
 | Retired | Artifact no longer authoritative but retained for history. |
 
-Publication is not a lifecycle status. Public-release eligibility is tracked separately in the publication manifest.
+Publication is not a lifecycle status. The publication manifest tracks public-release eligibility separately.
 
 Do not self-approve new artifacts. If approval is pending, write `CISO (pending)` or the appropriate pending approver.
 
@@ -175,8 +175,8 @@ Rules:
 1. Do not invent role names.
 2. Do not use synonyms if the canonical role exists.
 3. A local roles table may explain responsibilities for the reader, but it must conform to `CERG-GOV-RAC-001`.
-4. Scaling down is done by role consolidation onto fewer people, not by deleting roles.
-5. Exactly one role is accountable for each activity where a RACI is used.
+4. Scale down by consolidating roles onto fewer people, not by deleting roles.
+5. Where a RACI is used, exactly one role is accountable for each activity.
 6. External teams may own adjacent programs; preserve those boundaries.
 
 Examples of role discipline:
@@ -272,7 +272,7 @@ For evidence tiers, refer to [CERG-GOV-AUD-001](#evidence-tier-requirements) §4
 
 > **Stable IDs Protect Cross-Document References**
 >
-> When §9.7 is renumbered to §9.8 because a new §9.6 is inserted, every cross-document link that said "§9.7" breaks silently. A stable anchor `#risk-acceptance-authority` survives renumbering. The numeric section remains in the heading for human readability; the anchor provides the machine-stable reference.
+> When you renumber §9.7 to §9.8 because you inserted a new §9.6, every cross-document link that said "§9.7" breaks silently. A stable anchor `#risk-acceptance-authority` survives renumbering. The numeric section remains in the heading for human readability; the anchor provides the machine-stable reference.
 
 ### 7.2 Cross-Reference Update Procedure
 
@@ -366,7 +366,7 @@ Use numbered lists for sequence. Use bullets for sets.
 - Avoid passive constructions that hide ownership.
 - Avoid `should` when the document creates a requirement. Use `must`, `shall`, or direct imperative language where appropriate.
 - Avoid generic phrases such as `best practice`, `robust security`, or `industry standard` unless immediately defined.
-- Do not cite regulations as decoration. Cite them when the artifact operationalizes a requirement.
+- Do not cite regulations as decoration. Cite them when the artifact implements a requirement.
 - Do not add AI-tool attribution in commits, comments, or document text.
 - Do not restate the same rule in a purpose statement, a table, and surrounding prose. State it once, then link to its authority.
 - Do not turn an illustrative story into a walkthrough of every conditional branch. Lead with the decision and show only the branches needed to understand it.
@@ -386,7 +386,7 @@ Use numbered lists for sequence. Use bullets for sets.
 
 ## 10. Org-Adaptation and Token Rules
 
-`CERG-GOV-VAR-001` governs organization adaptation. Authors must not scatter hard-coded organization facts when a token should be used.
+`CERG-GOV-VAR-001` governs organization adaptation. Authors must not scatter hard-coded organization facts where a token belongs.
 
 Rules:
 
