@@ -19,12 +19,12 @@
 
 ## Purpose
 
-This guide gives copy-paste instructions for deploying a GRC platform as the CERG anchor. It covers two paths:
+Deploying a GRC platform as the CERG anchor is copy-paste work, and this guide supplies the steps. Two paths are covered:
 
 1. **Enterprise / MSP path:** ServiceNow GRC with CERG control import, evidence automation, and audit reporting
 2. **SMB path:** Vanta with CERG control mapping for compliance-only use cases
 
-Both paths assume you've read the [Opinionated Tool Matrix](CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md), understand the [CERG Practitioner Control Baseline](../../governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md) structure, and have reviewed the [Engagement Playbook](../CERG-OPN-DLV-001_Engagement_Playbook.md) for delivery context.
+Both paths assume three things: you have read the [Opinionated Tool Matrix](CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md), you know the shape of the [CERG Practitioner Control Baseline](../../governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md), and you have reviewed the [Engagement Playbook](../CERG-OPN-DLV-001_Engagement_Playbook.md) for delivery context.
 
 ---
 
@@ -39,7 +39,7 @@ Both paths assume you've read the [Opinionated Tool Matrix](CERG-OPN-TOOLS-001_O
 
 ### 1.2 Control Import
 
-ServiceNow GRC uses the **Policy and Compliance** module. Controls live in the `sn_compliance_control` table.
+Everything in ServiceNow GRC runs through the **Policy and Compliance** module. Controls live in the `sn_compliance_control` table.
 
 #### Step 1: Load the CERG Control Framework
 
@@ -54,7 +54,7 @@ Source: cragin-security/CERG
 
 #### Step 2: Import Controls via REST API
 
-Use the ServiceNow Table API to bulk-import controls from the CERG machine-readable manifest:
+Bulk-import the controls from the CERG machine-readable manifest with the ServiceNow Table API:
 
 ```bash
 # Authenticate to ServiceNow
@@ -84,7 +84,7 @@ The expected JSON format for each control:
 
 ### 1.3 Evidence Automation
 
-ServiceNow GRC integrates with the evidence layer through **Indicator Templates**. Each control gets an indicator that defines what evidence looks like.
+**Indicator Templates** are how ServiceNow GRC reaches the evidence layer. Each control gets an indicator that defines what evidence looks like.
 
 #### Configuration Steps
 
@@ -109,7 +109,7 @@ ServiceNow GRC integrates with the evidence layer through **Indicator Templates*
 
 #### Quarterly Compliance Dashboard
 
-Create a dashboard in **Performance Analytics** with these widgets:
+In **Performance Analytics**, build a dashboard with these widgets:
 
 1. **Control Compliance by Family** — bar chart showing % implemented per NIST family
 2. **Evidence Currency** — pie chart: Current / Expiring (30d) / Lapsed
@@ -119,7 +119,7 @@ Create a dashboard in **Performance Analytics** with these widgets:
 
 ### 1.5 MSP Multi-Tenancy
 
-ServiceNow supports MSP multi-tenancy via **Domain Separation**. Each client gets a domain with isolated controls, evidence, and audit data.
+**Domain Separation** is how ServiceNow handles MSP multi-tenancy: each client gets a domain whose controls, evidence, and audit data stay isolated.
 
 ```bash
 # Create a new client domain
@@ -148,7 +148,7 @@ Vanta doesn't support custom frameworks natively, but you can map CERG controls 
 
 #### Approach: CERG-to-SOC2 Mapping
 
-Vanta's strongest automation is SOC 2. Map CERG controls to SOC 2 Trust Services Criteria to get automated evidence collection:
+SOC 2 is where Vanta automates best. Map CERG controls to the SOC 2 Trust Services Criteria and evidence collection runs itself:
 
 | CERG Control Family | SOC 2 TSC | Vanta Automation |
 |---------------------|-----------|------------------|
@@ -159,7 +159,7 @@ Vanta's strongest automation is SOC 2. Map CERG controls to SOC 2 Trust Services
 | System Integrity (SI) | Security — System Operations | Agent-based monitoring |
 | Risk Assessment (RA) | Security — Risk Assessment | Manual with Vanta risk register |
 
-For controls without SOC 2 equivalents (OT, CUI, BES overlays), use Vanta's manual tests with documented collection procedures.
+Where no SOC 2 equivalent exists (OT, CUI, BES overlays), fall back to Vanta's manual tests with documented collection procedures.
 
 ### 2.3 Evidence Collection
 
@@ -170,11 +170,11 @@ Vanta's agent automatically collects evidence from:
 - HRIS (BambooHR, Rippling, Gusto) — personnel controls
 - Code repositories (GitHub, GitLab) — SDLC controls
 
-For evidence Vanta can't auto-collect (OT systems, physical controls, custom applications), document the collection procedure in the [MSP Runbook](../CERG-OPN-MSP-001_MSP_MSSP_Runbook.md).
+Where Vanta cannot auto-collect (OT systems, physical controls, custom applications), document the collection procedure in the [MSP Runbook](../CERG-OPN-MSP-001_MSP_MSSP_Runbook.md).
 
 ### 2.4 MSP Multi-Client with Vanta
 
-Vanta's partner program supports multi-client management:
+Multi-client management runs through Vanta's partner program:
 
 1. **Vanta Partner Portal** — centralized view of all client instances
 2. **Template frameworks** — push your CERG mapping template to new clients
