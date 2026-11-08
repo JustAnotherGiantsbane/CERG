@@ -32,7 +32,7 @@ CERG is open source (CC BY 4.0) and contributions are welcome. This document exp
 
 ## Optional: pre-commit hook
 
-A `.pre-commit-config.yaml` is provided that runs the validator, integrity checker, and validator tests on every commit. This is **optional** — the CERG CI workflow runs the same checks on every push and pull request, so pre-commit is a faster local feedback loop, not an additional gate.
+The repo provides a `.pre-commit-config.yaml` that runs the validator, integrity checker, and validator tests on every commit. This is **optional** — the CERG CI workflow runs the same checks on every push and pull request, so pre-commit is a faster local feedback loop, not an additional gate.
 
 To enable:
 
