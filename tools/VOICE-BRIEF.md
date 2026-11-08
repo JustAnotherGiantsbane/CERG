@@ -24,9 +24,8 @@ rhythmless, and hard to say out loud.
    carries a rule, the rule survives the rewrite or you leave the sentence.
 2. **Headings are frozen.** Never reword a `#` line. Anchors in tables of
    contents and cross-document links depend on the exact text.
-3. **Links are frozen.** Every `[text](target)` target must still exist in the
-   file afterwards. You may reword the link text only if the target is
-   unchanged.
+3. **Links are frozen.** Every link destination must still resolve in the file
+   afterwards. The visible text may be rewritten; the path may not.
 4. **Tables are data.** Fix a cell's wording only when it is a sentence; never
    change values, IDs, or ordering.
 5. **No invention.** Do not add facts, vendors, numbers, or examples the
