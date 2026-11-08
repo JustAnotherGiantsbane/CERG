@@ -68,7 +68,7 @@ Start with [OM-001 §6](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md
 
 ## 6. NICE TKS Statement References
 
-These Task, Knowledge, and Skill statements come from the NIST NICE Framework v2.2.0 Work Role [OG-WRL-007 — Executive Sponsor primary mapping], filtered for relevance to this CERG role. The NIST site hosts the full TKS database at https://www.nist.gov/nice/framework/.
+These Task, Knowledge, and Skill statements come from the NIST NICE Framework v2.2.0 Work Role [OG-WRL-007 — Executive Sponsor primary mapping], filtered for relevance to this CERG role. NIST maintains the full TKS database at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|

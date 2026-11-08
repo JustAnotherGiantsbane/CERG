@@ -76,7 +76,7 @@ Start with [OM-001 §6](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md
 
 ## 6. NICE TKS Statement References
 
-These Task, Knowledge, and Skill statements come from the NIST NICE Framework v2.2.0 Work Role [IO-WRL-006 — Identity Engineer primary mapping], filtered for relevance to this CERG role. The NIST site hosts the full TKS database at https://www.nist.gov/nice/framework/.
+These Task, Knowledge, and Skill statements come from the NIST NICE Framework v2.2.0 Work Role [IO-WRL-006 — Identity Engineer primary mapping], filtered for relevance to this CERG role. NIST maintains the full TKS database at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
@@ -118,7 +118,7 @@ The certifications for this role are in [TRN-001 §3](../../governance/CERG-GOV-
 
 ## 9. Competency Expectations by Grade
 
-Competency expectations for this role follow the Engineering pillar behavioral anchors in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md). Each cell shows observable behavior that demonstrates the competency at that grade. Anchors are cumulative, so an L3 expectation includes the L1 and L2 anchors.
+Competency expectations for this role follow the Engineering pillar behavioral anchors in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md). Each cell shows observable behavior demonstrating the competency at that grade. Anchors are cumulative: an L3 expectation includes the L1 and L2 anchors.
 
 | Competency Domain (CMP-001) | L1 Expectation | L2 Expectation | L3 Expectation | L4 Expectation |
 |-----------------------------|----------------|----------------|----------------|----------------|

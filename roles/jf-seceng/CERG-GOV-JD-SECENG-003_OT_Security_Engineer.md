@@ -78,7 +78,7 @@ The CERG-specific knowledge requirements for this role sit in [OM-001 §6](../..
 
 ## 6. NICE TKS Statement References
 
-Drawn from the NIST NICE Framework v2.2.0 Work Role [DD-WRL-001 — OT Security Engineer primary mapping] and filtered for relevance to this CERG role, these Task, Knowledge, and Skill statements follow. The full TKS database lives at https://www.nist.gov/nice/framework/.
+Drawn from the NIST NICE Framework v2.2.0 Work Role [DD-WRL-001 — OT Security Engineer primary mapping] and filtered for relevance to this CERG role, these Task, Knowledge, and Skill statements follow. NIST maintains the full TKS database at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
@@ -120,7 +120,7 @@ Typical experience ranges by grade are in [JA-001 §4-5](../../governance/CERG-G
 
 ## 9. Competency Expectations by Grade
 
-Competency expectations for this role track the Engineering pillar behavioral anchors in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md). Each cell names observable behavior that demonstrates the competency at that grade. The anchors are cumulative: an L3 expectation includes the L1 and L2 anchors.
+Competency expectations for this role track the Engineering pillar behavioral anchors in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md). Each cell names observable behavior demonstrating the competency at that grade. Anchors are cumulative: an L3 expectation includes the L1 and L2 anchors.
 
 | Competency Domain (CMP-001) | L1 Expectation | L2 Expectation | L3 Expectation | L4 Expectation |
 |-----------------------------|----------------|----------------|----------------|----------------|

@@ -68,7 +68,7 @@ This file carries the role's technical skills from the original JD-001 content (
 
 ## 6. NICE TKS Statement References
 
-These Task, Knowledge, and Skill statements come from the NIST NICE Framework v2.2.0 Work Role [OG-WRL-012 — CMMC / Federal Compliance Manager primary mapping], filtered by relevance to this CERG role. The full TKS database is maintained at https://www.nist.gov/nice/framework/.
+These Task, Knowledge, and Skill statements come from the NIST NICE Framework v2.2.0 Work Role [OG-WRL-012 — CMMC / Federal Compliance Manager primary mapping], filtered by relevance to this CERG role. NIST maintains the full TKS database at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
@@ -110,7 +110,7 @@ These Task, Knowledge, and Skill statements come from the NIST NICE Framework v2
 
 ## 9. Competency Expectations by Grade
 
-Competency expectations for this role follow the Governance pillar behavioral anchors from [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md). Each cell describes observable behavior demonstrating the competency at that grade. Anchors are cumulative: an L3 expectation includes the L1 and L2 anchors.
+Competency expectations for this role follow the Governance pillar behavioral anchors in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md). Each cell describes observable behavior demonstrating the competency at that grade. Anchors are cumulative: an L3 expectation includes the L1 and L2 anchors.
 
 | Competency Domain (CMP-001) | L1 Expectation | L2 Expectation | L3 Expectation | L4 Expectation |
 |-----------------------------|----------------|----------------|----------------|----------------|

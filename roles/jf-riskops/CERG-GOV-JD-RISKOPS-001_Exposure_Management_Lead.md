@@ -118,7 +118,7 @@ These Task, Knowledge, and Skill statements are taken from the NIST NICE Framewo
 
 ## 9. Competency Expectations by Grade
 
-Competency expectations for this role follow the Risk pillar behavioral anchors in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md). Each cell names behavior you can observe at that grade. The anchors are cumulative: an L3 expectation includes the L1 and L2 anchors. Competency statements describe capability, not assigned duty; operational duties sit in Section 4 (Key Responsibilities).
+Competency expectations for this role follow the Risk pillar behavioral anchors in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md). Each cell names behavior you can observe at that grade. Anchors are cumulative: an L3 expectation includes the L1 and L2 anchors. Competency statements describe capability, not assigned duty; operational duties sit in Section 4 (Key Responsibilities).
 
 | Competency Domain (CMP-001) | L1 Expectation | L2 Expectation | L3 Expectation | L4 Expectation |
 |-----------------------------|----------------|----------------|----------------|----------------|

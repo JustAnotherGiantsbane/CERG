@@ -87,7 +87,7 @@ This file carries the role's technical skills from the original JD-001 content (
 
 ## 6. NICE TKS Statement References
 
-These Task, Knowledge, and Skill statements come from the NIST NICE Framework v2.2.0 Work Role [PD-WRL-003 — Lead Investigator primary mapping], filtered by relevance to this CERG role. The full TKS database is maintained at https://www.nist.gov/nice/framework/.
+These Task, Knowledge, and Skill statements come from the NIST NICE Framework v2.2.0 Work Role [PD-WRL-003 — Lead Investigator primary mapping], filtered by relevance to this CERG role. NIST maintains the full TKS database at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|

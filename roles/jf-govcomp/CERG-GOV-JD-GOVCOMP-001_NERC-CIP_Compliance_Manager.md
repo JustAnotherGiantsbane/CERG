@@ -110,7 +110,7 @@ Filtered for relevance to this CERG role, these Task, Knowledge, and Skill state
 
 ## 9. Competency Expectations by Grade
 
-Competency expectations for this role follow the Governance pillar behavioral anchors in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md). Each cell names behavior you can watch for at that grade. The anchors are cumulative: an L3 expectation folds in the L1 and L2 anchors.
+Competency expectations for this role follow the Governance pillar behavioral anchors in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md). Each cell names behavior you can watch for at that grade. Anchors are cumulative: an L3 expectation includes the L1 and L2 anchors.
 
 | Competency Domain (CMP-001) | L1 Expectation | L2 Expectation | L3 Expectation | L4 Expectation |
 |-----------------------------|----------------|----------------|----------------|----------------|

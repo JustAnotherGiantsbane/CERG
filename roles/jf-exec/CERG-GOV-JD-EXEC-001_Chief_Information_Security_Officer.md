@@ -68,7 +68,7 @@ This role's CERG-specific knowledge requirements are set out in [OM-001 §6](../
 
 ## 6. NICE TKS Statement References
 
-These Task, Knowledge, and Skill statements are drawn from the NIST NICE Framework v2.2.0 Work Role [OG-WRL-007 — Chief Information Security Officer (CISO) primary mapping] and filtered for relevance to this CERG role. The full TKS database sits at https://www.nist.gov/nice/framework/.
+These Task, Knowledge, and Skill statements are drawn from the NIST NICE Framework v2.2.0 Work Role [OG-WRL-007 — Chief Information Security Officer (CISO) primary mapping] and filtered for relevance to this CERG role. NIST maintains the full TKS database at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
