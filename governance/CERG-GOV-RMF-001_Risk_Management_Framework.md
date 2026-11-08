@@ -365,7 +365,7 @@ Continuous monitoring is the phase that separates Adaptive-tier programs from Re
 
 ### 9.1 The Risk Register
 
-The risk register is the authoritative record of every cybersecurity risk the organization has identified, assessed, and agreed to track. Governance owns it, Risk populates it, Engineering informs it. A spreadsheet on a network share does not qualify: this register has to keep a name attached to every open risk, and every authorization decision has to read from it.
+The risk register is the authoritative record of every cybersecurity risk the organization has identified, assessed, and agreed to track. Governance owns it, Risk populates it, Engineering informs it. A spreadsheet on a network share does not qualify: this register has to keep a name attached to every open risk, and every acceptance and every go-live record reads from it.
 
 ### 9.2 Risk Statement Format (FAIR-Aligned)
 
@@ -642,9 +642,9 @@ The Risk Register Owner is responsible for monitoring these triggers. Threat Int
 
 ### 10.1 Why OT Requires a Different Lens
 
-IT and OT environments share the same fundamental risk equation - threats, vulnerabilities, and consequences - but OT environments introduce constraints that require deliberate adaptation of standard risk management practices. Availability is not a configuration preference in a power grid or a manufacturing line; it is a safety and reliability imperative that can carry regulatory, legal, and physical-world consequences.
+The risk equation is the same for IT and OT - threats, vulnerabilities, consequences - but OT's constraints require deliberate adaptation of standard risk management practice. Availability is not a configuration preference in a power grid or a manufacturing line; it is a safety and reliability imperative that can carry regulatory, legal, and physical-world consequences.
 
-CERG's RMF is designed from the ground up to respect this reality. OT-specific adaptations are documented below.
+CERG's RMF is built around that fact; the OT-specific adaptations are below.
 
 | RMF Phase | Standard IT Approach | OT Adaptation |
 |---|---|---|
@@ -657,13 +657,13 @@ CERG's RMF is designed from the ground up to respect this reality. OT-specific a
 
 > **The OT Risk Principle**
 >
-> An unpatched vulnerability in a BES Cyber System is a real risk. An unplanned outage of a BES Cyber System is also a real risk - one that carries NERC reliability implications, potential regulatory fines, and public safety consequences. CERG's risk management process treats both risks seriously and documents the tradeoff explicitly. The CISO owns the cybersecurity risk. Operations leadership owns the reliability risk. Both sign the authorization.
+> An unpatched vulnerability in a BES Cyber System is a real risk. An unplanned outage of a BES Cyber System is also a real risk - one that carries NERC reliability implications, potential regulatory fines, and public safety consequences. CERG's risk management process treats both risks seriously and documents the tradeoff explicitly. The CISO owns the cybersecurity risk. Operations leadership owns the reliability risk. Both sign the go-live record.
 
 ---
 
 ## 11. Regulatory Alignment Quick Reference
 
-The CERG-RMF satisfies the risk management requirements of all applicable frameworks. The table below maps each framework's risk-specific requirements to the CERG-RMF phase and CERG pillar that addresses them.
+The CERG-RMF satisfies the risk management requirements of all applicable frameworks. The table maps each framework's risk requirements to the phases and pillars that address them.
 
 | Framework | Risk Management Requirement | CERG-RMF Phase | Pillar |
 |---|---|---|---|
@@ -680,7 +680,7 @@ The CERG-RMF satisfies the risk management requirements of all applicable framew
 
 ## 12. Cybersecurity Risk Tolerance Calibration
 
-Cybersecurity risk tolerance is not a once-and-done statement. An Adaptive organization formally recalibrates it based on business changes, incident experience, threat landscape shifts, and regulatory changes. This section defines how CERG performs that work. Enterprise financial, market, legal, and operational risk appetite remains outside this process; established enterprise constraints are inputs to it.
+Cybersecurity risk tolerance is not a once-and-done statement. An Adaptive organization formally recalibrates it based on business changes, incident experience, threat landscape shifts, and regulatory changes. This section defines how CERG performs that work. Enterprise financial, market, legal, and operational risk appetite sits outside this process; its established constraints come into it as inputs.
 
 ### 12.1 Calibration Cadence
 
@@ -737,8 +737,8 @@ The review produces one of two outputs:
 ### 12.4 Approval
 
 - The CISO approves the CERG cybersecurity tolerance statement and material changes needed to implement it.
-- Governance records the approved statement and operationalizes it through metrics, control priorities, exception authority, and reporting.
-- Executive leadership or the board is engaged only when a proposed cybersecurity tolerance conflicts with an established enterprise constraint, creates a material cross-enterprise consequence, or requires approval under the organization's governance charter.
+- Governance records the approved statement and carries it into metrics, control priorities, exception authority, and reporting.
+- Bring executive leadership or the board in only when a proposed cybersecurity tolerance conflicts with an established enterprise constraint, creates a material cross-enterprise consequence, or requires approval under the organization's governance charter.
 - The approved cybersecurity tolerance statement is the authoritative reference for subsequent CERG risk decisions until the next calibration.
 
 ### 12.5 Cascade Tracking
