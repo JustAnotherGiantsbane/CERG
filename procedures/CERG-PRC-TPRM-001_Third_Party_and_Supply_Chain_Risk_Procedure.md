@@ -44,13 +44,13 @@
 
 ## 1. Purpose and Scope
 
-The policy makes third-party and supply-chain security Principle 8. Subordinate standards each impose specific requirements: IT/cloud/SaaS approval and attestation tracking, OT vendor assessment and CIP-013, CUI flow-down and FedRAMP equivalency, SBOM and software integrity. Until this procedure, those obligations had no shared operating model.
+Third-party and supply-chain security is Principle 8 of the policy. Each subordinate standard adds its own requirements: approval and attestation tracking for IT/cloud/SaaS, vendor assessment and CIP-013 for OT, CUI flow-down and FedRAMP equivalency, SBOM and software integrity. Before this procedure, those obligations shared no operating model.
 
-This procedure defines how CERG engages with the broader enterprise vendor program: where CERG's cyber-specific work begins and ends, what evidence CERG collects at each tier, and how the program responds when a vendor is compromised. It implements the edge types defined in the [Edge Register](../governance/CERG-GOV-EDG-001_Edge_Register.md) — specifically the Vendor, SaaS, and Software Supply edges.
+This procedure says where CERG's work on the broader enterprise vendor program starts and stops: which evidence CERG collects at each tier, and how the program reacts when a vendor is compromised. It puts into service the Vendor, SaaS, and Software Supply edges defined in the [Edge Register](../governance/CERG-GOV-EDG-001_Edge_Register.md).
 
 > **CERG Doesn't Own Vendor Management, It Owns the Cyber Slice**
 >
-> Procurement, Enterprise Risk Management, and Business Resiliency typically own vendor tiering, contract lifecycle, and business continuity. CERG accepts the business tier as the starting point and adjusts only where cyber-specific concerns are material enough to alter it. This boundary is the difference between a TPRM program that ships and one that drowns in vendors.
+> Procurement, Enterprise Risk Management, and Business Resiliency typically own vendor tiering, contract lifecycle, and business continuity. CERG accepts the business tier as the starting point, and adjusts only where cyber-specific concerns are material enough to alter it. This boundary is the difference between a TPRM program that ships and one that drowns in vendors.
 
 ---
 
@@ -103,9 +103,7 @@ CERG adjusts the vendor tier *up* only when one or more cyber-specific concerns 
 | Vendor product is software shipped to be deployed in our environment with elevated privileges | +1 tier |
 | Vendor relationship requires non-US access to in-scope systems / data | +1 tier (and see Section 10) |
 
-> **Adjustments Are Documented, Not Negotiated**
->
-> Every cyber-driven tier adjustment is recorded in the TPRM tool with the trigger, evidence, and reviewer. If a Business Owner disagrees, the resolution path is [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) Section 8, never an off-record handshake.
+Adjustments are documented, not negotiated. The TPRM tool records every cyber-driven tier adjustment with the trigger, evidence, and reviewer. If a Business Owner disagrees, the resolution path is [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) Section 8, never an off-record handshake.
 
 ---
 
@@ -140,7 +138,7 @@ Evidence requirements grow with tier. The table below names the cyber evidence r
 - The Vendor Risk Analyst reviews T3 evidence every 24 months unless conditions change.
 - The Vendor Risk Analyst reviews T4/T5 evidence on contract renewal.
 
-Material vendor events (breach, ownership change, regulator action) trigger an out-of-cycle review regardless of tier.
+A material vendor event — breach, ownership change, regulator action — triggers an out-of-cycle review whatever the tier.
 
 ---
 
@@ -161,7 +159,7 @@ Requirements differ by what the vendor *is*. The table below summarizes the most
 
 ### 6.1 Low-Control / High-Dependency Operating Model
 
-Not every provider relationship allows the organization to configure, monitor, patch, or test. CERG recognizes four control levels that determine what the organization can require of a provider and how CERG manages the residual risk.
+Not every provider relationship allows the organization to configure, monitor, patch, or test. CERG recognizes four control levels. They determine what the organization can require of a provider, and how CERG manages the residual risk.
 
 | Control Level | What the Org Can Do | Examples | CERG Approach |
 |---------------|---------------------|----------|---------------|
@@ -170,32 +168,19 @@ Not every provider relationship allows the organization to configure, monitor, p
 | **Contractual Control** | Negotiate clauses, notification, audit rights | MSPs, managed security providers, subprocessors | Contract language, annual evidence collection (SOC 2, ISO 27001), incident notification commitments, tested kill-switch |
 | **Opaque Dependency** | Track residual risk, exit plan, kill switch, compensating monitoring | SaaS vendor's underlying infrastructure, open-source library maintainers, upstream cloud provider outages | Documented residual risk acceptance, exit/migration plan, compensating monitoring (CSPM/SSPM for visible surface), documented assumption register |
 
-CERG records the control level per provider in the Approved Provider Catalog and re-assesses it at each annual review. A provider at Contractual or Opaque levels must have a documented kill-switch procedure tested at least annually.
+CERG records the control level per provider in the Approved Provider Catalog, and re-assesses it at each annual review. A provider at Contractual or Opaque levels must have a documented kill-switch procedure tested at least annually.
 
-**Observable contractual control.** Contractual Control divides by what the organization can
-independently verify, and the division is recorded against the asserted service rather than against the
-provider as a whole. Where the contract grants query, sampling, replay and re-test rights over the
-provider's own telemetry for a provider-operated security service named by a service System Control
-Profile, within the latency stated in that profile, the relationship is *observable* for that service:
-CERG can reach its own conclusion about it. Where the only instrument is a periodic attestation, reliance
-is *attestation-only*: it supports operating evidence, and claims about that service stop at the
-operating-evidence class. A consequential claim about a provider-operated security service requires the
-observable subtype for that service.
+**Observable contractual control.** What the organization can independently verify is what splits Contractual Control, and that split is recorded against the asserted service, not against the provider as a whole. Take a provider-operated security service named by a service System Control Profile. Where the contract grants query, sampling, replay and re-test rights over that provider's own telemetry, within the latency stated in the profile, the relationship counts as *observable* for that service: CERG can reach its own conclusion about it. Where a periodic attestation is the only instrument, reliance is *attestation-only*: it supports operating evidence, and claims about that service stop at the operating-evidence class. A consequential claim about a provider-operated security service requires the observable subtype for that service.
 
-The subtype does not extend to the rest of the provider relationship. An unrelated T1/T2 ERP or SaaS
-provider that grants none of these rights is unaffected: CERG assesses the customer-side controls the
-organization owns, and the absence of replay rights over the vendor's platform is a fact about the
-dependency rather than a gap in that assessment.
+The rest of the provider relationship is untouched by the subtype. An unrelated T1/T2 ERP or SaaS provider that grants none of these rights is unaffected: CERG assesses the customer-side controls the organization owns. The absence of replay rights over the vendor's platform is a fact about the dependency, not a gap in that assessment.
 
-In shorthand, Direct and Shared Control are *required*, observable Contractual Control is *observed*,
-and attestation-only contractual reliance and Opaque Dependency are *hoped for*. The shorthand is
-explanatory and is not a second classification.
+In shorthand: Direct and Shared Control are *required*; observable Contractual Control is *observed*; attestation-only contractual reliance and Opaque Dependency are *hoped for*. The shorthand explains and is not a second classification.
 
 > **CERG does not pretend to control what it cannot control.** The distinction between "we require this" and "we hope this" is not a compliance failure — it is operational honesty. Document the gap, monitor what is visible, plan the exit.
 
 ### 6.2 MSP and MSSP Hard Requirements
 
-Managed Service Providers and Managed Security Service Providers operate inside the organization's trust boundary with elevated access. The following requirements apply to every MSP/MSSP relationship, regardless of tier:
+MSPs and MSSPs sit inside the organization's trust boundary with elevated access. Regardless of tier, these requirements apply to every MSP/MSSP relationship:
 
 | Requirement | Description | Verification |
 |-------------|-------------|-------------|
@@ -208,18 +193,18 @@ Managed Service Providers and Managed Security Service Providers operate inside 
 | **Provider access reviewed like privileged internal access** | Provider access is subject to the same access review cadence, recertification requirements, and anomalous-access detection as internal privileged users per [CERG-PRC-AC-002](CERG-PRC-AC-002_Access_Management_Runbook.md). | Access review records; recertification status |
 | **Separate incident path for provider compromise** | A documented incident response path exists for "provider compromise with uncertain blast radius." This path is distinct from standard incident response — it assumes the attacker may have visibility into the organization's incident coordination channels if the provider's systems are compromised. | SCCT activation records; annual tabletop exercise |
 
-**MSP/MSSP onboarding requires:** contract language covering all eight requirements, evidence of the provider's own security posture (SOC 2 Type II or equivalent), a completed shared responsibility matrix, and a successful kill-switch test before production access is granted.
+**MSP/MSSP onboarding requires:** contract language covering all eight requirements, evidence of the provider's own security posture (SOC 2 Type II or equivalent), a completed shared responsibility matrix, and a passing kill-switch test before production access opens.
 
-**Additional requirement — assured security services only.** The eight requirements above apply to every MSP and MSSP relationship. Where the provider operates a security service that CERG assures — a service named by a service System Control Profile for which CERG issues a consequential claim — one further requirement applies: the contract grants query, sampling, replay and re-test rights over provider telemetry for that service, within the service-interface latency and the stated retention period, verified once before go-live (one query, one sampled re-test, results logged). Where CERG issues no consequential claim about such a service, or the provider operates no assured service, this requirement does not apply and the eight universal requirements govern. A third-party attestation report does not satisfy it.
+**Additional requirement — assured security services only.** Every MSP and MSSP relationship carries the eight requirements above. One more applies where the provider runs a security service that CERG assures — a service named by a service System Control Profile for which CERG issues a consequential claim: the contract grants query, sampling, replay and re-test rights over provider telemetry for that service, within the service-interface latency and the stated retention period, verified once before go-live (one query, one sampled re-test, results logged). This requirement does not apply where CERG issues no consequential claim about such a service, or the provider runs no assured service; the eight universal requirements govern instead. A third-party attestation report does not satisfy it.
 
-**MSP/MSSP offboarding requires:** revocation of all access within 24 hours of contract termination, confirmation that provider-owned artifacts (logs, configurations, credentials) have been returned or destroyed, and a final access review confirming no residual access paths remain.
+**MSP/MSSP offboarding requires:** all access revoked within 24 hours of contract termination, confirmation that provider-owned artifacts (logs, configurations, credentials) were returned or destroyed, and a final access review confirming no residual access paths remain.
 
 
 ---
 
 ## 7. Approved Provider and SaaS Catalog
 
-CERG maintains an Approved Provider and SaaS Catalog as the system-of-record for which third-party services may be procured for which scope.
+The Approved Provider and SaaS Catalog is CERG's system-of-record: it says which third-party services may be procured, and for which scope.
 
 | **Field** | **Definition** |
 |---|---|
@@ -239,7 +224,7 @@ Procurement consults the catalog at intake; CERG updates it at each evidence cyc
 
 ## 8. Contract Security Clause Library
 
-CERG provides Legal with a clause library; Legal owns negotiation. Clauses below are the minimums to seek; alternative language with equivalent intent is acceptable.
+Legal negotiates; CERG supplies the clause library. The clauses below are the minimums to seek, and alternative language with equivalent intent is acceptable.
 
 | **Clause** | **Required For** | **Substantive Content** |
 |---|---|---|
@@ -264,7 +249,7 @@ CERG provides Legal with a clause library; Legal owns negotiation. Clauses below
 
 ## 9. Shared Responsibility Matrix
 
-Every T2+ cloud / SaaS provider has a Shared Responsibility Matrix on file. Where the vendor publishes one, CERG annotates it; where they don't, CERG produces it and seeks vendor confirmation.
+A Shared Responsibility Matrix is on file for every T2+ cloud / SaaS provider. Where the vendor publishes one, CERG annotates it; where none exists, CERG drafts it and seeks vendor confirmation.
 
 | **Control Area** | **Provider Owns** | **Customer Owns** | **Customer-Side Evidence Reference** |
 |---|---|---|---|
@@ -281,20 +266,20 @@ Every T2+ cloud / SaaS provider has a Shared Responsibility Matrix on file. Wher
 
 The matrix is the single source of truth for cross-team conversations about "who handles X."
 
-This matrix governs technology providers, where the question is which layer of a platform each party controls. A service provider that operates a security service is governed by the service interface in its System Control Profile and by the assurance clauses in Section 8; where both apply to one provider, this matrix answers the platform question and the service interface answers the operating question.
+This matrix governs technology providers, where each party controls a layer of a platform. A service provider that operates a security service is governed by the service interface in its System Control Profile and by the assurance clauses in Section 8; where both apply to one provider, this matrix answers the platform question and the service interface answers the operating question.
 
 ---
 
 ## 10. International Access: Denied by Default
 
-International access to in-scope systems and data is **denied by default**. Where business need requires it, treat access as a documented exception with conditions.
+International access to in-scope systems and data is **denied by default**. Where business need requires it, treat the access as a documented exception with conditions.
 
 ### 10.1 Operating Model
 
 - A **Country Risk Register** classifies each country into tiers: Permitted · Restricted · Conditional · Prohibited.
-- Permitted countries are those with established trust relationships, low geopolitical risk, and acceptable law-enforcement / data-protection regimes; access is allowed without exception (logged, monitored).
-- Restricted countries require an exception per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md), with named controls (managed-device-only, session recording, enhanced detection routing).
-- Conditional countries require additional senior exec / CISO approval, time-boxed access windows, and possible per-session approval.
+- Permitted countries have established trust relationships, low geopolitical risk, and acceptable law-enforcement / data-protection regimes; access needs no exception (logged, monitored).
+- Restricted countries need an exception per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md), carrying named controls (managed-device-only, session recording, enhanced detection routing).
+- Conditional countries need additional senior exec / CISO approval, time-boxed access windows, and possibly per-session approval.
 - Prohibited countries do not get access; business need is resolved by alternative means (US-based delivery, alternate vendor).
 - The Country Risk Register is reviewed at least quarterly; geopolitical events can trigger reclassification at any time.
 - All international access is logged to SIEM with country-of-access metadata; the SOC routing pack includes country-tier as a fast-triage field.
@@ -302,8 +287,8 @@ International access to in-scope systems and data is **denied by default**. Wher
 ### 10.2 Vendor Implications
 
 - Vendors must disclose all proposed countries of access at onboarding and at any change.
-- Vendor international-access tier above the country's permitted level triggers a contract addendum and exception.
-- Vendor non-disclosure of country-of-access discovered post-onboarding is a material event triggering SCCT.
+- An international-access tier above the country's permitted level triggers a contract addendum, plus an exception for the vendor.
+- Discovering post-onboarding that a vendor did not disclose a country of access is a material event, and it triggers SCCT.
 
 ---
 
@@ -325,7 +310,7 @@ International access to in-scope systems and data is **denied by default**. Wher
 
 **Material update** = new minor/major version, security patch release, or dependency change affecting >10% of components.
 
-**SBOM delivery method:** Vendor provides via secure channel (TPRM portal, signed email, or API). Internal builds generate in CI/CD per Section 11.3.
+**SBOM delivery method:** the vendor provides it over a secure channel (TPRM portal, signed email, or API). Internal builds generate it in CI/CD per Section 11.3.
 
 ### 11.2 SBOM Processing Pipeline
 
@@ -358,12 +343,12 @@ Pipeline snippet reference: `tools/sbom-generate.sh` (see below).
 
 ## 12. CIP-013 Supply Chain Plan
 
-For BES Cyber Systems, CERG maintains a CIP-013 Supply Chain Risk Management Plan as a [CERG-PLN-CIP-001](../plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) component, satisfying CIP-013-2 R1. The plan includes:
+CERG maintains a CIP-013 Supply Chain Risk Management Plan for BES Cyber Systems as a [CERG-PLN-CIP-001](../plans/CERG-PLN-CIP-001_NERC_CIP_Operational_Package.md) component, satisfying CIP-013-2 R1. The plan covers:
 
-- Identification of supply chain risks across procurement and installation.
-- Vendor security controls expectations (incident notification, coordination of access controls, software integrity, vendor remote access management, disclosure of known vulnerabilities).
+- Identifying supply chain risks across procurement and installation.
+- What vendor security controls are expected (incident notification, coordination of access controls, software integrity, vendor remote access management, disclosure of known vulnerabilities).
 - Procurement controls, clauses, evaluation, approvals.
-- Implementation and verification, how controls are verified at installation and over time.
+- Implementation and verification: how controls are verified at installation and over time.
 - Coordination with this procedure: vendor records here are CIP-013 records.
 
 ---
@@ -382,7 +367,7 @@ For BES Cyber Systems, CERG maintains a CIP-013 Supply Chain Risk Management Pla
 
 ## 14. FedRAMP Equivalency Evidence
 
-Where a CUI-relevant SaaS / cloud service is not FedRAMP-authorized but is proposed for use, CERG requires a documented FedRAMP-equivalency package:
+When a CUI-relevant SaaS / cloud service is proposed for use without FedRAMP authorization, CERG requires a documented FedRAMP-equivalency package:
 
 - SOC 2 Type II with [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) Moderate baseline mapping.
 - 3PAO-equivalent assessment letter or independent assessor attestation.
@@ -390,13 +375,13 @@ Where a CUI-relevant SaaS / cloud service is not FedRAMP-authorized but is propo
 - Sub-service organization carve-outs reconciled.
 - Re-papering trigger documented (FedRAMP authorization issued, attestation lapses, scope change).
 
-The Vendor Risk Analyst records the package in the TPRM tool as the vendor's Inheritance Evidence Package for the CUI overlay.
+The Vendor Risk Analyst files the package in the TPRM tool, as the vendor's Inheritance Evidence Package for the CUI overlay.
 
 ---
 
 ## 15. Supply Chain Compromise Team (SCCT)
 
-When a vendor reports, or is publicly disclosed as having, a material cybersecurity incident affecting their service or product, CERG activates the **Supply Chain Compromise Team (SCCT)**.
+CERG activates the **Supply Chain Compromise Team (SCCT)** when a vendor reports — or is publicly said to have — a material cybersecurity incident affecting its service or product.
 
 ### 15.1 SCCT Membership
 
@@ -432,7 +417,7 @@ Other invitees as needed: CISO (declared briefing), Privacy (PII implications), 
 
 ### 15.4 SCCT Evidence
 
-Every SCCT activation produces an SCCT record with: trigger, membership, timeline, decisions, notifications, risk register updates, vendor-side commitments. Retain records for the longer of the vendor relationship + 3 years or the regulatory retention requirement.
+Each SCCT activation produces an SCCT record: trigger, membership, timeline, decisions, notifications, risk register updates, vendor-side commitments. Retain records for the longer of the vendor relationship + 3 years or the regulatory retention requirement.
 
 > **Why a Named Team Instead of "We'll Pull People In"**
 >
@@ -444,7 +429,7 @@ Every SCCT activation produces an SCCT record with: trigger, membership, timelin
 
 ### 16.1 Automated Monitoring Signals
 
-CERG continuously monitors the vendor landscape using automated signals. The following sources are integrated into the TPRM monitoring pipeline:
+CERG watches the vendor landscape continuously through automated signals. These sources feed the TPRM monitoring pipeline:
 
 | **Signal Type** | **Source** | **Frequency** | **Action on Alert** |
 |---|---|---|---|
@@ -457,7 +442,7 @@ CERG continuously monitors the vendor landscape using automated signals. The fol
 
 ### 16.2 Periodic Re-Assessment Triggers
 
-CERG re-assesses vendors on the following cadence by tier:
+Re-assessment cadence varies by tier:
 
 | **Tier** | **Re-Assessment Cadence** | **Trigger Events (override cadence)** |
 |---|---|---|
@@ -469,7 +454,7 @@ CERG re-assesses vendors on the following cadence by tier:
 
 ### 16.3 Vendor Performance Metrics
 
-The Vendor Risk Analyst tracks the following metrics for each T1 and T2 vendor:
+For every T1 and T2 vendor, the Vendor Risk Analyst tracks these metrics:
 
 | **Metric** | **Description** | **Review Cadence** |
 |---|---|---|
@@ -491,7 +476,7 @@ The Vendor Risk Analyst tracks the following metrics for each T1 and T2 vendor:
 
 ### 16.5 Integration with Approved Provider Catalog
 
-Continuous monitoring results directly affect the Approved Provider Catalog (APC) status values:
+Monitoring results move the Approved Provider Catalog (APC) status values directly:
 
 - **Green (Approved)**: All monitoring signals within acceptable thresholds; evidence current.
 - **Amber (Conditional)**: One or more signals outside Green threshold; remediation plan accepted. Automatic review at 90 days.
@@ -500,7 +485,7 @@ Continuous monitoring results directly affect the Approved Provider Catalog (APC
 
 ### 16.6 Integration with Threat Intelligence
 
-CERG integrates vendor monitoring with [CERG-PRC-TI-001](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) for vendor-specific threat intelligence:
+Vendor monitoring feeds into [CERG-PRC-TI-001](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) for vendor-specific threat intelligence:
 
 - The Threat Intelligence Analyst produces a **Vendor Risk Note** (per PRC-TI-001 §6.5) when threat intelligence reveals TTPs, CVEs, or campaign activity relevant to a vendor in the APC.
 - Vendor-specific IOCs from threat intelligence are deployed to detection tooling per PRC-TI-001 §4.6.
@@ -538,7 +523,7 @@ Surviving contractual clauses (confidentiality, data handling, audit rights) rem
 
 ### 16.8 Fourth-Party Risk Management
 
-Fourth-party risk arises when a critical vendor relies on subcontractors (sub-processors) the organization does not have a direct relationship with.
+Fourth-party risk is the risk that a critical vendor relies on subcontractors — sub-processors — with which the organization has no direct relationship.
 
 #### Disclosure Requirements
 
@@ -576,7 +561,7 @@ Critical and high-tier vendors must demonstrate BCDR capability proportional to 
 
 #### RTO/RPO Expectations
 
-Set RTO (Recovery Time Objective) and RPO (Recovery Point Objective) expectations based on the organization's dependency on the vendor:
+Set RTO (Recovery Time Objective) and RPO (Recovery Point Objective) expectations from the organization's dependence on the vendor:
 
 - If the organization's own Tier 1 service depends on the vendor, the vendor's RTO must be ≤ the organization's RTO for that service.
 - If the vendor processes regulated data (CUI, SOX), RPO must be ≤ 1 hour.
@@ -590,7 +575,7 @@ During vendor assessment, the Vendor Risk Analyst evaluates:
 - Are RTO/RPO commitments compatible with the organization's requirements?
 - Does the vendor's BCDR plan account for dependencies on its own critical sub-processors?
 
-Record assessment results in the TPRM tool and review them at each re-assessment cycle.
+Record the assessment results in the TPRM tool, and review them at every re-assessment cycle.
 
 ### 16.10 Metrics
 
