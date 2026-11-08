@@ -53,9 +53,7 @@ It applies to every system, person, and process within the CUI boundary, and to 
 
 CERG operates the CUI program at the level required to pass a **[CMMC](https://dodcio.defense.gov/CMMC/) Level 2 third-party assessment** by an authorized C3PAO. [CMMC L1](https://dodcio.defense.gov/CMMC/) is treated as a strict subset that is automatically met when L2 is met.
 
-> **Why Plan for L2 Third-Party as the Baseline**
->
-> [CMMC L2](https://dodcio.defense.gov/CMMC/) with C3PAO assessment is the highest practical scrutiny most CUI primes face on a routine cadence. If the program is ready for that scrutiny, it is ready for the lesser ones. Designing to a lower level and hoping to "lift later" produces a program that drifts under audit pressure.
+[CMMC L2](https://dodcio.defense.gov/CMMC/) with a C3PAO assessment is the highest practical scrutiny most CUI primes face on a routine cadence. If the program is ready for that scrutiny, it is ready for the lesser ones. Designing to a lower level and hoping to "lift later" produces a program that drifts under audit pressure.
 
 ---
 
@@ -262,13 +260,13 @@ The matrix is the row-per-practice spine. It is the principal artifact a C3PAO u
 | Open POA&M | POAM ID if applicable |
 | Notes | Special handling, exceptions |
 
-The matrix is the artifact CERG ships with the SSP. It is updated whenever an evidence artifact is refreshed.
+The matrix is the artifact CERG ships with the SSP. CERG updates it whenever an evidence artifact is refreshed.
 
 ---
 
 ## 11. [CMMC L2](https://dodcio.defense.gov/CMMC/) Readiness Checklist
 
-A pre-assessment self-check, repeated quarterly and aggressively in the 90 days before an assessment.
+CERG runs this checklist as a pre-assessment self-check, quarterly and aggressively in the 90 days before an assessment.
 
 | **Area** | **Check** | **Pass** |
 |---|---|---|
@@ -322,7 +320,7 @@ The Mock Assessment Procedure is scheduled 6 months before the target C3PAO asse
 
 #### Practice-by-Practice Evidence Review
 
-The core of the mock assessment. Each CMMC Level 2 practice (ALL 110+) is reviewed against the Practice Evidence Matrix (Section 10).
+This is the core of the mock assessment. Each CMMC Level 2 practice (ALL 110+) is reviewed against the Practice Evidence Matrix (Section 10).
 
 | **Review Step** | **Details** |
 |---|---|
@@ -384,7 +382,7 @@ Interviews simulate C3PAO assessor interaction with key personnel.
 
 ## 12. C3PAO Assessment Logistics
 
-Logistics that consistently surprise organizations on assessment day; CERG handles them ahead of time.
+These logistics consistently surprise organizations on assessment day; CERG handles them ahead of time.
 
 | **Item** | **Owner** | **Pre-Assessment Action** |
 |---|---|---|
@@ -417,13 +415,13 @@ Logistics that consistently surprise organizations on assessment day; CERG handl
 | Next Review | Date |
 | Status | Active · Inactive · Suspended |
 
-The register is maintained jointly by Governance, CUI and TPRM; the TPRM record is canonical for vendor data with this register adding CUI-specific fields.
+Governance, CUI, and TPRM maintain the register jointly; the TPRM record is canonical for vendor data, with this register adding CUI-specific fields.
 
 ---
 
 ## 14. FedRAMP Equivalency Evidence Checklist
 
-For cloud / SaaS providers handling CUI that are not FedRAMP-authorized, the equivalency package required by [`CERG-PRC-TPRM-001`](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) Section 14. Repeated here as a CUI-program reference.
+For cloud or SaaS providers handling CUI that are not FedRAMP-authorized, [`CERG-PRC-TPRM-001`](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) Section 14 sets out the required equivalency package. It is repeated here as a CUI-program reference.
 
 | **Element** | **Required** |
 |---|---|
