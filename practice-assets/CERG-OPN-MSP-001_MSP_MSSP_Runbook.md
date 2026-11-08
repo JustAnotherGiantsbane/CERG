@@ -19,9 +19,11 @@
 
 ## Purpose
 
-This runbook is for MSPs and MSSPs who deliver the CERG cybersecurity operating model to small and mid-sized clients. It assumes you've read the [Opinionated Tool Matrix](tools/CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md), reviewed the [Engagement Playbook](../practice-assets/CERG-OPN-DLV-001_Engagement_Playbook.md) for scoping and pricing context, and set up your [GRC platform](tools/CERG-OPN-TOOLS-002_GRC_Rollout_Guide.md).
+This runbook is for MSPs and MSSPs who deliver the CERG cybersecurity operating model to small and mid-sized clients.
 
-Every section here is written for an **IT generalist** — someone who can follow instructions and run commands, but isn't a dedicated security engineer. If a step requires specialized expertise, it's called out explicitly.
+**If you have a client call tomorrow, start at Phase 1 and follow it in order.** Nothing else has to be read first. The three documents this runbook leans on are worth reading before your second client, not before your first: the [Opinionated Tool Matrix](tools/CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md) for tool selection, the [Engagement Playbook](../practice-assets/CERG-OPN-DLV-001_Engagement_Playbook.md) for scoping and pricing, and the [GRC Rollout Guide](tools/CERG-OPN-TOOLS-002_GRC_Rollout_Guide.md) for evidence plumbing.
+
+Every section is written for an **IT generalist** — someone who can follow instructions and run commands, but isn't a dedicated security engineer. Where a step needs specialized expertise, it says so.
 
 ---
 
@@ -69,26 +71,29 @@ This section provides copy-paste deployment commands for the recommended stack. 
 
 ### 2.1 SentinelOne Deployment
 
-```bash
-# Download the SentinelOne agent for the client's site
-# 1. Log into SentinelOne console
-# 2. Navigate to Sentinels > Packages
-# 3. Select the client's site
-# 4. Copy the registration token
+Get the client site's registration token from the console first, then push the agent with your RMM.
 
-# Deploy via RMM (NinjaOne example)
-# In NinjaOne: Policies > Automation > Add Script
-# Script type: PowerShell (Windows) / Bash (Mac/Linux)
+**Get the registration token**
 
-# Windows PowerShell deployment:
+1. Log into the SentinelOne console.
+2. Go to **Sentinels → Packages**.
+3. Select the client's site.
+4. Copy the registration token.
+
+**Deploy through the RMM (NinjaOne example)**
+
+In NinjaOne, go to **Policies → Automation → Add Script**, and set the script type to PowerShell on Windows or Bash on Mac and Linux.
+
+```powershell
 $TOKEN = "client-registration-token"
 $SITE = "client-site-token"
 $URL = "https://usea1-install.sentinelone.net"
 $Installer = "$env:TEMP\SentinelOneInstaller.exe"
 Invoke-WebRequest -Uri "$URL/agents/latest/windows" -OutFile $Installer
 Start-Process -FilePath $Installer -ArgumentList "-t $TOKEN -s $SITE -q" -Wait
+```
 
-# Ubuntu/Debian deployment:
+```bash
 TOKEN="client-registration-token"
 SITE="client-site-token"
 curl -sSL "https://usea1-install.sentinelone.net/agents/latest/linux" -o /tmp/s1-agent.deb
@@ -96,9 +101,9 @@ sudo dpkg -i /tmp/s1-agent.deb
 sudo /opt/sentinelone/bin/sentinelctl management token set "$TOKEN"
 sudo /opt/sentinelone/bin/sentinelctl management site set "$SITE"
 sudo /opt/sentinelone/bin/sentinelctl control start
-
-# Verify: agent appears in console within 5 minutes
 ```
+
+**Verify.** The agent appears in the console within about 5 minutes.
 
 ### 2.2 Wazuh Deployment (SMB Stack)
 
@@ -132,26 +137,28 @@ sudo systemctl start wazuh-agent
 
 ### 2.3 Tenable Nessus Deployment
 
-```bash
-# Deploy Nessus scanner appliance (VM or cloud instance)
-# For MSP multi-client: one Nessus Manager + per-client Nessus scanners
+Run one Nessus Manager for the MSP and a scanner per client. Install the scanner, link it to the Tenable.io MSP console, then create the CERG baseline policy.
 
-# Download Nessus:
+```bash
+# Download Nessus
 curl -sSL "https://www.tenable.com/downloads/api/v2/pages/nessus/files/Nessus-10.7.0-ubuntu1404_amd64.deb" -o /tmp/nessus.deb
 sudo dpkg -i /tmp/nessus.deb
 sudo systemctl start nessusd
 
-# Link scanner to Tenable.io (MSP console):
+# Link the scanner to Tenable.io
 sudo /opt/nessus/sbin/nessuscli managed link --key=YOUR_LINKING_KEY --cloud
+```
 
-# Create a scan policy for CERG baseline:
-# 1. Log into Tenable.io
-# 2. Scans > Policies > New Policy
-# 3. Select "Basic Network Scan"
-# 4. Enable: authenticated scanning, compliance checks (CIS benchmarks)
-# 5. Set scan window: weekly, off-hours
+**Create the baseline scan policy**
 
-# Schedule a scan (via API):
+1. Log into Tenable.io.
+2. Go to **Scans → Policies → New Policy**.
+3. Select **Basic Network Scan**.
+4. Enable authenticated scanning and compliance checks (CIS benchmarks).
+5. Set the scan window to weekly, off-hours.
+
+```bash
+# Schedule the scan through the API
 curl -s -H "X-ApiKeys: accessKey=XXX;secretKey=YYY" \
   -H "Content-Type: application/json" \
   -X POST "https://cloud.tenable.com/scans" \
@@ -169,51 +176,42 @@ curl -s -H "X-ApiKeys: accessKey=XXX;secretKey=YYY" \
 
 ### 2.4 Wiz CSPM Onboarding
 
-```bash
-# Wiz is agentless — connect cloud accounts via read-only IAM roles
+Wiz is agentless. You connect each cloud account with a read-only role and nothing is installed on the client's endpoints.
 
-# AWS onboarding (CloudFormation):
-# 1. In Wiz console: Settings > Cloud Accounts > Add > AWS
-# 2. Choose "Automatic — CloudFormation" 
-# 3. Run the provided CloudFormation template in the client's AWS account
-# 4. Wiz discovers resources within 15 minutes
+**AWS**
 
-# Azure onboarding:
-# 1. In Wiz console: Settings > Cloud Accounts > Add > Azure  
-# 2. Follow the "Automatic — Terraform" or "Manual" instructions
-# 3. Creates a read-only service principal
-# 4. Discovery completes within 30 minutes
+1. In the Wiz console: **Settings → Cloud Accounts → Add → AWS**.
+2. Choose **Automatic — CloudFormation**.
+3. Run the generated CloudFormation template in the client's AWS account.
+4. Wiz discovers the resources within about 15 minutes.
 
-# Verify onboarding:
-# Wiz dashboard shows resource count, findings, and risk score
-# First scan typically finds 50-500 misconfigurations in a production cloud account
-```
+**Azure**
+
+1. In the Wiz console: **Settings → Cloud Accounts → Add → Azure**.
+2. Follow **Automatic — Terraform** or **Manual**. Both create a read-only service principal and nothing more.
+3. Discovery completes within about 30 minutes.
+
+**Verify.** The dashboard shows a resource count, findings, and a risk score. A first scan of a production cloud account typically returns 50–500 misconfigurations; that number is the client's problem, not a sign the onboarding failed.
 
 ### 2.5 Veeam Backup Configuration
 
-```bash
-# Veeam Backup & Replication deployment (Windows Server recommended)
-# For MSP: Veeam Service Provider Console for multi-client management
+Run Veeam Backup & Replication on a Windows Server. MSPs should manage clients from the Veeam Service Provider Console rather than from per-client consoles.
 
-# Core configuration (minimal for CERG compliance):
-# 1. Create a backup repository with immutability enabled
-#    - Type: Linux Hardened Repository or Object Storage with Object Lock
-#    - Immutability period: minimum 30 days
-# 2. Create a backup job for each critical workload:
-#    - Domain controllers
-#    - File servers
-#    - Database servers  
-#    - Application servers
-# 3. Schedule: daily incremental, weekly full
-# 4. Enable backup verification (SureBackup) on weekends
-# 5. Configure backup copy to offline/air-gapped storage (rotating external drives
-#    or a second immutable repository in a different region)
+Immutable storage is the point of this section. A backup the ransomware can encrypt is not a backup.
 
-# Offsite copy (via Veeam Cloud Connect to MSP's infrastructure):
-# 1. Add service provider in Veeam console
-# 2. Create Backup Copy job pointing to cloud repository
-# 3. Enable GFS retention: 7 daily, 4 weekly, 12 monthly, 3 yearly
-```
+**Core configuration (the minimum for CERG compliance)**
+
+1. Create a backup repository with immutability enabled — a Linux Hardened Repository, or object storage with Object Lock. Set the immutability period to at least 30 days.
+2. Create one backup job per critical workload: domain controllers, file servers, database servers, application servers.
+3. Schedule daily incremental and weekly full backups.
+4. Turn on backup verification (SureBackup) for weekends, so a restore gets tested without anyone having to remember to test it.
+5. Add an offline or air-gapped copy: rotating external drives, or a second immutable repository in a different region.
+
+**Offsite copy through Veeam Cloud Connect**
+
+1. Add the service provider in the Veeam console.
+2. Create a Backup Copy job pointing at the cloud repository.
+3. Enable GFS retention: 7 daily, 4 weekly, 12 monthly, 3 yearly.
 
 ---
 

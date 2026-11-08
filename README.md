@@ -8,6 +8,24 @@ We contribute upstream — bug fixes, doc improvements, framework enhancements �
 
 ---
 
+## Start here
+
+| If you are... | Start with |
+|---|---|
+| An MSP/MSSP delivering CERG to clients | [MSP/MSSP Runbook](practice-assets/CERG-OPN-MSP-001_MSP_MSSP_Runbook.md) |
+| Picking tools for a CERG deployment | [Opinionated Tool Matrix](practice-assets/tools/CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md) |
+| Setting up automated compliance evidence | [Evidence Automation Mapping](practice-assets/tools/CERG-OPN-TOOLS-003_Evidence_Automation_Mapping.md) |
+| Setting up a GRC platform | [GRC Rollout Guide](practice-assets/tools/CERG-OPN-TOOLS-002_GRC_Rollout_Guide.md) |
+| Scoping or pricing a CERG engagement | [Engagement Playbook](practice-assets/CERG-OPN-DLV-001_Engagement_Playbook.md) |
+| Looking for the full control set | [Practitioner Control Baseline](governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md) |
+| Understanding why specific choices were made | [Architecture Decision Records](governance/CERG-GOV-ADR-001_Architecture_Decision_Records.md) |
+| Tailoring or maintaining the practice layer | [Practice Assets Operating Guide](practice-assets/README.md) |
+| New to CERG (upstream) | [START-HERE.md](START-HERE.md) |
+| Using an AI assistant | [ADOPT-WITH-AN-AGENT.md](ADOPT-WITH-AN-AGENT.md) |
+| Contributing upstream | [CONTRIBUTING.md](CONTRIBUTING.md) |
+
+---
+
 ### The upstream relationship
 
 CERG is Ron Brown's cybersecurity operating model. It gives security teams the policy spine, roles, standards, procedures, and evidence habits needed to run a real program. Read the [upstream README](https://github.com/m0dernz/CERG) for the canonical description.
@@ -25,7 +43,7 @@ This fork extends the architecture into something an MSP technician can follow:
 | **Consulting** | Implicit | **Explicit** — engagement anti-patterns, SOW essentials, pricing reference, handoff procedures |
 | **Architecture** | CERG framework decisions | **ADR log** documenting why each opinionated choice was made |
 
-**Boundary:** Everything in `practice-assets/` uses the `OPN` domain prefix. These are fork-only. They never go upstream. Framework improvements to `governance/`, `standards/`, and `procedures/` are contributed back.
+**Boundary.** Everything in `practice-assets/` uses the `OPN` domain prefix and is fork-only: it never goes upstream. Improvements to `governance/`, `standards/`, and `procedures/` are contributed back.
 
 ---
 
@@ -76,24 +94,6 @@ The [ADR log](governance/CERG-GOV-ADR-001_Architecture_Decision_Records.md) capt
 - **ADR-003:** Why CB-002 has 86 controls (culling criteria)
 - **ADR-004:** Why evidence automation is a separate document
 - **ADR-005:** Why MSP delivery model over enterprise consulting
-
----
-
-## Start here
-
-| If you are... | Start with |
-|---|---|
-| An MSP/MSSP delivering CERG to clients | [MSP/MSSP Runbook](practice-assets/CERG-OPN-MSP-001_MSP_MSSP_Runbook.md) |
-| Picking tools for a CERG deployment | [Opinionated Tool Matrix](practice-assets/tools/CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md) |
-| Setting up automated compliance evidence | [Evidence Automation Mapping](practice-assets/tools/CERG-OPN-TOOLS-003_Evidence_Automation_Mapping.md) |
-| Setting up a GRC platform | [GRC Rollout Guide](practice-assets/tools/CERG-OPN-TOOLS-002_GRC_Rollout_Guide.md) |
-| Scoping or pricing a CERG engagement | [Engagement Playbook](practice-assets/CERG-OPN-DLV-001_Engagement_Playbook.md) |
-| Looking for the full control set | [Practitioner Control Baseline](governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md) |
-| Understanding why specific choices were made | [Architecture Decision Records](governance/CERG-GOV-ADR-001_Architecture_Decision_Records.md) |
-| Tailoring or maintaining the practice layer | [Practice Assets Operating Guide](practice-assets/README.md) |
-| New to CERG (upstream) | [START-HERE.md](START-HERE.md) |
-| Using an AI assistant | [ADOPT-WITH-AN-AGENT.md](ADOPT-WITH-AN-AGENT.md) |
-| Contributing upstream | [CONTRIBUTING.md](CONTRIBUTING.md) |
 
 ---
 
