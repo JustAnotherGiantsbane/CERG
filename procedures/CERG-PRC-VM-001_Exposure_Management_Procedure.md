@@ -49,7 +49,7 @@ This procedure establishes CERG's exposure management program — the discipline
 >
 > CERG does not measure its security posture by how many vulnerabilities a scanner finds. It measures posture by confirmed reachable exposure, by how quickly observations are triaged into decisions, and by whether treatment actually closes the exposure path. A program that reduces total findings while leaving Internet-exposed critical exposures open is not improving — it is reorganizing failure.
 
-This procedure operationalizes Principle 5 of [CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) through a fundamentally different lens than traditional scanner-driven vulnerability programs. The program does not start with "scan, score, SLA, patch/accept." It starts with the observation that most scanner output is noise, and the signal worth acting on is confirmed reachable exposure.
+This procedure implements Principle 5 of [CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md), and it works differently from traditional scanner-driven vulnerability programs. The program does not start with "scan, score, SLA, patch/accept." It starts with the observation that most scanner output is noise, and the signal worth acting on is confirmed reachable exposure.
 
 ### 1.2 What This Procedure Replaces
 
