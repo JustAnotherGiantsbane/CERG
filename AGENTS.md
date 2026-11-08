@@ -171,8 +171,12 @@ Push immediately after each commit. Do not accumulate local commits.
 ```bash
 git add FILENAME.md
 git commit -m "short message"
-git push origin main
+git push fork HEAD
 ```
+
+`origin` is `m0dernz/CERG`, the canonical repo with a single maintainer. It is fetch-only for contributors: a push there returns a permission error, and that is the guard working, not a credential problem. With `remote.pushDefault=fork`, a bare `git push` targets your own fork.
+
+Changes reach mainline as a pull request to `m0dernz`. A declined pull request means the change does not enter mainline now, not that the idea is invalid. See [CONTRIBUTING.md](CONTRIBUTING.md) for the reasoning.
 
 ### Git Config
 
