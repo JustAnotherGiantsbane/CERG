@@ -36,9 +36,9 @@
 
 ## 1. Purpose and Scope
 
-A CISO walks into a budget meeting and says "I need three more Cloud Security Engineers." The CFO asks "why three, and why Cloud Security Engineers specifically?" The CISO who cannot answer that question with a methodology will get zero, or one, or a contractor for six months with no renewal path. The CISO who produces a capacity model built on workload drivers, not headcount comparisons, will get a conversation about which assumptions the CFO disagrees with. A conversation about assumptions is a negotiation. A conversation without assumptions is a request.
+A CISO walks into a budget meeting and says, "I need three more Cloud Security Engineers." The CFO asks "why three, and why Cloud Security Engineers specifically?" The CISO who cannot answer that question with a methodology will get zero, or one, or a contractor for six months with no renewal path. The CISO who produces a capacity model built on workload drivers, not headcount comparisons, will get a conversation about which assumptions the CFO disagrees with. A conversation about assumptions is a negotiation. A conversation without assumptions is a request.
 
-This document provides the methodology. It defines the workload drivers for each pillar, translates them into staffing formulas, and provides the scaling guidance that supports a headcount request from a small startup CERG to a full-scale enterprise function. It is designed to be a live tool: organizations plug in their numbers and get a recommended staffing range with documented rationale.
+This document provides the methodology. It defines the workload drivers for each pillar and translates them into staffing formulas. Its scaling guidance supports a headcount request from a small startup CERG to a full-scale enterprise function. Use it as a live tool: plug in your numbers and get a recommended staffing range with documented rationale.
 
 It applies to every CERG role. It does not prescribe exact headcount; it prescribes the method for arriving at a defensible headcount. The output is a range, not a single number, because judgment about organizational context, team composition, and automation maturity always matters.
 
@@ -55,17 +55,17 @@ It applies to every CERG role. It does not prescribe exact headcount; it prescri
 Most corporate functions have stable workload-to-headcount ratios. Accounts payable: X invoices per clerk per month. IT support: Y tickets per technician per day. Cybersecurity does not work this way for three reasons:
 
 1. **Workload is adversary-driven, not business-driven.** A new ransomware variant can multiply the detection engineering workload overnight. A zero-day in a widely deployed platform can turn every Cloud Security Engineer's week into emergency response.
-2. **Work is invisible when done well.** A Cloud Security Engineer who prevents a misconfigured S3 bucket from reaching production has done some of the highest-value work in the organization. The work produced no ticket, no finding, and no metric other than the absence of a breach. Capacity models that measure only tickets undercount security engineering by design.
-3. **Regulatory scope changes the workload non-linearly.** Adding NERC-CIP to an organization's compliance scope does not add one FTE of Governance work. It adds a compliance manager, an evidence librarian, OT engineering support, and a new audit cycle. Frameworks multiply; they do not add.
+2. **Work is invisible when done well.** A Cloud Security Engineer prevents a misconfigured S3 bucket from reaching production — some of the highest-value work in the organization. The work produced no ticket, no finding, and no metric other than the absence of a breach. Capacity models that measure only tickets undercount security engineering by design.
+3. **Regulatory scope changes the workload non-linearly.** NERC-CIP, added to an organization's compliance scope, does not add one FTE of Governance work. It adds a compliance manager, an evidence librarian, OT engineering support, and a new audit cycle. Frameworks multiply; they do not add.
 
 ### 2.2 The Capacity Model's Answer
 
 This model addresses the capacity problem by defining workload drivers that are:
 
 - **Observable.** An organization can count its projects, assets, vendors, and frameworks.
-- **Predictive.** The relationship between the driver and the staffing need is grounded in how CERG roles actually spend their time.
+- **Predictive.** The driver predicts staffing need because it tracks how CERG roles actually spend their time.
 - **Ranged.** Every formula produces a range (minimum, target, maximum), not a point estimate. The range accounts for organizational context, automation maturity, and team experience.
-- **Calibratable.** Organizations that track actual time allocation can refine the model's coefficients. An organization that discovers its Cloud Security Engineers spend 40% of their time on architecture review rather than the model's assumed 30% can adjust the formula for its next cycle.
+- **Calibratable.** Organizations that track actual time allocation can refine the model's coefficients. An organization that discovers its Cloud Security Engineers spend 40% of their time on architecture review, rather than the model's assumed 30%, can adjust the formula for its next cycle.
 
 ---
 
@@ -108,7 +108,7 @@ This model addresses the capacity problem by defining workload drivers that are:
 
 ### 4.1 The Base Formula
 
-For each role, the recommended staffing range is calculated as:
+For each role, calculate the recommended staffing range as:
 
 ```
 Headcount = ⌈(Driver1 / Throughput1) + (Driver2 / Throughput2) + ...⌉ × Complexity Factor × Automation Discount
@@ -124,12 +124,12 @@ The ceiling brackets ⌈...⌉ indicate rounding up to the nearest whole person.
 
 ### 4.2 The Role Consolidation Rule
 
-The scaling map in CERG-GOV-RAC-001 §8 shows how canonical roles consolidate onto a small team. This model respects that consolidation. When the formula produces less than 1.0 FTE for a role, the role is consolidated onto an adjacent role rather than fractionalized:
+The scaling map in CERG-GOV-RAC-001 §8 shows how canonical roles consolidate onto a small team. This model respects that consolidation. When the formula produces less than 1.0 FTE for a role, consolidate the role onto an adjacent role rather than fractionalizing it:
 
-- If the model says 0.4 Detection Engineers and 0.6 Threat Intelligence Analysts, both roles consolidate onto one person who splits their time, or the Detection Engineering work is absorbed by the Exposure Management Lead
+- If the model says 0.4 Detection Engineers and 0.6 Threat Intelligence Analysts, both roles consolidate onto one person who splits their time, or the Exposure Management Lead absorbs the Detection Engineering work
 - Pillar Leader roles consolidate downward: in a small CERG, the CISO may directly manage all pillars, and the senior-most practitioner in each pillar may operate as a player-coach at S3-S4
 
-The model reports both the unconsolidated headcount (what the formula says) and the consolidated headcount (how roles combine for organizations below a certain scale).
+The model reports two numbers: the unconsolidated headcount (what the formula says) and the consolidated headcount (how roles combine below a certain scale).
 
 ### 4.3 The Management Overhead Factor
 
@@ -407,11 +407,11 @@ The table below applies the capacity model to four illustrative organization pro
 | **Management Overhead** | 0 | 0.5 | 3 | 5 |
 | **Consolidated Total** | **5** | **15** | **30** | **49** |
 
-*In a small organization, these roles are consolidated per the RACI scaling map (RAC-001 §8). The CISO may manage all pillars directly. The senior-most practitioner in each pillar operates at S3-S4 level with expanded scope covering adjacent roles.
+*In a small organization, these roles consolidate per the RACI scaling map (RAC-001 §8). The CISO may manage all pillars directly. The senior-most practitioner in each pillar operates at S3-S4 level with expanded scope covering adjacent roles.
 
 ### 8.2 When to Split a Role
 
-A role that reaches 2.5+ FTE in the model should be evaluated for a split:
+Evaluate any role that reaches 2.5+ FTE in the model for a split:
 
 | Trigger | Action |
 |---|---|
@@ -429,7 +429,7 @@ The capacity model produces a theoretical headcount. The first year of tracking 
 
 1. **Track time allocation** for at least one quarter. Use broad categories: project work, operational work, unplanned/incident work, administrative overhead. Do not ask for timesheets in 15-minute increments; ask for a weekly estimate by category.
 2. **Compare actual to modeled.** If Cloud Security Engineers are spending 50% of their time on unplanned work, the model's project-throughput assumptions are wrong for this organization. Adjust the model or fix the source of unplanned work.
-3. **Refine the coefficients.** The throughput numbers in this model are baseline estimates. An organization that discovers its Engineers can handle 10 medium-complexity projects (not the model's 7) should update its formula. The model improves with use.
+3. **Refine the coefficients.** The throughput numbers in this model are baseline estimates. An organization that discovers its Engineers can handle 10 medium-complexity projects, not the model's 7, should update its formula. The model improves with use.
 4. **Recalibrate before each budget cycle.** An organization that is growing, adding platforms, adding regulatory frameworks, or maturing its automation should run the model fresh each year.
 
 ### 9.2 Automation Maturity Adjustment
@@ -446,11 +446,11 @@ Organizations with mature security automation should apply the Automation Discou
 
 ### 9.3 The Experience Adjustment
 
-A team of predominantly S3-S4 practitioners handles more throughput per person than a team of S1-S2 practitioners. An organization with a senior-heavy team may increase throughput coefficients by 15-25%. An organization with a junior-heavy team (common during rapid growth) should decrease throughput coefficients by 15-25% and budget for the mentoring overhead that junior practitioners require.
+A team of predominantly S3-S4 practitioners handles more throughput per person than a team of S1-S2 practitioners. An organization with a senior-heavy team may increase throughput coefficients by 15-25%. An organization with a junior-heavy team (common during rapid growth) should decrease throughput coefficients by 15-25%. It should also budget for the mentoring overhead junior practitioners require.
 
 > **The Model Is Honest About Its Limits**
 >
-> This model will not tell you that you need exactly 2.3 Cloud Security Engineers. It will tell you that based on your project count, complexity mix, and automation maturity, your range is 2-3. The decision between 2 and 3 depends on factors no model captures: your risk appetite, your team's current burnout level, your ability to hire, and whether you have a major platform migration coming in Q3 that is not yet on the project register. The model provides the range and the rationale. The CISO provides the judgment.
+> This model will not tell you that you need exactly 2.3 Cloud Security Engineers. It will tell you that based on your project count, complexity mix, and automation maturity, your range is 2-3. The decision between 2 and 3 depends on factors no model captures: your risk appetite, your team's current burnout level, your ability to hire, and whether a major platform migration is coming in Q3 that the project register does not yet show. The model provides the range and the rationale. The CISO provides the judgment.
 
 ---
 

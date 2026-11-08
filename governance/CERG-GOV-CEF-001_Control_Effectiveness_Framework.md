@@ -14,7 +14,7 @@
 | **Supporting Documents** | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) · [`CERG-GOV-TRC-001`](CERG-GOV-TRC-001_Control_to_Procedure_Traceability_Matrix.md) · [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) · [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) · [`CERG-PRC-LL-001`](../procedures/CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) · [`CERG-PRC-AUD-001`](../procedures/CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) · [`CERG-GOV-IMPREG-001`](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) |
 | **Review Cycle** | Annual / On control baseline revision |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (ID.IM, PROTECT all categories) · NIST 800-55 · ISO/IEC 27004 |
-| **Regulations** | Cross-cutting : applies to all CERG-supported frameworks |
+| **Regulations** | Cross-cutting: applies to all CERG-supported frameworks |
 | **Environments** | All CERG-managed controls |
 
 ---
@@ -43,7 +43,7 @@ This framework defines how CERG measures whether controls are working, analyzes 
 
 > **The Assessor Test**
 >
-> An assessor asks: "Your access recertification control is Implemented. What percentage of recertifications result in access reduction?" If the answer is "We do not track that," the control may be rubber-stamping : present but not effective. If the answer is "12% of recertifications result in reduction, and we investigate when that falls below 5%," the control is being measured, not just checked. The difference is the gap between Repeatable and Adaptive.
+> An assessor asks: "Your access recertification control is Implemented. What percentage of recertifications result in access reduction?" If the answer is "We do not track that," the control may be rubber-stamping — present but not effective. If the answer is "12% of recertifications result in reduction, and we investigate when that falls below 5%," the control is being measured, not just checked. The difference is the gap between Repeatable and Adaptive.
 
 ---
 
@@ -55,7 +55,7 @@ This framework defines how CERG measures whether controls are working, analyzes 
 |---|---|---|
 | **Design failure** | The control was designed for a threat that no longer applies, or was never correctly designed for the threat it was meant to address. | A WAF ruleset tuned for SQL injection in 2019 that does not cover the API-based attacks the organization now faces. |
 | **Implementation failure** | The control is correctly designed but was incorrectly deployed, configured, or scoped. | MFA is required by policy but was not enforced on the VPN gateway because the integration was misconfigured. |
-| **Operational failure** | The control is correctly designed and deployed but is not being operated : alerts are ignored, reviews are skipped, evidence is stale. | SIEM alerts fire for privileged account anomalies but the investigation queue has a 14-day backlog. |
+| **Operational failure** | The control is correctly designed and deployed but is not being operated — alerts are ignored, reviews are skipped, evidence is stale. | SIEM alerts fire for privileged account anomalies but the investigation queue has a 14-day backlog. |
 | **Coverage failure** | The control works where it is deployed but does not cover assets or environments that need it. | Endpoint EDR covers workstations but not the jump hosts used to access OT environments. |
 
 Each failure mode requires a different fix: redesign, re-implementation, operational discipline, or scope expansion. Knowing that a control is ineffective is not enough; the program must know why, so the fix addresses the root cause.
@@ -79,7 +79,7 @@ Every control family must have at least one effectiveness metric that is distinc
 
 ### 3.2 Metric Design Rules
 
-1. **Effectiveness metrics are outcome-oriented.** "Access reviews completed on time" is an implementation metric. "Percentage of access reviews that resulted in access reduction" is an effectiveness metric : it measures whether the review is detecting and correcting real access creep.
+1. **Effectiveness metrics are outcome-oriented.** "Access reviews completed on time" is an implementation metric. "Percentage of access reviews that resulted in access reduction" is an effectiveness metric — it measures whether the review is detecting and correcting real access creep.
 2. **Effectiveness metrics have thresholds.** A metric without a threshold is a measurement without a decision. Each effectiveness metric defines green, amber, and red bands.
 3. **Effectiveness metrics are trended.** A single-point effectiveness reading is nearly useless. Direction and rate of change tell the story.
 4. **Effectiveness metrics trigger action.** When an effectiveness metric goes red, it triggers a control failure analysis (Section 5) and potentially an improvement register entry (IMPREG-001).
@@ -144,7 +144,7 @@ For each control family in the baseline (CB-001 Section 3), the table below defi
 
 ### 4.8 System and Communications Protection (SC), System and Information Integrity (SI), Identification and Authentication (IA)
 
-These families map to multiple CERG standards (IT-001, NET-001, LM-001, CR-001, AC-001). Effectiveness metrics for these families are defined in their governing standards and reported through the metrics dashboard (MTR-001). This framework requires that each family have at least one effectiveness metric; the specific metric is defined in the standard that governs the family.
+These families map to multiple CERG standards (IT-001, NET-001, LM-001, CR-001, AC-001). The standard that governs each family defines its effectiveness metrics; the metrics dashboard (MTR-001) reports them. This framework requires that each family have at least one effectiveness metric; the specific metric is defined in the standard that governs the family.
 
 ### 4.9 Cross-Family Effectiveness Summary
 
@@ -170,7 +170,7 @@ Effectiveness metrics for AT, MA, MP, PE, PL, PM, PS, SA, SC, and SI families fo
 
 ## 5. Control Failure Analysis
 
-When a control that is marked Implemented in CB-001 fails to prevent or detect an incident, a Control Failure Analysis is required. The analysis determines whether the failure was in design, implementation, operation, or coverage : and therefore what kind of fix is needed.
+When a control that is marked Implemented in CB-001 fails to prevent or detect an incident, a Control Failure Analysis is required. The analysis determines whether the failure was in design, implementation, operation, or coverage — and therefore what kind of fix is needed.
 
 ### 5.1 Trigger Events
 
@@ -187,7 +187,7 @@ The accountable pillar leader conducts the analysis within 14 days of the trigge
 
 1. **Which control failed?** Control ID from CB-001, implementation status, evidence on file.
 2. **What was the failure mode?** Design / Implementation / Operational / Coverage (per Section 2.1).
-3. **Why did it fail?** Root cause : not the symptom. "The WAF didn't block the attack" is the symptom. "The WAF ruleset was not updated to cover API-based attacks because there is no process for WAF rule lifecycle management" is the root cause.
+3. **Why did it fail?** Root cause — not the symptom. "The WAF didn't block the attack" is the symptom. "The WAF ruleset was not updated to cover API-based attacks because there is no process for WAF rule lifecycle management" is the root cause.
 4. **Was this a one-off or a systemic weakness?** Does the same root cause affect other controls? (Yes / Maybe / No, with rationale.)
 5. **What is the corrective action?** If design failure: redesign the control. If implementation failure: fix the deployment. If operational failure: restore discipline, potentially with automation. If coverage failure: expand scope.
 6. **What program change prevents recurrence?** Beyond fixing the immediate control, what standard, procedure, or tooling change prevents this class of failure from recurring elsewhere? This feeds into the improvement register (IMPREG-001).
@@ -203,13 +203,13 @@ The accountable pillar leader conducts the analysis within 14 days of the trigge
 
 ### 5.4 Analysis Registry
 
-A Control Failure Analysis Registry is maintained by the Governance Pillar Leader. It tracks: control ID, incident or trigger reference, failure mode, root cause, corrective action, program change IMPREG ID, and verification status. The registry is reviewed at the quarterly Lessons Aggregation Review (PRC-LL-001 Section 5).
+The Governance Pillar Leader maintains a Control Failure Analysis Registry. It tracks: control ID, incident or trigger reference, failure mode, root cause, corrective action, program change IMPREG ID, and verification status. The registry is reviewed at the quarterly Lessons Aggregation Review (PRC-LL-001 Section 5).
 
 ---
 
 ## 6. Control Rationalization
 
-An Adaptive program does not only add controls. It removes controls that no longer reduce risk. Control bloat : the accumulation of controls added over years without corresponding retirement : creates compliance overhead without security benefit and dilutes attention from controls that matter.
+An Adaptive program does not only add controls. It removes controls that no longer reduce risk. Control bloat — the accumulation of controls added over years without corresponding retirement — creates compliance overhead without security benefit and dilutes attention from controls that matter.
 
 ### 6.1 Rationalization Cadence
 

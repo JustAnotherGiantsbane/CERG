@@ -50,7 +50,7 @@ This document applies to:
 
 ### 1.2 Relationship to Other Documents
 
-This document is referenced by every CERG standard, procedure, and plan. Where another document assigns work to "Engineering," "Risk," or "Governance," this document defines what those terms operationally mean.
+Every CERG standard, procedure, and plan references this document. Where another document assigns work to "Engineering," "Risk," or "Governance," this document defines what those terms operationally mean.
 
 ---
 
@@ -58,7 +58,7 @@ This document is referenced by every CERG standard, procedure, and plan. Where a
 
 ### 2.1 Why CERG Exists
 
-The traditional separation of cybersecurity into siloed functions, operational security here, GRC over there, engineering security as a third team, produces a predictable failure pattern. Engineering is asked to deliver, then security reviews it after the fact and asks for changes that are now expensive. Risk identifies findings that have no clear path back into engineering planning. Governance writes policy that operators interpret variously, or not at all. Audits and incidents reveal the seams.
+The traditional separation of cybersecurity into siloed functions, operational security here, GRC over there, engineering security as a third team, produces a predictable failure pattern. Engineering delivers, then security reviews the work after the fact and asks for changes that are now expensive. Risk identifies findings that have no clear path back into engineering planning. Governance writes policy that operators interpret variously, or not at all. Audits and incidents reveal the seams.
 
 CERG consolidates the three core security activities, building secure systems, managing exposure, and governing the program, into one function with one authority. The pillars are distinct in skill set and discipline, but they operate as one team with one CISO and one set of priorities.
 
@@ -66,7 +66,7 @@ CERG consolidates the three core security activities, building secure systems, m
 
 > **Governance Does Not Exist to Block the Business**
 >
-> CERG's default orientation is to enable the business with guardrails, not to close doors. When a risk cannot be eliminated, it is documented, owned, treated, and monitored, not refused on principle. Reflexive denial is not a risk management strategy. The hard work is making "yes" safe; "no" is the easy answer, and the wrong one.
+> CERG's default orientation is to enable the business with guardrails, not to close doors. When a risk cannot be eliminated, CERG documents, owns, treats, and monitors it rather than refusing it on principle. Reflexive denial is not a risk management strategy. The hard work is making "yes" safe; "no" is the easy answer, and the wrong one.
 
 ### 2.3 Three Pillars, One Team
 
@@ -82,13 +82,13 @@ The line of defense follows the purpose of the activity, not the technique, the 
 
 **Conditions for an independent technical-effectiveness claim.** A CERG technical-effectiveness claim requires all three conditions:
 
-1. **Independence.** The claimant did not produce the control state or the work being approved. A practitioner who authored the content or operated the tested service cannot be the sole approver of an effectiveness claim that supports a compensated-exposure disposition or another consequential risk decision.
+1. **Independence.** The claimant did not produce the control state or the work under approval. A practitioner who authored the content or operated the tested service cannot be the sole approver of an effectiveness claim, when that claim supports a compensated-exposure disposition or another consequential risk decision.
 2. **Capability.** CERG holds a service-appropriate ability to produce independent technical evidence: read or query access, sampling or re-test rights, and the capacity to interpret the result. The applicable method authority defines what is appropriate for its service family: [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) for detection, [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) for exposure, and [CERG-PRC-AV-001](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) for adversarial and recovery validation. Capability is recorded per assured service and re-asserted after a material change to its operator, tooling, access model, or scope.
 3. **Currency.** The claim states the period and scope of its evidence. Evidence that predates the current control state, or falls outside the claim's scope, cannot support the claim.
 
 Where a condition is absent, CERG labels the output at the point of claim as conformance or operating-evidence review only, names the missing condition, and does not use the output to support a compensated-exposure or comparable disposition. The deficiency enters [CERG-GOV-IMPREG-001](CERG-GOV-IMPREG-001_Program_Improvement_Register.md); material residual exposure follows [CERG-PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) and the risk-acceptance authority in [CERG-GOV-RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md). A deficiency that persists through two review cycles is a decision to operate without that assurance capability and requires formal risk acceptance under the applicable RMF authority.
 
-**State authorship and service operation.** CERG may author candidate content and validate an independently deployed state. When a CERG action changes a live service's coverage, availability, routing, or enforcement, it is a first-line operational action for the affected scope. The independent technical-effectiveness claim for that scope is suspended until the named independent assessor verifies the outcome. Emergency or break-glass action remains first-line operation at the moment of action; retrospective approval does not restore the claim.
+**State authorship and service operation.** CERG may author candidate content and validate an independently deployed state. When a CERG action changes a live service's coverage, availability, routing, or enforcement, it is a first-line operational action for the affected scope. CERG suspends the independent technical-effectiveness claim for that scope until the named independent assessor verifies the outcome. Emergency or break-glass action remains first-line operation at the moment of action; retrospective approval does not restore the claim.
 
 Where CERG holds ongoing service-level obligations — availability, coverage delivery, triage, escalation, or remediation — it operates that service and may not issue or approve its independent technical-effectiveness claim. The service control profile names the independent assessor and review route. For a small team, the independent approver may be another qualified person, an independent provider, or another documented independent route. The capability floor is access- and tooling-shaped, not headcount-shaped. Self-approval of consequential claims is the non-consolidable element.
 
@@ -114,7 +114,7 @@ Where CERG holds ongoing service-level obligations — availability, coverage de
 - Endpoint, server, container, and cloud security-tooling requirements and test cases, not standing service operation
 - Handoff documentation that identifies first-line operational ownership and supports Governance compliance evidence
 
-**Engagement default.** Project-aligned engagement. Engineering is engaged early in project planning and follows the work through go-live.
+**Engagement default.** Project-aligned engagement. Project teams engage Engineering early in project planning, and Engineering follows the work through go-live.
 
 **Operating boundary.** Engineering supplies reference designs, requirements, candidate detection content, and test cases. First-line teams or providers accept and deploy production content through their own change process. Engineering does not operate production security platforms, own alert queues, or deploy production content. First-line delivery teams perform project threat modeling and supply architecture, data-flow, identity, and deployment facts; CERG Engineering independently reviews material architectures through [CERG-PRC-AR-001](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md).
 
@@ -149,9 +149,9 @@ OT adversarial testing and OT recovery challenges execute only under [CERG-PRC-A
 - Regulator and assessor liaison
 - Awareness program coordination (program ownership rests with a separate Awareness function; Governance coordinates content alignment)
 - Risk-register intake from policy, audit, and assessment sources
-- Risk treatment data feeds into the standing Incident Response team (a separate function under CISO oversight - see §3.4)
+- Risk treatment data feeds into the standing Incident Response team (a separate function under CISO oversight, see §3.4)
 
-**Engagement default.** Program oversight and advisory. Governance is engaged when policy interpretation, exception decisions, or regulatory implications enter the conversation.
+**Engagement default.** Program oversight and advisory. The business engages Governance when policy interpretation, exception decisions, or regulatory implications enter the conversation.
 
 ### 3.4 What CERG Is Not Responsible For
 
@@ -162,7 +162,7 @@ The following functions are intentionally outside CERG and operate under separat
 - **Physical Security (non-cyber).** Owned by Facilities; CERG coordinates for assets within CIP-006 / PE-family scope.
 - **Privacy program.** A distinct function under Legal / Privacy leadership; coordinates with Governance for breach notification and Restricted-data handling.
 - **Business Continuity (non-cyber).** Owned by Enterprise Risk / Operations; CERG coordinates for cyber-driven business continuity activations.
-- **Standing security-operations platform services.** Scanners, SIEM, EDR, CSPM, SSPM, identity-threat monitoring platforms, alert triage, and production detection deployment are operated by first-line internal teams or providers. A named internal service owner remains accountable. CERG independently validates coverage and effectiveness and may not approve the operation of a service it operates.
+- **Standing security-operations platform services.** First-line internal teams or providers operate scanners, SIEM, EDR, CSPM, SSPM, identity-threat monitoring platforms, alert triage, and production detection deployment. A named internal service owner remains accountable. CERG independently validates coverage and effectiveness and may not approve the operation of a service it operates.
 
 ---
 
@@ -170,9 +170,9 @@ The following functions are intentionally outside CERG and operate under separat
 
 ### 4.1 Reporting Line
 
-CERG reports to the CISO. The CISO reports per the organizational structure (typically to the CIO or directly to the CEO depending on org design) and has a defined reporting line to the board (Audit Committee, Risk Committee, or a dedicated Cyber/Technology Committee, per board protocol).
+CERG reports to the CISO. The CISO reports per the organizational structure, typically to the CIO or directly to the CEO depending on org design. The CISO also holds a defined reporting line to the board: Audit Committee, Risk Committee, or a dedicated Cyber/Technology Committee, per board protocol.
 
-The three pillars report to the CISO through pillar leaders (Manager / Director / VP titles vary by organizational scale).
+The three pillars report to the CISO through pillar leaders; Manager, Director, and VP titles vary by organizational scale.
 
 ### 4.2 Decision Rights
 
@@ -191,11 +191,11 @@ The three pillars report to the CISO through pillar leaders (Manager / Director 
 
 ### 4.3 Escalation Path
 
-Disagreements that the pillars cannot resolve are escalated to the CISO. The CISO maintains a published escalation path that includes a stop-the-line capability for any CERG team member who believes a decision is being made that materially violates policy or creates regulatory exposure.
+The pillars escalate disagreements they cannot resolve to the CISO. The CISO maintains a published escalation path with a stop-the-line capability: any CERG team member who believes a pending decision materially violates policy, or creates regulatory exposure, can stop the line.
 
 ### 4.4 Cyber Oversight Group (COG)
 
-The **Cyber Oversight Group (COG)** is the standing internal forum that reviews cyber risk posture between board cycles. It is chaired by the CISO.
+The **Cyber Oversight Group (COG)** is the standing internal forum that reviews cyber risk posture between board cycles. The CISO chairs it.
 
 **Standing core members (every meeting):**
 - Chief Information Security Officer (CISO) — Chair
@@ -210,21 +210,21 @@ The **Cyber Oversight Group (COG)** is the standing internal forum that reviews 
 - Business Unit Risk Owner for any system, asset, or process appearing on the agenda — invited for the relevant agenda items
 - Engineering Pillar Leader — invited when architecture decisions, cloud migration, or OT/IT convergence items are on the agenda
 - Risk Pillar Leader — invited when risk acceptance review, threat landscape, or adversarial testing results are on the agenda
-- Any additional subject matter expert whose presence is needed for informed discussion on a specific agenda item, identified by the CISO or Governance Pillar Leader during agenda preparation
+- Any additional subject matter expert whose presence informs discussion of a specific agenda item, identified by the CISO or Governance Pillar Leader during agenda preparation
 
-**Dynamic membership rule:** Standing core members participate in every meeting. Dynamic members are invited when their scope of accountability appears on the agenda. The agenda, distributed at least 5 business days before each meeting, lists the attending dynamic members and the items for which their attendance is requested.
+**Dynamic membership rule:** Standing core members participate in every meeting. Dynamic members attend when their scope of accountability appears on the agenda. The secretariat distributes the agenda at least 5 business days before each meeting; it lists the attending dynamic members and the items that request their attendance.
 
 The COG meets monthly and serves three purposes:
 
 1. **Posture review.** The CISO presents the open Risk Register summary, top KRIs from [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md), and any High or Critical risk acceptance decisions made since the last meeting.
-2. **Cross-functional treatment alignment.** Risks whose treatment crosses business boundaries - e.g., a risk that requires Operations to change a maintenance practice, or Finance to fund a remediation - are surfaced for cross-functional decision or escalation.
+2. **Cross-functional treatment alignment.** Risks whose treatment crosses business boundaries - e.g., a risk that requires Operations to change a maintenance practice, or Finance to fund a remediation - come to the COG for cross-functional decision or escalation.
 3. **Pre-board review.** The COG serves as the dress rehearsal for board-cycle reporting; material risk decisions surface here first so the board reporting is informed by cross-functional perspective.
 
 The COG is not a risk-acceptance authority. Acceptance authority lives in the [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 table. The COG is the forum where the right decision-makers are in the room, informed, and aligned. Downstream reports - including the metrics dashboard in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) §9 and the risk-register reporting cadence in [`CERG-TMPL-RM-001`](../templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md) §7.3 - have the COG as their primary audience.
 
 #### COG Agenda Template
 
-The Governance Pillar Leader (secretariat) prepares the agenda using the template below, distributes it at least 5 business days before the meeting, and identifies which dynamic members are requested for which items.
+The Governance Pillar Leader (secretariat) prepares the agenda using the template below, distributes it at least 5 business days before the meeting, and identifies which items request which dynamic members.
 
 ```
 COG AGENDA - YYYY-MM-DD
@@ -289,7 +289,7 @@ MATERIALS ATTACHED
 
 ## 5. Engagement Models
 
-CERG is consumed by the rest of the organization through four engagement models. Most major initiatives use more than one.
+The rest of the organization consumes CERG through four engagement models. Most major initiatives use more than one.
 
 ### 5.1 Project Engagement (Engineering-Led)
 
@@ -329,7 +329,7 @@ Used when a business unit, IT team, or OT team has a question, decision, or expl
 - Vendor selection advisory
 - Policy interpretation advisory
 
-Advisory engagements are intentionally low-friction, but low-friction does not mean unmeasured. They are tracked at the activity level, and CERG commits to a published response time for advisory requests per [`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md), so that "engage us early" is backed by a reciprocal commitment to respond quickly.
+Advisory engagements are intentionally low-friction, but low-friction does not mean unmeasured. CERG tracks them at the activity level and commits to a published response time for advisory requests per [`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md), so a reciprocal commitment to respond quickly backs "engage us early."
 
 ### 5.4 Program Oversight (Governance-Led)
 
@@ -341,7 +341,7 @@ Used for regulatory programs, audits, exam cycles, and board reporting.
 - Internal audit coordination
 - Customer / partner assessment response
 
-Program oversight engagements are time-bounded with defined entry, milestone, and exit criteria. They are led by Governance with Engineering and Risk supplying evidence and SMEs.
+Program oversight engagements are time-bounded with defined entry, milestone, and exit criteria. Governance leads them, with Engineering and Risk supplying evidence and SMEs.
 
 ---
 
@@ -388,7 +388,7 @@ In a small team, one person may hold several capabilities. In a large team, each
 
 This roster is the single source of truth for role names used throughout the CERG document library. When a standard, procedure, plan, or template refers to "the Risk Manager," it means the canonical name listed below. Documents that use a synonym (column 3) are calling the same role; the corrective action is to update the citing document to the canonical name on its next revision, not to invent a new role.
 
-Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leader - Cloud vs. Engineering Pillar Leader - OT) are scaled out from the canonical name with a parenthetical domain qualifier.
+The roster organizes roles by pillar. Sub-role variants (e.g., Engineering Pillar Leader - Cloud vs. Engineering Pillar Leader - OT) scale out from the canonical name with a parenthetical domain qualifier.
 
 
 > **See also:** [JF-001](../roles/CERG-GOV-JF-001_Job_Families_Overview.md) for job family grouping and level definitions that organize these roles for career development and hiring. The roster below (and the supporting §6.2-6.4 sections) remains authoritative for role names and pillar assignments.
@@ -425,7 +425,7 @@ Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leade
 
 > **"CISO designee"**
 >
-> Several subordinate documents reference a "CISO designee" as an approval authority for tactical risk decisions. The CISO designee is whichever named pillar leader (Engineering, Risk, or Governance) the CISO has formally delegated to act on the CISO's behalf for a specific approval class. Designation is recorded in writing and reviewed at the CISO's discretion at least annually. Where a document needs to name a specific approver, use the canonical role name (e.g., "Risk Pillar Leader"); reserve "CISO designee" for cases where the delegation may rotate between pillars.
+> Several subordinate documents reference a "CISO designee" as an approval authority for tactical risk decisions. The CISO designee is whichever named pillar leader (Engineering, Risk, or Governance) the CISO has formally delegated to act on the CISO's behalf for a specific approval class. The CISO records the designation in writing and reviews it, at the CISO's discretion, at least annually. Where a document needs to name a specific approver, use the canonical role name (e.g., "Risk Pillar Leader"); reserve "CISO designee" for cases where the delegation may rotate between pillars.
 
 ### 6.2 Cyber Engineering: Typical Roles
 
@@ -517,7 +517,7 @@ CERG operates inside a broader organizational ecosystem. The following interface
 
 ## 9. RACI Patterns
 
-The following patterns illustrate how the pillars typically distribute work. Specific RACI matrices are maintained per process. This is a sample; each standard and procedure cited in [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) §10 has its own. Role names follow the canonical roster in §6.1.
+The following patterns illustrate how the pillars typically distribute work. Each process maintains its own RACI matrix. This is a sample; each standard and procedure cited in [`CERG-POL-001`](CERG-POL-001_Cybersecurity_Policy.md) §10 has its own. Role names follow the canonical roster in §6.1.
 
 ### 9.1 New Cloud Workload Goes Live
 
@@ -565,7 +565,7 @@ CERG targets NIST Cybersecurity Framework **Tier 4, Adaptive** posture for the o
 
 ### 10.2 Maturity Indicators
 
-The following indicators are tracked by Governance and reported to the CISO and the Cyber Oversight Group. They are leading indicators of program maturity, not lagging measures of incident counts. Target values, green/amber/red thresholds, escalation triggers, and reporting cadence live in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) §3; this section names the indicators only.
+Governance tracks the following indicators and reports them to the CISO and the Cyber Oversight Group. They are leading indicators of program maturity, not lagging measures of incident counts. Target values, green/amber/red thresholds, escalation triggers, and reporting cadence live in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) §3; this section names the indicators only.
 
 | **Indicator** | **What It Measures** | **Canonical Metric ID** |
 |---|---|---|
@@ -592,7 +592,7 @@ Every CERG activity produces feedback into the program backlog:
 - Adversarial validation findings → Detection rules, posture controls, architectural changes
 - Threat intelligence → Standing detection and control updates
 
-The backlog is reviewed monthly. Items that age beyond planned dates without justification are flagged to the CISO and surfaced to the Cyber Oversight Group.
+CERG reviews the backlog monthly. The review flags items that age beyond planned dates without justification to the CISO, and surfaces them to the Cyber Oversight Group.
 
 ### 10.4 Knowledge Transfer and Cross-Training
 
@@ -616,14 +616,14 @@ The log is intentionally lightweight. It is not a training management system. It
 
 #### 10.4.2 Documentation Completeness
 
-Knowledge "in the system" means knowledge that survives when the person who holds it is unavailable. Documentation completeness is measured by two metrics tracked in MTR-001:
+Knowledge "in the system" means knowledge that survives when the person who holds it is unavailable. Two metrics tracked in MTR-001 measure documentation completeness:
 
 - **KM-001: Procedure Documentation Currency.** Percentage of critical processes with current (less than or equal to 12-month) procedure documentation. A procedure is "critical" if it supports a control marked Implemented in CB-001.
-- **KM-002: Role Backup Currency.** Percentage of canonical roles with a documented secondary or backup who has performed the role in an exercise or real event within 18 months. "Performed" means the backup has executed the role's core responsibility at least once, not just been named on an org chart.
+- **KM-002: Role Backup Currency.** Percentage of canonical roles with a documented secondary or backup who has performed the role, in an exercise or real event, within 18 months. "Performed" means the backup has executed the role's core responsibility at least once, not just appeared on an org chart.
 
 #### 10.4.3 Cross-Training Expectations
 
-The minimum cross-training expectation per team member is 4 hours per quarter of cross-pillar knowledge activity. This is tracked as metric KM-003 in MTR-001.
+The minimum cross-training expectation per team member is 4 hours per quarter of cross-pillar knowledge activity. MTR-001 tracks this as metric KM-003.
 
 Cross-training activities that qualify:
 - Shadowing a cross-pillar review or engagement
@@ -634,14 +634,14 @@ Cross-training activities that qualify:
 
 #### 10.4.4 Maturity Assessment Integration
 
-At the annual maturity assessment (MAT-001), domain X5 (Single-Point-of-Failure Resilience) scoring is amended as follows:
+At the annual maturity assessment (MAT-001), this section amends domain X5 (Single-Point-of-Failure Resilience) scoring as follows:
 
 A domain scores Adaptive in X5 only when:
 - (a) Critical roles are backstopped (existing criterion), AND
-- (b) At least one cross-training activity is documented per critical role per year, AND
+- (b) The cross-training log documents at least one activity per critical role per year, AND
 - (c) Documentation currency metrics (KM-001, KM-002) are green
 
-This ensures that "no single point of failure" is not just a claim about org-chart coverage but is backed by evidence of actual knowledge transfer and current documentation.
+This way, "no single point of failure" is no longer just a claim about org-chart coverage. Evidence of actual knowledge transfer and current documentation backs it.
 
 ---
 

@@ -14,7 +14,7 @@ Use this pack as a slide-style briefing, workshop outline, or source for a short
 
 ## Executive Thesis
 
-CERG is strongest when it is used as a **technical assurance operating model**:
+CERG is strongest as a **technical assurance operating model**:
 
 1. **Build the guardrail.** Define the technical control, owner, standard, and operating path.
 2. **Test the guardrail.** Validate through exposure management, threat modeling, adversarial validation, incident lessons, or control testing.
@@ -101,7 +101,7 @@ Most cyber programs do not fail because nobody cares. They fail because work is 
 
 ## Slide 3 — The Outcome Loop
 
-CERG should be judged by whether it changes security outcomes, not by whether the organization has populated every artifact.
+Judge CERG by whether it changes security outcomes, not by whether the organization has populated every artifact.
 
 | CERG loop | Executive outcome |
 |---|---|
@@ -244,7 +244,7 @@ CERG puts the CISO at the center of strategy, escalation, executive reporting, a
 
 ## Slide 11 — Scores Are Routing Tools, Not Truth Machines
 
-CERG uses a canonical 5×5 likelihood × impact model. It helps route decisions, but it should not be mistaken for precision.
+CERG uses a canonical 5×5 likelihood × impact model. It helps route decisions, but do not mistake it for precision.
 
 | Scoring risk | Executive interpretation |
 |---|---|

@@ -297,7 +297,7 @@ The presentation is 5-10 minutes and follows a simple structure:
 3. **What I learned.** One thing about CERG, the technology, or the team that the new hire now understands that they did not understand before.
 4. **What I would do differently.** Self-reflection, not self-criticism. Demonstrates that the person is thinking about improvement, not just execution.
 
-The pillar responds with recognition, not evaluation. The point is to make the new hire visible as a contributor, not to grade their first work product. The manager ensures that the presentation is scheduled in a standing meeting that the pillar leader attends.
+The pillar responds with recognition, not evaluation. The point is to make the new hire visible as a contributor, not to grade their first work product. The manager schedules the presentation in a standing meeting that the pillar leader attends.
 
 > **The First Contribution Is Psychologically Loaded**
 >
@@ -387,7 +387,7 @@ A new CERG Manager or Pillar Leader adds the following to the standard onboardin
 
 ### 12.1 Metrics
 
-The onboarding program's effectiveness is measured through:
+CERG measures the onboarding program's effectiveness through:
 
 | Metric | Target | Measurement |
 |---|---|---|
@@ -407,7 +407,7 @@ The 90-day retrospective (§5.3) includes a structured feedback collection on th
 3. What was missing that you wish had been included?
 4. If you were designing the onboarding program for the next person in your role, what would you change?
 
-Aggregated feedback is reviewed annually by the Governance Pillar Leader as part of this document's review cycle. A pattern of "the CERG 101 curriculum assumed knowledge I did not have" or "the cross-pillar rotation days were too short to be useful" should result in document updates.
+The Governance Pillar Leader reviews aggregated feedback annually as part of this document's review cycle. A pattern of "the CERG 101 curriculum assumed knowledge I did not have" or "the cross-pillar rotation days were too short to be useful" should result in document updates.
 
 ---
 
@@ -458,4 +458,4 @@ Aggregated feedback is reviewed annually by the Governance Pillar Leader as part
 | Implementation Guide | [`CERG-GOV-IMP-001`](CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) | Organizational adoption of CERG |
 | Document Catalog | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact |
 
-Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO endorsement for all changes.
+Governance owns this document. The Governance Pillar Leader (Policy & Standards) initiates reviews, manages the revision cycle, and obtains CISO endorsement for all changes.

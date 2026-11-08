@@ -163,7 +163,7 @@ The following scenarios are the starting library. Each organization tailors the 
 | **SCN-09** | Business email compromise leading to financial fraud or wire diversion | Email platform; finance approval workflow | AC/IA (email identity), AU (email-anomaly detection), AT (awareness) | T1566 Phishing; T1534 Internal Spearphishing; mailbox-rule and wire-anomaly alerts | Transaction reversal coordination; finance control review; LL-001 |
 | **SCN-10** | Sub-processor concentration failure cascading across multiple vendors | Services depending on a shared sub-processor | SR (supply chain), SA (vendor controls), edge controls (EDG-001 concentration rule) | Vendor-incident intelligence; concentration alert (>= 3 T1/T2 vendors on one sub-processor) | Vendor failover; TPRM-001 concentration response; SCCT |
 
-Each scenario above is maintained as a fuller record (narrative, kill-chain steps, owner, preliminary impact) in the scenario library operated by the Risk Pillar Leader. The table is the index; the records carry the detail.
+The Risk Pillar Leader maintains each scenario above as a fuller record (narrative, kill-chain steps, owner, preliminary impact) in the scenario library. The table is the index; the records carry the detail.
 
 ---
 
@@ -191,7 +191,7 @@ Every gap a pressure-test surfaces is logged as a **Finding Record per FLOW-001 
 
 ### 5.4 Cadence
 
-Scenario pressure-tests are scheduled in [`CERG-GOV-CAL-001`](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md). The recommended cadence is semi-annual for the full library, with any individual scenario re-walked when the threat landscape, the crown-jewel population, or a material control change warrants it. Each pressure-test produces a Scenario Pressure-Test Report and the associated Finding Records. The report is published as an **Evidence Index Entry** attached to the scenario's Crown Jewel Scenario Record per [`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md), so its evidence inherits the attributable, current, retrievable, and scope-defined attributes of [`CERG-GOV-AUD-001`](CERG-GOV-AUD-001_Evidence_Quality_Standard.md) rather than report prose. No new record type is created.
+Scenario pressure-tests are scheduled in [`CERG-GOV-CAL-001`](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md). The recommended cadence is semi-annual for the full library, with any individual scenario re-walked when the threat landscape, the crown-jewel population, or a material control change warrants it. Each pressure-test produces a Scenario Pressure-Test Report and the associated Finding Records. The Risk Pillar Leader publishes the report as an **Evidence Index Entry** attached to the scenario's Crown Jewel Scenario Record per [`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md), so its evidence inherits the attributable, current, retrievable, and scope-defined attributes of [`CERG-GOV-AUD-001`](CERG-GOV-AUD-001_Evidence_Quality_Standard.md) rather than report prose. No new record type is created.
 
 ### 5.5 Pressure-Test Output: the Bounded Defense Claim
 

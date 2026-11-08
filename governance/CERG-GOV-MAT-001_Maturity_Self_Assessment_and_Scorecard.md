@@ -39,7 +39,7 @@
 
 ## 1. Purpose and Scope
 
-[`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) §6 sets the target: the CERG model is designed to produce NIST CSF Adaptive-tier behavior. That is the aspiration. This document supplies the missing instrument: a way for an adopter to measure where the program actually sits today, and what stands between today and Adaptive.
+[`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) §6 sets the target: the CERG model targets NIST CSF Adaptive-tier behavior. That is the aspiration. This document supplies the missing instrument: a way for an adopter to measure where the program actually sits today, and what stands between today and Adaptive.
 
 It is a self-assessment. An organization scores itself against 24 domains, each tied to real CERG artifacts and observable evidence. The output is a tier per domain, a tier per pillar, an overall tier, and a ranked list of the gaps worth closing first.
 
@@ -60,7 +60,7 @@ The assessment has four moving parts.
 3. **Evidence anchors.** Each domain lists what the organization must be able to show to claim each tier. Scoring is anchored to evidence, not opinion.
 4. **The scorecard.** Domain scores roll up to pillar scores and an overall score, and the lowest-scoring domains become the gap list.
 
-The assessment is run by the Governance Pillar Leader, scored with the pillar leaders, and reviewed by the CISO. It is not run by one person in a room. A domain tier is agreed by the pillar that owns the work, and challenged by Governance.
+The Governance Pillar Leader runs the assessment and scores it with the pillar leaders; the CISO reviews it. No one person runs it alone in a room. A domain tier is agreed by the pillar that owns the work, and challenged by Governance.
 
 > **This Maps to the Same Tiers the Framework Uses**
 >
@@ -256,7 +256,7 @@ Between annual full assessments, the program operates with a 12-month blind spot
 
 ### 12.1 Cadence and Ownership
 
-Quarterly, aligned with the CERG leadership review (GOV-CAL-001 Section 5), the Governance Pillar Leader runs a gap remediation checkpoint. This is NOT a full re-score : domains are not re-evaluated. Only the in-progress gap remediation actions from the most recent full assessment are reviewed.
+Quarterly, aligned with the CERG leadership review (GOV-CAL-001 Section 5), the Governance Pillar Leader runs a gap remediation checkpoint. This is NOT a full re-score: domains are not re-evaluated. Only the in-progress gap remediation actions from the most recent full assessment are reviewed.
 
 ### 12.2 Checkpoint Questions
 
@@ -326,7 +326,7 @@ The annual assessment remains the authoritative tier re-score. The quarterly che
 - Adopter feedback indicating a domain is missing or mis-scoped
 - Direction from the CISO
 
-Governance owns this document. The Governance Pillar Leader (Document Control) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO approval for all changes.
+Governance owns this document. The Governance Pillar Leader (Document Control) initiates reviews, manages the revision cycle, and obtains CISO approval for all changes.
 
 ### Related Documents
 

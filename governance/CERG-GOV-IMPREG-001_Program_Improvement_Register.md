@@ -14,7 +14,7 @@
 | **Supporting Documents** | [`CERG-PRC-LL-001`](../procedures/CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) · [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) · [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) · [`CERG-GOV-MAT-001`](CERG-GOV-MAT-001_Maturity_Self_Assessment_and_Scorecard.md) · [`CERG-GOV-CAL-001`](CERG-GOV-CAL-001_Annual_Security_and_Governance_Calendar.md) · [`CERG-GOV-RAC-001`](CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) |
 | **Review Cycle** | Annual / Reviewed at each quarterly CERG leadership review |
 | **Frameworks** | [NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) (ID.IM, GOVERN) · [NIST 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) (PM) · ISO/IEC 27001 A.10 |
-| **Regulations** | Cross-cutting : applies to all CERG-supported frameworks |
+| **Regulations** | Cross-cutting: applies to all CERG-supported frameworks |
 | **Environments** | Program-wide |
 
 ---
@@ -36,7 +36,7 @@
 
 ## 1. Purpose and Scope
 
-The CERG Framework targets NIST CSF Adaptive maturity. A defining characteristic of an Adaptive program is that it does not just respond to findings : it changes itself in response to what it learns. It identifies systemic weaknesses, alters its own controls and procedures, and verifies that the changes worked.
+The CERG Framework targets NIST CSF Adaptive maturity. A defining characteristic of an Adaptive program is that it does not just respond to findings — it changes itself in response to what it learns. It identifies systemic weaknesses, alters its own controls and procedures, and verifies that the changes worked.
 
 This document defines the Program Improvement Register: the authoritative, durable record of every program-level change CERG makes, why it was made, who was accountable, and whether it produced the intended effect. It is the audit trail that answers the assessor's question: "How has your program evolved, and can you prove that evolution made it better?"
 
@@ -54,9 +54,9 @@ This document applies to every CERG program improvement, regardless of source: l
 
 CERG already has a risk register (PRC-RM-001). Using it for program improvements creates three problems:
 
-1. **Category error.** A risk is a threat-vulnerability-impact-likelihood construct with a treatment plan. A program improvement : "we consolidated two duplicate procedures," "we raised the architecture review SLA from 85% to 95%," "we added a new leading indicator" : is not a risk. Forcing it into a risk register schema distorts both the risk data and the improvement data.
+1. **Category error.** A risk is a threat-vulnerability-impact-likelihood construct with a treatment plan. A program improvement — "we consolidated two duplicate procedures," "we raised the architecture review SLA from 85% to 95%," "we added a new leading indicator" — is not a risk. Forcing it into a risk register schema distorts both the risk data and the improvement data.
 
-2. **Noise in risk reporting.** The CISO and board review the risk register to understand exposure. Mixing in program improvements : which are positive, forward-looking changes : dilutes the risk signal.
+2. **Noise in risk reporting.** The CISO and board review the risk register to understand exposure. Mixing in program improvements — which are positive, forward-looking changes — dilutes the risk signal.
 
 3. **Wrong lifecycle.** Risks have treatment plans, residual scores, and acceptance decisions. Improvements have implementation, verification, and effectiveness outcomes. The lifecycles are different; the register should be different.
 
@@ -101,7 +101,7 @@ The improvement register is a structured record. Every entry contains the follow
 
 > **One Improvement, One Entry**
 >
-> If an improvement requires changes to three documents and a new tool, it is still one improvement : one root cause analysis, one decision, one accountable owner. The "Affected Artifacts" field captures the scope. Do not create multiple entries for one improvement decision.
+> If an improvement requires changes to three documents and a new tool, it is still one improvement: one root cause analysis, one decision, one accountable owner. The "Affected Artifacts" field captures the scope. Do not create multiple entries for one improvement decision.
 
 ---
 
@@ -131,13 +131,13 @@ Proposed → Approved → In Progress → Complete → Verified → Closed
 
 > **Complete Is Not Closed**
 >
-> "Complete" means the change was made : the standard was amended, the tool was deployed, the procedure was updated. "Verified" means the change worked : the amendment actually prevented recurrence, the tool actually caught the thing it was designed to catch, the procedure actually improved the outcome. An improvement that sits at "Complete" without verification is an open item, not a success.
+> "Complete" means the change was made: the standard was amended, the tool was deployed, the procedure was updated. "Verified" means the change worked: the amendment actually prevented recurrence, the tool actually caught the thing it was designed to catch, the procedure actually improved the outcome. An improvement that sits at "Complete" without verification is an open item, not a success.
 
 ### 4.2 Aging Rules
 
 - An improvement in "Proposed" for more than 30 days without an approval decision is escalated to the CISO.
-- An improvement in "In Progress" past its target date is flagged at the next quarterly review.
-- An improvement in "Complete" for more than one quarter without verification is escalated : the verification was either not planned or is being avoided.
+- The next quarterly review flags any improvement in "In Progress" past its target date.
+- An improvement in "Complete" for more than one quarter without verification is escalated: the verification was either not planned or is being avoided.
 - An improvement in "Re-Opened" for more than two quarters is escalated to the CISO for a decision: revise the approach, accept the gap, or close with a documented rationale.
 
 ---
@@ -150,7 +150,7 @@ The risk register (PRC-RM-001) and the improvement register are distinct instrum
 
 When a risk register entry identifies a systemic weakness that requires a program change (not just a risk treatment), the risk register entry references the improvement ID. Example:
 
-- Risk register entry RM-2026-047: "Critical vulnerability in SCADA firmware : CVSS 9.1 : treatment: patch within 90 days."
+- Risk register entry RM-2026-047: "Critical vulnerability in SCADA firmware — CVSS 9.1 — treatment: patch within 90 days."
 - Improvement register entry IMP-2026-001: "Add automated firmware-version discovery to CMDB; amend STD-AM-001 and PRC-VM-001."
 - Risk register entry RM-2026-047 is updated with a reference: "Systemic improvement tracked in IMP-2026-001."
 
@@ -158,7 +158,7 @@ The risk itself is still managed in the risk register. The systemic fix is manag
 
 ### 5.2 Improvement-to-Risk Linkage
 
-When an improvement is approved that will reduce a class of risk, the risk register owner is notified. If the improvement changes the residual risk score for any open risk, the risk entry is re-scored at the next monthly risk register review.
+When an improvement is approved that will reduce a class of risk, the Governance Pillar Leader notifies the risk register owner. If the improvement changes the residual risk score for any open risk, the risk entry is re-scored at the next monthly risk register review.
 
 ### 5.3 What Does NOT Go in the Improvement Register
 
@@ -211,7 +211,7 @@ At the annual program review, the improvement register provides the narrative ba
 
 > **The Annual Evolution Narrative**
 >
-> The improvement register is the raw material for the single most important answer an Adaptive program must give: "How did your program get better this year?" Every improvement that reached "Verified Effective" is a data point in that answer. If the register is empty, the program did not improve : it only operated.
+> The improvement register is the raw material for the single most important answer an Adaptive program must give: "How did your program get better this year?" Every improvement that reached "Verified Effective" is a data point in that answer. If the register is empty, the program did not improve — it only operated.
 
 ---
 
@@ -233,7 +233,7 @@ At the annual program review, the improvement register provides the narrative ba
 
 ### 9.1 Platform and Access
 
-The improvement register is maintained in a structured platform accessible to all pillar leaders and the CISO. The minimum viable platform is a shared spreadsheet with column-level permissions and an audit log. Larger organizations may use a GRC tool or database.
+The Governance Pillar Leader maintains the improvement register in a structured platform, accessible to all pillar leaders and the CISO. The minimum viable platform is a shared spreadsheet with column-level permissions and an audit log. Larger organizations may use a GRC tool or database.
 
 Regardless of platform, the register must support:
 
@@ -246,7 +246,7 @@ Regardless of platform, the register must support:
 
 - **No orphan entries.** Every entry has an accountable role and a target date. Entries without both are returned to Proposed.
 - **No stale entries.** The Governance Pillar Leader reviews the register monthly for entries that have not been updated in 60 days. Stale entries are flagged at the next CERG leadership sync.
-- **Declined entries are retained.** A declined improvement is an audit artifact : it shows the improvement was considered and rejected with rationale. It is not deleted.
+- **Declined entries are retained.** A declined improvement is an audit artifact: it shows the improvement was considered and rejected with rationale. It is not deleted.
 - **Ineffective entries are re-opened, not deleted.** The failure is itself a data point. The original approach, the verification evidence, and the re-open rationale are preserved.
 
 ### 9.3 Archival
