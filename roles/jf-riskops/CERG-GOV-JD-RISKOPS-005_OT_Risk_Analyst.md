@@ -1,7 +1,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-JD-RISKOPS-005 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Pillar Leader |
@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The OT Risk Analyst owns OT-safe vulnerability assessment and industrial control system threat intelligence. They are the Risk pillar's specialist for operational technology environments, where a misconfigured scan can have physical consequences and threat actors have different motivations and techniques than in enterprise IT.
+The OT Risk Analyst owns the assurance side of OT exposure work: OT exposure classification, OT-safe assessment requirements and rules of engagement, control validation, and industrial control system threat intelligence. The role's line of defense is per activity and scope, not a role-wide designation: classification, criteria, requirements authorship, validation, and challenge are second-line assurance work; executed scanning and the operation of assessment and monitoring tooling are first-line work under the named OT service owner and operator. They are the Risk pillar's specialist for operational technology environments, where a misconfigured scan can have physical consequences and threat actors have different motivations and techniques than in enterprise IT.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -46,7 +46,7 @@ The OT Risk Analyst owns OT-safe vulnerability assessment and industrial control
 
 ### 4.1 Core Responsibilities (All Grades)
 
-- Conduct OT-safe vulnerability assessments: passive scanning, protocol-aware assessment, and where appropriate, controlled active scanning during maintenance windows - Track ICS-specific threat actors and campaigns: their targets, TTPs, and relevance to the organization's OT environment - Produce OT threat intelligence products for OT operators, Engineering, and leadership - Map OT threats to MITRE ATT&CK for ICS and translate into detection and control recommendations - Partner with OT Security Engineer to prioritize remediation based on operational context - Support the NERC-CIP compliance program with OT vulnerability data and risk assessments - Support incident response for OT incidents with threat context and containment guidance that respects operational constraints - Maintain OT-specific vulnerability and threat intelligence tooling
+- Classify OT exposure and validate OT control effectiveness against operational constraints, and author OT-safe assessment requirements and rules of engagement (passive-first, protocol-aware, active scanning only in defined maintenance windows) and validate executed assessments against them; executed scans and the operation of assessment tooling are first-line work under the OT service owner and operator - Track ICS-specific threat actors and campaigns: their targets, TTPs, and relevance to the organization's OT environment - Produce OT threat intelligence products for OT operators, Engineering, and leadership - Map OT threats to MITRE ATT&CK for ICS and translate into detection and control recommendations - Partner with OT Security Engineer to prioritize remediation based on operational context - Support the NERC-CIP compliance program with OT vulnerability data and risk assessments - Support incident response for OT incidents with threat context and containment guidance that respects operational constraints - Own requirements and selection for OT-specific vulnerability and threat intelligence tooling; operation and configuration of operated tooling is first-line work
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
@@ -56,7 +56,7 @@ Grade-level responsibility differentiation for this role is defined in [JA-001 Â
 
 ### 5.1 Domain Expertise
 
-- Deep expertise in OT/ICS environments and their operational constraints - OT vulnerability assessment tools and techniques (passive and active) - ICS threat landscape: actors, campaigns, malware (BlackEnergy, CrashOverride, Triton/Trisis, Pipedream/Incontroller) - MITRE ATT&CK for ICS - NERC-CIP requirements, particularly CIP-007 and CIP-010 - Understanding of OT operational constraints: safety systems, real-time requirements, change windows
+- Deep expertise in OT/ICS environments and their operational constraints - OT vulnerability assessment tools and techniques, passive and active, sufficient to author requirements, assess execution safety, and validate output; tool operation is first-line work - ICS threat landscape: actors, campaigns, malware (BlackEnergy, CrashOverride, Triton/Trisis, Pipedream/Incontroller) - MITRE ATT&CK for ICS - NERC-CIP requirements, particularly CIP-007 and CIP-010 - Understanding of OT operational constraints: safety systems, real-time requirements, change windows
 
 ### 5.2 Technical Skills
 
@@ -165,7 +165,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-JD-RISKOPS-005 |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-11 |
 | **Classification** | Public |
@@ -182,6 +182,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.1 | 2026-10-28 | Risk Pillar Leader / Governance Pillar Leader | Second-line boundary second slice per #234 assignment: per-activity/scope boundary stated in the role summary. Retained second-line: OT exposure classification, OT-safe assessment requirements and RoE authorship, control validation, ICS threat intelligence analysis. Moved to first line: executed scanning, assessment and monitoring tooling operation. Per review: OT exposure classification and OT control validation are stated as 4.1 duties, so the summary's retained duties are carried by the responsibilities. Domain expertise annotated as capability basis, not assigned duty. No capability floors, roles, records, or metrics; shared competency blocks untouched per the deferred A.5 sweep. |
 | 1.0 | 2026-06-11 | Governance Pillar Leader | Initial release. Extracted from monolithic JD-001 into enhanced per-role format with NICE mapping, KPI sections, and competency anchor sections. |
 
 ### Review Triggers

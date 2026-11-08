@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PLN-CUI-001 |
-| **Version** | 1.22 |
+| **Version** | 1.23 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | CMMC / Federal Compliance Manager |
@@ -23,8 +23,8 @@
 ## Table of Contents
 
 1. [Purpose and Scope](#1-purpose-and-scope)
-2. [Assumed Scrutiny Level, CMMC L2 Third-Party Assessment](#2-assumed-scrutiny-level--cmmc-l2-third-party-assessment)
-3. [CUI Boundary, Finding It and Drawing It](#3-cui-boundary--finding-it-and-drawing-it)
+2. [Assumed Scrutiny Level, CMMC L2 Third-Party Assessment](#2-assumed-scrutiny-level-cmmc-l2-third-party-assessment)
+3. [CUI Boundary, Finding It and Drawing It](#3-cui-boundary-finding-it-and-drawing-it)
 4. [SSP Template](#4-ssp-template)
 5. [POA&M Template](#5-poam-template)
 6. [SPRS Score Worksheet](#6-sprs-score-worksheet)
@@ -453,8 +453,8 @@ For cloud / SaaS providers handling CUI that are not FedRAMP-authorized, the equ
 | | |
 |---|---|
 | **Document ID** | CERG-PLN-CUI-001 |
-| **Version** | 1.22 |
+| **Version** | 1.23 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / on regulatory change |
-| **Change Log** | 1.0 - Initial publication. SSP, POA&M, SPRS, boundary, flow map, category register, evidence matrix, readiness, C3PAO logistics, subcontractor register, FedRAMP equivalency. 1.22 - Added Mock CMMC Assessment Procedure (§11.2) with scope, assessor assignment, practice-by-practice evidence review, interview simulation, findings report, remediation timeline, and re-test. |
+| **Change Log** | 1.0 - Initial publication. SSP, POA&M, SPRS, boundary, flow map, category register, evidence matrix, readiness, C3PAO logistics, subcontractor register, FedRAMP equivalency. 1.22 - Added Mock CMMC Assessment Procedure (§11.2) with scope, assessor assignment, practice-by-practice evidence review, interview simulation, findings report, remediation timeline, and re-test. 1.23 - Patch (#280): repaired 2 in-page links whose anchors no longer matched their headings after earlier heading edits. No content change. |
 

@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-TMPL-RM-004 |
-| **Version** | 1.2 |
+| **Version** | 1.3 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Risk Register Owner |
@@ -142,7 +142,7 @@ Approval authority follows [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_R
 | **CISO** | Approves High and Critical acceptances per RMF-001 §9.7 authority. | `[Name]` | `[Date]` | Approve / Deny |
 | **Executive Sponsor** | Accepts the business consequence for Critical risk acceptance and/or board-notified items per RMF-001 §9.7. | `[Name]` | `[Date]` | Accept / Escalate to Board |
 
-**Approver Note:** Approvers may delegate within their authority but shall document the delegation. No acceptance expires automatically; every acceptance at every tier requires a fresh approval cycle at expiration. Renewal more than twice without material progress toward remediation escalates one approval tier above the original approver.
+**Approver Note:** Approvers may delegate within their authority but shall document the delegation. No acceptance renews automatically; every acceptance at every tier requires a fresh approval cycle at expiration. Renewal more than twice without material progress toward remediation escalates one approval tier above the original approver.
 
 ---
 
@@ -151,7 +151,7 @@ Approval authority follows [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_R
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-TMPL-RM-004 |
-| **Version** | 1.2 |
+| **Version** | 1.3 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-18 |
 | **Classification** | Public |
@@ -168,6 +168,7 @@ Approval authority follows [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_R
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.3 | 2026-10-30 | Governance Pillar Leader | Patch (#280): the approver note now says no acceptance renews automatically, matching RMF-001 §9.7. It said none expires automatically, which read as acceptances never lapsing. |
 | 1.2 | 2026-06-18 | Governance Pillar Leader | Added business-facing decision box for residual consequence, treatment funding, validity conditions, and re-review triggers. |
 | 1.1 | 2026-06-18 | Governance Pillar Leader | Aligned acceptance type and related-template wording with RMF-001 authority; clarified that TMPL-RM-003 is supporting only and that Executive Sponsor accepts Critical business consequence. |
 | 1.0 | 2026-06-18 | Governance Pillar Leader | Initial release. Establishes Risk Acceptance Request Form as the distinct workflow for risk acceptances (Business Owner + per-RMF-001 authority), separate from Security Exception Requests (TMPL-RM-002). |
@@ -197,4 +198,4 @@ Approval authority follows [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_R
 
 ---
 
-*CERG-TMPL-RM-004 · Version 1.2 · Public*
+*CERG-TMPL-RM-004 · Version 1.3 · Public*

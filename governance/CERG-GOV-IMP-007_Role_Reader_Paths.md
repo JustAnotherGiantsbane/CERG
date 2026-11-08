@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-007 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Governance Pillar Leader (Policy & Standards) |
@@ -145,7 +145,7 @@ The reader path is a reading list, not an action list. For action items, see the
 
 ## 6. Business Owner / System Sponsor Reader Path
 
-**Read time:** 25 minutes.
+**Read time:** 27 minutes.
 
 **Goal:** You can explain what CERG expects from a business owner or system sponsor: own the business objective, provide scope and priority, fund or accept treatment decisions, approve go-live for your system, and understand that Security/Risk recommends while the business owns residual consequence.
 
@@ -157,8 +157,9 @@ The reader path is a reading list, not an action list. For action items, see the
 | 2 | [`CERG-GOV-FRM-002`](CERG-GOV-FRM-002_Framework_System_Map.md) §5 | 5 min | Shows where to go by user need: new system, risk decision, audit evidence, or exposure treatment. |
 | 3 | [`CERG-GOV-FLOW-001`](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md) F-02 and F-04 | 6 min | Shows how project intake and finding remediation move across Engineering, Risk, Governance, and the business owner. |
 | 4 | [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) §§2, 5, and 9 | 5 min | Names the sponsor responsibilities for intake, go-live, handoff, and production ownership. |
-| 5 | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §§9.5 and 9.7 | 3 min | Explains treatment recommendation versus business consequence acceptance. |
-| 6 | [`CERG-TMPL-RM-004`](../templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md) | 2 min | Shows what a residual-risk decision looks like when a business owner is asked to accept consequence. |
+| 5 | [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §§9.6 and 9.7 | 3 min | Explains treatment recommendation versus business consequence acceptance. |
+| 6 | [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md#1-purpose-and-scope) §1 | 2 min | Answers what a business owner asked to decide needs: the decision, the path, who signs, what is not theirs, the time limits, and the next action. |
+| 7 | [`CERG-TMPL-RM-004`](../templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md) | 2 min | Shows what a residual-risk decision looks like when a business owner is asked to accept consequence. |
 
 **Skip if:**
 
@@ -186,7 +187,7 @@ The reader paths are designed for the first hour of engagement. They are not a s
 | Field | Value |
 |---|---|
 | **Document ID** | CERG-GOV-IMP-007 |
-| **Version** | 1.1 |
+| **Version** | 1.2 |
 | **Status** | Approved |
 | **Effective Date** | 2026-06-18 |
 | **Classification** | Public |
@@ -203,6 +204,7 @@ The reader paths are designed for the first hour of engagement. They are not a s
 
 | **Version** | **Date** | **Author** | **Change** |
 |---|---|---|---|
+| 1.2 | 2026-10-30 | Governance Pillar Leader | Patch (#280): the Business Owner path cites RMF-001 §9.6 for treatment, where it cited §9.5 (severity bands), and adds PRC-RM-001 §1, the decision entry for a business owner asked to accept risk or grant an exception. Read time 25 to 27 minutes. |
 | 1.1 | 2026-06-18 | Governance Pillar Leader (Policy & Standards) | Added Business Owner / System Sponsor reader path focused on project sponsorship, go-live ownership, and residual-risk consequence decisions. |
 | 1.0 | 2026-06-18 | Governance Pillar Leader (Policy & Standards) | Initial publication. Establishes sequenced reading orders for the CISO, Risk Lead, and Engineering Lead roles. Each path totals 30-35 minutes and points at the documents the new reader needs in the order each builds on the previous. |
 

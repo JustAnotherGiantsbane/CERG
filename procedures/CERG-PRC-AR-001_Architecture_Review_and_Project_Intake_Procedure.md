@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AR-001 |
-| **Version** | 1.2 |
+| **Version** | 1.7 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader |
@@ -24,12 +24,12 @@
 1. [Purpose and Scope](#1-purpose-and-scope)
 2. [Roles and Responsibilities](#2-roles-and-responsibilities)
 3. [The Five-Phase Engagement Model](#3-the-five-phase-engagement-model)
-4. [Who Needs a Review, and Who Doesn't](#4-who-needs-a-review--and-who-doesnt)
-5. [Phase 1, Intake](#5-phase-1--intake)
-6. [Phase 2, Architecture Review and Threat Model](#6-phase-2--architecture-review-and-threat-model)
-7. [Phase 3, Build-Time Engagement](#7-phase-3--build-time-engagement)
-8. [Phase 4, Pre-Production Security Review](#8-phase-4--pre-production-security-review)
-9. [Phase 5, Production Handoff and Go-Live](#9-phase-5--production-handoff-and-go-live)
+4. [Who Needs a Review, and Who Doesn't](#4-who-needs-a-review-and-who-doesnt)
+5. [Phase 1, Intake](#5-phase-1-intake)
+6. [Phase 2, Architecture Review and Threat Model](#6-phase-2-architecture-review-and-threat-model)
+7. [Phase 3, Build-Time Engagement](#7-phase-3-build-time-engagement)
+8. [Phase 4, Pre-Production Security Review](#8-phase-4-pre-production-security-review)
+9. [Phase 5, Production Handoff and Go-Live](#9-phase-5-production-handoff-and-go-live)
 10. [Required Diagrams](#10-required-diagrams)
 11. [Templates](#11-templates)
 12. [Metrics](#12-metrics)
@@ -57,15 +57,15 @@ The standalone [`CERG-TMPL-AR-001`](../templates/CERG-TMPL-AR-001_Architecture_a
 
 | **Role** | **Responsibility** |
 |---|---|
-| **Project Sponsor / Business Owner** | Submits intake. Owns the project's residual risk. Approves go-live decisions for their scope. |
-| **Project / Technical Lead** | Produces the architecture artifacts and answers reviewer questions. Drives remediation between reviews. |
-| **CERG - Pre-production Reviewer** | Conducts Engineering review, maintains the review record, determines Engineering findings, and recommends handoff disposition. |
-| **Application Security Engineer** | Provides application, API, SDLC, and software architecture review input. Supports threat modeling with technical context and records application-security findings. |
+| **Project Sponsor / Business Owner** | Submits intake; names the internal Service Owner before handoff where the project creates a service; owns the project's residual risk. The named accountable business or service owner holds the go-live decision ([`RAC-001`](../governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) §6.1). |
+| **Project / Technical Lead** | Produces architecture artifacts and answers reviewer questions. The named first-line operator deploys, operates, and remediates the resulting service through its change process. |
+| **CERG - Pre-production Reviewer** | Conducts the technical review, records findings, and states a technical disposition. Does not approve go-live. |
+| **Application Security Engineer** | Provides application, API, SDLC, and software-architecture review input; defines candidate test content; and independently tests within approved scope. Does not operate the pipeline, scanner, release gate, or production deployment. |
 | **Risk Pillar Leader / assigned Risk reviewer** | Leads threat modeling per [`CERG-PRC-TM-001`](CERG-PRC-TM-001_Threat_Modeling_Procedure.md), contributes adversary context, and ensures threat-model findings receive a disposition. |
 | **Vendor Risk Analyst** | Performs third-party and supply-chain assessment per [`CERG-PRC-TPRM-001`](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) when vendors, SaaS providers, MSPs, software suppliers, or external integrations are involved. |
 | **Governance Pillar Leader** | Maps the project into the regulatory scope (CUI / BES / SOX) and triggers the relevant overlay reviewers. |
-| **Engineering Pillar Leader** | Approves Engineering disposition, validates proposed compensating controls, and routes any residual-risk acceptance to the authority named in [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) §8 and [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. |
-| **CISO** | Approves High / Critical risk acceptances at go-live where required by the canonical authority table. |
+| **Engineering Pillar Leader** | Reviews the Engineering technical disposition and proposed compensating controls; escalates material disagreement. The business or service owner initiates any residual-risk route, and only the authority named in [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 accepts it. |
+| **CISO** | Settles escalated technical dispositions. A CERG or CISO escalation cannot itself authorize, deny, or compel a go-live decision, which remains the accountable owner's. Accepts residual risk only where the canonical authority table names the CISO. |
 | **IT Change Advisory Board (CAB)** | Hosts the go-live conversation; CERG review status is a CAB input, not a substitute for change management. |
 
 ---
@@ -103,7 +103,7 @@ CERG Architecture Review is mandatory for projects that meet any of the followin
 
 ### 4.2 Lightweight Review (Engineering Self-Service)
 
-A lightweight, self-service review pattern (intake form + checklist + Engineering sign-off without full Phase 2) is acceptable for projects that:
+A lightweight, self-service review pattern (intake form + checklist + Engineering technical review without full Phase 2) is acceptable for projects that:
 
 - Reuse an already-reviewed pattern (e.g., new microservice on an already-reviewed Kubernetes cluster).
 - Add capacity to an already-reviewed system.
@@ -285,16 +285,21 @@ Phase 2 review (Architecture Review and Threat Model) follows the SLC tier assig
 
 ### 6.4 Phase 2 Output
 
-- Architecture Review record with status `Approved` / `Approved-with-Conditions` / `Not Approved`.
+- Architecture Review record with technical disposition `Ready` / `Ready-with-Conditions` / `Not Ready`. These three are the **Phase 2 design dispositions**; the Phase 4 pre-production dispositions in §8.3 are a different set recording a different moment.
+  - **Ready**: the review names no condition to carry into build.
+  - **Ready-with-Conditions**: the review names conditions the project carries into build, including findings that must be remediated before the Phase 4 review.
+  - **Not Ready**: the design has unresolved conditions that cannot be carried into build. The business or service owner decides whether to proceed; unresolved validated residual risk follows the acceptance route in `RMF-001` §9.7, not a Phase 2 record.
 - Threat model attached.
 - Findings in the risk register, scored.
 - Build-time conditions for Phase 3.
+
+A technical disposition is not a go-live decision. The business or service owner decides whether to proceed after considering it; unresolved validated residual risk follows the existing risk-acceptance authority.
 
 ---
 
 ## 7. Phase 3: Build-Time Engagement
 
-Build-time engagement is the period between design approval and pre-production. CERG differentiates between routine and novel builds.
+Build-time engagement is the period between design review and pre-production. CERG differentiates between routine and novel builds.
 
 ### 7.1 Routine vs. Novel Builds
 
@@ -337,7 +342,7 @@ Build-time findings are escalated within the development team first, then to CER
 
 ### 7.5 SLA for Build-Time Review
 
-CERG completes novel-build review within 3 business days of notification. If the review cannot be completed within SLA, Engineering documents the delay, schedules the follow-up review, and notifies the project team. A build may proceed only if no blocking security gate has failed; any residual risk created by proceeding is routed through the risk acceptance process. Engineering does not accept business risk on behalf of the owner.
+CERG completes novel-build review within 3 business days of notification. If the review cannot be completed within SLA, Engineering documents the delay, schedules the follow-up review, and notifies the project team. The first-line pipeline operator enforces blocking gates. If the accountable owner proposes proceeding with unresolved validated residual risk, it follows the existing risk-acceptance process; Engineering does not accept business risk on behalf of the owner.
 
 The artifacts produced during build include: IaC review for new modules and patterns; pipeline gates enforcing DISH baseline conformance, container image signing, SBOM generation, and exposure scanning; secrets checking; and conditional re-review if material design changes happen between Phase 2 and Phase 4.
 
@@ -371,9 +376,11 @@ Pre-Production Security Review is completed within 5 business days of the projec
 
 ### 8.3 Outcome
 
-- **Ready**: go-live disposition in Phase 5.
-- **Ready-with-Risk-Acceptance**: outstanding findings have risk register entries with approved exceptions per [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) §7.
-- **Not Ready**: go-live blocked until specific items close.
+These three are the **Phase 4 pre-production dispositions**. They are not the Phase 2 design dispositions in §6.4: a design review carries build conditions forward, while a pre-production review records whether acceptances exist before go-live.
+
+- **Ready**: the technical review identifies no unresolved blocking condition.
+- **Ready-with-Risk-Acceptance**: outstanding findings have risk register entries with approval under the existing risk-acceptance authority.
+- **Not Ready**: the technical review identifies conditions that remain unresolved. The business or service owner decides whether to proceed; unresolved validated residual risk follows the existing risk-acceptance authority, and CERG may escalate disagreement.
 
 ---
 
@@ -417,13 +424,13 @@ PRODUCTION HANDOFF PACKAGE - <System Name>     AR-YYYY-NNNN - PHP-001
 7. RUN-BOOK AND ON-CALL
    References
 
-8. SIGN-OFFS
-   Engineering Reviewer
-   Risk Reviewer
+8. REVIEW AND DECISION
+   Engineering Reviewer (technical disposition)
+   Risk Reviewer (technical input)
    Governance (overlay) Reviewer(s) - CUI / BES / SOX as applicable
-   Engineering Pillar Leader
-   CISO (if High / Critical risk acceptance)
-   Business Owner
+   Engineering Pillar Leader (technical escalation where used)
+   Business or Service Owner (go-live decision)
+   Risk Acceptance authority, if residual risk remains (per RMF-001 §9.7)
 ```
 
 ### 9.2 Go-Live Risk Acceptance Packet
@@ -450,7 +457,7 @@ Aggregate:
 
 ### 9.3 Phase 5 SLA
 
-Production Handoff and Go-Live is completed within 3 business days of Phase 4 Ready disposition. The handoff package is the gate; go-live proceeds when the package is complete and signed.
+Production Handoff is completed within 3 business days of the Phase 4 technical disposition. The handoff package informs the business or service owner's go-live decision; it is not a CERG approval gate. Go-live with unresolved validated residual risk requires the existing RMF acceptance authority.
 
 ### 9.4 Post-Go-Live Watch Period
 
@@ -468,7 +475,7 @@ If a project team disagrees with a finding, disposition, or outcome from any pha
 
 An appeal may be filed for:
 - A finding the project team believes is inaccurate, inapplicable, or overstated
-- A "Not Approved" disposition on a Phase 2 review
+- A `Not Ready` technical disposition on a Phase 2 review
 - A "Not Ready" disposition on a Phase 4 pre-production review
 - A go-live condition the project team believes is unreasonable or infeasible
 
@@ -480,7 +487,7 @@ An appeal may be filed for:
 | 2 | CERG Pre-Production Reviewer re-evaluates with the project team; may consult additional subject matter experts | Within 5 business days |
 | 3 | If resolved: decision is updated and recorded. If not resolved: escalates to Risk Pillar Leader. | - |
 | 4 | Risk Pillar Leader reviews the appeal and the CERG position; makes a determination or escalates to CISO | Within 5 business days |
-| 5 | CISO makes final determination. CISO's decision is binding and is recorded in the review record. | Within 10 business days of escalation |
+| 5 | CISO makes the final technical determination, which is binding as the CERG disposition. It settles the technical question and is recorded in the review record; it does not itself authorize or prevent go-live, and any residual risk the owner carries follows `RMF-001` §9.7. | Within 10 business days of escalation |
 
 #### Criteria for Overturning a Decision
 
@@ -539,7 +546,7 @@ A completed [`CERG-TMPL-AR-001`](../templates/CERG-TMPL-AR-001_Architecture_and_
 | **Average Time - Phase 1 (Intake)** | Mean business days from intake submission to Scope Determination recorded | Intake tracker | Monthly | ≤ 3 days | 4–5 days | > 5 days |
 | **Average Time - Phase 2 (Arch Review)** | Mean business days from Phase 2 start to review record disposition | Review tracker | Monthly | ≤ 7 days | 8–10 days | > 10 days |
 | **Average Time - Phase 3 (Build-Time)** | Mean business days per build-time review cycle | Pipeline / review tracker | Monthly | ≤ 2 days | 3 days | > 3 days |
-| **Average Time - Phase 4 (Pre-Prod)** | Mean business days from Phase 4 start to disposition (Ready / Ready-with-Acceptance / Not Ready) | Review tracker | Monthly | ≤ 4 days | 5 days | > 5 days |
+| **Average Time - Phase 4 (Pre-Prod)** | Mean business days from Phase 4 start to disposition (Ready / Ready-with-Risk-Acceptance / Not Ready) | Review tracker | Monthly | ≤ 4 days | 5 days | > 5 days |
 | **Average Time - Phase 5 (Handoff)** | Mean business days from Pre-Prod Ready to handoff package signed | Review tracker | Monthly | ≤ 2 days | 3 days | > 3 days |
 | **Review Backlog Count** | Number of open reviews past their target disposition date | Review tracker | Weekly | ≤ 2 | 3–5 | > 5 |
 | **Finding Severity Distribution** | Count of findings by severity (Critical / High / Medium / Low / Info) recorded across all active reviews | Risk register | Monthly | Baseline to be established in first year of operation | | |
@@ -568,9 +575,9 @@ A completed [`CERG-TMPL-AR-001`](../templates/CERG-TMPL-AR-001_Architecture_and_
 
 ## 14. Pre-Approved Architecture Patterns
 
-Good governance makes projects faster because teams can design correctly before vendor selection. The patterns below are pre-approved for architecture review at the "Light-Touch" tier if the described conditions are met. Engineering signs off; Governance and Risk are not required to engage unless the project exceeds the pattern's boundaries.
+Good governance makes projects faster because teams can design correctly before vendor selection. The patterns below are available for a "Light-Touch" technical review if the described conditions are met. Engineering confirms technical conformance; Governance and Risk are not required to engage unless the project exceeds the pattern's boundaries.
 
-| Pattern | Required Controls | Evidence | Expected Approval | When to Escalate |
+| Pattern | Required Controls | Evidence | Expected Review Time | When to Escalate |
 |---------|------------------|----------|-------------------|------------------|
 | **New SaaS — no sensitive data** | SSO via IdP; OAuth app review; data classification verified as Internal or lower | IdP config, OAuth grant list, data classification record | 1 business day | Data classification changes; CUI/Restricted data discovered; vendor fails SSPM baseline |
 | **New SaaS — SSO only** | SSO enforced; no local accounts; OAuth scope review; tenant admin account secured via PAM | IdP config, PAM configuration | 2 business days | SaaS holds sensitive data; provider lacks SOC 2; tenant admin not under PAM |
@@ -579,7 +586,7 @@ Good governance makes projects faster because teams can design correctly before 
 | **Internal API** | mTLS or API gateway auth; rate limiting; input validation; logging to SIEM | API gateway config, SIEM source verification | 3 business days | API is Internet-facing; API handles payments; API accesses crown-jewel data |
 | **Vendor remote access** | PAM-brokered only per [STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md); session recording; named accounts; kill-switch tested; no standing access | PAM config, session logs, kill-switch test record | 5 business days | Vendor requires standing access; vendor is OT/ICS; vendor accesses BES Cyber Systems |
 | **MSP privileged access** | Full MSP hard requirements per [TPRM-001](CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) §6.2: PAM, named accounts, no global admin, customer-owned logs, break-glass, kill-switch | All eight MSP requirement verifications | 10 business days | Any MSP requirement cannot be met; MSP is primary IT operations provider |
-| **OT remote maintenance** | Engineering-controlled remote access; session recording; operational sign-off per maintenance window; CIP-007 alignment | Access log, session record, operational approval | Per maintenance window | Vendor requires always-on connection; BES Cyber System without CIP overlay |
+| **OT remote maintenance** | First-line service-owner-controlled remote access; session recording; operational approval per maintenance window; CIP-007 alignment | Access log, session record, operational approval | Per maintenance window | Vendor requires always-on connection; BES Cyber System without CIP overlay |
 | **AI assistant with internal data** | Data classification verified; AI acceptable use policy acknowledged; prompt injection mitigations; data egress monitored per [STD-AI-001](../standards/CERG-STD-AI-001_Artificial_Intelligence_Security_Standard.md) | AI policy acknowledgment, DLP configuration, data classification | 3 business days | AI tool ingests Restricted/CUI data; AI tool is customer-facing; model training on org data |
 | **CI/CD integration** | Pipeline access control; secrets management; signed commits; SBOM generation; build-time SCA/SAST | Pipeline config, secret store audit, SBOM, scan results | 3 business days | Integration touches production deployment; integration has external contributors |
 | **Cloud workload with Internet ingress** | WAF or cloud-native equivalent; TLS 1.3; DDoS protection; authenticated external scan; CSPM continuous monitoring | WAF config, TLS scan, CSPM posture, external scan report | 5 business days | Workload handles authentication directly; workload is in regulated scope |
@@ -593,7 +600,7 @@ Good governance makes projects faster because teams can design correctly before 
 | Pen test cannot be completed pre-launch | Scheduled within 30 days of go-live; compensating monitoring active during gap | Governance exception with expiration |
 | WAF bypass required (application compatibility) | Layer-7 monitoring; IPS rule; quarterly pen test of bypass path | Engineering review + Governance exception |
 
-**Governance principle:** Pre-approved patterns reduce review time by eliminating the discovery phase. If a project fits a pattern exactly, Engineering signs off and the project proceeds. If it deviates in any material way, it escalates to the review tier specified by the deviation. Patterns are reviewed annually and updated when standards change.
+**Governance principle:** Pre-approved patterns reduce review time by eliminating the discovery phase. If a project fits a pattern exactly, Engineering confirms technical conformance and the business or service owner may proceed. If it deviates in any material way, it escalates to the review tier specified by the deviation. Patterns are reviewed annually and updated when standards change.
 
 ---
 
@@ -602,15 +609,20 @@ Good governance makes projects faster because teams can design correctly before 
 | | |
 |---|---|
 | **Document ID** | CERG-PRC-AR-001 |
-| **Version** | 1.2 |
+| **Version** | 1.7 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / on platform or process change |
-| **Change Log** | 1.2 - Clarified standalone intake template authority and procedure-owned closure records. 1.1 - Added Appendix A worked example. 1.0 - Initial publication. Establishes intake, review, threat-model, build-time, pre-prod, and handoff phases with the citizen-development carve-out. |
+| **Change Log** | 1.3 - Reconciled technical review, go-live, gate, and first-line operating authority. 1.2 - Clarified standalone intake template authority and procedure-owned closure records. 1.1 - Added Appendix A worked example. 1.0 - Initial publication. Establishes intake, review, threat-model, build-time, pre-prod, and handoff phases with the citizen-development carve-out. |
 
 ### Revision History
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.7 | 2026-10-30 | Governance Pillar Leader | Patch (#285): repaired 6 table-of-contents anchors whose slugs no longer matched their headings. No content change. |
+| 1.6 | 2026-10-30 | Governance Pillar Leader | Authority reconciliation (#280): CISO escalation settles the technical disposition and cannot itself authorize, deny, or compel go-live, which is the accountable owner's decision. Appendix A.7 sign-offs now route the KMS key type acceptance to the Business Owner co-signed per RMF-001 §9.7, matching A.4 and A.6. |
+| 1.5 | 2026-10-30 | Engineering Pillar Leader | Reconciled the go-live decision with the canonical RACI. The roles table claimed the Project Sponsor / Business Owner owns the go-live decision unconditionally, while §6.4, §8.3, the §9 sign-off list and OM-001 §9 all say the business or service owner decides, and RAC-001 §6.1 assigns the accountable role to the First-Line Service Owner. The roles table now names the residual-risk ownership only and defers the go-live decision to RAC-001 §6.1. No authority changed; one claim stopped contradicting four others. |
+| 1.4 | 2026-10-30 | Engineering Pillar Leader | Named the two disposition sets by phase: §6.4 now defines its three Phase 2 design dispositions beside §8.3's three Phase 4 pre-production dispositions, so one set can no longer be read for the other. §6.4's definitions no longer use "blocking", which §7.3 uses for a severity rating. Corrected the third spelling `Ready-with-Acceptance` in the §12 Phase 4 metric. Moved two example artifacts off reviewer authority and onto `RMF-001` §9.7: finding F04 in the Phase 2 example routes a Medium finding for Business Owner acceptance, co-signed, instead of recording the reviewer accepting it, while the Phase 4 example records the KMS acceptance as completed so its `Ready-with-Risk-Acceptance` disposition is supported by its own evidence row. |
+| 1.3 | 2026-10-28 | Engineering Pillar Leader | Reconciled technical review with first-line service operation: CERG review states technical dispositions and escalates; named business or service owners decide go-live; first-line operators enforce gates and make releases; residual risk follows RMF authority. |
 | 1.2 | 2026-06-18 | Engineering Pillar Leader | Reconciled TMPL-AR-001 as the Phase 1 front-door intake form and clarified that PRC-AR-001 owns Phase 2-5 review, handoff, and go-live risk records. |
 | 1.1 | 2026-06-13 | Engineering Pillar Leader | Added Appendix A worked example. |
 | 1.0 | 2026-05-22 | Cyber Governance | Initial publication. Establishes intake, review, threat-model, build-time, pre-prod, and handoff phases with the citizen-development carve-out. |
@@ -702,17 +714,17 @@ G. ASKS
 
 ### A.4 Architecture Review Record (Phase 2)
 
-**Status:** Approved-with-Conditions
+**Technical Disposition:** Ready-with-Conditions
 
 | **Finding ID** | **Area** | **Finding** | **Severity** | **Disposition** |
 |---|---|---|---|---|
 | AR-2026-0001-F01 | Identity | AWS IAM Role for ERP integration grants full DynamoDB access instead of least-privilege per table | High | Fix before go-live: scope IAM policy to specific DynamoDB tables |
 | AR-2026-0001-F02 | Network | VPC flow logs enabled but not shipped to SIEM; retention set to 7 days instead of 365 | High | Fix before go-live: configure VPC flow log delivery to SIEM; set retention to 365 days |
 | AR-2026-0001-F03 | Logging | Application logs write to CloudWatch with 14-day retention; no forwarding to central SIEM | Medium | Fix within 30 days of go-live: configure CloudWatch subscription filter to SIEM; extend retention to 1 year |
-| AR-2026-0001-F04 | Cryptography | KMS key for RDS encryption uses automatic key rotation but no CMK; key material is AWS-managed | Medium | Accept with condition: document SOX-relevant controls to confirm CMK not required; reassess at SOX evidence cycle |
+| AR-2026-0001-F04 | Cryptography | KMS key for RDS encryption uses automatic key rotation but no CMK; key material is AWS-managed | Medium | Route for risk acceptance (Business Owner, co-signed per `RMF-001` §9.7), with condition: document SOX-relevant controls to confirm CMK not required; reassess at SOX evidence cycle |
 | AR-2026-0001-F05 | Third Party | SendGrid API key stored in application config file, not secrets manager | High | Fix before go-live: migrate to AWS Secrets Manager with automatic rotation |
 
-**Conditions for Phase 2 approval:**
+**Conditions attached to the Phase 2 disposition:**
 - High findings (F01, F02, F05) must be remediated before Phase 4 pre-production review
 - Medium findings (F03, F04) must have treatment plan with owner and target date by go-live
 
@@ -772,7 +784,7 @@ THREAT MODEL - CloudApp Migration               AR-2026-0001 - TM-001
 | Cryptography | TLS 1.2 minimum on ALB; KMS with automatic key rotation; Secrets Manager for all secrets | TLS scan, KMS key config |
 | Resilience | RTO 4h / RPO 1h via multi-AZ RDS; restoration test scheduled for Day +14 post-go-live | Backup config, resilience register |
 | Vendor / TPRM | AWS Tier 1 evidence current; SendGrid Tier 2 assessment complete — SOC 2 accepted with CUEC mapping; ABC Collect assessment in progress — conditional acceptance granted with 90-day re-review | TPRM tool entries |
-| SOX overlay artifacts | ERP integration controls mapped to ITGC CM-2, CM-3, CM-4; compensating control memo for KMS key type accepted by SOX ITGC Lead | SOX control mapping |
+| SOX overlay artifacts | ERP integration controls mapped to ITGC CM-2, CM-3, CM-4; compensating control memo for KMS key type accepted by the Business Owner, co-signed per `RMF-001` §9.7, with SOX ITGC Lead compliance input | SOX control mapping |
 | Phase 2 conditions cleared | F01 (IAM scoping) resolved — IAM policy updated; F02 (flow logs) resolved — SIEM delivery confirmed; F05 (Secrets Manager) resolved — SendGrid key migrated; F03 (logging retention) on track for 30-day target | Phase 2 record annotations |
 | Asset inventory | CloudApp added as ASSET-00201 (AWS): owner = IT Operations, tier = Production Tier 2, SOX scope = yes | Asset inventory |
 
@@ -787,7 +799,7 @@ THREAT MODEL - CloudApp Migration               AR-2026-0001 - TM-001
 | Risk Acceptances | RA-2026-0001 (KMS key type — expiration 2027-06-30); RA-2026-0002 (SendGrid assessment conditional — re-review 2026-12-31) |
 | Ongoing Controls | Weekly exposure scan, monthly access review, quarterly SOX control evidence refresh, annual pen test |
 | Run-book | Confluence link: RUN-CloudApp-001; On-call: IT Ops rotation via PagerDuty |
-| Sign-offs | Engineering Reviewer: Cloud Security Engineer; Risk Reviewer: Risk Analyst; Governance (SOX): SOX ITGC Lead; Engineering Pillar Leader; CISO (KMS risk acceptance); Business Owner: CFO Designee |
+| Sign-offs | Engineering Reviewer: Cloud Security Engineer; Risk Reviewer: Risk Analyst; Governance (SOX): SOX ITGC Lead; Engineering Pillar Leader; CISO (co-sign per `RMF-001` §9.7); Business Owner: CFO Designee (KMS key type acceptance) |
 
 ### A.8 Key Takeaways for First-Time Adopters
 

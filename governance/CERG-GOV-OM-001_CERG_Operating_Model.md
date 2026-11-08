@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
-| **Version** | 1.26 |
+| **Version** | 1.33 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
@@ -78,6 +78,21 @@ CERG's pillars describe cybersecurity capabilities, not who operates every contr
 
 CERG is an integrated **second-line cybersecurity function**. Engineering supplies technical design authority, practical guardrails, and viable alternatives; Risk maintains exposure visibility and validates whether controls hold up under attack; Governance is the second-line authority for control intent, evidence criteria, decisions, and assurance. Engineering, Risk, and Governance each produce evidence from their work, while Governance assures that the combined evidence is attributable, current, retrievable, and fit for decisions or scrutiny.
 
+The line of defense follows the purpose of the activity, not the technique, the tool, or the reporting line. First-line system, service, business, IT, and OT owners, and any operator or provider they engage, perform and operate security services: vulnerability and exposure scanning, SIEM and EDR platforms, CSPM and SSPM, identity-threat monitoring, alert acknowledgement and triage, and production detection deployment. CERG does not own the standing production operation of these services. CERG defines outcomes and evidence criteria, evaluates exposure, performs independent validation and adversarial testing, challenges control performance, and escalates material deficiencies. An alert queue may route an event to the standing Incident Response team; it does not give CERG incident-command authority.
+
+**Conditions for an independent technical-effectiveness claim.** A CERG technical-effectiveness claim requires all three conditions:
+
+1. **Independence.** The claimant did not produce the control state or the work being approved. A practitioner who authored the content or operated the tested service cannot be the sole approver of an effectiveness claim that supports a compensated-exposure disposition or another consequential risk decision.
+2. **Capability.** CERG holds a service-appropriate ability to produce independent technical evidence: read or query access, sampling or re-test rights, and the capacity to interpret the result. The applicable method authority defines what is appropriate for its service family: [CERG-STD-LM-001](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) for detection, [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) for exposure, and [CERG-PRC-AV-001](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) for adversarial and recovery validation. Capability is recorded per assured service and re-asserted after a material change to its operator, tooling, access model, or scope.
+3. **Currency.** The claim states the period and scope of its evidence. Evidence that predates the current control state, or falls outside the claim's scope, cannot support the claim.
+
+Where a condition is absent, CERG labels the output at the point of claim as conformance or operating-evidence review only, names the missing condition, and does not use the output to support a compensated-exposure or comparable disposition. The deficiency enters [CERG-GOV-IMPREG-001](CERG-GOV-IMPREG-001_Program_Improvement_Register.md); material residual exposure follows [CERG-PRC-RM-001](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) and the risk-acceptance authority in [CERG-GOV-RMF-001](CERG-GOV-RMF-001_Risk_Management_Framework.md). A deficiency that persists through two review cycles is a decision to operate without that assurance capability and requires formal risk acceptance under the applicable RMF authority.
+
+**State authorship and service operation.** CERG may author candidate content and validate an independently deployed state. When a CERG action changes a live service's coverage, availability, routing, or enforcement, it is a first-line operational action for the affected scope. The independent technical-effectiveness claim for that scope is suspended until the named independent assessor verifies the outcome. Emergency or break-glass action remains first-line operation at the moment of action; retrospective approval does not restore the claim.
+
+Where CERG holds ongoing service-level obligations — availability, coverage delivery, triage, escalation, or remediation — it operates that service and may not issue or approve its independent technical-effectiveness claim. The service control profile names the independent assessor and review route. For a small team, the independent approver may be another qualified person, an independent provider, or another documented independent route. The capability floor is access- and tooling-shaped, not headcount-shaped. Self-approval of consequential claims is the non-consolidable element.
+
+
 **Independent assurance and external scrutiny** consume those outputs differently. Internal Audit, where established, provides independent assurance. External auditors and assessors test or attest; regulators supervise and enforce; insurers underwrite; and the board governs and challenges through CISO reporting. CERG makes these engagements efficient by maintaining decision-useful evidence, defensible risk records, and clear control and regulatory mappings.
 
 ---
@@ -92,14 +107,16 @@ CERG is an integrated **second-line cybersecurity function**. Engineering suppli
 
 - Pre-production security architecture review for all in-scope projects
 - Reference architectures, landing zones, and configuration baselines per platform class
-- Security infrastructure-as-code, policy-as-code, and admission control
+- Security requirements, reference patterns, candidate infrastructure-as-code and policy-as-code, and admission-control test cases
 - IT/OT convergence advisory and Electronic Security Perimeter design
-- Identity platform engineering (IdP, MFA, SSO, PAM, secrets management)
-- Cryptography and key management platform engineering
-- Endpoint, server, container, and cloud security tooling engineering
-- Operational handoff documentation that supports Governance compliance evidence
+- Identity-platform reference design and technical requirements (IdP, MFA, SSO, PAM, secrets management), not production operation
+- Cryptography and key-management reference design and technical requirements, not platform operation
+- Endpoint, server, container, and cloud security-tooling requirements and test cases, not standing service operation
+- Handoff documentation that identifies first-line operational ownership and supports Governance compliance evidence
 
 **Engagement default.** Project-aligned engagement. Engineering is engaged early in project planning and follows the work through go-live.
+
+**Operating boundary.** Engineering supplies reference designs, requirements, candidate detection content, and test cases. First-line teams or providers accept and deploy production content through their own change process. Engineering does not operate production security platforms, own alert queues, or deploy production content. First-line delivery teams perform project threat modeling and supply architecture, data-flow, identity, and deployment facts; CERG Engineering independently reviews material architectures through [CERG-PRC-AR-001](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md).
 
 ### 3.2 Cyber Risk
 
@@ -107,13 +124,15 @@ CERG is an integrated **second-line cybersecurity function**. Engineering suppli
 
 **Core activities.**
 
-- Exposure management (scanning, prioritization, remediation tracking) per **[CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md)**
+- Exposure management (independent validation, classification, prioritization, remediation challenge and tracking) per **[CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md)**
 - Adversarial validation: penetration testing, red-team operations, purple-team detection validation
 - Threat intelligence consumption and translation into detection and posture controls
 - Vendor and third-party security risk assessment
-- Cloud security posture management (CSPM) and SaaS security posture management (SSPM)
-- Identity-threat detection and continuous identity-risk monitoring
+- Cloud and SaaS posture analysis from first-line-operated CSPM and SSPM sources
+- Identity-risk analysis and independent validation of identity-threat monitoring outcomes
 - Risk-register intake from technical sources
+
+OT adversarial testing and OT recovery challenges execute only under [CERG-PRC-AV-001](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) OT-safety rules, with a named OT Safety Officer holding stop authority.
 
 **Engagement default.** Continuous service. Risk is always on; engagement is by exposure type, not by ticket.
 
@@ -143,6 +162,7 @@ The following functions are intentionally outside CERG and operate under separat
 - **Physical Security (non-cyber).** Owned by Facilities; CERG coordinates for assets within CIP-006 / PE-family scope.
 - **Privacy program.** A distinct function under Legal / Privacy leadership; coordinates with Governance for breach notification and Restricted-data handling.
 - **Business Continuity (non-cyber).** Owned by Enterprise Risk / Operations; CERG coordinates for cyber-driven business continuity activations.
+- **Standing security-operations platform services.** Scanners, SIEM, EDR, CSPM, SSPM, identity-threat monitoring platforms, alert triage, and production detection deployment are operated by first-line internal teams or providers. A named internal service owner remains accountable. CERG independently validates coverage and effectiveness and may not approve the operation of a service it operates.
 
 ---
 
@@ -164,7 +184,7 @@ The three pillars report to the CISO through pillar leaders (Manager / Director 
 | Exception approval | Per [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) §8, which routes to RMF §9.7 for approval authority |
 | Incident classification & containment | Incident Commander (CISO or designee), per the standing IR team (see §3.4) |
 | External notification (regulator, public) | IC + CISO + Legal |
-| Pre-production go/no-go for in-scope projects | Engineering pillar leader with Risk input; escalation to CISO if business and CERG disagree |
+| Pre-production go/no-go for in-scope projects | Business or service owner decides, with CERG technical review. CERG may escalate to the CISO where CERG and the business disagree. |
 | Vendor onboarding approval (Tier 1) | Risk pillar leader; CISO for material risk exceptions |
 | New SaaS / cloud service approval | Governance + Engineering; CISO for Restricted-data placements |
 | Budget allocation across pillars | CISO |
@@ -281,10 +301,10 @@ CERG commits to architecture-review intake and disposition turnaround by project
 |---|---|---|
 | Concept | Lightweight architectural consult; data classification and environment-tier discussion. | Engineering |
 | Design | Formal security architecture review; reference-architecture / landing-zone selection; threat-model session for novel components. | Engineering (+ Risk for threat modeling) |
-| Build | Engineering partner embedded with the project team; pipeline gates configured; identity / cryptography / monitoring requirements implemented. | Engineering |
+| Build | Engineering partner embedded with the project team; identity, cryptography, and monitoring requirements and candidate pipeline-gate content supplied. First-line delivery teams configure the gates and implement the requirements. | Engineering |
 | Pre-production | Pre-production security review; vulnerability assessment; pen-test where warranted; risk-register entries for any acceptance sought. | Engineering + Risk |
-| Production | Handoff to operations; baselines committed; ongoing CSPM / SSPM coverage; exposure management onboarding. | Engineering → Risk |
-| Continuous | Continuous monitoring; periodic re-review; governance evidence integration. | Risk + Governance |
+| Production | Handoff review; baseline conformance validated; new asset onboarded to exposure validation. First-line owners and operators deploy, operate, and monitor, including CSPM / SSPM coverage. | Engineering → Risk |
+| Continuous | Independent validation of first-line monitoring output; periodic evidence re-review; governance evidence integration. First-line owners and operators monitor and remediate. | Risk + Governance |
 
 ### 5.2 Continuous Service (Risk-Led)
 
@@ -293,9 +313,9 @@ Used for ongoing exposure management across the entire estate.
 CERG commits to a time-to-coverage target for bringing a new asset under vulnerability and CSPM coverage after go-live, per [`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md).
 
 - Exposure management operates as a standing service per [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md).
-- CSPM / SSPM operates continuously across approved cloud and SaaS.
+- CSPM and SSPM coverage is consumed continuously as first-line-operated sources; CERG verifies coverage and provenance rather than operating the platforms.
 - Threat intelligence consumption produces standing detection and posture work.
-- Identity-threat detection operates continuously.
+- Identity-threat monitoring outcomes are independently validated on a continuous basis; the monitoring platform is first-line-operated.
 
 Continuous services do not require project tickets. Business teams are partners in remediation rather than initiators of the work.
 
@@ -376,7 +396,7 @@ Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leade
 | Canonical Role | Pillar / Group | Common Synonyms (Do Not Use) | Primary Responsibilities |
 |---|---|---|---|
 | **Chief Information Security Officer (CISO)** | Executive | - | Strategy, board reporting, final authority on High and Critical risk acceptance per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. |
-| **Executive Sponsor** | Business / Executive | "VP," "Executive Sponsor," "Leadership" | Concurrence for Critical risk acceptance per RMF §9.7; business representative on the COG; named per system in the categorization register. |
+| **Executive Sponsor** | Business / Executive | "VP," "Executive Sponsor," "Leadership" | Accepts the business consequence at Critical per [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7, where the acceptance is CISO + Executive Sponsor; business representative on the COG; named per system in the categorization register. Not a CERG roster position: an organization-side party. |
 | **Engineering Pillar Leader** | Engineering | "Engineering Pillar Leader," "Engineering Manager" (when speaking of the pillar lead) | Pillar accountability; project intake; reference-architecture authority. |
 | **Cloud Security Engineer** | Engineering | "Cloud Security Engineer" | Cloud platforms, IaC, CSPM gating, landing-zone authority. |
 | **Identity Engineer** | Engineering | "Identity Engineer," "Identity Engineer" | IdP, MFA, SSO, PAM, secrets management, federation. |
@@ -384,8 +404,8 @@ Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leade
 | **Application Security Engineer** | Engineering | "Application Security Engineer," "Application Security Engineer" | SAST/DAST, SDLC controls, threat modeling. |
 | **Endpoint Engineer** | Engineering | "Endpoint Engineer" | Endpoint, EDR, OS baselines. |
 | **Cryptography Engineer** | Engineering | "Cryptography Engineer" | Key management, CA hierarchy, TLS posture, FIPS compliance. |
-| **Pre-production Reviewer** | Engineering (rotated) | - | Owns the pre-production checklist; signs off on go-live readiness. |
-| **Risk Pillar Leader** | Risk | "Risk Pillar Leader" (when speaking of the lead), "Risk Manager" | Pillar accountability; exposure posture reporting; Medium severity risk-acceptance authority per RMF §9.7. |
+| **Pre-production Reviewer** | Engineering (rotated) | - | Conducts the pre-production technical review and states its disposition; the business or service owner decides go-live. |
+| **Risk Pillar Leader** | Risk | "Risk Pillar Leader" (when speaking of the lead), "Risk Manager" | Pillar accountability; exposure posture reporting; co-signs Medium risk acceptance as the Pillar Leader named in [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7, where the Business Owner accepts the business consequence. |
 | **Exposure Management Lead** | Risk | "Exposure Management Lead" | Operates [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md); owns SLAs and posture metrics. |
 | **Adversarial Testing Lead** | Risk | "Adversarial Testing Lead," "Adversarial Testing Lead" | Operates [`CERG-PRC-AV-001`](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md); pen test, red team, purple team. |
 | **Threat Intelligence Analyst** | Risk | "Threat Intelligence Analyst" | Threat-actor tracking; advisories; intel-to-detection translation. |
@@ -393,7 +413,7 @@ Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leade
 | **OT Risk Analyst** | Risk | - | OT-safe vuln assessment, ICS threat intelligence. |
 | **Identity Risk Analyst** | Risk | - | UEBA, identity-threat detection, OAuth and token risk. Mature-program specialization; in small teams the Detection Engineer or Risk Pillar Leader covers the work. |
 | **Detection Engineer** | Risk | "Detection Engineer," "Detection Engineer" | Detection-rule authoring; ATT&CK coverage; tuning lifecycle. |
-| **Governance Pillar Leader** | Governance | "Governance Pillar Leader," "Governance Pillar Leader" (when speaking of the lead) | Pillar accountability; regulator and auditor liaison; CISO reporting; Low and Informational severity risk-acceptance authority per RMF §9.7. |
+| **Governance Pillar Leader** | Governance | "Governance Pillar Leader," "Governance Pillar Leader" (when speaking of the lead) | Pillar accountability; regulator and auditor liaison; CISO reporting; approves procedural exceptions and maintains the Low and Informational acceptance records required by [`CERG-GOV-RMF-001`](CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7, where the Business Owner accepts at Low. |
 | **NERC-CIP Compliance Manager** | Governance | "NERC-CIP Compliance Manager" | OT and BES Cyber System compliance posture. |
 | **CMMC / Federal Compliance Manager** | Governance | "CMMC / Federal Compliance Manager" | CUI posture; SSP and POA&M maintenance. |
 | **SOX ITGC Lead** | Governance | "SOX ITGC Lead" | ITGC control evidence and audit coordination. |
@@ -409,16 +429,7 @@ Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leade
 
 ### 6.2 Cyber Engineering: Typical Roles
 
-| **Role** | **Focus** |
-|---|---|
-| Engineering Pillar Leader | Pillar accountability; project intake; reference-architecture authority. |
-| Cloud Security Engineer | Cloud platforms, landing zones, IaC, CSPM gating. |
-| Identity Engineer | IdP, MFA, SSO, PAM, secrets management, federation. |
-| OT Security Engineer | IT/OT convergence, ESP/EAP design, BES Cyber System baselines (see [CERG-STD-OT-001](../standards/CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md)). |
-| Application / Application Security Engineer | SAST/DAST integration, SDLC controls, threat modeling. |
-| Endpoint / Endpoint Engineer | Endpoint controls, EDR engineering, OS baselines. |
-| Cryptography Engineer | Key management, CA, TLS posture, FIPS compliance. |
-| Pre-production Reviewer (often a rotated function) | Owns the pre-production checklist; signs off on go-live readiness. |
+The canonical roster in §6.1 names Cyber Engineering roles and responsibilities. The [Security Engineering family](../roles/jf-seceng/CERG-GOV-JD-SECENG-000_Security_Engineering_Family.md) provides the role descriptions. This section intentionally does not repeat the roster, so a role's authority cannot drift from the canonical statement.
 
 ### 6.3 Cyber Risk: Typical Roles
 
@@ -426,7 +437,7 @@ Roles are organized by pillar. Sub-role variants (e.g., Engineering Pillar Leade
 |---|---|
 | Risk Pillar Leader | Pillar accountability; exposure posture reporting. |
 | Exposure Management Lead | Operates [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md); owns the SLAs and posture metrics. |
-| Detection Engineer | CSPM / SSPM operations and detection rules. |
+| Detection Engineer | Candidate detection content, ATT&CK coverage mapping, tuning evidence review, and independent validation of deployed detection; production deployment and platform operation are first-line. |
 | Threat Intelligence Analyst | Source curation, internal advisories, detection translation. |
 | Adversarial Testing Lead (Red Team) | Internal or partner-managed offensive validation. |
 | Vendor / Third-Party Risk Analyst | Vendor assessment and continuous monitoring. |
@@ -513,10 +524,10 @@ The following patterns illustrate how the pillars typically distribute work. Spe
 | **Activity** | **Engineering** | **Risk** | **Governance** | **Business Owner** | **CISO** |
 |---|---|---|---|---|---|
 | Approve architecture and landing-zone selection | **R / A** | C | C | C | I |
-| Implement IAM, network, monitoring controls | **R** | C | I | C | I |
+| Set IAM, network, and monitoring requirements for the workload | **R / A** | C | I | C | I |
 | Pre-production vulnerability assessment | C | **R / A** | I | C | I |
-| Approve go-live | **R** | C | C | **A** | I |
-| Onboard to CSPM and exposure management | C | **R / A** | I | I | I |
+| Decide go-live on CERG's disposition | C | C | C | **A** | I |
+| Verify the workload in CSPM and the exposure inventory | C | **R / A** | I | I | I |
 | Add to compliance evidence library | C | I | **R / A** | I | I |
 
 ### 9.2 Open High Vulnerability Past SLA
@@ -639,7 +650,7 @@ This ensures that "no single point of failure" is not just a claim about org-cha
 | | |
 |---|---|
 | **Document ID** | CERG-GOV-OM-001 |
-| **Version** | 1.26 |
+| **Version** | 1.33 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Chief Information Security Officer |
@@ -655,6 +666,13 @@ This ensures that "no single point of failure" is not just a claim about org-cha
 
 | **Version** | **Date** | **Author** | **Change Summary** |
 |---|---|---|---|
+| 1.33 | 2026-10-30 | Governance Pillar Leader | Authority reconciliation (#280): §9.1 sample RACI no longer assigns first-line implementation, go-live approval, or CSPM onboarding to CERG pillars; the activities now describe CERG's own work and the go-live decision sits with the Business Owner. Executive Sponsor, Risk Pillar Leader and Governance Pillar Leader authority cells now match RMF-001 §9.7 instead of restating it loosely. |
+| 1.32 | 2026-10-30 | Governance Pillar Leader | Conformed the §5.1 CERG Activity column to the second-line boundary: CERG supplies requirements and candidate gate content, validates baseline conformance, and validates first-line monitoring output; first-line owners and operators configure gates, implement requirements, deploy, operate, monitor, and remediate (#276). Lead Pillar column unchanged. |
+| 1.31 | 2026-10-29 | Governance Pillar Leader | Removed the duplicate Cyber Engineering role table in §6.2 and retained a pointer to the canonical roster in §6.1, preventing a second role statement from drifting on decision rights. |
+| 1.30 | 2026-10-28 | Governance Pillar Leader | Reconciled Engineering decision rights with the second-line operating boundary: §3.1 distinguishes requirements and candidate content from platform operation; §4.2 gives go/no-go to the business or service owner with CERG review and CISO escalation; the pre-production roster entry states a technical disposition rather than a go-live sign-off. |
+| 1.29 | 2026-10-28 | Governance Pillar Leader | Trace correction: §5.2 identifies CSPM, SSPM, and identity-threat monitoring as first-line-operated sources whose coverage/provenance or outcomes CERG independently validates; §6.3 aligns Detection Engineer work with the per-activity boundary and role recast. |
+| 1.28 | 2026-10-28 | Governance Pillar Leader | Clarified state authorship in §2.4: live CERG changes suspend the affected effectiveness claim until independent verification; break-glass approval does not restore it. Clarified that ongoing service obligations make CERG the service operator for the hybrid rule. |
+| 1.27 | 2026-10-28 | Governance Pillar Leader | Added second-line operating boundary in 2.4: first-line service operation, conditions for an independent technical-effectiveness claim (independence, capability, currency), consequence ladder, and hybrid rule. Added Engineering operating boundary and design-time statement in 3.1, conformed Risk core activities and OT safety constraint in 3.2, and standing security-operations services bullet in 3.4. Per second-line boundary RFC. |
 | 1.26 | 2026-06-18 | Governance Pillar Leader | Clarified Identity Risk Analyst as a mature-program specialization covered by Detection Engineer or Risk Pillar Leader in smaller teams. |
 | 1.25 | 2026-06-18 | Governance Pillar Leader | Clarified Security Awareness as an adjacent function: Awareness owns training operations while CERG coordinates content alignment, evidence quality, and threat context. |
 | 1.24 | 2026-06-18 | Governance Pillar Leader | Updated §4.4 COG membership with explicit standing-core and dynamic-per-agenda members (Business Unit Risk Owner for systems on agenda, Engineering/Risk pillar leaders as needed). Added COG Agenda Template with dynamic attendee section. |

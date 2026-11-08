@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **Document ID** | CERG-STD-CR-001 |
-| **Version** | 1.21 |
+| **Version** | 1.22 |
 | **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Engineering Pillar Leader (Platforms) |
@@ -311,8 +311,8 @@ The checklist below is the minimum for any system in CUI scope, FedRAMP Moderate
 
 | **Role** | **Cryptography Responsibility** |
 |---|---|
-| **Cyber Engineering - Platforms** | Owns this standard. Maintains the cryptographic inventory (algorithms in use, keys, certificates). Operates the KMS/HSM and secrets management platforms. Drives migrations off deprecated algorithms. |
-| **Identity Engineer** | Implements credential-side controls per [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md); integrates IdP/PAM token issuance with this standard. |
+| **Cyber Engineering - Platforms** | Owns this standard. Maintains the cryptographic inventory (algorithms in use, keys, certificates). Defines key-management and secrets-platform requirements and designs. The first-line operator runs the KMS/HSM and secrets management platforms and executes key and certificate lifecycle operations. Drives migrations off deprecated algorithms. |
+| **Identity Engineer** | Supplies credential-side control requirements and designs per [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md); first-line teams implement and integrate IdP/PAM token issuance with this standard. |
 | **Cyber Risk** | Detects use of prohibited algorithms via DISH and other tooling; tracks deprecation risk in the risk register. |
 | **Cyber Governance** | Maintains exceptions register for transitional algorithms; tracks audit-facing evidence; cross-references with control library. |
 | **Asset Owners** | Choose CMK vs. provider-managed key per Section 6 with Engineering guidance; budget for HSM/KMS cost where applicable. |
@@ -324,8 +324,8 @@ The checklist below is the minimum for any system in CUI scope, FedRAMP Moderate
 | | |
 |---|---|
 | **Document ID** | CERG-STD-CR-001 |
-| **Version** | 1.21 |
+| **Version** | 1.22 |
 | **Approved By** | CISO |
 | **Next Review** | Annual / on FIPS publication change / on algorithm deprecation |
-| **Change Log** | 1.0 - Initial publication. Approved/prohibited algorithms, TLS/cert lifecycle, key management, CMK decision guide, secrets/tokens, rotation cadence, FIPS profile. |
+| **Change Log** | 1.22 - Recast the Section 10 role allocations per the second-line boundary ruling on #253: Cyber Engineering - Platforms defines requirements and designs while the first-line operator runs the KMS/HSM and secrets platforms and executes key and certificate lifecycle operations (matching RAC-001 7.2); the Identity Engineer supplies credential-side requirements and designs, with implementation and integration by first-line teams. Key inventory Owner column unchanged as requirement accountability. · 1.0 - Initial publication. Approved/prohibited algorithms, TLS/cert lifecycle, key management, CMK decision guide, secrets/tokens, rotation cadence, FIPS profile. |
 
