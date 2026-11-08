@@ -37,7 +37,7 @@ The CERG Framework (FRM-001 Section 6.1) states that at Adaptive maturity, "The 
 
 This is a cultural claim that requires evidence. An assessor cannot verify stakeholder perception without a measurement instrument. This survey template provides the instrument, the administration cadence, and the analysis framework.
 
-This survey is administered to business stakeholders who interact with CERG: project managers, business unit leaders, IT and OT operations managers, procurement leads, and any role that has been through a CERG engagement in the assessment period.
+The survey goes to business stakeholders who interact with CERG: project managers, business unit leaders, IT and OT operations managers, procurement leads, and any role that has been through a CERG engagement in the assessment period.
 
 > **The Value-Driver Test**
 >
@@ -61,7 +61,7 @@ A program that does not measure stakeholder perception is guessing about its mos
 
 ### 3.1 Target Respondents
 
-The survey is administered to business stakeholders who have interacted with CERG in the assessment period (trailing 12 months for annual survey; trailing project period for post-project survey). Minimum respondent set:
+Administer the survey to business stakeholders who have interacted with CERG in the assessment period (trailing 12 months for the annual survey; the trailing project period for the post-project survey). Minimum respondent set:
 
 - Project managers for projects that went through architecture review
 - Business unit leaders or product owners whose teams were engaged by Engineering
@@ -115,7 +115,7 @@ The minimum viable instrument is a shared anonymous form. The template above is 
 | **Annual** | All stakeholders who interacted with CERG in the trailing 12 months | Trend measurement; program-health indicator |
 | **Post-major-project** | Project team for projects exceeding a defined threshold (budget, risk, or regulatory scope) | Engagement-quality feedback while the experience is fresh |
 
-The annual survey is administered in Q4 so results are available for the annual program review and the next year's planning cycle.
+Administer the annual survey in Q4, so results are available for the annual program review and the next year's planning cycle.
 
 ### 4.2 Administration Rules
 
@@ -130,13 +130,13 @@ The annual survey is administered in Q4 so results are available for the annual 
 
 ### 5.1 Scoring
 
-- Each Likert question is scored 1-5. The overall perception score is the mean across all Likert questions.
+- Score each Likert question 1-5; the overall perception score is the mean across all Likert questions.
 - Scores are trended year-over-year. A single-year score is nearly useless; the trend tells the story.
 - Any question with a mean score below 3.0 (Neutral) triggers a program review.
 
 ### 5.2 Open-Ended Analysis
 
-Open-ended responses are analyzed for themes. The Governance Pillar Leader groups responses into themes and counts them. A theme that appears in three or more responses is flagged for program review. A theme that appears across both "START doing" and "STOP doing" suggests a known pain point.
+The Governance Pillar Leader analyzes open-ended responses for themes, groups them, and counts them. A theme that appears in three or more responses is flagged for program review. A theme that appears across both "START doing" and "STOP doing" suggests a known pain point.
 
 ### 5.3 Reporting
 
