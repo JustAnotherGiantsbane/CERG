@@ -40,7 +40,7 @@
 
 ## 1. Purpose and Scope
 
-The README names threat intelligence as a Cyber Risk function. The Operating Model names the Threat Intelligence Analyst as the role that tracks threat actors, advisories, and intelligence-to-detection translation. Existing procedures consume threat intelligence, but no procedure defined how intelligence is sourced, triaged, prioritized, disseminated, or tracked to action. This procedure closes that gap.
+The README names threat intelligence as a Cyber Risk function. The Operating Model names the Threat Intelligence Analyst as the role that tracks threat actors, advisories, and intelligence-to-detection translation. Existing procedures consume threat intelligence, but no procedure defined how CERG sources, triages, prioritizes, disseminates, or tracks intelligence to action. This procedure closes that gap.
 
 Threat intelligence in CERG is operational. Its purpose is not to publish interesting reports. Its purpose is to help the organization make better decisions sooner: patch the right thing faster, change a design before it ships, warn the right owner, tune a detection, reassess a vendor, or record a risk.
 
@@ -65,7 +65,7 @@ This procedure applies to all threat intelligence used by CERG to inform exposur
 
 ## 3. Intelligence Sources
 
-The Threat Intelligence Analyst maintains a source register. Sources are reviewed at least annually for relevance, reliability, and usefulness.
+The Threat Intelligence Analyst maintains a source register and reviews it at least annually for relevance, reliability, and usefulness.
 
 | **Source Type** | **Examples** | **Primary Use** |
 |---|---|---|
@@ -77,7 +77,7 @@ The Threat Intelligence Analyst maintains a source register. Sources are reviewe
 | Peer and trust groups | ISACs, industry groups, trusted peer exchanges | Sector targeting, early warning, practical mitigations. |
 | Regulatory and legal updates | Regulator alerts, new requirements, enforcement activity | Governance and compliance implications. |
 
-Restricted-source or sensitive intelligence is handled according to its classification under [`CERG-STD-DG-001`](../standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md).
+Handle restricted-source or sensitive intelligence according to its classification under [`CERG-STD-DG-001`](../standards/CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md).
 
 ---
 
@@ -85,7 +85,7 @@ Restricted-source or sensitive intelligence is handled according to its classifi
 
 ### 4.1 Intake Channels
 
-Threat intelligence enters through approved channels: source registers, email subscriptions, vendor portals, ISAC channels, internal reports, incident lessons, adversarial validation reports, and vulnerability advisories. Informal inputs are allowed, but once an item is actionable it is recorded in the intelligence intake log.
+Threat intelligence enters through approved channels: source registers, email subscriptions, vendor portals, ISAC channels, internal reports, incident lessons, adversarial validation reports, and vulnerability advisories. Informal inputs are allowed, but once an item is actionable the analyst records it in the intelligence intake log.
 
 ### 4.2 Minimum Intake Fields
 
@@ -117,7 +117,7 @@ Every actionable item records:
 
 ### 4.4 Analysis Methodology
 
-Raw intelligence is analyzed before dissemination. The following frameworks and standards ensure consistent, defensible analysis.
+The analyst analyzes raw intelligence before dissemination. The following frameworks and standards keep the analysis consistent and defensible.
 
 #### Analysis Frameworks
 
@@ -172,7 +172,7 @@ IOCs auto-expire after 90 days unless refreshed. The Threat Intelligence Analyst
 - Refreshes: IOC is still active and confirmed; expiration clock resets
 - Retires: IOC is no longer active, has been remediated, or is no longer relevant
 
-Expired IOCs are removed from active detection tooling but retained in the intelligence archive for historical analysis.
+Expired IOCs leave active detection tooling but stay in the intelligence archive for historical analysis.
 
 #### False Positive Management
 
@@ -183,17 +183,17 @@ Expired IOCs are removed from active detection tooling but retained in the intel
 | 3 | Threat Intelligence Analyst reviews within 5 business days |
 | 4 | If confirmed false positive: IOC is retired with rationale. If disputed: IOC remains active; detection rule is tuned instead |
 
-False positive rate is tracked as a metric. A sustained false positive rate > 20% on any IOC source triggers a source quality review.
+CERG tracks the false positive rate as a metric. A sustained false positive rate > 20% on any IOC source triggers a source quality review.
 
 #### Integration with Detection Tooling
 
-IOCs are deployed to detection tooling (SIEM, EDR, NGFW) through an automated or semi-automated pipeline. IOC retirement is synchronized: when an IOC is retired in the intelligence platform, it is automatically removed from detection tooling within 24 hours.
+An automated or semi-automated pipeline deploys IOCs to detection tooling (SIEM, EDR, NGFW). Retirement is synchronized: when the analyst retires an IOC in the intelligence platform, the pipeline removes it from detection tooling within 24 hours.
 
 ---
 
 ## 5. Relevance and Priority
 
-Priority is based on relevance, exposure, exploitation, and potential impact. A dramatic threat report with no relationship to the environment is lower priority than a quiet advisory for a product the organization runs on the internet.
+Priority rests on relevance, exposure, exploitation, and potential impact. A dramatic threat report with no relationship to the environment is lower priority than a quiet advisory for a product the organization runs on the internet.
 
 | **Priority** | **Criteria** | **Expected Handling** |
 |---|---|---|
@@ -229,7 +229,7 @@ Dissemination is targeted. Sending every item to everyone trains everyone to ign
 
 ## 7. Action Tracking
 
-Actionable intelligence is tracked to disposition. The Threat Intelligence Analyst does not necessarily do the remediation, but owns the intelligence-to-action handoff until the receiving owner accepts it.
+CERG tracks actionable intelligence to disposition. The Threat Intelligence Analyst does not necessarily do the remediation, but owns the intelligence-to-action handoff until the receiving owner accepts it.
 
 | **Action Type** | **Receiving Owner** | **Tracking Path** |
 |---|---|---|
@@ -241,7 +241,7 @@ Actionable intelligence is tracked to disposition. The Threat Intelligence Analy
 | Record residual exposure | Risk Register Owner | [`CERG-PRC-RM-001`](CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md). |
 | Brief leadership | Risk Pillar Leader | CISO dashboard or executive threat brief. |
 
-An item is closed only when the receiving owner records disposition: completed, accepted risk, not applicable with reason, or superseded.
+The receiving owner closes an item only by recording a disposition: completed, accepted risk, not applicable with reason, or superseded.
 
 ---
 
@@ -302,7 +302,7 @@ The assessment MUST produce at least one of the following reprioritization decis
 
 ### 9.3 Decision Record
 
-Each reprioritization decision is recorded in the improvement register (IMPREG-001) with:
+Record each reprioritization decision in the improvement register (IMPREG-001) with:
 
 - Source: "Intelligence-Driven Reprioritization, QN YYYY"
 - The intelligence trigger (specific threat actor, TTP, campaign, or vulnerability)
@@ -311,18 +311,18 @@ Each reprioritization decision is recorded in the improvement register (IMPREG-0
 
 ### 9.4 Verification
 
-At each quarterly assessment, the prior quarter's reprioritization decisions are verified:
+At each quarterly assessment, verify the prior quarter's reprioritization decisions:
 
 - Was the control adjusted? Is the new or modified control in CB-001?
 - Was the detection rule deployed? Is it producing alerts?
 - Was the capability gap funded? Is the tool procured or the hire in progress?
-- Incomplete actions are escalated to the CISO.
+- Escalate incomplete actions to the CISO.
 
-Verification outcomes (Effective, Partially Effective, Ineffective) are recorded in IMPREG-001 per the improvement lifecycle.
+Record verification outcomes (Effective, Partially Effective, Ineffective) in IMPREG-001 per the improvement lifecycle.
 
 ### 9.5 Integration with Lessons Learned
 
-The quarterly Threat Landscape Assessment is an intake source for the Lessons Learned procedure (PRC-LL-001). Intelligence-driven patterns that persist across multiple quarters are analyzed alongside incident, audit, and adversarial validation patterns at the quarterly Lessons Aggregation Review.
+The quarterly Threat Landscape Assessment is an intake source for the Lessons Learned procedure (PRC-LL-001). The quarterly Lessons Aggregation Review analyzes intelligence-driven patterns that persist across multiple quarters alongside incident, audit, and adversarial validation patterns.
 
 ---
 
@@ -410,36 +410,36 @@ CERG uses the Traffic Light Protocol (TLP) for all intelligence sharing with ext
 
 #### TLP Marking
 
-Every intelligence product that contains TLP-classified information is marked with the highest applicable TLP level. The marking appears in the product header. When a product combines intelligence from multiple TLP sources, the most restrictive level applies.
+Mark every intelligence product that contains TLP-classified information with the highest applicable TLP level. The marking appears in the product header. When a product combines intelligence from multiple TLP sources, the most restrictive level applies.
 
 #### Source TLP Compliance
 
-The Threat Intelligence Analyst ensures that intelligence received under a TLP designation is handled per that designation. Intelligence received as TLP:RED is never sourced in a TLP:AMBER or lower product. Intelligence received under Chatham House Rule is paraphrased and not attributed to a specific organization or individual.
+The Threat Intelligence Analyst handles intelligence received under a TLP designation per that designation. TLP:RED intelligence is never sourced in a TLP:AMBER or lower product. Paraphrase intelligence received under Chatham House Rule and never attribute it to a specific organization or individual.
 
 ---
 
 ### 10.7 Consumer Feedback Loop
 
-Intelligence products are assessed by the consumers who use them. This feedback loop drives continuous improvement in intelligence production.
+Consumers assess the intelligence products they use. This feedback loop drives continuous improvement in intelligence production.
 
 #### Feedback Mechanism
 
 | **Mechanism** | **Description** |
 |---|---|
-| Product rating | Recipients of intelligence products are invited to rate each product on usefulness (1–5) and accuracy (1–5) |
+| Product rating | Recipients rate each intelligence product on usefulness (1–5) and accuracy (1–5) |
 | Structured feedback | Quarterly, the Threat Intelligence Analyst solicits feedback from the top 5 consumers of intelligence products (e.g., Exposure Management Lead, Vendor Risk Analyst, Detection Engineer, CISO) |
 | Ad-hoc feedback | Any consumer may provide feedback at any time through the intelligence intake channel |
 
 #### Feedback Review Process
 
 The Threat Intelligence Analyst reviews all feedback quarterly:
-- Products rated < 3 on usefulness are analyzed: was the wrong audience targeted? Was the analysis insufficient? Was the timing poor?
-- Products rated < 3 on accuracy are re-examined; if confirmed inaccurate, a correction is issued and the source reliability rating is adjusted
+- Analyze products rated < 3 on usefulness: was the audience wrong? Was the analysis insufficient? Was the timing poor?
+- Re-examine products rated < 3 on accuracy; if confirmed inaccurate, issue a correction and adjust the source reliability rating
 - Patterns in feedback inform source selection, product format changes, and dissemination list adjustments
 
 #### Program Improvements from Feedback
 
-Feedback that identifies a systematic gap in intelligence production (e.g., "we consistently lack context on vulnerabilities affecting our tech stack" or "the weekly digest is too long to read") is routed to the improvement register per [CERG-PRC-LL-001](CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md).
+Route feedback that identifies a systematic gap in intelligence production (e.g., "we consistently lack context on vulnerabilities affecting our tech stack" or "the weekly digest is too long to read") to the improvement register per [CERG-PRC-LL-001](CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md).
 
 ---
 
