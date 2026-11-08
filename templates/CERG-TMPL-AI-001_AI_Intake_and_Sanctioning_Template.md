@@ -150,7 +150,7 @@ The completed template answers the operating question that CERG requires before 
 | Governance Pillar Leader | Approves sanctioned-use decision, maximum data classification, and governance reporting entry. | `[Name / Date]` |
 | CISO | Approves High or Critical residual risk, Restricted data use, or other material escalation. | `[Name / Date]` |
 
-Completed templates are reviewed at the cadence defined by the disposition. Material changes to the use case, data classification, provider terms, model, agency, or regulatory scope require reassessment before expanded use.
+Review completed templates at the cadence set by the disposition. Reassess before expanded use on any material change to the use case, data classification, provider terms, model, agency, or regulatory scope.
 
 ---
 
