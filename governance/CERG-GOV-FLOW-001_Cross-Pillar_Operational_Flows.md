@@ -116,7 +116,7 @@ Flow-level SLA rules do not override procedure-specific clocks. For exposure man
 4. **Governance owns control intent, conformance scope, exception authority routing, evidence rules, and reporting.** CERG's governance layer includes the control system for the program: baseline, calendar, evidence, metrics, compliance mapping, and oversight artifacts.
 5. **No issue may remain in an undefined state.** Every issue must become one of: remediation, compensating control, exception, accepted residual risk, or incident action.
 6. **Evidence must be created during execution and linked to the primary record.** CERG's annual calendar and reporting model both assume evidence-producing activities generate or refresh evidence as part of the operating rhythm.
-7. **Missed review cadence, missing ownership, or missing evidence creates a finding or risk record.** The CERG annual calendar explicitly states that missed activities are tracked as program findings or risk-register entries.
+7. **Missed review cadence, missing ownership, or missing evidence creates a finding or risk record.** The CERG annual calendar tracks missed activities as program findings or risk-register entries.
 
 8. **Routing thresholds prevent ceremony creep.** Not every workflow requires all three pillars. The default is not "all three pillars must agree." The default is: Engineering handles known patterns, Risk engages when exposure is novel or elevated, Governance owns policy and evidence, and Business owns the consequence. Handoffs are good. Endless consensus is not.
 
@@ -630,7 +630,7 @@ Convert discovered exposure into a deterministic treatment path: remediation, co
 1. Risk creates **Finding Record** and triages.
 2. Risk identifies exposure path and treatment options.
 3. Engineering assesses technical feasibility of treatment.
-4. Governance determines whether exception or acceptance process is required.
+4. Governance determines whether the exception or acceptance process is required.
 5. Engineering executes remediation or compensating control if approved.
 6. Risk validates closure or establishes residual monitoring.
 7. Governance updates reporting and escalates recurring patterns.
@@ -666,7 +666,7 @@ Not every finding needs a risk register entry. Promote a Finding to a Risk Recor
 | Repeated finding — same vulnerability class, same system, more than twice | Create Risk Record; escalate to root cause analysis | Recurrence signals a systemic issue, not a one-time miss |
 | Regulatory deviation required (CIP, CMMC, SOX) | Create Risk Record and initiate regulatory deviation process | Regulatory implications require formal tracking |
 
-A Finding that does not meet any promotion condition is closed through the standard remediation → validation → closure path.
+A Finding that meets no promotion condition closes through the standard remediation → validation → closure path.
 
 ### Closure Validation Rules
 
@@ -929,7 +929,7 @@ Incident severity and response clocks are governed by the Incident Response Plan
 ### Mandatory Rules
 - CERG does not close the incident; the Incident Commander or standing IR team closes active response.
 - CERG's post-incident work is not complete until the lessons-learned decision is recorded, even if technical recovery is complete.
-- If an incident exposes previously accepted risk, the acceptance rationale and treatment conditions must be reviewed through the risk process.
+- If an incident exposes previously accepted risk, the risk process must review the acceptance rationale and treatment conditions.
 - A recurring incident pattern in the same control family creates a Control Change Record or Program Improvement Record.
 - Regulatory notification decisions are made through the IR, Legal, and executive process; CERG Governance records and preserves the supporting evidence it supplies.
 
@@ -1043,7 +1043,7 @@ Convert operational data into management action, improvement backlog, standards 
 
 ## 16. Automation Integration Points
 
-The flows in this document describe human-driven steps, but automated security controls can satisfy or accelerate many of them. The table below defines where automation is accepted as valid execution and what evidence is required.
+The flows in this document describe human-driven steps, but automated security controls can satisfy or accelerate many of them. The table below defines where automation qualifies as valid execution and what evidence is required for each case.
 
 | Flow Step | Automated Equivalent | Evidence Required | Tier Equivalent |
 |-----------|---------------------|-------------------|-----------------|
