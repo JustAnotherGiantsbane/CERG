@@ -193,6 +193,13 @@ again.
 Record it as `status: pending`, `why_skipped: pending — rule 8: near-identity
 reskin`, and either do the real pass or leave it for a route that can.
 
+## Out of scope until it graduates
+
+`proposals/` is not part of the pass. Nothing there is an official artifact yet,
+so there is no custody to protect and no reader to serve: an idea gains a
+nameplate only when it graduates into the catalog through a decision. Leave the
+drafts alone until that happens.
+
 ## The metric-immovable class
 
 Some documents cannot lower their score, because the number is floored by the
