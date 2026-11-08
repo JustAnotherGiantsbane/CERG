@@ -140,6 +140,14 @@ When you cannot finish a file, `why_skipped` must start with one of:
 
 Only the third needs a human. The other two are queue state.
 
+## Exceptions taken from a live fleet
+
+A per-file exception (a manual pass on a file the fleet already touched) branches
+from the branch that last touched it, and that branch keeps moving while you
+work. Cherry-pick the exception onto the current branch tip at merge time; do
+not merge it, and do not assume its base is still the tip because it was when
+you started.
+
 ## Do not touch
 
 `tools/voice-exemptions.json` names the constructions this pass must not
@@ -185,6 +193,19 @@ again.
 
 Record it as `status: pending`, `why_skipped: pending — rule 8: near-identity
 reskin`, and either do the real pass or leave it for a route that can.
+
+## The metric-immovable class
+
+Some documents cannot lower their score, because the number is floored by the
+domain's own nouns — a procedure about adversarial validation must keep saying
+adversarial validation. For these, the exit criterion is the sentence audit, not
+the score: repair the antecedent, split the zero-breath chain, kill the coinage,
+record the edits in the verdict file with before/after quotes, and retire the
+file from the score-driven queue. Leaving it in the queue produces an endless
+sequence of reskins pointing at a number that will not move.
+
+`procedures/CERG-PRC-AV-001` is the first member: 23.6 → 23.0 across a twelve-edit
+pass, with all four obligation words flat.
 
 ## Output contract
 
