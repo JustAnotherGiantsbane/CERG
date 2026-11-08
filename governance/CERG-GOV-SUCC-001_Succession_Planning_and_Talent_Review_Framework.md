@@ -35,15 +35,13 @@
 
 ## 1. Purpose and Scope
 
-The CERG Framework (FRM-001 §9.2) states that the left-right knowledge model provides "talent resilience." A team where every member understands the other two pillars is more resilient than one where knowledge is siloed. But cross-pillar understanding is not a succession plan. Knowing how the Risk pillar operates does not make a Cloud Security Engineer ready to lead it. Knowing where the evidence library lives does not make a Detection Engineer ready to represent the organization to a NERC-CIP auditor.
+The CERG Framework (FRM-001 §9.2) states that the left-right knowledge model provides "talent resilience." A team whose members understand the other two pillars is more resilient than one where knowledge stays siloed. But cross-pillar understanding is not a succession plan. Knowing how the Risk pillar operates does not make a Cloud Security Engineer ready to lead it. Knowing where the evidence library lives does not make a Detection Engineer ready to represent the organization to a NERC-CIP auditor.
 
 This document closes that gap. It establishes a formal succession planning framework: an annual talent review cadence, a succession heat map for every critical CERG role, readiness ratings for identified successors (Ready Now, Ready in 1-2 Years, Ready in 3-5 Years, No Identified Successor), development plans for closing successor readiness gaps, an emergency succession protocol defining who steps in on 24 hours' notice, and cross-pillar succession requirements that ensure no pillar leader's only potential successor comes from the same pillar.
 
-It applies to every critical CERG role: the CISO, pillar leaders, domain leads, and any role whose sudden vacancy would create a material operational risk. It does not apply to contractor or consultant roles, which are addressed by the knowledge retention requirements in CERG-GOV-CON-001.
+It applies to every critical CERG role: the CISO, pillar leaders, domain leads, and any role whose sudden vacancy would create a material operational risk. It does not apply to contractor or consultant roles, which the knowledge retention requirements in CERG-GOV-CON-001 address.
 
-> **This Document Is Confidential**
->
-> Succession planning is among the most sensitive activities a leadership team undertakes. A person identified as "Ready in 3-5 Years" who learns they are not "Ready Now" may feel passed over. A person not identified as a successor at all may feel their career has plateaued. This document and the heat maps it produces are restricted to the CISO and pillar leaders. Individual development conversations draw from the succession analysis without revealing the analysis itself, the same way a manager uses calibration session output to inform a promotion conversation without naming the people who were rated higher.
+This document is confidential. Succession planning is among the most sensitive activities a leadership team undertakes. A person identified as "Ready in 3-5 Years," learning they are not "Ready Now," may feel passed over. A person not identified as a successor at all may feel their career has plateaued. Only the CISO and pillar leaders may see this document and the heat maps it produces. Individual development conversations draw from the succession analysis without revealing the analysis itself, the same way a manager uses calibration session output in a promotion conversation, without naming the people rated higher.
 
 ---
 
@@ -53,9 +51,9 @@ It applies to every critical CERG role: the CISO, pillar leaders, domain leads, 
 
 Cybersecurity teams have a single-point-of-failure problem that is worse than most knowledge-work functions for three reasons:
 
-1. **Deep specialization resists documentation.** A Cryptography Engineer who has managed the PKI hierarchy for seven years carries knowledge that lives in their head: which certificates have quirks, which CAs have trust-chain issues with which vendors, which renewal processes have undocumented manual steps. That knowledge is partially documented and partially not. The person who leaves takes both halves.
+1. **Deep specialization resists documentation.** A Cryptography Engineer who has managed the PKI hierarchy for seven years carries knowledge in their head: which certificates have quirks, which CAs have trust-chain issues with which vendors, which renewal processes have undocumented manual steps. That knowledge is partially documented and partially not. The person who leaves takes both halves.
 
-2. **Regulatory relationships are personal.** A NERC-CIP Compliance Manager who has been the organization's face to its regional entity for a decade has a relationship with the auditors that a replacement cannot replicate on day one. The auditor who trusts the Compliance Manager's evidence because of a decade of demonstrated rigor will not extend that trust automatically to a replacement.
+2. **Regulatory relationships are personal.** A NERC-CIP Compliance Manager may spend a decade as the organization's face to its regional entity. A replacement cannot replicate those auditor relationships on day one. An auditor who trusts the Compliance Manager's evidence, after a decade of demonstrated rigor, will not extend that trust automatically to a replacement.
 
 3. **Small teams have no bench.** A small CERG team cannot afford a dedicated understudy for every role. When the person who runs Exposure Management leaves, someone else absorbs that work on top of their own. If that person also leaves, the function stops.
 
@@ -63,13 +61,13 @@ Cybersecurity teams have a single-point-of-failure problem that is worse than mo
 
 The left-right knowledge model reduces the SPOF risk by ensuring that:
 - Every person knows enough about the other two pillars to collaborate effectively
-- Documentation is consumed cross-pillar, not just within the pillar that authored it
-- The evidence library, risk register, and document library are structured to survive any single person's departure
+- Teams consume documentation cross-pillar, not just within the pillar that authored it
+- The evidence library, risk register, and document library can survive any single person's departure
 
 It does not solve:
 - **Leadership succession.** Cross-pillar understanding is not cross-pillar leadership readiness. The Governance Pillar Leader has a specific set of management, regulatory, and stakeholder skills that are not developed by reading Engineering standards.
 - **Deep domain succession.** Understanding what a Cryptography Engineer does is not the same as being able to do it. The left-right model provides awareness; succession requires capability.
-- **Emergency succession.** If the Risk Pillar Leader resigns effective immediately, the left-right model provides nobody who can step into the role on 24 hours' notice unless that person has been deliberately developed for it.
+- **Emergency succession.** If the Risk Pillar Leader resigns effective immediately, the left-right model provides nobody who can step into the role on 24 hours' notice, unless that person was deliberately developed for it.
 
 ---
 
@@ -77,7 +75,7 @@ It does not solve:
 
 ### 3.1 Cadence
 
-The talent review occurs annually, within four weeks of the year-end calibration session (PERF-001 §6). It consumes calibrated performance ratings and promotion decisions as input and produces the succession heat map as output. The sequence ensures that succession decisions are based on current, calibrated assessments, not on reputation from two years ago.
+The talent review occurs annually, within four weeks of the year-end calibration session (PERF-001 §6). It consumes calibrated performance ratings and promotion decisions as input and produces the succession heat map as output. The sequence grounds succession decisions in current, calibrated assessments, not reputation from two years ago.
 
 ### 3.2 Participants
 
@@ -95,10 +93,10 @@ The talent review addresses each critical role in sequence:
 2. **Incumbent:** [Name and current grade]
 3. **Retention risk:** Low / Medium / High. Is the incumbent a flight risk? Why?
 4. **Succession status:** Review the current heat map ratings for identified successors.
-5. **Successor development progress:** What development actions were planned at the last review? What progress was made?
+5. **Successor development progress:** What development actions did the last review plan? What progress followed?
 6. **New successors?** Has anyone emerged as a potential successor since the last review?
 7. **Emergency successor:** Is the emergency successor still current? Any changes?
-8. **Actions:** What will be done in the next 12 months to improve succession readiness for this role?
+8. **Actions:** What happens in the next 12 months to improve succession readiness for this role?
 
 ### 3.4 Output
 
@@ -116,7 +114,7 @@ The talent review produces:
 
 ### 4.1 Critical Roles
 
-Not every canonical CERG role is critical for succession planning. A role is critical if its sudden vacancy would cause a material operational disruption that cannot be absorbed by the existing team within 30 days. The minimum set of critical roles includes:
+Not every canonical CERG role is critical for succession planning. A role is critical if its sudden vacancy would cause a material operational disruption the existing team cannot absorb within 30 days. The minimum set of critical roles includes:
 
 | Tier | Roles |
 |---|---|
@@ -124,7 +122,7 @@ Not every canonical CERG role is critical for succession planning. A role is cri
 | **Tier 2: Material function risk** | Cloud Security Engineer (senior/lead); OT Security Engineer (if OT environment); Exposure Management Lead; Detection Engineer (senior/lead); NERC-CIP Compliance Manager (if CIP-regulated); CMMC Compliance Manager (if CMMC-scoped); SOX ITGC Lead (if SOX-scoped); Risk Register Owner; Policy & Standards Manager |
 | **Tier 3: Important domain risk** | Identity Engineer (senior/lead); Application Security Engineer (senior/lead); Adversarial Testing Lead; Threat Intelligence Analyst (senior/lead); Vendor Risk Analyst (senior/lead); Evidence Librarian; Cryptography Engineer |
 
-The CISO and pillar leaders may add or remove roles from the critical list at each annual talent review based on current organizational context.
+The CISO and pillar leaders may add or remove roles from the critical list at each annual talent review. Current organizational context drives the call.
 
 ### 4.2 Readiness Ratings
 
@@ -167,7 +165,7 @@ Cross-Pillar Successor: [Name] or [None]
 
 ### 5.1 The 24-Hour List
 
-For every Tier 1 critical role (CISO, pillar leaders), an emergency successor is designated. The emergency successor is the person who steps into the role on 24 hours' notice if the incumbent is suddenly unavailable (resignation, illness, termination, or any other sudden departure). The emergency successor is not necessarily the long-term successor. They are the person who keeps the function operating while a permanent replacement is found.
+Every Tier 1 critical role (CISO, pillar leaders) has a designated emergency successor. The emergency successor steps into the role on 24 hours' notice if the incumbent is suddenly unavailable: resignation, illness, termination, or any other sudden departure. The emergency successor is not necessarily the long-term successor. They are the person who keeps the function operating while a permanent replacement is found.
 
 ### 5.2 Emergency Successor Requirements
 
@@ -177,7 +175,7 @@ The emergency successor must:
 - Have sufficient organizational knowledge to perform the role's most critical functions: approve urgent decisions, represent the function to executive leadership, and ensure standing operations continue
 - Know they are the emergency successor and have accepted the responsibility
 - Have documented access to the systems, contacts, and decision authorities they will need
-- Be reviewed semi-annually (not just at the annual talent review) to confirm they are still with the organization and still willing
+- Undergo semi-annual review (not just at the annual talent review) to confirm they are still with the organization and still willing
 
 ### 5.3 Emergency Succession by Tier
 
@@ -190,7 +188,7 @@ The emergency successor must:
 
 ### 5.4 Emergency Succession Documentation
 
-For each emergency successor, the following documentation is maintained and reviewed semi-annually:
+For each emergency successor, the CISO maintains and reviews the following documentation semi-annually:
 
 1. **Delegation of authority:** A signed document from the CISO (or board, for CISO succession) delegating specific decision authorities to the emergency successor during the interim period.
 2. **Access verification:** Confirmation that the emergency successor has (or can rapidly obtain) access to all systems, accounts, and physical spaces needed to perform the role.
@@ -200,7 +198,7 @@ For each emergency successor, the following documentation is maintained and revi
 
 > **Emergency Succession Is Not Optional**
 >
-> An organization that cannot name who runs Engineering if the Engineering Pillar Leader is hit by a bus tomorrow has not planned; it has hoped. The emergency succession list must exist at all times. A blank emergency successor field for any Tier 1 role is a risk that should be reported to the CISO and recorded in the risk register.
+> An organization that cannot name who runs Engineering if the Engineering Pillar Leader is hit by a bus tomorrow has not planned; it has hoped. The emergency succession list must exist at all times. A blank emergency successor field for any Tier 1 role is a risk. Report it to the CISO and record it in the risk register.
 
 ---
 
@@ -208,7 +206,7 @@ For each emergency successor, the following documentation is maintained and revi
 
 ### 6.1 The Development Plan Format
 
-For each successor rated "Ready in 1-2 Years" or "Ready in 3-5 Years," a development plan addresses the specific gaps preventing a "Ready Now" rating. The plan is owned by the successor's manager (or the incumbent, if the successor reports to a different manager) and reviewed at each quarterly check-in.
+For each successor rated "Ready in 1-2 Years" or "Ready in 3-5 Years," a development plan addresses the specific gaps preventing a "Ready Now" rating. The successor's manager owns the plan (or the incumbent, if the successor reports to a different manager) and reviews it at each quarterly check-in.
 
 The development plan contains:
 
@@ -219,7 +217,7 @@ The development plan contains:
    - **Educational:** Specific training, certification, or conference attendance per TRN-001
    - **Relational:** Specific exposure to the stakeholders, regulators, or executive forums the person would need to navigate in the target role
 4. **Milestones:** Observable demonstrations that would indicate readiness progress (e.g., "led a CISO Risk & Posture Review presentation," "represented Engineering to a regulator walkthrough," "managed the team for two weeks during the incumbent's leave")
-5. **Timeline:** When each action is planned and when readiness will be reassessed
+5. **Timeline:** The planned date for each action and the date of the next readiness reassessment
 
 ### 6.2 Development by Readiness Gap
 
@@ -234,7 +232,7 @@ The development plan contains:
 
 ### 6.3 Tracking and Accountability
 
-Successor development plan progress is reviewed at:
+Three forums review successor development plan progress:
 - **Quarterly check-ins** (PERF-001 §3.2): Progress against planned actions
 - **Annual talent review**: Readiness re-rating based on demonstrated progress
 - **CISO quarterly review**: The CISO reviews succession readiness for Tier 1 roles at each CISO Risk & Posture Review
@@ -247,7 +245,7 @@ A successor whose development plan shows no progress for two consecutive quarter
 
 ### 7.1 The Principle
 
-Every Tier 1 critical role (CISO and pillar leaders) should have at least one potential successor who comes from a different pillar. The principle is an extension of the left-right knowledge model: a person who has led only Engineering their entire career will struggle to lead Risk or Governance without a deliberate development investment. But a person who knows two pillars deeply and the third well enough to collaborate is a stronger candidate for any pillar leadership role than someone who knows only one.
+Every Tier 1 critical role (CISO and pillar leaders) should have at least one potential successor from a different pillar. The principle is an extension of the left-right knowledge model: a person who has led only Engineering their entire career will struggle to lead Risk or Governance, without a deliberate development investment. But a person who knows two pillars deeply, and the third well enough to collaborate, is a stronger candidate for any pillar leadership role than someone who knows only one.
 
 ### 7.2 Cross-Pillar Successor Development
 
@@ -260,7 +258,7 @@ Every Tier 1 critical role (CISO and pillar leaders) should have at least one po
 
 ### 7.3 Not a Requirement, a Direction
 
-A Tier 1 role with no cross-pillar successor is not a crisis. It is a development priority for the next 2-3 years. The talent review identifies which pillar leaders have cross-pillar successor potential and adds cross-pillar development actions to their plans. Over multiple cycles, the succession bench becomes cross-pillar by development, not by coincidence.
+A Tier 1 role with no cross-pillar successor is not a crisis. It is a development priority for the next 2-3 years. The talent review identifies which pillar leaders have cross-pillar successor potential, and adds cross-pillar development actions to their plans. Over multiple cycles, the succession bench becomes cross-pillar by development, not by coincidence.
 
 ---
 
@@ -268,16 +266,16 @@ A Tier 1 role with no cross-pillar successor is not a crisis. It is a developmen
 
 ### 8.1 Access Controls
 
-The succession heat map, emergency succession list, and successor development plans are confidential. Access is restricted to:
+The succession heat map, emergency succession list, and successor development plans are confidential. Only these roles have access:
 
 - **CISO:** Full access to all succession materials
-- **Pillar Leaders:** Access to succession materials for their pillar and cross-pillar successors from their pillar to other Tier 1 roles. A pillar leader does not see the succession plan for their own role (that is held by the CISO).
+- **Pillar Leaders:** Access to succession materials for their pillar, and to cross-pillar successors from their pillar to other Tier 1 roles. A pillar leader does not see the succession plan for their own role (the CISO holds it).
 - **Board or designated board committee:** Access to CISO succession plan and summary of Tier 1 succession readiness (not individual names unless requested)
 - **HR Business Partner:** Access to development plans (not heat maps) for coordination of training, budget, and personnel actions
 
 ### 8.2 Communication Guidelines
 
-Succession information is communicated on a need-to-know basis:
+Share succession information on a need-to-know basis:
 
 | What | Who Is Told | What They Are Told | What They Are Not Told |
 |---|---|---|---|
@@ -336,4 +334,4 @@ Succession information is communicated on a need-to-know basis:
 | CERG Framework | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | Left-right knowledge model and talent resilience |
 | Document Catalog | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact |
 
-Governance owns the framework. The CISO owns the succession plans and heat maps produced under it. The CISO is responsible for initiating the annual talent review, maintaining the emergency succession list, and ensuring successor development plans are resourced and tracked.
+Governance owns the framework. The CISO owns the succession plans and heat maps produced under it. The CISO is responsible for initiating the annual talent review, maintaining the emergency succession list, and making sure successor development plans get resources and tracking.
