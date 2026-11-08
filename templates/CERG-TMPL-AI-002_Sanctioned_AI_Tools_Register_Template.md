@@ -107,7 +107,7 @@ For each sanctioned tool, publish a short user-facing statement in plain languag
 | Cloud Security Engineer | Confirms SaaS, network, DLP, CASB, SSPM, or other technical monitoring where applicable. |
 | Risk Register Owner | Ensures material AI risk, exceptions, and shadow AI patterns are linked to the risk register. |
 
-A register entry must be reassessed when any of the following occur:
+The maintainer must reassess a register entry when any of the following occur:
 
 - The provider changes training, retention, confidentiality, or subprocessor terms.
 - The tool adds a new AI feature, agent capability, connector, plugin, or data integration.
