@@ -46,7 +46,7 @@
 
 The policy makes third-party and supply-chain security Principle 8. Subordinate standards each impose specific requirements: IT/cloud/SaaS approval and attestation tracking, OT vendor assessment and CIP-013, CUI flow-down and FedRAMP equivalency, SBOM and software integrity. Until this procedure, those obligations had no shared operating model.
 
-This procedure defines how CERG engages with the broader enterprise vendor program, where CERG's cyber-specific work begins and ends, what evidence is collected at each tier, and how the program responds when a vendor is compromised. It operationalizes the edge types defined in the [Edge Register](../governance/CERG-GOV-EDG-001_Edge_Register.md) — specifically the Vendor, SaaS, and Software Supply edges.
+This procedure defines how CERG engages with the broader enterprise vendor program: where CERG's cyber-specific work begins and ends, what evidence CERG collects at each tier, and how the program responds when a vendor is compromised. It implements the edge types defined in the [Edge Register](../governance/CERG-GOV-EDG-001_Edge_Register.md) — specifically the Vendor, SaaS, and Software Supply edges.
 
 > **CERG Doesn't Own Vendor Management, It Owns the Cyber Slice**
 >
@@ -88,7 +88,7 @@ CERG accepts the **business tier** from ERM / Procurement as the starting point.
 
 ## 4. Cyber-Specific Score Adjustment
 
-CERG adjusts the vendor tier *up* only when one or more cyber-specific concerns are material. Adjustments down (vendor "isn't as critical as Business says") are not permitted, Business owns criticality.
+CERG adjusts the vendor tier *up* only when one or more cyber-specific concerns are material. Adjustments down (vendor "isn't as critical as Business says") are not permitted. Business owns criticality.
 
 ### 4.1 Adjustment Triggers
 
@@ -135,10 +135,10 @@ Evidence requirements grow with tier. The table below names the cyber evidence r
 
 ### 5.1 Evidence Currency
 
-- T1 evidence is reviewed annually, no later than 30 days before attestation expiry.
-- T2 evidence is reviewed annually.
-- T3 evidence is reviewed every 24 months unless conditions change.
-- T4/T5 evidence is reviewed on contract renewal.
+- The Vendor Risk Analyst reviews T1 evidence annually, no later than 30 days before attestation expiry.
+- The Vendor Risk Analyst reviews T2 evidence annually.
+- The Vendor Risk Analyst reviews T3 evidence every 24 months unless conditions change.
+- The Vendor Risk Analyst reviews T4/T5 evidence on contract renewal.
 
 Material vendor events (breach, ownership change, regulator action) trigger an out-of-cycle review regardless of tier.
 
@@ -161,7 +161,7 @@ Requirements differ by what the vendor *is*. The table below summarizes the most
 
 ### 6.1 Low-Control / High-Dependency Operating Model
 
-Not every provider relationship allows the organization to configure, monitor, patch, or test. CERG recognizes four control levels that determine what can be required of a provider and how residual risk is managed.
+Not every provider relationship allows the organization to configure, monitor, patch, or test. CERG recognizes four control levels that determine what the organization can require of a provider and how CERG manages the residual risk.
 
 | Control Level | What the Org Can Do | Examples | CERG Approach |
 |---------------|---------------------|----------|---------------|
@@ -170,7 +170,7 @@ Not every provider relationship allows the organization to configure, monitor, p
 | **Contractual Control** | Negotiate clauses, notification, audit rights | MSPs, managed security providers, subprocessors | Contract language, annual evidence collection (SOC 2, ISO 27001), incident notification commitments, tested kill-switch |
 | **Opaque Dependency** | Track residual risk, exit plan, kill switch, compensating monitoring | SaaS vendor's underlying infrastructure, open-source library maintainers, upstream cloud provider outages | Documented residual risk acceptance, exit/migration plan, compensating monitoring (CSPM/SSPM for visible surface), documented assumption register |
 
-The control level is recorded per provider in the Approved Provider Catalog and re-assessed at each annual review. A provider at Contractual or Opaque levels must have a documented kill-switch procedure tested at least annually.
+CERG records the control level per provider in the Approved Provider Catalog and re-assesses it at each annual review. A provider at Contractual or Opaque levels must have a documented kill-switch procedure tested at least annually.
 
 **Observable contractual control.** Contractual Control divides by what the organization can
 independently verify, and the division is recorded against the asserted service rather than against the
@@ -287,7 +287,7 @@ This matrix governs technology providers, where the question is which layer of a
 
 ## 10. International Access: Denied by Default
 
-International access to in-scope systems and data is **denied by default**. Where business need requires it, access is treated as a documented exception with conditions.
+International access to in-scope systems and data is **denied by default**. Where business need requires it, treat access as a documented exception with conditions.
 
 ### 10.1 Operating Model
 
@@ -390,7 +390,7 @@ Where a CUI-relevant SaaS / cloud service is not FedRAMP-authorized but is propo
 - Sub-service organization carve-outs reconciled.
 - Re-papering trigger documented (FedRAMP authorization issued, attestation lapses, scope change).
 
-The package is recorded in the TPRM tool as the vendor's Inheritance Evidence Package for the CUI overlay.
+The Vendor Risk Analyst records the package in the TPRM tool as the vendor's Inheritance Evidence Package for the CUI overlay.
 
 ---
 
@@ -432,7 +432,7 @@ Other invitees as needed: CISO (declared briefing), Privacy (PII implications), 
 
 ### 15.4 SCCT Evidence
 
-Every SCCT activation produces an SCCT record with: trigger, membership, timeline, decisions, notifications, risk register updates, vendor-side commitments. Records are retained for the longer of the vendor relationship + 3 years or the regulatory retention requirement.
+Every SCCT activation produces an SCCT record with: trigger, membership, timeline, decisions, notifications, risk register updates, vendor-side commitments. Retain records for the longer of the vendor relationship + 3 years or the regulatory retention requirement.
 
 > **Why a Named Team Instead of "We'll Pull People In"**
 >
@@ -457,7 +457,7 @@ CERG continuously monitors the vendor landscape using automated signals. The fol
 
 ### 16.2 Periodic Re-Assessment Triggers
 
-Vendors are re-assessed on the following cadence based on tier:
+CERG re-assesses vendors on the following cadence by tier:
 
 | **Tier** | **Re-Assessment Cadence** | **Trigger Events (override cadence)** |
 |---|---|---|
@@ -500,7 +500,7 @@ Continuous monitoring results directly affect the Approved Provider Catalog (APC
 
 ### 16.6 Integration with Threat Intelligence
 
-Vendor monitoring is integrated with [CERG-PRC-TI-001](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) for threat intelligence specific to vendors:
+CERG integrates vendor monitoring with [CERG-PRC-TI-001](CERG-PRC-TI-001_Threat_Intelligence_Procedure.md) for vendor-specific threat intelligence:
 
 - The Threat Intelligence Analyst produces a **Vendor Risk Note** (per PRC-TI-001 §6.5) when threat intelligence reveals TTPs, CVEs, or campaign activity relevant to a vendor in the APC.
 - Vendor-specific IOCs from threat intelligence are deployed to detection tooling per PRC-TI-001 §4.6.
@@ -508,7 +508,7 @@ Vendor monitoring is integrated with [CERG-PRC-TI-001](CERG-PRC-TI-001_Threat_In
 
 ### 16.7 Vendor Offboarding
 
-When a vendor relationship ends, a structured offboarding process ensures access is revoked, data is retrieved or destroyed, and residual obligations are met.
+When a vendor relationship ends, a structured offboarding process revokes access, retrieves or destroys data, and closes residual obligations.
 
 #### Offboarding Triggers
 
@@ -534,7 +534,7 @@ When a vendor relationship ends, a structured offboarding process ensures access
 
 #### Post-Termination
 
-Surviving contractual clauses (confidentiality, data handling, audit rights) remain in effect. Evidence is retained per [CERG-PRC-AUD-001](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md). Offboarding completion is signed off by the Vendor Risk Analyst and Business Sponsor.
+Surviving contractual clauses (confidentiality, data handling, audit rights) remain in effect. Retain evidence per [CERG-PRC-AUD-001](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md). The Vendor Risk Analyst and Business Sponsor sign off on offboarding completion.
 
 ### 16.8 Fourth-Party Risk Management
 
@@ -556,7 +556,7 @@ Fourth-party risk arises when a critical vendor relies on subcontractors (sub-pr
 
 #### Concentration Risk
 
-The Vendor Risk Analyst monitors for multiple vendors relying on the same sub-processor. If a single sub-processor supports ≥ 3 T1/T2 vendors, a formal concentration risk assessment is conducted.
+The Vendor Risk Analyst monitors for multiple vendors relying on the same sub-processor. If a single sub-processor supports ≥ 3 T1/T2 vendors, the Vendor Risk Analyst conducts a formal concentration risk assessment.
 
 ---
 
@@ -576,11 +576,11 @@ Critical and high-tier vendors must demonstrate BCDR capability proportional to 
 
 #### RTO/RPO Expectations
 
-RTO (Recovery Time Objective) and RPO (Recovery Point Objective) expectations are set based on the organization's dependency on the vendor:
+Set RTO (Recovery Time Objective) and RPO (Recovery Point Objective) expectations based on the organization's dependency on the vendor:
 
 - If the organization's own Tier 1 service depends on the vendor, the vendor's RTO must be ≤ the organization's RTO for that service.
 - If the vendor processes regulated data (CUI, SOX), RPO must be ≤ 1 hour.
-- RTO/RPO commitments are documented in the contract and reviewed at each vendor re-assessment.
+- Document RTO/RPO commitments in the contract and review them at each vendor re-assessment.
 
 #### BCDR Assessment
 
@@ -590,7 +590,7 @@ During vendor assessment, the Vendor Risk Analyst evaluates:
 - Are RTO/RPO commitments compatible with the organization's requirements?
 - Does the vendor's BCDR plan account for dependencies on its own critical sub-processors?
 
-Assessment results are recorded in the TPRM tool and reviewed at each re-assessment cycle.
+Record assessment results in the TPRM tool and review them at each re-assessment cycle.
 
 ### 16.10 Metrics
 
