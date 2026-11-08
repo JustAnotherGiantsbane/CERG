@@ -36,7 +36,7 @@
 
 CERG adoption fails when everyone agrees with the framework but no one knows what to do next. This document converts the adoption model into role-based action.
 
-It is designed for first adoption, restart, or rescue of a stalled implementation. It does not replace the Implementation Guide. It gives each accountable role a concrete checklist.
+Use it for a first adoption, a restart, or the rescue of a stalled implementation. It does not replace the Implementation Guide. It gives each accountable role a concrete checklist.
 
 ---
 
