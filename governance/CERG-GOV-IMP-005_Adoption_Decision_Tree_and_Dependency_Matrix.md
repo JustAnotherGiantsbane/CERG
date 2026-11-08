@@ -99,7 +99,7 @@ Regulatory obligation or OT/CUI/SOX scope exists?
 
 ### 3.1 Safe tailoring
 
-These changes are acceptable when documented in the Organization Adaptation Profile:
+These changes are acceptable when the adopter documents them in the Organization Adaptation Profile:
 
 - Combine multiple CERG roles into one person in a small team.
 - Use spreadsheets instead of a GRC platform.
