@@ -123,7 +123,7 @@ def main() -> int:
     )
     sys.stdout.writelines(diff)
     if args.write:
-        CATALOG_PATH.write_text(updated_text, encoding="utf-8")
+        CATALOG_PATH.write_text(updated_text, encoding="utf-8", newline="\n")
         print("Updated catalog statuses.")
         return 0
 
