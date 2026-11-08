@@ -48,7 +48,7 @@ Every risk register entry has a single sentence, the **Risk Statement**, in this
 
 > Because of [**threat / weakness**], affecting [**asset / scope**], there is a possibility that [**adverse event**] occurs, resulting in [**business impact**].
 
-The Risk Statement is derived from a control. The derivation pattern is:
+Each Risk Statement derives from a control:
 
 | **Control State** | **Implied Risk Statement Stem** |
 |---|---|
@@ -217,7 +217,7 @@ Exception register fields mirror the risk register schema and add: **Exception I
 
 > **Exceptions Are Not "Forever"**
 >
-> Every exception has an expiration date and a treatment plan that retires it. An exception renewed more than twice without movement on the treatment plan is escalated by the Risk Register Owner to the approver one level above the original.
+> Every exception has an expiration date and a treatment plan that retires it. The Risk Register Owner escalates an exception renewed more than twice without movement on the treatment plan to the approver one level above the original.
 
 ---
 
@@ -237,7 +237,7 @@ CERG scores risk on a 5×5 matrix, with **control effectiveness** as a step-down
 
 ### 6.2 Impact (1–5)
 
-Impact is scored across **Safety**, **Operational**, **Financial**, **Regulatory**, and **Reputational** dimensions; the **highest** dimension wins.
+Score impact across **Safety**, **Operational**, **Financial**, **Regulatory**, and **Reputational** dimensions; the **highest** dimension wins.
 
 | **Rating** | **Safety** | **Operational** | **Financial** | **Regulatory** | **Reputational** |
 |---|---|---|---|---|---|
@@ -256,7 +256,7 @@ Impact is scored across **Safety**, **Operational**, **Financial**, **Regulatory
 | Weak | 0 | 0 |
 | None | 0 | 0 |
 
-Residual cannot fall below 1. Step-downs are applied to inherent, never to residual.
+Residual cannot fall below 1. Apply step-downs to inherent, never to residual.
 
 ### 6.4 Heat Map Bands
 
