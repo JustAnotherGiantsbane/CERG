@@ -37,7 +37,7 @@
 
 ## 1. Purpose and Scope
 
-The CERG Framework requires lessons learned to drive improvement. The risk register (PRC-RM-001) records specific risks: threats, vulnerabilities, likelihoods, and treatments. It is not designed to track program-level improvements, aggregate cross-cutting patterns, or verify that lessons were absorbed into the program. Those improvements are tracked in the Program Improvement Register (IMPREG-001), with cross-references to the originating risk where applicable.
+The CERG Framework requires lessons learned to drive improvement. The risk register (PRC-RM-001) records specific risks: threats, vulnerabilities, likelihoods, and treatments. It is not designed to track program-level improvements, aggregate cross-cutting patterns, or verify that lessons were absorbed into the program. The Program Improvement Register (IMPREG-001) tracks those improvements, with cross-references to the originating risk where applicable.
 
 This procedure defines how CERG collects, analyzes, and converts after-action findings into permanent program improvements. It applies to every CERG process, engagement, and control that generates a post-event review: incidents, penetration tests, red team exercises, audit findings, DR and BC exercises, tabletop exercises, near-miss events, metrics threshold breaches, and external intelligence shifts.
 
@@ -50,8 +50,8 @@ This procedure defines how CERG collects, analyzes, and converts after-action fi
 ## 2. Principles
 
 1. **Every significant event produces a lesson.** After every incident, pen test, red team engagement, audit, exercise, and near-miss, a structured after-action artifact is produced. The default is to produce one; omitting one requires a documented rationale.
-2. **Lessons are aggregated, not siloed.** A single incident review that stays in the IR team's folder is wasted. Lessons from all sources are collected into a single aggregation point for cross-cutting analysis.
-3. **Lessons produce program changes, not just fixes.** The standard pattern : find a vulnerability, fix it, close the ticket : is operational hygiene, not program improvement. Program improvement is: "Why did four of six DMZ servers share the same misconfiguration, and what standard or procedure must change so the next six servers do not repeat it?"
+2. **Lessons are aggregated, not siloed.** A single incident review that stays in the IR team's folder is wasted. CERG collects lessons from all sources into a single aggregation point for cross-cutting analysis.
+3. **Lessons produce program changes, not just fixes.** The standard pattern — find a vulnerability, fix it, close the ticket — is operational hygiene, not program improvement. Program improvement is: "Why did four of six DMZ servers share the same misconfiguration, and what standard or procedure must change so the next six servers do not repeat it?"
 4. **Every improvement is verified.** A change that is not verified to have worked is not complete. The next review cycle checks whether prior improvements had their intended effect.
 5. **Improvements are tracked separately from risks.** The risk register tracks risks. The improvement register (CERG-GOV-IMPREG-001) tracks program changes. Conflating them creates noise in both.
 
@@ -59,7 +59,7 @@ This procedure defines how CERG collects, analyzes, and converts after-action fi
 
 ### 2.1 Definition of a Significant Event
 
-Principle 1 states "Every significant event produces a lesson." A "significant event" is defined as any event that meets one or more of the following criteria:
+Principle 1 states "Every significant event produces a lesson." A "significant event" is any event that meets one or more of the following criteria:
 
 - Triggers a P1 or P2 incident response per [CERG-PRC-IR-002](CERG-PRC-IR-002_Incident_Response_Playbook_Set.md) Section 3.6
 - Results in a Critical or High finding from adversarial validation per [CERG-PRC-AV-001](CERG-PRC-AV-001_Adversarial_Validation_Procedure.md)
@@ -96,9 +96,7 @@ The following events trigger a lessons-learned artifact. Each source names the a
 | External intelligence shift | Threat landscape assessment identifies a material change per PRC-TI-001 | Threat Intelligence Analyst | 7 calendar days |
 | CISO-directed review | CISO requests a lessons review | Assigned pillar leader | As directed |
 
-> **Near-Miss Definition**
->
-> A near-miss is an event that met detection thresholds but was contained before operational impact. Examples: a phishing campaign that reached user inboxes but was reported before any credential was harvested; an unauthorized lateral movement attempt that was blocked by network segmentation; a configuration change that would have created an exposure window but was caught by pre-production review before reaching production. Near-misses are the cheapest lessons the organization will ever get : the cost of analysis is orders of magnitude below the cost of the incident that did not happen.
+A near-miss is an event that met detection thresholds but was contained before operational impact. Examples: a phishing campaign that reached user inboxes but was reported before any credential was harvested; an unauthorized lateral movement attempt that was blocked by network segmentation; a configuration change that would have created an exposure window but was caught by pre-production review before reaching production. Near-misses are the cheapest lessons the organization will ever get — the cost of analysis is orders of magnitude below the cost of the incident that did not happen.
 
 ### 3.1 Lesson Artifact Format
 
@@ -116,7 +114,7 @@ Every lesson artifact contains, at minimum:
 
 ## 4. Lesson Triage and Classification
 
-Each lesson artifact is triaged within 7 days of receipt by the Governance Pillar Leader, who assigns a severity classification.
+The Governance Pillar Leader triages each lesson artifact within 7 days of receipt and assigns a severity classification.
 
 | Severity | Criteria | Escalation |
 |---|---|---|
@@ -134,7 +132,7 @@ Each lesson artifact is triaged within 7 days of receipt by the Governance Pilla
 
 ### 4.1 Escalation for Overdue Artifacts
 
-SLAs for lesson artifact production and triage are defined in Section 3.1 (artifact production within 7-21 days of event closure) and Section 4 (triage within 7 days of receipt). When these SLAs are missed, the following escalation applies.
+Section 3.1 defines the SLA for lesson artifact production (within 7-21 days of event closure). Section 4 defines triage (within 7 days of receipt). When these SLAs are missed, the following escalation applies.
 
 #### Escalation Triggers
 
@@ -169,7 +167,7 @@ Once per quarter, aligned with the CERG leadership review cadence (GOV-CAL-001 S
 ### 5.2 Agenda
 
 1. **Roll call of open lessons:** all lessons from the trailing quarter, grouped by severity
-2. **Cross-source pattern analysis:** are the same root causes appearing across incident reviews, pen tests, and audits? This is the primary value of aggregation : patterns invisible to any single source become visible when all sources are analyzed together
+2. **Cross-source pattern analysis:** are the same root causes appearing across incident reviews, pen tests, and audits? This is the primary value of aggregation — patterns invisible to any single source become visible when all sources are analyzed together
 3. **Root cause clustering:** group lessons by common root cause. Name the systemic weakness each cluster represents
 4. **Improvement backlog ranking:** produce a ranked list of proposed program improvements. Ranking factors: number of source types that produced the pattern, potential impact if unaddressed, effort to implement, alignment with current CISO priorities
 5. **Prior-quarter verification:** review improvements that were closed in the prior quarter's aggregation. For each: did the intended effect materialize? (See Section 8)
@@ -200,7 +198,7 @@ A lesson that produces an improvement action follows this pipeline from identifi
 | Standard revision | A change to a CERG standard | Amend STD-CFG-001 to specify DMZ TLS configuration requirements |
 | Procedure update | A change to an existing procedure | Add a pre-production checklist item to PRC-AR-001 |
 | New capability | A new tool, platform, or process that does not currently exist | Deploy secrets scanning in CI/CD pipelines |
-| Training gap flag | A knowledge or awareness gap that contributed to the finding | "Engineers were unaware of the new segmentation standard" : routed to Security Awareness team |
+| Training gap flag | A knowledge or awareness gap that contributed to the finding | "Engineers were unaware of the new segmentation standard" — routed to Security Awareness team |
 | Staffing or budget recommendation | A resource gap identified | "Current VM staffing cannot sustain the SLA with the expanded asset base" |
 | Metric or threshold change | A change to MTR-001 metrics or thresholds | Tighten the drift-rate threshold after observing 6 consecutive green months |
 | Retirement | Removal of a control, process, or tool that is no longer effective or relevant | Retire a legacy WAF rule set that no longer matches the threat landscape |
@@ -226,7 +224,7 @@ Improvements that affect the control baseline or standards feed into the annual 
 
 ## 7. Improvement Register Integration
 
-Every improvement action that reaches the "Approved" state in this procedure is recorded in the Program Improvement Register (CERG-GOV-IMPREG-001). The improvement register is the authoritative record of what changed, why, when, by whom, and with what result.
+When an improvement action reaches the "Approved" state under this procedure, CERG records it in the Program Improvement Register (CERG-GOV-IMPREG-001). The improvement register is the authoritative record of what changed, why, when, by whom, and with what result.
 
 The relationship between this procedure and the improvement register is:
 
@@ -256,24 +254,24 @@ No improvement is closed without verification. The verification step is not opti
 | Standard revision | Revised standard is published; related procedures updated; compliance check confirms adoption |
 | Procedure update | Procedure is executed under the new version at least once; operator confirms it works as intended |
 | New capability | Tool deployed, configured, and producing output; operators trained |
-| Training gap flag | Confirmation from Awareness team that content was delivered (CERG does not verify training effectiveness : that is the Awareness program's remit) |
+| Training gap flag | Confirmation from Awareness team that content was delivered (CERG does not verify training effectiveness — that is the Awareness program's remit) |
 | Metric or threshold change | New threshold produces actionable signals for one full reporting quarter |
 
 ### 8.2 Verification Cadence
 
-Verification occurs at the quarterly Lessons Aggregation Review (Section 5). Improvements that were marked "Complete" in the prior quarter are verified. The output is one of three dispositions:
+Verification occurs at the quarterly Lessons Aggregation Review (Section 5). The review verifies improvements that were marked "Complete" in the prior quarter. The output is one of three dispositions:
 
 - **Effective:** the improvement produced the intended effect. Improvement is closed.
 - **Partially effective:** the improvement helped but did not fully resolve the root cause. Improvement remains open with an amended approach.
-- **Ineffective:** the improvement did not produce the intended effect. Improvement is re-opened with additional root cause analysis. The original approach is documented as "attempted and ineffective" : the lesson from the failed improvement is itself a lesson.
+- **Ineffective:** the improvement did not produce the intended effect. Improvement is re-opened with additional root cause analysis. The original approach is documented as "attempted and ineffective" — the lesson from the failed improvement is itself a lesson.
 
 > **The Verification Honesty Rule**
 >
-> The program that marks every improvement "Effective" without evidence is performing, not improving. An ineffective improvement is not a failure : it is a data point that sharpens the next attempt. The scar tissue from a failed improvement is worth more than a dozen unverified claims of success. Record the failure honestly and move to the next approach.
+> The program that marks every improvement "Effective" without evidence is performing, not improving. An ineffective improvement is not a failure — it is a data point that sharpens the next attempt. The scar tissue from a failed improvement is worth more than a dozen unverified claims of success. Record the failure honestly and move to the next approach.
 
 ### 8.3 Re-Opened Improvements
 
-An improvement marked "Ineffective" or "Partially effective" is re-opened in the improvement register. A new analysis entry is added describing why the original approach failed and what the revised approach will be. The re-opened improvement follows the same pipeline: approval, implementation, verification.
+An improvement marked "Ineffective" or "Partially effective" is re-opened in the improvement register. The owner adds a new analysis entry describing why the original approach failed and what the revised approach will be. The re-opened improvement follows the same pipeline: approval, implementation, verification.
 
 ---
 
@@ -296,7 +294,7 @@ An improvement marked "Ineffective" or "Partially effective" is re-opened in the
 
 ## 10. Metrics
 
-The effectiveness of this procedure itself is measured. These metrics are reported to the CISO quarterly alongside the aggregation summary.
+CERG measures the effectiveness of this procedure itself. The Governance Pillar Leader reports these metrics to the CISO quarterly alongside the aggregation summary.
 
 | ID | Name | Formula | Source | Refresh | G / A / R |
 |---|---|---|---|---|---|

@@ -41,9 +41,9 @@
 
 ## 1. Purpose and Scope
 
-The Cybersecurity Policy requires periodic adversarial testing. The exposure management procedure names the adversarial activities CERG performs. The risk taxonomy distinguishes adversarial testing from vulnerability scanning. Until this procedure, the operating model, scope, rules, safety, finding routing, evidence, for adversarial validation was implicit.
+The Cybersecurity Policy requires periodic adversarial testing. The exposure management procedure names the adversarial activities CERG performs. The risk taxonomy distinguishes adversarial testing from vulnerability scanning. Until this procedure, six things about adversarial validation were custom, not text: what we run, how often, under what rules, with what safety limits, where findings route, and what counts as evidence.
 
-This procedure makes it explicit. It applies to every CERG-led or CERG-overseen adversarial engagement: external pen test, internal pen test, cloud red-team / attack simulation, web/mobile/API pen test, OT adversarial assessment, purple-team detection validation, and social-engineering work conducted with the adjacent Awareness function.
+This procedure writes them down. It applies to every CERG-led or CERG-overseen adversarial engagement: external pen test, internal pen test, cloud red-team / attack simulation, web/mobile/API pen test, OT adversarial assessment, purple-team detection validation, and social-engineering work conducted with the adjacent Awareness function.
 
 In CERG, penetration testing is one engagement type within the broader adversarial validation capability. It does not replace red-team operations, purple-team detection validation, cloud attack simulation, OT-safe assessment, or other authorized testing where those activities are in scope.
 
@@ -70,7 +70,7 @@ In CERG, penetration testing is one engagement type within the broader adversari
 
 ### 2.1 External Tester Management
 
-When adversarial validation is conducted by an external firm rather than internal staff, the following requirements apply.
+When an external firm runs the engagement instead of internal staff, these requirements apply.
 
 #### Minimum Tester Qualifications
 
@@ -94,9 +94,9 @@ When adversarial validation is conducted by an external firm rather than interna
 
 #### Vendor Rotation Policy
 
-- External testing vendors are rotated at minimum every 3 years for each scope area (network, application, cloud, OT, social engineering).
+- CERG rotates external testing vendors at minimum every 3 years for each scope area (network, application, cloud, OT, social engineering).
 - Rotation applies to the firm, not individual testers.
-- Exceptions require CISO approval and are documented in the risk register.
+- Exceptions require CISO approval and a risk register entry.
 
 #### Contractual Requirements
 
@@ -195,7 +195,7 @@ RULES OF ENGAGEMENT - <Engagement Name>      AV-YYYY-NNNN
 
 ## 5. Red-Team Engagement Charter
 
-Red-team engagements are scope-broader, time-longer, goal-driven simulations of a realistic adversary. Each red team has a Charter in addition to its RoE.
+A red team simulates a realistic adversary: wider scope than a penetration test, a longer window, and a goal to reach. Each red team has a Charter in addition to its RoE.
 
 ```
 RED-TEAM CHARTER - <Engagement Name>     AV-YYYY-NNNN
@@ -254,7 +254,7 @@ Purple work is the collaboration between offensive and detection engineering. It
 
 ## 7. Cloud Attack Simulation
 
-Cloud engagements emulate adversary activity at the cloud control plane and identity layer, historically the most-attacked surface in modern enterprises.
+Cloud engagements emulate adversary activity at the cloud control plane and identity layer - historically the most-attacked surfaces in enterprise breaches.
 
 | **Focus** | **Examples** |
 |---|---|
@@ -327,7 +327,7 @@ Social engineering tests the human layer of security controls. These engagements
 
 #### Reporting Requirements
 
-Social engineering findings are reported separately from technical findings. The report includes:
+Social engineering findings get their own report, separate from technical findings. The report includes:
 
 - Engagement subtype and scope
 - Number of targets and interactions
@@ -344,7 +344,7 @@ OT testing is uniquely constrained. Safety overrides any test objective.
 
 ### 9.1 Prohibited Without Explicit Approval
 
-The following are prohibited absent a documented exception with engineering and operations sign-off:
+None of the following may happen without a documented exception carrying engineering and operations sign-off:
 
 - **Active scanning of live SCADA/HMI/RTU/relay surfaces.** Passive monitoring and engineering-supervised authenticated checks only.
 - **Exploitation that could affect setpoints, alarms, relays, breakers, or control logic.**
@@ -361,7 +361,7 @@ The following are prohibited absent a documented exception with engineering and 
 - Engineering-supervised authenticated checks in a defined window.
 - Tabletop / scenario-based assessment with OT operators.
 
-A load-bearing chain link validated through a permitted approach above constitutes the alternative independent validation that a [`CERG-GOV-CJ-001`](../governance/CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md) bounded defense claim requires only when the final report states assessor, method (which permitted approach), and evidence period for that link, and the assessor is independent of the operator and state author for the asserted scope per CJ-001 Section 5.5. Without those stated in the record, the validation is not evidenced.
+A load-bearing chain link validated through a permitted approach above counts as the independent validation a [`CERG-GOV-CJ-001`](../governance/CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md) bounded defense claim requires - but only when two things are in the record. The final report names the assessor, the permitted method, and the evidence period for that link. The assessor is independent of the operator and state author for the asserted scope, per CJ-001 Section 5.5. State less, and the validation is not evidenced.
 
 ### 9.3 Authority and Safety Officer
 
@@ -377,7 +377,7 @@ Every OT engagement has a named OT Safety Officer (an operator with substation /
 
 ### 10.1 Rating
 
-Findings are rated using a uniform schema regardless of engagement type, aligning to [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Exposure_Management_Procedure.md) severity bands so they can co-route into exposure management. This section does not create a separate remediation SLA model; PRC-VM-001 governs exposure treatment timelines, while this procedure governs adversarial validation rating, routing, retest, and escalation discipline:
+Every finding gets a uniform rating regardless of engagement type, aligned to [`CERG-PRC-VM-001`](CERG-PRC-VM-001_Exposure_Management_Procedure.md) severity bands so findings can co-route into exposure management. This section does not create a separate remediation SLA model; PRC-VM-001 governs exposure treatment timelines, while this procedure governs adversarial validation rating, routing, retest, and escalation discipline:
 
 | **Severity** | **Definition** |
 |---|---|
@@ -460,11 +460,11 @@ Every engagement produces a Final Report - the authoritative record of what was 
 
 ### 10.6 Inter-Rater Reliability for Finding Ratings
 
-Different testers may rate the same finding differently. The following process ensures severity ratings are consistent and defensible.
+Different testers may rate the same finding differently. The following process keeps severity ratings consistent and defensible.
 
 #### Peer Review for High-Severity Findings
 
-All Critical and High findings receive a peer review by a second qualified tester before the finding is finalized. The peer reviewer validates:
+A second qualified tester peer-reviews all Critical and High findings before the finding is finalized. The peer reviewer validates:
 - The severity rating against the definitions in Section 10.1
 - That the evidence supports the severity determination
 - That the finding is not a duplicate of a known issue
@@ -473,7 +473,7 @@ If the peer reviewer disagrees with the severity, the Adversarial Testing Lead f
 
 #### Calibration Sessions
 
-Quarterly calibration sessions are conducted using a sample of anonymized findings from recent engagements. All testers independently rate each finding. Results are compared and discussed. The purpose is to:
+The Adversarial Testing Lead runs quarterly calibration sessions using a sample of anonymized findings from recent engagements. All testers independently rate each finding. Results are compared and discussed. The purpose is to:
 - Align severity interpretation across testers
 - Identify systematic over-rating or under-rating patterns
 - Refine severity definitions where ambiguity is found
@@ -494,20 +494,20 @@ The Adversarial Testing Lead facilitates calibration and documents outcomes. Cal
 
 An Adaptive program does not stop at fixing individual pen-test findings. It asks: why did four of six DMZ servers share the same misconfiguration? What standard or procedure failed to prevent this? How do we change the program so the next engagement does not repeat the same class of finding?
 
-This section defines the post-engagement systemic analysis that converts adversarial validation findings into program improvements.
+This section is how findings become program changes after the report ships.
 
 ### 11.1 Post-Engagement Systemic Analysis
 
 After every adversarial validation engagement, the Adversarial Testing Lead produces two outputs: a findings report (existing) and a systemic analysis (new). The systemic analysis answers four questions:
 
-1. **Which findings share a common root cause?** Example: four findings relate to default credentials on newly provisioned systems : the provisioning process does not enforce credential rotation. This is not four separate problems; it is one systemic weakness manifesting in four locations.
-2. **Which findings indicate a standard or procedure gap?** Example: DMZ web servers all had the same TLS misconfiguration : STD-CFG-001 or STD-NET-001 does not specify DMZ TLS requirements clearly enough.
-3. **Which findings indicate a control effectiveness gap?** Example: WAF was deployed per CB-001 but three bypass techniques worked : the WAF control is Implemented but not effective (per CEF-001).
-4. **Which findings indicate a detection gap?** Example: testers pivoted laterally for four hours without an alert : detection rules need updating for the observed technique chain.
+1. **Which findings share a common root cause?** Example: four findings relate to default credentials on newly provisioned systems: the provisioning process does not enforce credential rotation. This is not four separate problems; it is one systemic weakness manifesting in four locations.
+2. **Which findings indicate a standard or procedure gap?** Example: DMZ web servers all had the same TLS misconfiguration: STD-CFG-001 or STD-NET-001 does not specify DMZ TLS requirements clearly enough.
+3. **Which findings indicate a control effectiveness gap?** Example: WAF was deployed per CB-001 but three bypass techniques worked: the WAF control is Implemented but not effective (per CEF-001).
+4. **Which findings indicate a detection gap?** Example: testers pivoted laterally for four hours without an alert: detection rules need updating for the observed technique chain.
 
 ### 11.2 Systemic Finding Routing
 
-Each systemic finding is routed to the appropriate owner for program-level action:
+The Adversarial Testing Lead routes each systemic finding to the appropriate owner for program-level action:
 
 | Systemic Finding Type | Routed To | Tracking Mechanism |
 |---|---|---|
@@ -517,7 +517,7 @@ Each systemic finding is routed to the appropriate owner for program-level actio
 | Process gap | Accountable procedure owner (per RAC-001) | IMPREG-001 (Type: Procedure update) |
 | Tooling or capability gap | Relevant pillar leader | IMPREG-001 (Type: New capability) + CISO if budget required |
 
-Routed systemic findings are tracked in the improvement register (IMPREG-001) per the improvement lifecycle. The source field records the engagement ID and date.
+The improvement register (IMPREG-001) tracks routed systemic findings per the improvement lifecycle. The source field records the engagement ID and date.
 
 ### 11.3 Prevention Verification
 
@@ -577,7 +577,7 @@ The trend analysis feeds into:
 | Finding records | Per VM tool retention; closed findings retained per audit retention | - |
 | Retest evidence | Per finding record retention | - |
 
-Final reports are distributed under the confidentiality terms in the RoE. Full reports are not emailed; access is via a controlled location with audit logging.
+Final reports go out under the confidentiality terms in the RoE. Full reports are not emailed; access is via a controlled location with audit logging.
 
 > **Findings Carry Sensitive Information About How to Compromise Us**
 >

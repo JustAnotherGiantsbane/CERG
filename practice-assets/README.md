@@ -60,7 +60,7 @@ Tool, API, pricing, and integration claims change faster than the framework. Bef
 - the exact evidence artifact and collection cadence; and
 - an owner and next verification date.
 
-Unsupported or unverified examples should be labeled as illustrative. A deployment command should be tested in a non-production environment before it is reused for a client.
+Label unsupported or unverified examples as illustrative. Test a deployment command in a non-production environment before reusing it for a client.
 
 ## Release and Maintenance Discipline
 

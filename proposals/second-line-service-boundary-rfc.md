@@ -2,7 +2,7 @@
 
 ## Status
 
-**Discussion draft — not an approved CERG artifact.** This RFC is deliberately outside the controlled document catalog so reviewers can challenge the proposed operating model before authoritative documents are changed.
+**Discussion draft — not an approved CERG artifact.** This RFC sits outside the controlled document catalog on purpose, so reviewers can challenge the proposed operating model before authoritative documents are changed.
 
 ## Decision Requested
 
@@ -19,7 +19,7 @@ This makes it unclear who:
 - independently assesses whether the service is working; and
 - commands an incident when an alert becomes material.
 
-A title, reporting line, or employment relationship does not determine the line of defense. The activity does. An MSSP operating a SOC or a scanner is performing delegated first-line work. The organization still needs an internal first-line owner accountable for that service and a second-line function capable of challenging it.
+A title, reporting line, or employment relationship does not determine the line of defense. The activity does. An MSSP operating a SOC or a scanner is performing delegated first-line work. The organization still needs an internal first-line owner accountable for that service, plus a second-line function capable of challenging it.
 
 ## 2. Design Principles
 
@@ -29,7 +29,7 @@ A title, reporting line, or employment relationship does not determine the line 
 4. **Existing authority is reused.** `OM-001` owns operating boundaries, `RAC-001` owns RACI, `PRC-VM-001` owns exposure workflow and clocks, `STD-LM-001` owns logging and detection requirements, and `PRC-TPRM-001` owns provider controls. This RFC does not propose a new permanent role, record type, or control catalog.
 5. **CERG remains technically credible.** Second-line assurance includes technical validation, adversarial testing, requirement-setting, evidence review, and challenge. It is not administrative observation from a distance.
 6. **Incident command remains with the standing IR team.** An alert queue may route an event to IR; it does not give CERG incident-command authority.
-7. **CTEM is an operating-model property, not a new CERG layer.** CERG's allocation of who scopes, discovers, prioritizes, validates, mobilizes, and assures exposure work makes continuous threat exposure management trustworthy without creating a new lifecycle, role, control catalog, or tool dependency.
+7. **CTEM is an operating-model property, not a new CERG layer.** Continuous threat exposure management is trustworthy because CERG allocates who scopes, discovers, prioritizes, validates, mobilizes, and assures the exposure work. That allocation needs no new lifecycle, role, control catalog, or tool dependency.
 
 ## 3. Operating-Model Options
 
@@ -77,11 +77,11 @@ The following language is proposed for incorporation into `CERG-GOV-OM-001` afte
 
 A CERG technical-effectiveness claim rests on all three conditions below:
 
-1. **Independence.** The claimant did not produce the control state or work being approved. A CERG practitioner who authored detection content or operated the tested service cannot be the sole approver of an effectiveness claim that supports a compensated-exposure disposition or other consequential risk decision.
+1. **Independence.** The claimant did not produce the control state or work being approved. A CERG practitioner who authored detection content or operated the tested service cannot be the sole approver of an effectiveness claim. That rule covers a claim supporting a compensated-exposure disposition or other consequential risk decision.
 2. **Technical capability.** CERG has a service-appropriate ability to produce independent technical evidence: for example, read/query access, sampling or re-test rights, and the capacity to interpret the result. The applicable method authority defines what is appropriate for its service family — for example, `CERG-STD-LM-001` for detection, `CERG-PRC-VM-001` for exposure, and `CERG-PRC-AV-001` for adversarial and recovery validation. Capability is recorded per assured service and re-asserted after a material change to its operator, tooling, access model, or scope.
 3. **Evidence currency.** The claim states the period and scope of its evidence. Evidence that predates the current control state, is out of scope, or is otherwise stale cannot support an effectiveness claim.
 
-Where a condition is absent, CERG labels the output at the point of claim as **conformance or operating-evidence review only**, names the missing capability or evidence condition, and does not use the output to support a compensated-exposure or comparable effectiveness disposition. The capability deficiency enters `CERG-GOV-IMPREG-001`; material residual exposure follows `CERG-PRC-RM-001` and the RMF authority route. A deficiency that persists through two review cycles is a decision to operate without that assurance capability and requires formal risk acceptance under the applicable RMF authority.
+Where a condition is absent, CERG labels the output at the point of claim as **conformance or operating-evidence review only**, names the missing capability or evidence condition, and does not use the output to support a compensated-exposure or comparable effectiveness disposition. The capability deficiency enters `CERG-GOV-IMPREG-001`; material residual exposure follows `CERG-PRC-RM-001` and the RMF authority route. A deficiency that persists through two review cycles is a decision to operate without that assurance capability. It then requires formal risk acceptance under the applicable RMF authority.
 
 For a small team, the independent approver may be another qualified person, an independent provider, or another documented independent route. The capability floor is access- and tooling-shaped, not headcount-shaped; self-approval of consequential claims is the non-consolidable element.
 
@@ -100,7 +100,7 @@ For a small team, the independent approver may be another qualified person, an i
 | Detection requirements, test cases, coverage measurement, and independent validation | C | C | C | R/A | C | C |
 | Control-evidence criteria, conformance assurance, and reporting | C | R for operational evidence | C | C | R/A | C |
 
-**RACI interpretation:** the internal service owner may also be the operator in a fully internal model, in which case it is R/A. If an MSSP operates the service, the internal owner remains A and the MSSP is R. The table separates service operation from risk classification deliberately: Risk can be accountable for an independent exposure decision without becoming accountable for running the scanner that produced the observation.
+**RACI interpretation:** the internal service owner may also be the operator in a fully internal model, in which case it is R/A. If an MSSP operates the service, the internal owner remains A and the MSSP is R. The table separates service operation from risk classification deliberately: Risk can be accountable for an independent exposure decision without also running the scanner that produced the observation.
 
 ### 4.3 Detection Engineering Versus SOC Operations
 
@@ -144,7 +144,7 @@ For an MSSP, the assurance plan should at least include monthly service reportin
 | `procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md` | Make observation-source operation first-line; retain Risk ownership of independent validation, classification, SLA measurement, challenge, and exposure reporting. Require source provenance/coverage status and distinguish provider treatment evidence from independent closure verification; prohibit reliance on operating evidence alone for a compensated disposition. |
 | `governance/CERG-GOV-FRM-001_CERG_Framework.md` | Add concise CTEM positioning as an operating-model property; revise the lifecycle narrative, capability ownership, Risk core functions, illustrative staffing model, and regulatory descriptions to avoid stating that Risk performs continuous scans or owns standing monitoring. |
 
-**Phase 1 scope constraints.** The boundary also applies at design time: first-line delivery teams perform project threat modeling and supply design facts, while CERG Engineering independently reviews material architectures and CERG Risk consumes results to target validation. Phase 1 reuses the existing Adversarial Validation Record for test scope, results, and remediation evidence. Any OT adversarial test or recovery challenge follows `CERG-PRC-AV-001` OT-safety rules and requires its named OT Safety Officer with binding stop authority.
+**Phase 1 scope constraints.** The boundary also applies at design time: first-line delivery teams perform project threat modeling and supply design facts, while CERG Engineering independently reviews material architectures and CERG Risk consumes results to target validation. Phase 1 reuses the existing Adversarial Validation Record for test scope, results, and remediation evidence. Any OT adversarial test or recovery challenge follows `CERG-PRC-AV-001` OT-safety rules. It requires its named OT Safety Officer with binding stop authority.
 
 ### Phase 2 — Direct Operational Consumers
 

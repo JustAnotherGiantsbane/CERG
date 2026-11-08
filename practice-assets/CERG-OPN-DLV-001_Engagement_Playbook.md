@@ -78,9 +78,9 @@ Discover → Assess → Plan → Deploy → Operate → Handoff
 
 ### Phase 4: Deploy (Billable, 30-90 days)
 
-**Goal:** Get the tool stack stood up, controls implemented, and evidence collection running.
+**Goal:** Stand up the tool stack, implement the controls, and start collecting evidence.
 
-**Scope:** Defined by the remediation roadmap. Typical SMB deployment (Foundations tier):
+**Scope:** The remediation roadmap defines it. Typical SMB deployment (Foundations tier):
 
 | Week | Activity | Output |
 |------|----------|--------|

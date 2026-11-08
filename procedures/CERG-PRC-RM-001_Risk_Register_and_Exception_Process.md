@@ -40,14 +40,14 @@
 
 **If you have been asked to decide on a risk or an exception, start here.** Each line points to the section that carries the rule.
 
-- **Your decision.** Choose one treatment: reduce, transfer, avoid, or accept (§5). Treatment is decided by the risk owner with input from CERG and approved per §8.
+- **Your decision.** Choose one treatment: reduce, transfer, avoid, or accept (§5). The risk owner decides treatment with input from CERG, and approval follows §8.
 - **Your path.** If a control or standard cannot be met as written, the path is a Security Exception. If residual risk is something the organization chooses to live with, the path is a Risk Acceptance. Both can apply to the same gap (§7.1; [RMF-001](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7a). If unsure, route it as a Security Exception; the Risk Register Owner may reclassify it during triage.
 - **Who signs.** A business risk owner signs at every rating where business impact exists: you, or the Executive Sponsor at Critical. Co-signers depend on the residual rating (§8, summarising the canonical table in [RMF-001](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7).
 - **What is not yours.** Security assesses, recommends, and validates; the business owner owns the consequence (§8). Acceptance does not transfer accountability to security, remove the entry from the register, or satisfy a regulatory requirement by itself ([RMF-001](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.8.2).
 - **Time limits.** Every acceptance and exception expires, and none renews automatically (§8, §7.4.1). Duration cannot exceed [RMF-001](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7 or the treatment horizons in §1.3. After an emergency exception, the CISO decides within 24 hours, and any continuing acceptance needs you (§8). If you decline an acceptance, the risk must be treated (§1.3).
 - **Your next action.** For a risk acceptance, complete [`CERG-TMPL-RM-004`](../templates/CERG-TMPL-RM-004_Risk_Acceptance_Request_Form.md). For a security exception, the requester submits [`CERG-TMPL-RM-002`](../templates/CERG-TMPL-RM-002_Security_Exception_Request_Form.md) and you sign its approval block (§7.3, §7.6).
 
-This procedure operationalizes the risk management principle established in **[CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) Principle 9**. It defines how the organization identifies, documents, scores, treats, reviews, and reports cybersecurity risks, and how exceptions to established controls are requested, approved, tracked, and reviewed.
+This procedure implements the risk management principle established in **[CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) Principle 9**. It defines how the organization identifies, documents, scores, treats, reviews, and reports cybersecurity risks. It also defines how exceptions to established controls are requested, approved, tracked, and reviewed.
 
 The risk register is the single, authoritative record of organizational cybersecurity risk. The exception process is the single, authoritative record of intentional deviations from established controls. The two are coupled: every approved exception is itself a risk-register entry.
 
@@ -94,11 +94,11 @@ Parenthetical labels in this table use the canonical RMF-001 §9.5 severity band
 
 #### Tolerance by Business Unit
 
-Tolerance thresholds may vary by business unit where the business unit operates under materially different regulatory, contractual, or operational risk profiles. Business unit tolerance adjustments are proposed by the Risk Owner in that unit, reviewed by the Governance Pillar Leader, and approved by the CISO. Adjustments are recorded in the risk register as a standing annotation on the business unit's scope.
+Tolerance thresholds may vary by business unit where the business unit operates under materially different regulatory, contractual, or operational risk profiles. The Risk Owner in that unit proposes business unit tolerance adjustments, the Governance Pillar Leader reviews them, and the CISO approves them. The risk register records each adjustment as a standing annotation on the business unit's scope.
 
 #### Board and Leadership Engagement
 
-The board or an authorized board committee reviews and affirms the organization's risk appetite annually. Material changes to risk appetite - including adjustments to quantitative thresholds or tolerance by business unit - are submitted to the CISO for recommendation and board approval. The CISO owns the annual appetite affirmation cycle and reports the organization's actual risk posture against appetite at each quarterly CISO-level review.
+The board or an authorized board committee reviews and affirms the organization's risk appetite annually. Material changes to risk appetite - including adjustments to quantitative thresholds or tolerance by business unit - go to the CISO for recommendation and board approval. The CISO owns the annual appetite affirmation cycle and reports the organization's actual risk posture against appetite at each quarterly CISO-level review.
 
 ---
 
@@ -157,7 +157,7 @@ Risk statements are specific enough to support scoring. "We need better cloud se
 
 Risks are scored using the canonical 5×5 **Likelihood × Impact** model in [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.5. This procedure operationalizes that model; it does not define a separate scoring scale. If this procedure and RMF-001 differ, RMF-001 governs.
 
-The matrix produces a residual risk rating after considering controls in place. Inherent risk (controls hypothetically absent) is recorded but not the primary driver of treatment decisions.
+The matrix produces a residual risk rating after considering controls in place. Inherent risk (controls hypothetically absent) goes on the record, but it does not drive treatment decisions.
 
 #### Likelihood Summary
 
@@ -198,7 +198,7 @@ Quantitative calibration is maintained in [`CERG-GOV-RMF-001`](../governance/CER
 The calibration table is a coordination tool, not a precise calculator. When two analysts reach different scores:
 1. Each states their rationale in terms of likelihood (what is the annualized frequency?) and impact (what is the estimated financial, operational, regulatory, safety, or customer consequence?).
 2. The Governance Lead facilitates the discussion toward the better-supported score using RMF-001 §9.5.
-3. If disagreement persists, the higher score is used and the rationale for both scores is recorded.
+3. If disagreement persists, use the higher score and record the rationale for both scores.
 
 The goal is not perfect precision - it is consistent conversation that produces comparable risk rankings across the register.
 
@@ -214,7 +214,7 @@ Re-score upon: material change in observed threat activity, completion of treatm
 
 ## 5. Risk Treatment
 
-Each risk has one of four treatment decisions. Treatment is decided by the risk owner with input from CERG and approved per Section 8.
+Each risk has one of four treatment decisions. The risk owner decides treatment with input from CERG, and approval follows Section 8.
 
 | **Treatment** | **Description** | **When Appropriate** |
 |---|---|---|
@@ -286,7 +286,7 @@ The Governance Lead curates the register for quality. Specifically:
 
 ### 6.3 Risk Taxonomy
 
-The following taxonomy is the controlled vocabulary for risk categorization. Every risk entry must be assigned exactly one category from this taxonomy. Consistent categorization enables trend analysis, ownership clarity, and regulatory mapping.
+The following taxonomy is the controlled vocabulary for risk categorization. Every risk entry must carry exactly one category from this taxonomy. Consistent categorization enables trend analysis, ownership clarity, and regulatory mapping.
 
 | **Category** | **Definition** | **Examples** |
 |---|---|---|

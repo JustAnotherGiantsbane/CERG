@@ -12,7 +12,7 @@
 | **Source state** | Depends on `experiment/second-line-model-implementation` at `7a74768` — not present in this fork's `main` |
 | **Companion documents** | [Frontline Security Assurance Operating Model](frontline-security-assurance-operating-model.md) · [Data-and-Assurance Contract](frontline-security-data-and-assurance-contract.md) |
 
-> **Purpose.** Most boundary arguments are really disagreements about inputs. This register lists what CERG consumes, from which role or service, in what form, at what cadence, and which claim it supports. If both sides agree on the inputs, the "who operates" question usually answers itself.
+Most boundary arguments are really disagreements about inputs. This register lists what CERG consumes, from which role or service, in what form, at what cadence, and which claim it supports. If both sides agree on the inputs, the "who operates" question usually answers itself.
 
 > **Source state.** Written against the second-line experiment rather than against this
 > repository's corpus. The conditions, the state-authorship rule, the owner/operator split,
@@ -23,7 +23,7 @@
 
 ## How to read this
 
-Three things are fused in the current corpus and need separating before any conflict can be resolved:
+The current corpus fuses three things, and they need separating before any conflict can be resolved:
 
 | Layer | Question | Owner |
 |---|---|---|
@@ -154,4 +154,4 @@ Form abbreviations: **R** = raw read/query access · **E** = export or report ·
 
 ## Relationship to the boundary RFC
 
-This register supplies the inputs the boundary RFC's conditions depend on. Independence, service-appropriate capability, and evidence currency are properties of a claim; each one is satisfied or lost at a specific row above. It introduces no CERG role, record type, or control — every row either cites an existing home or is marked unspecified.
+This register supplies the inputs the boundary RFC's conditions depend on. Independence, service-appropriate capability, and evidence currency are properties of a claim; each one depends on a specific row above. It introduces no CERG role, record type, or control — every row either cites an existing home or is marked unspecified.

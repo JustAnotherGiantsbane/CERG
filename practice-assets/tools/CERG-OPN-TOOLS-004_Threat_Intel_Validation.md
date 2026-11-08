@@ -194,7 +194,7 @@ Maps the 10 most common ransomware TTPs to the CERG controls that stop or detect
 
 ## Control → Threat Coverage Matrix
 
-Shows how many threats each control addresses. Priority for evidence collection should follow this ranking.
+The table shows how many threats each control addresses. Evidence-collection priority should follow this ranking.
 
 | Rank | Control | Ransomware TTPs Blocked | KEV Categories Covered | Overall |
 |------|---------|------------------------|----------------------|---------|

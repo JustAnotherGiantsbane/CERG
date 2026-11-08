@@ -150,7 +150,7 @@ Change Submitted
 
 ### 4.2 Sampling Methodology for Standard Changes
 
-Standard security-preserving changes do not require individual CERG review, but a sample is reviewed each month to verify that the "standard" classification is accurate and that security posture is not degrading through accumulated small changes.
+Standard security-preserving changes do not require individual CERG review, but CERG reviews a sample each month. The sample tests whether the "standard" classification holds and whether accumulated small changes are degrading posture.
 
 | **Parameter** | **Value** |
 |---|---|
@@ -191,7 +191,7 @@ A change cannot be closed as security-approved until conditions, risk acceptance
 
 ### 5.3 Security Review SLAs
 
-Security reviews are time-bound to prevent the review process from becoming a bottleneck. The following SLAs apply from the time a complete change request is received.
+Security reviews are time-bound to prevent the review process from becoming a bottleneck. The following SLAs run from the time a complete change request arrives.
 
 | **Change Category** | **SLA** | **Notes** |
 |---|---|---|
@@ -306,7 +306,7 @@ For CUI, NERC-CIP, and OT-scope systems, the change record must show the regulat
 
 ## 8. Evidence and Records
 
-Security change records are evidence. They are retained under [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md) and include, at minimum:
+Security change records are evidence. CERG retains them under [`CERG-PRC-AUD-001`](CERG-PRC-AUD-001_Audit_and_Evidence_Management_Procedure.md), and they include, at minimum:
 
 | **Evidence Item** | **Required For** |
 |---|---|
