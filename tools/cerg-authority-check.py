@@ -44,6 +44,11 @@ def metadata(text: str) -> tuple[str, str]:
     )
 
 
+def resolve(rev: str) -> bool:
+    return subprocess.run(["git", "rev-parse", "--verify", "--quiet", rev],
+                          capture_output=True).returncode == 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--base", default="main")
@@ -51,25 +56,56 @@ def main() -> int:
     ap.add_argument("--rev", default=None, help="read metadata at this rev instead of working tree")
     args = ap.parse_args()
 
+    # A gate that cannot resolve its inputs must not report a pass. Otherwise a
+    # mistyped branch, a stale ref, or a CI job in the wrong directory produces
+    # a green check about nothing.
+    for label, rev in (("base", args.base), ("head", args.head)):
+        if not resolve(rev):
+            print(f"AUTHORITY GATE ERROR: cannot resolve {label} rev {rev!r} - nothing checked", file=sys.stderr)
+            return 2
+
+    paths = changed_md(args.base, args.head)
+    if not paths:
+        print(f"AUTHORITY GATE ERROR: {args.base}..{args.head} changes no Markdown files - "
+              "nothing checked is not a pass", file=sys.stderr)
+        return 2
+
     violations = []
-    for path in changed_md(args.base, args.head):
-        text = run("git", "show", f"{args.head}:{path}") if not args.rev else run("git", "show", f"{args.rev}:{path}")
-        if not text:
+    unreadable = []
+    for path in paths:
+        at_head = run("git", "show", f"{args.head}:{path}")
+        at_base = run("git", "show", f"{args.base}:{path}")
+        if not at_head and not at_base:
+            # A blob that will not resolve at either end is a finding, not a skip.
+            unreadable.append(path)
             continue
-        status, owner = metadata(text)
-        if any(k in status.lower() for k in NOT_OURS_STATUS) or any(
-            k in owner.lower() for k in NOT_OURS_OWNER
-        ):
-            violations.append((path, status, owner))
+        # Ownership is read at both ends: a branch that edits a document and
+        # rewrites its Owner row on the way through must still be caught by the
+        # owner it had before it touched it.
+        for label, text in (("head", at_head), ("base", at_base)):
+            if not text:
+                continue
+            status, owner = metadata(text)
+            if any(k in status.lower() for k in NOT_OURS_STATUS) or any(
+                k in owner.lower() for k in NOT_OURS_OWNER
+            ):
+                violations.append((path, label, status, owner))
+                break
+
+    if unreadable:
+        print(f"AUTHORITY GATE FAILED: {len(unreadable)} changed file(s) could not be read")
+        for path in unreadable:
+            print(f"  {path}  (no blob at base or head)")
+        return 1
 
     if violations:
         print(f"AUTHORITY GATE FAILED: {len(violations)} changed file(s) belong to another team")
-        for path, status, owner in violations:
-            print(f"  {path}\n    Status: {status} | Owner: {owner}")
+        for path, where, status, owner in violations:
+            print(f"  {path}\n    Status: {status} | Owner: {owner}  (matched at {where})")
         print("\nDrop these commits from the merge set and route the diff to the owner.")
         return 1
 
-    print(f"Authority gate passed: {len(changed_md(args.base, args.head))} changed Markdown file(s), all CERG-owned.")
+    print(f"Authority gate passed: {len(paths)} changed Markdown file(s), all CERG-owned.")
     return 0
 
 
