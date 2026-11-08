@@ -4,7 +4,7 @@
 
 > Designed for Adaptive [NIST CSF 2.0](https://www.nist.gov/cyberframework) maturity. Applicable to IT and OT environments. Calibrated for [CMMC](https://dodcio.defense.gov/CMMC/), NERC-CIP, and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204).
 > 
-> _Examples in this document reference a large enterprise at the upper bound of what CERG is designed to support — the framework is scaled to fit organizations from 5 people to large regulated entities. Readers should scale down to their environment. Sector-specific illustrative profiles are available in [`/examples/`](../examples/). See also [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) for mechanical adaptation._
+> _Examples in this document reference a large enterprise at the upper bound of what CERG supports — the framework scales to fit organizations from 5 people to large regulated entities. Readers should scale down to their environment. Sector-specific illustrative profiles are available in [`/examples/`](../examples/). See also [`CERG-GOV-VAR-001`](CERG-GOV-VAR-001_Organization_Adaptation_Profile.md) for mechanical adaptation._
 
 ---
 
@@ -59,7 +59,7 @@ The CERG model names these activities explicitly, Engineering, Risk, and Governa
 ### Design Principles
 
 - **Scale up or down:** applicable to small teams, mature enterprise functions, and regulated organizations
-- **Regulatory-ready:** designed to satisfy CMMC, NERC-CIP, NIST CSF 2.0, 800-53, 800-171, and SOX
+- **Regulatory-ready:** satisfies CMMC, NERC-CIP, NIST CSF 2.0, 800-53, 800-171, and SOX
 - **IT/OT aware:** principles apply equally to enterprise IT and operational technology environments
 - **Talent resilient:** cross-pillar knowledge sharing means no single person is a point of failure
 - **Adaptive-targeted:** the framework describes what operating at NIST CSF 2.0 Adaptive maturity looks like in practice
@@ -127,7 +127,7 @@ CERG pillars are not sequential. They operate simultaneously and continuously, w
 |Adversarial validation: pen test / red team / purple team|Risk|Engineering reviews findings for architectural impact; Governance logs findings|
 |Regulatory exam or audit|Governance|All pillars provide evidence; Engineering and Risk support responses|
 
-CERG's operating boundary makes continuous threat exposure management (CTEM) an operating-model property rather than a program to install: first-line owners and providers perform discovery, treatment, and recovery; CERG independently frames scope, classifies exposure, validates whether controls hold, and challenges treatment closure. This allocation of who scopes, who discovers, who prioritizes, who validates, who mobilizes, and who assures is what makes continuous exposure management trustworthy. It creates no new lifecycle, role, record type, metric set, or tool dependency; exposure and validation remain governed by [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md), [CERG-PRC-AV-001](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md), [CERG-GOV-CEF-001](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md), and [CERG-GOV-MTR-001](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md).
+CERG's operating boundary makes continuous threat exposure management (CTEM) an operating-model property, not a program to install. First-line owners and providers perform discovery, treatment, and recovery; CERG independently frames scope, classifies exposure, validates whether controls hold, and challenges treatment closure. That allocation — who scopes, who discovers, who prioritizes, who validates, who mobilizes, who assures — is what makes continuous exposure management trustworthy. The boundary creates no new lifecycle, role, record type, metric set, or tool dependency. Exposure and validation remain governed by [CERG-PRC-VM-001](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md), [CERG-PRC-AV-001](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md), [CERG-GOV-CEF-001](CERG-GOV-CEF-001_Control_Effectiveness_Framework.md), and [CERG-GOV-MTR-001](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md).
 
 ---
 
@@ -211,7 +211,7 @@ A tool can support a capability. A document can define a capability. A person ca
 
 The Cyber Engineering team serves as the organization's internal security consulting practice. Engineers are assigned to enterprise and IT projects, often as the first security touch point in a project lifecycle, and carry security requirements, design review, and implementation guidance from concept through production handoff.
 
-Engineers do not own the systems they help build. Their role is to ensure that security is designed in from the beginning, that pre-production findings are remediated or risk-accepted before go-live, and that the receiving operations team understands the security posture of what they are taking on.
+Engineers do not own the systems they help build. They make sure security is designed in from the start, pre-production findings are remediated or risk-accepted before go-live, and the receiving operations team understands the security posture of what it is taking on.
 
 ### 4.2 Core Functions
 
@@ -376,7 +376,7 @@ Governance assures the evidence library rather than performing every collection 
 
 ### 7.1 What Adaptive Means
 
-The NIST Cybersecurity Framework defines four tiers of organizational maturity: Partial, Informed, Repeatable, and Adaptive. Most organizations operating a mature security program reach Repeatable, processes are defined, practiced, and reviewed. Adaptive goes further.
+The NIST Cybersecurity Framework defines four tiers of organizational maturity: Partial, Informed, Repeatable, and Adaptive. Most organizations operating a mature security program reach Repeatable, where processes are defined, practiced, and reviewed. Adaptive goes further.
 
 At the Adaptive tier, an organization does not just respond to the threat environment, it anticipates it. Risk management is integrated into the fabric of business decision-making. Cybersecurity considerations are part of every significant investment, acquisition, and operational change. The security function continuously learns from internal events and external intelligence, and updates its practices accordingly.
 
@@ -389,7 +389,7 @@ At the Adaptive tier, an organization does not just respond to the threat enviro
 
 ### 7.2 How CERG Produces Adaptive Behavior
 
-The CERG model is designed to produce Adaptive-tier behavior through its structure, not just its aspirations.
+The CERG model produces Adaptive-tier behavior through its structure, not just its aspirations.
 
 |Adaptive Criterion|CERG Mechanism|Pillar(s)|
 |---|---|---|
@@ -466,7 +466,7 @@ Most organizations with OT environments today maintain a degree of air-gap separ
 - Jump servers or data diodes controlling any permitted data flows
 - Physical controls limiting access to OT environments
 
-CERG is designed to operate in this context. The air-gap is a security control, Governance documents it, Risk validates it, and Engineering designs to preserve it while enabling the operational visibility the business needs.
+CERG operates in this context. The air-gap is a security control: Governance documents it, Risk validates it, and Engineering designs to preserve it while enabling the operational visibility the business needs.
 
 ### 9.2 The Modernization Pressure
 
@@ -482,7 +482,7 @@ The Risk team's approach to OT environments differs from IT in several important
 
 - **Scanning must be OT-safe:** active network scanning of OT environments can disrupt control processes. CERG sets the OT-safe method requirements and the rules of engagement. The first-line OT operator runs passive monitoring, vendor scan tools, and approved active scan windows.
 - **Patch windows are constrained:** OT systems often cannot be patched on standard IT timelines due to vendor testing requirements, operational windows, and redundancy limitations. Risk tracks OT patch exposure and validates the residual risk when a standard cannot be met; Governance assures the exception path and evidence requirements.
-- **Availability is the primary objective:** in OT environments, availability often outranks confidentiality in the risk calculus. Risk team members must understand this trade-off and communicate findings in terms of operational impact, not just CVSS scores.
+- **Availability is the primary objective:** in OT environments, availability often outranks confidentiality in the risk calculus. Risk team members must understand this trade-off and communicate findings as operational impact, not just CVSS scores.
 - **Threat intelligence must include ICS-specific sources:** Risk maintains subscriptions to ICS-CERT advisories, E-ISAC threat intelligence, and vendor-specific security bulletins for all OT platforms in use.
 
 ### 9.4 Governance in OT Environments
