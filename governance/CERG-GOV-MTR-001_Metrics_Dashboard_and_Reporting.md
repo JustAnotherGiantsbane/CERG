@@ -205,7 +205,7 @@ These metrics measure whether controls are actually effective, not just present.
 
 ### 3.7 Predictive and Leading Indicators (Owner: Governance Pillar Leader, with Risk and Engineering inputs)
 
-The metrics above are lagging indicators : they tell you what already happened. An Adaptive program also tracks predictive indicators that warn of trouble before it materializes. The following leading indicators complement the lagging dictionary. When any leading indicator breaches its defined threshold, it triggers a review at the quarterly Lessons Aggregation Review (PRC-LL-001 Section 5).
+The metrics above are lagging indicators — they tell you what already happened. An Adaptive program also tracks predictive indicators that warn of trouble before it materializes. The following leading indicators complement the lagging dictionary. When any leading indicator breaches its defined threshold, it triggers a review at the quarterly Lessons Aggregation Review (PRC-LL-001 Section 5).
 
 | **ID** | **Name** | **Formula** | **Why Predictive** | **Source** | **Refresh** | **G / A / R** | **Reported In** |
 |---|---|---|---|---|---|---|---|
@@ -213,7 +213,7 @@ The metrics above are lagging indicators : they tell you what already happened. 
 | PL-002 | Attack Surface Change Rate | (New externally-facing assets + decommissioned assets + changed services this month) / total externally-facing assets | Rapid surface expansion without corresponding review capacity predicts exposure gaps. | Asset inventory + CMDB | Monthly | <= 5% / 5-15% / > 15% | CISO Dashboard |
 | PL-003 | Near-Miss Rate (Trailing Quarter) | Count of events that met detection thresholds but were contained before impact, per quarter | Rising near-miss rate can predict an incident when controls fatigue or coverage gaps align. A flat or falling rate after mitigations confirms effectiveness. | Near-miss log (PRC-LL-001) | Quarterly | n/a: informational; trend is the signal | COG Brief |
 | PL-004 | Threat-Intelligence-Tilted Risk Score | Sum of (risk score x TI confidence x sector targeting relevance) for top 20 risks | Incorporates whether threat actors are actively targeting the sector with TTPs relevant to each risk. Higher tilt = stronger alignment between risk register and threat landscape. | Risk register + TI assessment | Quarterly | n/a: informational; rising tilt demands attention | COG Brief |
-| PL-005 | Control Coverage vs. Threat Coverage | % of top 10 MITRE ATT&CK techniques for the sector that map to an operational CERG control | A falling percentage means threat evolution is outpacing control evolution : a predictive gap signal. | TRC-001 + ATT&CK mapping | Quarterly | >= 80% / 60-80% / < 60% | COG Brief |
+| PL-005 | Control Coverage vs. Threat Coverage | % of top 10 MITRE ATT&CK techniques for the sector that map to an operational CERG control | A falling percentage means threat evolution is outpacing control evolution — a predictive gap signal. | TRC-001 + ATT&CK mapping | Quarterly | >= 80% / 60-80% / < 60% | COG Brief |
 | PL-006 | Unpatched Vulns with Known Exploit | Count of open vulnerabilities where CISA KEV or vendor confirms active exploitation, regardless of CVSS score | More predictive than raw vulnerability count: these are the vulnerabilities attackers are actually using in the wild. | Exposure pipeline + CISA KEV | Daily | 0 / 1-5 / > 5 | CISO Dashboard |
 | PL-007 | Privileged Account Anomaly Rate | % of privileged sessions flagged as anomalous by UEBA or behavioral rules | Rising anomaly rate without corresponding investigation capacity predicts credential misuse incidents. | PAM / UEBA tool | Weekly | <= 2% / 2-5% / > 5% | CISO Dashboard |
 
@@ -381,13 +381,13 @@ The CISO dashboard is the single page that opens every monthly review. It is lai
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
-The dashboard is published from the metrics platform; the ASCII above is the layout reference for designers and dashboard builders. Color rules follow Section 3 Green/Amber/Red bands.
+The metrics platform publishes the dashboard; the ASCII above is the layout reference for designers and dashboard builders. Color rules follow Section 3 Green/Amber/Red bands.
 
 ---
 
 ## 6. Quarterly Cyber Oversight Group Brief Template
 
-The Cyber Oversight Group is whoever the CISO reports to, depending on org structure, it is IT and OU leadership, executive leadership, or the board itself. The brief is identical in structure regardless of audience; depth is calibrated by audience.
+The Cyber Oversight Group is whoever the CISO reports to, depending on org structure, it is IT and OU leadership, executive leadership, or the board itself. The brief is identical in structure regardless of audience; the audience calibrates depth.
 
 ```
 QUARTERLY CYBER OVERSIGHT GROUP BRIEF - Q<n> <YYYY>
@@ -421,7 +421,7 @@ QUARTERLY CYBER OVERSIGHT GROUP BRIEF - Q<n> <YYYY>
    · Risk register changes since last brief
 ```
 
-The brief is published five business days before the meeting. Slides are read-ahead; the meeting is for discussion of the Asks.
+Governance publishes the brief five business days before the meeting. Slides are read-ahead; the meeting is for discussion of the Asks.
 
 ### 6.1 Control Funding Decision Brief Pattern
 
@@ -447,7 +447,7 @@ If the decision is to defer treatment while residual risk remains, route the res
 
 ## 7. Monthly CERG Leadership Report Template
 
-The internal CERG leadership report is consumed by Engineering / Risk / Governance pillar owners and the CISO. It is operational where the CISO Dashboard is comparative.
+Engineering, Risk, and Governance pillar owners and the CISO consume the internal CERG leadership report. It is operational where the CISO Dashboard is comparative.
 
 ```
 MONTHLY CERG LEADERSHIP REPORT - <Month> <YYYY>
@@ -554,7 +554,7 @@ The metric thresholds in Section 3 are not permanent. An Adaptive program adjust
 
 ### 10.1 Calibration Cadence
 
-Thresholds are reviewed:
+The Governance Pillar Leader reviews thresholds:
 
 - **Annually**, aligned with the risk appetite review (GOV-RMF-001)
 - **When triggered** by any of the conditions in Section 10.2
@@ -585,11 +585,11 @@ The Governance Pillar Leader maintains a threshold change log. Every change reco
 | Date changed | 2026-09-01 |
 | Old threshold (Red) | > 5 |
 | New threshold (Red) | > 2 |
-| Trigger | Green drift : metric was green for 8 consecutive months |
+| Trigger | Green drift: metric was green for 8 consecutive months |
 | Rationale | The program has consistently met the original threshold; tightening drives further improvement |
 | Approver | Governance Pillar Leader |
 
-The change log is reviewed at the annual metrics program review and is available to auditors as evidence of program evolution.
+The Governance Pillar Leader reviews the change log at the annual metrics program review; it is available to auditors as evidence of program evolution.
 
 ### 10.5 Integration
 
