@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The OT Security Engineer defines OT security requirements and reference design for industrial control systems, grid control systems, and the IT/OT boundary: the electronic security perimeter, IT/OT boundary design, BES Cyber System baselines, and the secure architecture of SCADA, DCS, EMS, and other OT environments. OT operations executes discovery and transient cyber asset control; the engineer sets their requirements and validates the resulting state. They are the bridge between cybersecurity and operations, fluent in the security controls and in why a particular scanning technique could trip a protection relay.
+The OT Security Engineer defines OT security requirements and reference design for industrial control systems, grid control systems, and the IT/OT boundary: the electronic security perimeter, IT/OT boundary design, BES Cyber System baselines, and the secure architecture of SCADA, DCS, EMS, and other OT environments. OT operations executes discovery and transient cyber asset control; the engineer sets their requirements and validates the resulting state. They are the bridge between cybersecurity and operations: they must grasp both the security controls and why a particular scanning technique could trip a protection relay.
 
 ## 2. NICE Workforce Framework Mapping
 
