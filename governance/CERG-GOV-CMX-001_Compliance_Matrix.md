@@ -49,7 +49,7 @@
 
 ## 1. Know what you own: maintain an authoritative asset inventory
 
-**Primary Pillar:** Engineering **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · · NIST
+**Primary Pillar:** Engineering **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · NIST
 
 |Framework|Requirement|
 |---|---|
@@ -63,7 +63,7 @@
 
 ## 2. Identify and remediate known vulnerabilities on a defined schedule
 
-**Primary Pillar:** Risk **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · NIST
+**Primary Pillar:** Risk **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · NIST
 
 |Framework|Requirement|
 |---|---|
@@ -78,7 +78,7 @@
 
 ## 3. Control who can access what: enforce least privilege
 
-**Primary Pillar:** Engineering **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · NIST
+**Primary Pillar:** Engineering **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · NIST
 
 |Framework|Requirement|
 |---|---|
@@ -93,7 +93,7 @@
 
 ## 4. Authenticate users and systems: verify identity before granting access
 
-**Primary Pillar:** Engineering **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · NIST
+**Primary Pillar:** Engineering **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · NIST
 
 |Framework|Requirement|
 |---|---|
@@ -108,7 +108,7 @@
 
 ## 5. Harden systems: remove what isn't needed, lock down what is
 
-**Primary Pillar:** Engineering **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · · NIST
+**Primary Pillar:** Engineering **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · NIST
 
 |Framework|Requirement|
 |---|---|
@@ -122,7 +122,7 @@
 
 ## 6. Protect data in transit and at rest: encryption as a baseline control
 
-**Primary Pillar:** Engineering **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · · NIST
+**Primary Pillar:** Engineering **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · NIST
 
 |Framework|Requirement|
 |---|---|
@@ -136,7 +136,7 @@
 
 ## 7. Segment networks: limit lateral movement and blast radius
 
-**Primary Pillar:** Engineering **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · · NIST
+**Primary Pillar:** Engineering **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · NIST
 
 |Framework|Requirement|
 |---|---|
@@ -150,7 +150,7 @@
 
 ## 8. Manage vendor and third-party risk: extend controls beyond the perimeter
 
-**Primary Pillar:** Risk **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · · NIST
+**Primary Pillar:** Risk **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · NIST
 
 |Framework|Requirement|
 |---|---|
@@ -165,7 +165,7 @@
 
 ## 9. Control and log privileged/remote access: know who did what, when
 
-**Primary Pillar:** Engineering **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · NIST
+**Primary Pillar:** Engineering **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · NIST
 
 |Framework|Requirement|
 |---|---|
@@ -180,7 +180,7 @@
 
 ## 10. Conduct adversarial testing: find what scanners miss
 
-**Primary Pillar:** Risk **Regulations:** [CMMC](https://dodcio.defense.gov/CMMC/) · · NIST **⚠ Unique:** No direct NERC-CIP analog
+**Primary Pillar:** Risk **Regulations:** [CMMC](https://dodcio.defense.gov/CMMC/) · NIST **⚠ Unique:** No direct NERC-CIP analog
 
 |Framework|Requirement|
 |---|---|
@@ -193,7 +193,7 @@
 
 ## 11. Train and background-check personnel with access to sensitive systems
 
-**Primary Pillar:** Governance **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · · NIST
+**Primary Pillar:** Governance **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · NIST
 
 |Framework|Requirement|
 |---|---|
@@ -207,7 +207,7 @@
 
 ## 12. Write and maintain policies: define what good looks like
 
-**Primary Pillar:** Governance **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · NIST
+**Primary Pillar:** Governance **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · NIST
 
 |Framework|Requirement|
 |---|---|
@@ -222,7 +222,7 @@
 
 ## 13. Manage configuration changes: track drift, prevent unauthorized changes
 
-**Primary Pillar:** Engineering **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · NIST
+**Primary Pillar:** Engineering **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · NIST
 
 |Framework|Requirement|
 |---|---|
@@ -237,7 +237,7 @@
 
 ## 14. Collect, protect, and retain audit evidence: prove controls are working
 
-**Primary Pillar:** Governance **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · NIST
+**Primary Pillar:** Governance **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · NIST
 
 |Framework|Requirement|
 |---|---|
@@ -252,7 +252,7 @@
 
 ## 15. Assess your own security posture: periodic internal evaluation
 
-**Primary Pillar:** Risk **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · NIST
+**Primary Pillar:** Risk **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · NIST
 
 |Framework|Requirement|
 |---|---|
@@ -267,7 +267,7 @@
 
 ## 16. Manage risk formally: document, accept, or treat identified risks
 
-**Primary Pillar:** Governance **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · NIST
+**Primary Pillar:** Governance **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · NIST
 
 |Framework|Requirement|
 |---|---|
@@ -282,7 +282,7 @@
 
 ## 17. Protect physical access to critical systems: cyber starts at the door
 
-**Primary Pillar:** Governance **Regulations:** NERC-CIP · · NIST **⚠ Unique:** NERC-CIP most prescriptive, CIP-006/CIP-014 unique to BES environments
+**Primary Pillar:** Governance **Regulations:** NERC-CIP · NIST **⚠ Unique:** NERC-CIP most prescriptive, CIP-006/CIP-014 unique to BES environments
 
 |Framework|Requirement|
 |---|---|
@@ -295,7 +295,7 @@
 
 ## 18. Monitor threats continuously: detect what vulnerability scans miss
 
-**Primary Pillar:** Risk **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · · NIST
+**Primary Pillar:** Risk **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · NIST
 
 |Framework|Requirement|
 |---|---|
@@ -309,7 +309,7 @@
 
 ## 19. Plan and practice incident response: know what to do before it happens
 
-**Primary Pillar:** Governance **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · · NIST
+**Primary Pillar:** Governance **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · NIST
 
 |Framework|Requirement|
 |---|---|
@@ -323,7 +323,7 @@
 
 ## 20. Manage recovery: restore operations and capture lessons learned
 
-**Primary Pillar:** Governance **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · · NIST **⚠ Unique:** CIP-009 unique to BES, highly prescriptive on testing cadence
+**Primary Pillar:** Governance **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · NIST **⚠ Unique:** CIP-009 unique to BES, highly prescriptive on testing cadence
 
 |Framework|Requirement|
 |---|---|
@@ -337,7 +337,7 @@
 
 ## 21. Manage accounts throughout their lifecycle: provisioning through termination
 
-**Primary Pillar:** Engineering **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · NIST
+**Primary Pillar:** Engineering **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · NIST
 
 |Framework|Requirement|
 |---|---|
@@ -352,7 +352,7 @@
 
 ## 22. Define and enforce a compliance calendar: no surprises at audit time
 
-**Primary Pillar:** Governance **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · NIST **⚠ Unique:** Governance operational discipline, no direct technical control analog
+**Primary Pillar:** Governance **Regulations:** NERC-CIP · [CMMC](https://dodcio.defense.gov/CMMC/) · [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) · NIST **⚠ Unique:** Governance operational discipline, no direct technical control analog
 
 |Framework|Requirement|
 |---|---|
