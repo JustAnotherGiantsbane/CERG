@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The Cloud Security Engineer defines cloud and SaaS platform security requirements and reference patterns: infrastructure-as-code content, cloud posture requirements and test cases, landing-zone design, cloud network security, and the security requirements for email and messaging platforms where delivered as SaaS. They are the organization's authority on what a secure cloud deployment looks like, and they validate whether first-line platform owners and their providers achieved it. First-line service owners and operators run the cloud, SaaS, and messaging platforms and their posture tooling.
+The Cloud Security Engineer defines cloud and SaaS platform security requirements and reference patterns: infrastructure-as-code content, cloud posture requirements and test cases, landing-zone design, cloud network security, and the security requirements for email and messaging platforms where delivered as SaaS. The engineer is the organization's authority on what a secure cloud deployment looks like, and they validate whether first-line platform owners and their providers delivered it. First-line service owners and operators run the cloud, SaaS, and messaging platforms and their posture tooling.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -58,7 +58,7 @@ The Cloud Security Engineer defines cloud and SaaS platform security requirement
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
-Grade-level responsibility differentiation for this role is defined in [JA-001 §7](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) (Role-to-Grade Mapping). The grade definitions (S1-S4 SME Track, M1-M4 Management Track) and leveling dimensions are in [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §4-5. Behavioral anchors at each grade are in [CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md).
+How responsibility grows by grade is set out in [JA-001 §7](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) (Role-to-Grade Mapping). Grade definitions (S1-S4 SME Track, M1-M4 Management Track) and the leveling dimensions are held in [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §4-5. For the behavioral anchors at each grade, see [CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md).
 
 ## 5. Required Knowledge, Skills, and Abilities (KSAs)
 
@@ -68,15 +68,15 @@ Grade-level responsibility differentiation for this role is defined in [JA-001 �
 
 ### 5.2 Technical Skills
 
-Technical skills for this role are documented in the original JD-001 content extracted into this file (see §5.1 Domain Expertise). Additional technical skill definitions aligned to NICE Skill Statements are maintained in [JF-002](../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md).
+The role's technical skills come from the original JD-001 content reproduced here (see §5.1 Domain Expertise). The remaining technical skill definitions, aligned to NICE Skill Statements, are in [JF-002](../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md).
 
 ### 5.3 CERG-Specific Knowledge
 
-CERG-specific knowledge requirements for this role are defined in [OM-001 §6](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) (Canonical Role Roster) and [RAC-001 §7](../../governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) (Role Descriptions). See §12 (Related CERG Documents) for the complete list of standards and procedures relevant to this role.
+The CERG-specific knowledge requirements for this role sit in [OM-001 §6](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) (Canonical Role Roster) and [RAC-001 §7](../../governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) (Role Descriptions). The full list of relevant standards and procedures is in §12 (Related CERG Documents).
 
 ## 6. NICE TKS Statement References
 
-The following Task, Knowledge, and Skill statements are extracted from the NIST NICE Framework v2.2.0 Work Role [DD-WRL-001 — Cloud Security Engineer primary mapping] and filtered by relevance to this CERG role. The full TKS database is maintained at https://www.nist.gov/nice/framework/.
+Drawn from the NIST NICE Framework v2.2.0 Work Role [DD-WRL-001 — Cloud Security Engineer primary mapping] and filtered for relevance to this CERG role, these Task, Knowledge, and Skill statements follow. The full TKS database lives at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
@@ -106,19 +106,19 @@ The following Task, Knowledge, and Skill statements are extracted from the NIST 
 
 ### 7.2 Certifications
 
-Certifications for this role are defined in [TRN-001 §3](../../governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) (Certification Matrix). The matrix specifies Required, Recommended, and Aspirational certifications per role and grade.
+[TRN-001 §3](../../governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) (Certification Matrix) names the certifications for this role. The matrix sorts them into Required, Recommended, and Aspirational, per role and grade.
 
 ### 7.3 Experience
 
-Typical experience ranges by grade are defined in [JA-001 §4-5](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md). See §7.1 (Education) above for education requirements.
+Typical experience ranges by grade are in [JA-001 §4-5](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md). Education requirements are in §7.1 (Education) above.
 
 ## 8. Key Performance Indicators (KPIs)
 
-KPIs for this role are defined in [MTR-001](../../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) (Metrics, Dashboard, and CISO/Board Reporting). KPI allocation by job family and grade-level thresholds are documented in [PERF-001](../../governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md). Each role's evaluation criteria are embedded in the per-role JD document structure defined by [JF-001](../CERG-GOV-JF-001_Job_Families_Overview.md).
+[MTR-001](../../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) (Metrics, Dashboard, and CISO/Board Reporting) carries the KPIs for this role. [PERF-001](../../governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) documents how KPIs are allocated by job family and sets the grade-level thresholds. The per-role JD document structure defined by [JF-001](../CERG-GOV-JF-001_Job_Families_Overview.md) holds each role's evaluation criteria.
 
 ## 9. Competency Expectations by Grade
 
-Competency expectations for this role follow the Engineering pillar behavioral anchors from [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md). Each cell describes observable behavior demonstrating the competency at that grade. Anchors are cumulative: an L3 expectation includes the L1 and L2 anchors.
+Competency expectations for this role track the Engineering pillar behavioral anchors in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md). Each cell names observable behavior that demonstrates the competency at that grade. The anchors are cumulative: an L3 expectation includes the L1 and L2 anchors.
 
 | Competency Domain (CMP-001) | L1 Expectation | L2 Expectation | L3 Expectation | L4 Expectation |
 |-----------------------------|----------------|----------------|----------------|----------------|
@@ -141,17 +141,17 @@ A Cloud Security Engineer is successful when the requirements and reference patt
 
 ### 11.1 Within-Family Progression
 
-Within JF-SECENG, progression follows the Security Engineering level ladder in [JF-001 §9.1](../CERG-GOV-JF-001_Job_Families_Overview.md#91-jf-seceng--security-engineering-levels): L1 Associate Engineer/S1, L2 Engineer/S2, L3 Senior or Staff Engineer/S3, and L4 Principal Engineer/S4. Promotion evidence should show increasing autonomy in secure design and implementation, ownership of engineering work streams, authorship or improvement of standards and reference architectures, cross-pillar influence, and mentoring of less experienced engineers. The grade definitions and progression dimensions are maintained in [JA-001 §4](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md#4-sme-progression-grade-definitions).
+Within JF-SECENG, the Security Engineering level ladder in [JF-001 §9.1](../CERG-GOV-JF-001_Job_Families_Overview.md#91-jf-seceng--security-engineering-levels) runs L1 Associate Engineer/S1, L2 Engineer/S2, L3 Senior or Staff Engineer/S3, and L4 Principal Engineer/S4. Promotion evidence should show increasing autonomy in secure design and implementation, ownership of engineering work streams, authorship or improvement of standards and reference architectures, cross-pillar influence, and mentoring of less experienced engineers. [JA-001 §4](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md#4-sme-progression-grade-definitions) holds the grade definitions and progression dimensions.
 
 ---
 
 ### 11.2 Cross-Family Movement
 
-Cross-family movement options are defined in the [Family-to-Family Career Lattice (JF-001 §4)](../CERG-GOV-JF-001_Job_Families_Overview.md#4-family-to-family-career-lattice). The Left-Right Knowledge Model ([FRM-001 §9.2](../../governance/CERG-GOV-FRM-001_CERG_Framework.md)) and cross-training expectations ([OM-001 §10.4](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md)) operationalize cross-family career movement.
+Cross-family movement options are in the [Family-to-Family Career Lattice (JF-001 §4)](../CERG-GOV-JF-001_Job_Families_Overview.md#4-family-to-family-career-lattice). The Left-Right Knowledge Model ([FRM-001 §9.2](../../governance/CERG-GOV-FRM-001_CERG_Framework.md)) and cross-training expectations ([OM-001 §10.4](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md)) turn that movement into practice.
 
 ### 11.3 Management Track Option
 
-At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §8.1 (SME to Management Transition). Readiness indicators include: consistently sought out for guidance by junior team members, leading cross-functional initiatives without formal authority, and communicating clearly with non-technical stakeholders. The transition is a track change, not a grade promotion — an S3 Advisor moving to M1 Manager carries their technical credibility into the management role. Management competencies are defined in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §7. See [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §5 for Management grade definitions (M1-M4) and §9 (Span of Control and Team Design) for when to create a management role.
+At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §8.1 (SME to Management Transition). The readiness markers: junior team members come to them for guidance, they lead cross-functional initiatives without formal authority, and they communicate clearly with non-technical stakeholders. The move is a change of track, not a promotion in grade — an S3 Advisor who becomes an M1 Manager carries their technical credibility into the role. [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §7 defines the management competencies. See [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §5 for Management grade definitions (M1-M4) and §9 (Span of Control and Team Design) for when to create a management role.
 
 ## 12. Related CERG Documents
 
@@ -200,7 +200,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 - Change to this role's grade range in [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §7
 - Direction from the CISO
 
-Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining approval for all changes.
+Governance owns this document. Reviews begin with the Governance Pillar Leader (Policy & Standards), who runs the revision cycle and obtains approval for every change.
 
 ### Related Documents
 
