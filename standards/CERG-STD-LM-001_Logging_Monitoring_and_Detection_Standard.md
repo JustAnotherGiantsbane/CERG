@@ -40,9 +40,9 @@
 
 ## 1. Purpose and Scope
 
-The policy requires privileged-access logging, log protection, retention, SIEM (or equivalent) monitoring, OT-safe collection methods, and threat-intelligence integration. The IT, OT, CUI, and Access standards each impose more specific log and detection requirements. Until this standard, those requirements existed in fragments, no consolidated list of mandatory log sources, no day-one detection set, no triage procedure.
+The policy requires privileged-access logging, log protection, retention, SIEM (or equivalent) monitoring, OT-safe collection methods, and threat-intelligence integration. The IT, OT, CUI, and Access standards each impose more specific log and detection requirements. Until this standard, those requirements existed in fragments: no consolidated list of mandatory log sources, no day-one detection set, no triage procedure.
 
-This standard consolidates those requirements. It defines the log sources every in-scope environment must onboard, how those logs are routed and retained, the detection set the SIEM must implement on day one, and how detections are validated and tuned over time. It applies to every in-scope asset and every CERG-managed detection platform.
+This standard consolidates those requirements. It defines the log sources every in-scope environment must onboard and how those logs are routed and retained. It also sets the detection set the SIEM must implement on day one and how detections are validated and tuned over time. It applies to every in-scope asset and every CERG-managed detection platform.
 
 > **Detection Coverage Is a Product, Not a Project**
 >
@@ -171,22 +171,22 @@ Each SIEM Onboarding Record assigns every onboarded source a stable **Source ID*
 
 ### 5.2 Source Health Monitoring
 
-Each onboarded source is itself monitored. CERG alerts on:
+CERG monitors each onboarded source and alerts on:
 
 - Source silence (no events for > expected interval).
 - Volume drop > 30% week-over-week (configurable per source).
 - Parsing failure rate > 1%.
 - Connector error or authentication failure.
 
-These alerts are treated as high-priority operational items, not as detections in their own right.
+Treat these alerts as high-priority operational items, not as detections in their own right.
 
-A source reported unhealthy under this section affects every production detection that lists it as a required dependency. The detection inventory derives the detection's operating condition as `Degraded (data-blind)` until the required source is healthy again or a healthy alternate source is explicitly recorded as the dependency. A degraded detection remains deployed, but it is not treated as operating for coverage reporting.
+A source reported unhealthy under this section affects every production detection that lists it as a required dependency. The detection inventory derives the detection's operating condition as `Degraded (data-blind)` until the required source is healthy again or a healthy alternate source is explicitly recorded as the dependency. A degraded detection remains deployed, but coverage reporting does not count it as operating.
 
 ---
 
 ## 6. Day-One Detection Set
 
-The Day-One Detection Set is the minimum coverage required in any in-scope environment within 30 days of onboarding. The set is curated against MITRE ATT&CK with ATT&CK Enterprise as the IT spine, ATT&CK for Cloud sub-techniques for cloud/SaaS scopes, and ATT&CK for ICS for OT scopes.
+The Day-One Detection Set is the minimum coverage required in any in-scope environment within 30 days of onboarding. Detection engineering curates the set against MITRE ATT&CK, with ATT&CK Enterprise as the IT spine, ATT&CK for Cloud sub-techniques for cloud/SaaS scopes, and ATT&CK for ICS for OT scopes.
 
 ### 6.1 Day-One: IT / Cloud / SaaS / Identity
 
@@ -221,15 +221,15 @@ CUI overlay (see Section 10) adds CUI-specific detections (export, share, label 
 
 ### 6.4 Coverage Reporting
 
-- Coverage is computed as the % of ATT&CK techniques within the in-scope sub-matrix that have at least one detection authored, tested, `In Production`, and in the derived `Operating` condition. A `Degraded (data-blind)` detection does not count toward coverage. Reported as DT-001 in [`CERG-GOV-MTR-001`](../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md).
-- **CERG coverage target: 70% of in-scope ATT&CK sub-matrix techniques with at least one operating detection.** Below 70% is reported red on the CISO dashboard and treated as an incident-readiness gap until closed.
-- The detection inventory is exported monthly and reviewed quarterly against the in-scope sub-matrix.
+- CERG computes coverage as the % of ATT&CK techniques within the in-scope sub-matrix that have at least one detection authored, tested, `In Production`, and in the derived `Operating` condition. A `Degraded (data-blind)` detection does not count toward coverage. Reported as DT-001 in [`CERG-GOV-MTR-001`](../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md).
+- **CERG coverage target: 70% of in-scope ATT&CK sub-matrix techniques with at least one operating detection.** Anything below 70% shows red on the CISO dashboard and counts as an incident-readiness gap until closed.
+- Detection engineering exports the detection inventory monthly and reviews it quarterly against the in-scope sub-matrix.
 
 ---
 
 ## 7. Detection Lifecycle and Validation
 
-Every detection has a lifecycle from `Proposed` through `Retired`. Detection metadata is recorded in the detection inventory.
+Every detection has a lifecycle from `Proposed` through `Retired`. The detection inventory records each detection's metadata.
 
 | **State** | **Means** |
 |---|---|
@@ -258,7 +258,7 @@ Each production detection has:
 
 ### 7.2 Validation
 
-- Detections are validated quarterly via the purple-team procedure in [`CERG-PRC-AV-001`](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) §6.
+- The purple team validates detections quarterly via the procedure in [`CERG-PRC-AV-001`](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) §6.
 - Validation result feeds metric DT-002.
 - Failed validations open a risk register entry per [`CERG-PRC-RM-001`](../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) until restored.
 
@@ -314,7 +314,7 @@ OT monitoring adds to the IT pattern; it does not replace it.
 - **CUI exfiltration alerts.** Outbound transfers of CUI to non-CUI destinations trigger P2 minimum.
 - **CUI workspace boundary** alerts on any cross-boundary access attempts.
 - **EDR on CUI endpoints** has CUI-aware policies (USB lockdown, application allowlist).
-- **Threat advisories** relevant to CUI (DFARS / DC3 advisories) are routed to detection engineering and incorporated where applicable.
+- Detection engineering receives **threat advisories** relevant to CUI (DFARS / DC3 advisories) and incorporates them where applicable.
 
 ---
 
