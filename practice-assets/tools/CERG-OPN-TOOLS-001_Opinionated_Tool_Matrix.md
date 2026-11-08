@@ -19,7 +19,7 @@
 
 ## Purpose
 
-This document defines the opinionated tool stack for CERG adopters who work through an MSP, MSSP, or in-house IT generalist. Every recommendation here is based on three criteria:
+This document defines the opinionated tool stack for CERG adopters who work through an MSP, MSSP, or in-house IT generalist. Three criteria drive every recommendation here:
 
 1. **Integration surface** — Does it talk to ServiceNow GRC and the rest of the stack without custom middleware?
 2. **MSP/MSSP multi-tenancy** — Can a single instance or deployment manage multiple client organizations cleanly?
@@ -162,7 +162,7 @@ Software supply chain security is mandatory under CMMC L2 and increasingly requi
 
 ### 8. Detection Engineering
 
-CERG's detection strategy is threat-intel-validated. Rules are written in Sigma format and deployed to the SIEM. The tool stack here is about rule development, testing, and validation.
+CERG's detection strategy is threat-intel-validated. CERG writes rules in Sigma format and deploys them to the SIEM. The tool stack here is about rule development, testing, and validation.
 
 | Tier | Product | Rationale |
 |------|---------|-----------|
