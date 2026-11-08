@@ -492,7 +492,7 @@ Changing these breaks the operating model. If you must change them, document the
 - Change to regulatory requirements affecting any framework CERG references
 - Direction from the CISO
 
-Governance owns this document. The Governance Pillar Leader is responsible for initiating reviews, managing the revision cycle, and obtaining approval for all changes.
+Governance owns this document. The Governance Pillar Leader initiates reviews, manages the revision cycle, and obtains approval for all changes.
 
 ### Related Documents
 
