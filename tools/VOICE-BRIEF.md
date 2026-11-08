@@ -206,6 +206,15 @@ sequence of reskins pointing at a number that will not move.
 `procedures/CERG-PRC-AV-001` is the first member: 23.6 → 23.0 across a twelve-edit
 pass, with all four obligation words flat.
 
+## Rule 9 — compliance verbs are load-bearing
+
+Normative register is not only "shall". The verbs that answer a compliance
+question — **implements, meets, satisfies, conforms to, evidences** — are what
+an auditor greps for in a standard's opening sentence. A synonym pass over them
+is census-legal and ear-illegal: "This standard implements the foundational
+principles" became "puts the foundational principles into practice," which is
+active voice and wrong. Leave them.
+
 ## Output contract
 
 For each file, append one JSON object to
