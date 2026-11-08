@@ -147,7 +147,7 @@ controls_applied:
 | Operator (first-line, internal or provider) | **Service SCPs only; N/A on protected-system SCPs.** Acknowledges the operating terms recorded in the service interface — obligations, escalation, evidence period — and does not approve the effectiveness claim. | `[Name / Date]` |
 | Independent assessor | **Service SCPs only; N/A on protected-system SCPs.** Accepts the scoped assessment assignment: assessor, method, evidence period and exclusions on which the claim rests. Acceptance is not approval of the service's effectiveness. | `[Name / Date]` |
 
-Completed SCP records are reviewed at the cadence defined by their system classification, regulatory scope, and related control requirements. Material system change, control baseline change, ownership change, regulatory-scope change, or major evidence failure requires an SCP refresh.
+Review completed SCP records at the cadence set by their system classification, regulatory scope, and related control requirements. Refresh the SCP when material system change, control baseline change, ownership change, regulatory-scope change, or major evidence failure requires it.
 
 ---
 
