@@ -63,7 +63,7 @@ This policy sits at the top of the cybersecurity governance hierarchy. Subordina
 
 ## 2. The CERG Operating Model
 
-Cybersecurity operations are organized into three tightly coupled pillars under the Cyber Engineering, Risk, and Governance (CERG) framework. This model consolidates the core security work of the organization, eliminates structural silos, and produces Adaptive-tier maturity as defined by the NIST Cybersecurity Framework.
+The Cyber Engineering, Risk, and Governance (CERG) framework organizes cybersecurity operations into three tightly coupled pillars. This model consolidates the core security work of the organization, eliminates structural silos, and produces Adaptive-tier maturity as defined by the NIST Cybersecurity Framework.
 
 | **Engineering** | **Risk** | **Governance** |
 | -------------------------------- | ------------------------ | --------------------- |
@@ -73,17 +73,17 @@ Cybersecurity operations are organized into three tightly coupled pillars under 
 | Configuration baselines | Vendor risk assessment | Risk register |
 | IT/OT convergence advisory | Risk treatment support | Regulatory liaison |
 
-These pillars operate simultaneously and continuously, not sequentially. CERG coordinates closely with the Security Awareness and Incident Response functions, which operate under separate charters. All CERG activities are subject to CISO oversight and report to the board through the CISO's risk and compliance reporting function.
+These pillars operate simultaneously and continuously, not sequentially. CERG coordinates closely with the Security Awareness and Incident Response functions, which operate under separate charters. The CISO oversees all CERG activities, which report to the board through the CISO's risk and compliance reporting function.
 
 > **The "Yes, And…" Standard**
 > 
-> Governance does not exist to block the business. The default orientation is enabling the business with guardrails, not closing doors. When a risk cannot be eliminated, it is documented, owned, treated, and monitored. Reflexive refusal is not an acceptable risk management strategy. CERG publishes and reports against its own service-level commitments ([`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md)), so that making yes safe is an accountable, measured commitment and not only an aspiration.
+> Governance does not exist to block the business. The default orientation is enabling the business with guardrails, not closing doors. When a risk cannot be eliminated, CERG documents, owns, treats, and monitors it. Reflexive refusal is not an acceptable risk management strategy. CERG publishes and reports against its own service-level commitments ([`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md)), so that making yes safe is an accountable, measured commitment and not only an aspiration.
 
 ---
 
 ## 3. Definitions
 
-The following terms are used throughout this policy and all subordinate documents.
+These terms apply throughout this policy and all subordinate documents.
 
 |Term|Definition|
 |---|---|
@@ -107,11 +107,11 @@ The following terms are used throughout this policy and all subordinate document
 
 ## 4. Foundational Security Principles
 
-The following ten principles constitute the enduring security requirements of this organization. They apply universally, to every asset, every environment, every trust level, and every regulatory context. Subordinate standards define how these principles are implemented in specific contexts.
+The following ten principles constitute the enduring security requirements of this organization. They apply universally, to every asset, every environment, every trust level, and every regulatory context. Subordinate standards define how each specific context implements these principles.
 
 > **How to Read These Principles**
 > 
-> Each principle states a universal mandate, what must always be true. The rationale explains why. The references identify the NIST controls and regulatory requirements the mandate satisfies. Implementation specifics (thresholds, timelines, approved tools, exceptions) are defined in subordinate standards.
+> Each principle states a universal mandate, what must always be true. The rationale explains why. The references identify the NIST controls and regulatory requirements the mandate satisfies. Subordinate standards define the implementation specifics: thresholds, timelines, approved tools, and exceptions.
 
 ---
 
@@ -311,7 +311,7 @@ An organization that has not practiced its incident response plan has a document
 
 ## 5. Roles and Responsibilities
 
-The following table defines accountability for this policy and the principles it establishes. Detailed role descriptions and RACI matrices are maintained in the CERG Operating Model documentation.
+The following table defines accountability for this policy and the principles it establishes. The CERG Operating Model documentation holds the detailed role descriptions and RACI matrices.
 
 |Role|Responsibility|
 |---|---|
@@ -327,7 +327,7 @@ The following table defines accountability for this policy and the principles it
 
 ## 6. Regulatory and Framework Alignment
 
-This policy is designed to satisfy the foundational policy and governance requirements of all applicable frameworks simultaneously. The table below maps each framework to the principles it addresses. Subordinate standards provide framework-specific implementation requirements.
+This policy satisfies the foundational policy and governance requirements of all applicable frameworks at once. The table below maps each framework to the principles it addresses. Subordinate standards provide framework-specific implementation requirements.
 
 |Framework / Regulation|Primary Control Families Addressed|Principles Satisfied|
 |---|---|---|
@@ -347,7 +347,7 @@ This policy is designed to satisfy the foundational policy and governance requir
 
 ## 7. Exceptions and Risk Acceptance
 
-Exceptions to this policy are recognized as operationally necessary in specific, documented circumstances. An exception does not suspend a principle, it documents that a principle cannot be fully satisfied and defines the compensating controls and management accountability that apply in its place.
+Specific, documented circumstances make exceptions to this policy operationally necessary. An exception does not suspend a principle, it documents that a principle cannot be fully satisfied and defines the compensating controls and management accountability that apply in its place.
 
 ### 7.1 Exception Process
 
@@ -361,14 +361,14 @@ Exceptions to this policy are recognized as operationally necessary in specific,
 
 For regulated environments, exceptions with regulatory implications shall follow the applicable deviation or mitigation plan process in addition to this exception process:
 
-- **NERC-CIP deviations:** Governance initiates the CIP deviation documentation process. Compensating measures are implemented immediately. Regulatory notification is completed per applicable CIP standard timelines.
-- **[CMMC](https://dodcio.defense.gov/CMMC/) non-conformances:** Governance maintains the Plan of Action and Milestones (POA&M) in the System Security Plan (SSP). Open POA&M items are tracked to closure with leadership visibility.
+- **NERC-CIP deviations:** Governance initiates the CIP deviation documentation process. Governance implements compensating measures immediately and completes regulatory notification per applicable CIP standard timelines.
+- **[CMMC](https://dodcio.defense.gov/CMMC/) non-conformances:** Governance maintains the Plan of Action and Milestones (POA&M) in the System Security Plan (SSP). Governance tracks open POA&M items to closure with leadership visibility.
 
 ---
 
 ## 8. Compliance and Enforcement
 
-Compliance with this policy is mandatory for all personnel within scope. Cyber Governance is responsible for tracking compliance posture and reporting material gaps to the CISO.
+Compliance with this policy is mandatory for all personnel within scope. Cyber Governance tracks compliance posture and reports material gaps to the CISO.
 
 ### 8.1 Compliance Monitoring
 
@@ -403,7 +403,7 @@ Proposed updates shall be reviewed by Cyber Engineering and Cyber Risk to ensure
 
 ## 10. Related Documents
 
-The authoritative inventory, IDs, owners, status, and deferred / planned artifacts is maintained in [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) Document Catalog and Naming Convention. The summary below reflects the V1 library.
+[`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) Document Catalog and Naming Convention maintains the authoritative inventory, IDs, owners, status, and deferred / planned artifacts. The summary below reflects the V1 library.
 
 ### 10.1 Cross-Cutting Instruments
 
