@@ -1,6 +1,6 @@
 # CERG Machine-Readable Artifacts
 
-This directory contains machine-readable YAML specifications generated from the CERG corpus. These files are designed for consumption by LLMs, automation tools, and programmatic validation.
+This directory contains machine-readable YAML specifications generated from the CERG corpus. LLMs, automation tools, and programmatic validation consume these files.
 
 > **⚠ These are DERIVED ARTIFACTS.** The CERG markdown corpus is authoritative. If a YAML file and its source disagree, the source wins. YAML files are regenerated when source documents change; manual edits are overwritten. See `METADATA.yaml` for per-file governance information.
 
@@ -61,7 +61,7 @@ For each machine-readable artifact:
 
 ## How These Are Generated
 
-Core indexes and manifests are generated from the repo-local CERG Markdown corpus during the build process. `cerg-manifest.yaml` and `cerg-publication-manifest.yaml` are regenerated with `python3 tools/regenerate-machine-readable.py`. `cerg-llm-index.json` is regenerated with `python3 tools/regenerate-llm-index.py`. The requirement register is regenerated when its normative source documents change. Single-purpose schema files are maintained alongside the documents they describe.
+The build process generates core indexes and manifests from the repo-local CERG Markdown corpus. `cerg-manifest.yaml` and `cerg-publication-manifest.yaml` are regenerated with `python3 tools/regenerate-machine-readable.py`. `cerg-llm-index.json` is regenerated with `python3 tools/regenerate-llm-index.py`. The requirement register is regenerated when its normative source documents change. Single-purpose schema files are maintained alongside the documents they describe.
 
 **Removed fields (#267).** The index no longer emits per-document `lines` or top-level `total_tokens_estimate`. Both were derived and had no in-repository consumer. To rebuild them, walk `documents[]` in emitted order: the first range starts at 1, each ends at its start plus `lines_count`, and the next starts at that end plus 2. The total is the sum of per-document `tokens`. The ranges addressed a virtual concatenation, not the public `llms-full.txt` mirror.
 
