@@ -18,12 +18,28 @@ better sentence; it is to drop the commit and route the diff to the owner.
 from __future__ import annotations
 
 import argparse
+import os
 import re
 import subprocess
 import sys
 
 NOT_OURS_STATUS = ("external interface",)
 NOT_OURS_OWNER = ("standing ir", "incident commander")
+
+# Repo furniture: nothing it contains can change custody, so a missing nameplate
+# is silence rather than a finding. Keep this list short and named - a permanent
+# "cannot verify" note on twenty-four files is how a gate's honest hedge becomes
+# wallpaper, and a tolerance that outlives its cause is how an alarm dies.
+FURNITURE = re.compile(
+    r"^(README[^/]*\.md|START-HERE\.md|SECURITY\.md|CONTRIBUTING\.md|"
+    r"CODE_OF_CONDUCT\.md|AGENTS\.md|ADOPT-WITH-AGENT\.md|BEGINNER-GUIDE\.md|"
+    r"CHANGELOG\.md|LICENSE[^/]*)$|^(examples|tools|\.github)/",
+)
+
+# Directories where a document can change hands. A changed file here with no
+# Status/Owner row is the undeclared-external-document scenario: nothing matches
+# because nothing declares, and a checker must not let that pass.
+STRICT_DIRS = ("governance", "standards", "procedures", "plans", "templates", "practice-assets")
 
 
 def run(*args: str) -> str:
@@ -122,7 +138,17 @@ def main() -> int:
         if not resolved_once:
             unreadable.append(f"{src} -> {dst}")
         elif not declared and not hit:
-            undeclared += 1
+            p = dst.replace(os.sep, "/")
+            top = p.split("/")[0] if "/" in p else ""
+            base = p.rsplit("/", 1)[-1]
+            is_furniture = bool(FURNITURE.match(base)) or p.startswith(("examples/", "tools/", ".github/"))
+            if is_furniture:
+                pass  # silence is correct: nothing here can change custody
+            elif top in STRICT_DIRS:
+                violations.append((f"{src} -> {dst}" if src != dst else dst,
+                                   "UNDECLARED", "(no Status/Owner row)", "(document directory)"))
+            else:
+                undeclared += 1
 
     if unreadable:
         print(f"AUTHORITY GATE FAILED: {len(unreadable)} changed file(s) could not be read")
@@ -131,10 +157,15 @@ def main() -> int:
         return 1
 
     if violations:
-        print(f"AUTHORITY GATE FAILED: {len(violations)} changed file(s) belong to another team")
+        print(f"AUTHORITY GATE FAILED: {len(violations)} changed file(s) cannot be cleared")
         for path, where, status, owner in violations:
-            print(f"  {path}\n    Status: {status} | Owner: {owner}  (matched at {where})")
-        print("\nDrop these commits from the merge set and route the diff to the owner.")
+            if where == "UNDECLARED":
+                print(f"  {path}\n    no Status/Owner row: an undeclared document in "
+                      "a directory where custody can change")
+            else:
+                print(f"  {path}\n    Status: {status} | Owner: {owner}  (matched at {where})")
+        print("\nDrop these commits from the merge set and route the diff to the owner, "
+              "or declare the document's Status and Owner rows.")
         return 1
 
     print(f"Authority gate passed: {len(paths)} changed Markdown file(s), all CERG-owned.")
