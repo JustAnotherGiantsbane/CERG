@@ -23,7 +23,7 @@ This document records the architectural decisions made in the cragin-security fo
 
 ADRs exist to prevent two failure modes:
 
-1. **Amnesia** — Six months from now, nobody remembers why ServiceNow was chosen over Archer, or why CB-002 has 86 controls instead of 97
+1. **Amnesia** — Six months from now, nobody remembers why we chose ServiceNow over Archer, or why CB-002 has 86 controls instead of 97
 2. **Drift** — Without documented rationale, future changes can accidentally reverse a deliberate trade-off
 
 The ADR format follows the well-known [ADR template](https://adr.github.io/) (context → decision → consequences).
@@ -44,7 +44,7 @@ These two types have different audiences, different quality criteria, and differ
 
 ### Decision
 
-A separate `OPN` domain code was created for practice assets. The OPN prefix (short for "Opinionated") marks documents that are fork-specific consulting materials:
+The fork created a separate `OPN` domain code for practice assets. The OPN prefix (short for "Opinionated") marks documents that are fork-specific consulting materials:
 
 - `CERG-OPN-TOOLS-001` — Opinionated Tool Matrix
 - `CERG-OPN-TOOLS-002` — GRC Rollout Guide
