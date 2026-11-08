@@ -1,6 +1,6 @@
 # Story 8: CERG Lite - Maria and the Tuesday scanner report
 
-This story is for the CERG Lite team: 2-8 people running the Minimum Viable CERG (MVC) spine. Every other story in this directory assumes a Standard or Regulated team. Read [CERG-GOV-IMP-003](../../governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md) and [CERG-GOV-IMP-006](../../governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md) before this story.
+This story is for the CERG Lite team: 2-8 people running the Minimum Viable CERG (MVC) spine. Every other story in this directory assumes a Standard or Regulated team.
 
 ## Situation
 
@@ -10,48 +10,7 @@ Six weeks ago Maria adopted the MVC. The [Cybersecurity Policy](../../governance
 
 It is Tuesday at 8:07 a.m. The vulnerability scanner has finished its weekly run against the production subnet, the staging cloud tenant, and the four external IPs. Priya opens the export. There are 47 findings. Two are rated Critical.
 
-## CERG flow pattern
-
-Primary flow: [F-04 Finding to Remediation, Exception, or Residual Risk](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#12-flow-f-04--finding-to-remediation-exception-or-residual-risk)
-
-Supporting procedures and standards:
-
-- [Small Team Adoption Path](../../governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md) - the operating rhythm and role consolidation map for a 3-person team.
-- [Role-Based Implementation Checklists](../../governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md) - what each consolidated role does in week 1 through month 6.
-- [Exposure Management Procedure](../../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) - the observe, validate, classify, treat, verify flow Priya runs.
-- [Risk Register and Exception Process](../../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) - how findings become risks, exceptions, or risk acceptances when treatment cannot meet the required clock.
-- [Adoption Safety Guide](../../governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md) - role safety and decision log requirements for consolidated roles.
-- [Risk Management Framework](../../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) - canonical risk scoring and Business Owner / Executive Sponsor acceptance authority.
-- [Evidence Quality Standard](../../governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md) - what "evidence" means on a spreadsheet in a small team.
-- [Third Party and Supply Chain Risk Procedure](../../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) - vendor escalation, evidence requests, and alternate-service decisions.
-
-### How the three pillars collapse onto three people
-
-| Pillar | Consolidated role at Northwind | Primary responsibilities today |
-|---|---|---|
-| Governance | Maria (also CISO) | Decision log, exception routing, evidence index, executive sponsor liaison |
-| Risk | Priya | Triage the 47 findings, severity calls, SLA tracking, risk register updates |
-| Engineering | Devin | Patch planning, change windows, asset ownership confirmation |
-
-The collapse is intentional and recorded in the [Decision Log](../../governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md#4-the-decision-log) per IMP-002 §4. Maria is the only person who signs exceptions. Priya owns the scanner schedule and the risk register. Devin owns the change record. There is no fourth person to delegate to.
-
-## Walkthrough
-
-| Step | What happens | Primary owner | Record or evidence |
-|------|--------------|---------------|--------------------|
-| 1 | Priya imports the 47 findings into the exposure backlog spreadsheet and tags each row with asset, reachability, source severity, and PRC-VM classification clock. | Priya (Risk) | Exposure backlog (EVD rows) |
-| 2 | Priya validates reachability and asset ownership for the two Critical findings. One is on the customer portal web server; the other is on a legacy SFTP endpoint that hosts a vendor integration. | Priya (Risk) | Triage notes in Finding Record |
-| 3 | Priya checks public exploit and KEV status. Both have public exploit code; the Internet-facing portal is classified as **Material Risk — PPR**. The vendor SFTP endpoint is treated as a Third-Party Finding with potential Critical residual risk until the vendor proves containment. | Priya (Risk) | Classification notes; PRC-VM SLA clock |
-| 4 | Devin confirms the customer portal web server is in his asset inventory and that the application owner (Operations Director) is named. The SFTP endpoint is vendor-owned, so Devin identifies the integration path, credentials, logs, and whether Northwind can pause transfers safely. | Devin (Engineering) | Asset Record update; integration map; vendor question logged |
-| 5 | Devin opens an emergency Change Record for the customer portal patch. He coordinates a same-day maintenance window with the Operations Director because PRC-VM's PPR clock is 48 hours for Internet-facing exposure. | Devin (Engineering) | Change Record |
-| 6 | For the SFTP endpoint, Priya opens a Third-Party Finding, sends the vendor the CVE details, requests evidence of containment and patch timing, and references the contract SLA. Devin disables nonessential transfers, rotates credentials, and prepares an alternate encrypted transfer path for sensitive reports. | Priya (Risk) + Devin (Engineering) | Third-Party Finding; containment evidence; vendor evidence request |
-| 7 | Maria reviews both Criticals immediately, not at the next weekly meeting. She can approve emergency containment and exception routing as CISO/Governance, but she cannot accept the vendor residual business risk alone. If the business must keep using the SFTP path before vendor remediation, Maria prepares a Risk Acceptance Request for the COO Executive Sponsor under RMF-001 §9.7. | Maria (Governance / CISO) | Decision Log entry; Risk Acceptance Request if continued use is required |
-| 8 | The COO chooses the safer business path: pause sensitive SFTP transfers and use the alternate encrypted path until the vendor patches. Because the risky path is not used, no Critical risk acceptance is needed; the open item remains a Third-Party Finding with treatment tracking. | COO Executive Sponsor + Maria | Decision Log entry; business decision; alternate transfer evidence |
-| 9 | After the maintenance window, Devin uploads patch output, the change ticket closure, and a service-validation screenshot. Priya rescans the portal and confirms closure. The portal Finding Record moves to Closed. | Devin (Engineering) + Priya (Risk) | Closed Finding Record |
-| 10 | Priya leaves the remaining 45 findings in the exposure backlog with PRC-VM clocks running. She flags the 11 High findings for the biweekly exposure review. | Priya (Risk) | Updated exposure backlog |
-| 11 | Maria updates the evidence index with the Closed Finding for the portal, the Third-Party Finding for the SFTP endpoint, the vendor evidence request, and the COO decision to use the alternate path. | Maria (Governance) | Evidence index entries |
-
-### Narrative
+## Narrative
 
 At 8:07 a.m. Priya's email pings with the scanner export. She has been doing this every Tuesday for six weeks and has the spreadsheet template down. By 8:30 a.m. the two Critical findings are tagged, validated against the asset inventory, and routed. The portal finding goes to Devin and is classified as Material Risk — PPR because it is Internet-facing with public exploit code. The SFTP finding goes back to Priya because the asset is vendor-owned, but Priya does not treat vendor ownership as a reason to slow down.
 
@@ -83,6 +42,42 @@ The collapse of the three pillars onto three people is the central design constr
 
 If Northwind grows to 8 people in the next year, the team will deconsolidate. Maria will keep CISO and Governance. Priya will keep Risk and Exposure Management. They will add a dedicated Identity Engineer, a dedicated Compliance person, and two more Engineering roles. The records do not change. The RACI in [OM-001](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) does not change. The cadence expands from weekly 1-hour to weekly 2-hour with sub-pillar owners. That deconsolidation is the documented growth path in IMP-003 §4.
 
+## CERG flow pattern
+
+Primary flow: [F-04 Finding to Remediation, Exception, or Residual Risk](../../governance/CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#12-flow-f-04--finding-to-remediation-exception-or-residual-risk)
+
+The three documents this story leans on:
+
+- [Small Team Adoption Path](../../governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md) - the operating rhythm and the ten starting records named in the Situation (IMP-003 §5).
+- [Exposure Management Procedure](../../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) - the observe, validate, classify, treat, verify flow Priya runs, and the PPR clock the day races.
+- [Risk Management Framework](../../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) - canonical risk scoring and the §9.7 acceptance authority Maria cannot sign away.
+
+### How the three pillars collapse onto three people
+
+| Pillar | Consolidated role at Northwind | Primary responsibilities today |
+|---|---|---|
+| Governance | Maria (also CISO) | Decision log, exception routing, evidence index, executive sponsor liaison |
+| Risk | Priya | Triage the 47 findings, severity calls, SLA tracking, risk register updates |
+| Engineering | Devin | Patch planning, change windows, asset ownership confirmation |
+
+The collapse is intentional and recorded in the [Decision Log](../../governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md#4-the-decision-log) per IMP-002 §4. Maria is the only person who signs exceptions. Priya owns the scanner schedule and the risk register. Devin owns the change record. There is no fourth person to delegate to.
+
+## Walkthrough
+
+| Step | What happens | Primary owner | Record or evidence |
+|------|--------------|---------------|--------------------|
+| 1 | Priya imports the 47 findings into the exposure backlog spreadsheet and tags each row with asset, reachability, source severity, and PRC-VM classification clock. | Priya (Risk) | Exposure backlog (EVD rows) |
+| 2 | Priya validates reachability and asset ownership for the two Critical findings. One is on the customer portal web server; the other is on a legacy SFTP endpoint that hosts a vendor integration. | Priya (Risk) | Triage notes in Finding Record |
+| 3 | Priya checks public exploit and KEV status. Both have public exploit code; the Internet-facing portal is classified as **Material Risk — PPR**. The vendor SFTP endpoint is treated as a Third-Party Finding with potential Critical residual risk until the vendor proves containment. | Priya (Risk) | Classification notes; PRC-VM SLA clock |
+| 4 | Devin confirms the customer portal web server is in his asset inventory and that the application owner (Operations Director) is named. The SFTP endpoint is vendor-owned, so Devin identifies the integration path, credentials, logs, and whether Northwind can pause transfers safely. | Devin (Engineering) | Asset Record update; integration map; vendor question logged |
+| 5 | Devin opens an emergency Change Record for the customer portal patch. He coordinates a same-day maintenance window with the Operations Director because PRC-VM's PPR clock is 48 hours for Internet-facing exposure. | Devin (Engineering) | Change Record |
+| 6 | For the SFTP endpoint, Priya opens a Third-Party Finding, sends the vendor the CVE details, requests evidence of containment and patch timing, and references the contract SLA. Devin disables nonessential transfers, rotates credentials, and prepares an alternate encrypted transfer path for sensitive reports. | Priya (Risk) + Devin (Engineering) | Third-Party Finding; containment evidence; vendor evidence request |
+| 7 | Maria reviews both Criticals immediately, not at the next weekly meeting. She can approve emergency containment and exception routing as CISO/Governance, but she cannot accept the vendor residual business risk alone. If the business must keep using the SFTP path before vendor remediation, Maria prepares a Risk Acceptance Request for the COO Executive Sponsor under RMF-001 §9.7. | Maria (Governance / CISO) | Decision Log entry; Risk Acceptance Request if continued use is required |
+| 8 | The COO chooses the safer business path: pause sensitive SFTP transfers and use the alternate encrypted path until the vendor patches. Because the risky path is not used, no Critical risk acceptance is needed; the open item remains a Third-Party Finding with treatment tracking. | COO Executive Sponsor + Maria | Decision Log entry; business decision; alternate transfer evidence |
+| 9 | After the maintenance window, Devin uploads patch output, the change ticket closure, and a service-validation screenshot. Priya rescans the portal and confirms closure. The portal Finding Record moves to Closed. | Devin (Engineering) + Priya (Risk) | Closed Finding Record |
+| 10 | Priya leaves the remaining 45 findings in the exposure backlog with PRC-VM clocks running. She flags the 11 High findings for the biweekly exposure review. | Priya (Risk) | Updated exposure backlog |
+| 11 | Maria updates the evidence index with the Closed Finding for the portal, the Third-Party Finding for the SFTP endpoint, the vendor evidence request, and the COO decision to use the alternate path. | Maria (Governance) | Evidence index entries |
+
 ## Operational outputs
 
 - 1 closed Finding Record for the customer portal Material Risk — PPR exposure.
@@ -98,4 +93,16 @@ If Northwind grows to 8 people in the next year, the team will deconsolidate. Ma
 - **Audit response.** Northwind is not yet regulated. When their largest customer requests a SOC 2 attestation in six months, Story 3 will be the right reference.
 - **AI tooling.** Northwind is not yet piloting AI. When the Operations Director asks about an AI assistant for the customer service team, Story 7 will be the right reference.
 
-For the 5-person operating rhythm used in this story, see [CERG-GOV-IMP-003 §3](../../governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md#3-operating-rhythm-for-a-5-person-team). For the role consolidation map, see [CERG-GOV-IMP-003 §4](../../governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md#4-role-consolidation-map).
+---
+
+## If you need the paperwork
+
+The rest of the reference material, in case you want it after the story rather than before it:
+
+- [Small Team Adoption Path, §3 - operating rhythm for a 5-person team](../../governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md#3-operating-rhythm-for-a-5-person-team)
+- [Small Team Adoption Path, §4 - role consolidation map](../../governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md#4-role-consolidation-map)
+- [Role-Based Implementation Checklists](../../governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md) - what each consolidated role does in week 1 through month 6.
+- [Risk Register and Exception Process](../../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md) - how findings become risks, exceptions, or risk acceptances when treatment cannot meet the required clock.
+- [Adoption Safety Guide](../../governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md) - role safety and decision log requirements for consolidated roles.
+- [Evidence Quality Standard](../../governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md) - what "evidence" means on a spreadsheet in a small team.
+- [Third Party and Supply Chain Risk Procedure](../../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md) - vendor escalation, evidence requests, and alternate-service decisions.
