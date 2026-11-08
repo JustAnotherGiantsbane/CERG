@@ -30,6 +30,26 @@ CERG is open source (CC BY 4.0) and contributions are welcome. This document exp
 
 **For everything**: make sure `python3 tools/cerg-validate.py` passes with 0 errors before submitting. Warnings should be resolved before submitting unless they are intentionally documented and accepted by maintainers; errors are not acceptable.
 
+## Where work happens, and what a pull request is for
+
+**Work in your own fork. `m0dernz/CERG` keeps a single maintainer, and changes reach it as pull requests.** Direct pushes to the canonical repo are not available, by design.
+
+The fork is yours to experiment in. Restructure a standard, rewrite a procedure, prototype an operating asset, try three designs and keep one. None of that needs permission, and none of it needs to look finished before you start. The fork is not a waiting room for approval. It is where the work happens.
+
+A pull request to `m0dernz` is an offer, not an exam. The maintainer decides whether a change belongs in mainline now, given what mainline is already carrying. That is a question about scope, timing, and review load, not a verdict on whether the idea is good. An excellent change can be declined because the maintainer cannot give it the review it deserves, because it targets a generation of the framework under revision, or because similar work is already in flight.
+
+**A rejected pull request is not a finding that the idea is bad.** It means mainline is not the right destination today. The work stays valid in your fork, stays citable, and can be proposed again when the evidence or the mainline has changed.
+
+Slow adoption is the design, not friction to route around. Contributors move fast because they cannot destabilize the canonical repo. The maintainer accepts the maintenance burden along with the authority over what enters it. That trade is the separation of duties, and it is what keeps CERG a reference rather than a running average of whatever arrived most recently.
+
+### What this asks of a contributor
+
+- Open one pull request per idea. A change a reviewer can hold in their head and revert in isolation is a change that can be accepted.
+- Make the pull request argue for itself: the problem, the evidence it works, what it costs to maintain, and what breaks if it is declined.
+- Do not resubmit a declined change unchanged. New evidence, a narrower scope, or a changed mainline is a reason to try again. Repetition is not.
+- Keep your fork's `main` usable. Other people read it, and a branch full of half-merged debris is not a contribution.
+- Do not wait on a merge to continue. Build dependent work in your fork against its own branch, and say what it rests on.
+
 ## Optional: pre-commit hook
 
 The repo provides a `.pre-commit-config.yaml` that runs the validator, integrity checker, and validator tests on every commit. This is **optional** — the CERG CI workflow runs the same checks on every push and pull request, so pre-commit is a faster local feedback loop, not an additional gate.
