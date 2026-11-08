@@ -38,13 +38,11 @@
 
 ## 1. Purpose and Scope
 
-SOX shows up in the policy, the compliance matrix, the IT and Access standards, the risk procedure, and the operating model, but until this package, there was no SOX ITGC control library, no SOX-relevant system register, and no auditor-facing deficiency workflow.
+SOX shows up in the policy, the compliance matrix, the IT and Access standards, the risk procedure, and the operating model. Until this package, there was no SOX ITGC control library, no SOX-relevant system register, and no auditor-facing deficiency workflow.
 
-This package fills that gap. It assumes the organization is a publicly-traded U.S. company subject to the Sarbanes-Oxley Act with both external auditor and Internal Audit interaction. Where the organization is private, regulated by an analogous regime, or pre-IPO, the structure of this package adapts but the boundaries, scope by financial-reporting impact, evidence reused from operating controls, remain.
+This package fills that gap. It assumes the organization is a publicly-traded U.S. company subject to the Sarbanes-Oxley Act with both external auditor and Internal Audit interaction. Where the organization is private, regulated by an analogous regime, or pre-IPO, the structure adapts, but the boundaries remain: scope by financial-reporting impact, and evidence reused from operating controls.
 
-> **The CERG SOX Model in One Sentence**
->
-> SOX is not a separate control universe, it is a scope filter over the controls CERG already operates, with formal documentation and quarterly testing for the systems that touch financial reporting.
+SOX is not a separate control universe. It is a scope filter over the controls CERG already operates, with formal documentation and quarterly testing for the systems that touch financial reporting.
 
 ---
 
@@ -67,7 +65,7 @@ If the organization's audit firm scopes differently (some include "End-User Comp
 
 ## 3. SOX-Relevant System Register
 
-The Register is the scope filter, the list of systems whose controls feed external financial reporting. Every CERG control test under SOX scope is performed against systems in this register.
+The Register is the scope filter, the list of systems whose controls feed external financial reporting. Every CERG control test under SOX scope runs against systems in this register.
 
 | **Field** | **Description** |
 |---|---|
@@ -168,7 +166,7 @@ Specifically, the most-reused artifacts:
 
 ## 6. SOC 1 Reuse Procedure
 
-CB-001 §10.1 SOX crosswalk and §7.1 Inheritance establish that SOC 1 reports can be reused for hosted financial systems. This procedure operationalises that reuse: it defines how CERG acquires SOC 1 reports, inventories Complementary User Entity Controls (CUECs), performs gap analysis, documents compensating controls, builds an evidence package for the external auditor, and manages the annual refresh cycle.
+CB-001 §10.1 SOX crosswalk and §7.1 Inheritance establish that SOC 1 reports can be reused for hosted financial systems. This procedure puts that reuse into practice: CERG acquires the SOC 1 reports, inventories Complementary User Entity Controls (CUECs), runs the gap analysis, documents compensating controls, builds the evidence package for the external auditor, and manages the annual refresh cycle.
 
 ### 6.1 Report Acquisition
 
@@ -181,9 +179,7 @@ CB-001 §10.1 SOX crosswalk and §7.1 Inheritance establish that SOC 1 reports c
 | 5 | Archive report in the evidence library under `/frameworks/sox-itgc/soc1-reports/<provider>/<YYYY-QN>/` | Evidence Librarian | On receipt |
 | 6 | Register report status in SOX-Relevant System Register Section 3 (SOC 1 Available field) | SOX ITGC Lead | On receipt |
 
-> **SOC 1 Type II vs. Type I**
->
-> CERG accepts SOC 1 Type II (tested over a period) as the primary reuse evidence. SOC 1 Type I (point-in-time design only) is accepted as interim evidence only when a Type II is not yet available, and must be supplemented with customer-side testing of the operating effectiveness of CUECs.
+CERG accepts SOC 1 Type II (tested over a period) as the primary reuse evidence. SOC 1 Type I (point-in-time design only) is accepted as interim evidence only when a Type II is not yet available, and must be supplemented with customer-side testing of the operating effectiveness of CUECs.
 
 ### 6.2 CUEC Inventory
 
@@ -220,7 +216,7 @@ The gap analysis is documented in the [CB-001](../governance/CERG-GOV-CB-001_Uni
 
 ### 6.4 Compensating Controls
 
-Where a gap exists (Partial or No Coverage), compensating controls are designed and implemented.
+Where a gap exists (Partial or No Coverage), CERG designs and implements compensating controls.
 
 | **Gap** | **Compensating Control Example** | **Evidence** | **Owner** | **Timeline** |
 |---|---|---|---|---|
