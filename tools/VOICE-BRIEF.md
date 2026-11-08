@@ -222,6 +222,22 @@ is census-legal and ear-illegal: "This standard implements the foundational
 principles" became "puts the foundational principles into practice," which is
 active voice and wrong. Leave them.
 
+## Close-out runs the suite, and says which runner
+
+`pytest tests/` checks the machine-readable layer against the tree - the
+derived artifacts that describe the corpus and go stale silently. Run it before
+any pass claim, and quote the runner: "10 passed under pytest tests/" is a
+reproducible state; "tests pass" is an anecdote from whoever typed last.
+
+Where pytest is unavailable, `python3 tools/run-tests.py` runs every
+fixture-free test and names the ones it had to skip, so a partial run says so
+rather than passing quietly.
+
+The failure this rule exists for: a README edit took the file to 9,220
+characters while the index still recorded 9,234, and CI failed on
+`assert 9234 == 9220` for six hours. The stale summary and the assert were one
+disease - a derived artifact describing a corpus it no longer matches.
+
 ## Output contract
 
 For each file, append one JSON object to
