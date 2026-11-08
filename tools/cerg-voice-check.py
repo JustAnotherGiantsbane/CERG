@@ -53,18 +53,28 @@ def load_exemptions(path: str) -> list[dict]:
     return json.load(open(path, encoding="utf-8"))["rules"]
 
 
-def verify_exemptions(rules: list[dict], root: str) -> list[str]:
-    """Every pinned sentence must still be in the corpus."""
-    problems = []
+def verify_exemptions(rules: list[dict], root: str) -> tuple[list[str], list[str]]:
+    """Every pinned sentence must still be in the corpus.
+
+    An example marked pending_merge is exempt from verification until the
+    branch that introduces it lands; the run reports it instead of failing,
+    so the dependency is visible rather than assumed.
+    """
+    problems, pending = [], []
     for rule in rules:
         for ex in rule.get("examples", []):
             f = os.path.join(root, ex["file"])
+            present = os.path.exists(f) and norm(ex["sentence"]) in norm(
+                open(f, encoding="utf-8", errors="ignore").read())
+            if not present and ex.get("pending_merge"):
+                pending.append(f"{rule['id']}: awaits {ex['pending_merge']} - {ex['file']}")
+                continue
             if not os.path.exists(f):
                 problems.append(f"{rule['id']}: file missing - {ex['file']}")
                 continue
             if norm(ex["sentence"]) not in norm(open(f, encoding="utf-8", errors="ignore").read()):
                 problems.append(f"{rule['id']}: PROTECTED SENTENCE GONE - {ex['file']}: {ex['sentence'][:70]}")
-    return problems
+    return problems, pending
 
 
 def protects(rule: dict, sentence: str, path: str, prev: str | None, nxt: str | None) -> bool:
@@ -155,7 +165,7 @@ def main() -> int:
     args = ap.parse_args()
 
     rules = load_exemptions(args.exemptions)
-    problems = verify_exemptions(rules, args.root)
+    problems, pending = verify_exemptions(rules, args.root)
     if problems:
         print("Exemption check FAILED:")
         for p in problems:
@@ -170,6 +180,8 @@ def main() -> int:
         print(json.dumps({"rules": len(rules), "files": rows}, indent=1))
         return 0
 
+    for note in pending:
+        print(f"pending merge: {note}")
     print(f"{len(rules)} exemption rules verified; {len(rows)} files scored, "
           f"{sum(r['words'] for r in rows)} prose words\n")
     print(f"{'score':>6} {'raw':>5} {'words':>6} {'mean':>5} {'fill':>5} {'nom%':>5} {'pas':>5} {'brth%':>6}  file")

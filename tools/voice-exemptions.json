@@ -7,7 +7,10 @@
       "id": "normative-shall",
       "protects": "Normative sentences in mandate and requirements blocks",
       "rationale": "Auditors read the controlled thing as subject and the actor lives in the Roles table. Passive here is register, not sloppiness.",
-      "match": {"type": "regex", "pattern": "\\bshall\\b"},
+      "match": {
+        "type": "regex",
+        "pattern": "\\bshall\\b"
+      },
       "examples": [
         {
           "file": "governance/CERG-POL-001_Cybersecurity_Policy.md",
@@ -19,7 +22,10 @@
       "id": "flat-closing-sentence",
       "protects": "Sentences under eight words that end a paragraph",
       "rationale": "A period doing the work of three. The checker reads it as monotone or invites a merge into its neighbour.",
-      "match": {"type": "short-final", "max_words": 8},
+      "match": {
+        "type": "short-final",
+        "max_words": 8
+      },
       "examples": [
         {
           "file": "examples/day-in-the-life/story-8-cerg-lite-maria.md",
@@ -31,7 +37,10 @@
       "id": "negation-of-named-misconception",
       "protects": "X-is-not-Y sentences where a reader plausibly holds the error being negated",
       "rationale": "Aspirational blockquotes that deny nothing stay on the kill list. This rule covers only the denials that correct a real belief: that a scanner report is the program, that an encryptable backup is a backup.",
-      "match": {"type": "regex", "pattern": "\\bis not (a|an|the)\\b"},
+      "match": {
+        "type": "regex",
+        "pattern": "\\bis not (a|an|the)\\b"
+      },
       "examples": [
         {
           "file": "procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md",
@@ -39,7 +48,9 @@
         },
         {
           "file": "practice-assets/CERG-OPN-MSP-001_MSP_MSSP_Runbook.md",
-          "sentence": "A backup the ransomware can encrypt is not a backup."
+          "sentence": "A backup the ransomware can encrypt is not a backup.",
+          "pending_merge": "prose/front-door",
+          "note": "The sentence is written by this branch's own prose pass; it does not exist on main yet."
         }
       ]
     },
@@ -47,11 +58,14 @@
       "id": "build-that-lands",
       "protects": "Long sentences whose final clause carries the judgment",
       "rationale": "The accumulating clauses are the mechanism. Cutting the build softens the landing, so the build was load-bearing.",
-      "match": {"type": "regex", "pattern": "\\u2014 it is "},
+      "match": {
+        "type": "regex",
+        "pattern": "\\u2014 it is "
+      },
       "examples": [
         {
           "file": "procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md",
-          "sentence": "A program that reduces total findings while leaving Internet-exposed critical exposures open is not improving \u2014 it is reorganizing failure."
+          "sentence": "A program that reduces total findings while leaving Internet-exposed critical exposures open is not improving — it is reorganizing failure."
         }
       ]
     },
@@ -59,7 +73,10 @@
       "id": "semicolon-rule-pair",
       "protects": "One idea carried in two balanced halves",
       "rationale": "Split them and the halves weaken; merge them and the balance is lost.",
-      "match": {"type": "regex", "pattern": "[^;]+;[^;]+"},
+      "match": {
+        "type": "regex",
+        "pattern": "[^;]+;[^;]+"
+      },
       "examples": [
         {
           "file": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md",
@@ -71,7 +88,10 @@
       "id": "anaphora-as-inventory",
       "protects": "Three or more consecutive sentences sharing an opening",
       "rationale": "Uniform lengths, chosen. The device is the point.",
-      "match": {"type": "anaphora", "run": 3},
+      "match": {
+        "type": "anaphora",
+        "run": 3
+      },
       "examples": [
         {
           "file": "examples/day-in-the-life/story-10-new-ciso-90-days.md",
@@ -83,12 +103,24 @@
       "id": "artifact-and-state-names",
       "protects": "Terms ending in -tion, -ment, -ance, -ity, -ness because the model named an architecture",
       "rationale": "The nominalization counter must not tax our own vocabulary.",
-      "match": {"type": "term-list", "terms": [
-        "Treatment Selected", "reachability assessed", "Categorization Register",
-        "Risk Acceptance", "Exception Register", "Evidence Index", "Control Snapshot",
-        "Regulatory Applicability", "Decision Log", "Role Assignment Map",
-        "Asset Extract", "Exposure Backlog", "Improvement Backlog"
-      ]},
+      "match": {
+        "type": "term-list",
+        "terms": [
+          "Treatment Selected",
+          "reachability assessed",
+          "Categorization Register",
+          "Risk Acceptance",
+          "Exception Register",
+          "Evidence Index",
+          "Control Snapshot",
+          "Regulatory Applicability",
+          "Decision Log",
+          "Role Assignment Map",
+          "Asset Extract",
+          "Exposure Backlog",
+          "Improvement Backlog"
+        ]
+      },
       "examples": [
         {
           "file": "procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md",
@@ -104,7 +136,10 @@
       "id": "citation-phrases",
       "protects": "'in accordance with' and 'prior to' when they carry a regulation or a compliance boundary",
       "rationale": "As a habit these are filler; as a citation the regulation's name must survive the reword, and 'before' blurs a compliance boundary.",
-      "match": {"type": "regex", "pattern": "(in accordance with|prior to)"},
+      "match": {
+        "type": "regex",
+        "pattern": "(in accordance with|prior to)"
+      },
       "examples": [
         {
           "file": "governance/CERG-POL-001_Cybersecurity_Policy.md",
@@ -116,7 +151,10 @@
       "id": "competency-bullets",
       "protects": "Bulleted competency statements in roles/ job descriptions",
       "rationale": "HR tooling parses those bullets. Humanize the intro prose, not the bullet grammar.",
-      "match": {"type": "path-bullets", "path_glob": "roles/**"},
+      "match": {
+        "type": "path-bullets",
+        "path_glob": "roles/**"
+      },
       "examples": [
         {
           "file": "roles/jf-riskops/CERG-GOV-JD-RISKOPS-001_Exposure_Management_Lead.md",
