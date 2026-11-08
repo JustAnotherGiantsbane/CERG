@@ -177,7 +177,7 @@
 
 **Risk prevented:** Inconsistent security decisions and unenforceable standards without written policy. Without documented policy, security decisions are made ad hoc, varying by person, by team, and by pressure. You cannot hold anyone accountable to a standard that was never written down, and regulators will cite the absence of policy as a standalone finding.
 
-**Nuance vs. similar controls:** Policy risk is distinct from technical control risk. A technically hardened system with no supporting policy has no mechanism for ensuring that hardening is maintained, that exceptions are managed, or that new systems are hardened to the same standard. Policy failure doesn't cause a breach directly, it causes the conditions under which breaches happen systematically rather than occasionally.
+**Nuance vs. similar controls:** Policy risk is distinct from technical control risk. A technically hardened system with no supporting policy has no mechanism for keeping hardening current, managing exceptions, or hardening new systems to the same standard. Policy failure doesn't cause a breach directly, it causes the conditions under which breaches happen systematically rather than occasionally.
 
 ---
 
@@ -205,7 +205,7 @@
 
 **Pillar:** Governance | **Severity:** High
 
-**Risk prevented:** Inability to demonstrate control effectiveness, triggering regulatory findings and enforcement. A control that cannot be evidenced is treated as a control that does not exist by regulators and auditors. Evidence loss or gaps, whether from poor retention practices or from failure to collect in the first place, can convert a security success into a compliance failure.
+**Risk prevented:** Inability to demonstrate control effectiveness, triggering regulatory findings and enforcement. Regulators and auditors treat a control that cannot be evidenced as a control that does not exist. Evidence loss or gaps, whether from poor retention practices or from failure to collect in the first place, can convert a security success into a compliance failure.
 
 **Nuance vs. similar controls:** Evidence risk is bureaucratic, not technical. You can have a fully functioning security program that fails an audit because no one collected the records proving it functioned. The distinct failure mode: a pre-audit scramble to reconstruct evidence often produces incomplete or inconsistent records that create more questions than they answer. NERC-CIP evidence retention is explicitly tiered by standard and requirement, loss of required evidence is itself a potential violation.
 
