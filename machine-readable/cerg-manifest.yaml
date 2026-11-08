@@ -9,7 +9,7 @@
   document_type: governance_instrument
   domain: ADR
   version: 1.1.0
-  status: Draft
+  status: Approved
   classification: Public
   publication_profile: public
   owner_role: Consulting Practice Lead
@@ -17,9 +17,9 @@
   parent_artifact: CERG-POL-001
   source_path: governance/CERG-GOV-ADR-001_Architecture_Decision_Records.md
   source_file: CERG-GOV-ADR-001_Architecture_Decision_Records.md
-  source_hash: 4e3368c99ec090a5d26e14eea7cde56e1623b44ad4c173d08c66c24a10c53bff
+  source_hash: 7b5c7af4abf27aec2db95c6aaf8085af35516495f6db2491635d9758c776e3f7
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-ADR-001_Architecture_Decision_Records.md
-  llm_include: false
+  llm_include: true
   llm_priority: medium
   normative_weight: supporting
   pillar: governance
@@ -117,7 +117,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  source_hash: 6a03d3a9f5076babf1df775c57ce2371a5a41457afe8e6730252b52493b92d6f
+  source_hash: ca014632969a6713ec44fb80bdd1be51643a08efd949ba9d17ff901f7b9a4d5f
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   llm_include: true
   llm_priority: high
@@ -169,7 +169,7 @@
   document_type: governance_instrument
   domain: CB
   version: 1.1.1
-  status: Draft
+  status: Approved
   classification: Public
   publication_profile: public
   owner_role: Consulting Practice Lead
@@ -177,9 +177,9 @@
   parent_artifact: CERG-POL-001
   source_path: governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md
   source_file: CERG-GOV-CB-002_Practitioner_Control_Baseline.md
-  source_hash: 8c9af33e95561a9f84497fbd278572d0fbe59f8a56dffba748472f28b84cba82
+  source_hash: 0cd499fd753573ffa1c9d6a6795df613eafe039f1caf6a7d797acdb942dab3e2
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md
-  llm_include: false
+  llm_include: true
   llm_priority: medium
   normative_weight: supporting
   pillar: engineering

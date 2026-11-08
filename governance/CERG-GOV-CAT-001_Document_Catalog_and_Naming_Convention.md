@@ -358,7 +358,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | `CERG-GOV-CAT-001` | Document Catalog and Naming Convention | Governance Pillar Leader | Approved (this doc) |
 | [`CERG-GOV-CAT-002`](CERG-GOV-CAT-002_Record_Catalog.md) | Record Catalog | Governance Pillar Leader (Document Control) | Approved |
 | [`CERG-GOV-CB-001`](CERG-GOV-CB-001_Unified_Control_Baseline.md) | Unified Control Baseline | Governance Pillar Leader | Approved |
-| [`CERG-GOV-CB-002`](../governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md) | Practitioner Control Baseline (Extended) — cragin-security fork | Consulting Practice Lead | Draft |
+| [`CERG-GOV-CB-002`](../governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md) | Practitioner Control Baseline (Extended) — cragin-security fork | Consulting Practice Lead | Approved |
 | [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) | Metrics, Dashboard, and CISO/Board Reporting | Governance Pillar Leader | Approved |
 | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | CERG Framework (narrative) | CISO | Approved |
 | [`CERG-GOV-FRM-002`](CERG-GOV-FRM-002_Framework_System_Map.md) | Framework System Map | Governance Pillar Leader | Approved |
@@ -400,7 +400,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-GOV-CJ-001`](CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md) | Crown Jewel Register and Loss Scenario Library | Risk Pillar Leader / Governance Pillar Leader | Approved |
 | [`CERG-GOV-SLC-001`](CERG-GOV-SLC-001_CERG_Service_Level_Commitments.md) | CERG Service-Level Commitments | CISO | Approved |
 | [`CERG-GOV-CAL-002`](CERG-GOV-CAL-002_Calibration_Checklist.md) | Calibration Checklist | Governance Pillar Leader | Approved |
-| [`CERG-GOV-ADR-001`](CERG-GOV-ADR-001_Architecture_Decision_Records.md) | Architecture Decision Records — cragin-security fork | Consulting Practice Lead | Draft |
+| [`CERG-GOV-ADR-001`](CERG-GOV-ADR-001_Architecture_Decision_Records.md) | Architecture Decision Records — cragin-security fork | Consulting Practice Lead | Approved |
 
 ### 5.3 Standards
 
@@ -547,12 +547,12 @@ The `practice-assets/` directory contains consulting delivery materials maintain
 
 | **ID** | **Title** | **Owner** | **Status** |
 |---|---|---|---|
-| [`CERG-OPN-TOOLS-001`](../practice-assets/tools/CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md) | Opinionated Tool Matrix — Practitioner-Grade Recommendations | Consulting Practice Lead | Draft |
-| [`CERG-OPN-TOOLS-002`](../practice-assets/tools/CERG-OPN-TOOLS-002_GRC_Rollout_Guide.md) | GRC Rollout Guide — ServiceNow GRC + Vanta | Consulting Practice Lead | Draft |
-| [`CERG-OPN-TOOLS-003`](../practice-assets/tools/CERG-OPN-TOOLS-003_Evidence_Automation_Mapping.md) | Evidence Automation Mapping — Control-to-Tool Evidence Pipelines | Consulting Practice Lead | Draft |
-| [`CERG-OPN-TOOLS-004`](../practice-assets/tools/CERG-OPN-TOOLS-004_Threat_Intel_Validation.md) | Threat Intel Validation — KEV / Ransomware TTP Mapping | Consulting Practice Lead | Draft |
-| [`CERG-OPN-MSP-001`](../practice-assets/CERG-OPN-MSP-001_MSP_MSSP_Runbook.md) | MSP/MSSP Runbook — Practitioner Playbook | Consulting Practice Lead | Draft |
-| [`CERG-OPN-DLV-001`](../practice-assets/CERG-OPN-DLV-001_Engagement_Playbook.md) | Engagement Playbook — Scoping, Pricing, Delivery | Consulting Practice Lead | Draft |
+| [`CERG-OPN-TOOLS-001`](../practice-assets/tools/CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md) | Opinionated Tool Matrix — Practitioner-Grade Recommendations | Consulting Practice Lead | Approved |
+| [`CERG-OPN-TOOLS-002`](../practice-assets/tools/CERG-OPN-TOOLS-002_GRC_Rollout_Guide.md) | GRC Rollout Guide — ServiceNow GRC + Vanta | Consulting Practice Lead | Approved |
+| [`CERG-OPN-TOOLS-003`](../practice-assets/tools/CERG-OPN-TOOLS-003_Evidence_Automation_Mapping.md) | Evidence Automation Mapping — Control-to-Tool Evidence Pipelines | Consulting Practice Lead | Approved |
+| [`CERG-OPN-TOOLS-004`](../practice-assets/tools/CERG-OPN-TOOLS-004_Threat_Intel_Validation.md) | Threat Intel Validation — KEV / Ransomware TTP Mapping | Consulting Practice Lead | Approved |
+| [`CERG-OPN-MSP-001`](../practice-assets/CERG-OPN-MSP-001_MSP_MSSP_Runbook.md) | MSP/MSSP Runbook — Practitioner Playbook | Consulting Practice Lead | Approved |
+| [`CERG-OPN-DLV-001`](../practice-assets/CERG-OPN-DLV-001_Engagement_Playbook.md) | Engagement Playbook — Scoping, Pricing, Delivery | Consulting Practice Lead | Approved |
 
 ## 6. Cross-Reference Rules
 
