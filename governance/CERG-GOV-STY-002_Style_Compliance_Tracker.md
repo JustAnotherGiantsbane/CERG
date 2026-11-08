@@ -32,7 +32,7 @@ The snapshot below covers cataloged CERG artifacts only. Repository guides, exam
 | Cataloged artifacts with a lifecycle-control section | 128 (99%) | Review of cataloged source for Document Control, Procedure Control, or Plan Control sections |
 | Cataloged artifacts with the current STY-001 metadata field set | 127 (98%) | Review of Document ID, version, status, classification, owner, parent, review cycle, frameworks, regulations, and environments |
 
-Counts are deliberately derived during each review rather than copied into CAT-001. A catalog add, retirement, rename, or material metadata change triggers this tracker for reassessment.
+Each review derives the counts rather than copying them into CAT-001. A catalog add, retirement, rename, or material metadata change triggers this tracker for reassessment.
 
 ## 3. Open Compliance Items
 
@@ -50,7 +50,7 @@ Counts are deliberately derived during each review rather than copied into CAT-0
 
 ### 3.3 Review-Date Detection Coverage
 
-The integrity checker validates dated `Next Scheduled Review` fields. This review identified that a fill-in example in a document can precede the actual lifecycle date and mask an overdue date. The checker is updated with this review to select the authoritative dated value rather than the first fill-in value it encounters.
+The integrity checker validates dated `Next Scheduled Review` fields. This review identified that a fill-in example in a document can precede the actual lifecycle date and mask an overdue date. This review updates the checker to select the authoritative dated value rather than the first fill-in value it encounters.
 
 ## 4. Resolved or Confirmed Items
 
