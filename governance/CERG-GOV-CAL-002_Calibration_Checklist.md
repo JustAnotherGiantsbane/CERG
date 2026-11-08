@@ -34,7 +34,7 @@
 
 ## 1. Purpose and Scope
 
-The CERG framework embeds **preliminary defaults requiring organizational calibration** across multiple documents. These defaults are educated starting points for a mid-market organization; they are not approved values until calibrated against the organization's specific risk profile, staffing, and financial context. A program that operates on uncalibrated defaults makes decisions against thresholds that do not reflect its actual exposure.
+The CERG framework embeds **preliminary defaults requiring organizational calibration** across multiple documents. These defaults are educated starting points for a mid-market organization; they are not approved values until the organization calibrates them against its own risk profile, staffing, and financial context. A program that operates on uncalibrated defaults makes decisions against thresholds that do not reflect its actual exposure.
 
 This document consolidates **every preliminary default** in the CERG corpus into a single register. It identifies each parameter, its default value, the calibration inputs required, the calibration method, the owning role, and the review cadence.
 
@@ -234,7 +234,7 @@ At each adoption gate review, the Governance Pillar Leader (Policy & Standards) 
 
 ### 5.2 Other Metric Thresholds
 
-All discipline metrics (EM-001 through EM-010, RM-001 through RM-008, GV-001 through GV-006) carry preliminary green/amber/red thresholds defined in MTR-001 §3. These thresholds follow the same calibration rules (MTR-001 §10): tighten on green drift, escalate on red stall, adjust on risk appetite change. The initial preliminary values remain in effect until either triggered by the calibration rules or reviewed at the annual metrics program review.
+All discipline metrics (EM-001 through EM-010, RM-001 through RM-008, GV-001 through GV-006) carry preliminary green/amber/red thresholds defined in MTR-001 §3. These thresholds follow the same calibration rules (MTR-001 §10): tighten on green drift, escalate on red stall, adjust on risk appetite change. The initial preliminary values stay in effect until the calibration rules trigger a change or the annual metrics program review revisits them.
 
 | Field | Value |
 |-------|-------|
@@ -317,7 +317,7 @@ The Governance Pillar Leader (Policy & Standards) maintains the calibration stat
 
 ### 8.3 Calibration Documentation
 
-Every calibration decision is documented in the organization's Decision Log (IMP-002 §4) with:
+Document every calibration decision in the organization's Decision Log (IMP-002 §4) with:
 
 - Parameter being calibrated
 - Previous value (default or last calibrated)
@@ -328,7 +328,7 @@ Every calibration decision is documented in the organization's Decision Log (IMP
 
 ### 8.4 Integration with Other CERG Instruments
 
-- **Adoption gates (IMP-005):** Calibration status is a Gate 2→3 transition criterion. At least risk appetite and impact bands must be calibrated before exiting Gate 2.
+- **Adoption gates (IMP-005):** Calibration status is a Gate 2→3 transition criterion. At least the risk appetite and impact bands must be calibrated before exiting Gate 2.
 - **Risk acceptance (RMF-001):** Risk acceptance decisions made against uncalibrated values use qualitative judgment until calibration occurs. Document this in the risk acceptance record.
 - **Metrics (MTR-001):** Metric thresholds that reference SLC-001 commitment values remain as preliminary defaults until SLC-001 is calibrated.
 - **Improvement register (IMPREG-001):** Calibration actions are recorded as improvement register entries of type "Metric or threshold change" when they improve program precision.
@@ -381,4 +381,4 @@ Every calibration decision is documented in the organization's Decision Log (IMP
 | Program Improvement Register | [`CERG-GOV-IMPREG-001`](CERG-GOV-IMPREG-001_Program_Improvement_Register.md) | Tracks calibration actions |
 | Document Catalog | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact |
 
-Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO endorsement for all changes.
+Governance owns this document. The Governance Pillar Leader (Policy & Standards) initiates reviews, manages the revision cycle, and obtains CISO endorsement for all changes.
