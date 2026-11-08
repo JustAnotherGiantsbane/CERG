@@ -26,8 +26,9 @@
 
 ## Purpose
 
-A structured set of requests (outcomes, not procedures) from second-line cybersecurity to
-first-line IT/OT operations teams managing NERC CIP and broader security controls. Each entry
+This contract holds a structured set of requests (outcomes, not procedures) from second-line
+cybersecurity to first-line IT/OT operations teams that manage NERC CIP and broader security
+controls. Each entry
 defines what is needed, from where, how often, in what format, and how completeness is
 verified. This replaces ad-hoc "please be CIP compliant" requests with a repeatable contract.
 
@@ -64,8 +65,8 @@ verified. This replaces ad-hoc "please be CIP compliant" requests with a repeata
 7. **Escalation thresholds.** See definitions below. Do not wait for the periodic report if
    the threshold is met.
 
-8. **Evidence retention.** Records retained per the CIP evidence retention schedule for the
-   applicable standard version. Storage location and format documented.
+8. **Evidence retention.** Retain records per the CIP evidence retention schedule for the
+   applicable standard version, and document the storage location and format.
 
 ---
 
@@ -469,7 +470,7 @@ Low (CVSS 0.1-3.9) | Next planned maintenance cycle | Tracked; no formal accepta
 
 This section is deliberately pragmatic — every item here is a prediction of friction based
 on actual field experience. Use it to pre-negotiate, invest in automation, or adjust cadence
-before the contract is delivered to frontline teams.
+before frontline teams receive the contract.
 
 ### Likely to trigger pushback (High friction)
 
