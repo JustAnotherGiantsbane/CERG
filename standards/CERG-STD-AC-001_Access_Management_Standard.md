@@ -39,7 +39,7 @@
 
 ## 1. Purpose and Scope
 
-This standard puts the foundational principles of **[CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md)** into practice for identity, authentication, authorization, and the full access lifecycle. It defines specific, measurable requirements that apply to every in-scope asset, regardless of system class, environment, or trust level.
+This standard implements the foundational principles established in **[CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md)** for identity, authentication, authorization, and the full access lifecycle. It defines specific, measurable requirements that apply to every in-scope asset, regardless of system class, environment, or trust level.
 
 Access management is the connective tissue between every other security control. A perfectly hardened system is no more secure than the worst credential authorized to log into it. A perfectly classified data store is no more protected than the weakest authorization rule that permits read access. This standard treats identity as the primary enforcement layer it has become.
 
