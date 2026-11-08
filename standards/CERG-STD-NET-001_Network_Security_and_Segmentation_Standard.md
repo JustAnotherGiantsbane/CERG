@@ -40,7 +40,7 @@
 
 The network is where an intruder moves. A foothold on one system becomes a breach of the estate only if the network lets the intruder travel. The IT, OT, and Access standards each impose network-adjacent requirements; none of them owns the network itself. This standard does.
 
-This standard establishes the requirements for network security across CERG-managed environments: the zero-trust principles that govern how access to network resources is decided, how the estate is segmented, how boundaries between segments are controlled, how the IT and OT networks are separated, how remote access is granted, and how networks are monitored.
+This standard establishes the requirements for network security across CERG-managed environments: the zero-trust principles that govern access decisions, the segmentation of the estate, the control of boundaries between segments, the separation of the IT and OT networks, remote access, and network monitoring.
 
 It applies to every network CERG-managed systems use: physical and virtual networks in owned data centers, cloud virtual networks, the network paths to SaaS, and operational technology networks.
 
@@ -52,7 +52,7 @@ It applies to every network CERG-managed systems use: physical and virtual netwo
 
 ## 2. Principles
 
-1. **The network is not a trust boundary.** Being on the internal network grants nothing. Access to a resource is decided per request against identity, device posture, and context, not by network location.
+1. **The network is not a trust boundary.** Being on the internal network grants nothing. The estate decides access to a resource per request against identity, device posture, and context, not by network location.
 2. **Default deny.** Network paths are denied unless explicitly allowed. A segment, a firewall, a security group starts closed. Connectivity is added deliberately and recorded.
 3. **Segment by function and criticality.** Systems are grouped into segments by what they do and how critical they are, per the criticality tiers in [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md). A breach in one segment does not become a breach of another for free.
 4. **The boundary is enforced and watched.** Every boundary between segments is enforced by a control and monitored. An unenforced boundary is not a boundary.
@@ -63,16 +63,16 @@ It applies to every network CERG-managed systems use: physical and virtual netwo
 
 ## 3. Zero-Trust Architecture
 
-CERG networks are designed toward the zero-trust model in NIST 800-207. The estate does not have to reach a fully mature zero-trust architecture on day one; it does have to move deliberately in that direction and never away from it.
+CERG designs its networks toward the zero-trust model in NIST 800-207. The estate does not have to reach a fully mature zero-trust architecture on day one; it does have to move deliberately in that direction and never away from it.
 
-1. **Access is per-session and per-resource.** A user or service is granted access to a specific resource for a specific session, not to a network zone indefinitely.
+1. **Access is per-session and per-resource.** The enforcement point grants a user or service access to a specific resource for a specific session, not to a network zone indefinitely.
 2. **Every access decision uses identity and device posture.** Access decisions combine the authenticated identity per [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) with the posture of the device making the request per [`CERG-STD-EP-001`](CERG-STD-EP-001_Endpoint_and_Mobile_Security_Standard.md).
 3. **Encryption in transit is assumed everywhere.** Traffic is encrypted in transit per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md), including traffic between internal segments. The network is treated as hostile.
 4. **The policy decision point is logged.** Every access decision a zero-trust enforcement point makes is logged per [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md).
 
 > **Zero Trust Is a Direction, Not a Product**
 >
-> No purchase makes an organization zero-trust. Zero trust is an architecture an estate moves toward over years: removing implicit network trust, adding identity and posture to access decisions, encrypting internal traffic, shrinking segments. CERG asks one thing of every network change: does it move the estate toward the zero-trust model, or away from it? Changes that move away from it are exceptions and are filed as such.
+> No purchase makes an organization zero-trust. Zero trust is an architecture an estate moves toward over years: removing implicit network trust, adding identity and posture to access decisions, encrypting internal traffic, shrinking segments. CERG asks one thing of every network change: does it move the estate toward the zero-trust model, or away from it? Changes that move away from it are exceptions; file them as such.
 
 ---
 
@@ -207,7 +207,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](../governance/
 - Internal audit or regulatory finding affecting network security
 - Direction from the CISO
 
-Cyber Engineering owns this document. The Engineering Pillar Leader (Platforms) is responsible for initiating reviews, managing the revision cycle, and obtaining Governance Pillar Leader approval, with CISO endorsement, for all changes.
+Cyber Engineering owns this document. The Engineering Pillar Leader (Platforms) initiates reviews, manages the revision cycle, and obtains Governance Pillar Leader approval, with CISO endorsement, for all changes.
 
 ### Related Documents
 
