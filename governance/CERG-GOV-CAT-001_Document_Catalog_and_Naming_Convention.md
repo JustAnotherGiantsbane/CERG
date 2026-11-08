@@ -143,7 +143,7 @@ Files are named `<DocumentID>_<Short_Title>.md` using underscore-separated title
 
 New domains are added only by amendment to this catalog.
 
-> **Domain codes reserved for workforce and operational flows:** `JF` (Job Families) and `FLOW` (Cross-Pillar Operational Flows) were added in CAT-001 v1.31 as part of the workforce architecture and operational flow build-out.
+> **Domain codes reserved for workforce and operational flows:** CAT-001 v1.31 added `JF` (Job Families) and `FLOW` (Cross-Pillar Operational Flows) as part of the workforce architecture and operational flow build-out.
 
 > **Type-Code Discipline**
 >
@@ -193,7 +193,7 @@ Approval authority follows [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) 
 
 ### 4.1 Review Cadence Tiers
 
-Not all documents require the same review frequency. Documents are assigned to one of three review tiers based on their criticality and change rate:
+Not all documents require the same review frequency. Each document maps to one of three review tiers by criticality and change rate:
 
 | Tier | Review Cadence | Applies To | Review Depth |
 |------|---------------|-----------|-------------|
@@ -326,8 +326,8 @@ Each retirement event is recorded in the revision history of:
 A retired document may be reactivated (returned to `Approved` status) only if:
 1. A stakeholder demonstrates a regulatory or operational need that the superseding document does not satisfy.
 2. The Governance Pillar Leader approves reactivation after a documented review.
-3. The document's content is reviewed and updated to current standards before reactivation.
-4. The `Retired` catalog entry is updated to `Approved` with a revision history note.
+3. Governance reviews and updates the document's content to current standards before reactivation.
+4. The Governance Pillar Leader updates the `Retired` catalog entry to `Approved` with a revision history note.
 
 ### 4.5 Ownership Delegation
 
@@ -440,7 +440,7 @@ The V1 library is the set below. Every artifact listed has either an approved or
 | [`CERG-PRC-CHG-001`](../procedures/CERG-PRC-CHG-001_Security_Change_Management_Procedure.md) | Security Change Management Procedure | Cyber Engineering | Approved |
 | [`CERG-PRC-LL-001`](../procedures/CERG-PRC-LL-001_Lessons_Learned_and_Program_Improvement_Procedure.md) | Lessons Learned and Program Improvement Procedure | Governance Pillar Leader | Approved |
 
-> **Numbering note: CERG-PRC-AC-001.** The Access Management Runbook is identifier `CERG-PRC-AC-002` rather than `-001` because the original `-001` slot was reserved before the access-review work was incorporated into [`CERG-PRC-AC-002`](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md) §5. The `-002` ID is preserved to avoid renumbering existing references. The `-001` slot remains reserved; no standalone artifact is planned.
+> **Numbering note: CERG-PRC-AC-001.** The Access Management Runbook is identifier `CERG-PRC-AC-002` rather than `-001`: the original `-001` slot was reserved before the access-review work moved into [`CERG-PRC-AC-002`](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md) §5. The catalog preserves the `-002` ID to avoid renumbering existing references. The `-001` slot remains reserved; no standalone artifact is planned.
 
 ### 5.5 Plans / Operational Packages
 
@@ -579,7 +579,7 @@ An artifact moves from this section to Section 5 when it is authored and reaches
 
 ### 7.1 Status of the V1.x Build
 
-The V1.x build extends the original V1 library along six tracks: the adoption layer, the Engineering-pillar standards, the governance glue, the missing procedures, the missing operational packages, and the standalone template library. As of this version of the catalog, the adoption layer (`IMP`, `VAR`, `MAT`), the seven Engineering and data standards (`SDL`, `AM`, `NET`, `EP`, `DG`, `AI`, `MSG`), the consolidated RACI instrument (`RAC`), the Group C in-scope procedures (`IR-002`, `TM`, `TI`, `AUD`, `CHG`), the Group D operational packages (`BC`, `ISO`, `PRIV`), the Group E standalone templates, and the F2-F4 governance instruments (`CAL`, `STY`, `TRC`) are authored and registered in Section 5. No standalone artifacts are currently planned; Section 7.6 records reserved identifiers whose V1 content remains authoritative in an existing artifact.
+The V1.x build extends the original V1 library along six tracks: the adoption layer, the Engineering-pillar standards, the governance glue, the missing procedures, the missing operational packages, and the standalone template library. As of this version of the catalog, Section 5 registers the adoption layer (`IMP`, `VAR`, `MAT`), the seven Engineering and data standards (`SDL`, `AM`, `NET`, `EP`, `DG`, `AI`, `MSG`), the consolidated RACI instrument (`RAC`), the Group C in-scope procedures (`IR-002`, `TM`, `TI`, `AUD`, `CHG`), the Group D operational packages (`BC`, `ISO`, `PRIV`), the Group E standalone templates, and the F2-F4 governance instruments (`CAL`, `STY`, `TRC`). No standalone artifacts are currently planned; Section 7.6 records reserved identifiers whose V1 content remains authoritative in an existing artifact.
 
 ### 7.2 Planned Procedures
 

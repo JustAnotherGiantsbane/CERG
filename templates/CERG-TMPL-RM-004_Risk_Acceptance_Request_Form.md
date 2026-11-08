@@ -31,7 +31,7 @@
 
 ## 1. Purpose and Use
 
-This form records a formal **risk acceptance** decision under the authority framework defined in [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. It is used when leadership chooses to accept residual risk rather than mitigate, transfer, or avoid it. 
+This form records a formal **risk acceptance** decision under the authority framework defined in [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. Leadership uses it when it chooses to accept residual risk rather than mitigate, transfer, or avoid.
 
 **This form is for risk acceptances only.** For deviations from policy or standards (where the control itself is not implemented as written), use the Security Exception Request Form [`CERG-TMPL-RM-002`](CERG-TMPL-RM-002_Security_Exception_Request_Form.md) — which follows the Governance-tracked exception register workflow.
 
@@ -130,7 +130,7 @@ This form records a formal **risk acceptance** decision under the authority fram
 
 ## 4. Review and Approval
 
-Approval authority follows [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. An acceptance is not valid until all required signatures are recorded.
+Approval authority follows [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md) §9.7. An acceptance is valid only once all required signatures are recorded.
 
 | **Role** | **Review Meaning** | **Name** | **Date** | **Decision** |
 |---|---|---|---|---|

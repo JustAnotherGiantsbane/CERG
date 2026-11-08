@@ -36,15 +36,15 @@
 
 ## 1. Purpose and Scope
 
-The CERG Framework (FRM-001) notes that the illustrative CERG team operates alongside "an equal population of consultants and contractors." The RACI Instrument (RAC-001) and Job Descriptions (JD-001) assume employees. The Onboarding Program (ONB-001) is built for permanent team members who will be with the organization for years, not contractors who may be engaged for a six-month audit cycle or a twelve-month platform migration.
+The CERG Framework (FRM-001) notes: the illustrative CERG team operates alongside "an equal population of consultants and contractors." The RACI Instrument (RAC-001) and Job Descriptions (JD-001) assume employees. The Onboarding Program (ONB-001) serves permanent team members who will be with the organization for years — not contractors engaged for a six-month audit cycle or a twelve-month platform migration.
 
-This document closes the gap. It defines which CERG roles can be filled by contractors and which must remain employee-only, establishes the knowledge retention requirements that prevent a departing contractor from taking the only copy of critical artifacts, defines the supervision model (every contractor has a named employee supervisor who is accountable for the contractor's work product), and provides condensed onboarding and offboarding programs for non-employee staff.
+This document closes the gap. It defines which CERG roles contractors can fill and which must remain employee-only. It establishes the knowledge retention requirements that keep a departing contractor from taking the only copy of critical artifacts. It sets the supervision model: every contractor has a named employee supervisor who is accountable for the contractor's work product. And it provides condensed onboarding and offboarding programs for non-employee staff.
 
 It applies to all non-employee staff performing CERG work: independent contractors, consultants from professional services firms, staff augmentation personnel, and managed service providers whose personnel operate as embedded team members. It does not apply to external auditors, assessors, or penetration testing firms operating under a statement of work with defined deliverables and limited access, though the knowledge retention requirements in §6 apply to any artifacts those external parties produce.
 
 > **Contractors Are a Force Multiplier, Not a Replacement for Capability**
 >
-> A contractor can accelerate a cloud migration, clear a exposure backlog, or run a CMMC assessment readiness program. A contractor cannot be the organization's institutional memory, its regulatory relationship, or its leadership bench. The Framework envisions a CERG team where contractors supplement, not substitute for, the employee core. This document ensures that distinction does not blur in practice.
+> A contractor can accelerate a cloud migration, clear a exposure backlog, or run a CMMC assessment readiness program. A contractor cannot be the organization's institutional memory, its regulatory relationship, or its leadership bench. The Framework envisions a CERG team where contractors supplement, not substitute for, the employee core. This document keeps that distinction from blurring in practice.
 
 ---
 
@@ -61,13 +61,13 @@ CERG-adopting organizations engage contractors for legitimate reasons:
 
 ### 2.2 The Risks
 
-Every contractor engagement carries three risks that this document is designed to mitigate:
+Every contractor engagement carries three risks this document mitigates:
 
 1. **Knowledge flight.** A contractor who builds the threat model, designs the detection pipeline, or structures the evidence library and then departs takes that knowledge with them. If the knowledge is not captured in CERG repositories before they leave, the organization has lost both the person and the capability.
 
 2. **Accountability diffusion.** A contractor who reports to an account manager at their firm, not to a CERG manager, operates without the performance management, feedback, and development that ensure quality. When the contractor's work is inadequate, the CERG manager may not discover it until the engagement ends and the cleanup falls to employees.
 
-3. **Cultural separation.** A contractor who is not included in team meetings, not given a CERG buddy, and not expected to understand the left-right model operates as a hired tool, not a team member. Their work reflects their isolation: it meets the letter of the statement of work but misses the context that makes it integrate with the rest of CERG's output.
+3. **Cultural separation.** A contractor who is not included in team meetings, not given a CERG buddy, and not expected to understand the left-right model operates as a hired tool, not a team member. Their work reflects their isolation: it meets the letter of the statement of work, but misses the context that would make it integrate with the rest of CERG's output.
 
 ---
 
@@ -113,7 +113,7 @@ A role must be filled by an employee when it:
 
 > **"Conditional" Means "Ask Before You Engage"**
 >
-> A role marked Conditional is not a blanket authorization. Each Conditional contractor engagement requires the pillar leader and the CISO to confirm that the specific engagement does not cross the "must be employee" boundaries above. Document the confirmation. A Conditional role engaged without this confirmation is a compliance finding waiting to happen.
+> A role marked Conditional is not a blanket authorization. Each Conditional contractor engagement requires the pillar leader and the CISO to confirm: the specific engagement does not cross the "must be employee" boundaries above. Document the confirmation. A Conditional role engaged without this confirmation is a compliance finding waiting to happen.
 
 ---
 
@@ -137,7 +137,7 @@ The contractor or consulting firm delivers a defined scope of work against a sta
 
 ### 4.3 Managed Service
 
-This section governs delegation of a **CERG second-line function** to an external provider under CERG supervision. For example, a third-party risk-management firm may conduct vendor assessments on CERG's behalf. A first-line security service operated by an internal team, operating division, or provider — including SOC/SIEM operation, scanning, identity-threat monitoring, alert triage, or production detection deployment — is governed by the first-line service interface in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §2.4, not this section.
+This section governs delegation of a **CERG second-line function** to an external provider under CERG supervision. For example, a third-party risk-management firm may conduct vendor assessments on CERG's behalf. A first-line security service operated by an internal team, operating division, or provider — including SOC/SIEM operation, scanning, identity-threat monitoring, alert triage, or production detection deployment — follows the first-line service interface in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §2.4, not this section.
 
 **Best for:** Functions that are important but not core to the organization's differentiated security capability, or functions where the organization cannot recruit and retain the necessary expertise.
 
@@ -174,7 +174,7 @@ The supervisor is not the contractor's "manager" in the employment sense. They d
 
 ### 6.1 The Repository Rule
 
-All contractor-produced artifacts must be stored in CERG-controlled repositories, not on contractor devices, contractor firm systems, or contractor-managed cloud platforms. This applies to:
+All contractor-produced artifacts must live in CERG-controlled repositories, not on contractor devices, contractor firm systems, or contractor-managed cloud platforms. This applies to:
 
 - Code: Infrastructure-as-code, policy-as-code, detection rules, automation scripts
 - Documents: Architecture diagrams, threat models, risk assessments, compliance documentation, finding reports
@@ -194,9 +194,9 @@ At defined intervals (at least monthly for staff augmentation, at each milestone
 
 The following are explicitly prohibited:
 
-- **Contractor-maintained repositories.** A contractor who sets up a GitHub organization, a shared drive, or a Confluence space for CERG work has created a knowledge silo the organization cannot access when the contractor leaves. All work product must flow into CERG repositories within one week of creation.
+- **Contractor-maintained repositories.** A contractor who sets up a GitHub organization, a shared drive, or a Confluence space for CERG work has created a knowledge silo — one the organization cannot access when the contractor leaves. All work product must flow into CERG repositories within one week of creation.
 - **Contractor-owned tooling accounts.** A contractor who registers a cloud security tool, a threat intelligence platform, or a GRC instance under their own or their firm's account has created an access dependency. All CERG tooling must be provisioned under organizational accounts.
-- **Contractor-exclusive knowledge.** A contractor who is the only person who knows how a specific tool is configured, a specific process works, or a specific system is architected represents a knowledge flight risk. The supervisor must ensure that at least one employee understands the contractor's work well enough to operate it after the contractor departs.
+- **Contractor-exclusive knowledge.** A contractor who alone knows a tool's configuration, a process's workings, or a system's architecture is a knowledge flight risk. The supervisor must make sure at least one employee understands the contractor's work — well enough to operate it after the contractor departs.
 
 > **The Contractor's Laptop Is Not the Organization's Repository**
 >
@@ -208,7 +208,7 @@ The following are explicitly prohibited:
 
 ### 7.1 Condensed Onboarding Program
 
-Contractors follow a condensed version of the employee onboarding program (ONB-001). The condensed program recognizes that a contractor engaged for 3-12 months does not need the full 90-day program but does need enough context to be effective and enough access to be productive.
+Contractors follow a condensed version of the employee onboarding program (ONB-001). The condensed program recognizes that a contractor engaged for 3-12 months does not need the full 90-day program. They do need enough context to be effective and enough access to be productive.
 
 | Timeframe | Activity |
 |---|---|
@@ -222,16 +222,16 @@ Contractors follow a condensed version of the employee onboarding program (ONB-0
 Contractors do not receive:
 
 - **CERG 101 full curriculum.** The condensed reading is sufficient for a time-bounded engagement.
-- **Cross-pillar rotation.** Contractors may interact with other pillars as their work requires but are not assigned formal rotation days.
+- **Cross-pillar rotation.** Contractors may interact with other pillars as their work requires, but receive no formal rotation days.
 - **Career development planning.** The contractor's development is their firm's responsibility, not CERG's.
-- **Performance reviews in the CERG format.** The contractor's performance is evaluated against their SOW, not against CMP-001 competency anchors.
+- **Performance reviews in the CERG format.** The supervisor evaluates the contractor's performance against the SOW, not against CMP-001 competency anchors.
 - **A CERG buddy.** The supervisor provides the orientation and support a buddy would provide.
 
 ### 7.3 Access Limitations
 
 Contractor access to CERG systems is role-appropriate and time-bounded:
 
-- Access is provisioned for the duration of the engagement plus a defined transition period, not indefinitely
+- Access lasts for the duration of the engagement plus a defined transition period, not indefinitely
 - Access to the risk register, evidence library, and policy repository is read/write as needed for the role but audited
 - Access to sensitive systems (PAM, HSM, key management, board reporting) is limited and logged
 - All contractor access is reviewed at each artifact handoff and revoked at offboarding
@@ -258,13 +258,13 @@ Contractor offboarding begins two weeks before the engagement end date (or immed
 
 Within one week of the contractor's departure:
 
-1. The supervisor opens and verifies that key artifacts can be accessed and understood by an employee who was not involved in the engagement. The test: can a peer pick up where the contractor left off?
+1. The supervisor opens key artifacts and verifies that an employee who was not involved in the engagement can access and understand them. The test: can a peer pick up where the contractor left off?
 2. The supervisor confirms that no standing meetings, automated reports, or scheduled processes depend on the contractor's account or credentials.
-3. If the engagement will be renewed or a replacement contractor engaged, the supervisor documents lessons learned for the next engagement.
+3. If the organization renews the engagement or engages a replacement contractor, the supervisor documents lessons learned for the next engagement.
 
 > **Offboarding Is Not Complete Until the Artifacts Are Verified**
 >
-> A contractor who hands over a repository link, shakes hands, and departs has been transitioned. A contractor whose artifacts have been opened, read, and confirmed usable by an employee who was not part of the engagement has been offboarded. The difference is the difference between a knowledge transfer that happened and one that was assumed to have happened. Assume nothing. Verify.
+> A contractor who hands over a repository link, shakes hands, and departs has been transitioned. A contractor is offboarded only when an employee who was not part of the engagement has opened, read, and confirmed their artifacts usable. The difference is the difference between a knowledge transfer that happened and one someone assumed happened. Assume nothing. Verify.
 
 ---
 
@@ -288,9 +288,9 @@ Contractor engagement renewal is a deliberate decision, not an automatic extensi
 1. **Is the work still needed?** The surge that justified the engagement may have passed.
 2. **Has the organization developed internal capability?** The engagement may have served its purpose of bridging to an employee hire or developing an internal team member.
 3. **Is the contractor the right resource?** The evaluation dimensions above inform whether the same contractor or firm should be re-engaged.
-4. **Is the engagement model still appropriate?** A project-based engagement that has become ongoing operational work should be converted to staff augmentation or a managed service, or the work should be absorbed by employees.
+4. **Is the engagement model still appropriate?** A project-based engagement that has become ongoing operational work should convert to staff augmentation or a managed service — or employees should absorb the work.
 
-An engagement that is renewed more than twice should trigger a review of whether the role should be converted to an employee position. A function that depends on contractors indefinitely has a structural gap that headcount planning should address.
+An engagement renewed more than twice should trigger a review: should the role become an employee position? A function that depends on contractors indefinitely has a structural gap that headcount planning should address.
 
 ---
 
@@ -339,4 +339,4 @@ An engagement that is renewed more than twice should trigger a review of whether
 | CERG Framework | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | Illustrative staffing model referencing contractors |
 | Document Catalog | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact |
 
-Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO endorsement for all changes.
+Governance owns this document. The Governance Pillar Leader (Policy & Standards) initiates reviews, manages the revision cycle, and obtains CISO endorsement for all changes.

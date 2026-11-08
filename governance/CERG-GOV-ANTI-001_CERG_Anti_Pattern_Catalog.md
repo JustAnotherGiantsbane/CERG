@@ -193,7 +193,7 @@ The catalog is intentionally blunt. The goal is not to shame teams. The goal is 
 
 ### 6.3 ANTI-EVID-003 — Policy-as-Evidence
 
-**What it looks like:** A policy says access reviews, backups, logging, or risk reviews must happen, so the control is marked implemented.
+**What it looks like:** A policy says access reviews, backups, logging, or risk reviews must happen, so the organization marks the control implemented.
 
 **Why it fails:** A policy proves intent. It does not prove operation. Auditors and leaders need evidence that the activity occurred, exceptions were handled, and outcomes were reviewed.
 
@@ -303,7 +303,7 @@ CERG treats incident response as an adjacent function owned by the standing IR t
 
 ### 9.3 ANTI-RISK-003 — Quantitative Theater
 
-**What it looks like:** Annualized Loss Expectancy (ALE) and Single Loss Expectancy (SLE) are calculated to two or three decimal places for every identified risk. The model's assumptions are unchecked. The inputs are guessed or benchmarked from industry reports that do not reflect the organization's context. The output is presented with the authority of a financial calculation but drives no decision.
+**What it looks like:** Annualized Loss Expectancy (ALE) and Single Loss Expectancy (SLE) are calculated to two or three decimal places for every identified risk. The model's assumptions are unchecked. The inputs are guessed or benchmarked from industry reports that do not reflect the organization's context. The output carries the authority of a financial calculation but drives no decision.
 
 **Why it fails:** Quantitative precision creates the appearance of rigor without the substance. A precise estimate built on guessed inputs is less honest than a qualitative ordinal rating with a stated rationale. The energy goes into the arithmetic rather than the assumptions, treatment options, and decision.
 
@@ -345,7 +345,7 @@ CERG treats incident response as an adjacent function owned by the standing IR t
 
 **What it looks like:** The security report features metrics like "scans run: 2,400," "alerts triaged: 850," "training modules completed: 1,200." These activity counts are presented as proof that security capabilities are operating effectively.
 
-**Why it fails:** Activity measures effort, not effectiveness. Running 2,400 scans means nothing if critical vulnerabilities are not being remediated. Triaging 850 alerts means nothing if triage quality is poor or the same alert fires 800 times. Activity metrics create the illusion of productivity without answering the question: is the outcome improving?.
+**Why it fails:** Activity measures effort, not effectiveness. Running 2,400 scans means nothing if critical vulnerabilities are not being remediated. Triaging 850 alerts means nothing if triage quality is poor or the same alert fires 800 times. Activity metrics create the illusion of productivity without answering the question: is the outcome improving?
 
 **Corrective action:** Pair every activity metric with an outcome metric. Scans run should pair with mean-time-to-remediate and recurrence rate. Alerts triaged should pair with time-to-triage, false-positive rate, and incidents detected. Training completed should pair with demonstrated competency or reduced security incidents from human error. Use the reporting guidance at [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) for outcome-oriented metric design.
 

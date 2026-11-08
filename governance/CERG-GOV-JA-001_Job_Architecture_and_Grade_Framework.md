@@ -60,7 +60,7 @@ It applies to every canonical CERG role defined in [`CERG-GOV-OM-001`](CERG-GOV-
 
 4. **Span of control is explicit.** Management grades define the scope a manager is expected to lead. A Manager running a 15-person team without the title or compensation to match is a retention risk. This framework makes that mismatch visible.
 
-5. **Scales down without breaking.** A small CERG team has no Principal Managers and probably no Managers at all. The grade definitions still hold: the CISO knows that the person running all of Risk is performing at a Director-level scope and should be treated accordingly, even if the organization uses a flat title.
+5. **Scales down without breaking.** A small CERG team has no Principal Managers and probably no Managers at all. The grade definitions still hold: the CISO knows the person who runs all of Risk performs at a Director-level scope and should be treated accordingly, even under a flat title.
 
 ---
 
@@ -177,7 +177,7 @@ The multi-team leader. A Senior Manager leads a function that may span multiple 
 | **Operational Accountability** | Accountable for the function's KPIs. Owns the function's budget input. Represents the function in pillar-leadership forums. Manages cross-functional dependencies. |
 | **Typical Experience** | 10-15 years in cybersecurity, including 3-5 years of people management. |
 
-**What growth to Principal Manager looks like:** The Senior Manager runs a function that operates with minimal escalation. Their Managers are themselves developing into Senior Managers. The function's strategy is aligned with organizational strategy without constant translation. They begin to contribute to pillar-wide decisions that go beyond their function.
+**What growth to Principal Manager looks like:** The Senior Manager runs a function that operates with minimal escalation. Their Managers are themselves developing into Senior Managers. The function's strategy aligns with organizational strategy without constant translation. They begin to contribute to pillar-wide decisions that go beyond their function.
 
 ### 5.3 Principal Manager (Grade M3)
 
@@ -215,7 +215,7 @@ The pillar leader or cross-functional executive. A Director is accountable for a
 
 ## 6. Leveling Guide: Dimensions of Growth
 
-Progression across grades is evaluated along five dimensions. A person does not need to demonstrate every dimension at the target grade to be promoted, but a promotion case should address each dimension honestly. The dimensions are cumulative: what distinguished a Sr. Specialist from a Specialist remains true at Advisor, but new capabilities are added.
+Progression across grades is evaluated along five dimensions. A person does not need to demonstrate every dimension at the target grade to be promoted, but a promotion case should address each dimension honestly. The dimensions are cumulative: what distinguished a Sr. Specialist from a Specialist remains true at Advisor, and each grade adds new capabilities.
 
 ### 6.1 The Five Dimensions
 
@@ -377,13 +377,13 @@ CERG does not prescribe salary bands: those are market-dependent, geography-depe
 
 ### 10.1 Principles
 
-1. **Grade drives band.** Compensation bands are defined by grade, not by role title. A Sr. Specialist Cloud Security Engineer and a Sr. Specialist Threat Intelligence Analyst share a band. Role-specific market premiums are applied within the band.
+1. **Grade drives band.** Grade defines the band, not role title. A Sr. Specialist Cloud Security Engineer and a Sr. Specialist Threat Intelligence Analyst share a band. Role-specific market premiums apply within the band.
 
 2. **Tracks are equivalent at each level.** An S3 Advisor and an M2 Senior Manager occupy comparable compensation bands. The organization does not pay a premium for management simply because it is management.
 
 3. **Market informs the band, not the individual offer.** CERG organizations should benchmark their bands against relevant cybersecurity compensation surveys annually. An individual candidate's market value does not reset the band; it determines where in the band the offer lands.
 
-4. **Internal equity is maintained over time.** Two people at the same grade, in the same role family, with comparable performance and tenure should not have materially different compensation without a documented reason (e.g., a critical retention situation, a geography differential, a unique specialization).
+4. **Internal equity holds over time.** Two people at the same grade in the same role family, with comparable performance and tenure, should not have materially different compensation without a documented reason. A critical retention situation, a geography differential, or a unique specialization can justify the difference.
 
 5. **Progression within a grade is recognized.** Not every year of good performance results in a promotion. Between-grade progression should be recognized through within-band increases. A Specialist who has been at S1 for three years and is performing well but not yet ready for S2 should not be earning the same as a newly hired S1.
 

@@ -114,7 +114,7 @@ The following RACI sub-matrices resolve pillar ownership ambiguity for specific 
 
 ##### Phase 5: Disposition and Go-live Record — RACI
 
-> The go-live decision belongs to the named accountable business or service owner (§7.2) and is deliberately absent from this matrix, which covers CERG work only. No CERG pillar holds an **A** on that decision.
+> The go-live decision belongs to the named accountable business or service owner (§7.2). It is deliberately absent from this matrix, which covers CERG work only. No CERG pillar holds an **A** on that decision.
 
 | Activity | Governance | Engineering | Risk |
 |----------|-----------|-------------|------|
@@ -137,7 +137,7 @@ The following RACI sub-matrices resolve pillar ownership ambiguity for specific 
 
 ### 2.2 [NIST CSF 2.0](https://www.nist.gov/cyberframework) Function Mapping
 
-[NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) defines six functions. The CERG-RMF operationalizes all six within the risk cycle:
+[NIST CSF 2.0](https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final) defines six functions. The CERG-RMF builds all six into the risk cycle:
 
 | [CSF](https://www.nist.gov/cyberframework) Function | CERG-RMF Phase(s) | What CERG Does |
 |---|---|---|
@@ -160,7 +160,7 @@ Categorization establishes the impact level of each system and data type, the fo
 
 - All information systems and technology assets (IT and OT) that store, process, or transmit organizational data or perform operational functions.
 - Data types by confidentiality, integrity, and availability (CIA) impact: Low, Medium, or High, per FIPS 199 / [NIST 800-60](https://csrc.nist.gov/pubs/sp/800/60/v1/r1/final).
-- Operational Technology systems are categorized with additional consideration for Safety, Reliability, and Continuity impacts, recognizing that an OT system failure may carry consequences beyond information loss.
+- Categorize Operational Technology systems with additional consideration for Safety, Reliability, and Continuity impacts — an OT system failure may carry consequences beyond information loss.
 
 > **OT Categorization Note**
 >
@@ -213,7 +213,7 @@ CERG uses a layered baseline model. Every system inherits the Organizational Bas
 
 > **The Overlay Principle**
 >
-> Overlays do not restart the control selection process, they add to the organizational baseline. A system in both the CUI scope and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) scope carries the organizational baseline plus both applicable overlays. Governance tracks the combined control set per system; Engineering implements it. This prevents the "compliance tunnel vision" problem where teams optimize for one framework and inadvertently create gaps in another.
+> Overlays do not restart the control selection process, they add to the organizational baseline. A system in both the CUI scope and [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) scope carries the organizational baseline plus both applicable overlays. Governance tracks the combined control set per system; Engineering implements it. This prevents "compliance tunnel vision": teams optimize for one framework and inadvertently create gaps in another.
 
 ### 4.3 Tailoring and Scoping
 
@@ -235,7 +235,7 @@ Implementation translates selected controls into working technical and administr
 
 ### 5.2 Engineering's Implementation Model
 
-Cyber Engineering operates as an internal consulting function. Engineers embed with IT and business project teams early, before architecture decisions are locked, and ensure that security controls are designed in, not bolted on after the fact.
+Cyber Engineering operates as an internal consulting function. Engineers embed with IT and business project teams early, before architecture decisions lock, and design security controls in rather than bolting them on after the fact.
 
 | Project Stage | Engineering Role | CERG-RMF Output |
 |---|---|---|
@@ -282,13 +282,13 @@ Assessment validates that implemented controls are working as intended. In CERG,
 
 ### 6.3 Finding Severity and SLAs
 
-All findings from assessment activities are assigned a severity rating and a remediation SLA. Exceptions to SLAs require documented risk acceptance per the process in [§9.7 Risk Acceptance Authority](#97-risk-acceptance-authority-canonical).
+Risk assigns every finding from assessment activities a severity rating and a remediation SLA. Exceptions to SLAs require documented risk acceptance per the process in [§9.7 Risk Acceptance Authority](#97-risk-acceptance-authority-canonical).
 
 The authoritative remediation-SLA table lives in [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) §5. The values published there govern every CERG-managed scan, adversarial validation, and assessment finding across IT, cloud, SaaS, and (with the BES schedule overlay) OT environments. Pillar dashboards and KRIs in [`CERG-GOV-MTR-001`](CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) measure compliance against PRC-VM-001's SLA values, not against a separate table.
 
 > **One Source of Truth**
 >
-> Earlier drafts of this document carried a parallel SLA table. That table has been retired so that there is exactly one place in the library where a remediation SLA can be changed. If you find a stale SLA citation in another document, the corrective action is to update the citing document to point at PRC-VM-001 ,  not to restate the values.
+> Earlier drafts of this document carried a parallel SLA table. Governance retired that table so the library has exactly one place where a remediation SLA can change. If you find a stale SLA citation in another document, the corrective action is to update the citing document to point at PRC-VM-001, not to restate the values.
 
 ---
 
@@ -296,7 +296,7 @@ The authoritative remediation-SLA table lives in [`CERG-PRC-VM-001`](../procedur
 
 ### 7.1 Objective
 
-Phase 5 records two different decisions, held by two different parties. **CERG states a technical disposition**: whether the evidenced state supports operating, and under what conditions. **The named accountable business or service owner decides whether to proceed**, because whether to carry a business consequence is a business decision and not a security one. **Residual risk is accepted under §9.7**, where security supplies the approval or sign-off that table requires and the Business Owner or Executive Sponsor accepts the business consequence. CERG does not authorize production, does not issue a production gate, and does not hold the go-live decision; Governance structures the record so that both decisions and the evidence behind them are auditable.
+Phase 5 records two different decisions, held by two different parties. **CERG states a technical disposition**: whether the evidenced state supports operating, and under what conditions. **The named accountable business or service owner decides whether to proceed**, because whether to carry a business consequence is a business decision and not a security one. **Residual risk is accepted under §9.7**: security supplies the approval or sign-off that table requires, and the Business Owner or Executive Sponsor accepts the business consequence. CERG does not authorize production, does not issue a production gate, and does not hold the go-live decision; Governance structures the record so that both decisions and the evidence behind them are auditable.
 
 ### 7.2 Outcomes and Decision Basis
 
@@ -315,11 +315,11 @@ Governance assembles the record that supports CERG's disposition and the account
 - **Risk Assessment Report (RAR)**: Risk-produced finding report from pre-authorization assessment activities.
 - **Plan of Action and Milestones (POA&M)**: documents all open findings with owners, compensating controls, and target remediation dates.
 - **Continuous Monitoring Strategy**: defines ongoing monitoring activities that will maintain risk visibility post-authorization.
-- **Regulatory Compliance Attestation**: Governance attestation that applicable regulatory controls are satisfied or that deviations are documented per regulatory process.
+- **Regulatory Compliance Attestation**: Governance attestation that applicable regulatory controls hold, or that Governance has documented deviations per regulatory process.
 
 > **OT go-live decisions**
 >
-> For OT and BES Cyber Systems, the go-live decision must explicitly address operational continuity risk alongside cybersecurity risk. A finding that would result in DATO for an IT system may be an accepted operational risk for a BES Cyber System with a documented compensating control and a deviation under the regulatory process. The accountable owner decides with that trade-off stated, not implied.
+> For OT and BES Cyber Systems, the go-live decision must explicitly address operational continuity risk alongside cybersecurity risk. For a BES Cyber System, a finding that would result in DATO for an IT system may be an accepted operational risk — if it carries a documented compensating control and a deviation under the regulatory process. The accountable owner decides with that trade-off stated, not implied.
 
 ---
 
@@ -386,7 +386,7 @@ Every risk in the register is written in one statement format, taken from the FA
 | **Loss magnitude range** | Expected loss as a calibrated range (PERT min / most likely / max) | $250K - $1.5M - $4M |
 | **LEF range** | Expected frequency the loss event occurs in a year (PERT min / most likely / max) | 0.05 - 0.15 - 0.4 (i.e., once every 2 to 20 years) |
 
-Risk statements that cannot be written in this form are not yet risks; they are observations or findings. Findings remain in the vulnerability or assessment register until they can be expressed in a complete loss-event scenario, at which point they are promoted to the Risk Register.
+Risk statements that cannot be written in this form are not yet risks; they are observations or findings. Findings remain in the vulnerability or assessment register until Risk can express them in a complete loss-event scenario, at which point they move to the Risk Register.
 
 ### 9.3 Threat Community Reference
 
@@ -458,7 +458,7 @@ CERG uses a 5x5 model: likelihood and impact are each rated 1-5, scored, and map
 | 2 - 5 | **Low** |
 | 1 | **Informational** |
 
-**Exposure-management precedence.** This 5x5 risk score determines register severity and acceptance authority. It does not replace exposure-treatment clocks. When a vulnerability, KEV item, PPR-tier exposure, or other finding is governed by [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md), the PRC-VM classification and SLA are authoritative for remediation timing. Use the stricter outcome when risk score and exposure SLA point to different urgency.
+**Exposure-management precedence.** This 5x5 risk score determines register severity and acceptance authority. It does not replace exposure-treatment clocks. When [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md) governs a vulnerability, KEV item, PPR-tier exposure, or other finding, the PRC-VM classification and SLA are authoritative for remediation timing. Use the stricter outcome when risk score and exposure SLA point to different urgency.
 
 ### 9.6 Risk Treatment Options
 
@@ -489,7 +489,7 @@ Security can assess, recommend, document, validate compensating controls, and es
 
 > **Renewals**
 >
-> No acceptance renews automatically. An acceptance at any tier requires a fresh approval cycle at expiration. An acceptance renewed more than twice without movement on the treatment plan escalates one tier above the original approver.
+> No acceptance renews automatically. An acceptance at any tier requires a fresh approval cycle at expiration. If an acceptance renews more than twice without movement on the treatment plan, it escalates one tier above the original approver.
 
 > **Role names** below match the canonical roster in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1. If a CERG role name disagrees with that roster, the roster wins. **Business Owner and Executive Sponsor are organization-side parties, not CERG roster positions.** They hold the business consequence decision because their organization gives them that accountability, and the roster governs CERG roles rather than naming them.
 
@@ -523,7 +523,7 @@ CERG states its cybersecurity risk tolerance two ways: a qualitative posture tha
 | Operational disruption to enterprise IT services | Medium. Treatment chosen on a cost / business value basis. |
 | Loss of low-sensitivity, broadly available data | Higher. Acceptance is appropriate where treatment cost exceeds loss magnitude. |
 
-**Quantitative tolerance (preliminary calibration).** Annualized Loss Exposure (ALE = LEF x LM) is summed across the open risk register quarterly. The bands below are preliminary values calibrated for a mid-market organization ($500M-2B revenue, moderate regulatory exposure). Governance refreshes the scenarios with Risk and Engineering input; the CISO approves calibrated values. Finance, Operations, or other business leaders are consulted only where their inputs are material to the cybersecurity scenario. See §9.8.1 for the calibration workbook.
+**Quantitative tolerance (preliminary calibration).** Governance sums Annualized Loss Exposure (ALE = LEF x LM) across the open risk register quarterly. The bands below are preliminary values calibrated for a mid-market organization ($500M-2B revenue, moderate regulatory exposure). Governance refreshes the scenarios with Risk and Engineering input; the CISO approves calibrated values. Governance consults Finance, Operations, or other business leaders only where their inputs are material to the cybersecurity scenario. See §9.8.1 for the calibration workbook.
 
 | Posture Indicator | Value (Preliminary) | Recommended Range by Org Size | Action |
 |---|---|---|---|
@@ -684,7 +684,7 @@ Cybersecurity risk tolerance is not a once-and-done statement. An Adaptive organ
 
 ### 12.1 Calibration Cadence
 
-Cybersecurity risk tolerance is reviewed:
+Governance reviews cybersecurity risk tolerance:
 
 - **Annually**, aligned with the annual planning cycle and the CISO Risk and Posture Review (per GOV-CAL-001)
 - **When triggered** by any of the following events:
@@ -724,7 +724,7 @@ The review produces one of two outputs:
 
 **Option A: No change.** Current cybersecurity risk tolerance remains appropriate. The decision is documented with the specific rationale and the data that supported it. "No change" is a deliberate conclusion, not a default.
 
-**Option B: Cybersecurity tolerance adjustment.** A revised cybersecurity tolerance statement is produced, plus cascading changes:
+**Option B: Cybersecurity tolerance adjustment.** Option B produces a revised cybersecurity tolerance statement, plus cascading changes:
 
 | Cascade | Action | Owned By |
 |---|---|---|
@@ -743,7 +743,7 @@ The review produces one of two outputs:
 
 ### 12.5 Cascade Tracking
 
-Cascading changes from a cybersecurity tolerance adjustment are tracked in the improvement register (IMPREG-001) until verified. A metric threshold change is verified when it produces one full quarter of actionable signals. A control priority change is verified when the control's effectiveness metric reflects the new posture. No cascading change is considered complete until it is verified Effective.
+Governance tracks cascading changes from a cybersecurity tolerance adjustment in the improvement register (IMPREG-001) until verified. A metric threshold change is verified when it produces one full quarter of actionable signals. Governance verifies a control priority change when the control's effectiveness metric reflects the new posture. No cascading change is considered complete until it is verified Effective.
 
 ### 12.6 Worked Calibration Example: Mid-Market Utility
 

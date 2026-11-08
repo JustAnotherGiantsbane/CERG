@@ -137,9 +137,9 @@ This template does **not** replace the full architecture review record, threat m
 | Risk Pillar Leader | Confirms risk treatment path where needed. | `[Name / Date]` |
 | Governance Pillar Leader | Confirms regulated-scope and evidence requirements. | `[Name / Date]` |
 
-Reviewer signatures on this form confirm intake routing and required follow-on records only. Production readiness, go-live authorization, and risk acceptance are documented through the Phase 4 and Phase 5 records governed by [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md).
+Reviewer signatures on this form confirm intake routing and required follow-on records only. Production readiness, go-live authorization, and risk acceptance live in the Phase 4 and Phase 5 records governed by [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md).
 
-Completed templates are reviewed at the cadence defined by their parent procedure or plan. Material changes require a new review.
+Review completed templates at the cadence set by their parent procedure or plan. Material changes require a new review.
 
 ---
 

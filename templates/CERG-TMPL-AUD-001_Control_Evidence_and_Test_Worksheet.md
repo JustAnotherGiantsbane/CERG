@@ -96,7 +96,7 @@ This worksheet standardizes control testing and evidence review. It records the 
 | Governance Pillar Leader | Confirms test is sufficient for audit or assessment use. | `[Name / Date]` |
 | Control Owner | Confirms factual accuracy and remediation ownership. | `[Name / Date]` |
 
-Completed templates are reviewed at the cadence defined by their parent procedure or plan. Material changes require a new review.
+Review completed templates at the cadence set by their parent procedure or plan. Material changes require a new review.
 
 ---
 

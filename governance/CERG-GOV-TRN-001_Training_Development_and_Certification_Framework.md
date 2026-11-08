@@ -39,7 +39,7 @@ Cybersecurity skills have a half-life measured in months, not years. A Detection
 
 The Job Descriptions (JD-001) list relevant certifications per role. They do not define which are required, which are recommended, who pays, or how certification connects to progression. The Competency Model (CMP-001) defines what good looks like at each grade. It does not define the path to get there. This document closes both gaps.
 
-It provides a role-to-certification matrix with three tiers (required, recommended, aspirational) per role and grade, a training curriculum mapped to CMP-001 competency domains, a cross-training standard that operationalizes the left-right knowledge model into a measurable time commitment, a professional development budget guideline, and conference and external engagement expectations.
+It provides a role-to-certification matrix with three tiers (required, recommended, aspirational) per role and grade. It also provides a training curriculum mapped to CMP-001 competency domains, a cross-training standard that turns the left-right knowledge model into a measurable time commitment, a professional development budget guideline, and conference and external engagement expectations.
 
 It applies to every CERG team member. Certifications are role-dependent; the training philosophy, cross-training expectation, and budget guidelines are universal.
 
@@ -55,9 +55,9 @@ It applies to every CERG team member. Certifications are role-dependent; the tra
 
 2. **Certifications validate, they do not replace.** A certification confirms that a person has demonstrated a body of knowledge at a point in time. It does not confirm that they apply it effectively in their role. Certifications are useful for hiring credibility, regulatory compliance, and structured learning. They are not a substitute for demonstrated competency.
 
-3. **Training closes the gap between current and target.** Every development activity should connect to a gap identified in the person's performance review (PERF-001) or their self-assessment against the competency model (CMP-001). "I want to learn Kubernetes security" is a valid interest. "I need to learn Kubernetes security because my next-grade competency anchor requires architecture reviews of containerized workloads" is a development plan.
+3. **Training closes the gap between current and target.** Every development activity should connect to a gap — one identified in the person's performance review (PERF-001) or their self-assessment against the competency model (CMP-001). "I want to learn Kubernetes security" is a valid interest. "I need to learn Kubernetes security because my next-grade competency anchor requires architecture reviews of containerized workloads" is a development plan.
 
-4. **Cross-training is not optional.** The left-right knowledge model (FRM-001 §9.2) depends on every CERG team member understanding the other two pillars well enough to collaborate effectively. Cross-training is a standing expectation, not a discretionary activity.
+4. **Cross-training is not optional.** The left-right knowledge model (FRM-001 §9.2) depends on cross-pillar fluency: every CERG team member understands the other two pillars well enough to collaborate effectively. Cross-training is a standing expectation, not a discretionary activity.
 
 5. **Knowledge shared is knowledge multiplied.** If the organization sends a person to a conference, a training course, or a certification boot camp, that person presents what they learned to the team. The organization's return on the training investment includes not just one person's capability gain but the team's.
 
@@ -266,7 +266,7 @@ CERG managers add the following to their home role family's certification matrix
 
 > **Certification Is a Floor, Not a Ceiling**
 >
-> A person who holds every Aspirational certification for their role and grade is not required to stop pursuing credentials. The tiers represent what the organization commits to supporting. Beyond the Aspirational tier, the individual and their manager make the case for organizational support based on relevance to the person's development plan and the organization's needs.
+> A person who holds every Aspirational certification for their role and grade is not required to stop pursuing credentials. The tiers represent what the organization commits to supporting. Beyond the Aspirational tier, the individual and their manager make the case for organizational support, based on relevance to the person's development plan and the organization's needs.
 
 ---
 
@@ -274,13 +274,13 @@ CERG managers add the following to their home role family's certification matrix
 
 ### 4.1 How the Curriculum Works
 
-The training curriculum is organized by CMP-001 competency domain. For each domain, specific training resources, courses, and experiences are recommended at three levels aligned to CERG grades:
+The training curriculum follows the CMP-001 competency domains. For each domain, it recommends specific training resources, courses, and experiences at three levels aligned to CERG grades:
 
 - **Foundational** (S1-S2): Builds the base of competence
 - **Intermediate** (S2-S3): Deepens capability and adds breadth
 - **Advanced** (S3-S4): Develops organizational-level expertise
 
-A person's development plan (PERF-001) identifies which domains and which level are the priority for the current review period. The curriculum provides the resources. The manager and the individual select the specific courses and experiences.
+A person's development plan (PERF-001) identifies which domains, and which level, are the priority for the current review period. The curriculum provides the resources. The manager and the individual select the specific courses and experiences.
 
 ### 4.2 Technical Depth
 
@@ -344,13 +344,13 @@ A person's development plan (PERF-001) identifies which domains and which level 
 
 ### 5.1 The Standard
 
-Every CERG team member is expected to spend at least 5% of their working time on cross-pillar learning and engagement. For a full-time team member, this is approximately:
+Every CERG team member spends at least 5% of their working time on cross-pillar learning and engagement. For a full-time team member, this is approximately:
 
 - **2 hours per week**, or
 - **One day per month**, or
 - **Two weeks per year**
 
-This is a performance expectation, not a suggestion. A person who has not engaged with the other two pillars in a quarter should be asked why during their quarterly check-in.
+This is a performance expectation, not a suggestion. If a person has not engaged with the other two pillars in a quarter, their manager should ask why during the quarterly check-in.
 
 ### 5.2 What Counts
 
@@ -371,7 +371,7 @@ The OM-001 §10.4 cross-training log captures cross-training activities. Manager
 
 > **The 5% Rule Is a Minimum, Not a Cap**
 >
-> An Advisor who spends 10% of their time on cross-pillar work because they are leading a cross-pillar initiative is not violating the rule; they are demonstrating advanced Cross-Pillar Fluency. The 5% floor is for team members who are not naturally pulled into cross-pillar work through their role. It ensures that cross-pillar understanding does not become a privilege of seniority.
+> An Advisor who spends 10% of their time on cross-pillar work because they are leading a cross-pillar initiative is not violating the rule; they are demonstrating advanced Cross-Pillar Fluency. The 5% floor is for team members who are not naturally pulled into cross-pillar work through their role. It keeps cross-pillar understanding from becoming a privilege of seniority.
 
 ---
 
@@ -418,7 +418,7 @@ The organization supports conference attendance when:
 
 1. The conference content is directly relevant to the person's role or development priorities.
 2. The person commits to presenting what they learned to the team within two weeks of returning (a 30-minute brown-bag session, a written summary, or an internal training module).
-3. Conference attendance is distributed fairly across the team. The same person attending three conferences while a peer attends none is a signal that the team's development investment is not equitable.
+3. Managers distribute conference attendance fairly across the team. If one person attends three conferences while a peer attends none, the team's development investment is not equitable.
 
 ### 7.2 Priority Conferences by Role Family
 
@@ -441,7 +441,7 @@ At the Advisor (S3) level and above, external engagement is an expectation, not 
 
 > **External Engagement Is Recruitment**
 >
-> A Sr. Advisor who presents at RSA, contributes to a NIST working group, and is known in their sector's threat-sharing community is not just developing themselves. They are making the organization visible as a place where serious cybersecurity practitioners work. A candidate who researches the organization and finds its engineers presenting at conferences is more likely to apply than one who finds no public presence at all. External engagement is part of the employer brand strategy.
+> A Sr. Advisor who presents at RSA, contributes to a NIST working group, and is known in their sector's threat-sharing community is not just developing themselves. They are making the organization visible as a place where serious cybersecurity practitioners work. A candidate who researches the organization is more likely to apply when they find its engineers presenting at conferences — and less likely when they find no public presence at all. External engagement is part of the employer brand strategy.
 
 ---
 
@@ -449,7 +449,7 @@ At the Advisor (S3) level and above, external engagement is an expectation, not 
 
 ### 8.1 Individual Development Plan
 
-Each team member maintains an Individual Development Plan (IDP) as part of their performance record (PERF-001 §9). The IDP is updated semi-annually and contains:
+Each team member maintains an Individual Development Plan (IDP) as part of their performance record (PERF-001 §9). The team member and their manager update the IDP semi-annually. It contains:
 
 - 2-3 development priorities for the current review period, each mapped to a CMP-001 competency domain
 - Specific training activities, certifications, or experiences planned to address each priority
@@ -524,4 +524,4 @@ The record supports regulatory compliance (NERC-CIP CIP-004 requires documented 
 | CERG Framework | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | Left-right knowledge model |
 | Document Catalog | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact |
 
-Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO endorsement for all changes.
+Governance owns this document. The Governance Pillar Leader (Policy & Standards) initiates reviews, manages the revision cycle, and obtains CISO endorsement for all changes.

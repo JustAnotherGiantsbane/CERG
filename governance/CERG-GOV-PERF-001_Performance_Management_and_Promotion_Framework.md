@@ -39,25 +39,25 @@
 
 The Job Architecture and Grade Framework (CERG-GOV-JA-001) defines the grade structure. The Competency Model (CERG-GOV-CMP-001) defines what good looks like at each grade. What neither defines is the mechanism: how a manager evaluates performance, how often, with what documentation, and how that evaluation leads to a promotion decision that is consistent across pillars.
 
-This document defines that mechanism. It establishes the performance management cadence, the evaluation dimensions, the calibration process that prevents pillar-to-pillar inconsistency, the promotion process from initiation through approval, and the documentation standard that makes every decision defensible. It is designed to be lightweight enough for a small CERG team and rigorous enough for a full-scale organization facing a regulatory audit of its personnel practices.
+This document defines that mechanism. It establishes the performance management cadence, the evaluation dimensions, the calibration process that prevents pillar-to-pillar inconsistency, the promotion process from initiation through approval, and the documentation standard that makes every decision defensible. It is lightweight enough for a small CERG team, and rigorous enough for a full-scale organization facing a regulatory audit of its personnel practices.
 
-It applies to every CERG team member, manager, and pillar leader. It does not apply to the CISO, whose performance management is governed by the executive evaluation framework of the organization, or to Adjacent Incident Response roles, which belong to the standing IR team.
+It applies to every CERG team member, manager, and pillar leader. It does not apply to the CISO, whose performance management follows the organization's executive evaluation framework, or to Adjacent Incident Response roles, which belong to the standing IR team.
 
 > **A Grade Framework Without a Performance Framework Is a Parking Lot**
 >
-> JA-001 says "progression is earned, not tenured." That sentence is aspirational until there is a defined mechanism for evaluating whether it has been earned, a consistent process for making the judgment, and documentation that survives the departure of the manager who made it. This document is that mechanism.
+> JA-001 says "progression is earned, not tenured." That sentence is aspirational until three things exist: a defined mechanism for evaluating whether the person has earned it, a consistent process for making the judgment, and documentation that survives the departure of the manager who made it. This document is that mechanism.
 
 ---
 
 ## 2. Design Principles
 
-1. **Evaluate against defined expectations, not against peers.** A person's performance is measured against the grade-level expectations in JA-001 §4-5 and the competency anchors in CMP-001. It is not measured against the highest-performing person at the same grade.
+1. **Evaluate against defined expectations, not against peers.** Measure a person's performance against the grade-level expectations in JA-001 §4-5 and the competency anchors in CMP-001. It is not measured against the highest-performing person at the same grade.
 
 2. **Calibration prevents drift.** Two managers evaluating the same person against the same criteria should reach similar conclusions. The calibration process exists to make that true.
 
 3. **Promotion is a decision, not an event.** A promotion is the conclusion of a sustained demonstration of capability at the next level. It is not a reward for tenure, a retention counter-offer, or a response to an external offer.
 
-4. **Documentation is evidence, not bureaucracy.** The performance record exists so that a decision can be explained to the person, to a calibration panel, to HR, and to a regulator or auditor if challenged. It should be thorough enough to survive those audiences and no longer.
+4. **Documentation is evidence, not bureaucracy.** The performance record exists so that the manager can explain a decision to the person, to a calibration panel, to HR, and to a regulator or auditor if challenged. It should be thorough enough to survive those audiences and no longer.
 
 5. **Scales without breaking.** A small CERG with no Managers and a full-scale CERG with a management hierarchy both use the same framework. The forms are the same; the number of people in the calibration room changes.
 
@@ -86,14 +86,14 @@ Between formal reviews, managers conduct quarterly check-ins with each direct re
 
 1. What has gone well since the last check-in?
 2. What is blocked or unclear?
-3. What development activity has been completed?
+3. What development activity has the person completed?
 4. Is there anything the person wants to flag that has not come up in regular 1:1s?
 
 The manager records one to three sentences per check-in in the performance record. The purpose is continuity: the year-end review should summarize a year of documented observations, not reconstruct a year from memory.
 
 ### 3.3 Ongoing Feedback
 
-Performance feedback should never be a surprise at review time. A manager who waits six months to tell someone their work is not meeting expectations has failed at the most basic responsibility of people leadership. Significant feedback, positive or corrective, should be delivered within days of the observation and documented in the performance record.
+Performance feedback should never be a surprise at review time. A manager who waits six months to tell someone their work is not meeting expectations has failed — failed at the most basic responsibility of people leadership. Managers should deliver significant feedback, positive or corrective, within days of the observation and document it in the performance record.
 
 > **The "No Surprises" Rule**
 >
@@ -131,7 +131,7 @@ Management performance adds three dimensions to the SME evaluation. A Manager is
 
 ### 4.3 Rating Scale
 
-CERG uses a four-point rating scale. The scale is deliberately simple: more gradations create more arguments about the difference between a 3 and a 4 than insight about the person.
+CERG uses a four-point rating scale. The scale is deliberately simple: more gradations create more arguments about the difference between a 3 and a 4, not more insight about the person.
 
 | Rating | Definition | Promotion Implication |
 |---|---|---|
@@ -161,7 +161,7 @@ The performance conversation follows a structured agenda:
 1. **Review the period.** What were the person's stated objectives? What changed?
 2. **Walk through each dimension.** For each: the manager's assessment with evidence, the team member's perspective, discussion of any gap between the two.
 3. **Discuss the overall rating.** Explain the rationale. If it is not what the person expected, spend the time to ensure they understand why before moving on.
-4. **Look forward.** Development priorities for the next period. If promotion is a goal, what specific demonstrations are needed? By when?
+4. **Look forward.** Development priorities for the next period. If promotion is a goal, what specific demonstrations does the candidate need? By when?
 5. **The person speaks last.** After the manager has presented the assessment and the forward plan, the person has uninterrupted time to respond, ask questions, or raise concerns.
 
 ### 5.3 After the Conversation
@@ -192,16 +192,16 @@ The session proceeds role by role, not person by person. For each role (e.g., Cl
 ### 6.2 Calibration Principles
 
 1. **Evidence rules.** A rating without dated, specific evidence is not a rating; it is an opinion. Opinions are not calibrated.
-2. **Cross-pillar perspective matters.** An Engineering manager who has never seen a Governance person's work cannot calibrate an Engineering rating. The calibration session brings cross-pillar visibility: a Risk pillar leader may recognize that an Engineer's "Exceeds" rating in Cross-Pillar Fluency is actually standard behavior for the grade.
+2. **Cross-pillar perspective matters.** An Engineering manager who has never seen a Governance person's work cannot calibrate an Engineering rating. The calibration session brings cross-pillar visibility: a Risk pillar leader may recognize, for instance, that an Engineer's "Exceeds" rating in Cross-Pillar Fluency is actually standard behavior for the grade.
 3. **The CISO is the tiebreaker.** If the calibration group cannot reach consensus on a rating, the CISO decides. The CISO's decision is final and documented with rationale.
-4. **Calibration is about ratings, not compensation.** Compensation decisions follow after ratings are calibrated, not during calibration. Mixing the two conversations produces ratings that are negotiated to fit within budget rather than honest assessments of performance.
+4. **Calibration is about ratings, not compensation.** Compensation decisions follow after the panel calibrates ratings, not during calibration. Mixing the two conversations produces ratings negotiated to fit within budget, not honest assessments of performance.
 
 ---
 
 ## 7. Promotion Process
 
 
-> **Level Progression Gates**: The job-family-specific level progression gates (L1→L2, L2→L3, L3→L4) are defined in [JF-001 §8](../roles/CERG-GOV-JF-001_Job_Families_Overview.md). Promotion cases should demonstrate satisfaction of the relevant gate conditions in addition to the grade criteria defined in JA-001.
+> **Level Progression Gates**: The job-family-specific level progression gates (L1→L2, L2→L3, L3→L4) are defined in [JF-001 §8](../roles/CERG-GOV-JF-001_Job_Families_Overview.md). Promotion cases should demonstrate that the candidate satisfies the relevant gate conditions, in addition to the grade criteria defined in JA-001.
 
 ### 7.1 Initiation
 
@@ -218,11 +218,11 @@ The manager prepares a promotion case document addressing:
 1. **Current grade and target grade.**
 2. **Evidence by dimension.** For each of the six SME dimensions (or nine management dimensions): specific examples of next-grade behavior with dates and context. The evidence should span at least six months and include both routine excellence (consistent at-grade performance) and stretch demonstrations (next-grade behavior).
 3. **Cross-pillar input.** At least one person from a different pillar who has worked with the candidate provides a written perspective. This is not a reference check; it is a specific observation of the candidate's cross-pillar engagement.
-4. **Development plan for remaining gaps.** Honest acknowledgment of dimensions where the candidate is not yet demonstrating next-grade behavior and how they will develop those capabilities in the new grade.
+4. **Development plan for remaining gaps.** Honest acknowledgment of dimensions where the candidate is not yet demonstrating next-grade behavior — and how they will develop those capabilities in the new grade.
 
 ### 7.3 Approval
 
-The promotion case is presented at the calibration session following the year-end review. The approval sequence:
+The manager presents the promotion case at the calibration session following the year-end review. The approval sequence:
 
 1. **Manager presents** the promotion case to the calibration group.
 2. **Calibration group discusses** whether the evidence supports the case. The discussion follows the same calibration principles as ratings: evidence, cross-pillar perspective, and the standard for the target grade.
@@ -252,7 +252,7 @@ Exceptional candidates with extraordinary demonstrated capability may be conside
 
 ### 7.5 Promotion Panel Composition
 
-Every promotion case is reviewed by a cross-pillar promotion panel that ensures fairness, consistency, and breadth of perspective.
+A cross-pillar promotion panel reviews every promotion case for fairness, consistency, and breadth of perspective.
 
 | **Panel Role** | **Who** | **Purpose** |
 |---|---|---|
@@ -282,8 +282,8 @@ The promotion cycle follows a defined calendar aligned to the performance manage
 
 1. **The candidate hears first, before any other team member.** No one learns of a promotion from a colleague before the candidate hears it from their manager.
 2. **Deferred promotions include a development plan.** A deferral is not a denial. It identifies specific competency gaps and the timeline and resources to close them. The candidate and manager agree on a development plan within 2 weeks of the deferral.
-3. **Communicated promotions are celebrated.** The promotion is announced at the next CERG All-Hands or pillar meeting. The announcement includes what the candidate accomplished to earn the promotion, reinforcing the standard for others.
-4. **External communication is coordinated.** If the promotion is part of a broader organizational announcement (e.g., pillar leader hire), coordinate with HR and Communications per organizational policy.
+3. **Communicated promotions are celebrated.** The manager announces the promotion at the next CERG All-Hands or pillar meeting. The announcement includes what the candidate accomplished to earn the promotion, reinforcing the standard for others.
+4. **External communication is coordinated.** If the promotion joins a broader organizational announcement (e.g., pillar leader hire), coordinate with HR and Communications per organizational policy.
 
 ## 8. Performance Improvement Process
 
@@ -303,8 +303,8 @@ Within two weeks of a "Below Expectations" rating, the manager and the team memb
 
 1. **The PIP is not a surprise.** A person who receives a "Below Expectations" rating should have received feedback on the performance gap throughout the review period. The PIP is a formalization of an ongoing conversation, not the start of one.
 2. **The PIP is written, not verbal.** Both parties sign it. It is stored in the performance record.
-3. **HR is informed at initiation, not at separation.** HR should know a PIP exists from day one, not day ninety.
-4. **Success is celebrated, not held against the person.** A person who completes a PIP successfully and sustains the improvement is not "the person who was on a PIP." The PIP closes and the record reflects the improved performance.
+3. **HR learns at initiation, not at separation.** HR should know a PIP exists from day one, not day ninety.
+4. **Success is celebrated, not held against the person.** A person who completes a PIP successfully, and sustains the improvement, is not "the person who was on a PIP." The PIP closes and the record reflects the improved performance.
 
 ---
 
@@ -357,7 +357,7 @@ The semi-annual performance summary follows a consistent structure designed to b
 
 ### 9.3 Storage and Access
 
-Performance records are stored in the organization's HR system of record. If the organization does not have an HR system that supports structured performance documentation, records are maintained as documents in a controlled access location (e.g., a restricted SharePoint folder, a secure HR drive). Access is limited to:
+The organization stores performance records in its HR system of record. If the organization does not have an HR system that supports structured performance documentation, keep records as documents in a controlled-access location (e.g., a restricted SharePoint folder, a secure HR drive). Access is limited to:
 
 - The team member (their own record)
 - Their manager
@@ -366,7 +366,7 @@ Performance records are stored in the organization's HR system of record. If the
 - HR business partner
 - Legal, when relevant to employment actions
 
-Performance records are retained per the organization's record retention policy, typically for the duration of employment plus a defined post-employment period.
+The organization retains performance records per its record retention policy, typically for the duration of employment plus a defined post-employment period.
 
 ---
 
@@ -378,7 +378,7 @@ The performance review dimensions map directly to CMP-001 competency domains. Th
 
 ### 10.2 Job Architecture (JA-001)
 
-The JA-001 grade definitions (§4-5) and leveling dimensions (§6) are the authoritative source for what each grade expects. This document operationalizes those expectations into a recurring process. Where this document and JA-001 conflict, JA-001 governs.
+The JA-001 grade definitions (§4-5) and leveling dimensions (§6) are the authoritative source for what each grade expects. This document turns those expectations into a recurring process. Where this document and JA-001 conflict, JA-001 governs.
 
 ### 10.3 Succession Planning (SUCC-001)
 
@@ -435,4 +435,4 @@ Development plans produced through this process inform individual training needs
 | Training Framework | [`CERG-GOV-TRN-001`](CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) | Development resource for gap closure |
 | Document Catalog | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact |
 
-Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO endorsement for all changes.
+Governance owns this document. The Governance Pillar Leader (Policy & Standards) initiates reviews, manages the revision cycle, and obtains CISO endorsement for all changes.

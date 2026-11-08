@@ -40,7 +40,7 @@
 
 ## 1. Purpose and Use
 
-This template creates a System Security Plan (SSP) for a system that stores, processes, transmits, or protects Controlled Unclassified Information (CUI). It is designed to be copied into a system-specific artifact and completed by the system owner, technical owners, and CMMC / Federal Compliance Manager.
+This template creates a System Security Plan (SSP) for a system that stores, processes, transmits, or protects Controlled Unclassified Information (CUI). Copy it into a system-specific artifact; the system owner, technical owners, and CMMC / Federal Compliance Manager complete it.
 
 The SSP explains the system boundary, CUI data flow, implemented security controls, inherited controls, external dependencies, open gaps, and evidence locations. It supports CMMC readiness, federal customer assurance, and internal authorization decisions.
 
@@ -184,7 +184,7 @@ Inherited controls are valid only when the system still satisfies the conditions
 |---|---|---|---|---|
 | `[Provider or connection]` | `[Purpose]` | `[Data]` | `[Requirements]` | `[Evidence]` |
 
-Vendor and interconnection risks are linked to `CERG-PRC-TPRM-001` and `CERG-PRC-RM-001`.
+Link vendor and interconnection risks to `CERG-PRC-TPRM-001` and `CERG-PRC-RM-001`.
 
 ---
 

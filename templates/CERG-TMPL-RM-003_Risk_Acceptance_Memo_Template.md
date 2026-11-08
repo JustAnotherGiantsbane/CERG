@@ -105,7 +105,7 @@ Approval authority follows [`CERG-GOV-RMF-001`](../governance/CERG-GOV-RMF-001_R
 | Chief Information Security Officer (CISO) | Approves High and Critical acceptance where required by RMF-001 §9.7. | `[Name / Date]` |
 | Executive Sponsor | Accepts the business consequence for Critical risk where required by RMF-001 §9.7. | `[Name / Date]` |
 
-Completed templates are reviewed at the cadence defined by their parent procedure or plan. Material changes require a new review through `TMPL-RM-004`.
+Review completed templates at the cadence set by their parent procedure or plan. Material changes require a new review through `TMPL-RM-004`.
 
 ---
 
