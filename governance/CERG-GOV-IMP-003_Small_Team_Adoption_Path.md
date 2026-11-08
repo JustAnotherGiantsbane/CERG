@@ -79,7 +79,7 @@ These are the documents you actually need first. Everything else in the repo can
 
 ### Do Not Adopt Yet
 
-The following are explicitly deferred for small teams. Document the deferral in your Decision Log:
+Small teams explicitly defer the following. Document each deferral in your Decision Log:
 
 - Full workforce planning (WFP-001)
 - Succession planning (SUCC-001)
@@ -171,7 +171,7 @@ A small team covers the canonical role roster by consolidating roles. The map be
 
 **If you have 3 people:** Consolidate further. Person 1 = CISO + Governance + Risk Register. Person 2 = Engineering + Cloud + Identity. Person 3 = Risk + Compliance + VM. Document every consolidation in the Decision Log per IMP-002 §4. The Role Collision Guide (IMP-002 §7) defines which consolidations require compensating controls.
 
-**Authority guardrail:** heads collapse; business consequence acceptance does not. A small team still needs a Business Owner or Executive Sponsor outside the security assessor role to acknowledge accepted residual risk. If the CISO/Risk/Governance work is held by one person, use IMP-002 §5 and RMF-001 §9.7 for independent acceptance and escalation.
+**Authority guardrail:** heads collapse; business consequence acceptance does not. A small team still needs a Business Owner or Executive Sponsor outside the security assessor role to acknowledge accepted residual risk. If one person holds the CISO/Risk/Governance work, use IMP-002 §5 and RMF-001 §9.7 for independent acceptance and escalation.
 
 **If you have 1 person:** You are not ready to adopt CERG as an operating model. Use CERG as a planning reference. Hire your second person before attempting adoption.
 
@@ -513,7 +513,7 @@ Create this folder structure in your shared drive, document management system, o
 **Rules for the evidence library:**
 
 - Every file in the library has an owner and a retention period.
-- Evidence freshness is checked at the monthly review. Stale evidence is flagged.
+- The monthly review checks evidence freshness. Flag any stale evidence for follow-up.
 - The evidence index spreadsheet (§7) maps every file to a control.
 - Start with the folders you have evidence for. Empty folders remind you what is missing.
 - If you have a GRC platform, migrate the spreadsheets into it when you outgrow manual management. The structure stays the same — the tool changes.
