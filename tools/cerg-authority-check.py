@@ -141,7 +141,7 @@ def main() -> int:
             p = dst.replace(os.sep, "/")
             top = p.split("/")[0] if "/" in p else ""
             base = p.rsplit("/", 1)[-1]
-            is_furniture = bool(FURNITURE.match(base)) or p.startswith(("examples/", "tools/", ".github/"))
+            is_furniture = bool(FURNITURE.match(base)) or p.startswith(("examples/", "tools/", ".github/", "proposals/"))
             if is_furniture:
                 pass  # silence is correct: nothing here can change custody
             elif top in STRICT_DIRS:
