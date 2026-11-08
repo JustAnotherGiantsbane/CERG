@@ -53,8 +53,8 @@ It applies to every endpoint and mobile device that accesses in-scope resources:
 ## 2. Principles
 
 1. **Every endpoint is managed or it has no access.** A device that accesses in-scope resources is enrolled in management and meets this standard, or it does not get access. There is no unmanaged-but-trusted category.
-2. **The endpoint is inventoried.** Every endpoint is an asset in the inventory governed by [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md). An endpoint not in the inventory is an unmanaged asset and is contained.
-3. **Posture is checked, not assumed.** A device's compliance with this standard is verified continuously and at the point of access, not assumed because the device was compliant once.
+2. **The endpoint is inventoried.** Every endpoint is an asset in the inventory governed by [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md). An endpoint not in the inventory is an unmanaged asset; contain it.
+3. **Posture is checked, not assumed.** The management platform verifies a device's compliance with this standard continuously and at the point of access; no one assumes compliance because the device was compliant once.
 4. **Protect, detect, and respond on the device.** Endpoints carry preventive controls and a detection-and-response capability. Prevention fails; the endpoint must also be a place where compromise is seen and contained.
 5. **BYOD is a deliberate, bounded decision.** Personal devices may access in-scope resources only under explicit terms that bound what they reach and what the organization controls. BYOD is never the absence of a rule.
 6. **Loss of a device is not loss of the data.** Endpoint data is encrypted and remotely recoverable or erasable, so a lost or stolen device is an inconvenience, not a breach.
@@ -79,14 +79,14 @@ OT field devices and OT engineering workstations are governed by [`CERG-STD-OT-0
 
 Every managed endpoint carries the following at minimum.
 
-1. **Secure configuration baseline.** The endpoint is configured to the applicable baseline in [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md), and configuration drift is detected and corrected.
-2. **Disk encryption.** Endpoint storage is encrypted at rest per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md). Encryption is enforced by management, not left to the user.
+1. **Secure configuration baseline.** The endpoint is configured to the applicable baseline in [`CERG-STD-CFG-001`](CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md), and the management platform detects and corrects configuration drift.
+2. **Disk encryption.** Endpoint storage is encrypted at rest per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md). Management enforces encryption rather than leaving it to the user.
 3. **Patching.** The operating system and installed software are patched against the SLAs in [`CERG-PRC-VM-001`](../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md). The endpoint reports its patch state to management.
 4. **Malware protection.** The endpoint runs current malware protection.
 5. **Host firewall.** A host-based firewall is enabled and configured to default-deny inbound, consistent with [`CERG-STD-NET-001`](CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md).
 6. **Application control.** Tier-appropriate control over what software may execute. Privileged-access endpoints (Section 4.5) and endpoints handling regulated data enforce allowlisting; standard workstations enforce at minimum a block on known-bad and unsigned execution.
 7. **Screen lock and authentication.** The endpoint enforces an automatic screen lock and authenticates the user per [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md).
-8. **Local administrative rights are restricted.** Users do not hold standing local administrator rights on their workstations. Where elevation is needed it is granted just in time and recorded.
+8. **Local administrative rights are restricted.** Users do not hold standing local administrator rights on their workstations. Where a user needs elevation, the Identity Engineer grants it just in time and records it.
 
 ### 4.1 Privileged-Access Endpoints
 
@@ -101,9 +101,9 @@ An endpoint used to administer infrastructure is a high-value target and is hard
 ## 5. Endpoint Detection and Response
 
 1. **Every managed endpoint runs EDR.** An endpoint detection and response capability runs on every workstation, corporate mobile device where supported, and privileged-access endpoint.
-2. **EDR telemetry reaches the detection platform.** EDR telemetry is delivered to the platform governed by [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md), so endpoint events are visible alongside the rest of the estate.
-3. **EDR supports containment.** The capability allows a compromised endpoint to be isolated from the network quickly, so a foothold can be contained without physically retrieving the device.
-4. **EDR tampering is itself an alert.** An attempt to disable, uninstall, or evade EDR is a detection signal and is alerted on.
+2. **EDR telemetry reaches the detection platform.** The EDR capability delivers telemetry to the platform governed by [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md), so endpoint events show alongside the rest of the estate.
+3. **EDR supports containment.** The capability lets responders isolate a compromised endpoint from the network quickly, so they can contain a foothold without physically retrieving the device.
+4. **EDR tampering is itself an alert.** An attempt to disable, uninstall, or evade EDR is a detection signal; alert on it.
 5. **CERG feeds, the IR team responds.** Consistent with [`CERG-GOV-OM-001`](../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4, CERG operates the EDR capability and feeds its telemetry and detections to the standing Incident Response team. CERG does not run incident response from this standard.
 
 ---
@@ -113,18 +113,18 @@ An endpoint used to administer infrastructure is a high-value target and is hard
 Device posture is the set of facts about an endpoint that other standards use to make access decisions. This standard owns producing it.
 
 1. **Posture is defined.** A device is in posture when it is enrolled in management, on a supported and patched operating system, encrypted, running current EDR and malware protection, and not flagged with an unresolved high-severity finding.
-2. **Posture is evaluated continuously and at access.** Posture is checked continuously by management and again at the point a device requests access to a resource.
-3. **Out-of-posture devices lose access.** A device that falls out of posture loses access to in-scope resources until it is brought back into posture. The loss of access is automatic, not a manual follow-up.
+2. **Posture is evaluated continuously and at access.** Management checks posture continuously and again at the point a device requests access to a resource.
+3. **Out-of-posture devices lose access.** A device that falls out of posture loses access to in-scope resources until it returns to posture. The loss of access is automatic, not a manual follow-up.
 4. **Posture is the signal other standards consume.** The posture verdict is the input that [`CERG-STD-NET-001`](CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md) uses for zero-trust decisions and that [`CERG-STD-AC-001`](CERG-STD-AC-001_Access_Management_Standard.md) uses for conditional access. This standard is the authoritative producer of that signal.
 
 ---
 
 ## 7. Mobile Device Management
 
-1. **Corporate mobile devices are enrolled in mobile device management.** Organization-owned phones and tablets are managed: configuration is enforced, security policy is pushed, and compliance is reported.
+1. **Corporate mobile devices are enrolled in mobile device management.** Mobile device management manages organization-owned phones and tablets: it enforces configuration, pushes security policy, and reports compliance.
 2. **Mobile baseline.** A managed mobile device enforces device encryption, a passcode or biometric unlock, automatic lock, current operating system, and a block on installing applications from untrusted sources.
 3. **Organization data is containerized.** Organization email, files, and applications on a mobile device are held in a managed container separable from anything personal on the device.
-4. **Remote lock and wipe.** A managed mobile device can be remotely locked and can have organization data remotely wiped. A lost corporate device is wiped.
+4. **Remote lock and wipe.** The organization can remotely lock a managed mobile device and remotely wipe its organization data. If a corporate device is lost, wipe it.
 5. **Jailbroken and rooted devices are blocked.** A device whose operating system integrity has been compromised does not access in-scope resources.
 
 ---
@@ -148,8 +148,8 @@ BYOD is permitted only under the explicit terms in this section. An organization
 
 ## 9. Transient and Removable Devices
 
-1. **Transient devices are controlled before they connect.** A device that connects briefly to the estate, a contractor laptop, a maintenance device, is checked for posture before connection or is restricted to an isolated network segment per [`CERG-STD-NET-001`](CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md).
-2. **Removable media is controlled.** Use of removable storage is restricted by default. Where permitted, removable media is encrypted and scanned. Endpoints handling regulated data block removable storage unless an exception is recorded.
+1. **Transient devices are controlled before they connect.** A device that connects briefly to the estate, a contractor laptop, a maintenance device, has its posture checked before connection, or it stays on an isolated network segment per [`CERG-STD-NET-001`](CERG-STD-NET-001_Network_Security_and_Segmentation_Standard.md).
+2. **Removable media is controlled.** Use of removable storage is restricted by default. Where permitted, encrypt and scan removable media. Endpoints handling regulated data block removable storage unless an exception is recorded.
 3. **Transient cyber assets in OT scope.** A transient device connecting to OT, including for maintenance, is a transient cyber asset and is governed by [`CERG-STD-OT-001`](CERG-STD-OT-001_Grid_Control_Systems_Security_Standard.md) and NERC-CIP requirements. Section 9 and the OT standard are read together for those devices.
 
 ---
@@ -219,7 +219,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](../governance/
 - Internal audit or regulatory finding affecting endpoint security
 - Direction from the CISO
 
-Cyber Engineering owns this document. The Engineering Pillar Leader (Endpoint) is responsible for initiating reviews, managing the revision cycle, and obtaining Governance Pillar Leader approval, with CISO endorsement, for all changes.
+Cyber Engineering owns this document. The Engineering Pillar Leader (Endpoint) initiates reviews, manages the revision cycle, and obtains Governance Pillar Leader approval, with CISO endorsement, for all changes.
 
 ### Related Documents
 

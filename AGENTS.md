@@ -1,6 +1,6 @@
 # CERG — Guide for AI Agents
 
-This file is loaded automatically by AI agents (Claude Code, Copilot, Codex CLI, Cursor, etc.) to understand the CERG cybersecurity operating model repository and work effectively with it.
+AI agents (Claude Code, Copilot, Codex CLI, Cursor, etc.) load this file automatically to understand the CERG cybersecurity operating model repository and work effectively with it.
 
 ---
 

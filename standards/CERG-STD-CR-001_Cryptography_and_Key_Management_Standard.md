@@ -41,7 +41,7 @@ The Cybersecurity Policy requires encryption in transit and at rest. The IT, CUI
 
 This standard establishes a unified cryptographic policy: which algorithms are approved, which are prohibited, how TLS and certificates are managed, how keys / secrets / API tokens are stored and rotated, when customer-managed keys are required, and the FIPS profile for regulated scopes.
 
-It applies to every in-scope asset, every credential and secret used by CERG-managed systems, and every cryptographic use case, data at rest, data in transit, signing, integrity, authentication, and key wrapping.
+It applies to every in-scope asset, every credential and secret used by CERG-managed systems, and every cryptographic use case: data at rest, data in transit, signing, integrity, authentication, and key wrapping.
 
 > **The Crypto Standard Reads Like a Floor, Not a Ceiling**
 >
@@ -217,7 +217,7 @@ The CMK decision is about who controls the master key, the customer (us) or the 
 - Keys generated in cloud KMS HSM-backed (FIPS 140-2/3 Level 2+).
 - Rotation per Section 8; rotation reuses prior key for read; new writes use new key.
 - Key policy and access reviewed quarterly.
-- Key material is **never** exported outside the HSM boundary except under the documented exception process.
+- Key material **never** leaves the HSM boundary except under the documented exception process.
 
 > **What Inheritance Looks Like When CMK Is Not Required**
 >
@@ -244,7 +244,7 @@ Plaintext secrets in source code, configuration files, environment variables on 
 
 - **Pull, never push.** Workloads retrieve secrets at runtime from the secrets manager; secrets are not baked into images or configs.
 - **Short-lived where possible.** Tokens issued by IdP or STS preferred over long-lived static credentials.
-- **Scope-bounded.** Each token is scoped to the minimum required resource and action.
+- **Scope-bounded.** Each token covers only the minimum required resource and action.
 - **Logged.** Issuance, retrieval, and revocation events flow to SIEM.
 
 ### 7.3 Detection and Hygiene
@@ -278,7 +278,7 @@ Plaintext secrets in source code, configuration files, environment variables on 
 
 ### 8.1 Event-Driven Rotation Triggers
 
-Rotation is also triggered by, not on a schedule alone:
+Rotation is also event-driven, not only scheduled:
 
 - Suspected key / secret / credential compromise.
 - Workforce changes affecting individuals with key access.
@@ -290,7 +290,7 @@ Rotation is also triggered by, not on a schedule alone:
 
 ## 9. FIPS / FedRAMP / CUI Cryptography Checklist
 
-The checklist below is the minimum for any system in CUI scope, FedRAMP Moderate scope, or other regulatory scope that requires FIPS-validated cryptography. It is used at architecture review ([`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md)) and at [CMMC](https://dodcio.defense.gov/CMMC/) assessment readiness ([`CERG-PLN-CUI-001`](../plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md)).
+The checklist below is the minimum for any system in CUI scope, FedRAMP Moderate scope, or other regulatory scope that requires FIPS-validated cryptography. Use it at architecture review ([`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md)) and at [CMMC](https://dodcio.defense.gov/CMMC/) assessment readiness ([`CERG-PLN-CUI-001`](../plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md)).
 
 | **Check** | **Required** | **Evidence** |
 |---|---|---|

@@ -57,7 +57,7 @@
 |NERC-CIP|CIP-002 (BES asset categorization)|
 |[CMMC](https://dodcio.defense.gov/CMMC/)|CM.2.061|
 
-**What "done" looks like:** Living asset register with classification, owner, and regulatory designation (BES/CUI). Engineering produces at project handoff; Risk validates via scan coverage.
+**What "done" looks like:** Living asset register with classification, owner, and regulatory designation (BES/CUI). Engineering produces it at project handoff; Risk validates via scan coverage.
 
 ---
 

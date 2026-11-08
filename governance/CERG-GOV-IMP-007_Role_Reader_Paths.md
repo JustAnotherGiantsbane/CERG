@@ -35,7 +35,7 @@
 
 CERG is intentionally complete. That completeness can make the first hour difficult for a new reader. This document is the antidote.
 
-Each section below is a sequenced reading order for a specific role. The order is chosen because each document in the sequence builds on the previous one. Total time for the CISO path is approximately 35 minutes. Total time for the Risk and Engineering paths is approximately 30 minutes each.
+Each section below is a sequenced reading order for a specific role. The order is deliberate: each document in the sequence builds on the previous one. Total time for the CISO path is approximately 35 minutes. Total time for the Risk and Engineering paths is approximately 30 minutes each.
 
 Use this document when:
 
@@ -180,7 +180,7 @@ Reader paths are for new readers. Skip them if:
 - You are a **program-level contributor** (auditor, consultant, advisor). Read [README.md](../README.md), [`CERG-GOV-FRM-002`](CERG-GOV-FRM-002_Framework_System_Map.md), and one Day in the Life story relevant to your engagement. Total time: 20 minutes.
 - You have **already adopted CERG and run it for six months or more**. Use [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) §5 as your reference, not the reader path.
 
-The reader paths are designed for the first hour of engagement. They are not a substitute for the operating rhythm that follows.
+The reader paths cover the first hour of engagement. They are not a substitute for the operating rhythm that follows.
 
 ## 8. Document Control
 

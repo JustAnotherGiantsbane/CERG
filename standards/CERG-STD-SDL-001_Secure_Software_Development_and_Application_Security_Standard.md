@@ -42,7 +42,7 @@
 
 The Cyber Engineering pillar exists to build securely. Its mission statement, set in [`CERG-GOV-FRM-001`](../governance/CERG-GOV-FRM-001_CERG_Framework.md), is "build securely, deploy confidently, consult continuously." Until this standard, the program had no document that said what building securely actually requires. The architecture review procedure [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md) governs the engagement; this standard governs the code.
 
-This standard establishes the requirements for secure software development across the in-scope estate: how software moves through a secure development lifecycle, the security gates it passes, the code review and automated testing it is subject to, how secrets and dependencies are handled, and how the build pipeline that produces it is itself secured.
+This standard establishes the requirements for secure software development across the in-scope estate. It covers the secure development lifecycle and the security gates software passes. It sets the code review and automated testing requirements, the handling of secrets and dependencies, and the security of the build pipeline itself.
 
 It applies to every piece of in-scope software first-line teams or their providers write or materially modify: customer-facing and internal applications, microservices and APIs, scripts and automation, integration and glue code, and infrastructure-as-code. CERG sets and reviews the security requirements; it does not operate the resulting software-delivery services. Purchased software is handled by [`CERG-PRC-TPRM-001`](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md), except where purchased components are embedded as dependencies (Section 8).
 
@@ -82,7 +82,7 @@ Secure development is not a phase bolted onto delivery. Security activity is def
 
 ### 3.2 Software Risk Tiers
 
-The intensity of the gates in Section 4 scales by software risk tier. The tier is assigned at requirements and confirmed at design review.
+The intensity of the gates in Section 4 scales by software risk tier. The building team proposes the tier at requirements, and the Application Security Engineer confirms it at design review.
 
 | **Tier** | **Definition** | **Examples** |
 |---|---|---|
@@ -98,7 +98,7 @@ The intensity of the gates in Section 4 scales by software risk tier. The tier i
 
 ## 4. Security Gates
 
-A security gate is a checkpoint software must clear to advance. Gates are enforced by the pipeline (Section 9) wherever automatable.
+A security gate is a checkpoint software must clear to advance. The pipeline enforces the gates (Section 9) wherever automatable.
 
 ### 4.1 The Gate Set
 
@@ -126,7 +126,7 @@ A gate is bypassed only through a risk exception filed under [`CERG-PRC-RM-001`]
 2. **The reviewer is competent in the change.** A review approval asserts the reviewer understood the change and saw no security defect. An approval given without reading the change is a falsified control.
 3. **Author cannot self-approve.** The person who wrote the change cannot be a required approver of it. This holds even on a small team; if only one other person can review, that person reviews.
 4. **Security-sensitive changes pull in Application Security.** Changes to authentication, authorization, cryptography, input handling, or data export require an Application Security Engineer among the reviewers, regardless of tier.
-5. **Review evidence is retained.** The review record (who approved, when, against which commit) is retained as control evidence and is auditable.
+5. **Review evidence is retained.** Retain the review record (who approved, when, against which commit) as control evidence; it is auditable.
 
 > **Small Teams Still Separate Author From Approver**
 >
@@ -138,7 +138,7 @@ A gate is bypassed only through a risk exception filed under [`CERG-PRC-RM-001`]
 
 ### 6.1 Static Application Security Testing (SAST)
 
-SAST runs on every commit to a protected branch and in the developer loop where the toolchain supports it. SAST findings at High or Critical block the SAST gate. The Application Security Engineer defines ruleset requirements and candidate content; the first-line pipeline operator configures, deploys, tunes, and retains output from the live ruleset. False positives are suppressed with a recorded, reviewable justification, not by disabling the rule.
+SAST runs on every commit to a protected branch and in the developer loop where the toolchain supports it. SAST findings at High or Critical block the SAST gate. The Application Security Engineer defines ruleset requirements and candidate content; the first-line pipeline operator configures, deploys, tunes, and retains output from the live ruleset. Suppress false positives with a recorded, reviewable justification, not by disabling the rule.
 
 ### 6.2 Dynamic Application Security Testing (DAST)
 
@@ -146,7 +146,7 @@ DAST runs against a deployed pre-production instance for Tier 1 software and is 
 
 ### 6.3 Software Composition Analysis (SCA)
 
-SCA inventories third-party and open-source dependencies and checks them against known-vulnerability data. SCA runs on every build. A dependency carrying a known High or Critical vulnerability blocks the SCA gate until the dependency is updated, replaced, or an exception is filed. SCA output feeds the SBOM in Section 8.
+SCA inventories third-party and open-source dependencies and checks them against known-vulnerability data. SCA runs on every build. A dependency carrying a known High or Critical vulnerability blocks the SCA gate until the build team updates or replaces the dependency, or files an exception. SCA output feeds the SBOM in Section 8.
 
 ### 6.4 Tooling Discipline
 
@@ -160,7 +160,7 @@ This section has no risk-tier exception and no gate bypass.
 
 1. **Secrets are never committed.** Passwords, API keys, tokens, private keys, connection strings, and any other credential are never written into source code, configuration files in the repository, build scripts, or container images.
 2. **Secrets scanning is mandatory.** A secrets scanner runs on every commit and on the full repository history. A detected secret blocks the build.
-3. **A detected secret is treated as compromised.** A secret that reaches a repository, even a private one, even briefly, is considered exposed. It is rotated immediately per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md), and the exposure is logged. Removing the commit does not undo the exposure.
+3. **A detected secret is treated as compromised.** A secret that reaches a repository, even a private one, even briefly, is considered exposed. Rotate it immediately per [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md) and log the exposure. Removing the commit does not undo the exposure.
 4. **Secrets come from a secrets manager at runtime.** Software retrieves credentials at runtime from the secrets management platform governed by [`CERG-STD-CR-001`](CERG-STD-CR-001_Cryptography_and_Key_Management_Standard.md). Build-time injection from a secrets manager is acceptable; hard-coding is not.
 
 > **A Secret in Git History Is a Secret in Production**
@@ -171,10 +171,10 @@ This section has no risk-tier exception and no gate bypass.
 
 ## 8. Dependencies and Software Bill of Materials
 
-1. **Every release carries an SBOM.** A Software Bill of Materials listing every component and its version is generated for every release of Tier 1 and Tier 2 software, and for Tier 3 where the pipeline supports it. The SBOM is retained as a release artifact.
+1. **Every release carries an SBOM.** The pipeline generates a Software Bill of Materials listing every component and its version for every release of Tier 1 and Tier 2 software, and for Tier 3 where the pipeline supports it. Retain the SBOM as a release artifact.
 2. **Dependencies are pinned.** Builds resolve dependencies to specific, recorded versions. A build that resolves "latest" is not reproducible and is not permitted for Tier 1 or Tier 2.
 3. **Dependencies are monitored after release.** A new vulnerability disclosed against a dependency already in production is a software vulnerability, handled per Section 11. SBOMs make this monitoring possible; that is their operational purpose.
-4. **New dependencies are assessed before adoption.** Before a new third-party or open-source dependency is introduced, it is checked for maintenance health, known vulnerabilities, and license compatibility. A dependency with no recent maintenance is a supply chain risk.
+4. **New dependencies are assessed before adoption.** Before introducing a new third-party or open-source dependency, the build team checks it for maintenance health, known vulnerabilities, and license compatibility. A dependency with no recent maintenance is a supply chain risk.
 5. **Internal components are inventoried too.** Reusable internal libraries are dependencies. They appear in the SBOM and are monitored like any other component.
 
 ---
@@ -187,8 +187,8 @@ The build pipeline produces trusted software. A compromised pipeline produces co
 2. **Build steps are defined as code and reviewed.** Pipeline definitions are version-controlled and subject to the code review requirements in Section 5. A change to how software is built is a security-sensitive change.
 3. **Builds are isolated.** Build jobs run in ephemeral, isolated environments. A build does not run with standing production credentials.
 4. **Build provenance is attested.** Tier 1 and Tier 2 releases carry verifiable provenance: what source commit, what build steps, what environment produced the artifact. This aligns with SLSA build-integrity levels.
-5. **Artifacts are integrity-protected.** Released artifacts are signed or hashed so the deployment target can verify it is deploying what the pipeline produced.
-6. **Pipeline activity is logged.** Build and deployment events are logged to the platform governed by [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md).
+5. **Artifacts are integrity-protected.** Sign or hash released artifacts so the deployment target can verify it is deploying what the pipeline produced.
+6. **Pipeline activity is logged.** The pipeline logs build and deployment events to the platform governed by [`CERG-STD-LM-001`](CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md).
 
 ---
 
@@ -277,7 +277,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](../governance/
 - Internal audit or regulatory finding affecting software development
 - Direction from the CISO
 
-Cyber Engineering owns this document. The Engineering Pillar Leader (Application Security) is responsible for initiating reviews, managing the revision cycle, and obtaining Governance Pillar Leader approval, with CISO endorsement, for all changes.
+Cyber Engineering owns this document. The Engineering Pillar Leader (Application Security) initiates reviews, manages the revision cycle, and obtains Governance Pillar Leader approval, with CISO endorsement, for all changes.
 
 ### Related Documents
 

@@ -155,7 +155,7 @@ A worked example: a critical vulnerability hits an internet-facing application s
 
 The handoffs are explicit. The records are explicit. The clock is explicit. No pillar holds the work hostage waiting for consensus.
 
-**For canonical worked examples, read the [Day in the Life stories](../examples/day-in-the-life/README.md).** They are the canonical reference for what each pillar does during a real event. Stories 2, 4, 5, 6, and 8 walk a single event from detection through closure and show the three-pillar handoff in motion. Stories 9 and 10 show how the pillars work together across time.
+**For canonical worked examples, read the [Day in the Life stories](../examples/day-in-the-life/README.md).** They are the reference for what each pillar does during a real event. Stories 2, 4, 5, 6, and 8 walk a single event from detection through closure and show the three-pillar handoff in motion. Stories 9 and 10 show how the pillars work together across time.
 
 ### 4.2 When the three pillars collapse onto fewer people
 

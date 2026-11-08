@@ -37,7 +37,7 @@
 
 ## 1. Purpose and Scope
 
-This standard implements the foundational principles established in **CERG-POL-001** for systems that process, store, or transmit Controlled Unclassified Information (CUI) and Federal Contract Information (FCI). It defines the specific, measurable security requirements drawn from **[NIST SP 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final)** (the source of [CMMC](https://dodcio.defense.gov/CMMC/) Level 2 practices), **[NIST SP 800-172](https://csrc.nist.gov/pubs/sp/800/172/final)** (where enhanced protection is contractually required), and the cyber incident reporting and flow-down obligations established by **DFARS 252.204-7012** and the **[CMMC](https://dodcio.defense.gov/CMMC/)** program rule under DFARS 252.204-7021.
+This standard puts the foundational principles of **CERG-POL-001** into practice for systems that process, store, or transmit Controlled Unclassified Information (CUI) and Federal Contract Information (FCI). It defines the specific, measurable security requirements drawn from **[NIST SP 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final)** (the source of [CMMC](https://dodcio.defense.gov/CMMC/) Level 2 practices), **[NIST SP 800-172](https://csrc.nist.gov/pubs/sp/800/172/final)** (where enhanced protection is contractually required), and the cyber incident reporting and flow-down obligations established by **DFARS 252.204-7012** and the **[CMMC](https://dodcio.defense.gov/CMMC/)** program rule under DFARS 252.204-7021.
 
 This standard does not replace the System Security Plan (SSP), the Plan of Action and Milestones (POA&M), or the contract-specific requirements that may apply to a given award. It establishes the organization-wide requirements that every CUI-handling system shall meet, and the governance that translates those requirements into auditable evidence.
 
@@ -53,7 +53,7 @@ This standard applies to:
 
 ### 1.2 The [CMMC](https://dodcio.defense.gov/CMMC/) / DFARS Reality
 
-CUI obligations are contractual. Failure to meet them is not solely a security finding, it is a contract-compliance issue that can affect eligibility for award, payment, or continued performance. The DoD's [CMMC](https://dodcio.defense.gov/CMMC/) program operationalizes 800-171 compliance with third-party certification (C3PAO) at Level 2 for most contracts handling CUI. SPRS scoring is reported and visible to contracting officers.
+CUI obligations are contractual. Failure to meet them is not solely a security finding, it is a contract-compliance issue that can affect eligibility for award, payment, or continued performance. The DoD's [CMMC](https://dodcio.defense.gov/CMMC/) program enforces 800-171 compliance through third-party certification (C3PAO) at Level 2 for most contracts handling CUI. Contracting officers can see SPRS scores.
 
 > **One Spreadsheet Away From a Finding**
 >
@@ -77,7 +77,7 @@ The three CERG pillars operate in CUI environments with the same structure as el
 
 > **The Evidence-as-Byproduct Rule for CUI**
 >
-> [CMMC](https://dodcio.defense.gov/CMMC/) assessors do not score intentions, they score implementation evidence. The CERG model treats SSP and POA&M maintenance as continuous, byproduct work of Engineering and Risk activities, not as a one-time pre-assessment scramble. If the only time the SSP is touched is in the 90 days before a C3PAO visit, the program is not yet operating at the maturity the regulation expects.
+> [CMMC](https://dodcio.defense.gov/CMMC/) assessors do not score intentions, they score implementation evidence. The CERG model treats SSP and POA&M maintenance as continuous, byproduct work of Engineering and Risk activities, not as a one-time pre-assessment scramble. If the SSP only moves in the 90 days before a C3PAO visit, the program is not yet at the maturity the regulation expects.
 
 ---
 
@@ -140,7 +140,7 @@ The three CERG pillars operate in CUI environments with the same structure as el
 
 ## 5. PROTECT: Control Implementation for CUI
 
-The fourteen [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) control families collectively define the protection requirements. The tables below summarize the organization's implementation. Detailed implementation evidence is maintained in the SSP and the [CMMC](https://dodcio.defense.gov/CMMC/) evidence library.
+The fourteen [NIST 800-171](https://csrc.nist.gov/pubs/sp/800/171/r3/final) control families collectively define the protection requirements. The tables below summarize the organization's implementation. The SSP and the [CMMC](https://dodcio.defense.gov/CMMC/) evidence library hold the detailed implementation evidence.
 
 ### 5.1 Access Control (3.1)
 
@@ -332,7 +332,7 @@ This standard does not replace the master Incident Response Plan (**[CERG-PLN-IR
 
 ## 11. Exceptions, POA&M, and SSP Maintenance
 
-CUI control deficiencies do not follow the ordinary exception process. Open deficiencies are tracked in the POA&M and reflected in the SPRS score. The exception process in [CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) Section 7 applies in addition for organizational risk acceptance.
+CUI control deficiencies do not follow the ordinary exception process. The POA&M tracks open deficiencies, and the SPRS score reflects them. The exception process in [CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) Section 7 applies in addition for organizational risk acceptance.
 
 | **Deficiency / Exception Type** | **Mechanism** | **Approval / Tracking** | **Review** |
 |---|---|---|---|
@@ -372,7 +372,7 @@ This standard shall be reviewed annually and upon any of the following triggerin
 - A reportable cyber incident affecting CUI
 - DoD assessor or C3PAO finding requiring corrective action
 
-Governance owns this document. The Governance Pillar Leader ([CMMC](https://dodcio.defense.gov/CMMC/) / Federal Compliance) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO approval for all changes.
+Governance owns this document. The Governance Pillar Leader ([CMMC](https://dodcio.defense.gov/CMMC/) / Federal Compliance) initiates reviews, manages the revision cycle, and obtains CISO approval for all changes.
 
 ### Related Documents
 

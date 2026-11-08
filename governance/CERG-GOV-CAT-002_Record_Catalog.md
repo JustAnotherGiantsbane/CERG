@@ -226,7 +226,7 @@ A regulated implementation adds the applicable package records:
 | Git repository | Policies, standards, procedures, templates, decision records | Version history, review workflow, and sensitive evidence kept out of public repos |
 | Evidence platform / document library | Audit evidence and recurring exports | Retention, access control, period labeling, and source integrity |
 
-Tool choice must not remove required CERG fields. If the tool cannot represent a required field, the implementation must add a custom field, tag, linked record, or evidence note.
+Tool choice must not remove required CERG fields. If the tool cannot represent a required field, the adopter must add a custom field, tag, linked record, or evidence note.
 
 ---
 

@@ -55,7 +55,7 @@ This standard applies to:
 
 ### 1.2 Standard Versus Subordinate Detail
 
-This standard establishes the requirements. Specific implementation details, IdP configuration baselines, MFA enrollment procedures, PAM workflows, access review run-books, are maintained as procedures and platform guides linked from this document. Where a subordinate procedure conflicts with this standard, this standard governs.
+This standard establishes the requirements. The procedures and platform guides linked from this document hold the specific implementation detail: IdP configuration baselines, MFA enrollment procedures, PAM workflows, access review run-books. Where a subordinate procedure conflicts with this standard, this standard governs.
 
 ### 1.3 Relationship to Parent Policy and Peer Standards
 
@@ -106,7 +106,7 @@ Every environment or service that implements identity controls shall maintain an
 6. **Operating boundary:** whether IAM is operated by CERG, IT, MSP, SaaS provider, or shared model, with named accountable owner and escalation path.
 7. **Accuracy check:** evidence that the package has been sampled against reality, not merely completed. At minimum, validate that the described identity architecture exists, named controls are configured, populations match authoritative exports, and evidence can be reperformed.
 
-A complete package that does not match the environment is not current; it is false assurance. Package accuracy is sampled as a control-effectiveness activity and reported through [`CERG-GOV-MTR-001`](../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) identity metrics.
+A complete package that does not match the environment is not current; it is false assurance. CERG samples package accuracy as a control-effectiveness activity and reports it through [`CERG-GOV-MTR-001`](../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) identity metrics.
 
 ---
 
@@ -152,7 +152,7 @@ Identity control-plane scope includes more than the primary IdP. The following c
 - Remote access gateways, zero-trust access brokers, VPNs, jump servers, OT intermediate systems, and vendor access tooling
 - Break-glass accounts and emergency access procedures for any platform that can materially affect security posture or recovery
 
-A control-plane component not operated by CERG is still in scope. It is handled through the operating model in §2 and through inheritance, shared responsibility, or exception evidence.
+A control-plane component not operated by CERG is still in scope. Handle it through the operating model in §2 and through inheritance, shared responsibility, or exception evidence.
 
 ---
 
@@ -429,7 +429,7 @@ The following access types shall be treated as privileged and subject to the con
 - Internal audit or regulatory finding affecting access control
 - Direction from the CISO
 
-Governance owns this document. The Governance Pillar Leader is responsible for initiating reviews, managing the revision cycle, and obtaining CISO approval for all changes.
+Governance owns this document. The Governance Pillar Leader initiates reviews, manages the revision cycle, and obtains CISO approval for all changes.
 
 ### Related Documents
 

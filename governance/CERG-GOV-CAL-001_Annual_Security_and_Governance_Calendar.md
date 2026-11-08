@@ -48,7 +48,7 @@ It applies to all CERG-owned governance, risk, engineering, audit, evidence, and
 
 ## 2. Calendar Rules
 
-1. The calendar is maintained by the Governance Pillar Leader.
+1. The Governance Pillar Leader maintains the calendar.
 2. Each activity has exactly one accountable role, using canonical roles from `CERG-GOV-RAC-001`.
 3. The more specific source document controls when a cadence conflict exists.
 4. Evidence-producing activities create or refresh evidence under `CERG-PRC-AUD-001`.

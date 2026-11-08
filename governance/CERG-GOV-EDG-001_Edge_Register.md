@@ -168,7 +168,7 @@ Not all edges can be controlled. Some can only be influenced, contracted, or mon
 
 ### 5.1 Register Maintenance
 
-The Edge Register is maintained as a living document. The Vendor Risk Analyst (or delegate) reviews each edge type quarterly:
+CERG maintains the Edge Register as a living document. The Vendor Risk Analyst (or delegate) reviews each edge type quarterly:
 
 - New edges added within 30 days of discovery
 - Edges retired when the relationship, service, or path no longer exists

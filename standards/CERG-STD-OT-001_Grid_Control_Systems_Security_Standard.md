@@ -37,9 +37,9 @@
 
 ## 1. Purpose and Scope
 
-This standard implements the foundational principles established in [CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) for grid and control system environments. It defines specific, measurable security requirements for all operational technology (OT), industrial control systems (ICS), and grid automation assets, regardless of whether those assets are classified as Bulk Electric System (BES) Cyber Systems under NERC-CIP or operate outside that regulatory scope.
+This standard puts the foundational principles of [CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) into practice for grid and control system environments. It defines specific, measurable security requirements for all operational technology (OT), industrial control systems (ICS), and grid automation assets. That holds whether those assets are classified as Bulk Electric System (BES) Cyber Systems under NERC-CIP or operate outside that regulatory scope.
 
-These requirements are organized around the NIST Cybersecurity Framework 2.0 functions, Govern, Identify, Protect, Detect, Respond, and Recover, and are cross-mapped to NERC-CIP standards, NIST SP 800-82 (Guide to OT Security), [NIST SP 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final), and IEC 62443 where applicable. Where BES and non-BES requirements differ materially, both are stated explicitly.
+This standard organizes its requirements around the NIST Cybersecurity Framework 2.0 functions — Govern, Identify, Protect, Detect, Respond, and Recover — and cross-maps them to NERC-CIP standards, NIST SP 800-82 (Guide to OT Security), [NIST SP 800-53r5](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final), and IEC 62443 where applicable. Where BES and non-BES requirements differ materially, both are stated explicitly.
 
 ### 1.1 Scope
 
@@ -342,7 +342,7 @@ This standard must be reviewed annually and upon any of the following triggering
 - Changes to [NIST 800-82](https://csrc.nist.gov/pubs/sp/800/82/r3/final) or IEC 62443 that materially affect the requirements herein
 - Direction from the CISO or regulatory examination findings
 
-Governance owns this document. The Governance Pillar Leader (OT/NERC-CIP) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO approval for all changes.
+Governance owns this document. The Governance Pillar Leader (OT/NERC-CIP) initiates reviews, manages the revision cycle, and obtains CISO approval for all changes.
 
 ### Related Documents
 

@@ -76,11 +76,11 @@ CERG governs three categories of AI use. The requirements differ by category.
 
 ## 4. Acceptable Use of AI
 
-1. **Use sanctioned AI tools.** Employees use the AI services and tools the program has assessed and approved. The list of sanctioned AI tools is maintained by Governance using [`CERG-TMPL-AI-002`](../templates/CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md) or an equivalent local register and is visible to staff.
-2. **Classify before you prompt.** Before data is placed into an AI tool, the user considers its classification per [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md). Section 5 governs what may go where.
-3. **Review AI output before relying on it.** AI-generated content, code, analysis, or recommendations are reviewed by a competent person before being used. AI-generated code additionally passes the gates in [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md); AI is not an exception to code review.
+1. **Use sanctioned AI tools.** Employees use the AI services and tools the program has assessed and approved. Governance maintains the list of sanctioned AI tools using [`CERG-TMPL-AI-002`](../templates/CERG-TMPL-AI-002_Sanctioned_AI_Tools_Register_Template.md) or an equivalent local register, and staff can see it.
+2. **Classify before you prompt.** Before placing data into an AI tool, the user considers its classification per [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md). Section 5 governs what may go where.
+3. **Review AI output before relying on it.** A competent person reviews AI-generated content, code, analysis, or recommendations before use. AI-generated code additionally passes the gates in [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md); AI is not an exception to code review.
 4. **Do not use AI to make prohibited decisions unaided.** AI does not unilaterally make decisions about employment, safety, control system operation, or anything else where Principle 4 applies.
-5. **Attribute and disclose where required.** Where a regulator, a contract, or a customer requires disclosure that AI was used, that disclosure is made.
+5. **Attribute and disclose where required.** Where a regulator, a contract, or a customer requires disclosure that AI was used, make that disclosure.
 
 ---
 
@@ -88,7 +88,7 @@ CERG governs three categories of AI use. The requirements differ by category.
 
 This section applies the data classification scheme to AI use. It is the most important operational section of the standard.
 
-1. **A prompt to a third-party AI service is treated as external sharing.** Placing data into a consumed AI service is governed by the external-sharing rules of [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) §6.
+1. **A prompt to a third-party AI service is treated as external sharing.** The external-sharing rules of [`CERG-STD-DG-001`](CERG-STD-DG-001_Data_Governance_and_Classification_Standard.md) §6 govern any data placed into a consumed AI service.
 2. **Classification limits on AI input:**
    - **Public and Internal data** may be placed into sanctioned AI tools.
    - **Confidential data** may be placed only into AI services that have been assessed and approved for Confidential data, with contractual assurance that input is not used to train the provider's models and is handled to the program's bar.
@@ -108,7 +108,7 @@ An AI application the organization builds is software and is fully governed by [
 
 1. **AI applications go through architecture review.** An AI application or integration is subject to project intake and architecture review per [`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md), with the AI-specific threats in Section 7 explicitly in scope of the threat model.
 2. **The model is an inventoried component.** A model, whether trained in-house or a third-party model the application depends on, is a component recorded in the asset inventory per [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md), the AI system and model register using [`CERG-TMPL-AI-003`](../templates/CERG-TMPL-AI-003_AI_System_and_Model_Register_Template.md) or an equivalent local record, and, where applicable, in the software bill of materials per [`CERG-STD-SDL-001`](CERG-STD-SDL-001_Secure_Software_Development_and_Application_Security_Standard.md) §8.
-3. **Model provenance is known.** The source of any third-party or open model used is known and trusted. A model from an unverified source is a supply chain risk.
+3. **Model provenance is known.** The program knows and trusts the source of any third-party or open model it uses. A model from an unverified source is a supply chain risk.
 4. **AI applications enforce least privilege.** An AI system, and any agent or tool-using capability it has, operates with the least privilege required. An AI agent does not run with broad standing access on the assumption it will behave.
 5. **AI output that triggers action is bounded.** Where an AI system can trigger an action, send a message, change a record, call an API, the actions it can take are constrained and high-consequence actions require human confirmation.
 
@@ -217,7 +217,7 @@ Roles below are the canonical role names from [`CERG-GOV-OM-001`](../governance/
 - A significant AI-related security incident
 - Direction from the CISO
 
-Cyber Engineering owns this document. The Engineering Pillar Leader (Application Security) is responsible for initiating reviews, managing the revision cycle, and obtaining Governance Pillar Leader approval, with CISO endorsement, for all changes.
+Cyber Engineering owns this document. The Engineering Pillar Leader (Application Security) initiates reviews, manages the revision cycle, and obtains Governance Pillar Leader approval, with CISO endorsement, for all changes.
 
 ### Related Documents
 

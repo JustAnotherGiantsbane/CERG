@@ -2,11 +2,11 @@
 
 You just found CERG. You have a repo full of Markdown. What do you actually do on Monday morning?
 
-**This page is your first 48 hours.** Read it before you read anything else.
+**This page is your first 48 hours.** Read it before anything else.
 
 ## If you were just assigned to CERG
 
-Use your first ten minutes to orient yourself in these three documents; do not try to finish them.
+Spend your first ten minutes skimming these three documents; do not try to finish them.
 
 1. **[Cybersecurity Policy](governance/CERG-POL-001_Cybersecurity_Policy.md) §§1, 2, and 5**: the authority, operating model, and policy accountabilities. The CISO approves the policy; the Executive Sponsor endorses it.
 2. **[CERG Framework](governance/CERG-GOV-FRM-001_CERG_Framework.md) §2.2**: the three pillars and where you sit.
@@ -34,13 +34,13 @@ CERG requires organizational commitment. Answer honestly:
 
 If you answered **no** to any of these, start with NIST CSF or CIS Controls. Come back to CERG when you're ready.
 
-If you answered **yes** to all four, do not start by reading the whole repository. Pick one entry point, read only the documents needed for that decision, and let the operating cadence pull in the rest.
+If you answered **yes** to all four, do not start by reading the whole repository. Pick one entry point, read only what that decision needs, and let the operating cadence pull in the rest.
 
 ---
 
 ## First rule: do not boil the ocean
 
-CERG is intentionally complete, but first adoption is intentionally narrow. Your first hour should answer one question: **what problem are we trying to operate better?**
+CERG is complete by design; first adoption is deliberately narrow. Your first hour should answer one question: **what problem are we trying to operate better?**
 
 Use these rules:
 
@@ -76,7 +76,7 @@ If you are still unsure where to begin, use these helpers before diving into the
 - [Role-Based Implementation Checklists](governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md) - what the CISO, Governance, Risk, and Engineering leads do first.
 - [Record Catalog](governance/CERG-GOV-CAT-002_Record_Catalog.md) - the records and minimum evidence that prove the program is operating.
 - [Day in the Life examples](examples/day-in-the-life/README.md) - twelve narrative walkthroughs showing how the three pillars produce real work during incidents, audits, intake, AI rollouts, access reviews, new-CISO adoption, and OT patch deferral. Read one before you read the standards.
-- [Role Reader Paths](governance/CERG-GOV-IMP-007_Role_Reader_Paths.md) - a sequenced 25-35 minute reading order for the CISO, Risk Lead, Engineering Lead, and Business Owner / System Sponsor if you are taking on a CERG role for the first time.
+- [Role Reader Paths](governance/CERG-GOV-IMP-007_Role_Reader_Paths.md) - a sequenced 25-35 minute reading order for the CISO, Risk Lead, Engineering Lead, and Business Owner / System Sponsor taking on a CERG role for the first time.
 
 ### Adoption suite map
 
@@ -95,9 +95,9 @@ If you are still unsure where to begin, use these helpers before diving into the
 
 ## Path 1: CERG Lite (small security team, 2-8 people)
 
-**You have:** A small team with at least two named participants in cyber risk decisions. No existing framework, or a framework that is not yet operational.
+**You have:** A small team with at least two named people in cyber risk decisions. No existing framework, or a framework that is not yet operational.
 
-If you are a one-person security function, use CERG as a planning reference and adopt the MVC documents only after you have an Executive Sponsor and an independent approver for High/Critical risk decisions.
+If you are a one-person security function, treat CERG as a planning reference. Adopt the MVC documents only once you have an Executive Sponsor and an independent approver for High/Critical risk decisions.
 
 **Your goal:** Stand up a real program without drowning in documents.
 
@@ -127,7 +127,7 @@ Adopt these eight documents first:
 7. Risk Register Templates
 8. Exposure Management Procedure
 
-Use the Record Catalog, Adoption Safety Guide, Small Team Adoption Path, and Role-Based Implementation Checklists as adoption aids. They help you adopt the MVC; they are not additional MVC requirements.
+The Record Catalog, Adoption Safety Guide, Small Team Adoption Path, and Role-Based Implementation Checklists are adoption aids. They help you adopt the MVC; they are not additional MVC requirements.
 
 **Read one story.** The [CERG Lite day-in-the-life walkthrough](examples/day-in-the-life/story-8-cerg-lite-maria.md) shows what your first month of running the MVC actually looks like when two people own everything.
 
@@ -179,7 +179,7 @@ MVC (all 8) + Access, Asset, Config Baseline, IT/Cloud/SaaS where applicable, Lo
    - CMMC / CUI → [PLN-CUI-001](plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md)
    - SOX ITGC → [PLN-SOX-001](plans/CERG-PLN-SOX-001_SOX_ITGC_Operational_Package.md)
    - ISO 27001 → [PLN-ISO-001](plans/CERG-PLN-ISO-001_ISO_IEC_27001_Operational_Package.md)
-5. **Map your evidence requirements.** Each operational package links evidence to specific CERG procedures. Understanding this linkage is the key to making compliance a byproduct of operations.
+5. **Map your evidence requirements.** Each operational package links evidence to specific CERG procedures. Understand this linkage; it is the key to making compliance a byproduct of operations.
 6. **See the [Compliance Matrix](governance/CERG-GOV-CMX-001_Compliance_Matrix.md).** 22 security intents mapped to every framework simultaneously.
 
 ### Your starting set
@@ -190,7 +190,7 @@ MVC + all 15 standards + Architecture Review, TPRM, Change Management, Audit/Evi
 
 ## What CERG adoption is NOT
 
-- **Not a certification.** You can adopt CERG and still fail a regulatory assessment if controls aren't implemented and evidenced.
+- **Not a certification.** You can adopt CERG and still fail a regulatory assessment if you haven't implemented and evidenced the controls.
 - **Not a substitute for judgment.** CERG provides structure. You provide decisions, owners, scope, and risk appetite.
 - **Not a one-time exercise.** A program runs on cadence. If you're not producing evidence from real work every month, you're not running CERG.
 - **Not shelfware.** If you fork the repo, rename the company, approve everything, and walk away, you have produced exactly nothing.
@@ -201,7 +201,7 @@ CERG should create operating leverage. After the first cycle, the work should fe
 
 - owners and decision rights are easier to name;
 - recurring reviews produce records instead of status theater;
-- evidence is easier to retrieve because it was created during the work;
+- evidence is easier to retrieve because you created it during the work;
 - engineering teams receive clearer guardrails;
 - fewer problems depend on the same hero person;
 - leaders can see whether the bottleneck is capability, scope, tooling, or staffing.
@@ -210,7 +210,7 @@ If adoption mostly adds meetings, manual chasing, or ambiguity, stop adding docu
 
 ### Schedule your first stakeholder survey at month 2
 
-After one full cadence cycle (approximately 60 days), administer the [Stakeholder Perception Survey](templates/CERG-TMPL-GOV-001_Stakeholder_Perception_Survey.md). The survey is how you measure whether the program is reducing drag and confusion for the business, which is the program's stated mission. Run annually thereafter. Survey results below 3.0 on a Likert scale, or a year-over-year decline of 0.5 points or more, become entries in the [Program Improvement Register](governance/CERG-GOV-IMPREG-001_Program_Improvement_Register.md). The survey is paired with monthly [Service Responsiveness metrics](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) (SR-001 through SR-005) so friction is caught continuously, not only once a year.
+After one full cadence cycle (approximately 60 days), administer the [Stakeholder Perception Survey](templates/CERG-TMPL-GOV-001_Stakeholder_Perception_Survey.md). The survey measures whether the program reduces drag and confusion for the business; that is its stated mission. Run it annually thereafter. Survey results below 3.0 on a Likert scale, or a year-over-year decline of 0.5 points or more, become entries in the [Program Improvement Register](governance/CERG-GOV-IMPREG-001_Program_Improvement_Register.md). Pair the survey with monthly [Service Responsiveness metrics](governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) (SR-001 through SR-005) so you catch friction continuously, not only once a year.
 
 ---
 
@@ -226,7 +226,7 @@ After one full cadence cycle (approximately 60 days), administer the [Stakeholde
 
 ## After the first 30 days
 
-Once MVC is running, layer the remaining documents as needed. The sequence matters less after the spine is in place. Prioritize based on what's causing the most operational friction.
+Once the MVC runs, layer the remaining documents as needed. Sequence matters less once the spine is in place. Prioritize whatever is causing the most operational friction.
 
 Before broad standard-layer adoption, use the Gate 2 to Gate 3 transition test in the [Adoption Decision Tree and Dependency Matrix](governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md). Do not advance just because the calendar says day 60 or day 90. Advance when the MVC has produced risk, exposure, intake, evidence, pillar-accountability, and adoption-plan records.
 

@@ -92,7 +92,7 @@ Every material workflow in CERG resolves to one of the following primary record 
 
 ### Conversion Rules
 
-These are the rules that govern when one record type becomes another. They appear in [CERG-GOV-FLOW-001 §2](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#2-operating-principles) and are repeated here for discoverability.
+These are the rules that govern when one record type becomes another. They appear in [CERG-GOV-FLOW-001 §2](CERG-GOV-FLOW-001_Cross-Pillar_Operational_Flows.md#2-operating-principles); this glossary repeats them here for discoverability.
 
 - A **Vulnerability** becomes a **Finding** when triaged. It may be directly remediated without becoming a Risk.
 - A **Finding** promotes to a **Risk Record** when: the SLA is exceeded, the affected asset is Tier 0 or Tier 1, exploitation is active, remediation requires a business decision, or compensating controls are needed.

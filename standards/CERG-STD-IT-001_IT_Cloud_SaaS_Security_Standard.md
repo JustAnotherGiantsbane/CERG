@@ -37,7 +37,7 @@
 
 ## 1. Purpose and Scope
 
-This standard implements the foundational principles established in **[CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md)** for information technology assets hosted in owned data centers, leased / colocation facilities, infrastructure-as-a-service (IaaS), platform-as-a-service (PaaS), and software-as-a-service (SaaS) environments. It defines specific, measurable security requirements that apply regardless of whether the underlying infrastructure is owned, leased, rented, or consumed as a service.
+This standard applies the foundational principles of **[CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md)** to information technology assets hosted in owned data centers, leased / colocation facilities, infrastructure-as-a-service (IaaS), platform-as-a-service (PaaS), and software-as-a-service (SaaS) environments. It defines specific, measurable security requirements that apply regardless of whether the underlying infrastructure is owned, leased, rented, or consumed as a service.
 
 The intent is durable: as the organization continues to shift workloads between owned, hybrid, and fully cloud-native models, the security obligations do not change, only the implementation specifics do. This standard makes those implementation differences explicit while keeping the underlying control intent constant.
 
@@ -59,7 +59,7 @@ This standard applies to:
 
 ### 1.2 The Shared Responsibility Reality
 
-Cloud and SaaS providers operate under a shared responsibility model. The provider is accountable for security *of* the cloud, physical facilities, hypervisor, base platform, and the organization remains accountable for security *in* the cloud, data, identity, configuration, application logic, and access. Outsourcing the workload does not outsource the accountability.
+Cloud and SaaS providers operate under a shared responsibility model. The provider is accountable for security *of* the cloud — physical facilities, hypervisor, base platform — and the organization remains accountable for security *in* the cloud: data, identity, configuration, application logic, and access. Outsourcing the workload does not outsource the accountability.
 
 > **The Shared Responsibility Trap**
 >
@@ -349,7 +349,7 @@ This standard shall be reviewed annually and upon any of the following triggerin
 - Changes to [NIST 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final), 800-171, CSA CCM, or [SOX](https://www.govinfo.gov/app/details/PLAW-107publ204) ITGC guidance that materially affect requirements herein
 - Direction from the CISO, internal audit findings, or external regulatory examination
 
-Governance owns this document. The Governance Pillar Leader (Enterprise IT/Cloud) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO approval for all changes.
+Governance owns this document. The Governance Pillar Leader (Enterprise IT/Cloud) initiates reviews, manages the revision cycle, and obtains CISO approval for all changes.
 
 ### Related Documents
 
