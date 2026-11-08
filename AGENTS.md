@@ -174,9 +174,11 @@ git commit -m "short message"
 git push fork HEAD
 ```
 
-`origin` is `m0dernz/CERG`, the canonical repo with a single maintainer. It is fetch-only for contributors: a push there returns a permission error, and that is the guard working, not a credential problem. With `remote.pushDefault=fork`, a bare `git push` targets your own fork.
+`origin` is `m0dernz/CERG`, the canonical repo with a single maintainer. `cragin` is `cragin-security/CERG`, a second upstream mirror. Both are fetch-only for contributors: a push to either returns a permission error, and that is the guard working, not a credential problem.
 
-Changes reach mainline as a pull request to `m0dernz`. A declined pull request means the change does not enter mainline now, not that the idea is invalid. See [CONTRIBUTING.md](CONTRIBUTING.md) for the reasoning.
+The remote named `fork` is your own repository (e.g. `JustAnotherGiantsbane/CERG`), where all work happens. With `remote.pushDefault=fork`, a bare `git push` targets your own fork. Never work around a 403 on origin or cragin by changing credentials or remotes - improvements reach upstream maintainers as pull requests, and they merge or do not.
+
+Agent identity rule: authenticate as your own GitHub account only, never an OS session or another profile's credentials. Verify by account name (`gh api user --jq .login`), not by whether a command "succeeded" - `gh auth status` reports success for whichever account won. If push and gh disagree about who you are, fix the credential source, not the remote.
 
 ### Git Config
 
