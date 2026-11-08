@@ -6,7 +6,7 @@
 |---|---|
 | **Document ID** | CERG-OPN-TOOLS-001 |
 | **Version** | 1.0.0 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Consulting Practice Lead |
 | **Parent Policy** | CERG-POL-001 |

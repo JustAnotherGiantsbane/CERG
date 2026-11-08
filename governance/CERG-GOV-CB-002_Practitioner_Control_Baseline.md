@@ -6,7 +6,7 @@
 |---|---|
 | **Document ID** | CERG-GOV-CB-002 |
 | **Version** | 1.1.1 |
-| **Status** | Draft |
+| **Status** | Approved |
 | **Classification** | Public |
 | **Owner** | Consulting Practice Lead |
 | **Parent Policy** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) |
