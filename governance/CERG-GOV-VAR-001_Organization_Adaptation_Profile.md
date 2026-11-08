@@ -56,12 +56,12 @@ CERG separates two kinds of content.
 
 **Variable content** is everything that names a specific organization: the organization's name, its sector, its size, the regulators it answers to, the names of its standing teams, and the illustrative examples chosen to make a point. This content is different for every adopter.
 
-Adaptation is the act of replacing variable content with an organization's own values. CERG does this in two layers:
+Adaptation replaces variable content with an organization's own values. CERG does this in two layers:
 
 1. **Tokens.** Explicit variable tokens of the form `{{TOKEN_NAME}}`. Any new CERG content, and any organization-maintained content, uses tokens directly. The render tool substitutes them.
 2. **The phrase map.** The V1 corpus was written before the token scheme existed, so it contains hard-coded variable phrases (for example, a specific headcount used as a scaling upper bound). The phrase map is a configurable list of those known phrases and the token each maps to. The render tool applies it so the existing corpus adapts without the source files being rewritten.
 
-The published corpus is left intact and generic. The render tool produces a separate, organization-specific output. The source stays the master; the output is an export, exactly as [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) requires.
+CERG leaves the published corpus intact and generic. The render tool produces a separate, organization-specific output. The source stays the master; the output is an export, exactly as [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) requires.
 
 > **Why Not Just Edit the Source Documents**
 >
@@ -80,7 +80,7 @@ A token is an uppercase identifier wrapped in double braces.
 Rules for tokens:
 
 - **Uppercase, underscore-separated.** `{{ORG_NAME}}`, not `{{OrgName}}` or `{{org-name}}`.
-- **Double braces, no spaces.** `{{ORG_NAME}}`, not `{{ ORG_NAME }}` or `{ORG_NAME}`. The double-brace form is chosen because it does not collide with Markdown syntax and is visually obvious in a draft.
+- **Double braces, no spaces.** `{{ORG_NAME}}`, not `{{ ORG_NAME }}` or `{ORG_NAME}`. The double-brace form does not collide with Markdown syntax and is visually obvious in a draft.
 - **Every token appears in the catalog.** Section 4 is the authoritative list. A token used in a document but absent from the catalog is an error the render tool reports.
 - **Tokens never appear in fixed content.** Role names stay canonical (see Section 9). The three pillars are never tokenized. Document IDs are never tokenized.
 - **A token has exactly one meaning.** `{{REGULATORS}}` is always the full regulator list. It is never reused to mean something else in another document.
@@ -93,7 +93,7 @@ Rules for tokens:
 
 ## 4. Token Catalog
 
-This is the authoritative list of tokens. New tokens are added only by amendment to this document.
+This is the authoritative list of tokens. Add new tokens only by amendment to this document.
 
 ### 4.1 Organization Identity
 
@@ -271,7 +271,7 @@ When CERG publishes an update upstream, the adopter pulls the new source, update
 - Adopter feedback indicating a missing or ambiguous token
 - Direction from the CISO
 
-Governance owns this document. The Governance Pillar Leader (Document Control) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO approval for all changes.
+Governance owns this document. The Governance Pillar Leader (Document Control) initiates reviews, manages the revision cycle, and obtains CISO approval for all changes.
 
 ### Related Documents
 
