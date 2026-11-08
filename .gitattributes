@@ -1,0 +1,11 @@
+# Normalize line endings so Windows and Unix checkouts agree.
+* text=auto eol=lf
+
+# Binary assets — never convert or diff as text.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
