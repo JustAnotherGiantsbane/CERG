@@ -38,7 +38,7 @@
 
 ## 1. Purpose and Scope
 
-The policy, IT standard, OT standard, CUI standard, compliance matrix, and RMF all require documented and tested recovery plans, backup protection, and restoration evidence. Until this standard, those obligations had no shared executable definition, RTO/RPO tiers, immutability requirements, restoration evidence formats, and the boundary with enterprise BCP were left for each subordinate document to imply.
+The policy, IT standard, OT standard, CUI standard, compliance matrix, and RMF all require documented and tested recovery plans, backup protection, and restoration evidence. Until this standard, those obligations had no shared executable definition: each subordinate document had to imply its own RTO/RPO tiers, immutability requirements, restoration evidence formats, and the boundary with enterprise BCP.
 
 This standard closes that gap. It applies to every in-scope asset that has data, configuration, or workload state worth recovering.
 
@@ -65,7 +65,7 @@ CERG produces inputs to Enterprise BCP: tested cyber recovery plans, RTO/RPO act
 
 ## 3. Recovery Tiers and RTO/RPO Model
 
-Every in-scope asset has a CERG recovery tier. The tier drives RTO/RPO targets, backup frequency, immutability requirements, and restoration test cadence. Tiering is owned by Engineering in partnership with the business and Enterprise BCP, the business sets criticality, CERG sets the cyber tier consistent with criticality.
+Every in-scope asset has a CERG recovery tier. The tier drives RTO/RPO targets, backup frequency, immutability requirements, and restoration test cadence. Engineering owns tiering in partnership with the business and Enterprise BCP: the business sets criticality, and CERG sets the cyber tier consistent with it.
 
 | **Tier** | **Description** | **RTO (Cyber)** | **RPO** | **Backup Frequency** | **Restoration Test** |
 |---|---|---|---|---|---|
@@ -102,7 +102,7 @@ Every backup of an in-scope asset meets the following requirements at minimum. T
 
 ### 4.2 The Air-Gap and Immutability Rationale
 
-Ransomware tooling routinely attacks backup systems before triggering encryption. The immutability and credential separation requirements above exist specifically because production-attached, production-credentialled backups are not a defense.
+Ransomware tooling routinely attacks backup systems before it triggers encryption. The immutability and credential-separation requirements above exist because production-attached, production-credentialled backups are not a defense.
 
 > **If the Backup Lives on Production, It's Not a Backup**
 >
@@ -160,7 +160,7 @@ Each full restoration test follows the procedure below and produces the evidence
 
 ## 6. Cloud and SaaS Recovery
 
-Cloud and SaaS recovery is shaped by the shared-responsibility model. CERG does not assume provider recovery covers customer-side obligations.
+The shared-responsibility model shapes cloud and SaaS recovery. CERG does not assume provider recovery covers customer-side obligations.
 
 ### 6.1 Cloud-Native Workloads (IaaS / PaaS)
 
@@ -171,7 +171,7 @@ Cloud and SaaS recovery is shaped by the shared-responsibility model. CERG does 
 
 ### 6.2 Tier 1 SaaS
 
-Provider native restore is the first line; CERG-managed SaaS backup is added where provider native restore is insufficient or where regulator requires customer-controlled backup.
+Provider native restore is the first line. CERG adds a CERG-managed SaaS backup where provider native restore is insufficient, or where a regulator requires a customer-controlled backup.
 
 | **Tier 1 SaaS** | **Provider Native Restore Sufficient?** | **CERG-Managed SaaS Backup?** |
 |---|---|---|
