@@ -1,5 +1,5 @@
 # CERG Publication Eligibility Manifest
-# Generated from document metadata | 131 artifacts
+# Generated from document metadata | 132 artifacts
 # Separates lifecycle approval from public-release eligibility
 
 - document_id: CERG-GOV-ADR-001
@@ -297,6 +297,17 @@
   full_text_public_allowed: true
   redaction_required: false
   approved_public_release_by: Governance Pillar Leader
+  release_date: 2026-11-08
+
+- document_id: CERG-GOV-IR-001
+  source_path: governance/CERG-GOV-IR-001_Incident_Signpost.md
+  status: Approved
+  classification: Public
+  publication_profile: public
+  public_summary_allowed: true
+  full_text_public_allowed: true
+  redaction_required: false
+  approved_public_release_by: 'Governance Pillar Leader (this page only)'
   release_date: 2026-11-08
 
 - document_id: CERG-GOV-JA-001
