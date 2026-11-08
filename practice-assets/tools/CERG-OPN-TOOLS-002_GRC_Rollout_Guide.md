@@ -19,7 +19,7 @@
 
 ## Purpose
 
-This guide provides copy-paste instructions for deploying a GRC platform as the CERG anchor. It covers two paths:
+This guide gives copy-paste instructions for deploying a GRC platform as the CERG anchor. It covers two paths:
 
 1. **Enterprise / MSP path:** ServiceNow GRC with CERG control import, evidence automation, and audit reporting
 2. **SMB path:** Vanta with CERG control mapping for compliance-only use cases
@@ -181,7 +181,7 @@ Vanta's partner program supports multi-client management:
 3. **Automated evidence collection** — per-client agent deployment
 4. **Quarterly review cadence** — Vanta prompts for recertification
 
-Limitations: Vanta's partner reporting is not as robust as ServiceNow's domain separation. No cross-client risk aggregation. Each client is a separate instance.
+Limitations: Vanta's partner reporting can't match ServiceNow's domain separation. No cross-client risk aggregation. Each client is a separate instance.
 
 ---
 
