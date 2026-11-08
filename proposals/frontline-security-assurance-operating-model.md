@@ -17,20 +17,11 @@
 > in the document catalog. It is a candidate contribution to the framework, not normative
 > content. Cite it as a draft in proposals and statements of work until it is accepted.
 
-> **Bottom line:** Grid reliability and security share the same objective — a resilient,
-> defensible, available grid. This operating model replaces ad-hoc security requests to
-> frontline teams with a structured contract: second line defines the control outcome and
-> minimum evidence; first line owns safe execution; architecture and tooling own supported
-> patterns; the accountable risk owner decides when tradeoffs conflict.
->
-> This is not a compliance checklist. It is a practical way of working that explicitly
-> accounts for safety, reliability, vendor constraints, and maintenance windows — because
-> those are security inputs, not objections to security.
->
-> **Implementation sequence:** (1) agree the model and decision rights, (2) define the
-> crown-jewel scope, (3) pilot one operational area and one security domain, (4) automate
-> core data feeds, (5) establish the feasibility review and exception workflow, (6) expand
-> by tier and maturity.
+Grid reliability and security share the same objective: a resilient, defensible, available grid. This operating model replaces ad-hoc security requests to frontline teams with a structured contract. Second line defines the control outcome and minimum evidence; first line owns safe execution; architecture and tooling own supported patterns; the accountable risk owner decides when tradeoffs conflict.
+
+This is not a compliance checklist. It is a practical way of working that explicitly accounts for safety, reliability, vendor constraints, and maintenance windows — because those are security inputs, not objections to security.
+
+Implementation sequence: (1) agree the model and decision rights, (2) define the crown-jewel scope, (3) pilot one operational area and one security domain, (4) automate core data feeds, (5) establish the feasibility review and exception workflow, (6) expand by tier and maturity.
 
 ---
 
@@ -49,7 +40,7 @@ first-line IT/OT operations teams managing NERC CIP and broader security control
 defines what is needed, from where, how often, in what format, and how completeness is
 verified. This replaces ad-hoc "please be CIP compliant" requests with a repeatable contract.
 
-It is intended to protect grid reliability and security at the same time. It is **not** a
+It protects grid reliability and security at the same time. It is **not** a
 mandate to deploy a particular security product or to prioritize reporting over safe
 operations.
 
@@ -57,12 +48,7 @@ operations.
 
 ## Core message
 
-> Second line defines the security outcome, minimum evidence, and risk threshold.  
-> First line owns safe execution and operational evidence.  
-> Architecture and tooling teams provide approved, supportable implementation patterns and
-> data integrations.  
-> When security, reliability, or operational feasibility conflict, the accountable risk
-> owner makes the documented decision.
+Second line defines the security outcome, minimum evidence, and risk threshold. First line owns safe execution and operational evidence. Architecture and tooling teams provide approved, supportable implementation patterns and data integrations. When security, reliability, or operational feasibility conflict, the accountable risk owner makes the documented decision.
 
 A reported gap is not automatically a frontline failure. A gap may reflect an architecture
 limitation, tooling limitation, vendor constraint, safety concern, maintenance-window
@@ -73,11 +59,11 @@ accountable owner, disposition, and review date.
 
 ## Regulatory note
 
-CIP mappings in the underlying contract should be treated as indicative references and
-reviewed by the organization's compliance and legal functions against the applicable
-standards, registered scope, and approved internal interpretations. The operating model is
-intended to improve control effectiveness and evidence quality; it is not a substitute for
-formal regulatory interpretation.
+Treat CIP mappings in the underlying contract as indicative references, to be reviewed by
+the organization's compliance and legal functions against the applicable standards,
+registered scope, and approved internal interpretations. The operating model aims to
+improve control effectiveness and evidence quality; it is not a substitute for formal
+regulatory interpretation.
 
 ---
 
@@ -112,15 +98,15 @@ Second line may identify that a control outcome is not met and may challenge the
 
 A contracted provider changes who performs the work, not who is accountable. Where a managed security service provider or outsourced operator runs a service, the internal first-line service owner remains accountable for scope, performance, and treatment, and second line still validates independently. The assurance question is never whether the provider delivered its contract; it is whether the control outcome holds.
 
-Because a provider's scale exceeds what most adopting organisations can build internally, the interface in Section 3 is written to double as a statement-of-work exhibit: every field can be marked as a provider obligation or a client obligation, and ambiguity is settled at contract rather than after an incident.
+Because a provider's scale exceeds what most adopting organisations can build internally, the interface in Section 3 doubles as a statement-of-work exhibit: mark every field as a provider obligation or a client obligation, and settle ambiguity at contract rather than after an incident.
 
 ### Dispute escalation path
 
 When second-line cybersecurity and the accountable business/risk owner disagree on residual risk acceptance:
 
-1. **Document the dispute.** The specific control outcome, gap, compensating controls, the risk owner's rationale, and second line's challenge rationale are recorded in a decision record (see Section 7 for the format).
+1. **Document the dispute.** Record the specific control outcome, gap, compensating controls, the risk owner's rationale, and second line's challenge rationale in a decision record (see Section 7 for the format).
 2. **Escalate to CISO (or delegate).** Second line elevates the documented dispute to the CISO. The CISO reviews the record and either concurs with the risk owner, directs additional compensating controls, or escalates to the executive risk committee.
-3. **Final decision.** The CISO (or executive risk committee, if escalated) makes the binding residual-risk decision. The decision, rationale, and any conditions are documented and retained as an assurance record.
+3. **Final decision.** The CISO (or executive risk committee, if escalated) makes the binding residual-risk decision. Document the decision, rationale, and any conditions and retain them as an assurance record.
 4. **Expedited path for active or imminent risk.** When the dispute involves an actively exploited vulnerability, uncontained malware, or material control failure on a crown-jewel asset, second line may request an interim risk treatment (e.g., temporary containment) within 24 hours while the formal escalation proceeds.
 
 The escalation path is not a failure of the operating model. It is the operating model's release valve when aligned good-faith judgment reaches a genuine impasse.
@@ -147,7 +133,7 @@ Each request in the frontline contract should use this structure.
 | **Platform owner** | Team accountable for the enabling tool, service, connector, or reference architecture. | Target |
 | **Data owner / authoritative source** | Owner and source for each required data element. | Target |
 
-Use **“minimum assurance evidence”** rather than “required fields” where possible. The purpose is assurance of the control outcome, not creation of a reporting exercise.
+Use **“minimum assurance evidence”** rather than “required fields” where possible. The purpose is to assure the control outcome, not to create a reporting exercise.
 
 ### Mapping to the implemented service interface
 
@@ -295,15 +281,15 @@ The objective is not to force a technical answer during a dispute. It is to make
 
 ### Vulnerability prioritization
 
-Use CVSS, exploitation status, CISA KEV status, EPSS, asset criticality, exposure, and operational context together. EPSS and KEV should be captured **when a CVE mapping exists**; many vendor or OT findings will not map cleanly. KEV is a high-priority risk signal, not a universal instruction to patch immediately in every environment.
+Use CVSS, exploitation status, CISA KEV status, EPSS, asset criticality, exposure, and operational context together. Capture EPSS and KEV **when a CVE mapping exists**; many vendor or OT findings will not map cleanly. KEV is a high-priority risk signal, not a universal instruction to patch immediately in every environment.
 
 ### Patching and post-patch validation
 
-A “deployed” status should include validation evidence. Validation timing should be risk-tiered and operationally feasible; an OT asset may need validation during a controlled operational test or maintenance window. If validation is deferred, record the reason, compensating controls, and planned validation date.
+A “deployed” status should include validation evidence. Validation timing should be risk-tiered and operationally feasible; an OT asset may need validation during a controlled operational test or maintenance window. If validation slips, record the reason, compensating controls, and planned validation date.
 
 ### Remote access
 
-Require authenticated, authorized, logged remote access to applicable systems. MFA, PAM, session recording, just-in-time access, and retention periods should be defined as risk-tiered approved patterns—not arbitrary universal requirements that a legacy environment cannot satisfy.
+Require authenticated, authorized, logged remote access to applicable systems. Define MFA, PAM, session recording, just-in-time access, and retention periods as risk-tiered approved patterns—not arbitrary universal requirements that a legacy environment cannot satisfy.
 
 ### Internal network security monitoring
 
@@ -321,7 +307,7 @@ Frontline and the SOC should immediately classify and escalate events through th
 
 ## 9. Scope boundaries
 
-Some activities support cybersecurity assurance but should not be presented as frontline operational-security reporting obligations:
+Some activities support cybersecurity assurance but do not belong in frontline operational-security reporting obligations:
 
 - Cyber Security Manager designation and delegation
 - Enterprise policy approval and attestation governance
@@ -329,7 +315,7 @@ Some activities support cybersecurity assurance but should not be presented as f
 - Enterprise metric definition and consolidated executive reporting
 - HR-controlled employment screening and broad training administration
 
-These may appear in the broader governance program, but their accountable owners should be correctly identified.
+These may appear in the broader governance program, but name their accountable owners correctly.
 
 ---
 
@@ -342,10 +328,10 @@ These may appear in the broader governance program, but their accountable owners
 5. **Establish the control feasibility review** and exception workflow before enforcing strict SLAs.
 6. **Measure data quality and unresolved risk**, not report volume.
 7. **Expand by tier and maturity**, using lessons from the pilot and approved implementation patterns.
-8. **Adopt graduated data-quality expectations, stated as capability rather than percentage.** Sequence the work: Tier 1 asset ownership and support-group completeness in the authoritative inventory first, then minimum-assurance-evidence completeness on submissions, then automated reconciliation across sources. Progress is judged on whether the next capability is actually in place, not on a percentage threshold. A shortfall triggers a data-quality improvement plan with a named owner, not a compliance violation.
+8. **Adopt graduated data-quality expectations, stated as capability rather than percentage.** Sequence the work: Tier 1 asset ownership and support-group completeness in the authoritative inventory first, then minimum-assurance-evidence completeness on submissions, then automated reconciliation across sources. Judge progress on whether the next capability is actually in place, not on a percentage threshold. A shortfall triggers a data-quality improvement plan with a named owner, not a compliance violation.
 9. **Publish an annual data-quality maturity review.** Each service domain reports its top three data-quality gaps, root cause (tooling, process, or staffing), and the funded improvement plan. This prevents the operating model from becoming a reporting burden on top of poor-quality source data.
 
-Nothing in this model is measured against a percentage target. Numbers appear only where they define a commitment: a notification clock, a remediation deadline, or a reconciliation tolerance that changes the response. A percentage target that can be met without improving the outcome becomes a ceiling.
+This model measures nothing against a percentage target. Numbers appear only where they define a commitment: a notification clock, a remediation deadline, or a reconciliation tolerance that changes the response. A percentage target that can be met without improving the outcome becomes a ceiling.
 
 ---
 
