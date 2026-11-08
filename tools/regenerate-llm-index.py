@@ -229,7 +229,7 @@ def main():
         "prefixes": PREFIXES,
         "documents": docs,
     }
-    OUT.write_text(json.dumps(index, indent=2) + "\n", encoding="utf-8")
+    OUT.write_text(json.dumps(index, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(f"Regenerated {OUT} with {len(docs)} documents")
 
 

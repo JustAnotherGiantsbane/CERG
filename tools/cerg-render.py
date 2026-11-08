@@ -216,7 +216,7 @@ def main():
             rel = os.path.relpath(path, args.source)
             dest = os.path.join(args.out, rel)
             os.makedirs(os.path.dirname(dest) or ".", exist_ok=True)
-            with open(dest, "w", encoding="utf-8") as fh:
+            with open(dest, "w", encoding="utf-8", newline="\n") as fh:
                 fh.write(out_text)
             rendered_files += 1
 

@@ -13,13 +13,19 @@ repo-local files so agents do not consume stale directoryless paths.
 from __future__ import annotations
 
 import hashlib
+import os
 import re
 from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MR = ROOT / "machine-readable"
-GITHUB_BASE = "https://github.com/m0dernz/CERG/blob/main"
+# Canonical URLs describe where THESE artifacts live. The fork carries documents
+# that do not exist upstream (ADR-001, CB-002, IR-001, the OPN practice assets),
+# so an m0dernz base produced 404s. Overridable for other deployments.
+GITHUB_BASE = os.environ.get(
+    "CERG_CANONICAL_BASE", "https://github.com/cragin-security/CERG/blob/main"
+)
 
 INCLUDE_DIRS = {"governance", "standards", "procedures", "plans", "templates", "roles"}
 DOC_ID_RE = re.compile(r"CERG-(?:POL-\d{3}|(?:STD|PRC|PLN|GL|TMPL|GOV)-[A-Z]{2,8}(?:-[A-Z]{2,8})?-\d{3})")
@@ -219,7 +225,7 @@ def write_manifest(docs):
         lines.append(f"- document_id: {yaml_scalar(doc['document_id'])}")
         for field in fields[1:]:
             lines.append(f"  {field}: {yaml_scalar(doc[field])}")
-    (MR / "cerg-manifest.yaml").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    (MR / "cerg-manifest.yaml").write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
 
 
 def write_publication_manifest(docs):
@@ -247,7 +253,7 @@ def write_publication_manifest(docs):
             f"  release_date: {yaml_scalar(date.today().isoformat())}",
             "",
         ])
-    (MR / "cerg-publication-manifest.yaml").write_text("\n".join(lines), encoding="utf-8")
+    (MR / "cerg-publication-manifest.yaml").write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
 
 
 def main():

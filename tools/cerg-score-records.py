@@ -44,7 +44,7 @@ def blob(root: str, rev: str, path: str) -> str:
 def score(vc, rules, text: str, name: str) -> float | None:
     d = tempfile.mkdtemp()
     p = os.path.join(d, os.path.basename(name) or "doc.md")
-    with open(p, "w", encoding="utf-8") as fh:
+    with open(p, "w", encoding="utf-8", newline="\n") as fh:
         fh.write(text)
     r = vc.analyse(p, d, rules)
     return r["score"] if r else None
@@ -88,7 +88,7 @@ def main() -> int:
         out.append(json.dumps(rec, ensure_ascii=False))
 
     if not args.dry_run:
-        with open(args.records, "w", encoding="utf-8") as fh:
+        with open(args.records, "w", encoding="utf-8", newline="\n") as fh:
             fh.write("\n".join(out) + "\n")
     print(f"{changed} records scored at {base_sha[:8]}..{head_sha[:8]}"
           f"{' (dry run)' if args.dry_run else ''}")
