@@ -170,10 +170,18 @@ An unexplained delta means the commit is not finished.
 
 ## Rule 8 — a near-identity reskin is a failed pass
 
-If your edit changes fewer than one word in twenty (word-level similarity above
-0.95 against the original), you have not rewritten the file; you have reskinned
-it. "ensures that" → "makes sure" is the specimen. A reskinned file is worse
-than an untouched one, because it records as done and nobody looks again.
+**The unit matters more than the threshold.** Measure on prose tokens only —
+paragraph and list text, with tables, headings, link-dense lines and code fences
+removed, the same population `cerg-voice-check.py` scores. Measured on whole
+files, every one of the 37 writer-route files scores above 0.95 and the rule
+would flag the entire corpus; measured on prose, the same pass scores 0.958
+median and flags 21 of 37. Same edits, two verdicts, one undefined unit.
+
+If the prose-token similarity between your version and the original exceeds
+0.95, you have not rewritten the file; you have reskinned it, and fewer than one
+word in twenty moved. "ensures that" → "makes sure" is the specimen. A reskinned
+file is worse than an untouched one, because it records as done and nobody looks
+again.
 
 Record it as `status: pending`, `why_skipped: pending — rule 8: near-identity
 reskin`, and either do the real pass or leave it for a route that can.
