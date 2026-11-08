@@ -42,8 +42,8 @@ Three evidence methods:
 
 A control can appear more than once, deliberately:
 
-- **In both sections.** Where tooling produces a signal but assurance also needs a human step, the control is listed under the automated sections *and* under Manual Evidence Controls. `CM-001` is the case in point: the CIS compliance scan is automated, while authoring the baseline document is not. `CP-003` pairs automated SureBackup results with a human-verified restore test.
-- **Under more than one tool.** Where two products can collect the same evidence, the control is listed under each so it can be found from whichever tool is deployed: `AC-003`, `AC-005`, `SI-005`, `SI-006`, `SI-007`, `CM-003`, `CA-004`, `SC-001`.
+- **In both sections.** Where tooling produces a signal but assurance also needs a human step, the control appears under the automated sections *and* under Manual Evidence Controls. `CM-001` is the case in point: the CIS compliance scan is automated, while authoring the baseline document is not. `CP-003` pairs automated SureBackup results with a human-verified restore test.
+- **Under more than one tool.** Where two products can collect the same evidence, the control appears under each so it can be found from whichever tool is deployed: `AC-003`, `AC-005`, `SI-005`, `SI-006`, `SI-007`, `CM-003`, `CA-004`, `SC-001`.
 
 The counts are distinct controls, not table rows: **86 controls — 53 with at least one automated pipeline, 33 manual only.**
 
@@ -185,7 +185,7 @@ Configure: policy and compliance module, risk register, vendor risk, POA&M, Perf
 
 ## Manual Evidence Controls
 
-These controls cannot be fully automated. Evidence is collected by a human and uploaded to the GRC platform. Schedule collection in your ticketing system.
+These controls cannot be fully automated. A human collects the evidence and uploads it to the GRC platform. Schedule collection in your ticketing system.
 
 | Control | Why Manual | Collection Procedure | Minimum Schedule | Suggested Trigger |
 |---------|-----------|---------------------|------------------|-------------------|
