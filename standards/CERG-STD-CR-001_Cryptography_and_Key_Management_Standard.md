@@ -244,7 +244,7 @@ Plaintext secrets in source code, configuration files, environment variables on 
 
 - **Pull, never push.** Workloads retrieve secrets at runtime from the secrets manager; secrets are not baked into images or configs.
 - **Short-lived where possible.** Tokens issued by IdP or STS preferred over long-lived static credentials.
-- **Scope-bounded.** Each token is scoped to the minimum required resource and action.
+- **Scope-bounded.** Each token covers only the minimum required resource and action.
 - **Logged.** Issuance, retrieval, and revocation events flow to SIEM.
 
 ### 7.3 Detection and Hygiene
@@ -290,7 +290,7 @@ Rotation is also event-driven, not only scheduled:
 
 ## 9. FIPS / FedRAMP / CUI Cryptography Checklist
 
-The checklist below is the minimum for any system in CUI scope, FedRAMP Moderate scope, or other regulatory scope that requires FIPS-validated cryptography. It is used at architecture review ([`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md)) and at [CMMC](https://dodcio.defense.gov/CMMC/) assessment readiness ([`CERG-PLN-CUI-001`](../plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md)).
+The checklist below is the minimum for any system in CUI scope, FedRAMP Moderate scope, or other regulatory scope that requires FIPS-validated cryptography. Use it at architecture review ([`CERG-PRC-AR-001`](../procedures/CERG-PRC-AR-001_Architecture_Review_and_Project_Intake_Procedure.md)) and at [CMMC](https://dodcio.defense.gov/CMMC/) assessment readiness ([`CERG-PLN-CUI-001`](../plans/CERG-PLN-CUI-001_CUI_CMMC_Operational_Package.md)).
 
 | **Check** | **Required** | **Evidence** |
 |---|---|---|

@@ -40,7 +40,7 @@
 
 [CERG-POL-001](../governance/CERG-POL-001_Cybersecurity_Policy.md) requires approved baselines per asset class. The Operating Model names baselines, IaC, and policy-as-code as core Engineering activities. The IT, OT, and CUI standards each independently call for baselines. Until this standard, those requirements existed without a unified implementation set, which made hardening impossible to delegate or assess.
 
-This standard establishes the **DISH** profile - **D**efensive **I**nfrastructure **S**ystem **H**ardening - applicable to every in-scope asset class, IT and OT, with a single hardening minimum, an elevated tier for High-Impact and BES systems, and explicit fallbacks where CIS does not apply. The acronym is used throughout the CERG document library to refer to the baselines, scan profiles, and drift-detection signals derived from this standard; it is defined here and in [`CERG-POL-001`](../governance/CERG-POL-001_Cybersecurity_Policy.md) §3.
+This standard establishes the **DISH** profile - **D**efensive **I**nfrastructure **S**ystem **H**ardening - applicable to every in-scope asset class, IT and OT, with a single hardening minimum, an elevated tier for High-Impact and BES systems, and explicit fallbacks where CIS does not apply. Throughout the CERG document library, the acronym refers to the baselines, scan profiles, and drift-detection signals derived from this standard; it is defined here and in [`CERG-POL-001`](../governance/CERG-POL-001_Cybersecurity_Policy.md) §3.
 
 > **Hardening Is Not Optional**
 >
@@ -62,7 +62,7 @@ Applies to every in-scope asset class:
 
 ## 2. The DISH Profile
 
-DISH is the CERG-native, IT-and-OT-spanning hardening scan profile. It is implemented in the vulnerability scanning platform as a custom scan template that aggregates the requirements below.
+DISH is the CERG-native, IT-and-OT-spanning hardening scan profile. Engineering implements it in the vulnerability scanning platform as a custom scan template that aggregates the requirements below.
 
 ### 2.1 Composition
 
@@ -283,7 +283,7 @@ Where no published baseline exists, the CERG SaaS Baseline Pattern (Section 9 ge
 
 ## 10. OT Platform Baselines
 
-OT baselines lead with [NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/final) and IEC 62443; CIS is used where the underlying OS supports it (typically engineering workstations and historian servers).
+OT baselines lead with [NIST 800-82r3](https://csrc.nist.gov/pubs/sp/800/82/r3/final) and IEC 62443; CIS applies where the underlying OS supports it (typically engineering workstations and historian servers).
 
 > **Active Scanning is Forbidden in OT Without Engineering Approval**
 >
