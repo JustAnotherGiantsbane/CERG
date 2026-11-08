@@ -36,7 +36,7 @@ Security Engineering (JF-SECENG) — Define secure-system requirements, provide 
 | **Career Track** | SME (Individual Contributor) |
 | **Number of Roles** | 8 |
 
-This family groups roles that share a core competency profile and career progression path. Members of this family progress through four levels (L1-L4), mapped to CERG's S1-S4/M1-M4 grade framework. See [JF-001](../CERG-GOV-JF-001_Job_Families_Overview.md) for the complete level definitions and progression gates.
+This family groups roles that share a core competency profile and a career progression path. Members advance through four levels (L1-L4), mapped to CERG's S1-S4/M1-M4 grade framework. [JF-001](../CERG-GOV-JF-001_Job_Families_Overview.md) carries the complete level definitions and progression gates.
 
 ---
 
@@ -61,15 +61,15 @@ Progression within the Security Engineering family follows the standard four-tie
 
 - **L1 (Associate)** → **L2 (Practitioner)** → **L3 (Senior)** → **L4 (Principal)**
 
-See [JF-001 §8](../CERG-GOV-JF-001_Job_Families_Overview.md) for the standard progression gates (L1→L2, L2→L3, L3→L4). See [JF-001 §9](../CERG-GOV-JF-001_Job_Families_Overview.md) for family-specific level definitions.
+[JF-001 §8](../CERG-GOV-JF-001_Job_Families_Overview.md) holds the standard progression gates (L1→L2, L2→L3, L3→L4). [JF-001 §9](../CERG-GOV-JF-001_Job_Families_Overview.md) holds the family-specific level definitions.
 
-Cross-family movement is encouraged per the [Family-to-Family Career Lattice](../CERG-GOV-JF-001_Job_Families_Overview.md#4-family-to-family-career-lattice). The Left-Right Knowledge Model ([FRM-001 §9.2](../../governance/CERG-GOV-FRM-001_CERG_Framework.md)) and cross-training expectations ([OM-001 §10.4](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md)) operationalize this movement.
+The [Family-to-Family Career Lattice](../CERG-GOV-JF-001_Job_Families_Overview.md#4-family-to-family-career-lattice) encourages cross-family movement. The Left-Right Knowledge Model ([FRM-001 §9.2](../../governance/CERG-GOV-FRM-001_CERG_Framework.md)) and cross-training expectations ([OM-001 §10.4](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md)) put that movement into practice.
 
 ---
 
 ## 4. Shared Certifications
 
-Certifications relevant to the Security Engineering family are detailed in [TRN-001](../../governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md). Each role's certification matrix specifies Required, Recommended, and Aspirational certifications at each grade level. Consult the individual role description for role-specific certification requirements.
+[TRN-001](../../governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) details the certifications relevant to the Security Engineering family. Each role's certification matrix specifies Required, Recommended, and Aspirational certifications at each grade level. See the individual role description for role-specific certification requirements.
 
 ---
 
@@ -118,7 +118,7 @@ Certifications relevant to the Security Engineering family are detailed in [TRN-
 - Revision to the family-level definitions in JF-001
 - Direction from the CISO
 
-Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining approval for all changes.
+Governance owns this document. The Governance Pillar Leader (Policy & Standards) initiates reviews, manages the revision cycle, and obtains approval for all changes.
 
 ### Related Documents
 

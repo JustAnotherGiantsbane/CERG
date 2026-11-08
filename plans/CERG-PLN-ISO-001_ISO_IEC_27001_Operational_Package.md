@@ -43,7 +43,7 @@
 
 CERG already aligns many artifacts to ISO/IEC 27001 and ISO/IEC 27002. Alignment is not the same thing as operating an Information Security Management System. An ISO-ready program needs an ISMS scope, a Statement of Applicability, risk treatment linkage, internal audit, management review, corrective actions, and evidence organized for assessors.
 
-This operational package turns the CERG library into an ISO-operable system. It is designed for organizations seeking formal certification, customer-assurance readiness, or disciplined internal operation against ISO/IEC 27001 without immediate certification.
+This operational package turns the CERG library into an ISO-operable system. It serves organizations that want formal certification, customer-assurance readiness, or disciplined internal operation against ISO/IEC 27001 without going for certification yet.
 
 > **ISO Is a Management System, Not a Control Checklist**
 >
@@ -53,7 +53,7 @@ This operational package turns the CERG library into an ISO-operable system. It 
 
 ## 2. ISMS Boundary
 
-The ISMS scope statement defines what the ISO program covers. It is approved by the CISO and reviewed at least annually.
+The ISMS scope statement defines what the ISO program covers. The CISO approves it, and it is reviewed at least annually.
 
 Minimum scope fields:
 
@@ -70,7 +70,7 @@ Minimum scope fields:
 | Scope Owner | Accountable owner. |
 | Approval Date | Date approved by the CISO or delegated authority. |
 
-A scope exclusion is valid only when it is truthful, documented, and does not hide a control failure. Exclusions are reviewed during internal audit and management review.
+A scope exclusion is valid only when it is truthful, documented, and does not hide a control failure. Internal audit and management review check each exclusion.
 
 ---
 
@@ -112,9 +112,7 @@ Minimum SoA fields:
 | Risks Linked | Risk-register IDs, if applicable. |
 | Last Reviewed | Review date. |
 
-> **A Bad SoA Is Worse Than No SoA**
->
-> A copied SoA that says every control applies and everything is implemented tells the auditor the program has not done real scoping. A useful SoA makes decisions visible: what applies, what does not, why, who owns it, and what evidence proves the claim.
+A bad SoA is worse than no SoA. A copied SoA that says every control applies and everything is implemented tells the auditor the program has not done real scoping. A useful SoA makes decisions visible: what applies, what does not, why, who owns it, and what evidence proves the claim.
 
 ---
 
@@ -129,13 +127,13 @@ The mapping below is the starting spine. The maintained SoA provides row-level d
 | Physical controls | Enterprise physical security supplies evidence; CERG records physical dependencies for data centers, OT, and backup media where applicable. |
 | Technological controls | `CERG-STD-IT-001`, `CERG-STD-OT-001`, `CERG-STD-AC-001`, `CERG-STD-CFG-001`, `CERG-STD-LM-001`, `CERG-STD-RES-001`, `CERG-STD-CR-001`, `CERG-STD-SDL-001`, `CERG-STD-DG-001`, `CERG-STD-MSG-001`, `CERG-STD-AI-001` |
 
-Controls owned outside CERG are not ignored. They are listed in the SoA with the external evidence owner and the CERG dependency clearly stated.
+Controls owned outside CERG are not ignored. The SoA lists them with the external evidence owner and the CERG dependency clearly stated.
 
 ---
 
 ## 6. Risk Assessment and Treatment Interface
 
-ISO risk treatment uses the CERG risk register rather than a parallel ISO-only risk log. ISO-specific risk requirements are met by ensuring each ISMS-scope risk includes:
+ISO risk treatment uses the CERG risk register rather than a parallel ISO-only risk log. Each ISMS-scope risk carries the ISO-specific requirements by including:
 
 - risk statement;
 - asset or process scope;
@@ -209,7 +207,7 @@ For certification readiness, Governance maintains an audit pack:
 - document catalog and version record;
 - list of exclusions and interfaces owned outside CERG.
 
-External auditor requests are handled through `CERG-PRC-AUD-001`. Auditor observations that indicate control weakness become findings or risks, not side emails.
+Governance handles external auditor requests through `CERG-PRC-AUD-001`. Auditor observations that indicate control weakness become findings or risks, not side emails.
 
 ---
 
@@ -312,7 +310,7 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](../governance/CERG
 - Management review direction
 - Direction from the CISO
 
-Cyber Governance owns this package. The Governance Pillar Leader is responsible for initiating reviews, managing the revision cycle, and obtaining CISO approval for all changes.
+Cyber Governance owns this package. The Governance Pillar Leader initiates reviews, manages the revision cycle, and obtains CISO approval for all changes.
 
 ### Related Documents
 

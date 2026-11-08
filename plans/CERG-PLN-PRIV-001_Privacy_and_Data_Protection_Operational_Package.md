@@ -44,9 +44,7 @@ CERG does not replace the enterprise privacy, legal, or records-management progr
 
 This operational package defines how CERG supports privacy and data protection obligations: privacy data inventory, DPIA support, data subject request support, breach-clock facts, vendor privacy evidence, retention and deletion control support, metrics, and evidence.
 
-> **Privacy Fails When Nobody Can Find the Data**
->
-> Legal can interpret the obligation. The business can decide the purpose. But if the organization cannot say where personal data lives, who owns it, which vendors process it, how long it is retained, how it is deleted, and what happened during an incident, privacy becomes guesswork. CERG's role is to remove the guesswork.
+Privacy fails when nobody can find the data. Legal can interpret the obligation. The business can decide the purpose. But if the organization cannot say where personal data lives, who owns it, which vendors process it, how long it is retained, how it is deleted, and what happened during an incident, privacy becomes guesswork. CERG removes that guesswork.
 
 ---
 
@@ -126,7 +124,7 @@ DPIA outcomes that require controls are tracked as change actions, risk-register
 
 ## 5. Data Subject Request Support
 
-Data subject requests are owned by the enterprise privacy process. CERG supports the technical execution and evidence.
+The enterprise privacy process owns data subject requests. CERG supports the technical execution and evidence.
 
 Support steps:
 
@@ -145,7 +143,7 @@ CERG does not decide whether a request is valid or whether an exemption applies.
 
 ## 6. Breach Notification Clock Support
 
-Privacy breach notification clocks often start before the full technical story is known. CERG's job is to provide reliable facts quickly.
+Privacy breach notification clocks often start before the full technical story is known. CERG's job is to supply reliable facts quickly.
 
 Within the incident process, CERG supplies:
 
@@ -158,7 +156,7 @@ Within the incident process, CERG supplies:
 - encryption, tokenization, or other protective control status;
 - evidence of when the event was detected, escalated, contained, and resolved.
 
-Notification decisions remain with the Incident Commander, legal, executive, and enterprise privacy process. CERG preserves the evidence and records residual control gaps.
+Notification decisions stay with the Incident Commander, legal, executive, and enterprise privacy process. CERG preserves the evidence and records residual control gaps.
 
 > **The Clock Does Not Wait for Perfect Forensics**
 >
@@ -189,7 +187,7 @@ Vendor gaps that expose personal data become vendor-risk findings or risk-regist
 
 ## 8. Retention, Deletion, and Minimization
 
-CERG supports retention and minimization by ensuring systems can enforce or evidence the business rule.
+CERG supports retention and minimization by making sure systems can enforce or evidence the business rule.
 
 Requirements:
 
@@ -302,7 +300,7 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](../governance/CERG
 - DPIA or audit finding requiring package update
 - Direction from the CISO
 
-Cyber Governance owns this package. The Governance Pillar Leader is responsible for initiating reviews, managing the revision cycle, and obtaining CISO approval and enterprise privacy process concurrence where applicable.
+Cyber Governance owns this package. The Governance Pillar Leader initiates reviews, manages the revision cycle, and obtains CISO approval and enterprise privacy process concurrence where applicable.
 
 ### Related Documents
 

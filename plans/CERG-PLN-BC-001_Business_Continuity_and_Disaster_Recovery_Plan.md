@@ -62,7 +62,7 @@ This plan applies to business processes and systems whose interruption could cau
 | What residual risk exists during recovery? | Risk Pillar Leader | Records and routes risk acceptance under `CERG-PRC-RM-001`. |
 | What evidence proves recovery readiness? | Governance Pillar Leader | Maintains evidence package and audit trail. |
 
-CERG does not replace Enterprise BCP. CERG supplies the cyber, risk, evidence, and control integrity layer that BCP needs.
+CERG does not replace Enterprise BCP. It supplies the cyber, risk, evidence, and control-integrity layer BCP needs.
 
 ---
 
@@ -150,7 +150,7 @@ Where an enterprise BCP or crisis-management program names additional roles, tho
 
 ## 7. Plan Activation and Communications
 
-This plan is activated when an outage, incident, disaster, supplier failure, cyber event, facility issue, or platform failure threatens a T1 or T2 process, or when the CISO, Governance Pillar Leader, Engineering Pillar Leader, or enterprise crisis process requests activation.
+Activate this plan when an outage, incident, disaster, supplier failure, cyber event, facility issue, or platform failure threatens a T1 or T2 process — or when the CISO, Governance Pillar Leader, Engineering Pillar Leader, or enterprise crisis process calls for it.
 
 Activation record:
 
@@ -284,7 +284,7 @@ Roles below are canonical role names from [`CERG-GOV-OM-001`](../governance/CERG
 - New regulated-scope recovery requirement
 - Direction from the CISO
 
-Cyber Governance owns this plan. The Governance Pillar Leader is responsible for initiating reviews, managing the revision cycle, and obtaining CISO approval and Enterprise BCP owner concurrence where applicable.
+Cyber Governance owns this plan. The Governance Pillar Leader initiates reviews, manages the revision cycle, and obtains CISO approval and Enterprise BCP owner concurrence where applicable.
 
 ### Related Documents
 

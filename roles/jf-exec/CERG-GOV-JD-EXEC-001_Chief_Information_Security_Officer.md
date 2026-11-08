@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The CISO is the senior-most cybersecurity executive, accountable for the organization's cybersecurity program as a whole. They set strategy, report posture and material risk to executive leadership and the board, hold final authority on High and Critical risk acceptance, and lead the CERG, Security Awareness, and Incident Response functions. The CISO ensures that cybersecurity enables the business to move with confidence, not slows it with reflexive refusal.
+The CISO is the senior-most cybersecurity executive, accountable for the organization's cybersecurity program as a whole. The role sets strategy, reports posture and material risk to executive leadership and the board, and holds final authority on High and Critical risk acceptance. It also runs the CERG, Security Awareness, and Incident Response functions. The CISO's job is to let the business move with confidence — not to slow it with reflexive refusal.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -50,7 +50,7 @@ The CISO is the senior-most cybersecurity executive, accountable for the organiz
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
-Grade-level responsibility differentiation for this role is defined in [JA-001 §7](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) (Role-to-Grade Mapping). The grade definitions (S1-S4 SME Track, M1-M4 Management Track) and leveling dimensions are in [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §4-5. Behavioral anchors at each grade are in [CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md).
+[JA-001 §7](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) (Role-to-Grade Mapping) explains what each grade is accountable for in this role. Grade definitions (S1-S4 SME Track, M1-M4 Management Track) and the leveling dimensions live in [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §4-5. [CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) carries the behavioral anchors for each grade.
 
 ## 5. Required Knowledge, Skills, and Abilities (KSAs)
 
@@ -60,15 +60,15 @@ Grade-level responsibility differentiation for this role is defined in [JA-001 �
 
 ### 5.2 Technical Skills
 
-Technical skills for this role are documented in the original JD-001 content extracted into this file (see §5.1 Domain Expertise). Additional technical skill definitions aligned to NICE Skill Statements are maintained in [JF-002](../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md).
+The role's technical skills live in the original JD-001 content reproduced here (see §5.1 Domain Expertise). [JF-002](../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) holds the further technical skill definitions aligned to NICE Skill Statements.
 
 ### 5.3 CERG-Specific Knowledge
 
-CERG-specific knowledge requirements for this role are defined in [OM-001 §6](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) (Canonical Role Roster) and [RAC-001 §7](../../governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) (Role Descriptions). See §12 (Related CERG Documents) for the complete list of standards and procedures relevant to this role.
+This role's CERG-specific knowledge requirements are set out in [OM-001 §6](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) (Canonical Role Roster) and [RAC-001 §7](../../governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) (Role Descriptions). §12 (Related CERG Documents) lists every standard and procedure that applies to the role.
 
 ## 6. NICE TKS Statement References
 
-The following Task, Knowledge, and Skill statements are extracted from the NIST NICE Framework v2.2.0 Work Role [OG-WRL-007 — Chief Information Security Officer (CISO) primary mapping] and filtered by relevance to this CERG role. The full TKS database is maintained at https://www.nist.gov/nice/framework/.
+These Task, Knowledge, and Skill statements are drawn from the NIST NICE Framework v2.2.0 Work Role [OG-WRL-007 — Chief Information Security Officer (CISO) primary mapping] and filtered for relevance to this CERG role. NIST maintains the full TKS database at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
@@ -98,19 +98,19 @@ The following Task, Knowledge, and Skill statements are extracted from the NIST 
 
 ### 7.2 Certifications
 
-Certifications for this role are defined in [TRN-001 §3](../../governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) (Certification Matrix). The matrix specifies Required, Recommended, and Aspirational certifications per role and grade.
+[TRN-001 §3](../../governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) (Certification Matrix) lists the certifications for this role, marking each Required, Recommended, or Aspirational, by role and grade.
 
 ### 7.3 Experience
 
-Typical experience ranges by grade are defined in [JA-001 §4-5](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md). See §7.1 (Education) above for education requirements.
+[JA-001 §4-5](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) gives the typical experience range for each grade. Education requirements are in §7.1 (Education) above.
 
 ## 8. Key Performance Indicators (KPIs)
 
-KPIs for this role are defined in [MTR-001](../../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) (Metrics, Dashboard, and CISO/Board Reporting). KPI allocation by job family and grade-level thresholds are documented in [PERF-001](../../governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md). Each role's evaluation criteria are embedded in the per-role JD document structure defined by [JF-001](../CERG-GOV-JF-001_Job_Families_Overview.md).
+[MTR-001](../../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) (Metrics, Dashboard, and CISO/Board Reporting) holds the KPIs for this role. [PERF-001](../../governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) documents how KPIs are allocated by job family and sets the grade-level thresholds. Each role's evaluation criteria sit in the per-role JD structure that [JF-001](../CERG-GOV-JF-001_Job_Families_Overview.md) defines.
 
 ## 9. Competency Expectations by Grade
 
-Competency expectations for this role follow the Management Track Competency Addendum ([CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §7). The five management-specific domains are: People Leadership, Strategic Thinking, Resource and Budget Management, Stakeholder Management, and Organizational Development. Grade-level expectations (M1-M4) for each domain are in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §7. This role is also expected to demonstrate SME competencies in the relevant home pillar at or above S2 level, as defined in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §1.
+Competency expectations for this role follow the Management Track Competency Addendum in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §7. It names five management-specific domains: People Leadership, Strategic Thinking, Resource and Budget Management, Stakeholder Management, and Organizational Development. [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §7 gives the grade-level expectations (M1-M4) for each domain. The role also demonstrates SME competencies in its home pillar at or above S2 level, per [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §1.
 
 | [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §7 Domain | M1 Expectation | M2 Expectation | M3 Expectation | M4 Expectation |
 |-------------------|----------------|----------------|----------------|----------------|
@@ -130,17 +130,17 @@ A CISO is successful when the organization's cybersecurity risk is understood, a
 
 ### 11.1 Within-Family Progression
 
-The CISO is the terminal executive role in CERG's cybersecurity career architecture. Within-family progression is succession-based rather than grade-based: typical feeders include M4 pillar leaders, S4 senior advisors with executive readiness, or equivalent external cybersecurity executives. Growth within the role is measured by program maturity, board confidence, risk decision quality, budget and talent stewardship, and enterprise influence. Next-step movement is outside the CERG grade framework, such as enterprise risk executive, CIO/CTO/CRO path, or broader business executive accountability.
+The CISO is the terminal executive role in CERG's cybersecurity career architecture. Progression within the family is succession-based, not grade-based: the role is typically fed by M4 pillar leaders, S4 senior advisors ready for executive scope, or equivalent external cybersecurity executives. Growth shows in program maturity, board confidence, risk decision quality, budget and talent stewardship, and enterprise influence. Next-step movement falls outside the CERG grade framework — enterprise risk executive, CIO/CTO/CRO path, or broader business executive accountability.
 
 ---
 
 ### 11.2 Cross-Family Movement
 
-Cross-family movement options are defined in the [Family-to-Family Career Lattice (JF-001 §4)](../CERG-GOV-JF-001_Job_Families_Overview.md#4-family-to-family-career-lattice). The Left-Right Knowledge Model ([FRM-001 §9.2](../../governance/CERG-GOV-FRM-001_CERG_Framework.md)) and cross-training expectations ([OM-001 §10.4](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md)) operationalize cross-family career movement.
+The [Family-to-Family Career Lattice (JF-001 §4)](../CERG-GOV-JF-001_Job_Families_Overview.md#4-family-to-family-career-lattice) lays out the cross-family movement options. The Left-Right Knowledge Model ([FRM-001 §9.2](../../governance/CERG-GOV-FRM-001_CERG_Framework.md)) and cross-training expectations ([OM-001 §10.4](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md)) carry that movement into working practice.
 
 ### 11.3 Management Track Option
 
-The CISO is an organizational leadership role that sits above the standard SME/Management track duality. See [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §5.4 (Director Grade M4) for the CISO level definition. Management competencies for leaders are documented in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §7 (Management Track Competency Addendum), including People Leadership, Strategic Thinking, Resource and Budget Management, Stakeholder Management, and Organizational Development.
+The CISO sits above the standard SME/Management track duality. [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §5.4 (Director Grade M4) defines the CISO level. [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §7 (Management Track Competency Addendum) documents the management competencies leaders need: People Leadership, Strategic Thinking, Resource and Budget Management, Stakeholder Management, and Organizational Development.
 
 ## 12. Related CERG Documents
 
@@ -188,7 +188,7 @@ The CISO is an organizational leadership role that sits above the standard SME/M
 - Change to this role's grade range in [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §7
 - Direction from the CISO
 
-Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining approval for all changes.
+Governance owns this document. The Governance Pillar Leader (Policy & Standards) initiates reviews, manages the revision cycle, and obtains approval for all changes.
 
 ### Related Documents
 

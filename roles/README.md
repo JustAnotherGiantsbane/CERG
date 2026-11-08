@@ -1,6 +1,6 @@
 # CERG Role Descriptions
 
-This directory contains per-role job description documents extracted from the monolithic JD-001 file. Each role description follows the Enhanced Role Description Template (§7.2 of the NICE alignment specification).
+This directory holds per-role job description documents extracted from the monolithic JD-001 file. Each one follows the Enhanced Role Description Template (§7.2 of the NICE alignment specification).
 
 ## Directory Structure
 
@@ -44,4 +44,4 @@ Each per-role document follows this structure:
 
 ## Status
 
-All 32 per-role and role-family job description files are Approved. NICE TKS references, KPI alignment, and competency anchors are populated from the NICE Framework dataset, MTR-001 canonical metrics, and CMP-001 behavioral anchors.
+All 32 per-role and role-family job description files are Approved. NICE TKS references, KPI alignment, and competency anchors come from the NICE Framework dataset, MTR-001 canonical metrics, and CMP-001 behavioral anchors.

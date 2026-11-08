@@ -30,7 +30,7 @@
 
 ## 1. Purpose and Scope
 
-This document establishes the formal Job Family structure for CERG's workforce architecture. It groups the 27 canonical CERG roles into five job families, defines career progression tiers within each family, and maps those tiers to CERG's existing grade framework (S1-S4 / M1-M4).
+This document establishes the formal Job Family structure for CERG's workforce architecture. It sorts the 27 canonical CERG roles into five job families, defines the career progression tiers inside each family, and maps those tiers to CERG's existing grade framework (S1-S4 / M1-M4).
 
 This document does NOT rename, add, or remove canonical roles. The authoritative role roster remains [OM-001 §6.1](../governance/CERG-GOV-OM-001_CERG_Operating_Model.md). Job families are a VIEW into the role architecture — a career-development and hiring lens — not a replacement for the operating model's pillar structure.
 
@@ -52,7 +52,7 @@ Use the workforce documents in this order:
 
 ## 2. What a Job Family Is
 
-A Job Family is a grouping of similar roles that share a core competency profile, career progression path, and broad functional purpose. Job families enable:
+A Job Family groups similar roles that share a core competency profile, a career progression path, and a broad functional purpose. Job families enable:
 
 - **Career tracks.** A person can see: "I am in the Security Engineering family. From here I can progress to Advisor, Sr. Advisor, or laterally to the Risk Operations family."
 - **Hiring clarity.** Requisitions are opened against a family, a level, and a specific role. HR and compensation can calibrate within and across families.
@@ -98,13 +98,13 @@ A Job Family is a grouping of similar roles that share a core competency profile
                           └───────────────────────┘
 ```
 
-Left-right arrows (◄──►) indicate encouraged cross-family movement. Vertical arrows indicate progression toward executive leadership. CERG's existing "Left-Right Knowledge Model" ([FRM-001 §9.2](../governance/CERG-GOV-FRM-001_CERG_Framework.md)) and cross-training expectations ([OM-001 §10.4](../governance/CERG-GOV-OM-001_CERG_Operating_Model.md)) are the operational mechanisms that make this lattice real.
+Left-right arrows (◄──►) indicate encouraged cross-family movement. Vertical arrows indicate progression toward executive leadership. CERG's "Left-Right Knowledge Model" ([FRM-001 §9.2](../governance/CERG-GOV-FRM-001_CERG_Framework.md)) and cross-training expectations ([OM-001 §10.4](../governance/CERG-GOV-OM-001_CERG_Operating_Model.md)) are the mechanisms that make this lattice real.
 
 ---
 
 ## 5. Why Five Families Instead of Three
 
-The current three-pillar structure (Engineering, Risk, Governance) works well for the operating model but conflates functional grouping with career grouping:
+The three-pillar structure (Engineering, Risk, Governance) works well for the operating model, but it conflates functional grouping with career grouping:
 
 - **Engineering Pillar** maps cleanly to JF-SECENG (one family = one pillar). No change needed.
 - **Risk Pillar** contains two distinct functional families: JF-RISKOPS (exposure management, threat intel, detection — operations work) and adjacent roles that are more incident-response-oriented (JF-ADJUNCT). The current structure puts Detection Engineer and Threat Intelligence Analyst in the same pillar as Vendor Risk Analyst, but their day-to-day work, certifications, and career paths differ significantly. This proposal keeps them in the same pillar operationally but gives them distinct family designations for career development.
@@ -116,7 +116,7 @@ The distinction between JF-RISKOPS and JF-ADJUNCT is important: Incident Command
 
 ## 6. Job Levels Within Each Family
 
-Each Job Family has 4 tiers that map directly to CERG's existing SME grade structure (S1-S4) and Management grade structure (M1-M4). This section defines what each tier means WITHIN each family — providing family-specific expectations that a hiring manager and a team member can reference without consulting multiple documents.
+Each Job Family has 4 tiers that map directly to CERG's existing SME grade structure (S1-S4) and Management grade structure (M1-M4). This section defines what each tier means within a family, so a hiring manager and a team member can both find the expectations in one place.
 
 See Section 9 for per-family level definition tables.
 
@@ -255,7 +255,7 @@ Progression from one level to the next requires demonstration of capabilities. T
 - Revision to JA-001 grade definitions
 - Direction from the CISO
 
-Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining approval for all changes.
+Governance owns this document. The Governance Pillar Leader (Policy & Standards) starts reviews, runs the revision cycle, and obtains approval for all changes.
 
 ### Related Documents
 

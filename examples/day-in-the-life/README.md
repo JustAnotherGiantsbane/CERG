@@ -81,9 +81,9 @@ On Monday morning, the business sponsor opens the intake record and identifies t
 
 By Wednesday, Engineering completes the architecture review. The design uses SSO, two privileged admin groups, SCIM provisioning, and a vendor-hosted API. Engineering confirms that the application cannot go live unless admin activity and user authentication logs are exportable. Risk starts the third-party assessment in parallel instead of waiting for architecture review closure.
 
-The vendor returns a SOC report, penetration test summary, subprocessors list, and data processing addendum. Risk identifies one gap: customer data exports are logged in the vendor console but are not available through the standard log API. The Business Owner agrees that exports will be limited to two approved roles until the vendor API feature is available.
+The vendor returns a SOC report, penetration test summary, subprocessors list, and data processing addendum. Risk identifies one gap: customer data exports are logged in the vendor console but are not available through the standard log API. The Business Owner agrees to limit exports to two approved roles until the vendor API feature is available.
 
-At the go-live decision meeting, Engineering confirms SSO, access groups, and log ingestion for authentication and admin events. Risk documents the export-log limitation as a time-bound exception with compensating controls. Governance verifies that evidence is indexed and that the exception expiration date is on the calendar.
+At the go-live decision meeting, Engineering confirms SSO, access groups, and log ingestion for authentication and admin events. Risk documents the export-log limitation as a time-bound exception with compensating controls. Governance verifies the evidence is in the index and the exception expiration date is on the calendar.
 
 ### Operational outputs
 
@@ -155,7 +155,7 @@ During lessons learned, the team discovers that this application missed a monthl
 
 ### Situation
 
-An external auditor requests evidence that privileged access reviews were performed for a SOX-relevant financial application during the prior quarter. The auditor asks for the review population, reviewer sign-off, exceptions, and evidence that removals were completed.
+An external auditor requests evidence that the organization performed privileged access reviews for a SOX-relevant financial application during the prior quarter. The auditor asks for the review population, reviewer sign-off, exceptions, and evidence that the team completed the removals.
 
 ### CERG flow pattern
 
@@ -348,7 +348,7 @@ The vendor notice arrives at 4:30 p.m. Risk opens the triage record and asks thr
 
 Engineering identifies the integration owner, pauses scheduled transfers after IC approval, rotates API credentials, and preserves local transfer logs. Governance opens the CERG evidence/support log, maps possible notification obligations for Legal and the IC, and records who will approve customer communications if data exposure is confirmed. The CISO receives a short status summary with known facts, unknowns, next decision time, and current containment actions. Risk pushes the vendor for file-level access evidence and maps the scenario to the vendor risk record.
 
-The next morning, the vendor confirms that no organization files were accessed, and the IC documents that no internal incident declaration is required. The vendor still cannot meet the evidence quality the organization normally requires. Risk records residual third-party risk. Governance requires the evidence limitation to be visible in the file, not hidden in email. Engineering implements an alternate encrypted transfer path for the most sensitive reports until the vendor completes remediation.
+The next morning, the vendor confirms that no organization files were accessed, and the IC documents the no-declaration decision. The vendor still cannot meet the evidence quality the organization normally requires. Risk records residual third-party risk. Governance requires the evidence limitation to be visible in the file, not hidden in email. Engineering implements an alternate encrypted transfer path for the most sensitive reports until the vendor completes remediation.
 
 ### Operational outputs
 
@@ -393,7 +393,7 @@ Supporting procedures and standards:
 
 ### Example day-in-the-life narrative
 
-The business request starts as a simple productivity ask, but the intake reveals that the assistant will index internal documents and email content. Governance checks the AI standard and determines that the use case is allowed only as a controlled pilot because confidential information may be processed.
+The business request starts as a simple productivity ask, but the intake reveals that the assistant will index internal documents and email content. Governance checks the AI standard and allows the use case only as a controlled pilot, because the assistant may process confidential information.
 
 Engineering reviews the connector model and finds that the assistant inherits user permissions from the document repository. That reduces some risk, but Engineering still restricts the pilot to one business unit, disables unapproved external plugins, and enables admin audit logs. Risk reviews the vendor's data handling terms and threat models accidental oversharing, prompt injection through documents, and unauthorized connector expansion.
 
@@ -414,7 +414,7 @@ The pilot launches with user guidance, logging, and a named Business Owner. Afte
 
 ### Situation
 
-A monthly exposure review finds a High vulnerability on an OT historian that supports a substation operations view. The vendor patch is available, but the OT owner says the patch cannot be applied until the next approved maintenance window without risking operational disruption. The asset is adjacent to BES monitoring data but is not itself a BES Cyber System.
+A monthly exposure review finds a High vulnerability on an OT historian that supports a substation operations view. The vendor patch is available, but the OT owner says applying it before the next approved maintenance window would risk operational disruption. The asset is adjacent to BES monitoring data but is not itself a BES Cyber System.
 
 ### CERG flow pattern
 

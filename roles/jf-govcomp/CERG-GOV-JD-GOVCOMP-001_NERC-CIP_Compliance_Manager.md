@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The NERC-CIP Compliance Manager owns the organization's compliance posture for NERC Critical Infrastructure Protection standards. They manage the NERC-CIP evidence library, coordinate regulatory exams and audits, track deviations and mitigation plans, and ensure that BES Cyber System compliance is a steady state, not a pre-audit scramble.
+The NERC-CIP Compliance Manager owns the organization's compliance with NERC Critical Infrastructure Protection standards. They manage the NERC-CIP evidence library, coordinate regulatory exams and audits, track deviations and mitigation plans, and keep BES Cyber System compliance a steady state, not a pre-audit scramble.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -50,7 +50,7 @@ The NERC-CIP Compliance Manager owns the organization's compliance posture for N
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
-Grade-level responsibility differentiation for this role is defined in [JA-001 §7](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) (Role-to-Grade Mapping). The grade definitions (S1-S4 SME Track, M1-M4 Management Track) and leveling dimensions are in [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §4-5. Behavioral anchors at each grade are in [CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md).
+[JA-001 §7](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) (Role-to-Grade Mapping) sets out how responsibility differs by grade. [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §4-5 holds the grade definitions (S1-S4 SME Track, M1-M4 Management Track) and the leveling dimensions. [CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) holds the behavioral anchors at each grade.
 
 ## 5. Required Knowledge, Skills, and Abilities (KSAs)
 
@@ -60,15 +60,15 @@ Grade-level responsibility differentiation for this role is defined in [JA-001 �
 
 ### 5.2 Technical Skills
 
-Technical skills for this role are documented in the original JD-001 content extracted into this file (see §5.1 Domain Expertise). Additional technical skill definitions aligned to NICE Skill Statements are maintained in [JF-002](../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md).
+The role's technical skills come from the original JD-001 content in this file (see §5.1 Domain Expertise). [JF-002](../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) adds the remaining technical skill definitions aligned to NICE Skill Statements.
 
 ### 5.3 CERG-Specific Knowledge
 
-CERG-specific knowledge requirements for this role are defined in [OM-001 §6](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) (Canonical Role Roster) and [RAC-001 §7](../../governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) (Role Descriptions). See §12 (Related CERG Documents) for the complete list of standards and procedures relevant to this role.
+The CERG-specific knowledge requirements for this role come from [OM-001 §6](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) (Canonical Role Roster) and [RAC-001 §7](../../governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) (Role Descriptions). §12 (Related CERG Documents) lists every standard and procedure relevant to this role.
 
 ## 6. NICE TKS Statement References
 
-The following Task, Knowledge, and Skill statements are extracted from the NIST NICE Framework v2.2.0 Work Role [OG-WRL-012 — NERC-CIP Compliance Manager primary mapping] and filtered by relevance to this CERG role. The full TKS database is maintained at https://www.nist.gov/nice/framework/.
+Filtered for relevance to this CERG role, these Task, Knowledge, and Skill statements come from the NIST NICE Framework v2.2.0 Work Role [OG-WRL-012 — NERC-CIP Compliance Manager primary mapping]. NIST maintains the full TKS database at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
@@ -98,19 +98,19 @@ The following Task, Knowledge, and Skill statements are extracted from the NIST 
 
 ### 7.2 Certifications
 
-Certifications for this role are defined in [TRN-001 §3](../../governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) (Certification Matrix). The matrix specifies Required, Recommended, and Aspirational certifications per role and grade.
+[TRN-001 §3](../../governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) (Certification Matrix) names the certifications for this role. It sorts them into Required, Recommended, and Aspirational, per role and grade.
 
 ### 7.3 Experience
 
-Typical experience ranges by grade are defined in [JA-001 §4-5](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md). See §7.1 (Education) above for education requirements.
+[JA-001 §4-5](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) sets the typical experience range for each grade. §7.1 (Education) above covers education requirements.
 
 ## 8. Key Performance Indicators (KPIs)
 
-KPIs for this role are defined in [MTR-001](../../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) (Metrics, Dashboard, and CISO/Board Reporting). KPI allocation by job family and grade-level thresholds are documented in [PERF-001](../../governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md). Each role's evaluation criteria are embedded in the per-role JD document structure defined by [JF-001](../CERG-GOV-JF-001_Job_Families_Overview.md).
+[MTR-001](../../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) (Metrics, Dashboard, and CISO/Board Reporting) carries the KPIs for this role. [PERF-001](../../governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) documents how those KPIs are allocated by job family, and sets the grade-level thresholds. [JF-001](../CERG-GOV-JF-001_Job_Families_Overview.md) defines the per-role JD structure that holds each role's evaluation criteria.
 
 ## 9. Competency Expectations by Grade
 
-Competency expectations for this role follow the Governance pillar behavioral anchors from [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md). Each cell describes observable behavior demonstrating the competency at that grade. Anchors are cumulative: an L3 expectation includes the L1 and L2 anchors.
+Competency expectations for this role follow the Governance pillar behavioral anchors in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md). Each cell describes observable behavior demonstrating the competency at that grade. Anchors are cumulative: an L3 expectation includes the L1 and L2 anchors.
 
 | Competency Domain (CMP-001) | L1 Expectation | L2 Expectation | L3 Expectation | L4 Expectation |
 |-----------------------------|----------------|----------------|----------------|----------------|
@@ -127,23 +127,23 @@ Competency expectations for this role follow the Governance pillar behavioral an
 
 ## 10. Success Profile
 
-A NERC-CIP Compliance Manager is successful when compliance is a continuous operational state, not a periodic audit event. Key indicators: evidence packages are audit-ready at all times, not just during audit windows; NERC-CIP non-compliance findings are trending down; the evidence collection burden on Engineering is stable or decreasing year over year; the compliance calendar is accurate to within a week for every filing deadline. The manager ensures that the answer to "can you prove compliance?" is always yes, with a single click.
+A NERC-CIP Compliance Manager is successful when compliance is a continuous operational state, not a periodic audit event. Key indicators: evidence packages are audit-ready at all times, not just during audit windows; NERC-CIP non-compliance findings are trending down; the evidence collection burden on Engineering is stable or decreasing year over year; the compliance calendar is accurate to within a week for every filing deadline. The manager makes sure the answer to "can you prove compliance?" is always yes, with a single click.
 
 ## 11. Career Path
 
 ### 11.1 Within-Family Progression
 
-Within JF-GOVCOMP, this role can progress on either a senior SME path or a management path depending on organizational scale. The SME path follows L2/S2 through L4/S4 as the role gains deeper regulatory interpretation authority, audit representation capability, policy authorship, and cross-framework judgment. The management path generally runs from M1 to M3 when the role leads analysts, owns a compliance function, manages calendars and evidence operations, and contributes to budget and staffing decisions. See [JF-001 §9.3](../CERG-GOV-JF-001_Job_Families_Overview.md#93-jf-govcomp--governance--compliance-levels) and [JA-001 §7.4](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md#74-governance-pillar).
+Within JF-GOVCOMP, this role can follow a senior SME path or a management path, depending on organizational scale. On the SME path, it moves from L2/S2 through L4/S4 as it gains deeper authority to interpret regulation, represent the organization in audits, author policy, and judge across frameworks. The management path runs from M1 to M3 once the role leads analysts, owns a compliance function, manages calendars and evidence operations, and helps set budget and staffing. See [JF-001 §9.3](../CERG-GOV-JF-001_Job_Families_Overview.md#93-jf-govcomp--governance--compliance-levels) and [JA-001 §7.4](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md#74-governance-pillar).
 
 ---
 
 ### 11.2 Cross-Family Movement
 
-Cross-family movement options are defined in the [Family-to-Family Career Lattice (JF-001 §4)](../CERG-GOV-JF-001_Job_Families_Overview.md#4-family-to-family-career-lattice). The Left-Right Knowledge Model ([FRM-001 §9.2](../../governance/CERG-GOV-FRM-001_CERG_Framework.md)) and cross-training expectations ([OM-001 §10.4](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md)) operationalize cross-family career movement.
+The [Family-to-Family Career Lattice (JF-001 §4)](../CERG-GOV-JF-001_Job_Families_Overview.md#4-family-to-family-career-lattice) sets out the cross-family movement options. The Left-Right Knowledge Model ([FRM-001 §9.2](../../governance/CERG-GOV-FRM-001_CERG_Framework.md)) and cross-training expectations ([OM-001 §10.4](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md)) turn that movement into practice.
 
 ### 11.3 Management Track Option
 
-At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §8.1 (SME to Management Transition). Readiness indicators include: consistently sought out for guidance by junior team members, leading cross-functional initiatives without formal authority, and communicating clearly with non-technical stakeholders. The transition is a track change, not a grade promotion — an S3 Advisor moving to M1 Manager carries their technical credibility into the management role. Management competencies are defined in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §7. See [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §5 for Management grade definitions (M1-M4) and §9 (Span of Control and Team Design) for when to create a management role.
+At L3+ (SME track), a Management track option may be open per [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §8.1 (SME to Management Transition). The readiness signs: junior team members seek them out for guidance, they lead cross-functional initiatives without formal authority, and they communicate clearly with non-technical stakeholders. The move is a track change, not a grade promotion — an S3 Advisor who becomes an M1 Manager carries their technical credibility into the role. [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §7 defines the management competencies. See [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §5 for the Management grade definitions (M1-M4) and §9 (Span of Control and Team Design) for when to create a management role.
 
 ## 12. Related CERG Documents
 
@@ -191,7 +191,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 - Change to this role's grade range in [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §7
 - Direction from the CISO
 
-Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining approval for all changes.
+Governance owns this document. The Governance Pillar Leader (Policy & Standards) initiates reviews, manages the revision cycle, and obtains approval for all changes.
 
 ### Related Documents
 

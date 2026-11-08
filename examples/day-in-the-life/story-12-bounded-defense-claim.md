@@ -8,7 +8,7 @@
 
 > If an attacker takes over the identity-provider tenant, can they mint administrative access to order-to-cash, and will the organization contain it before privilege spreads?
 
-The load-bearing links are phishing-resistant MFA on privileged identity paths and session/token containment after takeover.
+Two links are load-bearing: phishing-resistant MFA on privileged identity paths, and session and token containment after takeover.
 
 ## The proof path
 
@@ -28,7 +28,7 @@ The protected-system reference is the common-control join. Many systems can refe
 
 The signed RoE binds `AV-2026-005` to `SCN-05` and the asserted identity-tenant scope before testing. The assessor is independent of the IdP operator and any state author for that scope.
 
-A service-SCP assessor assignment does not automatically qualify that person for the order-to-cash claim. The claim relies on the assessor-and-asserted-scope pairing in `AV-2026-005`.
+Being an assigned service-SCP assessor does not automatically qualify someone for the order-to-cash claim. The claim relies on the assessor-and-asserted-scope pairing in `AV-2026-005`.
 
 | Link | Result | Evidence |
 |---|---|---|

@@ -85,10 +85,10 @@ CIP-002 requires identification and categorization of BES Cyber Systems. CERG ca
 2. **Apply Attachment 1 criteria** (Section 1, High Impact criteria; Section 2, Medium Impact; everything else Low).
 3. **Group BCAs into BES Cyber Systems** along functional / physical lines per operator input.
 4. **Identify associated systems**: EACMS, PACS, PCAs, BCSI repositories.
-5. **Document the rationale** for each categorization, the assessor will want to see it.
+5. **Document the rationale** for each categorization — the assessor will want to see it.
 6. **Review annually** and on material grid configuration / asset changes.
 
-The categorization is reflected in the asset inventory and drives every subsequent CIP obligation.
+The categorization lives in the asset inventory and drives every subsequent CIP obligation.
 
 ---
 
@@ -99,13 +99,13 @@ CIP-005 requires Electronic Security Perimeters (ESPs) and Electronic Access Poi
 - A network diagram set showing every Medium and High Impact ESP, the EAPs defining it, and the connections crossing each EAP.
 - Per-EAP documentation: device, firmware version, rule set, last reviewed, owner, evidence of inbound/outbound deny-by-default, and authentication for interactive remote access.
 - Per-ESP documentation: enclosed BCS, EACMS, PACS, PCAs; supported categorization (Medium/High); evidence of monitoring (CIP-007 R4, and forthcoming CIP-015 INSM).
-- Annual review (or sooner on architecture change) with evidence routed into the library (Section 6).
+- CERG reviews the documentation annually (or sooner on architecture change) and routes the evidence into the library (Section 6).
 
 ---
 
 ## 6. NERC-CIP Evidence Library Procedure
 
-The Evidence Library is the single, authoritative repository of CIP compliance evidence, what the auditor opens first. This embedded procedure is the V1 authority; `CERG-GOV-CIP-001` remains reserved and is not planned as a standalone artifact.
+The Evidence Library is the single, authoritative repository of CIP compliance evidence — what the auditor opens first. This embedded procedure is the V1 authority; `CERG-GOV-CIP-001` remains reserved and is not planned as a standalone artifact.
 
 ### 6.1 Library Structure
 
@@ -128,8 +128,8 @@ The library is organized by CIP Standard, then by Requirement, then by Sub-requi
 ### 6.2 Evidence Discipline
 
 - Every CIP Requirement applicable to in-scope assets has at least one Evidence Artifact named in the library.
-- Evidence is gathered through normal operations (CERG-managed scans, configuration capture, access reviews), not assembled at audit time.
-- Refresh cadences are driven from this library to the operating cadence (Section 14).
+- CERG gathers evidence through normal operations (CERG-managed scans, configuration capture, access reviews), not at audit time.
+- This library drives the refresh cadences into the operating cadence (Section 14).
 
 ### 6.3 Reused Evidence
 
@@ -145,19 +145,19 @@ The enterprise exposure management procedure ([`CERG-PRC-VM-001`](../procedures/
 
 - **Passive scanning** is the default for live OT surfaces.
 - **Authenticated checks** under engineering supervision in defined windows.
-- **Vendor advisories** subscribed; advisories triaged against in-service firmware / software inventories.
-- **NVD / CISA ICS Advisories** subscribed.
+- **Vendor advisories**: CERG subscribes and triages each advisory against in-service firmware and software inventories.
+- **NVD / CISA ICS Advisories**: CERG subscribes.
 - Active scanning is permitted only under an approved scope and time window per [`CERG-PRC-AV-001`](../procedures/CERG-PRC-AV-001_Adversarial_Validation_Procedure.md) Section 9.
 
 ### 7.2 Risk Assessment and Treatment
 
-- Vulnerabilities mapped against CIP-007 R2 patch evaluation cycle (35 calendar days from release for Medium/High Impact to evaluate; per the standard's specifics).
+- CERG maps vulnerabilities against the CIP-007 R2 patch evaluation cycle: 35 calendar days from release for Medium/High Impact to evaluate, per the standard's specifics.
 - Treatment options: apply patch in next maintenance window · implement compensating control · accept via Risk Register and CIP deviation if a deviation is required (Section 9).
 
 ### 7.3 Patching
 
 - Patch evaluation cadence per CIP-007 R2.
-- Patch deployment per CIP-010 R1, configuration changes require baseline update, security impact analysis, and authorization.
+- Patch deployment follows CIP-010 R1: configuration changes require a baseline update, a security impact analysis, and authorization.
 - Patch evidence retained in the Evidence Library per CIP-007 R2.4.
 
 ### 7.4 Documentation
@@ -168,25 +168,25 @@ The enterprise exposure management procedure ([`CERG-PRC-VM-001`](../procedures/
 
 ## 8. BES Cyber System Access Management Overlay
 
-CIP-004 R4 / R5 obligations are operationalized as an embedded BES overlay on [`CERG-PRC-AC-002`](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md).
+The CIP-004 R4 / R5 obligations are met through an embedded BES overlay on [`CERG-PRC-AC-002`](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md).
 
 ### 8.1 Authorization
 
-- Access to BES Cyber Systems is authorized only after the individual has met CIP-004 personnel risk assessment requirements (background check, training).
-- Authorization is documented with a named approver per role.
+- CERG authorizes access to BES Cyber Systems only after the individual has met CIP-004 personnel risk assessment requirements (background check, training).
+- A named approver per role documents each authorization.
 - Reviews per CIP-004 cadence (every 15 months, plus on role change).
 
 ### 8.2 Provisioning and Revocation
 
-- Provisioning of unescorted physical access to ESPs and electronic access to BCS goes through PAM-mediated workflows where supported.
-- Revocation within 24 hours of termination (CIP-004 R5.1), CERG operates against 1 hour for involuntary terminations.
-- BCSI access is governed under CIP-011 (information protection).
+- CERG provisions unescorted physical access to ESPs and electronic access to BCS through PAM-mediated workflows where supported.
+- Revocation happens within 24 hours of termination (CIP-004 R5.1). For involuntary terminations CERG operates against 1 hour.
+- CIP-011 governs BCSI access (information protection).
 
 ### 8.3 Vendor Remote Access
 
-- Brokered through approved gateways with session recording.
+- CERG brokers sessions through approved gateways with session recording.
 - Authenticated per CIP-005 R2; monitored per CIP-005 R2.5 (interactive remote access via intermediate system).
-- Vendor identities enrolled via [`CERG-PRC-AC-002`](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md) Section 10 and [`CERG-PRC-TPRM-001`](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md).
+- CERG enrolls vendor identities via [`CERG-PRC-AC-002`](../procedures/CERG-PRC-AC-002_Access_Management_Runbook.md) Section 10 and [`CERG-PRC-TPRM-001`](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md).
 
 ---
 
@@ -233,9 +233,7 @@ G. RECORD
    Self-Report Submitted    :  Date if applicable
 ```
 
-> **Deviations Get Self-Reported When Self-Reporting Is the Right Call**
->
-> CERG works with Operations and Legal to determine when a deviation is a self-reportable noncompliance under the regional entity's self-reporting program. The deviation record above always exists; whether to self-report is a deliberate Legal / Compliance / CISO decision, not a default.
+CERG works with Operations and Legal to determine when a deviation is a self-reportable noncompliance under the regional entity's self-reporting program. The deviation record above always exists; whether to self-report is a deliberate Legal / Compliance / CISO decision, not a default.
 
 ---
 
@@ -275,7 +273,7 @@ Each pattern lists the controls, the diagrams required, and the architecture rev
 
 ## 11. CIP-013 Supply Chain Risk Management Plan
 
-Operationalized in coordination with [`CERG-PRC-TPRM-001`](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md). The CIP-013 Plan satisfies CIP-013-2 R1 and is reviewed annually (R3).
+CERG runs this plan in coordination with [`CERG-PRC-TPRM-001`](../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md). The CIP-013 Plan satisfies CIP-013-2 R1 and is reviewed annually (R3).
 
 ### 11.1 Scope
 
@@ -300,7 +298,7 @@ CIP-013 evidence flows from this section into the Evidence Library (Section 6).
 
 ## 12. CIP-009 Recovery Plan Package
 
-Operationalized in coordination with [`CERG-STD-RES-001`](../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md). The CIP-009 obligations:
+CERG runs this package in coordination with [`CERG-STD-RES-001`](../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md). The CIP-009 obligations:
 
 | **CIP-009 Requirement** | **CERG Implementation** |
 |---|---|
@@ -317,11 +315,9 @@ Operationalized in coordination with [`CERG-STD-RES-001`](../standards/CERG-STD-
 
 ## 13. CIP-015 INSM Implementation Annex
 
-CIP-015 (Internal Network Security Monitoring) is tracked as a forward-looking obligation for Medium and High Impact BES Cyber Systems. This annex operationalizes the CIP-015 readiness overlay referenced in CB-001 §8 BES Overlay. Until CIP-015 becomes enforceable for the organization, CERG treats this annex as a readiness investment; upon applicability, it becomes an audit-asserted operational procedure.
+CERG tracks CIP-015 (Internal Network Security Monitoring) as a forward-looking obligation for Medium and High Impact BES Cyber Systems. This annex puts the CIP-015 readiness overlay referenced in CB-001 §8 BES Overlay into operation. Until CIP-015 becomes enforceable for the organization, CERG treats this annex as a readiness investment; upon applicability, it becomes an audit-asserted operational procedure.
 
-> **INSM Is Not Optional for Medium/High Impact BCS**
->
-> Once CIP-015 becomes enforceable, operators of Medium and High Impact BES Cyber Systems must demonstrate continuous internal network security monitoring. This annex ensures CERG is not scrambling on day one.
+Once CIP-015 becomes enforceable, operators of Medium and High Impact BES Cyber Systems must demonstrate continuous internal network security monitoring. This annex exists so CERG is not scrambling on day one.
 
 ### 13.1 Scope and Applicability
 
@@ -372,7 +368,7 @@ Sensor placement follows the ESP/EAP topology documented in Section 5 and the IT
 
 ### 13.4 Alerting Rules and Detection Baseline
 
-The following alert categories are the minimum detection baseline for Medium and High Impact BES Cyber Systems. Rules are implemented in the SIEM and maintained by the Detection Engineer per [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) Section 6.
+The following alert categories are the minimum detection baseline for Medium and High Impact BES Cyber Systems. The Detection Engineer implements and maintains the rules in the SIEM per [`CERG-STD-LM-001`](../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) Section 6.
 
 | **Alert Category** | **Rule Description** | **Severity** | **Response SLA** |
 |---|---|---|---|
@@ -412,7 +408,7 @@ CIP-015 evidence is collected and stored in the NERC-CIP Evidence Library (Secti
 
 ### 13.6 Coverage Gap Analysis
 
-A formal gap analysis is performed quarterly, comparing current INSM coverage against the CIP-015 draft requirements and CB-001 §8 BES Overlay expectations.
+CERG performs a formal gap analysis each quarter, comparing current INSM coverage against the CIP-015 draft requirements and CB-001 §8 BES Overlay expectations.
 
 | **Gap Category** | **Assessment Question** | **Acceptable State** | **Escalation Path** |
 |---|---|---|---|
@@ -422,7 +418,7 @@ A formal gap analysis is performed quarterly, comparing current INSM coverage ag
 | Retention compliance | Are data retention periods meeting Section 13.3 minimums? | 100% of data types at min retention | Gap → Deviation record per Section 9 |
 | Response time adherence | Are alert response SLAs being met? | ≥90% within SLA | Gap → Corrective action per Section 8 |
 
-Gaps are documented in the risk register and tracked as deviation items per Section 9 until closure.
+CERG documents gaps in the risk register and tracks them as deviation items per Section 9 until closure.
 
 ### 13.7 Integration with Existing CERG Capabilities
 

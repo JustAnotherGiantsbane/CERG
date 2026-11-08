@@ -23,7 +23,7 @@
 
 ## 1. Role Summary
 
-The Exposure Management Lead owns the assurance side of the Exposure Management Procedure: exposure classification, validation-state criteria, remediation SLA measurement, exposure-path assessment, observation-source provenance and coverage assurance, and the exposure posture metrics that feed the CISO dashboard. The role's line of defense is per activity and scope, not a role-wide designation: classification, criteria, measurement, verification, and challenge are second-line assurance work; operating and maintaining observation sources and their state changes are first-line work under the service owner and operator. They ensure that every material exposure is known, prioritized, assigned, tracked to treatment, and reported.
+The Exposure Management Lead owns the assurance side of the Exposure Management Procedure. The work covers exposure classification, validation-state criteria, and remediation SLA measurement. It also covers exposure-path assessment, observation-source provenance and coverage assurance, and the exposure posture metrics that feed the CISO dashboard. The role's line of defense is per activity and scope, not a role-wide designation: classification, criteria, measurement, verification, and challenge are second-line assurance work; operating and maintaining observation sources and their state changes are first-line work under the service owner and operator. They make sure the organization knows, prioritizes, assigns, treats, and reports every material exposure.
 
 ## 2. NICE Workforce Framework Mapping
 
@@ -58,7 +58,7 @@ The Exposure Management Lead owns the assurance side of the Exposure Management 
 
 ### 4.2 Grade-Level Responsibility Differentiation
 
-Grade-level responsibility differentiation for this role is defined in [JA-001 §7](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) (Role-to-Grade Mapping). The grade definitions (S1-S4 SME Track, M1-M4 Management Track) and leveling dimensions are in [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §4-5. Behavioral anchors at each grade are in [CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md).
+How responsibility scales by grade is set out in [JA-001 §7](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) (Role-to-Grade Mapping). The grade definitions (S1-S4 SME Track, M1-M4 Management Track) and the leveling dimensions sit in [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §4-5. Behavioral anchors for each grade are in [CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md).
 
 ## 5. Required Knowledge, Skills, and Abilities (KSAs)
 
@@ -68,15 +68,15 @@ Grade-level responsibility differentiation for this role is defined in [JA-001 �
 
 ### 5.2 Technical Skills
 
-Technical skills for this role are documented in the original JD-001 content extracted into this file (see §5.1 Domain Expertise). Additional technical skill definitions aligned to NICE Skill Statements are maintained in [JF-002](../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md).
+This file reproduces the role's technical skills from the original JD-001 content (see §5.1 Domain Expertise). [JF-002](../CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) adds the rest of the technical skill definitions aligned to NICE Skill Statements.
 
 ### 5.3 CERG-Specific Knowledge
 
-CERG-specific knowledge requirements for this role are defined in [OM-001 §6](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) (Canonical Role Roster) and [RAC-001 §7](../../governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) (Role Descriptions). See §12 (Related CERG Documents) for the complete list of standards and procedures relevant to this role.
+[OM-001 §6](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md) (Canonical Role Roster) and [RAC-001 §7](../../governance/CERG-GOV-RAC-001_Consolidated_Roles_and_RACI_Instrument.md) (Role Descriptions) list the CERG-specific knowledge requirements for this role. §12 (Related CERG Documents) holds the full set of standards and procedures that apply.
 
 ## 6. NICE TKS Statement References
 
-The following Task, Knowledge, and Skill statements are extracted from the NIST NICE Framework v2.2.0 Work Role [PD-WRL-007 — Exposure Management Lead primary mapping] and filtered by relevance to this CERG role. The full TKS database is maintained at https://www.nist.gov/nice/framework/.
+These Task, Knowledge, and Skill statements are taken from the NIST NICE Framework v2.2.0 Work Role [PD-WRL-007 — Exposure Management Lead primary mapping] and filtered by relevance to this CERG role. NIST maintains the full TKS database at https://www.nist.gov/nice/framework/.
 
 | NICE TKS Type | Statement ID | Statement Summary | Relevance to This Role |
 |---------------|-------------|-------------------|------------------------|
@@ -106,19 +106,19 @@ The following Task, Knowledge, and Skill statements are extracted from the NIST 
 
 ### 7.2 Certifications
 
-Certifications for this role are defined in [TRN-001 §3](../../governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) (Certification Matrix). The matrix specifies Required, Recommended, and Aspirational certifications per role and grade.
+[TRN-001 §3](../../governance/CERG-GOV-TRN-001_Training_Development_and_Certification_Framework.md) (Certification Matrix) lists the certifications for this role. It marks each Required, Recommended, or Aspirational, by role and grade.
 
 ### 7.3 Experience
 
-Typical experience ranges by grade are defined in [JA-001 §4-5](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md). See §7.1 (Education) above for education requirements.
+[JA-001 §4-5](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) carries the typical experience range for each grade. §7.1 (Education) above sets the education requirements.
 
 ## 8. Key Performance Indicators (KPIs)
 
-KPIs for this role are defined in [MTR-001](../../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) (Metrics, Dashboard, and CISO/Board Reporting). KPI allocation by job family and grade-level thresholds are documented in [PERF-001](../../governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md). Each role's evaluation criteria are embedded in the per-role JD document structure defined by [JF-001](../CERG-GOV-JF-001_Job_Families_Overview.md).
+[MTR-001](../../governance/CERG-GOV-MTR-001_Metrics_Dashboard_and_Reporting.md) (Metrics, Dashboard, and CISO/Board Reporting) sets the KPIs for this role. [PERF-001](../../governance/CERG-GOV-PERF-001_Performance_Management_and_Promotion_Framework.md) documents KPI allocation by job family and the grade-level thresholds. [JF-001](../CERG-GOV-JF-001_Job_Families_Overview.md) sets the per-role JD structure where each role's evaluation criteria live.
 
 ## 9. Competency Expectations by Grade
 
-Competency expectations for this role follow the Risk pillar behavioral anchors from [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md). Each cell describes observable behavior demonstrating the competency at that grade. Anchors are cumulative: an L3 expectation includes the L1 and L2 anchors. Competency statements describe capability, not assigned duty; operational duties are stated in Section 4 (Key Responsibilities).
+Competency expectations for this role follow the Risk pillar behavioral anchors in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md). Each cell names behavior you can observe at that grade. Anchors are cumulative: an L3 expectation includes the L1 and L2 anchors. Competency statements describe capability, not assigned duty; operational duties sit in Section 4 (Key Responsibilities).
 
 | Competency Domain (CMP-001) | L1 Expectation | L2 Expectation | L3 Expectation | L4 Expectation |
 |-----------------------------|----------------|----------------|----------------|----------------|
@@ -135,23 +135,23 @@ Competency expectations for this role follow the Risk pillar behavioral anchors 
 
 ## 10. Success Profile
 
-An Exposure Management Lead is successful when the organization knows its exposure posture in real time and is actively reducing it. Key indicators: observation coverage is complete across all in-scope assets; confirmed exposure age is trending down, not up; remediation SLAs are met for each severity tier; the exposure backlog is the authoritative source of truth for exposure decisions. The lead ensures that every Critical and High finding has an owner, a plan, and a due date — and that the CISO can report exposure status to the board in under an hour.
+An Exposure Management Lead is successful when the organization knows its exposure posture in real time and is actively reducing it. Key indicators: observation coverage is complete across all in-scope assets; confirmed exposure age is trending down, not up; remediation SLAs are met for each severity tier; the exposure backlog is the authoritative source of truth for exposure decisions. The lead makes sure every Critical and High finding has an owner, a plan, and a due date — and that the CISO can report exposure status to the board in under an hour.
 
 ## 11. Career Path
 
 ### 11.1 Within-Family Progression
 
-Within JF-RISKOPS, this lead role can progress on either a management path or a senior SME path depending on organizational scale. In larger teams, progression usually runs through M1 Manager to M3 Principal Manager as the role gains team leadership, KPI ownership, budget input, and cross-functional delivery scope. In smaller teams, the same title may operate as an S3-S4 expert lead, with progression shown through authoritative risk analysis, procedure ownership, measurable exposure reduction, and influence on CISO-level risk decisions. See [JF-001 §9.2](../CERG-GOV-JF-001_Job_Families_Overview.md#92-jf-riskops--risk-operations-levels) and [JA-001 §7.3](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md#73-risk-pillar).
+Within JF-RISKOPS, this lead role can follow a management path or a senior SME path, depending on organizational scale. In larger teams, progression usually runs from M1 Manager to M3 Principal Manager as the role takes on team leadership, KPI ownership, budget input, and cross-functional delivery scope. In smaller teams, the same title may work as an S3-S4 expert lead, where progression shows in authoritative risk analysis, procedure ownership, measurable exposure reduction, and influence on CISO-level risk decisions. See [JF-001 §9.2](../CERG-GOV-JF-001_Job_Families_Overview.md#92-jf-riskops--risk-operations-levels) and [JA-001 §7.3](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md#73-risk-pillar).
 
 ---
 
 ### 11.2 Cross-Family Movement
 
-Cross-family movement options are defined in the [Family-to-Family Career Lattice (JF-001 §4)](../CERG-GOV-JF-001_Job_Families_Overview.md#4-family-to-family-career-lattice). The Left-Right Knowledge Model ([FRM-001 §9.2](../../governance/CERG-GOV-FRM-001_CERG_Framework.md)) and cross-training expectations ([OM-001 §10.4](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md)) operationalize cross-family career movement.
+The [Family-to-Family Career Lattice (JF-001 §4)](../CERG-GOV-JF-001_Job_Families_Overview.md#4-family-to-family-career-lattice) sets out the cross-family movement options. The Left-Right Knowledge Model ([FRM-001 §9.2](../../governance/CERG-GOV-FRM-001_CERG_Framework.md)) and cross-training expectations ([OM-001 §10.4](../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md)) make that movement real.
 
 ### 11.3 Management Track Option
 
-At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §8.1 (SME to Management Transition). Readiness indicators include: consistently sought out for guidance by junior team members, leading cross-functional initiatives without formal authority, and communicating clearly with non-technical stakeholders. The transition is a track change, not a grade promotion — an S3 Advisor moving to M1 Manager carries their technical credibility into the management role. Management competencies are defined in [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §7. See [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §5 for Management grade definitions (M1-M4) and §9 (Span of Control and Team Design) for when to create a management role.
+At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §8.1 (SME to Management Transition). The signs of readiness: junior team members come to them for guidance, they lead cross-functional initiatives without formal authority, and they communicate clearly with non-technical stakeholders. The move changes track, not grade — an S3 Advisor who becomes an M1 Manager brings their technical credibility into the role. [CERG-GOV-CMP-001](../../governance/CERG-GOV-CMP-001_Competency_Model_and_Behavioral_Anchors.md) §7 sets the management competencies. See [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §5 for the Management grade definitions (M1-M4) and §9 (Span of Control and Team Design) for when to create a management role.
 
 ## 12. Related CERG Documents
 
@@ -200,7 +200,7 @@ At L3+ (SME track), a Management track option may be available per [CERG-GOV-JA-
 - Change to this role's grade range in [CERG-GOV-JA-001](../../governance/CERG-GOV-JA-001_Job_Architecture_and_Grade_Framework.md) §7
 - Direction from the CISO
 
-Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining approval for all changes.
+Governance owns this document. The Governance Pillar Leader (Policy & Standards) initiates reviews, manages the revision cycle, and obtains approval for all changes.
 
 ### Related Documents
 

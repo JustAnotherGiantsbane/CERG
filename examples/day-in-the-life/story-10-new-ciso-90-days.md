@@ -2,7 +2,7 @@
 
 This story is for the CISO, the incoming security leader, or the executive sponsor trying to understand what good adoption looks like at the program level. It is a narrative arc, not a single event. It walks day 1 through day 90 of a new CISO inheriting a fragmented program and bringing it onto CERG Standard.
 
-For the underlying checklists that anchor this arc, see [CERG-GOV-IMP-006 §3](../../governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md#3-ciso-or-security-lead-checklist). For the consolidation and pacing logic, see [CERG-GOV-IMP-005](../../governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md).
+The underlying checklists that anchor this arc are in [CERG-GOV-IMP-006 §3](../../governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md#3-ciso-or-security-lead-checklist). The consolidation and pacing logic is in [CERG-GOV-IMP-005](../../governance/CERG-GOV-IMP-005_Adoption_Decision_Tree_and_Dependency_Matrix.md).
 
 ## Setting
 
@@ -132,4 +132,4 @@ The SOC 2 Type II renewal in month 7 is now a finishing exercise, not a panic.
 - **A major regulator-driven control change.** The first 90 days did not include an external regulatory obligation. When the SOC 2 framework updated or a new customer required NIS2 alignment, Story 9's F-01 pattern would apply.
 - **CERG Lite.** Meridian is a Standard team. See Story 8 for the small-team pattern.
 
-For the CISO checklist that anchors this arc, see [CERG-GOV-IMP-006 §3](../../governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md#3-ciso-or-security-lead-checklist). For the First 90-Day Completion Criteria, see [CERG-GOV-IMP-006 §8](../../governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md#8-first-90-day-completion-criteria). For the role assignment map pattern, see [CERG-GOV-IMP-003 §4](../../governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md#4-role-consolidation-map). For the Decision Log requirement, see [CERG-GOV-IMP-002 §4](../../governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md#4-the-decision-log).
+[CERG-GOV-IMP-006 §3](../../governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md#3-ciso-or-security-lead-checklist) has the CISO checklist that anchors this arc, and [CERG-GOV-IMP-006 §8](../../governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md#8-first-90-day-completion-criteria) lists the First 90-Day Completion Criteria. Go to [CERG-GOV-IMP-003 §4](../../governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md#4-role-consolidation-map) for the role assignment map pattern and [CERG-GOV-IMP-002 §4](../../governance/CERG-GOV-IMP-002_Adoption_Safety_Guide.md#4-the-decision-log) for the Decision Log requirement.
