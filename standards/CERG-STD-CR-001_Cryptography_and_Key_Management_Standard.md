@@ -41,7 +41,7 @@ The Cybersecurity Policy requires encryption in transit and at rest. The IT, CUI
 
 This standard establishes a unified cryptographic policy: which algorithms are approved, which are prohibited, how TLS and certificates are managed, how keys / secrets / API tokens are stored and rotated, when customer-managed keys are required, and the FIPS profile for regulated scopes.
 
-It applies to every in-scope asset, every credential and secret used by CERG-managed systems, and every cryptographic use case, data at rest, data in transit, signing, integrity, authentication, and key wrapping.
+It applies to every in-scope asset, every credential and secret used by CERG-managed systems, and every cryptographic use case: data at rest, data in transit, signing, integrity, authentication, and key wrapping.
 
 > **The Crypto Standard Reads Like a Floor, Not a Ceiling**
 >
@@ -217,7 +217,7 @@ The CMK decision is about who controls the master key, the customer (us) or the 
 - Keys generated in cloud KMS HSM-backed (FIPS 140-2/3 Level 2+).
 - Rotation per Section 8; rotation reuses prior key for read; new writes use new key.
 - Key policy and access reviewed quarterly.
-- Key material is **never** exported outside the HSM boundary except under the documented exception process.
+- Key material **never** leaves the HSM boundary except under the documented exception process.
 
 > **What Inheritance Looks Like When CMK Is Not Required**
 >
@@ -278,7 +278,7 @@ Plaintext secrets in source code, configuration files, environment variables on 
 
 ### 8.1 Event-Driven Rotation Triggers
 
-Rotation is also triggered by, not on a schedule alone:
+Rotation is also event-driven, not only scheduled:
 
 - Suspected key / secret / credential compromise.
 - Workforce changes affecting individuals with key access.
