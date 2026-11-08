@@ -34,7 +34,7 @@
 
 ## 1. Purpose and Scope
 
-`CERG-GOV-CB-001` defines the unified control baseline and names evidence for each control. This matrix adds the missing operating layer. For each baseline control it names the standard or procedure that runs the control, the template or evidence package that proves operation, and the gap signal to raise when traceability is incomplete.
+`CERG-GOV-CB-001` defines the unified control baseline and names evidence for each control. This matrix adds the missing operating layer. For each baseline control it names the standard or procedure that runs it, the template or evidence package that proves the control ran, and the gap signal to raise when traceability breaks.
 
 This document complements the Unified Control Baseline. It does not replace it. The baseline remains the authoritative source for the control statement, owning pillar, evidence name, frequency, and regulatory crosswalk. This matrix is the operational routing map that tells a control owner, auditor, or AI agent where to go to run, test, or fix the control.
 
