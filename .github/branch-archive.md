@@ -36,13 +36,32 @@ The proposal was made and settled. These commits are not in `main`; they stay re
 | `jd/seceng-appsec-leader-boundary` | `e3fb45e` | #260 CLOSED | proposal closed without merge |
 | `jd/seceng-008-authority-completeness` | `0805283` | #270 CLOSED | proposal closed without merge |
 
-## Kept
 
-| Branch | Why it stays |
+## Removed 2026-11-08 — overnight agent run
+
+These branches were created and merged by the overnight run and then deleted. Each tip was checked against `main` before being recorded here.
+
+| Branch | Handle | What it is | State |
+|---|---|---|---|
+| `audit/batch-1` | `3d7f60c` | merge tip | merged into main |
+| `audit/batch-2` | `42562ed` | merge tip | merged into main |
+| `audit/batch-3` | `675e3e6` | merge tip | merged into main |
+| `audit/batch-4` | `16d98bc` | merge tip | merged into main |
+| `audit/batch-5` | `1099baa` | merge tip | merged into main |
+| `chore/authority-gate` | `b92b9f9` | merge tip | merged into main |
+| `prose/day-in-the-life` | `9637ff8` | merge tip | merged into main |
+| `prose/front-door` | `6997d80` | last push head | merged into main (fast-forward, no merge commit) |
+| `prose/prc-vm-001` | `b33bf68` | merge tip | merged into main |
+| `prose/rmf-001-sec1-9` | `f8eaa92` | merge tip | merged into main |
+| `prose/signpost-register` | `33906b8` | merge tip | merged into main |
+| `prose/trc-001` | `b627d76` | merge tip | merged into main |
+| `prose/incident-signpost` | `07fd0fb` | commit that added CERG-GOV-IR-001 | content is in main; branch tip not recorded |
+| `voice/writer-exception-av001` | `954ea2b` | voice(writer-exception) commit | content is in main; tip is this commit if it was a single-commit branch |
+
+## Current branches
+
+| Branch | State |
 |---|---|
-| `fix/adopter-fit-boundaries` | Live work — upstream PR #286 open |
-| `feat/practice-improvement-pack` | 26 commits, never proposed upstream |
-| `practice/worked-instance` | 10 commits, never proposed upstream |
-| `prose/day-in-the-life` | Active prose work, 2026-11-07 |
-| `prose/front-door` | Active prose work, 2026-11-07 |
-| `prose/rmf-001-sec1-9` | Active prose work, 2026-11-07 |
+| `fix/adopter-fit-boundaries` | 6 commits ahead of `main` — Upstream PR #286 merged 2026-11-08, but into the upstream experiment branch, not into this repo's main |
+| `feat/practice-improvement-pack` | 26 commits ahead of `main` — never proposed upstream |
+| `practice/worked-instance` | 10 commits ahead of `main` — never proposed upstream |
