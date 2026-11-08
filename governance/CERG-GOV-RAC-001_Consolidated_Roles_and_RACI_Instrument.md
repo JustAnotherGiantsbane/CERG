@@ -148,7 +148,7 @@ Columns are abbreviated: **ENG-L** Engineering Pillar Leader, **RISK-L** Risk Pi
 
 > **Standard Authorship Sits With Engineering; Standard Authority Sits With Governance**
 >
-> Several standards show the Engineering Pillar Leader as R/A. That is the working reality: Engineering writes and maintains the technical standards because Engineering holds the expertise. It does not change the approval authority in [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) §4, under which a standard is approved by the Governance Pillar Leader with CISO endorsement. The R/A in this table is accountability for the artifact's content and upkeep. The catalog governs who signs it into force. Both are true at once, and neither overrides the other.
+> Several standards show the Engineering Pillar Leader as R/A. That is the working reality: Engineering writes and maintains the technical standards because Engineering holds the expertise. It does not change the approval authority in [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) §4: the Governance Pillar Leader approves a standard with CISO endorsement. The R/A in this table is accountability for the artifact's content and upkeep. The catalog governs who signs it into force. Both are true at once, and neither overrides the other.
 >
 > The Incident Response Plan shows no CERG role as A, by design: per [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §3.4 it is owned by the standing IR team. CERG roles are Consulted and Informed only.
 
@@ -319,11 +319,11 @@ Risk-acceptance authority does not consolidate freely. The separation of the per
 
 ## 9. Maintaining This Instrument
 
-1. **A new artifact is registered in CAT-001.** [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) is updated first because it is the inventory and lifecycle authority. Section 5 of this instrument is updated in the same change only when the new artifact creates a new stewardship pattern or changes accountability for an existing artifact family.
-2. **A new process is added to Section 6.** When a new standing process is established by a standard or procedure, its RACI row is added to Section 6 unless the process is fully local to a single procedure and already covered by an existing standing-process row.
+1. **A new artifact is registered in CAT-001.** Governance updates [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) first, because it is the inventory and lifecycle authority. Section 5 of this instrument changes in the same release only when the new artifact creates a new stewardship pattern or changes accountability for an existing artifact family.
+2. **A new process is added to Section 6.** When a standard or procedure establishes a new standing process, add its RACI row to Section 6, unless the process is fully local to a single procedure and an existing standing-process row already covers it.
 3. **A roster change flows from the Operating Model.** A role is never added, renamed, or retired here. That happens in [`CERG-GOV-OM-001`](CERG-GOV-OM-001_CERG_Operating_Model.md) §6.1, and this instrument is then updated to match.
 4. **Subordinate documents conform to this instrument.** A standard or procedure whose local roles table disagrees with this instrument is corrected on its next revision, per the precedence rule in Section 1.
-5. **The instrument is reviewed annually.** The review confirms every row still has exactly one A, every role is still canonical, and the scaling map still reflects the role roster.
+5. **The instrument is reviewed annually.** The review confirms every row still has exactly one A, every role is still canonical, and the scaling map still tracks the role roster.
 
 ---
 
