@@ -109,7 +109,7 @@ Every control entry in the baseline carries one of the following statuses. The s
 
 ## 5. Inheritance Model
 
-`Inherited` is the most-abused status in cloud-era control libraries. CERG requires the following Inheritance Evidence Package for any control marked `Inherited`. Without it, the status defaults to `Not Implemented` and a finding is opened.
+`Inherited` is the most-abused status in cloud-era control libraries. CERG requires the following Inheritance Evidence Package for any control marked `Inherited`. Without it, the status defaults to `Not Implemented` and CERG opens a finding.
 
 The package has six elements:
 
@@ -594,7 +594,7 @@ The baseline is reviewed and updated upon any of the following:
 1. **Proposal.** Submitted to the Governance Pillar Leader with: control(s) affected, change rationale, impact on overlays, evidence implications, and any regulator-facing implications.
 2. **Assessment.** Engineering and Risk review for operational practicability and exposure implications. Comments returned within 10 business days.
 3. **Decision.** Material changes go to CISO at the next Monthly Risk Register Review or sooner if time-sensitive. Non-material changes are approved by the Governance Pillar Leader.
-4. **Publication.** Approved changes are merged into the source markdown with a revision history entry. Subordinate documents that cite the changed control are flagged for refresh in their next review cycle.
+4. **Publication.** Approved changes are merged into the source markdown with a revision history entry. Governance flags subordinate documents that cite the changed control for refresh in their next review cycle.
 5. **Notification.** Pillar leaders communicate the change at the next CERG All-Hands and at the next Cyber Oversight Group meeting.
 
 ### 11.4 Versioning Rules
@@ -611,7 +611,7 @@ A change log entry is written for every version bump; the change-log table lives
 
 ### 11.5 Subordinate-Document Synchronization
 
-When a control in §6 or an overlay in §8 changes, Governance issues a "ripple list" naming every subordinate document that references the changed control. The owning pillar leaders are responsible for refreshing those documents within 30 calendar days of the baseline change being approved. The Compliance Pulse forum tracks ripple-list closure each cycle.
+When a control in §6 or an overlay in §8 changes, Governance issues a "ripple list" naming every subordinate document that references the changed control. The owning pillar leaders refresh those documents within 30 calendar days of the baseline change being approved. The Compliance Pulse forum tracks ripple-list closure each cycle.
 
 ---
 
