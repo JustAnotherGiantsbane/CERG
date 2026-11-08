@@ -52,7 +52,7 @@ It applies to every network CERG-managed systems use: physical and virtual netwo
 
 ## 2. Principles
 
-1. **The network is not a trust boundary.** Being on the internal network grants nothing. The estate decides access to a resource per request against identity, device posture, and context, not by network location.
+1. **The network is not a trust boundary.** Being on the internal network grants nothing. Access to a resource is decided per request against identity, device posture, and context, not by network location.
 2. **Default deny.** Network paths are denied unless explicitly allowed. A segment, a firewall, a security group starts closed. Connectivity is added deliberately and recorded.
 3. **Segment by function and criticality.** Systems are grouped into segments by what they do and how critical they are, per the criticality tiers in [`CERG-STD-AM-001`](CERG-STD-AM-001_Asset_Management_and_Inventory_Standard.md). A breach in one segment does not become a breach of another for free.
 4. **The boundary is enforced and watched.** Every boundary between segments is enforced by a control and monitored. An unenforced boundary is not a boundary.
@@ -72,7 +72,7 @@ CERG designs its networks toward the zero-trust model in NIST 800-207. The estat
 
 > **Zero Trust Is a Direction, Not a Product**
 >
-> No purchase makes an organization zero-trust. Zero trust is an architecture an estate moves toward over years: removing implicit network trust, adding identity and posture to access decisions, encrypting internal traffic, shrinking segments. CERG asks one thing of every network change: does it move the estate toward the zero-trust model, or away from it? Changes that move away from it are exceptions; file them as such.
+> No purchase makes an organization zero-trust. Zero trust is an architecture an estate moves toward over years: removing implicit network trust, adding identity and posture to access decisions, encrypting internal traffic, shrinking segments. CERG asks one thing of every network change: does it move the estate toward the zero-trust model, or away from it? Changes that move away from it are exceptions; file them as exceptions.
 
 ---
 
