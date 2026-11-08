@@ -41,9 +41,9 @@
 
 ## 1. Purpose and Scope
 
-The Cybersecurity Policy requires periodic adversarial testing. The exposure management procedure names the adversarial activities CERG performs. The risk taxonomy distinguishes adversarial testing from vulnerability scanning. Until this procedure, the operating model, scope, rules, safety, finding routing, and evidence for adversarial validation were implicit.
+The Cybersecurity Policy requires periodic adversarial testing. The exposure management procedure names the adversarial activities CERG performs. The risk taxonomy distinguishes adversarial testing from vulnerability scanning. Until this procedure, six things about adversarial validation were custom, not text: what we run, how often, under what rules, with what safety limits, where findings route, and what counts as evidence.
 
-This procedure makes it explicit. It applies to every CERG-led or CERG-overseen adversarial engagement: external pen test, internal pen test, cloud red-team / attack simulation, web/mobile/API pen test, OT adversarial assessment, purple-team detection validation, and social-engineering work conducted with the adjacent Awareness function.
+This procedure writes them down. It applies to every CERG-led or CERG-overseen adversarial engagement: external pen test, internal pen test, cloud red-team / attack simulation, web/mobile/API pen test, OT adversarial assessment, purple-team detection validation, and social-engineering work conducted with the adjacent Awareness function.
 
 In CERG, penetration testing is one engagement type within the broader adversarial validation capability. It does not replace red-team operations, purple-team detection validation, cloud attack simulation, OT-safe assessment, or other authorized testing where those activities are in scope.
 
@@ -70,7 +70,7 @@ In CERG, penetration testing is one engagement type within the broader adversari
 
 ### 2.1 External Tester Management
 
-When an external firm rather than internal staff conducts adversarial validation, the following requirements apply.
+When an external firm runs the engagement instead of internal staff, these requirements apply.
 
 #### Minimum Tester Qualifications
 
@@ -195,7 +195,7 @@ RULES OF ENGAGEMENT - <Engagement Name>      AV-YYYY-NNNN
 
 ## 5. Red-Team Engagement Charter
 
-Red-team engagements are scope-broader, time-longer, goal-driven simulations of a realistic adversary. Each red team has a Charter in addition to its RoE.
+A red team simulates a realistic adversary: wider scope than a penetration test, a longer window, and a goal to reach. Each red team has a Charter in addition to its RoE.
 
 ```
 RED-TEAM CHARTER - <Engagement Name>     AV-YYYY-NNNN
@@ -254,7 +254,7 @@ Purple work is the collaboration between offensive and detection engineering. It
 
 ## 7. Cloud Attack Simulation
 
-Cloud engagements emulate adversary activity at the cloud control plane and identity layer, historically the most-attacked surface in modern enterprises.
+Cloud engagements emulate adversary activity at the cloud control plane and identity layer - historically the most-attacked surfaces in enterprise breaches.
 
 | **Focus** | **Examples** |
 |---|---|
@@ -344,7 +344,7 @@ OT testing is uniquely constrained. Safety overrides any test objective.
 
 ### 9.1 Prohibited Without Explicit Approval
 
-The following are prohibited absent a documented exception with engineering and operations sign-off:
+None of the following may happen without a documented exception carrying engineering and operations sign-off:
 
 - **Active scanning of live SCADA/HMI/RTU/relay surfaces.** Passive monitoring and engineering-supervised authenticated checks only.
 - **Exploitation that could affect setpoints, alarms, relays, breakers, or control logic.**
@@ -361,7 +361,7 @@ The following are prohibited absent a documented exception with engineering and 
 - Engineering-supervised authenticated checks in a defined window.
 - Tabletop / scenario-based assessment with OT operators.
 
-A load-bearing chain link validated through a permitted approach above counts as the alternative independent validation a [`CERG-GOV-CJ-001`](../governance/CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md) bounded defense claim requires only when two things are true. The final report states the assessor, the method (which permitted approach), and the evidence period for that link. The assessor is independent of the operator and state author for the asserted scope per CJ-001 Section 5.5. Without those stated in the record, the validation is not evidenced.
+A load-bearing chain link validated through a permitted approach above counts as the independent validation a [`CERG-GOV-CJ-001`](../governance/CERG-GOV-CJ-001_Crown_Jewel_Register_and_Scenario_Library.md) bounded defense claim requires - but only when two things are in the record. The final report names the assessor, the permitted method, and the evidence period for that link. The assessor is independent of the operator and state author for the asserted scope, per CJ-001 Section 5.5. State less, and the validation is not evidenced.
 
 ### 9.3 Authority and Safety Officer
 
@@ -494,16 +494,16 @@ The Adversarial Testing Lead facilitates calibration and documents outcomes. Cal
 
 An Adaptive program does not stop at fixing individual pen-test findings. It asks: why did four of six DMZ servers share the same misconfiguration? What standard or procedure failed to prevent this? How do we change the program so the next engagement does not repeat the same class of finding?
 
-This section defines the post-engagement systemic analysis that converts adversarial validation findings into program improvements.
+This section is how findings become program changes after the report ships.
 
 ### 11.1 Post-Engagement Systemic Analysis
 
 After every adversarial validation engagement, the Adversarial Testing Lead produces two outputs: a findings report (existing) and a systemic analysis (new). The systemic analysis answers four questions:
 
-1. **Which findings share a common root cause?** Example: four findings relate to default credentials on newly provisioned systems : the provisioning process does not enforce credential rotation. This is not four separate problems; it is one systemic weakness manifesting in four locations.
-2. **Which findings indicate a standard or procedure gap?** Example: DMZ web servers all had the same TLS misconfiguration : STD-CFG-001 or STD-NET-001 does not specify DMZ TLS requirements clearly enough.
-3. **Which findings indicate a control effectiveness gap?** Example: WAF was deployed per CB-001 but three bypass techniques worked : the WAF control is Implemented but not effective (per CEF-001).
-4. **Which findings indicate a detection gap?** Example: testers pivoted laterally for four hours without an alert : detection rules need updating for the observed technique chain.
+1. **Which findings share a common root cause?** Example: four findings relate to default credentials on newly provisioned systems: the provisioning process does not enforce credential rotation. This is not four separate problems; it is one systemic weakness manifesting in four locations.
+2. **Which findings indicate a standard or procedure gap?** Example: DMZ web servers all had the same TLS misconfiguration: STD-CFG-001 or STD-NET-001 does not specify DMZ TLS requirements clearly enough.
+3. **Which findings indicate a control effectiveness gap?** Example: WAF was deployed per CB-001 but three bypass techniques worked: the WAF control is Implemented but not effective (per CEF-001).
+4. **Which findings indicate a detection gap?** Example: testers pivoted laterally for four hours without an alert: detection rules need updating for the observed technique chain.
 
 ### 11.2 Systemic Finding Routing
 
