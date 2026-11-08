@@ -41,7 +41,7 @@
 
 ## 1. Purpose and Scope
 
-The Operating Model makes Engineering project engagement a core CERG delivery model. The RMF Phase 3 describes concept, design, build, pre-production, and production handoff outputs. Until this procedure, the intake forms, review checklists, threat modeling guidance, signoff criteria, and handoff packages those phases require existed implicitly.
+The Operating Model makes Engineering project engagement a core CERG delivery model. The RMF Phase 3 describes concept, design, build, pre-production, and production handoff outputs. Until this procedure, those phases' intake forms, review checklists, threat modeling guidance, signoff criteria, and handoff packages existed only implicitly.
 
 This procedure defines how a project enters CERG attention, how Engineering reviews it, how Risk threat-models it, how findings flow to remediation or risk acceptance, and how the system enters production with the right documentation, baselines, monitoring, and accepted exceptions.
 
@@ -72,7 +72,7 @@ The standalone [`CERG-TMPL-AR-001`](../templates/CERG-TMPL-AR-001_Architecture_a
 
 ## 3. The Five-Phase Engagement Model
 
-CERG engagement with a project follows five phases. Not every project hits every phase, Section 4 names the carve-outs.
+CERG engagement with a project follows five phases. Not every project hits every phase. Section 4 names the carve-outs.
 
 1. **Intake**, register the project; classify scope; determine review depth.
 2. **Architecture Review and Threat Model**, design-stage review; threats and controls aligned to [`CERG-GOV-CB-001`](../governance/CERG-GOV-CB-001_Unified_Control_Baseline.md).
@@ -261,7 +261,7 @@ The reviewer works through the checklist below; findings are recorded with sever
 
 ### 6.2 Threat Model
 
-The threat model is owned by CERG Risk in collaboration with the project. It uses STRIDE as the default decomposition for IT and a STRIDE-LM (with Lateral Movement) variant for OT. The format is a short Markdown document with the following structure:
+CERG Risk owns the threat model in collaboration with the project. It uses STRIDE as the default decomposition for IT and a STRIDE-LM (with Lateral Movement) variant for OT. The format is a short Markdown document with the following structure:
 
 ```
 THREAT MODEL - <Project Name>            AR-YYYY-NNNN - TM-001
@@ -281,7 +281,7 @@ THREAT MODEL - <Project Name>            AR-YYYY-NNNN - TM-001
 
 ### 6.3 Phase 2 SLA
 
-Phase 2 review (Architecture Review and Threat Model) follows the SLC tier assigned at intake: Tier 1 within 10 business days, Tier 2 within 7 business days, and Tier 3 within 5 business days where Phase 2 is required. Extensions may be granted by the Engineering Pillar Leader for complex systems (e.g., multi-cloud, OT-integrated, or CUI-scope systems with novel architecture). The project team is notified of any extension with rationale within the original SLA window.
+Phase 2 review (Architecture Review and Threat Model) follows the SLC tier assigned at intake: Tier 1 within 10 business days, Tier 2 within 7 business days, and Tier 3 within 5 business days where Phase 2 is required. The Engineering Pillar Leader may grant extensions for complex systems (e.g., multi-cloud, OT-integrated, or CUI-scope systems with novel architecture), and notifies the project team of any extension, with rationale, within the original SLA window.
 
 ### 6.4 Phase 2 Output
 
@@ -342,7 +342,7 @@ Build-time findings are escalated within the development team first, then to CER
 
 ### 7.5 SLA for Build-Time Review
 
-CERG completes novel-build review within 3 business days of notification. If the review cannot be completed within SLA, Engineering documents the delay, schedules the follow-up review, and notifies the project team. The first-line pipeline operator enforces blocking gates. If the accountable owner proposes proceeding with unresolved validated residual risk, it follows the existing risk-acceptance process; Engineering does not accept business risk on behalf of the owner.
+CERG completes novel-build review within 3 business days of notification. If Engineering cannot complete the review within SLA, it documents the delay, schedules the follow-up review, and notifies the project team. The first-line pipeline operator enforces blocking gates. If the accountable owner proposes proceeding with unresolved validated residual risk, it follows the existing risk-acceptance process; Engineering does not accept business risk on behalf of the owner.
 
 The artifacts produced during build include: IaC review for new modules and patterns; pipeline gates enforcing DISH baseline conformance, container image signing, SBOM generation, and exposure scanning; secrets checking; and conditional re-review if material design changes happen between Phase 2 and Phase 4.
 
@@ -372,7 +372,7 @@ Pre-Production review is a focused, time-boxed readiness check. It produces a Pr
 
 ### 8.2 Phase 4 SLA
 
-Pre-Production Security Review is completed within 5 business days of the project team submitting the Pre-Production checklist evidence. Extensions may be granted by the Risk Pillar Leader where evidence review requires additional subject matter expertise.
+The CERG Pre-Production Reviewer completes the Pre-Production Security Review within 5 business days of the project team submitting the checklist evidence. The Risk Pillar Leader may grant extensions where evidence review requires additional subject matter expertise.
 
 ### 8.3 Outcome
 
@@ -457,7 +457,7 @@ Aggregate:
 
 ### 9.3 Phase 5 SLA
 
-Production Handoff is completed within 3 business days of the Phase 4 technical disposition. The handoff package informs the business or service owner's go-live decision; it is not a CERG approval gate. Go-live with unresolved validated residual risk requires the existing RMF acceptance authority.
+Engineering completes the Production Handoff within 3 business days of the Phase 4 technical disposition. The handoff package informs the business or service owner's go-live decision; it is not a CERG approval gate. Go-live with unresolved validated residual risk requires the existing RMF acceptance authority.
 
 ### 9.4 Post-Go-Live Watch Period
 
@@ -555,9 +555,7 @@ A completed [`CERG-TMPL-AR-001`](../templates/CERG-TMPL-AR-001_Architecture_and_
 | **Risk Acceptance Aging** | Mean and maximum age (days) of open risk acceptances raised through the review process | Risk register | Monthly | Mean ≤ 90 days, Max ≤ 180 days | Mean 91–180 days, Max 181–270 days | Mean > 180 days, Max > 270 days |
 | **Review SLA Compliance Rate** | % of reviews meeting the SLA for their review path (Mandatory / Lightweight) | Review tracker | Monthly | ≥ 90% | 80–89% | < 80% |
 
-> **Baseline Establishment**
->
-> Where a metric is marked "Baseline to be established in first year of operation," the CERG Risk Pillar collects 12 months of data and proposes Green/Amber/Red thresholds at the next annual review. Prior to baseline, the metric is reported without RAG coloring.
+Where a metric is marked "Baseline to be established in first year of operation," the CERG Risk Pillar collects 12 months of data and proposes Green/Amber/Red thresholds at the next annual review. Prior to baseline, the metric is reported without RAG coloring.
 
 ---
 ## 13. Regulatory and Framework Alignment Summary
@@ -645,9 +643,7 @@ Good governance makes projects faster because teams can design correctly before 
 
 ## Appendix A. Worked Example: CloudApp Migration
 
-> **Purpose**
->
-> This appendix walks a fictitious project — "CloudApp Migration" — through all five phases of the architecture review process. It shows what each artifact looks like when populated, so first-time adopters have a concrete reference.
+This appendix walks a fictitious project — "CloudApp Migration" — through all five phases of the architecture review process. It shows what each artifact looks like when populated, so first-time adopters have a concrete reference.
 
 ### A.1 Scenario
 
