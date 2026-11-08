@@ -31,7 +31,7 @@
 
 ## 1. Purpose and Use
 
-This template captures vendor security intake, questionnaire responses, evidence review, risk rating, required remediation, and approval. It is designed to support repeatable third-party and supply-chain risk decisions without forcing every vendor into the same depth of review.
+This template captures vendor security intake, questionnaire responses, evidence review, risk rating, required remediation, and approval. It supports repeatable third-party and supply-chain risk decisions without forcing every vendor into the same depth of review.
 
 > **Vendor Risk Is Inherited Only If Conditions Hold**
 >
@@ -105,12 +105,12 @@ This template captures vendor security intake, questionnaire responses, evidence
 
 | **Reviewer / Approver** | **Review Meaning** | **Name / Date** |
 |---|---|---|
-| Vendor Risk Analyst | Completes assessment and recommended decision. | `[Name / Date]` |
+| Vendor Risk Analyst | Completes the assessment and recommends a decision. | `[Name / Date]` |
 | Business Owner | Accepts business need, owns vendor conditions, and confirms whether to proceed, defer, reject, or terminate. | `[Name / Date]` |
 | Risk Pillar Leader | Approves vendor residual-risk treatment. | `[Name / Date]` |
 | Chief Information Security Officer (CISO) | Approves High or Critical vendor risk acceptance where required. | `[Name / Date]` |
 
-Completed templates are reviewed at the cadence defined by their parent procedure or plan. Material changes require a new review.
+The parent procedure or plan sets the review cadence for completed templates. Material changes require a new review.
 
 ---
 
