@@ -30,7 +30,7 @@
 
 ## 1. Purpose and Scope
 
-This document provides the complete mapping of all 27 canonical CERG roles to NIST NICE Work Roles (NIST SP 800-181r1). It is the authoritative crosswalk for CERG's workforce architecture, enabling:
+This document maps all 27 canonical CERG roles to NIST NICE Work Roles (NIST SP 800-181r1). It is the authoritative crosswalk for CERG's workforce architecture and supports:
 
 - **Hiring precision.** Job postings can reference NICE work roles so candidates from other industries understand the role immediately.
 - **Regulatory alignment.** NERC-CIP, CMMC, and DoD 8140.03 all reference NICE; CERG compliance managers benefit from a shared taxonomy with their regulators.
@@ -111,7 +111,7 @@ Each CERG canonical role is mapped to 1–3 NICE Work Roles. The mapping follows
 
 ## 8. Complete Crosswalk Table
 
-This table provides the complete mapping of all 27 canonical CERG roles plus the three Pillar Leaders to NICE Work Roles. It is the single-source reference for NICE alignment.
+This table maps all 27 canonical CERG roles plus the three Pillar Leaders to NICE Work Roles. It is the single-source reference for NICE alignment.
 
 | CERG Canonical Role | Job Family | CERG Pillar | Primary NICE Work Role | NICE Category | Secondary NICE Work Role(s) | NICE Work Role ID (Primary) |
 |---------------------|-----------|-------------|----------------------|---------------|-----------------------------|----------------------------|
@@ -147,7 +147,7 @@ This table provides the complete mapping of all 27 canonical CERG roles plus the
 
 ## 9. NICE Work Role Categories Reference
 
-The seven NICE Work Role Categories (NIST SP 800-181r1) with their official descriptions:
+The seven NICE Work Role Categories (NIST SP 800-181r1) and their official descriptions:
 
 | Category Code | Category Name | Official NICE Description |
 |---------------|---------------|---------------------------|
@@ -159,7 +159,7 @@ The seven NICE Work Role Categories (NIST SP 800-181r1) with their official desc
 | **CO** | Collect and Operate | Provides specialized denial and deception operations and collection of cybersecurity information that may be used to develop intelligence. |
 | **IN** | Investigate | Investigates cybersecurity events or crimes related to information technology (IT) systems, networks, and digital evidence. |
 
-**Reference:** NIST SP 800-181r1, Workforce Framework for Cybersecurity (NICE Framework). Available at https://www.nist.gov/itl/applied-cybersecurity/nice
+**Reference:** NIST SP 800-181r1, Workforce Framework for Cybersecurity (NICE Framework). See https://www.nist.gov/itl/applied-cybersecurity/nice
 
 ---
 
@@ -194,7 +194,7 @@ The seven NICE Work Role Categories (NIST SP 800-181r1) with their official desc
 - Change in NICE Work Role codes or categories
 - Direction from the CISO
 
-Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining approval for all changes.
+Governance owns this document. The Governance Pillar Leader (Policy & Standards) initiates reviews, manages the revision cycle, and obtains approval for all changes.
 
 ### Related Documents
 
