@@ -88,9 +88,7 @@ The Evidence Librarian maintains the evidence library. The exact platform may va
 
 The control-baseline view is the source view. Framework views may link to or reference the same evidence. The audit view contains exactly what was requested, what was submitted, when, and by whom.
 
-> **Collect Once, Map Many Times**
->
-> The control does not care which auditor asked the question. Access reviews, backup tests, vulnerability remediation, and risk reviews are real control activity. CERG stores evidence by control first, then maps it to CMMC, NERC-CIP, SOX, ISO, customer questionnaires, or internal audit. That prevents duplicate collection and prevents different audit teams from getting different versions of the truth.
+The control does not care which auditor asked the question. Access reviews, backup tests, vulnerability remediation, and risk reviews are real control activity. CERG stores evidence by control first, then maps it to CMMC, NERC-CIP, SOX, ISO, customer questionnaires, or internal audit. That prevents duplicate collection and keeps different audit teams from getting different versions of the truth.
 
 ---
 
@@ -109,7 +107,7 @@ The control-baseline view is the source view. Framework views may link to or ref
 
 ### 4.2 Quality Bar
 
-Evidence quality is governed by [`CERG-GOV-AUD-001`](../governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md). Operationally, evidence is acceptable only if it is complete enough to support the control claim. At minimum it shows:
+[`CERG-GOV-AUD-001`](../governance/CERG-GOV-AUD-001_Evidence_Quality_Standard.md) governs evidence quality. Operationally, evidence is acceptable only if it is complete enough to support the control claim. At minimum it shows:
 
 - what control or request it supports;
 - what period it covers;
@@ -124,7 +122,7 @@ A screenshot without date, scope, and source is weak evidence. A spreadsheet wit
 
 ### 4.3 Evidence Retention
 
-Evidence is retained according to the following schedule. Retention periods are driven by the most stringent applicable regulatory requirement for that evidence type.
+Evidence is retained according to the following schedule. The most stringent applicable regulatory requirement for that evidence type drives the retention period.
 
 | **Evidence Type** | **Minimum Retention** | **Regulatory Driver** | **Disposition After Retention** |
 |---|---|---|---|
@@ -139,12 +137,10 @@ Evidence is retained according to the following schedule. Retention periods are 
 
 1. **Trigger**: Evidence retention period expired, system decommissioned, or legal hold released.
 2. **Authorization**: Evidence Librarian confirms no active audit, investigation, or legal hold referencing the evidence. Governance Pillar Leader authorizes disposal.
-3. **Disposal Method**: Evidence is securely deleted using methods appropriate to the storage medium (cryptographic erasure for cloud storage, secure overwrite for on-premises, physical destruction for removable media). A certificate of destruction is produced and retained.
-4. **Logging**: Disposal is recorded in the evidence library audit log including: evidence ID, disposal date, authorizing party, method, and certificate of destruction reference.
+3. **Disposal Method**: Securely delete evidence using methods appropriate to the storage medium (cryptographic erasure for cloud storage, secure overwrite for on-premises, physical destruction for removable media), and produce and retain a certificate of destruction.
+4. **Logging**: The evidence library audit log records the evidence ID, disposal date, authorizing party, method, and certificate of destruction reference.
 
-> **Legal Hold Supersedes Retention Schedule**
->
-> When a legal hold is in effect, evidence subject to the hold is preserved regardless of the retention schedule. The Evidence Librarian coordinates with Legal to identify and preserve evidence subject to hold, and disposal is suspended until Legal releases the hold in writing.
+When a legal hold is in effect, evidence subject to the hold stays preserved regardless of the retention schedule. The Evidence Librarian coordinates with Legal to identify that evidence, and disposal is suspended until Legal releases the hold in writing.
 
 ### 4.4 Evidence Integrity and Chain of Custody
 
@@ -232,7 +228,7 @@ If a regulator, assessor, auditor, or framework-specific operational package req
 | Deficient | Control did not operate as designed or evidence is insufficient. |
 | Not tested | Test could not be completed; reason and next step required. |
 
-Deficient controls create corrective actions under Section 8. A repeated evidence failure is treated as a control failure, not an administrative miss.
+Deficient controls create corrective actions under Section 8. A repeated evidence failure is a control failure, not an administrative miss.
 
 ---
 
@@ -240,7 +236,7 @@ Deficient controls create corrective actions under Section 8. A repeated evidenc
 
 ### 7.1 Intake
 
-Every audit, assessor, regulator, customer, or internal evidence request enters through Governance and is recorded in the audit intake log.
+Every audit, assessor, regulator, customer, or internal evidence request enters through Governance, which records it in the audit intake log.
 
 Minimum intake fields:
 
@@ -259,9 +255,9 @@ Minimum intake fields:
 
 1. **Answer the request asked.** Do not over-produce. Extra evidence creates extra review surface.
 2. **Submit through Governance.** Evidence leaves the library through Governance so the organization knows what was provided.
-3. **Preserve the submitted set.** The exact package submitted is retained in the audit view, including date and submitter.
+3. **Preserve the submitted set.** Governance retains the exact package submitted in the audit view, including date and submitter.
 4. **Do not alter evidence to satisfy a request.** If the evidence is weak, record the weakness. Manufacturing better-looking evidence is a governance failure.
-5. **Escalate ambiguous or broad requests.** Requests with unclear scope or excessive breadth are clarified before production.
+5. **Escalate ambiguous or broad requests.** Clarify requests with unclear scope or excessive breadth before production.
 
 > **Do Not Feed the Audit Monster**
 >
@@ -271,7 +267,7 @@ Minimum intake fields:
 
 ## 8. Findings and Corrective Actions
 
-Audit findings, control-test deficiencies, rejected evidence, and repeated evidence misses are tracked to closure.
+CERG tracks audit findings, control-test deficiencies, rejected evidence, and repeated evidence misses to closure.
 
 | **Finding Type** | **Tracking Path** |
 |---|---|
