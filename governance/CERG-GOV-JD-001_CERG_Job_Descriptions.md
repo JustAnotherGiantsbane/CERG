@@ -24,7 +24,7 @@
 
 ## 1. About This Document
 
-**This document is now a family-level index.** As of v2.0 (2026-06-11), individual role descriptions have been extracted from this monolithic file into standalone per-role documents under `roles/`. Each per-role document includes:
+**This document is now a family-level index.** As of v2.0 (2026-06-11), individual role descriptions have moved from this monolithic file into standalone per-role documents under `roles/`. Each per-role document includes:
 
 - **NICE Workforce Framework mapping** — primary and secondary NICE Work Roles with codes
 - **Job Family and Level placement** — family designation and grade range per [JF-001](../roles/CERG-GOV-JF-001_Job_Families_Overview.md)
@@ -35,13 +35,13 @@
 - **Competency Expectations** — populated sections with CMP-001 behavioral anchors
 - **Career Path** — within-family progression, cross-family movement, and management track options
 
-> **The original JD-001 content is preserved in the per-role files.** This index file replaces the monolithic structure to enable modular use: a hiring manager can attach a single role description to a requisition; an auditor can pull the specific role evidence they need; a team member can see their career options.
+> **The per-role files preserve the original JD-001 content.** This index file replaces the monolithic structure to enable modular use: a hiring manager can attach a single role description to a requisition; an auditor can pull the specific role evidence they need; a team member can see their career options.
 
 ---
 
 ## 2. Job Family Structure
 
-The 27 canonical CERG roles are organized into five Job Families. See [JF-001](../roles/CERG-GOV-JF-001_Job_Families_Overview.md) for the full family structure, level definitions, career lattice, and progression gates.
+The 27 canonical CERG roles fall into five Job Families. See [JF-001](../roles/CERG-GOV-JF-001_Job_Families_Overview.md) for the full family structure, level definitions, career lattice, and progression gates.
 
 | Family ID | Family Name | Family Index | Roles |
 |-----------|-------------|--------------|-------|
@@ -143,7 +143,7 @@ The 27 canonical CERG roles are organized into five Job Families. See [JF-001](.
 - Change to the Job Family structure in JF-001
 - Direction from the CISO
 
-Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining approval for all changes.
+Governance owns this document. The Governance Pillar Leader (Policy & Standards) initiates reviews, manages the revision cycle, and obtains approval for all changes.
 
 ### Related Documents
 
