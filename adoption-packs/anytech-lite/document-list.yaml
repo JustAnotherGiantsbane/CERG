@@ -1,0 +1,116 @@
+pack_id: anytech-lite
+name: AnyTech CERG Lite Adoption Pack
+purpose: Minimum viable CERG for a vendor-oversight security team (MSSP SOC/IR, MSP IT, no CISO)
+status: custom
+last_updated: '2026-06-21'
+
+adoption_assumptions:
+  team_size: 8
+  architecture: program-office
+  providers:
+    - type: MSSP
+      role: SOC/IR (US + India offices)
+    - type: MSP
+      role: IT operations
+    - type: training-vendor
+      role: awareness training + phishing simulations
+  reporting:
+    ciso: false
+    top_level: IT Director
+    risk_acceptance_authority: IT Director
+
+mvc_spine:
+  - id: CERG-POL-001
+    path: ../../governance/CERG-POL-001_Cybersecurity_Policy.md
+    role: policy authority
+    first_action: IT Director signs; confirm board/CEO awareness
+    adaptation: stripped to 6 vendor-relevant principles
+
+  - id: CERG-GOV-FRM-001
+    path: ../../governance/CERG-GOV-FRM-001_CERG_Framework.md
+    role: three-pillar model for vendor-oversight
+    first_action: map Engineering/Risk/Governance accountabilities to provider interfaces
+    adaptation: reframed for vendor-oversight model
+
+  - id: CERG-GOV-OM-001
+    path: ../../governance/CERG-GOV-OM-001_CERG_Operating_Model.md
+    role: operating roles and provider interfaces
+    first_action: confirm MSSP + MSP scope boundaries with IT Director
+    adaptation: full rewrite — program office model
+
+  - id: CERG-GOV-CAT-001
+    path: ../../governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
+    role: document inventory
+    first_action: mark adopted docs; everything else deferred or N/A
+    adaptation: simplified to reflect only adopted corpus
+
+  - id: CERG-GOV-RMF-001
+    path: ../../governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
+    role: risk model and acceptance authority
+    first_action: IT Director calibrates risk appetite bands
+    adaptation: IT Director as acceptance authority, no regulatory packages
+
+  - id: CERG-PRC-RM-001
+    path: ../../procedures/CERG-PRC-RM-001_Risk_Register_and_Exception_Process.md
+    role: executable risk workflow
+    first_action: seed first risk — vendor concentration
+    adaptation: IT Director approval path
+
+  - id: CERG-TMPL-RM-001
+    path: ../../templates/CERG-TMPL-RM-001_Risk_Register_Templates_and_Reporting.md
+    role: risk register schema
+    first_action: create initial register with one entry
+    adaptation: cleaned references
+
+  - id: CERG-PRC-TPRM-001
+    path: ../../procedures/CERG-PRC-TPRM-001_Third_Party_and_Supply_Chain_Risk_Procedure.md
+    role: MSSP + MSP oversight
+    first_action: map MSSP and MSP to vendor tiers; collect SOC 2 / SLA evidence
+    adaptation: heavily stripped — MSSP+MSP core only
+
+  - id: CERG-PRC-VM-001
+    path: ../../procedures/CERG-PRC-VM-001_Exposure_Management_Procedure.md
+    role: exposure visibility and MSP remediation tracking
+    first_action: export current vulnerability data; create MSP ticket for each finding
+    adaptation: oversight model — cyber team tracks, MSP patches
+
+  - id: CERG-GOV-IMP-001
+    path: ../../governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md
+    role: how-to for adaptation
+    first_action: fill org profile; run render tool
+    adaptation: references AnyTech profile and this pack
+
+adoption_aids:
+  - id: CERG-GOV-IMP-003
+    path: ../../governance/CERG-GOV-IMP-003_Small_Team_Adoption_Path.md
+    use: small-team role consolidation patterns (adapt to program-office model)
+  - id: CERG-GOV-IMP-006
+    path: ../../governance/CERG-GOV-IMP-006_Role_Based_Implementation_Checklists.md
+    use: role-specific first actions (adapt for vendor oversight)
+  - id: CERG-GOV-CAT-002
+    path: ../../governance/CERG-GOV-CAT-002_Record_Catalog.md
+    use: minimum record definitions
+
+safe_deferrals:
+  - job descriptions — 8 people wear many hats
+  - workforce planning, succession, performance — not enough people to need it
+  - training/competency development — 3rd-party owned
+  - incident response plans/playbooks — MSSP owned
+  - all 15 technical standards — MSSP/MSP bring their own
+  - all 7 regulatory packages — no known compliance drivers
+  - board/CISO reporting decks — report to IT Director
+  - maturity self-assessment — too early; revisit in 6 months
+  - contractor integration guide — no contractors
+  - stakeholder perception survey — would need CISO to own
+  - day-in-the-life stories — enterprise examples not relevant
+  - machine-readable schemas — overkill at this stage
+  - most templates — no one to fill them
+
+unsafe_deferrals:
+  - risk register
+  - exception process
+  - owner/role assignment
+  - exposure management
+  - risk acceptance authority
+  - MSSP/MSP oversight procedure
+  - cybersecurity policy
