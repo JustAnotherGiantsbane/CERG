@@ -447,7 +447,7 @@ The NICE Framework defines cybersecurity work through Task, Knowledge, and Skill
 
 #### 9.1.3 CERG Role Family → NICE Work Role Mapping
 
-The complete mapping of all 27 canonical CERG roles to NICE Work Roles is maintained in [JF-002](../roles/CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md). The summary below maps role families to their primary NICE categories:
+[JF-002](../roles/CERG-GOV-JF-002_NICE_Workforce_Framework_Crosswalk.md) holds the complete mapping of all 27 canonical CERG roles to NICE Work Roles. The summary below maps role families to their primary NICE categories:
 
 | CERG Job Family | Primary NICE Category | Representative NICE Work Roles |
 |-----------------|----------------------|-------------------------------|
@@ -520,4 +520,4 @@ The Training, Development, and Certification Framework (CERG-GOV-TRN-001) provid
 | CERG Framework | [`CERG-GOV-FRM-001`](CERG-GOV-FRM-001_CERG_Framework.md) | Left-right knowledge model |
 | Document Catalog | [`CERG-GOV-CAT-001`](CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md) | Registers this artifact |
 
-Governance owns this document. The Governance Pillar Leader (Policy & Standards) is responsible for initiating reviews, managing the revision cycle, and obtaining CISO endorsement for all changes.
+Governance owns this document. The Governance Pillar Leader (Policy & Standards) initiates reviews, manages the revision cycle, and obtains CISO endorsement for all changes.
