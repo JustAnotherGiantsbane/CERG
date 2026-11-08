@@ -31,12 +31,21 @@ Three evidence methods:
 
 **How to use this document:**
 
-1. Deploy the recommended tool stack per [CERG Opinionated Tool Matrix](opinionated-tool-matrix-v1.md).
+1. Deploy the recommended tool stack per [CERG Opinionated Tool Matrix](CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md).
 2. Configure evidence automation per the tables below.
-3. Wire the evidence artifacts into your GRC platform per the [GRC Rollout Guide](grc-rollout-v1.md).
+3. Wire the evidence artifacts into your GRC platform per the [GRC Rollout Guide](CERG-OPN-TOOLS-002_GRC_Rollout_Guide.md).
 4. For manual-evidence controls, schedule collection in your ticketing system.
 
 ---
+
+## How to Read This Document
+
+A control can appear more than once, deliberately:
+
+- **In both sections.** Where tooling produces a signal but assurance also needs a human step, the control is listed under the automated sections *and* under Manual Evidence Controls. `CM-001` is the case in point: the CIS compliance scan is automated, while authoring the baseline document is not. `CP-003` pairs automated SureBackup results with a human-verified restore test.
+- **Under more than one tool.** Where two products can collect the same evidence, the control is listed under each so it can be found from whichever tool is deployed: `AC-003`, `AC-005`, `SI-005`, `SI-006`, `SI-007`, `CM-003`, `CA-004`, `SC-001`.
+
+The counts are distinct controls, not table rows: **86 controls — 53 with at least one automated pipeline, 33 manual only.**
 
 ## Per-Tool Evidence Automation
 
@@ -267,10 +276,10 @@ For MSP onboarding a new client, configure these evidence pipelines in order:
 ### Related Documents
 
 - [CERG Practitioner Control Baseline](../../governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md) — the control set this mapping covers
-- [Opinionated Tool Matrix](opinionated-tool-matrix-v1.md) — tool selection criteria, primary/acceptable/avoid tiers
-- [GRC Rollout Guide](grc-rollout-v1.md) — wiring ServiceNow GRC or Vanta to the CERG control framework
-- [MSP Runbook](../msp-runbook-v1.md) — tool deployment commands and per-control implementation
-- [Engagement Playbook](../engagement-playbook-v1.md) — scoping, pricing, SOW essentials, engagement lifecycle
+- [Opinionated Tool Matrix](CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md) — tool selection criteria, primary/acceptable/avoid tiers
+- [GRC Rollout Guide](CERG-OPN-TOOLS-002_GRC_Rollout_Guide.md) — wiring ServiceNow GRC or Vanta to the CERG control framework
+- [MSP Runbook](../CERG-OPN-MSP-001_MSP_MSSP_Runbook.md) — tool deployment commands and per-control implementation
+- [Engagement Playbook](../CERG-OPN-DLV-001_Engagement_Playbook.md) — scoping, pricing, SOW essentials, engagement lifecycle
 - [Logging, Monitoring, and Detection Standard](../../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) — detection coverage and SIEM evidence parameters
 - [Access Management Standard](../../standards/CERG-STD-AC-001_Access_Management_Standard.md) — identity and access evidence requirements
 - [Cyber Resilience and Backup Standard](../../standards/CERG-STD-RES-001_Cyber_Resilience_and_Backup_Standard.md) — backup and recovery evidence parameters

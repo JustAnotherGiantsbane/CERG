@@ -274,12 +274,12 @@ This choice is reflected in:
 
 ### Related Documents
 
-- [Opinionated Tool Matrix](../practice-assets/tools/opinionated-tool-matrix-v1.md)
+- [Opinionated Tool Matrix](../practice-assets/tools/CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md)
 - [Practitioner Control Baseline](CERG-GOV-CB-002_Practitioner_Control_Baseline.md)
-- [Evidence Automation Mapping](../practice-assets/tools/evidence-automation-mapping-v1.md)
-- [Engagement Playbook](../practice-assets/engagement-playbook-v1.md)
-- [MSP Runbook](../practice-assets/msp-runbook-v1.md)
-- [Threat Intel Validation](../practice-assets/tools/threat-intel-validation-v1.md)
+- [Evidence Automation Mapping](../practice-assets/tools/CERG-OPN-TOOLS-003_Evidence_Automation_Mapping.md)
+- [Engagement Playbook](../practice-assets/CERG-OPN-DLV-001_Engagement_Playbook.md)
+- [MSP Runbook](../practice-assets/CERG-OPN-MSP-001_MSP_MSSP_Runbook.md)
+- [Threat Intel Validation](../practice-assets/tools/CERG-OPN-TOOLS-004_Threat_Intel_Validation.md)
 - [Practice Assets Operating Guide](../practice-assets/README.md)
-- [GRC Rollout Guide](../practice-assets/tools/grc-rollout-v1.md)
+- [GRC Rollout Guide](../practice-assets/tools/CERG-OPN-TOOLS-002_GRC_Rollout_Guide.md)
 - [Upstream CERG issuesv1 analysis](https://raw.githubusercontent.com/m0dernz/CERG/refs/heads/feat/issues-fix-pack-v2/issuesv1.md)

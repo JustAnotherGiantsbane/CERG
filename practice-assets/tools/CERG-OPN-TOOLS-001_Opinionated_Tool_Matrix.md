@@ -46,7 +46,7 @@ The GRC platform is the spine of the CERG program. Every other tool reports into
 
 **CERG recommendation:** ServiceNow GRC for any organization with 50+ employees or multi-client MSP/MSSP delivery. Vanta for SMB clients under 50 employees where compliance automation matters more than operational integration.
 
-**CERG standards:** The GRC platform tracks all controls and evidence from the [Practitioner Baseline](../../governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md). Implementation guidance is in the [GRC Rollout Guide](grc-rollout-v1.md) and [Engagement Playbook](../engagement-playbook-v1.md).
+**CERG standards:** The GRC platform tracks all controls and evidence from the [Practitioner Baseline](../../governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md). Implementation guidance is in the [GRC Rollout Guide](CERG-OPN-TOOLS-002_GRC_Rollout_Guide.md) and [Engagement Playbook](../CERG-OPN-DLV-001_Engagement_Playbook.md).
 
 **Integration note:** ServiceNow GRC has native integrations with most SIEM and endpoint tools. Vanta's integrations are narrower — Wiz, AWS, Azure, GCP, GitHub, Jamf, Intune. Budget for middleware if you need Vanta-to-non-cloud-tool integration.
 
@@ -250,7 +250,7 @@ Beyond the security tools, MSPs need operational tooling to deliver CERG at scal
 
 **CERG recommendation:** NinjaOne + HaloPSA + Hudu. Modern, API-first, multi-tenant. ServiceNow GRC ties them together at the governance layer.
 
-**CERG practice assets:** [Engagement Playbook](../engagement-playbook-v1.md) — scoping, pricing, and delivery lifecycle. [MSP Runbook](../msp-runbook-v1.md) — tool deployment commands and per-control implementation. [GRC Rollout Guide](grc-rollout-v1.md) — wiring controls and evidence into the governance layer.
+**CERG practice assets:** [Engagement Playbook](../CERG-OPN-DLV-001_Engagement_Playbook.md) — scoping, pricing, and delivery lifecycle. [MSP Runbook](../CERG-OPN-MSP-001_MSP_MSSP_Runbook.md) — tool deployment commands and per-control implementation. [GRC Rollout Guide](CERG-OPN-TOOLS-002_GRC_Rollout_Guide.md) — wiring controls and evidence into the governance layer.
 
 ---
 
@@ -326,10 +326,10 @@ Every tool in this diagram has a documented API and a supported integration path
 ### Related Documents
 
 - [CERG Practitioner Control Baseline](../../governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md) — the full control set with MSP implementation notes for all 19 families
-- [Evidence Automation Mapping](evidence-automation-mapping-v1.md) — control-to-tool evidence pipelines, collection methods, GRC integration per control
-- [GRC Rollout Guide](grc-rollout-v1.md) — wiring ServiceNow GRC or Vanta to the CERG control framework
-- [MSP Runbook](../msp-runbook-v1.md) — tool deployment commands and per-control implementation
-- [Engagement Playbook](../engagement-playbook-v1.md) — scoping, pricing, SOW essentials, engagement lifecycle
+- [Evidence Automation Mapping](CERG-OPN-TOOLS-003_Evidence_Automation_Mapping.md) — control-to-tool evidence pipelines, collection methods, GRC integration per control
+- [GRC Rollout Guide](CERG-OPN-TOOLS-002_GRC_Rollout_Guide.md) — wiring ServiceNow GRC or Vanta to the CERG control framework
+- [MSP Runbook](../CERG-OPN-MSP-001_MSP_MSSP_Runbook.md) — tool deployment commands and per-control implementation
+- [Engagement Playbook](../CERG-OPN-DLV-001_Engagement_Playbook.md) — scoping, pricing, SOW essentials, engagement lifecycle
 - [Access Management Standard](../../standards/CERG-STD-AC-001_Access_Management_Standard.md) — MFA, SSO, account lifecycle, access review parameters
 - [Logging, Monitoring, and Detection Standard](../../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) — detection coverage, log retention, SIEM requirements
 - [Configuration Baseline Standard](../../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) — DISH baseline, hardening benchmarks, drift detection

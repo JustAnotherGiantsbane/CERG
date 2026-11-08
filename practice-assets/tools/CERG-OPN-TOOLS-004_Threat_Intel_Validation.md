@@ -276,9 +276,9 @@ Controls are scored against each threat based on:
 ### Related Documents
 
 - [CERG Practitioner Control Baseline](../../governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md) — the control set this mapping validates
-- [Evidence Automation Mapping](evidence-automation-mapping-v1.md) — how to collect evidence for the controls above
-- [Opinionated Tool Matrix](opinionated-tool-matrix-v1.md) — tool selection criteria for defense implementation
-- [MSP Runbook](../msp-runbook-v1.md) — deployment instructions for the controls that stop ransomware
+- [Evidence Automation Mapping](CERG-OPN-TOOLS-003_Evidence_Automation_Mapping.md) — how to collect evidence for the controls above
+- [Opinionated Tool Matrix](CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md) — tool selection criteria for defense implementation
+- [MSP Runbook](../CERG-OPN-MSP-001_MSP_MSSP_Runbook.md) — deployment instructions for the controls that stop ransomware
 - [Architecture Decision Records](../../governance/CERG-GOV-ADR-001_Architecture_Decision_Records.md) — rationale for opinionated tool choices
 
 ### Primary Sources
