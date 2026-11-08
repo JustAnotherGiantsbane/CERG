@@ -19,7 +19,7 @@
 
 ## Purpose
 
-This runbook is for MSPs and MSSPs who deliver the CERG cybersecurity operating model to small and mid-sized clients. It assumes you've read the [Opinionated Tool Matrix](tools/opinionated-tool-matrix-v1.md), reviewed the [Engagement Playbook](../practice-assets/engagement-playbook-v1.md) for scoping and pricing context, and set up your [GRC platform](tools/grc-rollout-v1.md).
+This runbook is for MSPs and MSSPs who deliver the CERG cybersecurity operating model to small and mid-sized clients. It assumes you've read the [Opinionated Tool Matrix](tools/CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md), reviewed the [Engagement Playbook](../practice-assets/CERG-OPN-DLV-001_Engagement_Playbook.md) for scoping and pricing context, and set up your [GRC platform](tools/CERG-OPN-TOOLS-002_GRC_Rollout_Guide.md).
 
 Every section here is written for an **IT generalist** — someone who can follow instructions and run commands, but isn't a dedicated security engineer. If a step requires specialized expertise, it's called out explicitly.
 
@@ -29,7 +29,7 @@ Every section here is written for an **IT generalist** — someone who can follo
 
 ### 1.1 Initial Client Assessment
 
-Before deploying a single tool, you need to understand what the client has. Run the CERG Intake Questionnaire (30 questions, 60 minutes with the client's IT lead — see [Engagement Playbook Phase 1](../practice-assets/engagement-playbook-v1.md#phase-1-discover-free-60-minutes)). The questionnaire covers:
+Before deploying a single tool, you need to understand what the client has. Run the CERG Intake Questionnaire (30 questions, 60 minutes with the client's IT lead — see [Engagement Playbook Phase 1](../practice-assets/CERG-OPN-DLV-001_Engagement_Playbook.md#phase-1-discover-free-60-minutes)). The questionnaire covers:
 
 - Current tool inventory (what's already in place)
 - Regulatory obligations (CMMC, HIPAA, PCI, SOX, none)
@@ -44,7 +44,7 @@ Before deploying a single tool, you need to understand what the client has. Run 
 
 ### 1.2 Stack Selection
 
-Based on the assessment, select the tool stack using the [Opinionated Tool Matrix](tools/opinionated-tool-matrix-v1.md) decision guide. The quick-reference:
+Based on the assessment, select the tool stack using the [Opinionated Tool Matrix](tools/CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md) decision guide. The quick-reference:
 
 | Client Profile | GRC | SIEM | EDR | CSPM | IAM | Backup |
 |----------------|-----|------|-----|------|-----|--------|
@@ -54,7 +54,7 @@ Based on the assessment, select the tool stack using the [Opinionated Tool Matri
 ### 1.3 Scope Document
 
 Write a one-page scope document that names:
-- The client's CERG tier (Foundations, Structure, Compliance, Strategic — see [Engagement Playbook](../practice-assets/engagement-playbook-v1.md#phase-3-plan-billable-1-week-after-assessment) pricing and [Implementation Guide](../governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md#5-the-306090-day-rollout))
+- The client's CERG tier (Foundations, Structure, Compliance, Strategic — see [Engagement Playbook](../practice-assets/CERG-OPN-DLV-001_Engagement_Playbook.md#phase-3-plan-billable-1-week-after-assessment) pricing and [Implementation Guide](../governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md#5-the-306090-day-rollout))
 - Tool stack selected
 - Excluded scope (OT, physical security, etc.)
 - Evidence collection cadence
@@ -567,9 +567,9 @@ diagnose firewall policy list | grep -A5 "srcintf.*zone-name"
 ### Related Documents
 
 - [Practitioner Control Baseline](../governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md) — the full control set with MSP implementation notes for all 19 families
-- [Engagement Playbook](../practice-assets/engagement-playbook-v1.md) — scoping, pricing, SOW essentials, engagement lifecycle
-- [Opinionated Tool Matrix](tools/opinionated-tool-matrix-v1.md) — tool selection criteria, primary/acceptable/avoid tiers
-- [GRC Rollout Guide](tools/grc-rollout-v1.md) — wiring ServiceNow GRC or Vanta to the CERG control framework
+- [Engagement Playbook](../practice-assets/CERG-OPN-DLV-001_Engagement_Playbook.md) — scoping, pricing, SOW essentials, engagement lifecycle
+- [Opinionated Tool Matrix](tools/CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md) — tool selection criteria, primary/acceptable/avoid tiers
+- [GRC Rollout Guide](tools/CERG-OPN-TOOLS-002_GRC_Rollout_Guide.md) — wiring ServiceNow GRC or Vanta to the CERG control framework
 - [Access Management Standard](../standards/CERG-STD-AC-001_Access_Management_Standard.md) — authoritative parameter detail for AC family controls
 - [Configuration Baseline Standard](../standards/CERG-STD-CFG-001_Secure_Configuration_Baseline_Standard_DISH.md) — DISH baseline, hardening benchmarks, drift detection parameters
 - [Implementation Guide](../governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) — adoption paths, MVC sequence, role-based checklists

@@ -35,11 +35,11 @@ This fork extends the architecture into something an MSP technician can follow:
 
 | Document | What it does |
 |----------|--------------|
-| [Opinionated Tool Matrix](practice-assets/tools/opinionated-tool-matrix-v1.md) | 12 security tool categories — every recommendation scored on integration surface, MSP multi-tenancy, and IT generalist usability. Integration map shows how the stack wires together. |
-| [GRC Rollout Guide](practice-assets/tools/grc-rollout-v1.md) | Step-by-step ServiceNow GRC control import, evidence automation, MSP multi-tenancy. Vanta fallback for SMB. |
-| [Evidence Automation Mapping](practice-assets/tools/evidence-automation-mapping-v1.md) | Every control mapped to its evidence pipeline: which tool collects it, what API endpoint, how it feeds into GRC. 53 of 86 controls have a tool-generated evidence pipeline. |
-| [MSP/MSSP Runbook](practice-assets/msp-runbook-v1.md) | 5-phase delivery playbook: client intake → tool deployment (copy-paste commands for SentinelOne, Wazuh, Tenable, Wiz, Veeam) → per-control implementation → evidence collection → client reporting. |
-| [Engagement Playbook](practice-assets/engagement-playbook-v1.md) | Full consulting lifecycle: Discover → Assess → Plan → Deploy → Operate → Handoff. Pricing for SMB through enterprise. Anti-patterns and SOW essentials. |
+| [Opinionated Tool Matrix](practice-assets/tools/CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md) | 12 security tool categories — every recommendation scored on integration surface, MSP multi-tenancy, and IT generalist usability. Integration map shows how the stack wires together. |
+| [GRC Rollout Guide](practice-assets/tools/CERG-OPN-TOOLS-002_GRC_Rollout_Guide.md) | Step-by-step ServiceNow GRC control import, evidence automation, MSP multi-tenancy. Vanta fallback for SMB. |
+| [Evidence Automation Mapping](practice-assets/tools/CERG-OPN-TOOLS-003_Evidence_Automation_Mapping.md) | Every control mapped to its evidence pipeline: which tool collects it, what API endpoint, how it feeds into GRC. 53 of 86 controls have a tool-generated evidence pipeline. |
+| [MSP/MSSP Runbook](practice-assets/CERG-OPN-MSP-001_MSP_MSSP_Runbook.md) | 5-phase delivery playbook: client intake → tool deployment (copy-paste commands for SentinelOne, Wazuh, Tenable, Wiz, Veeam) → per-control implementation → evidence collection → client reporting. |
+| [Engagement Playbook](practice-assets/CERG-OPN-DLV-001_Engagement_Playbook.md) | Full consulting lifecycle: Discover → Assess → Plan → Deploy → Operate → Handoff. Pricing for SMB through enterprise. Anti-patterns and SOW essentials. |
 
 ### Practitioner Control Baseline
 
@@ -83,11 +83,11 @@ The [ADR log](governance/CERG-GOV-ADR-001_Architecture_Decision_Records.md) capt
 
 | If you are... | Start with |
 |---|---|
-| An MSP/MSSP delivering CERG to clients | [MSP/MSSP Runbook](practice-assets/msp-runbook-v1.md) |
-| Picking tools for a CERG deployment | [Opinionated Tool Matrix](practice-assets/tools/opinionated-tool-matrix-v1.md) |
-| Setting up automated compliance evidence | [Evidence Automation Mapping](practice-assets/tools/evidence-automation-mapping-v1.md) |
-| Setting up a GRC platform | [GRC Rollout Guide](practice-assets/tools/grc-rollout-v1.md) |
-| Scoping or pricing a CERG engagement | [Engagement Playbook](practice-assets/engagement-playbook-v1.md) |
+| An MSP/MSSP delivering CERG to clients | [MSP/MSSP Runbook](practice-assets/CERG-OPN-MSP-001_MSP_MSSP_Runbook.md) |
+| Picking tools for a CERG deployment | [Opinionated Tool Matrix](practice-assets/tools/CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md) |
+| Setting up automated compliance evidence | [Evidence Automation Mapping](practice-assets/tools/CERG-OPN-TOOLS-003_Evidence_Automation_Mapping.md) |
+| Setting up a GRC platform | [GRC Rollout Guide](practice-assets/tools/CERG-OPN-TOOLS-002_GRC_Rollout_Guide.md) |
+| Scoping or pricing a CERG engagement | [Engagement Playbook](practice-assets/CERG-OPN-DLV-001_Engagement_Playbook.md) |
 | Looking for the full control set | [Practitioner Control Baseline](governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md) |
 | Understanding why specific choices were made | [Architecture Decision Records](governance/CERG-GOV-ADR-001_Architecture_Decision_Records.md) |
 | Tailoring or maintaining the practice layer | [Practice Assets Operating Guide](practice-assets/README.md) |

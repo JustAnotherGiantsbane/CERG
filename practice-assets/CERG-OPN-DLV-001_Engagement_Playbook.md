@@ -21,7 +21,7 @@
 
 This playbook defines how a consulting practice delivers the CERG cybersecurity operating model to clients. It covers the full engagement lifecycle — from initial conversation to final handoff — with pricing guidance, deliverable templates, and anti-patterns.
 
-It assumes you're working from the [Opinionated Tool Matrix](tools/opinionated-tool-matrix-v1.md), the [Practitioner Control Baseline](../governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md), and the [GRC Rollout Guide](tools/grc-rollout-v1.md), and have read the [MSP Runbook](msp-runbook-v1.md). If you're an MSP/MSSP delivering CERG as a managed service, the runbook is your day-to-day. This playbook is your business wrapper.
+It assumes you're working from the [Opinionated Tool Matrix](tools/CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md), the [Practitioner Control Baseline](../governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md), and the [GRC Rollout Guide](tools/CERG-OPN-TOOLS-002_GRC_Rollout_Guide.md), and have read the [MSP Runbook](CERG-OPN-MSP-001_MSP_MSSP_Runbook.md). If you're an MSP/MSSP delivering CERG as a managed service, the runbook is your day-to-day. This playbook is your business wrapper.
 
 ---
 
@@ -54,7 +54,7 @@ Discover → Assess → Plan → Deploy → Operate → Handoff
 1. **Current State Inventory** — tool-by-tool inventory with version, config status, and coverage gaps
 2. **Gap Analysis Report** — [CERG Practitioner Baseline controls](../governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md) mapped to current state, each scored as Implemented / Partially Implemented / Not Implemented
 3. **Risk Register Bootstrap** — top 10 risks by impact, each with a recommended treatment
-4. **Tool Stack Recommendation** — specific products and licenses, priced, per the [Tool Matrix](tools/opinionated-tool-matrix-v1.md)
+4. **Tool Stack Recommendation** — specific products and licenses, priced, per the [Tool Matrix](tools/CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md)
 
 **Pricing guidance:**
 - SMB (< 50 employees): $5,000-8,000 (1 week)
@@ -84,12 +84,12 @@ Discover → Assess → Plan → Deploy → Operate → Handoff
 
 | Week | Activity | Output |
 |------|----------|--------|
-| 1-2 | [SentinelOne deploy](msp-runbook-v1.md#21-sentinelone-deployment) + [Wazuh deploy](msp-runbook-v1.md#22-wazuh-deployment-smb-stack) | All endpoints reporting |
+| 1-2 | [SentinelOne deploy](CERG-OPN-MSP-001_MSP_MSSP_Runbook.md#21-sentinelone-deployment) + [Wazuh deploy](CERG-OPN-MSP-001_MSP_MSSP_Runbook.md#22-wazuh-deployment-smb-stack) | All endpoints reporting |
 | 3 | MFA enforcement + access review baseline | MFA on all accounts |
-| 4 | [Tenable deploy](msp-runbook-v1.md#23-tenable-nessus-deployment) + first scan | Baseline vuln report |
-| 5 | [Wiz CSPM onboarding](msp-runbook-v1.md#24-wiz-cspm-onboarding) + first scan | Cloud config baseline |
-| 6-7 | [Veeam deploy](msp-runbook-v1.md#25-veeam-backup-configuration) + backup configuration | Immutable backups running |
-| 8 | [GRC platform setup](tools/grc-rollout-v1.md) (Vanta or ServiceNow) | Controls tracked, evidence pipeline started |
+| 4 | [Tenable deploy](CERG-OPN-MSP-001_MSP_MSSP_Runbook.md#23-tenable-nessus-deployment) + first scan | Baseline vuln report |
+| 5 | [Wiz CSPM onboarding](CERG-OPN-MSP-001_MSP_MSSP_Runbook.md#24-wiz-cspm-onboarding) + first scan | Cloud config baseline |
+| 6-7 | [Veeam deploy](CERG-OPN-MSP-001_MSP_MSSP_Runbook.md#25-veeam-backup-configuration) + backup configuration | Immutable backups running |
+| 8 | [GRC platform setup](tools/CERG-OPN-TOOLS-002_GRC_Rollout_Guide.md) (Vanta or ServiceNow) | Controls tracked, evidence pipeline started |
 | 9-10 | Sigma rules deploy + detection testing | Detection running, alerts flowing |
 | 11-12 | Evidence collection cadence established | First evidence cycle complete |
 
@@ -264,7 +264,7 @@ Every Statement of Work for a CERG engagement must include:
 ### Related Documents
 
 - [Practitioner Control Baseline](../governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md) — the control set this playbook scopes, prices, and delivers
-- [Opinionated Tool Matrix](tools/opinionated-tool-matrix-v1.md) — tool selection criteria, primary/acceptable/avoid tiers
-- [MSP Runbook](msp-runbook-v1.md) — copy-paste deployment instructions for every tool in the stack
-- [GRC Rollout Guide](tools/grc-rollout-v1.md) — wiring ServiceNow GRC or Vanta to the CERG control framework
+- [Opinionated Tool Matrix](tools/CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md) — tool selection criteria, primary/acceptable/avoid tiers
+- [MSP Runbook](CERG-OPN-MSP-001_MSP_MSSP_Runbook.md) — copy-paste deployment instructions for every tool in the stack
+- [GRC Rollout Guide](tools/CERG-OPN-TOOLS-002_GRC_Rollout_Guide.md) — wiring ServiceNow GRC or Vanta to the CERG control framework
 - [Implementation Guide](../governance/CERG-GOV-IMP-001_Implementation_and_Adaptation_Guide.md) — adoption paths, MVC sequence, role-based checklists

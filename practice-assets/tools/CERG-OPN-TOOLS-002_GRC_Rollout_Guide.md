@@ -24,7 +24,7 @@ This guide provides copy-paste instructions for deploying a GRC platform as the 
 1. **Enterprise / MSP path:** ServiceNow GRC with CERG control import, evidence automation, and audit reporting
 2. **SMB path:** Vanta with CERG control mapping for compliance-only use cases
 
-Both paths assume you've read the [Opinionated Tool Matrix](opinionated-tool-matrix-v1.md), understand the [CERG Practitioner Control Baseline](../../governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md) structure, and have reviewed the [Engagement Playbook](../engagement-playbook-v1.md) for delivery context.
+Both paths assume you've read the [Opinionated Tool Matrix](CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md), understand the [CERG Practitioner Control Baseline](../../governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md) structure, and have reviewed the [Engagement Playbook](../CERG-OPN-DLV-001_Engagement_Playbook.md) for delivery context.
 
 ---
 
@@ -170,7 +170,7 @@ Vanta's agent automatically collects evidence from:
 - HRIS (BambooHR, Rippling, Gusto) — personnel controls
 - Code repositories (GitHub, GitLab) — SDLC controls
 
-For evidence Vanta can't auto-collect (OT systems, physical controls, custom applications), document the collection procedure in the [MSP Runbook](../msp-runbook-v1.md).
+For evidence Vanta can't auto-collect (OT systems, physical controls, custom applications), document the collection procedure in the [MSP Runbook](../CERG-OPN-MSP-001_MSP_MSSP_Runbook.md).
 
 ### 2.4 MSP Multi-Client with Vanta
 
@@ -211,10 +211,10 @@ Limitations: Vanta's partner reporting is not as robust as ServiceNow's domain s
 
 ### Related Documents
 
-- [Evidence Automation Mapping](evidence-automation-mapping-v1.md) — control-to-tool evidence pipelines, collection methods, GRC integration per control
-- [Opinionated Tool Matrix](opinionated-tool-matrix-v1.md) — tool selection criteria, primary/acceptable/avoid tiers
-- [MSP Runbook](../msp-runbook-v1.md) — copy-paste deployment instructions for every tool in the stack
-- [Engagement Playbook](../engagement-playbook-v1.md) — scoping, pricing, SOW essentials, engagement lifecycle
+- [Evidence Automation Mapping](CERG-OPN-TOOLS-003_Evidence_Automation_Mapping.md) — control-to-tool evidence pipelines, collection methods, GRC integration per control
+- [Opinionated Tool Matrix](CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md) — tool selection criteria, primary/acceptable/avoid tiers
+- [MSP Runbook](../CERG-OPN-MSP-001_MSP_MSSP_Runbook.md) — copy-paste deployment instructions for every tool in the stack
+- [Engagement Playbook](../CERG-OPN-DLV-001_Engagement_Playbook.md) — scoping, pricing, SOW essentials, engagement lifecycle
 - [CERG Practitioner Control Baseline](../../governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md) — the full control set with MSP implementation notes for all 19 families
 - [Logging, Monitoring, and Detection Standard](../../standards/CERG-STD-LM-001_Logging_Monitoring_and_Detection_Standard.md) — detection coverage requirements and evidence parameters for SI controls
 - [Access Management Standard](../../standards/CERG-STD-AC-001_Access_Management_Standard.md) — authoritative parameter detail for AC, IA family controls

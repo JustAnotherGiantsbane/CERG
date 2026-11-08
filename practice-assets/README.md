@@ -18,12 +18,12 @@ The boundary is deliberate:
 | Need | Primary asset | Authority it provides |
 |---|---|---|
 | Control statement, applicability, named evidence, and release control IDs | [CB-002 Practitioner Control Baseline](../governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md) | The fork's practitioner control set. It is the source for the current release's control IDs and their detailed statements. |
-| Product-selection rationale | [Opinionated Tool Matrix](tools/opinionated-tool-matrix-v1.md) | Product recommendations and their stated selection criteria. These are recommendations, not CERG requirements. |
-| Tool deployment and implementer steps | [MSP/MSSP Runbook](msp-runbook-v1.md) | Delivery examples and operational checklists for the selected profile. |
-| Evidence collection and integration | [Evidence Automation Mapping](tools/evidence-automation-mapping-v1.md) | Proposed collection routes, review cadence, and manual-evidence fallbacks. |
-| GRC configuration | [GRC Rollout Guide](tools/grc-rollout-v1.md) | ServiceNow and Vanta implementation patterns; client configuration remains authoritative. |
-| Client engagement and transition | [Engagement Playbook](engagement-playbook-v1.md) | Scoping, delivery, handoff, and commercial-operating guidance. |
-| Threat-informed prioritization | [Threat-Intel-Validated Control Baseline](tools/threat-intel-validation-v1.md) | A time-bound analytical view of selected threats and control relationships. |
+| Product-selection rationale | [Opinionated Tool Matrix](tools/CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md) | Product recommendations and their stated selection criteria. These are recommendations, not CERG requirements. |
+| Tool deployment and implementer steps | [MSP/MSSP Runbook](CERG-OPN-MSP-001_MSP_MSSP_Runbook.md) | Delivery examples and operational checklists for the selected profile. |
+| Evidence collection and integration | [Evidence Automation Mapping](tools/CERG-OPN-TOOLS-003_Evidence_Automation_Mapping.md) | Proposed collection routes, review cadence, and manual-evidence fallbacks. |
+| GRC configuration | [GRC Rollout Guide](tools/CERG-OPN-TOOLS-002_GRC_Rollout_Guide.md) | ServiceNow and Vanta implementation patterns; client configuration remains authoritative. |
+| Client engagement and transition | [Engagement Playbook](CERG-OPN-DLV-001_Engagement_Playbook.md) | Scoping, delivery, handoff, and commercial-operating guidance. |
+| Threat-informed prioritization | [Threat-Intel-Validated Control Baseline](tools/CERG-OPN-TOOLS-004_Threat_Intel_Validation.md) | A time-bound analytical view of selected threats and control relationships. |
 | Why this fork made a practice choice | [Architecture Decision Records](../governance/CERG-GOV-ADR-001_Architecture_Decision_Records.md) | The rationale and consequences of fork-specific decisions. |
 
 When two assets appear to disagree, do not silently choose the more convenient interpretation. Open a practice-maintenance item, identify the controlling asset in the table above, and update dependent material together.

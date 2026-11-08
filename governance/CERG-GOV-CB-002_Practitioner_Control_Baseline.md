@@ -55,7 +55,7 @@ Differences from upstream:
 | Control count | ~18 schematic entries | 97 enumerated controls |
 | Audience | Program architects, auditors | MSPs, MSSPs, IT generalists |
 | Instructions | None | Copy-paste deployment per control |
-| Tool bindings | Framework-level | Tied to [Opinionated Tool Matrix](../practice-assets/tools/opinionated-tool-matrix-v1.md) |
+| Tool bindings | Framework-level | Tied to [Opinionated Tool Matrix](../practice-assets/tools/CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md) |
 | Evidence | Named artifact | Named artifact + collection method + frequency |
 | Inheritance | Described in Section 5 of CB-001 | Per-control inheritance notes where applicable |
 
@@ -75,7 +75,7 @@ Every control entry follows this structure:
 | **Minimum Frequency** | How often evidence must be collected |
 | **Subordinate Standard** | Link to the relevant CERG standard with parameter detail |
 | **MSP Implementation Note** | Copy-paste instructions for MSPs/MSSPs (where applicable) |
-| **Tool Binding** | Which tool(s) from the [Opinionated Tool Matrix](../practice-assets/tools/opinionated-tool-matrix-v1.md) satisfy this control |
+| **Tool Binding** | Which tool(s) from the [Opinionated Tool Matrix](../practice-assets/tools/CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md) satisfy this control |
 
 ---
 
@@ -102,7 +102,7 @@ Every control entry follows this structure:
 | **Named Evidence** | IdP MFA enrollment report showing 100% enrollment for active human users |
 | **Minimum Frequency** | Monthly |
 | **Subordinate Standard** | [CERG-STD-AC-001](../standards/CERG-STD-AC-001_Access_Management_Standard.md) |
-| **MSP Implementation Note** | See [MSP Runbook](../practice-assets/msp-runbook-v1.md) AC-002 section for full deployment steps. Core commands: Okta > Security > Multifactor > Require for all. Entra ID > Conditional Access > Require MFA for all users. Test: attempt login without MFA — must be rejected. |
+| **MSP Implementation Note** | See [MSP Runbook](../practice-assets/CERG-OPN-MSP-001_MSP_MSSP_Runbook.md) AC-002 section for full deployment steps. Core commands: Okta > Security > Multifactor > Require for all. Entra ID > Conditional Access > Require MFA for all users. Test: attempt login without MFA — must be rejected. |
 | **Tool Binding** | Okta / Entra ID |
 
 ### AC-003: Access Enforcement
@@ -330,7 +330,7 @@ Every control entry follows this structure:
 | **Named Evidence** | Annual assessment report with findings, severity, and remediation status |
 | **Minimum Frequency** | Annual |
 | **Subordinate Standard** | [CERG-POL-001](CERG-POL-001_Cybersecurity_Policy.md) |
-| **MSP Implementation Note** | This is the CERG Assessment engagement (see [Engagement Playbook](../practice-assets/engagement-playbook-v1.md)). For ongoing clients, repeat the assessment annually with reduced scope — verify existing controls, focus on changes since last assessment. |
+| **MSP Implementation Note** | This is the CERG Assessment engagement (see [Engagement Playbook](../practice-assets/CERG-OPN-DLV-001_Engagement_Playbook.md)). For ongoing clients, repeat the assessment annually with reduced scope — verify existing controls, focus on changes since last assessment. |
 | **Tool Binding** | Tenable/Nessus (technical assessment), ServiceNow GRC (control assessment) |
 
 ### CA-003: Authorization
@@ -886,7 +886,7 @@ Every control entry follows this structure:
 | **Named Evidence** | Vulnerability scan report; remediation log |
 | **Minimum Frequency** | Weekly (external), Monthly (internal) |
 | **Subordinate Standard** | [CERG-STD-IT-001](../standards/CERG-STD-IT-001_IT_Cloud_SaaS_Security_Standard.md) |
-| **MSP Implementation Note** | See [MSP Runbook](../practice-assets/msp-runbook-v1.md) RA-005 section. Tenable authenticated scans weekly (external) and monthly (internal). Critical vulns: 7 days. High: 30 days. Medium: 90 days. |
+| **MSP Implementation Note** | See [MSP Runbook](../practice-assets/CERG-OPN-MSP-001_MSP_MSSP_Runbook.md) RA-005 section. Tenable authenticated scans weekly (external) and monthly (internal). Critical vulns: 7 days. High: 30 days. Medium: 90 days. |
 | **Tool Binding** | Tenable/Nessus |
 
 ### RA-003: Risk Register
@@ -1241,7 +1241,7 @@ Every control entry follows this structure:
 ### Related Documents
 
 - [Upstream CERG Unified Control Baseline](CERG-GOV-CB-001_Unified_Control_Baseline.md)
-- [Opinionated Tool Matrix](../practice-assets/tools/opinionated-tool-matrix-v1.md)
-- [MSP Runbook](../practice-assets/msp-runbook-v1.md)
-- [GRC Rollout Guide](../practice-assets/tools/grc-rollout-v1.md)
-- [Engagement Playbook](../practice-assets/engagement-playbook-v1.md)
+- [Opinionated Tool Matrix](../practice-assets/tools/CERG-OPN-TOOLS-001_Opinionated_Tool_Matrix.md)
+- [MSP Runbook](../practice-assets/CERG-OPN-MSP-001_MSP_MSSP_Runbook.md)
+- [GRC Rollout Guide](../practice-assets/tools/CERG-OPN-TOOLS-002_GRC_Rollout_Guide.md)
+- [Engagement Playbook](../practice-assets/CERG-OPN-DLV-001_Engagement_Playbook.md)

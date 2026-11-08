@@ -1,6 +1,6 @@
 # cerg-manifest.yaml
 # DERIVED ARTIFACT — authoritative source is the CERG markdown corpus
-# Generated: 2026-11-07 | Owner: Governance Pillar Leader (Document Control)
+# Generated: 2026-11-08 | Owner: Governance Pillar Leader (Document Control)
 # Regenerate on any change to source documents
 # See METADATA.yaml for full governance information
 
@@ -17,7 +17,7 @@
   parent_artifact: CERG-POL-001
   source_path: governance/CERG-GOV-ADR-001_Architecture_Decision_Records.md
   source_file: CERG-GOV-ADR-001_Architecture_Decision_Records.md
-  source_hash: 67d31f0a542e08ec017cfb658f0e84542577c0ed571153c2967b47c564e11252
+  source_hash: 4e3368c99ec090a5d26e14eea7cde56e1623b44ad4c173d08c66c24a10c53bff
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-ADR-001_Architecture_Decision_Records.md
   llm_include: false
   llm_priority: medium
@@ -117,7 +117,7 @@
   parent_artifact: 'CERG-POL-001 — Cybersecurity Policy'
   source_path: governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   source_file: CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
-  source_hash: e04695e8f2aee10d6c921f10a590938ec1fd42e23869c73e123151455e9b0aef
+  source_hash: 6a03d3a9f5076babf1df775c57ce2371a5a41457afe8e6730252b52493b92d6f
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CAT-001_Document_Catalog_and_Naming_Convention.md
   llm_include: true
   llm_priority: high
@@ -177,7 +177,7 @@
   parent_artifact: CERG-POL-001
   source_path: governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md
   source_file: CERG-GOV-CB-002_Practitioner_Control_Baseline.md
-  source_hash: ca16d1cca6eb2926067f0aa4964b7b6970b9c07c5d0285114ac99f9a772ed167
+  source_hash: 8c9af33e95561a9f84497fbd278572d0fbe59f8a56dffba748472f28b84cba82
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-CB-002_Practitioner_Control_Baseline.md
   llm_include: false
   llm_priority: medium
@@ -717,7 +717,7 @@
   parent_artifact: 'CERG-POL-001 — CERG Cybersecurity Policy'
   source_path: governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
   source_file: CERG-GOV-RMF-001_Risk_Management_Framework.md
-  source_hash: 530df133098e8caeb472dc71c32af56ee8f15b0c7ea595721921e924c570fbbe
+  source_hash: 674897293ba69fbb363cf1702aba764b1d7a5738440d28cf37e512ce9ad6b1d2
   canonical_url: https://github.com/m0dernz/CERG/blob/main/governance/CERG-GOV-RMF-001_Risk_Management_Framework.md
   llm_include: true
   llm_priority: high
