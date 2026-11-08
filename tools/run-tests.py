@@ -73,7 +73,13 @@ def main() -> int:
     if needs_pytest:
         print("Partial run: those tests are verified only under `pytest tests/`. "
               "State which runner a pass claim came from.")
-    return 0 if failed else 1
+    if failed:
+        return 1
+    if needs_pytest:
+        # A partial run is not a pass. Exit 2 so nothing downstream can quote
+        # this as green: a tool must be unable to report more than it verified.
+        return 2
+    return 0
 
 
 if __name__ == "__main__":
